@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Évian, três semanas: a diplomacia francesa diante do mundo | The Crossing Time</title>
+<meta name="description" content="Em junho, Macron recebe o G7 em Évian. A pauta oficial: IA, Ucrânia, Oriente Médio. A pauta real: como a França tenta preservar protagonismo em um mundo que se reconfigura sem ela. Análise editorial em três vetores: Europa rearmada, África em recuo, Oriente Médio em fogo.">
+<meta name="author" content="The Crossing Time, by Porta Voz do Imigrante">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:wght@300..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy-1: #0E1A2B;
+    --navy-2: #0E1A2B;
+    --offwhite: #F4F2ED;
+    --ouro: #C6A15B;
+    --ouro-claro: #C6A15B;
+    --texto: #111111;
+    --texto-suave: #4a4a4a;
+    --linha: rgba(184, 146, 74, 0.25);
+    --alerta: #8B2635;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--offwhite);
+    color: var(--texto);
+    line-height: 1.7;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .top-bar {
+    background: var(--navy-1);
+    color: var(--offwhite);
+    padding: 14px 0;
+    border-bottom: 2px solid var(--ouro);
+  }
+  .top-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .top-bar .marca { font-weight: 700; color: var(--ouro-claro); }
+  .top-bar .pilares { color: rgba(245, 241, 232, 0.7); font-weight: 300; }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+    background:
+      radial-gradient(ellipse at top right, rgba(184,146,74,0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom left, rgba(184,146,74,0.08) 0%, transparent 40%),
+      linear-gradient(180deg, var(--navy-1) 0%, var(--navy-2) 100%);
+    overflow: hidden;
+    color: var(--offwhite);
+  }
+  .hero-bg-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .hero-bg-text span {
+    font-family: 'Jost', sans-serif;
+    font-weight: 900;
+    font-size: 24vw;
+    line-height: 0.85;
+    color: rgba(184, 146, 74, 0.04);
+    letter-spacing: -0.05em;
+    user-select: none;
+    white-space: nowrap;
+    transform: translateY(8%);
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(90deg, rgba(184,146,74,0.04) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(184,146,74,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 110px 32px 80px;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    color: var(--ouro-claro);
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    padding: 8px 14px;
+    border: 1px solid rgba(184, 146, 74, 0.4);
+  }
+  .hero-eyebrow .pulso {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ouro);
+    box-shadow: 0 0 12px var(--ouro);
+    animation: pulso 2.4s ease-in-out infinite;
+  }
+  @keyframes pulso {
+    0%, 100% { opacity: 0.4; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1.15); }
+  }
+  .hero h1 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: clamp(44px, 6.5vw, 88px);
+    line-height: 1.0;
+    color: var(--offwhite);
+    max-width: 1000px;
+    letter-spacing: -0.025em;
+    margin-bottom: 30px;
+  }
+  .hero h1 .destaque {
+    color: var(--ouro-claro);
+    display: block;
+    font-size: clamp(34px, 4.5vw, 56px);
+    margin-top: 16px;
+    font-weight: 600;
+  }
+  .hero h1 .em-italico {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(245,241,232,0.8);
+  }
+  .hero-subtitle {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(20px, 1.9vw, 25px);
+    color: rgba(245, 241, 232, 0.85);
+    margin-top: 28px;
+    max-width: 800px;
+    line-height: 1.5;
+  }
+  .hero-meta-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(199, 164, 90, 0.35);
+    max-width: 920px;
+  }
+  .meta-item {
+    font-family: 'Jost', sans-serif;
+  }
+  .meta-item .num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ouro-claro);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .meta-item .lbl {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,241,232,0.65);
+    font-weight: 300;
+    line-height: 1.4;
+  }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 0 32px; }
+  article { padding: 80px 0 60px; }
+  .lead {
+    font-family: 'Lora', serif;
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--texto);
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--linha);
+  }
+  .lead::first-letter {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 0.85;
+    float: left;
+    margin: 8px 16px 0 0;
+    color: var(--ouro);
+  }
+  h2.secao {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--navy-1);
+    margin: 60px 0 12px;
+    position: relative;
+    padding-top: 30px;
+  }
+  h2.secao::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--ouro);
+  }
+  .secao-numero {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.25em;
+    color: var(--ouro);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  article p { margin-bottom: 24px; color: var(--texto); }
+  article p strong { color: var(--navy-1); font-weight: 700; }
+
+  .vetor-bloco {
+    margin: 60px 0;
+    background: var(--navy-1);
+    color: var(--offwhite);
+    padding: 50px 50px;
+    position: relative;
+  }
+  .vetor-bloco::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 6px; height: 100%;
+    background: var(--ouro);
+  }
+  .vetor-bloco .vetor-num {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--ouro-claro);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .vetor-bloco h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--offwhite);
+    margin-bottom: 24px;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+  }
+  .vetor-bloco h3 .destaque {
+    color: var(--ouro-claro);
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 6px;
+  }
+  .vetor-bloco p {
+    color: rgba(245,241,232,0.88);
+    margin-bottom: 18px;
+    line-height: 1.7;
+  }
+  .vetor-bloco p strong {
+    color: var(--ouro-claro);
+    font-weight: 700;
+  }
+  .vetor-bloco p:last-child { margin-bottom: 0; }
+
+  .quote-block {
+    margin: 50px 0;
+    padding: 36px 40px;
+    background: var(--navy-1);
+    color: var(--offwhite);
+    border-left: 4px solid var(--ouro);
+  }
+  .quote-block .quote-text {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 26px;
+    line-height: 1.4;
+    color: var(--offwhite);
+  }
+  .quote-block .quote-author {
+    margin-top: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ouro-claro);
+    font-weight: 600;
+  }
+
+  .dados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin: 50px 0;
+  }
+  .dado-card {
+    padding: 28px 24px;
+    background: var(--offwhite);
+    border: 1px solid var(--linha);
+    border-left: 3px solid var(--ouro);
+  }
+  .dado-numero {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--navy-1);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .dado-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ouro);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .dado-desc {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    color: var(--texto-suave);
+    line-height: 1.5;
+  }
+
+  .agenda-evian {
+    margin: 60px 0;
+    background: linear-gradient(135deg, var(--offwhite) 0%, rgba(184,146,74,0.08) 100%);
+    border: 2px solid var(--ouro);
+    padding: 40px 44px;
+    position: relative;
+  }
+  .agenda-evian::before {
+    content: 'G7 ÉVIAN';
+    position: absolute;
+    top: -14px;
+    left: 30px;
+    background: var(--offwhite);
+    padding: 4px 14px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    color: var(--ouro);
+    border: 2px solid var(--ouro);
+  }
+  .agenda-evian h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--navy-1);
+    margin-bottom: 8px;
+  }
+  .agenda-evian .data {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ouro);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .agenda-evian p {
+    color: var(--texto);
+    margin-bottom: 14px;
+  }
+  .agenda-evian .convidados {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--linha);
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--texto-suave);
+  }
+  .agenda-evian .convidados strong {
+    color: var(--navy-1);
+    font-weight: 700;
+  }
+
+  .timeline {
+    margin: 50px 0;
+    border-left: 2px solid var(--ouro);
+    padding-left: 32px;
+  }
+  .timeline-item { margin-bottom: 32px; position: relative; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -40px; top: 6px;
+    width: 14px; height: 14px;
+    background: var(--ouro);
+    border-radius: 50%;
+    border: 3px solid var(--offwhite);
+  }
+  .timeline-data {
+    font-family: 'Jost', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ouro);
+    margin-bottom: 6px;
+  }
+  .timeline-texto {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    color: var(--texto);
+    line-height: 1.5;
+  }
+  .timeline-texto strong { color: var(--navy-1); }
+
+  .nota-editorial {
+    margin: 40px 0;
+    padding: 20px 24px;
+    background: rgba(184, 146, 74, 0.08);
+    border-top: 1px solid var(--linha);
+    border-bottom: 1px solid var(--linha);
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+  }
+  .nota-editorial strong {
+    font-family: 'Jost', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ouro);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .article-footer {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px solid var(--ouro);
+    text-align: center;
+  }
+  .article-footer .marca {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--navy-1);
+    letter-spacing: 0.05em;
+  }
+  .article-footer .sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+    margin-top: 8px;
+    font-weight: 300;
+  }
+  .article-footer .pilares {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    color: var(--ouro);
+    margin-top: 16px;
+    font-weight: 500;
+  }
+
+  .site-footer {
+    background: var(--navy-2);
+    color: rgba(245, 241, 232, 0.6);
+    padding: 50px 32px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 3px solid var(--ouro);
+  }
+  .site-footer .signature {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    color: var(--offwhite);
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+  .site-footer .descricao {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ouro-claro);
+  }
+
+  @media (max-width: 768px) {
+    body { font-size: 17px; }
+    .hero { min-height: 600px; }
+    .hero-content { padding: 80px 32px 60px; }
+    article { padding: 50px 0 40px; }
+    .lead { font-size: 20px; }
+    .lead::first-letter { font-size: 64px; }
+    h2.secao { font-size: 26px; }
+    .vetor-bloco { padding: 32px 28px; }
+    .vetor-bloco h3 { font-size: 24px; }
+    .quote-block { padding: 28px 24px; }
+    .quote-block .quote-text { font-size: 21px; }
+    .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .agenda-evian { padding: 28px 24px; }
+    .timeline { padding-left: 24px; }
+    .timeline-item::before { left: -32px; }
+  }
+
+  /* === Sistema bilingue TCT === */
+  body[lang-mode="fr"] .ng-pt { display: none !important; }
+    [lang-mode="pt"] .ng-fr{display:none!important;}
+  body:not([lang-mode="fr"]) .ng-fr { display: none !important; }
+  body[lang-mode="fr"] .ng-fr.block { display: block !important; }
+  body[lang-mode="fr"] .ng-fr { display: inline; }
+  
+  /* === Barra TCT fixa topo === */
+
+  body { padding-top: 56px; }
+  @media (max-width: 768px) {
+
+    body { padding-top: 50px; }
+  }
+
+</style>
+
+<style>
+/* TCT top bar (injected) */
+.tct-topbar{position:fixed;top:0;left:0;right:0;z-index:9999;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.7rem 1.2rem;background:rgba(14,26,43,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(198,161,91,.4);font-family:'Jost',sans-serif;}
+.tct-topbar .tb-back{display:inline-flex;align-items:center;gap:7px;background:transparent;border:1px solid rgba(198,161,91,.4);color:#C6A15B;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:7px 14px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.tct-topbar .tb-back:hover{background:#C6A15B;color:#0E1A2B;}
+.tct-topbar .tb-langs{display:flex;gap:5px;}
+.tct-topbar .tct-lang-btn{background:transparent;border:1px solid rgba(198,161,91,.4);color:#F4F2ED;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.06em;padding:6px 12px;border-radius:3px;cursor:pointer;transition:all .2s;}
+.tct-topbar .tct-lang-btn.active{background:#C6A15B;color:#0E1A2B;border-color:#C6A15B;}
+</style>
+</head>
+
+<body lang-mode="pt">
+<div class="tct-topbar">
+  <button class="tb-back" onclick="goBack()" aria-label="Voltar"><span style="font-size:14px;line-height:1;">&#8592;</span><span class="ng-pt">Voltar ao site</span><span class="ng-fr">Retour au site</span></button>
+  <div class="tb-langs">
+    <button class="tct-lang-btn active" id="lang-pt-btn" onclick="setLang('pt')">PT</button>
+    <button class="tct-lang-btn" id="lang-fr-btn" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="marca">THE CROSSING TIME</div>
+    <div class="pilares"><span class="ng-pt">Geopolítica • Tecnologia • Sociedade</span><span class="ng-fr">Géopolitique • Technologie • Société</span></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-bg-text"><span>ÉVIAN</span></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="pulso"></span>
+      <span><span class="ng-pt">G7 • 15-17 DE JUNHO • ÉVIAN-LES-BAINS</span><span class="ng-fr">G7 • 15-17 JUIN • ÉVIAN-LES-BAINS</span></span>
+    </div>
+    <h1><span class="ng-pt">
+      A três semanas de Évian:
+      <span class="destaque">a diplomacia francesa diante de um mundo que se reconfigura sem ela</span>
+    </span><span class="ng-fr">
+      À trois semaines d'Évian :
+<span class="destaque">la diplomatie française face à un monde qui se reconfigure sans elle</span>
+      </span></h1>
+    <p class="hero-subtitle"><span class="ng-pt">
+      Em junho, Macron recebe o G7 nos Alpes franceses. A pauta oficial: inteligência artificial, Ucrânia, Oriente Médio. A pauta real: como Paris preserva protagonismo em três frentes simultâneas — Europa rearmada, África em recuo, Oriente Médio em fogo. Análise editorial.
+    </span><span class="ng-fr">En juin, Macron accueille le G7 dans les Alpes françaises. À l'ordre du jour officiel : intelligence artificielle, Ukraine, Moyen-Orient. À l'ordre du jour réel : comment Paris préserve son rôle de premier plan sur trois fronts simultanés — Europe réarmée, Afrique en recul, Moyen-Orient en feu. Analyse éditoriale.</span></p>
+    <div class="hero-meta-grid">
+      <div class="meta-item">
+        <div class="num">15-17 JUN</div>
+        <div class="lbl"><span class="ng-pt">Cúpula G7 Évian</span><span class="ng-fr">Sommet G7 Évian</span></div>
+      </div>
+      <div class="meta-item">
+        <div class="num">€36 bi</div>
+        <div class="lbl"><span class="ng-pt">Aumento defesa 2026-30</span><span class="ng-fr">Hausse défense 2026-30</span></div>
+      </div>
+      <div class="meta-item">
+        <div class="num">8 aliados</div>
+        <div class="lbl"><span class="ng-pt">Doutrina nuclear ampliada</span><span class="ng-fr">Doctrine nucléaire élargie</span></div>
+      </div>
+      <div class="meta-item">
+        <div class="num">€23 bi</div>
+        <div class="lbl"><span class="ng-pt">Anunciados em Nairobi</span><span class="ng-fr">Annoncés à Nairobi</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <p class="lead"><span class="ng-pt">
+      Em <strong>15 de junho de 2026</strong>, daqui a pouco mais de três semanas, Emmanuel Macron receberá no Hôtel Royal de Évian-les-Bains, à beira do lago Léman, os chefes de Estado das sete maiores economias democráticas do mundo. Será a segunda vez que a cidade alpina hospeda o encontro — a primeira foi em 2003, sob Jacques Chirac. Mas o mundo de 2026 não tem nenhuma semelhança com o de 2003. A Ucrânia ainda está em guerra. O Oriente Médio queima em três frentes simultâneas. Donald Trump voltou à Casa Branca recolocando o transatlantismo em xeque. A China consolidou presença na África de uma forma que a França, com tropas saindo de Mali, Burkina Faso, Níger e Senegal, observa com inquietação. Para Paris, Évian não será apenas uma cúpula. Será o teste mais visível, em terreno francês, da capacidade do país de preservar relevância em um mundo que se reconfigura sem esperar por ele.
+    </span><span class="ng-fr">Le <strong>15 juin 2026</strong>, dans un peu plus de trois semaines, Emmanuel Macron accueillera à l'Hôtel Royal d'Évian-les-Bains, au bord du Léman, les chefs d'État des sept plus grandes économies démocratiques du monde. Ce sera la deuxième fois que la ville alpine accueille cette rencontre — la première avait eu lieu en 2003, sous Jacques Chirac. Mais le monde de 2026 n'a rien à voir avec celui de 2003. L'Ukraine est encore en guerre. Le Moyen-Orient brûle sur trois fronts simultanés. Donald Trump est revenu à la Maison Blanche en remettant en cause le transatlantisme. La Chine a consolidé sa présence en Afrique d'une manière que la France, dont les troupes quittent le Mali, le Burkina Faso, le Niger et le Sénégal, observe avec inquiétude. Pour Paris, Évian ne sera pas qu'un sommet. Ce sera le test le plus visible, en territoire français, de la capacité du pays à préserver sa pertinence dans un monde qui se reconfigure sans attendre.</span></p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">I. O cenário</span><span class="ng-fr">I. Le décor</span></span>
+      <span class="ng-pt">A França de Évian não é a França de 2003</span><span class="ng-fr">La France d'Évian n'est pas la France de 2003</span>
+    </h2>
+
+    <p><span class="ng-pt">
+      A última vez que Évian-les-Bains recebeu uma cúpula de chefes de Estado, era o G8 e a Rússia estava à mesa. Putin sentou ao lado de Chirac, Bush, Schröder, Blair e Berlusconi. A guerra do Iraque tinha começado dois meses antes, e a França era a voz mais alta contra a invasão. <strong>Era ainda a era da pretensão moral francesa</strong>, da figura do "no" gaullista, da diplomacia como vocação de Estado. O mundo, então, parecia girar em torno do eixo transatlântico, e a França atuava como contrapeso interno desse eixo. Hoje, vinte e três anos depois, quase nada disso permanece de pé. A Rússia não está à mesa, está em guerra ativa com um Estado europeu há mais de quatro anos. A China não está à mesa, mas pesa em cada item da agenda. Os Estados Unidos voltaram à mesa sob uma presidência que questiona publicamente a utilidade da própria mesa.
+    </span><span class="ng-fr">La dernière fois qu'Évian-les-Bains a accueilli un sommet de chefs d'État, c'était le G8 et la Russie était à la table. Poutine s'asseyait à côté de Chirac, Bush, Schröder, Blair et Berlusconi. La guerre d'Irak avait commencé deux mois plus tôt, et la France était la voix la plus forte contre l'invasion. <strong>C'était encore l'ère de la prétention morale française</strong>, de la figure du « non » gaullien, de la diplomatie comme vocation d'État. Le monde, alors, semblait tourner autour de l'axe transatlantique, et la France agissait comme contrepoids interne de cet axe. Aujourd'hui, vingt-trois ans plus tard, presque rien de tout cela ne tient encore debout. La Russie n'est pas à la table, elle est en guerre active avec un État européen depuis plus de quatre ans. La Chine n'est pas à la table, mais pèse sur chaque point de l'ordre du jour. Les États-Unis sont revenus à la table sous une présidence qui questionne publiquement l'utilité de la table elle-même.</span></p>
+
+    <p><span class="ng-pt">
+      A França chega a Évian, em 2026, como anfitriã de uma cúpula cuja relevância ela mesma precisa defender. <strong>O G7 representa hoje cerca de 30% do PIB mundial, contra mais de 60% em 1980</strong>. O G20 cresceu em peso institucional, e o BRICS+ — ampliado em 2024 com Egito, Etiópia, Irã, Emirados Árabes e outros — começa a aparecer com autonomia em fóruns que antes eram quase exclusivamente ocidentais. Macron tem clareza disso. Por isso convidou para Évian, além dos membros permanentes do G7, líderes da Índia, Quênia, Coreia do Sul, e potencialmente Brasil — composição que reflete sua aposta na <strong>cúpula como plataforma de diálogo ampliado</strong>, não como clube fechado.
+    </span><span class="ng-fr">La France arrive à Évian, en 2026, comme hôte d'un sommet dont elle-même doit défendre la pertinence. <strong>Le G7 représente aujourd'hui environ 30 % du PIB mondial, contre plus de 60 % en 1980</strong>. Le G20 a gagné en poids institutionnel, et les BRICS+ — élargis en 2024 avec l'Égypte, l'Éthiopie, l'Iran, les Émirats arabes unis et d'autres — commencent à apparaître avec autonomie dans des forums auparavant presque exclusivement occidentaux. Macron en a conscience. C'est pour cela qu'il a invité à Évian, en plus des membres permanents du G7, les dirigeants de l'Inde, du Kenya, de la Corée du Sud, et potentiellement du Brésil — composition qui reflète son pari sur le <strong>sommet comme plateforme de dialogue élargi</strong>, non comme club fermé.</span></p>
+
+    <div class="agenda-evian">
+      <h3><span class="ng-pt">A cúpula em fatos</span><span class="ng-fr">Le sommet en faits</span></h3>
+      <div class="data"><span class="ng-pt">15 a 17 de junho de 2026 • Hôtel Royal • Évian-les-Bains</span><span class="ng-fr">15-17 juin 2026 • Hôtel Royal • Évian-les-Bains</span></div>
+      <p><span class="ng-pt">O 52º G7 marca a segunda presidência francesa sob Macron, depois de Biarritz em 2019. Sob a fórmula da chamada <strong>"diagnósticos compartilhados"</strong>, Paris evita compromissos vinculantes e foca em três pautas: inteligência artificial, Ucrânia, Oriente Médio.</span><span class="ng-fr">Le 52e G7 marque la deuxième présidence française sous Macron, après Biarritz en 2019. Sous la formule des prétendus <strong>« diagnostics partagés »</strong>, Paris évite les engagements contraignants et se concentre sur trois points : intelligence artificielle, Ukraine, Moyen-Orient.</span></p>
+      <p><span class="ng-pt">Por trás, uma quarta pauta vem ganhando peso silencioso: a continuidade dos compromissos lançados em Nairobi na <strong>cúpula Africa Forward de 11-12 de maio</strong>, em particular o mecanismo de garantia de primeira perda em torno da agência ATIDI, que Macron pretende internacionalizar via G7.</span><span class="ng-fr">Derrière, un quatrième sujet gagne un poids silencieux : la continuité des engagements lancés à Nairobi lors du <strong>sommet Africa Forward des 11-12 mai</strong>, en particulier le mécanisme de garantie de première perte autour de l'agence ATIDI, que Macron entend internationaliser via le G7.</span></p>
+      <div class="convidados">
+        <strong><span class="ng-pt">Membros:</span><span class="ng-fr">Membres :</span></strong> <span class="ng-pt">Canadá, França, Alemanha, Itália, Japão, Reino Unido, Estados Unidos, União Europeia.</span><span class="ng-fr">Canada, France, Allemagne, Italie, Japon, Royaume-Uni, États-Unis, Union européenne.</span><br>
+        <strong><span class="ng-pt">Convidados confirmados:</span><span class="ng-fr">Invités confirmés :</span></strong> <span class="ng-pt">Índia, Quênia, Coreia do Sul.</span><span class="ng-fr">Inde, Kenya, Corée du Sud.</span> <strong><span class="ng-pt">Em negociação:</span><span class="ng-fr">En négociation :</span></strong> Brasil.
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">II. Os três vetores</span><span class="ng-fr">II. Les trois vecteurs</span></span>
+      <span class="ng-pt">Como Paris se posiciona em frentes simultâneas</span><span class="ng-fr">Comment Paris se positionne sur plusieurs fronts simultanés</span>
+    </h2>
+
+    <p><span class="ng-pt">
+      Para entender o que está em jogo em Évian, é preciso mapear três vetores que a diplomacia francesa empurra simultaneamente. Eles não são independentes. Conversam, contradizem-se, às vezes competem pelos mesmos recursos políticos. Mas é da articulação entre os três que se faz hoje a posição internacional francesa. <strong>Europa rearmada. África em recuo controlado. Oriente Médio em equilíbrio impossível</strong>. Cada vetor tem seu próprio relógio, e cada relógio aponta para Évian.
+    </span><span class="ng-fr">Pour comprendre ce qui est en jeu à Évian, il faut cartographier trois vecteurs que la diplomatie française pousse simultanément. Ils ne sont pas indépendants. Ils dialoguent, se contredisent, parfois se disputent les mêmes ressources politiques. Mais c'est de l'articulation entre les trois que se fait aujourd'hui la position internationale française. <strong>Europe réarmée. Afrique en recul contrôlé. Moyen-Orient en équilibre impossible</strong>. Chaque vecteur a son propre rythme, et chaque rythme pointe vers Évian.</span></p>
+
+    <div class="vetor-bloco">
+      <div class="vetor-num"><span class="ng-pt">VETOR 1</span><span class="ng-fr">VECTEUR 1</span></div>
+      <h3>Europa rearmada
+        <span class="destaque"><span class="ng-pt">A autonomia estratégica saiu do discurso e entrou no orçamento</span><span class="ng-fr">L'autonomie stratégique est sortie du discours pour entrer dans le budget</span></span>
+      </h3>
+      <p><span class="ng-pt">
+        Em <strong>janeiro de 2026</strong>, em discurso às Forças Armadas, Macron anunciou aumento de <strong>€36 bilhões no orçamento militar 2026-2030</strong>, com €3,5 bilhões adicionais já em 2026. Em <strong>2 de março de 2026</strong>, na base de submarinos nucleares de Île Longue, ao lado do submarino Le Téméraire, anunciou a chamada <strong>"dissuasão avançada"</strong>: ampliação do estoque de ogivas pela primeira vez em décadas, cooperação militar aprofundada com oito aliados europeus — Alemanha, Polônia, Holanda, Bélgica, Grécia, Suécia entre eles. A França mantém controle exclusivo sobre a decisão final de uso. Mas integra aliados em exercícios e doutrina.
+      </span><span class="ng-fr">En <strong>janvier 2026</strong>, dans son discours aux Armées, Macron a annoncé une augmentation de <strong>36 milliards d'euros au budget militaire 2026-2030</strong>, avec 3,5 milliards d'euros supplémentaires dès 2026. Le <strong>2 mars 2026</strong>, à la base de sous-marins nucléaires de l'Île Longue, aux côtés du sous-marin Le Téméraire, il a annoncé la fameuse <strong>« dissuasion avancée »</strong> : élargissement du stock d'ogives pour la première fois en décennies, coopération militaire approfondie avec huit alliés européens — Allemagne, Pologne, Pays-Bas, Belgique, Grèce, Suède notamment. La France conserve le contrôle exclusif sur la décision finale d'utilisation. Mais intègre les alliés dans les exercices et la doctrine.</span></p>
+      <p><span class="ng-pt">
+        A guerra na Ucrânia acelerou tudo. Em <strong>novembro de 2025</strong>, Zelensky assinou em Paris um contrato histórico de <strong>compra de 100 caças Rafale</strong> à Dassault, junto com drones e sistemas de defesa aérea. É o maior contrato individual de armamento francês da década. Em paralelo, Macron lançou <strong>serviço militar voluntário</strong> para jovens de 18-19 anos, começando em 2026 com 3 mil participantes e meta de 50 mil até 2035. A França acelerou produção do <strong>sistema antiaéreo SAMP/T</strong>, franco-italiano, que Paris considera superior ao Patriot americano.
+      </span><span class="ng-fr">La guerre en Ukraine a tout accéléré. En <strong>novembre 2025</strong>, Zelensky a signé à Paris un contrat historique d'<strong>achat de 100 chasseurs Rafale</strong> à Dassault, ainsi que des drones et des systèmes de défense aérienne. C'est le plus grand contrat individuel d'armement français de la décennie. En parallèle, Macron a lancé un <strong>service militaire volontaire</strong> pour les jeunes de 18-19 ans, commençant en 2026 avec 3 000 participants et un objectif de 50 000 d'ici 2035. La France a accéléré la production du <strong>système antiaérien SAMP/T</strong>, franco-italien, que Paris considère supérieur au Patriot américain.</span></p>
+      <p><span class="ng-pt">
+        Em Évian, Ucrânia será a pauta mais imediata. Não a guerra em si, mas as três perguntas que dela decorrem: <strong>continuação do apoio militar a Kyiv, sanções contra Moscou, e estrutura europeia pós-guerra</strong>. A doutrina francesa de "autonomia estratégica" — durante anos vista com ceticismo em Berlim e Varsóvia — virou consenso continental sob pressão da Casa Branca. Charles de Gaulle, dos anos 1960, teria orgulho do paradoxo: foi o retorno de Trump, e não a visão francesa, que tornou a autonomia europeia inevitável.
+      </span><span class="ng-fr">À Évian, l'Ukraine sera le sujet le plus immédiat. Non la guerre en soi, mais les trois questions qui en découlent : <strong>continuation de l'appui militaire à Kyiv, sanctions contre Moscou, et structure européenne d'après-guerre</strong>. La doctrine française de « l'autonomie stratégique » — pendant des années regardée avec scepticisme à Berlin et Varsovie — est devenue un consensus continental sous la pression de la Maison Blanche. Charles de Gaulle, des années 1960, serait fier du paradoxe : c'est le retour de Trump, et non la vision française, qui a rendu l'autonomie européenne inévitable.</span></p>
+    </div>
+
+    <div class="vetor-bloco">
+      <div class="vetor-num"><span class="ng-pt">VETOR 2</span><span class="ng-fr">VECTEUR 2</span></div>
+      <h3>África em recuo controlado
+        <span class="destaque"><span class="ng-pt">O Sahel saiu de cena. Nairobi virou a nova aposta</span><span class="ng-fr">Le Sahel est sorti de scène. Nairobi est devenu le nouveau pari</span></span>
+      </h3>
+      <p><span class="ng-pt">
+        Em poucos anos, o mapa francês na África se desmontou. <strong>Mali em 2022, Burkina Faso em 2023, Níger em 2023, Senegal em 2025</strong> — encerrando 65 anos de presença militar francesa em solo senegalês. Em cada saída, há um misto de empurrão por governos locais (frequentemente militares chegados ao poder via golpes) e atração por novas parcerias com Rússia, via Wagner e Africa Corps, ou com China, via investimentos em infraestrutura. Para a França, a perda do Sahel não é apenas militar. É perda de influência simbólica, comercial, linguística, demográfica.
+      </span><span class="ng-fr">En quelques années, la carte française en Afrique s'est démontée. <strong>Mali en 2022, Burkina Faso en 2023, Niger en 2023, Sénégal en 2025</strong> — mettant fin à 65 années de présence militaire française sur le sol sénégalais. À chaque départ, il y a un mélange de poussée par des gouvernements locaux (souvent militaires arrivés au pouvoir par des coups d'État) et d'attraction par de nouveaux partenariats avec la Russie, via Wagner et Africa Corps, ou avec la Chine, via des investissements dans l'infrastructure. Pour la France, la perte du Sahel n'est pas qu'une affaire militaire. C'est une perte d'influence symbolique, commerciale, linguistique, démographique.</span></p>
+      <p><span class="ng-pt">
+        A resposta de Macron foi pivotar para o leste anglófono. A <strong>cúpula Africa Forward em Nairobi, em 11-12 de maio de 2026</strong>, marcou a primeira reunião de chefes de Estado africanos co-organizada pela França em um país anglófono. <strong>€23 bilhões em compromissos anunciados</strong>, 30 chefes de Estado, 7.000 participantes. Em paralelo, em 13 de abril, a Assembleia Nacional aprovou a lei-quadro de restituição de bens culturais coloniais — gesto simbólico de soft power que custa pouco e comunica muito. Em <strong>7 de maio</strong>, o Senado deu o voto final que tornou a lei definitiva.
+      </span><span class="ng-fr">La réponse de Macron a été de pivoter vers l'est anglophone. Le <strong>sommet Africa Forward à Nairobi, les 11-12 mai 2026</strong>, a marqué la première réunion de chefs d'État africains co-organisée par la France dans un pays anglophone. <strong>23 milliards d'euros d'engagements annoncés</strong>, 30 chefs d'État, 7 000 participants. En parallèle, le 13 avril, l'Assemblée nationale a approuvé la loi-cadre de restitution des biens culturels coloniaux — geste symbolique de soft power qui coûte peu et communique beaucoup. Le <strong>7 mai</strong>, le Sénat a donné le vote final qui a rendu la loi définitive.</span></p>
+      <p><span class="ng-pt">
+        Mas a equação tem um nó. A ajuda francesa ao desenvolvimento <strong>sofreu cinco cortes consecutivos em menos de dois anos</strong>. Para 2026, o parlamento aprovou €3,5 bilhões em créditos de pagamento, queda de 18% em relação a 2025. A meta de 0,7% do RNB para ajuda, fixada em 2021, foi efetivamente abandonada. Macron leva a Évian a tese de uma <strong>"nova parceria entre iguais"</strong> com a África. O presidente queniano William Ruto, em Nairobi, foi explícito: a relação não deve ser construída em dependência nem em caridade, mas em soberania compartilhada. Resta saber se Évian vai produzir, em junho, algo concreto que sustente o discurso.
+      </span><span class="ng-fr">Mais l'équation a un nœud. L'aide française au développement <strong>a subi cinq coupes consécutives en moins de deux ans</strong>. Pour 2026, le parlement a approuvé 3,5 milliards d'euros en crédits de paiement, baisse de 18 % par rapport à 2025. L'objectif de 0,7 % du RNB pour l'aide, fixé en 2021, a été effectivement abandonné. Macron emmène à Évian la thèse d'un <strong>« nouveau partenariat entre égaux »</strong> avec l'Afrique. Le président kenyan William Ruto, à Nairobi, a été explicite : la relation ne doit pas être construite sur la dépendance ni sur la charité, mais sur la souveraineté partagée. Il reste à voir si Évian produira, en juin, quelque chose de concret qui soutienne le discours.</span></p>
+    </div>
+
+    <div class="vetor-bloco">
+      <div class="vetor-num"><span class="ng-pt">VETOR 3</span><span class="ng-fr">VECTEUR 3</span></div>
+      <h3>Oriente Médio em equilíbrio impossível
+        <span class="destaque"><span class="ng-pt">Israel, Palestina, Irã, Gaza — e o limite da diplomacia francesa</span><span class="ng-fr">Israël, Palestine, Iran, Gaza — et la limite de la diplomatie française</span></span>
+      </h3>
+      <p><span class="ng-pt">
+        Sobre nenhum outro tema a posição francesa é tão difícil de explicar internamente. <strong>Macron mantém em público a defesa da solução de dois Estados</strong>, condena ataques de outubro de 2023 contra Israel, condena a magnitude da resposta militar israelense em Gaza, pede cessar-fogo, apoia missões humanitárias, e em diversos momentos chegou a sugerir embargo de armas ofensivas ao governo israelense. Em paralelo, mantém cooperação de inteligência, vínculos econômicos profundos, e relação diplomática contínua com Tel Aviv. Cada movimento expõe a posição francesa a críticas dos dois lados — da comunidade judaica francesa, que é a maior da Europa, e das comunidades árabe e muçulmana, também as maiores da Europa.
+      </span><span class="ng-fr">Sur aucun autre sujet la position française n'est aussi difficile à expliquer en interne. <strong>Macron maintient publiquement la défense de la solution à deux États</strong>, condamne les attaques d'octobre 2023 contre Israël, condamne l'ampleur de la réponse militaire israélienne à Gaza, demande un cessez-le-feu, soutient les missions humanitaires, et à plusieurs reprises a même suggéré un embargo d'armes offensives au gouvernement israélien. En parallèle, il maintient une coopération de renseignement, des liens économiques profonds, et une relation diplomatique continue avec Tel Aviv. Chaque mouvement expose la position française aux critiques des deux côtés — de la communauté juive française, qui est la plus grande d'Europe, et des communautés arabes et musulmanes, également les plus grandes d'Europe.</span></p>
+      <p><span class="ng-pt">
+        Sobre o <strong>Irã</strong>, o cenário se complicou ainda mais com a operação militar conjunta dos Estados Unidos contra instalações nucleares iranianas em maio de 2026, e com a tensão crescente no estreito de Ormuz. Paris formalmente apoia controle de proliferação nuclear, mas resistiu a engajamento militar direto. Nenhum país europeu, em 2026, ajudou os Estados Unidos a garantir passagem segura de cargueiros pelo estreito. <strong>É um sinal claro do recuo continental em operações que possam arrastar a Europa para guerras que não são suas</strong>. Em Évian, o Irã estará sobre a mesa. Macron terá que articular uma posição que não comprometa a aliança transatlântica nem alimente o quadro de hostilidades que já existe.
+      </span><span class="ng-fr">Sur l'<strong>Iran</strong>, le scénario s'est encore compliqué avec l'opération militaire conjointe des États-Unis contre les installations nucléaires iraniennes en mai 2026, et avec la tension croissante dans le détroit d'Ormuz. Paris soutient formellement le contrôle de la prolifération nucléaire, mais a résisté à un engagement militaire direct. Aucun pays européen, en 2026, n'a aidé les États-Unis à garantir le passage sécurisé des cargos par le détroit. <strong>C'est un signe clair du recul continental dans les opérations susceptibles d'entraîner l'Europe dans des guerres qui ne sont pas les siennes</strong>. À Évian, l'Iran sera sur la table. Macron devra articuler une position qui ne compromette ni l'alliance transatlantique ni n'alimente le cadre d'hostilités déjà existant.</span></p>
+      <p><span class="ng-pt">
+        E há o tema interno. Paris é uma das cidades europeias com maior tensão comunitária em torno do conflito. Manifestações regulares, atos antissemitas e atos antimuçulmanos em alta desde 2023, debates universitários inflamados, professores ameaçados. A política externa francesa sobre o Oriente Médio é também, sempre, política interna francesa. Macron sabe disso. Por isso evita pronunciamentos categóricos. <strong>Evitar o erro tornou-se, em si, a estratégia</strong>. Para uma potência diplomática histórica, é uma posição modesta. Mas é também, no contexto atual, talvez a única sustentável.
+      </span><span class="ng-fr">Et il y a le thème interne. Paris est l'une des villes européennes avec la plus grande tension communautaire autour du conflit. Manifestations régulières, actes antisémites et actes antimusulmans en hausse depuis 2023, débats universitaires enflammés, professeurs menacés. La politique extérieure française au Moyen-Orient est aussi, toujours, politique interne française. Macron le sait. C'est pourquoi il évite les prises de position catégoriques. <strong>Éviter l'erreur est devenu, en soi, la stratégie</strong>. Pour une puissance diplomatique historique, c'est une position modeste. Mais c'est aussi, dans le contexte actuel, peut-être la seule soutenable.</span></p>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">III. Os dados</span><span class="ng-fr">III. Les chiffres</span></span>
+      <span class="ng-pt">O peso francês em números</span><span class="ng-fr">Le poids français en chiffres</span>
+    </h2>
+
+    <div class="dados-grid">
+      <div class="dado-card">
+        <div class="dado-label">PIB G7</div>
+        <div class="dado-numero">30%</div>
+        <div class="dado-desc"><span class="ng-pt">Participação atual do G7 no PIB mundial. Em 1980, esse número superava 60%. O fórum perde peso relativo.</span><span class="ng-fr">Part actuelle du G7 dans le PIB mondial. En 1980, ce chiffre dépassait 60 %. Le forum perd du poids relatif.</span></div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Defesa francesa</span><span class="ng-fr">Défense française</span></div>
+        <div class="dado-numero">€64 bi</div>
+        <div class="dado-desc"><span class="ng-pt">Meta orçamentária para o setor em 2030, com €36 bilhões adicionais entre 2026-2030 anunciados por Macron.</span><span class="ng-fr">Objectif budgétaire pour le secteur en 2030, avec 36 milliards d'euros supplémentaires entre 2026-2030 annoncés par Macron.</span></div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Rafales para Ucrânia</span><span class="ng-fr">Rafale pour l'Ukraine</span></div>
+        <div class="dado-numero">100</div>
+        <div class="dado-desc"><span class="ng-pt">Caças contratados por Kyiv em novembro de 2025 em Paris, junto com drones e sistemas de defesa aérea.</span><span class="ng-fr">Chasseurs contractés par Kyiv en novembre 2025 à Paris, avec drones et systèmes de défense aérienne.</span></div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Serviço voluntário</span><span class="ng-fr">Service volontaire</span></div>
+        <div class="dado-numero">50 mil</div>
+        <div class="dado-desc"><span class="ng-pt">Meta de jovens de 18-19 anos no novo serviço militar voluntário francês até 2035. Começa em 2026 com 3 mil.</span><span class="ng-fr">Objectif de jeunes de 18-19 ans dans le nouveau service militaire volontaire français d'ici 2035. Commence en 2026 avec 3 000.</span></div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">IV. A figura presidencial</span><span class="ng-fr">IV. La figure présidentielle</span></span>
+      <span class="ng-pt">Macron, o último presidencialista clássico da era atual?</span><span class="ng-fr">Macron, le dernier présidentialiste classique de l'ère actuelle ?</span>
+    </h2>
+
+    <p><span class="ng-pt">
+      Macron chega a Évian em sua décima cúpula do G7 — número raro no fórum. Hospedará pela segunda vez, depois de Biarritz em 2019. Tem relação pessoal com cada um dos outros líderes da mesa, alguns dos quais já passaram por situações de embate público com ele e voltaram a sentar do seu lado. <strong>É hoje o presidente europeu mais experiente</strong> entre os grandes. Tem o respeito de Trump, apesar dos episódios de hostilidade pública. É próximo de Starmer, Merz e Meloni. É o ponto de contato europeu mais natural com a Índia e o Brasil.
+    </span><span class="ng-fr">Macron arrive à Évian pour son dixième sommet du G7 — chiffre rare dans le forum. Il accueille pour la deuxième fois, après Biarritz en 2019. Il a une relation personnelle avec chacun des autres dirigeants à la table, dont certains ont déjà eu des situations d'affrontement public avec lui et sont revenus s'asseoir à ses côtés. <strong>C'est aujourd'hui le président européen le plus expérimenté</strong> parmi les grands. Il a le respect de Trump, malgré les épisodes d'hostilité publique. Il est proche de Starmer, Merz et Meloni. C'est le point de contact européen le plus naturel avec l'Inde et le Brésil.</span></p>
+
+    <p><span class="ng-pt">
+      Para conquistar Trump, fez gesto típico do estilo francês: <strong>ofereceu jantar pós-cúpula no Palácio de Versalhes</strong>, no auge do barroco francês que o presidente americano notoriamente aprecia. A diplomacia pessoal, criticada por especialistas como ingênua diante de Trump, é a aposta de Macron. Mesmo que não funcione plenamente, custa pouco. E em Évian, todo gesto que mantenha a aparência de coesão entre os sete vale ouro político. Aliás, Évian sediou em 1989 a última cúpula que precedeu a queda do Muro de Berlim, onde Gorbachev enviou a mensagem que efetivamente decretou o fim da Guerra Fria. A escolha do local, em 2026, tem ressonância histórica que ninguém na equipe de Macron está deixando de lembrar.
+    </span><span class="ng-fr">Pour conquérir Trump, il a fait un geste typique du style français : <strong>il a offert un dîner post-sommet au Palais de Versailles</strong>, au sommet du baroque français que le président américain apprécie notoirement. La diplomatie personnelle, critiquée par les spécialistes comme naïve face à Trump, est le pari de Macron. Même si elle ne fonctionne pas pleinement, elle coûte peu. Et à Évian, tout geste qui maintient l'apparence de cohésion entre les sept vaut de l'or politique. D'ailleurs, Évian avait accueilli en 1989 le dernier sommet qui a précédé la chute du mur de Berlin, où Gorbatchev a envoyé le message qui a effectivement décrété la fin de la guerre froide. Le choix du lieu, en 2026, a une résonance historique que personne dans l'équipe de Macron n'oublie.</span></p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        "<span class="ng-pt">Não pode haver paz nem segurança na Europa sem o envolvimento ativo dos europeus. O conflito ucraniano alterou fundamentalmente nosso cenário de segurança, e precisamos dar à Ucrânia os meios para resistir e entrar em futuras negociações de uma posição de força.</span><span class="ng-fr">Il ne peut y avoir ni paix ni sécurité en Europe sans l'engagement actif des Européens. Le conflit ukrainien a fondamentalement modifié notre cadre de sécurité, et nous devons donner à l'Ukraine les moyens de résister et d'entrer dans de futures négociations en position de force.</span>"
+      </div>
+      <div class="quote-author"><span class="ng-pt">Emmanuel Macron • Discurso às Forças Armadas, janeiro de 2026</span><span class="ng-fr">Emmanuel Macron • Discours aux Armées, janvier 2026</span></div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">V. A cronologia</span><span class="ng-fr">V. La chronologie</span></span>
+      <span class="ng-pt">Os dezoito meses que prepararam Évian</span><span class="ng-fr">Les dix-huit mois qui ont préparé Évian</span>
+    </h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-data">Set / 2024</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Cooperação militar francesa termina no</span><span class="ng-fr">Coopération militaire française se termine au</span> <strong><span class="ng-pt">Níger</span><span class="ng-fr">Niger</span></strong><span class="ng-pt">, encerrando ciclo aberto nos anos 1990. Eixo francófono do Sahel se fecha.</span><span class="ng-fr">, clôturant un cycle ouvert dans les années 1990. L'axe francophone du Sahel se referme.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">Jul / 2025</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Starmer e Macron anunciam piloto</span><span class="ng-fr">Starmer et Macron annoncent le pilote</span> <strong><span class="ng-pt">"one in, one out"</span><span class="ng-fr">« one in, one out »</span></strong> <span class="ng-pt">sobre Canal da Mancha. Aprofundamento da cooperação bilateral pós-Brexit.</span><span class="ng-fr">sur la Manche. Approfondissement de la coopération bilatérale post-Brexit.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">Nov / 2025</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Em Paris,</span><span class="ng-fr">À Paris,</span> <strong><span class="ng-pt">Zelensky assina contrato histórico</span><span class="ng-fr">Zelensky signe un contrat historique</span></strong><span class="ng-pt">: 100 caças Rafale, drones, sistemas de defesa aérea franceses para a Ucrânia.</span><span class="ng-fr"> : 100 chasseurs Rafale, drones, systèmes de défense aérienne français pour l'Ukraine.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">Dez / 2025</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">França encerra</span><span class="ng-fr">La France met fin à</span> <strong><span class="ng-pt">65 anos de presença militar no Senegal</span><span class="ng-fr">65 ans de présence militaire au Sénégal</span></strong><span class="ng-pt">. Símbolo final do recuo francês no Sahel e na África Ocidental francófona.</span><span class="ng-fr">. Symbole final du recul français au Sahel et en Afrique de l'Ouest francophone.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">Jan / 2026</div>
+        <div class="timeline-texto">
+          Macron anuncia <strong><span class="ng-pt">€36 bilhões adicionais</span><span class="ng-fr">36 milliards d'euros supplémentaires</span></strong> <span class="ng-pt">ao orçamento militar 2026-2030. Pelo menos €3,5 bilhões já em 2026. Novo serviço voluntário militar.</span><span class="ng-fr">au budget militaire 2026-2030. Au moins 3,5 milliards d'euros dès 2026. Nouveau service volontaire militaire.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">Mar / 2026</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Em Île Longue, Macron expõe doutrina nuclear ampliada com</span><span class="ng-fr">À l'Île Longue, Macron expose une doctrine nucléaire élargie avec</span> <strong><span class="ng-pt">8 aliados europeus</span><span class="ng-fr">8 alliés européens</span></strong><span class="ng-pt">. Primeira expansão do estoque de ogivas francesas em décadas.</span><span class="ng-fr">. Première expansion du stock d'ogives françaises en décennies.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">11-12 Mai / 2026</div>
+        <div class="timeline-texto">
+          <strong><span class="ng-pt">Africa Forward Summit em Nairobi</span><span class="ng-fr">Sommet Africa Forward à Nairobi</span></strong><span class="ng-pt">. Macron com Ruto. 30 chefes de Estado, €23 bilhões em compromissos, pivô anglófono.</span><span class="ng-fr">. Macron avec Ruto. 30 chefs d'État, 23 milliards d'euros en engagements, pivot anglophone.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">15-17 Jun / 2026</div>
+        <div class="timeline-texto">
+          <strong><span class="ng-pt">G7 em Évian-les-Bains</span><span class="ng-fr">G7 à Évian-les-Bains</span></strong><span class="ng-pt">. IA, Ucrânia, Oriente Médio na agenda oficial. África e China nas conversas paralelas. Jantar em Versalhes para Trump.</span><span class="ng-fr">. IA, Ukraine, Moyen-Orient à l'ordre du jour officiel. Afrique et Chine dans les conversations parallèles. Dîner à Versailles pour Trump.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">VI. As objeções</span><span class="ng-fr">VI. Les objections</span></span>
+      <span class="ng-pt">O que a crítica diz a Macron</span><span class="ng-fr">Ce que la critique dit à Macron</span>
+    </h2>
+
+    <p><span class="ng-pt">
+      A diplomacia francesa em 2026 não escapa a críticas, e as mais consistentes vêm de três direções. <strong>Da esquerda francesa</strong>, vem a acusação de que o discurso sobre "autonomia estratégica" europeia mascara, na prática, alinhamento crescente com a agenda securitária americana — sanções a Moscou, contenção da China, intervenção em Gaza filtrada por palavras cuidadas, e silêncio relativo sobre violações de direitos humanos em Israel. A esquerda aponta também o paradoxo orçamentário: aumentar €36 bilhões em defesa enquanto se corta 18% na ajuda ao desenvolvimento desfaz o que a diplomacia cultural tenta construir.
+    </span><span class="ng-fr">La diplomatie française en 2026 n'échappe pas aux critiques, et les plus consistantes viennent de trois directions. <strong>De la gauche française</strong>, vient l'accusation que le discours sur « l'autonomie stratégique » européenne masque, en pratique, un alignement croissant avec l'agenda sécuritaire américain — sanctions contre Moscou, endiguement de la Chine, intervention à Gaza filtrée par des mots soignés, et silence relatif sur les violations des droits humains en Israël. La gauche souligne aussi le paradoxe budgétaire : augmenter de 36 milliards d'euros la défense tandis qu'on coupe 18 % dans l'aide au développement défait ce que la diplomatie culturelle tente de construire.</span></p>
+
+    <p><span class="ng-pt">
+      <strong>Da direita conservadora</strong>, vem a crítica oposta. Macron seria europeísta demais, abrindo mão de soberania francesa em nome de doutrinas continentais. A retirada do Sahel seria interpretada não como recuo estratégico mas como abandono. O acordo de restituição cultural com a África seria visto como concessão simbólica desnecessária. E o convite a Trump para Versalhes seria considerado ou ingenuidade, ou diluição da postura gaullista clássica de equidistância. <strong>Do mundo africano</strong>, em fim, vem a crítica mais delicada para Paris. O discurso de "parceria entre iguais" é repetido há quase uma década, mas o número concreto de mudanças estruturais — ritmo de restituições, cancelamento de dívidas, transferência de tecnologia, presença efetiva de líderes africanos em mesas de decisão global — segue modesto comparado à retórica.
+    </span><span class="ng-fr"><strong>De la droite conservatrice</strong>, vient la critique opposée. Macron serait trop européiste, abandonnant la souveraineté française au nom de doctrines continentales. Le retrait du Sahel serait interprété non comme un recul stratégique mais comme un abandon. L'accord de restitution culturelle avec l'Afrique serait vu comme une concession symbolique inutile. Et l'invitation de Trump à Versailles serait considérée soit comme une naïveté, soit comme une dilution de la posture gaullienne classique d'équidistance. <strong>Du monde africain</strong>, enfin, vient la critique la plus délicate pour Paris. Le discours de « partenariat entre égaux » est répété depuis presque une décennie, mais le nombre concret de changements structurels — rythme des restitutions, annulation de dettes, transfert de technologie, présence effective de dirigeants africains aux tables de décision globale — reste modeste comparé à la rhétorique.</span></p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">VII. A travessia</span><span class="ng-fr">VII. La traversée</span></span>
+      <span class="ng-pt">Por que isso importa para quem migrou</span><span class="ng-fr">Pourquoi cela importe pour ceux qui ont migré</span>
+    </h2>
+
+    <p><span class="ng-pt">
+      Para a comunidade imigrante na França, e em particular para a diáspora brasileira e latino-americana, a política externa francesa pode parecer assunto remoto. Não é. <strong>Cada vetor diplomático mencionado acima tem desdobramento concreto sobre quem vive em Paris hoje</strong>. O rearmamento europeu inflaciona orçamentos públicos e reduz margem para investimento social — saúde, educação, moradia, programas de integração. A retirada francesa do Sahel altera fluxos migratórios chegando à Europa, e portanto altera o discurso público sobre imigração que afeta diretamente quem está em fila de prefeitura. A posição francesa sobre o Oriente Médio repercute em comunidades árabes e judaicas parisienses, transformando relações de bairro, debates em escolas, segurança em sinagogas e mesquitas que toda a cidade compartilha como vizinhança.
+    </span><span class="ng-fr">Pour la communauté immigrée en France, et en particulier pour la diaspora brésilienne et latino-américaine, la politique extérieure française peut sembler un sujet lointain. Elle ne l'est pas. <strong>Chaque vecteur diplomatique mentionné ci-dessus a une retombée concrète sur ceux qui vivent à Paris aujourd'hui</strong>. Le réarmement européen gonfle les budgets publics et réduit la marge pour l'investissement social — santé, éducation, logement, programmes d'intégration. Le retrait français du Sahel modifie les flux migratoires arrivant en Europe, et donc le discours public sur l'immigration qui affecte directement celui qui est dans une file de préfecture. La position française au Moyen-Orient se répercute dans les communautés arabes et juives parisiennes, transformant les relations de quartier, les débats dans les écoles, la sécurité dans les synagogues et mosquées que toute la ville partage comme voisinage.</span></p>
+
+    <p><span class="ng-pt">
+      Há também a dimensão mais sutil. A própria <strong>capacidade da França de continuar sendo um destino atraente para migração legal</strong> — para estudantes, profissionais qualificados, empreendedores, artistas, famílias em busca de novo capítulo — depende em parte de como o país consegue se posicionar internacionalmente. Uma França percebida como ator global respeitável atrai talento. Uma França encurralada entre crises produz fechamento, ressentimento, retórica xenofóbica. Para brasileiros, africanos, latino-americanos, do Oriente Médio, da Ásia, que escolheram Paris como segunda casa, o que vai acontecer em Évian entre 15 e 17 de junho importa de maneiras pouco visíveis no curto prazo mas decisivas no longo prazo.
+    </span><span class="ng-fr">Il y a aussi la dimension plus subtile. La <strong>capacité même de la France à rester une destination attrayante pour la migration légale</strong> — pour les étudiants, professionnels qualifiés, entrepreneurs, artistes, familles en quête d'un nouveau chapitre — dépend en partie de la façon dont le pays parvient à se positionner internationalement. Une France perçue comme un acteur global respectable attire les talents. Une France acculée entre les crises produit fermeture, ressentiment, rhétorique xénophobe. Pour les Brésiliens, Africains, Latino-Américains, ceux du Moyen-Orient, d'Asie, qui ont choisi Paris comme seconde maison, ce qui va se passer à Évian entre le 15 et le 17 juin importe de manières peu visibles à court terme mais décisives à long terme.</span></p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        "<span class="ng-pt">Quando uma potência diplomática encolhe, o primeiro custo aparece nos discursos. O segundo, nos vistos. O terceiro, nas filas. A diáspora é sempre o termômetro inicial da saúde geopolítica de seu país de acolhida.</span><span class="ng-fr">Quand une puissance diplomatique rétrécit, le premier coût apparaît dans les discours. Le deuxième, dans les visas. Le troisième, dans les files d'attente. La diaspora est toujours le thermomètre initial de la santé géopolitique de son pays d'accueil.</span>"
+      </div>
+      <div class="quote-author"><span class="ng-pt">Análise editorial • The Crossing Time</span><span class="ng-fr">Analyse éditoriale • The Crossing Time</span></div>
+    </div>
+
+    <div class="nota-editorial">
+      <strong><span class="ng-pt">Nota editorial</span><span class="ng-fr">Note éditoriale</span></strong>
+      <span class="ng-pt">Esta análise baseia-se em comunicados oficiais do Eliseu, do Ministério das Forças Armadas francês, do Quai d'Orsay, dos documentos preparatórios do G7 Évian publicados pelo Focus 2030 e pelo G7 Research Group da Universidade de Toronto, e em cobertura jornalística do Le Monde, Defense News, Reuters, AP, Carnegie Endowment, Semafor e outros disponíveis até 22 de maio de 2026. Os cenários descritos podem evoluir até a abertura da cúpula em 15 de junho.</span><span class="ng-fr">Cette analyse se base sur les communiqués officiels de l'Élysée, du Ministère des Armées français, du Quai d'Orsay, des documents préparatoires du G7 Évian publiés par Focus 2030 et le G7 Research Group de l'Université de Toronto, et sur la couverture journalistique du Monde, Defense News, Reuters, AP, Carnegie Endowment, Semafor et autres disponibles jusqu'au 22 mai 2026. Les scénarios décrits peuvent évoluer jusqu'à l'ouverture du sommet le 15 juin.</span>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">VIII. O posicionamento</span><span class="ng-fr">VIII. Le positionnement</span></span>
+      <span class="ng-pt">Évian, e depois?</span><span class="ng-fr">Évian, et après ?</span>
+    </h2>
+
+    <p><span class="ng-pt">
+      A França sabe que o mundo vive uma fase de tensão crescente. Por isso, Paris continua tentando preservar algo que sempre fez parte de sua identidade: ser potência diplomática em tempos de instabilidade. Mas <strong>o vocabulário da diplomacia francesa mudou nos últimos dois anos</strong>. Onde antes se falava em "papel global", hoje se fala em "autonomia estratégica". Onde antes se falava em "presença na África", hoje se fala em "parceria entre iguais". Onde antes se falava em "voz francesa", hoje se fala em "diagnóstico compartilhado". A mudança lexical não é cosmética. Reflete a percepção, finalmente assumida, de que o mundo de 2026 não comporta mais a postura clássica gaullista de exceção francesa. Comporta, no máximo, a postura de protagonista colaborativo entre potências médias.
+    </span><span class="ng-fr">La France sait que le monde traverse une phase de tension croissante. C'est pourquoi Paris continue d'essayer de préserver quelque chose qui a toujours fait partie de son identité : être une puissance diplomatique en temps d'instabilité. Mais <strong>le vocabulaire de la diplomatie française a changé au cours des deux dernières années</strong>. Là où l'on parlait avant de « rôle global », on parle aujourd'hui d'« autonomie stratégique ». Là où l'on parlait avant de « présence en Afrique », on parle aujourd'hui de « partenariat entre égaux ». Là où l'on parlait avant de « voix française », on parle aujourd'hui de « diagnostic partagé ». Le changement lexical n'est pas cosmétique. Il reflète la perception, finalement assumée, que le monde de 2026 ne supporte plus la posture gaullienne classique d'exception française. Il supporte, au mieux, la posture de protagoniste collaboratif entre puissances moyennes.</span></p>
+
+    <p><span class="ng-pt">
+      Para The Crossing Time, Évian em junho será revelador. Não pelo que será dito publicamente — comunicados de G7 raramente surpreendem —, mas pelo que será dito nas conversas paralelas e nas linguagens não verbais. <strong>Será que Trump sentará no jantar de Versalhes</strong>? Será que Macron conseguirá costurar declaração comum sobre Ucrânia que satisfaça tanto Berlim quanto Washington? Será que a presença de Kenya, Índia, Coreia do Sul e potencialmente Brasil produzirá algo concreto, ou ficará no registro do símbolo? Em última instância, Évian testará se a França ainda é capaz de organizar o palco global, ou se Paris se tornou apenas mais um dos atores em cena. A resposta a essa pergunta — e este é o ponto crucial — afeta diretamente quem vive nessa cidade. Inclusive quem chegou de longe, e ainda não decidiu se fica para sempre. Para a diáspora, a saúde diplomática do país de acolhida é também a textura cotidiana de seu próprio recomeço.
+    </span><span class="ng-fr">Pour The Crossing Time, Évian en juin sera révélateur. Non par ce qui sera dit publiquement — les communiqués de G7 surprennent rarement —, mais par ce qui sera dit dans les conversations parallèles et dans les langages non verbaux. <strong>Trump s'assiéra-t-il au dîner de Versailles </strong>? Macron parviendra-t-il à coudre une déclaration commune sur l'Ukraine qui satisfasse à la fois Berlin et Washington ? La présence du Kenya, de l'Inde, de la Corée du Sud et potentiellement du Brésil produira-t-elle quelque chose de concret, ou restera-t-elle dans le registre du symbole ? En dernière instance, Évian testera si la France est encore capable d'organiser la scène mondiale, ou si Paris est devenu juste un acteur de plus en scène. La réponse à cette question — et c'est le point crucial — affecte directement ceux qui vivent dans cette ville. Y compris ceux qui sont arrivés de loin, et n'ont pas encore décidé s'ils restent pour toujours. Pour la diaspora, la santé diplomatique du pays d'accueil est aussi la texture quotidienne de son propre recommencement.</span></p>
+
+    <div class="article-footer">
+      <div class="marca">THE CROSSING TIME</div>
+      <div class="sub">Plateforme éditoriale internationale</div>
+      <div class="pilares"><span class="ng-pt">MOBILIDADE • POUVOIR • TRANSFORMATION</span><span class="ng-fr">MOBILITÉ • POUVOIR • TRANSFORMATION</span></div>
+    </div>
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="signature">THE CROSSING TIME, by Porta Voz do Imigrante</div>
+  <div class="descricao">Plateforme éditoriale internationale • Mobilité • Pouvoir • Transformation</div>
+</footer>
+
+<script>
+  function goBack() {
+  if (window.parent && window.parent !== window) {
+    try { window.parent.closeMateria(); return; } catch(e) {}
+  }
+  window.location.href = '../index.html#materias';
+}
+  function setLang(lang) {
+    document.body.setAttribute('lang-mode', lang);
+    document.getElementById('lang-pt-btn').classList.toggle('active', lang === 'pt');
+    document.getElementById('lang-fr-btn').classList.toggle('active', lang === 'fr');
+    localStorage.setItem('tct-lang', lang);
+  }
+  (function() {
+    const saved = localStorage.getItem('tct-lang') || 'pt';
+    setLang(saved);
+  })();
+</script>
+
+</body>
+</html>

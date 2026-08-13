@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A França encarece a entrada dos seus — The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0E1A2B; --navy2:#1a2e4a;
+  --gold:#C6A15B; --gold2:#a8863d;
+  --offwhite:#F4F2ED; --black:#111111;
+  --gray:#6E6E6E; --gray2:#4a4a4a;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+html{font-size:16px;scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  color:var(--black);
+  background:var(--offwhite);
+  line-height:1.7;
+}
+
+/* === LANG TOGGLE === */
+.lang-bar{
+  position:fixed;top:14px;right:14px;z-index:100;
+  display:flex;gap:6px;background:rgba(14,26,43,.92);
+  padding:6px 8px;border-radius:4px;
+  box-shadow:0 2px 8px rgba(0,0,0,.2);
+  backdrop-filter:blur(8px);
+}
+.lang-btn{
+  background:transparent;border:1px solid rgba(255,255,255,.25);
+  color:rgba(255,255,255,.75);
+  padding:5px 11px;font-size:10px;letter-spacing:.1em;
+  font-family:var(--sans);cursor:pointer;border-radius:3px;
+  transition:all .2s;font-weight:500;
+}
+.lang-btn:hover{color:#fff;}
+.lang-btn.active{
+  background:rgba(198,161,91,.2);
+  border-color:var(--gold);color:var(--gold);font-weight:600;
+}
+
+/* === HERO === */
+.hero{
+  position:relative;min-height:80vh;
+  background:linear-gradient(180deg,rgba(14,26,43,.4) 0%,rgba(14,26,43,.85) 65%,rgba(14,26,43,.98) 100%),
+             url("https://images.unsplash.com/photo-1567942712661-82b9b407abbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") center/cover;
+  background-color:var(--navy);
+  display:flex;align-items:flex-end;
+  padding:5rem 2rem 4rem;
+}
+.hero-inner{max-width:900px;margin:0 auto;color:var(--offwhite);width:100%;}
+.hero-tag{
+  display:inline-block;font-size:10px;letter-spacing:.3em;
+  text-transform:uppercase;color:var(--gold);
+  font-family:var(--sans);font-weight:500;margin-bottom:1.5rem;
+  padding:7px 16px;border:1px solid var(--gold);border-radius:2px;
+}
+.hero-title{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(2rem,5.5vw,3.8rem);line-height:1.1;
+  margin-bottom:1.5rem;letter-spacing:-.01em;
+}
+.hero-title em{color:var(--gold);font-weight:300;}
+.hero-sub{
+  font-size:1.05rem;line-height:1.7;
+  color:rgba(244,242,237,.85);font-style:italic;
+  font-family:var(--serif);max-width:760px;
+  font-weight:400;font-size:1.25rem;
+}
+.hero-meta{
+  margin-top:2rem;padding-top:1.5rem;
+  border-top:.5px solid rgba(198,161,91,.3);
+  display:flex;flex-wrap:wrap;gap:1.5rem;
+  font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(244,242,237,.65);
+  font-family:var(--sans);
+}
+.hero-meta span strong{color:var(--gold);font-weight:600;}
+
+/* === BODY === */
+.article-body{
+  max-width:760px;margin:0 auto;padding:4rem 1.5rem 2rem;
+}
+
+.section{margin-bottom:3.5rem;}
+.section-num{
+  font-family:var(--serif);font-style:italic;
+  font-size:1.1rem;color:var(--gold);
+  letter-spacing:.05em;margin-bottom:.5rem;
+}
+.section-title{
+  font-family:var(--serif);font-weight:500;
+  font-size:clamp(1.6rem,3.5vw,2.2rem);
+  line-height:1.2;color:var(--navy);
+  margin-bottom:1.5rem;letter-spacing:-.005em;
+}
+.section-title em{color:var(--gold);font-style:italic;}
+
+.lead{
+  font-family:var(--serif);font-style:italic;
+  font-size:1.35rem;line-height:1.5;color:var(--gray2);
+  margin-bottom:2rem;padding:0 0 1.5rem;
+  border-bottom:.5px solid rgba(14,26,43,.12);
+}
+.lead em{color:var(--gold);font-style:normal;font-weight:500;}
+
+p{margin-bottom:1.3rem;font-size:1.02rem;color:var(--gray2);}
+p strong{color:var(--navy);font-weight:600;}
+em{color:var(--gold2);font-style:italic;}
+
+/* === DESTAQUE / PULL QUOTE === */
+.pull-quote{
+  margin:3rem 0;padding:2rem 2.5rem;
+  background:linear-gradient(135deg,#fafaf6 0%,#f4f2ed 100%);
+  border-left:3px solid var(--gold);
+  position:relative;
+}
+.pull-quote::before{
+  content:'"';position:absolute;top:-15px;left:15px;
+  font-family:var(--serif);font-size:6rem;color:var(--gold);
+  opacity:.25;line-height:1;
+}
+.pull-quote p{
+  font-family:var(--serif);font-style:italic;
+  font-size:1.35rem;line-height:1.5;color:var(--navy);
+  margin-bottom:1rem;
+}
+.pull-quote .source{
+  font-family:var(--sans);font-size:10px;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;
+}
+
+/* === STAT BOX === */
+.stat-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:1rem;margin:2.5rem 0;
+}
+.stat-box{
+  background:var(--navy);color:var(--offwhite);
+  padding:2rem 1.5rem;text-align:center;
+  border-radius:3px;
+}
+.stat-num{
+  font-family:var(--serif);font-size:2.8rem;
+  color:var(--gold);font-weight:400;line-height:1;
+  margin-bottom:.5rem;
+}
+.stat-label{
+  font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(244,242,237,.7);font-family:var(--sans);
+  font-weight:500;line-height:1.5;
+}
+
+/* === TABELA DE TAXAS === */
+.tax-table{
+  margin:2.5rem 0;
+  border:.5px solid rgba(14,26,43,.15);
+  border-radius:3px;overflow:hidden;
+}
+.tax-table-header{
+  background:var(--navy);color:var(--offwhite);
+  padding:1.25rem 1.5rem;
+  font-family:var(--serif);font-style:italic;font-size:1.2rem;
+}
+.tax-row{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 80px;
+  padding:1rem 1.5rem;
+  border-bottom:.5px solid rgba(14,26,43,.08);
+  align-items:center;
+  font-size:.92rem;
+}
+.tax-row:last-child{border-bottom:none;}
+.tax-row.head{
+  background:#fafaf6;font-size:9px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);font-weight:600;
+}
+.tax-row .label{color:var(--navy);font-weight:500;}
+.tax-row .old{color:var(--gray);text-decoration:line-through;}
+.tax-row .new{color:var(--navy);font-weight:600;font-family:var(--serif);font-size:1.1rem;}
+.tax-row .delta{color:var(--gold);font-weight:600;text-align:right;font-size:.85rem;}
+
+/* === SVG WRAPPERS === */
+.svg-frame{
+  margin:3rem -1rem;
+  border-radius:3px;overflow:hidden;
+  box-shadow:0 2px 12px rgba(14,26,43,.1);
+}
+.svg-frame img{width:100%;display:block;}
+.svg-caption{
+  text-align:center;padding:1rem 1.5rem;
+  background:#fafaf6;font-size:.85rem;
+  font-style:italic;color:var(--gray2);
+  font-family:var(--serif);
+  border-top:.5px solid rgba(14,26,43,.08);
+}
+
+/* === ACTION BOXES === */
+.actions-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1.25rem;margin:2.5rem 0;
+}
+.action-box{
+  padding:2rem 1.5rem;background:#fff;
+  border:.5px solid rgba(14,26,43,.12);
+  border-top:3px solid var(--gold);
+  border-radius:3px;
+}
+.action-box .icon{
+  font-size:1.5rem;margin-bottom:1rem;
+}
+.action-box h4{
+  font-family:var(--serif);font-size:1.2rem;
+  color:var(--navy);font-weight:500;
+  margin-bottom:.75rem;line-height:1.3;
+}
+.action-box p{
+  font-size:.92rem;line-height:1.6;
+  color:var(--gray);margin:0;
+}
+
+/* === FOOTER ARTIGO === */
+.article-footer{
+  max-width:760px;margin:3rem auto 0;padding:3rem 1.5rem;
+  border-top:.5px solid rgba(14,26,43,.15);
+}
+.fontes-title{
+  font-size:10px;letter-spacing:.25em;
+  text-transform:uppercase;color:var(--gold);
+  font-weight:600;margin-bottom:1rem;font-family:var(--sans);
+}
+.fontes-list{
+  font-size:.85rem;line-height:1.8;color:var(--gray);
+  font-style:italic;font-family:var(--serif);
+}
+
+.signature{
+  margin-top:3rem;padding:2.5rem 2rem;
+  background:var(--navy);color:var(--offwhite);
+  text-align:center;border-radius:3px;
+}
+.signature h3{
+  font-family:var(--serif);font-size:1.6rem;
+  color:var(--gold);font-style:italic;font-weight:400;
+  margin-bottom:.6rem;
+}
+.signature p{
+  font-size:9px;letter-spacing:.3em;
+  text-transform:uppercase;color:rgba(244,242,237,.7);
+  margin:0;font-family:var(--sans);
+}
+
+/* === HIDE FR/PT === */
+[lang-mode="pt"] .ng-fr{display:none;}
+[lang-mode="fr"] .ng-pt{display:none;}
+
+@media (max-width:600px){
+  .hero{padding:3rem 1.5rem 3rem;min-height:70vh;}
+  .article-body{padding:2.5rem 1.25rem 2rem;}
+  .pull-quote{padding:1.5rem 1.5rem;margin:2rem -.5rem;}
+  .pull-quote p{font-size:1.15rem;}
+  .tax-row{grid-template-columns:1.5fr 1fr 1fr;font-size:.85rem;padding:.75rem 1rem;}
+  .tax-row .delta{display:none;}
+  .stat-num{font-size:2.2rem;}
+  .svg-frame{margin:2rem -1.25rem;}
+}
+
+.art-back{position:fixed;top:1rem;left:1rem;z-index:100;background:rgba(14,26,43,.9);backdrop-filter:blur(8px);color:#F4F2ED;border:none;border-radius:999px;padding:8px 16px 8px 12px;font-family:sans-serif;font-size:11px;letter-spacing:.1em;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 12px rgba(0,0,0,.2);transition:all .2s;font-weight:600;text-transform:uppercase;}
+.art-back svg{width:14px;height:14px;stroke:#C6A15B;stroke-width:2.5;fill:none;}
+.art-back:hover{background:#0E1A2B;transform:translateX(-2px);}
+
+</style>
+</head>
+<body lang-mode="pt">
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">🇧🇷 PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">🇫🇷 FR</button>
+</div>
+
+<!-- ============= HERO ============= -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">
+      <span class="ng-pt">Imigração & Mobilidade · Maio 2026</span>
+      <span class="ng-fr">Immigration & Mobilité · Mai 2026</span>
+    </span>
+    <h1 class="hero-title">
+      <span class="ng-pt">A França <em>encarece</em><br>a entrada dos seus</span>
+      <span class="ng-fr">La France <em>renchérit</em><br>l'entrée des siens</span>
+    </h1>
+    <p class="hero-sub">
+      <span class="ng-pt">A Lei de Finanças 2026 multiplica taxas migratórias por até cinco vezes a partir de 1º de maio. Não é arrecadação — é política. E é apenas o sintoma francês de um movimento europeu mais amplo de fechamento institucional.</span>
+      <span class="ng-fr">La Loi de Finances 2026 multiplie les taxes migratoires jusqu'à cinq fois à partir du 1er mai. Ce n'est pas du recouvrement — c'est de la politique. Et ce n'est que le symptôme français d'un mouvement européen plus large de fermeture institutionnelle.</span>
+    </p>
+    <div class="hero-meta">
+      <span><strong>15 min</strong> · <span class="ng-pt">leitura</span><span class="ng-fr">lecture</span></span>
+      <span><span class="ng-pt">Edição especial</span><span class="ng-fr">Édition spéciale</span></span>
+      <span>PT / FR</span>
+      <span><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span> .gouv.fr</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============= BODY ============= -->
+<article class="article-body">
+
+  <!-- LEAD -->
+  <p class="lead">
+    <span class="ng-pt">Para mais de <em>220 mil brasileiros</em> que vivem oficialmente na França, a reforma redesenha a economia individual da imigração legal — e abre uma janela urgente de decisão para quem planeja sua travessia em 2026.</span>
+    <span class="ng-fr">Pour plus de <em>220 mille Brésiliens</em> vivant officiellement en France, la réforme redessine l'économie individuelle de l'immigration légale — et ouvre une fenêtre urgente de décision pour ceux qui planifient leur traversée en 2026.</span>
+  </p>
+
+  <!-- I. O FATO -->
+  <section class="section">
+    <p class="section-num">I.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">O fato</span>
+      <span class="ng-fr">Le fait</span>
+    </h2>
+    <p>
+      <span class="ng-pt">Em <strong>19 de fevereiro de 2026</strong>, foi promulgada a Lei nº 2026-103 — a Lei de Finanças da República Francesa para o exercício 2026. No corpo do texto, o artigo 128 dedica-se a uma reforma silenciosa, mas decisiva: a revisão do regime tarifário aplicado aos estrangeiros que vivem, querem viver ou querem se tornar cidadãos da França.</span>
+      <span class="ng-fr">Le <strong>19 février 2026</strong>, la Loi nº 2026-103 a été promulguée — la Loi de Finances de la République française pour l'exercice 2026. Dans le corps du texte, l'article 128 se consacre à une réforme silencieuse mais décisive : la révision du régime tarifaire appliqué aux étrangers qui vivent, veulent vivre ou veulent devenir citoyens de la France.</span>
+    </p>
+    <p>
+      <span class="ng-pt">A entrada em vigor: <strong>1º de maio de 2026</strong> — primeiro dia do terceiro mês após a publicação da lei no Diário Oficial.</span>
+      <span class="ng-fr">L'entrée en vigueur : <strong>1er mai 2026</strong> — premier jour du troisième mois après la publication de la loi au Journal Officiel.</span>
+    </p>
+
+    <!-- DESTAQUES NUMÉRICOS -->
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="stat-num">+125€</div>
+        <div class="stat-label"><span class="ng-pt">Carte de séjour</span><span class="ng-fr">Carte de séjour</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">+200€</div>
+        <div class="stat-label"><span class="ng-pt">Naturalização</span><span class="ng-fr">Naturalisation</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100€</div>
+        <div class="stat-label"><span class="ng-pt">APS · Antes gratuita</span><span class="ng-fr">APS · Avant gratuite</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">40€</div>
+        <div class="stat-label"><span class="ng-pt">Troca de habilitação</span><span class="ng-fr">Échange de permis</span></div>
+      </div>
+    </div>
+
+    <p>
+      <span class="ng-pt">A taxa para a primeira emissão de uma <em>carte de séjour</em> temporária, plurianual ou de residência salta de <strong>225 €</strong> para <strong>350 €</strong>. O selo fiscal para naturalização, reintegração ou declaração de aquisição da nacionalidade francesa multiplica-se por quase cinco: passa de <strong>55 €</strong> para <strong>255 €</strong>.</span>
+      <span class="ng-fr">La taxe pour la première émission d'une <em>carte de séjour</em> temporaire, pluriannuelle ou de résidence passe de <strong>225 €</strong> à <strong>350 €</strong>. Le timbre fiscal pour naturalisation, réintégration ou déclaration d'acquisition de la nationalité française se multiplie par presque cinq : passe de <strong>55 €</strong> à <strong>255 €</strong>.</span>
+    </p>
+    <p>
+      <span class="ng-pt">A medida foi aprovada com pouco debate público amplo. Avança como dispositivo técnico dentro de uma lei orçamentária de centenas de páginas. Mas seu efeito é profundamente político.</span>
+      <span class="ng-fr">La mesure a été adoptée avec peu de débat public large. Elle avance comme dispositif technique dans une loi budgétaire de centaines de pages. Mais son effet est profondément politique.</span>
+    </p>
+  </section>
+
+  <!-- II. POR QUE IMPORTA -->
+  <section class="section">
+    <p class="section-num">II.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">Por que esta história <em>importa</em></span>
+      <span class="ng-fr">Pourquoi cette histoire <em>compte</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">Para os mais de 220 mil brasileiros que vivem oficialmente na França — e os milhares que ainda planejam essa travessia —, a Lei de Finanças 2026 não é uma curiosidade legislativa. É um <strong>recálculo forçado</strong>.</span>
+      <span class="ng-fr">Pour les plus de 220 000 Brésiliens vivant officiellement en France — et les milliers qui planifient encore cette traversée —, la Loi de Finances 2026 n'est pas une curiosité législative. C'est un <strong>recalcul forcé</strong>.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Quem planejava solicitar a nacionalidade francesa em 2026 precisa decidir, agora, se acelera o pedido ou aceita o novo custo. Quem está em processo de regularização precisa entender que pagar a primeira parcela antes de 30 de abril não a protege da nova taxa: o complemento será cobrado pelo valor reajustado no momento da entrega do título.</span>
+      <span class="ng-fr">Ceux qui prévoyaient de demander la nationalité française en 2026 doivent décider, maintenant, s'ils accélèrent leur demande ou acceptent le nouveau coût. Ceux en processus de régularisation doivent comprendre que payer la première tranche avant le 30 avril ne les protège pas de la nouvelle taxe : le complément sera facturé au montant réajusté au moment de la remise du titre.</span>
+    </p>
+  </section>
+
+  <!-- DESTAQUE VISUAL: SVG BANDEIRA + 363% -->
+  <div class="svg-frame">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnLXNoYWRvdyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYTE0MjIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEUxQTJCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNiZy1zaGFkb3cpIi8+CiAgCiAgPCEtLSBGYWl4YXMgdHJpY29sb3IgdmVydGljYWlzIGRpc2NyZXRhcyAtLT4KICA8cmVjdCB4PSI0MCIgeT0iODAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyNDAiIGZpbGw9IiMwMDU1QTQiIG9wYWNpdHk9Ii41NSIvPgogIDxyZWN0IHg9IjEyMCIgeT0iODAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyNDAiIGZpbGw9IiNGNEYyRUQiIG9wYWNpdHk9Ii4yNSIvPgogIDxyZWN0IHg9IjIwMCIgeT0iODAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIyNDAiIGZpbGw9IiNFRjQxMzUiIG9wYWNpdHk9Ii41NSIvPgogIAogIDwhLS0gU8OtbWJvbG8gJSBhbXBsaWFkbyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MjAsMjAwKSIgb3BhY2l0eT0iLjkiPgogICAgPGNpcmNsZSByPSI4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9Ii40Ii8+CiAgICA8dGV4dCB5PSIzNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTIwIiBmaWxsPSIjQzZBMTVCIiBmb250LXdlaWdodD0iMzAwIj4lPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIFNldGFzIHBhcmEgY2ltYSBkaXNjcmV0YXMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQwLDM2MCkiIG9wYWNpdHk9Ii41Ij4KICAgIDxwYXRoIGQ9Ik0wLDAgTDEwLC0yMCBMMjAsMCBaIiBmaWxsPSIjQzZBMTVCIi8+CiAgICA8cGF0aCBkPSJNNDAsMCBMNTAsLTMwIEw2MCwwIFoiIGZpbGw9IiNDNkExNUIiLz4KICAgIDxwYXRoIGQ9Ik04MCwwIEw5MCwtNDAgTDEwMCwwIFoiIGZpbGw9IiNDNkExNUIiLz4KICA8L2c+CiAgCiAgPCEtLSBUZXh0byAiKzM2MyUiIC0tPgogIDx0ZXh0IHg9IjgwIiB5PSIxODAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjQzZBMTVCIiBmb250LXdlaWdodD0iNDAwIiBmb250LXN0eWxlPSJpdGFsaWMiPiszNjMlPC90ZXh0PgogIDxsaW5lIHgxPSI4MCIgeTE9IjE5NSIgeDI9IjIwMCIgeTI9IjE5NSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9Ii41IiBvcGFjaXR5PSIuNiIvPgogIDx0ZXh0IHg9IjgwIiB5PSIyMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSIjRjRGMkVEIiBsZXR0ZXItc3BhY2luZz0iMyIgb3BhY2l0eT0iLjciPk5BVFVSQUxJU0FUSU9OPC90ZXh0Pgo8L3N2Zz4=" alt="Aumento de 363% no selo de naturalização">
+    <div class="svg-caption">
+      <span class="ng-pt">A naturalização francesa multiplica-se por quase cinco — aumento percentual de 363%.</span>
+      <span class="ng-fr">La naturalisation française se multiplie par presque cinq — augmentation de 363%.</span>
+    </div>
+  </div>
+
+  <!-- III. CHOQUE TARIFÁRIO -->
+  <section class="section">
+    <p class="section-num">III.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">O choque <em>tarifário</em> por extenso</span>
+      <span class="ng-fr">Le choc <em>tarifaire</em> en détail</span>
+    </h2>
+    <p>
+      <span class="ng-pt">A reforma atinge praticamente todas as etapas da relação entre o estrangeiro e o Estado francês. Os principais pontos:</span>
+      <span class="ng-fr">La réforme touche pratiquement toutes les étapes de la relation entre l'étranger et l'État français. Les principaux points :</span>
+    </p>
+
+    <!-- TABELA DE TAXAS -->
+    <div class="tax-table">
+      <div class="tax-table-header">
+        <span class="ng-pt">Quadro comparativo das taxas</span>
+        <span class="ng-fr">Tableau comparatif des taxes</span>
+      </div>
+      <div class="tax-row head">
+        <span><span class="ng-pt">Procedimento</span><span class="ng-fr">Procédure</span></span>
+        <span><span class="ng-pt">Antes</span><span class="ng-fr">Avant</span></span>
+        <span><span class="ng-pt">Agora</span><span class="ng-fr">Maintenant</span></span>
+        <span></span>
+      </div>
+      <div class="tax-row">
+        <span class="label"><span class="ng-pt">Primeira emissão CDS</span><span class="ng-fr">Première émission CDS</span></span>
+        <span class="old">225 €</span>
+        <span class="new">350 €</span>
+        <span class="delta">+56%</span>
+      </div>
+      <div class="tax-row">
+        <span class="label"><span class="ng-pt">Renovação CDS padrão</span><span class="ng-fr">Renouvellement CDS</span></span>
+        <span class="old">225 €</span>
+        <span class="new">250 €</span>
+        <span class="delta">+11%</span>
+      </div>
+      <div class="tax-row">
+        <span class="label"><span class="ng-pt">Visto longa estadia</span><span class="ng-fr">Visa long séjour</span></span>
+        <span class="old">200 €</span>
+        <span class="new">300 €</span>
+        <span class="delta">+50%</span>
+      </div>
+      <div class="tax-row">
+        <span class="label"><span class="ng-pt">Visto regularização</span><span class="ng-fr">Visa régularisation</span></span>
+        <span class="old">200 €</span>
+        <span class="new">300 €</span>
+        <span class="delta">+50%</span>
+      </div>
+      <div class="tax-row">
+        <span class="label"><strong><span class="ng-pt">Naturalização</span><span class="ng-fr">Naturalisation</span></strong></span>
+        <span class="old">55 €</span>
+        <span class="new">255 €</span>
+        <span class="delta">+363%</span>
+      </div>
+      <div class="tax-row">
+        <span class="label">APS</span>
+        <span class="old"><span class="ng-pt">Grátis</span><span class="ng-fr">Gratuit</span></span>
+        <span class="new">100 €</span>
+        <span class="delta">∞</span>
+      </div>
+      <div class="tax-row">
+        <span class="label"><span class="ng-pt">Troca de habilitação</span><span class="ng-fr">Échange permis</span></span>
+        <span class="old"><span class="ng-pt">Grátis</span><span class="ng-fr">Gratuit</span></span>
+        <span class="new">40 €</span>
+        <span class="delta">∞</span>
+      </div>
+      <div class="tax-row">
+        <span class="label"><span class="ng-pt">Direito de selo</span><span class="ng-fr">Droit de timbre</span></span>
+        <span class="old">25 €</span>
+        <span class="new">50 €</span>
+        <span class="delta">+100%</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- IV. NACIONALIDADE COMO TRANSAÇÃO -->
+  <section class="section">
+    <p class="section-num">IV.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">A nacionalidade como <em>transação</em></span>
+      <span class="ng-fr">La nationalité comme <em>transaction</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">Entre todas as mudanças, uma se destaca pela magnitude e pelo simbolismo: a quase quintuplicação do custo para se tornar francês.</span>
+      <span class="ng-fr">Parmi tous les changements, l'un se distingue par sa magnitude et son symbolisme : la quasi-quintuplication du coût pour devenir français.</span>
+    </p>
+    <p>
+      <span class="ng-pt">A taxa cobre demandas por decreto, pedidos de reintegração na nacionalidade francesa, e declarações de aquisição (como aquelas feitas por casamento). Em valor absoluto, 200 euros adicionais podem parecer um custo administrativo modesto. Em proporção, são <strong>quase cinco vezes mais</strong>. E em significado, são uma fronteira nova.</span>
+      <span class="ng-fr">La taxe couvre les demandes par décret, les demandes de réintégration dans la nationalité française, et les déclarations d'acquisition (comme celles faites par mariage). En valeur absolue, 200 euros supplémentaires peuvent paraître un coût administratif modeste. En proportion, c'est <strong>presque cinq fois plus</strong>. Et en signification, c'est une frontière nouvelle.</span>
+    </p>
+
+    <div class="pull-quote">
+      <p>
+        <span class="ng-pt">A nacionalidade francesa, historicamente vendida ao mundo como uma extensão de princípios republicanos universalistas — liberté, égalité, fraternité —, passa a custar uma <em>transação fiscal mais alta</em>. O simbolismo importa.</span>
+        <span class="ng-fr">La nationalité française, historiquement vendue au monde comme une extension de principes républicains universalistes — liberté, égalité, fraternité —, devient désormais une <em>transaction fiscale plus élevée</em>. Le symbolisme compte.</span>
+      </p>
+      <span class="source">The Crossing Time · 2026</span>
+    </div>
+  </section>
+
+  <!-- V. LEITURA POLÍTICA -->
+  <section class="section">
+    <p class="section-num">V.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">Não é <em>arrecadação</em> — é política</span>
+      <span class="ng-fr">Ce n'est pas du <em>recouvrement</em> — c'est politique</span>
+    </h2>
+    <p>
+      <span class="ng-pt">A defesa pública da reforma se ancora em argumentos orçamentários: o Estado precisa de receita, os processos administrativos têm custo real, e os valores anteriores estavam defasados em relação à inflação. Tudo verdadeiro, em parte.</span>
+      <span class="ng-fr">La défense publique de la réforme s'ancre dans des arguments budgétaires : l'État a besoin de recettes, les processus administratifs ont un coût réel, et les valeurs antérieures étaient en retard par rapport à l'inflation. Tout est vrai, en partie.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Mas o que distingue uma atualização técnica de uma reforma política é a <strong>magnitude e o desenho</strong>. E nesta reforma, a magnitude é grande demais para se explicar por inflação. O direito de selo da naturalização, em mais de uma década, jamais sofreu correção próxima de 363%.</span>
+      <span class="ng-fr">Mais ce qui distingue une mise à jour technique d'une réforme politique est la <strong>magnitude et le design</strong>. Et dans cette réforme, la magnitude est trop grande pour s'expliquer par l'inflation. Le droit de timbre de la naturalisation, en plus d'une décennie, n'a jamais subi de correction proche de 363%.</span>
+    </p>
+
+    <div class="pull-quote">
+      <p>
+        <span class="ng-pt">Verdadeiro <em>racket institucional</em>, "que faz o estrangeiro pagar o preço de uma política fundada na suspeita, na humilhação e no entrave".</span>
+        <span class="ng-fr">Véritable <em>racket institutionnel</em>, "qui fait payer à l'étranger le prix d'une politique fondée sur la suspicion, l'humiliation et l'entrave".</span>
+      </p>
+      <span class="source">La Cimade · 2026</span>
+    </div>
+
+    <p>
+      <span class="ng-pt">No Senado francês, parlamentares da oposição apresentaram questionamento formal denunciando a <em>hausse</em> inadmissível dos custos ligados ao direito de residência. O reajuste ocorre simultaneamente à publicação do Decreto nº 2026-67, que restringe ainda mais o acesso à <strong>Aide Médicale d'État (AME)</strong> — o sistema de apoio médico para estrangeiros em situação irregular.</span>
+      <span class="ng-fr">Au Sénat français, des parlementaires de l'opposition ont présenté une question formelle dénonçant la <em>hausse</em> inadmissible des coûts liés au droit de résidence. Le réajustement intervient simultanément à la publication du Décret nº 2026-67, qui restreint encore l'accès à l'<strong>Aide Médicale d'État (AME)</strong>.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Não se trata de duas medidas paralelas. Trata-se de um <strong>pacote coerente</strong>. De um lado, encarece-se a regularização. De outro, restringe-se o acolhimento de quem permanece sem regularização. O movimento de pinça é deliberado.</span>
+      <span class="ng-fr">Il ne s'agit pas de deux mesures parallèles. Il s'agit d'un <strong>paquet cohérent</strong>. D'un côté, on rend la régularisation plus chère. De l'autre, on restreint l'accueil de ceux qui restent sans régularisation. Le mouvement en tenaille est délibéré.</span>
+    </p>
+  </section>
+
+  <!-- VI. O QUE A IMPRENSA OMITE -->
+  <section class="section">
+    <p class="section-num">VI.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">O que a imprensa <em>omite</em></span>
+      <span class="ng-fr">Ce que la presse <em>omet</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt"><strong>Sobre o regime de transição.</strong> Pedidos de título de residência depositados antes de 1º de maio mantêm o tarifário antigo até a decisão final. Mas o cálculo é mais sutil: o que vale é a <em>data da decisão favorável</em> da prefeitura, não a data do depósito. Pedidos antigos com decisões posteriores a 1º de maio podem cair na regra nova.</span>
+      <span class="ng-fr"><strong>Sur le régime de transition.</strong> Les demandes de titre de séjour déposées avant le 1er mai conservent le tarif ancien jusqu'à la décision finale. Mais le calcul est plus subtil : ce qui compte, c'est la <em>date de la décision favorable</em> de la préfecture, non la date du dépôt.</span>
+    </p>
+    <p>
+      <span class="ng-pt"><strong>Sobre o visto de regularização.</strong> A regra é especialmente dura. Quem pagou a parcela inicial de 50 € antes da entrada em vigor — e cujo pedido seja aceito após 1º de maio — terá que pagar o valor da nova parcela complementar (200 €) no momento da retirada do título.</span>
+      <span class="ng-fr"><strong>Sur le visa de régularisation.</strong> La règle est particulièrement dure. Ceux qui ont payé la première tranche de 50 € avant l'entrée en vigueur — et dont la demande est acceptée après le 1er mai — devront payer le nouveau complément (200 €) au moment du retrait du titre.</span>
+    </p>
+    <p>
+      <span class="ng-pt"><strong>Sobre a APS.</strong> A nova taxa de 100 € atinge desproporcionalmente <em>estudantes recém-formados</em> em busca de primeiro emprego — categoria estratégica que a França afirma querer atrair. A contradição entre discurso de captação de talento e estrutura tarifária é evidente.</span>
+      <span class="ng-fr"><strong>Sur l'APS.</strong> La nouvelle taxe de 100 € touche de façon disproportionnée les <em>étudiants récemment diplômés</em> en quête d'un premier emploi — catégorie stratégique que la France affirme vouloir attirer.</span>
+    </p>
+  </section>
+
+  <!-- DESTAQUE VISUAL: SVG SELOS -->
+  <div class="svg-frame">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwRTFBMkIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMWEyZTRhIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNiZzIpIi8+CiAgCiAgPCEtLSBTZWxvcyBjaXJjdWxhcmVzIGVzdGlsaXphZG9zIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1MCwyMDApIiBvcGFjaXR5PSIuNyI+CiAgICA8Y2lyY2xlIHI9IjcwIiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iMiIvPgogICAgPGNpcmNsZSByPSI1NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9Ii41Ii8+CiAgICA8dGV4dCB5PSItMTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjExIiBmaWxsPSIjQzZBMTVCIiBsZXR0ZXItc3BhY2luZz0iMiI+UsOJUFVCTElRVUU8L3RleHQ+CiAgICA8dGV4dCB5PSI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxMSIgZmlsbD0iI0M2QTE1QiIgbGV0dGVyLXNwYWNpbmc9IjIiPkZSQU7Dh0FJU0U8L3RleHQ+CiAgICA8bGluZSB4MT0iLTMwIiB5MT0iMTUiIHgyPSIzMCIgeTI9IjE1IiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjUiLz4KICAgIDx0ZXh0IHk9IjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI0M2QTE1QiIgZm9udC1zdHlsZT0iaXRhbGljIj4yMDI2PC90ZXh0PgogIDwvZz4KICAKICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MjAsMTgwKSIgb3BhY2l0eT0iLjUiPgogICAgPGNpcmNsZSByPSI2MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPHRleHQgeT0iMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IiNDNkExNUIiIGZvbnQtd2VpZ2h0PSIzMDAiPuKCrDwvdGV4dD4KICAgIDx0ZXh0IHk9IjIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5IiBmaWxsPSIjQzZBMTVCIiBsZXR0ZXItc3BhY2luZz0iMiI+RklTQ0FMPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIExpbmhhcyBkZWNvcmF0aXZhcyAtLT4KICA8bGluZSB4MT0iNTAiIHkxPSI2MCIgeDI9IjU1MCIgeTI9IjYwIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjUiIG9wYWNpdHk9Ii40Ii8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iMzQwIiB4Mj0iNTUwIiB5Mj0iMzQwIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjUiIG9wYWNpdHk9Ii40Ii8+CiAgCiAgPCEtLSBDYXJpbWJvIGRpYWdvbmFsIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMCwyNTApIHJvdGF0ZSgtMTUpIiBvcGFjaXR5PSIuNCI+CiAgICA8cmVjdCB4PSItOTAiIHk9Ii0yMCIgd2lkdGg9IjE4MCIgaGVpZ2h0PSI0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9IjIiLz4KICAgIDx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHk9IjgiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjQzZBMTVCIiBsZXR0ZXItc3BhY2luZz0iMyIgZm9udC13ZWlnaHQ9IjYwMCI+KzEyNSU8L3RleHQ+CiAgPC9nPgo8L3N2Zz4=" alt="Selos administrativos franceses">
+    <div class="svg-caption">
+      <span class="ng-pt">O direito de selo dobra. A República francesa precifica em outro patamar.</span>
+      <span class="ng-fr">Le droit de timbre double. La République française tarifie à un autre niveau.</span>
+    </div>
+  </div>
+
+  <!-- VII. EUROPA SE FECHA -->
+  <section class="section">
+    <p class="section-num">VII.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">A Europa está se <em>fechando</em></span>
+      <span class="ng-fr">L'Europe se <em>ferme</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">A medida francesa não pode ser lida isoladamente. Faz parte de um <strong>movimento continental coordenado</strong>, ainda que não declarado.</span>
+      <span class="ng-fr">La mesure française ne peut être lue isolément. Elle fait partie d'un <strong>mouvement continental coordonné</strong>, bien que non déclaré.</span>
+    </p>
+    <p>
+      <span class="ng-pt">No <strong>Reino Unido</strong>, o governo elevou para 38.700 libras esterlinas o piso salarial mínimo para o visto de trabalho qualificado. Na <strong>Itália</strong>, o Decreto Cutro restringiu o reagrupamento familiar. Na <strong>Alemanha</strong>, novas regras para o visto Chancenkarte introduzem pontuação mais rigorosa.</span>
+      <span class="ng-fr">Au <strong>Royaume-Uni</strong>, le gouvernement a élevé à 38 700 livres sterling le seuil salarial minimum pour le visa de travail qualifié. En <strong>Italie</strong>, le Décret Cutro a restreint le regroupement familial. En <strong>Allemagne</strong>, les nouvelles règles du visa Chancenkarte introduisent une notation plus rigoureuse.</span>
+    </p>
+    <p>
+      <span class="ng-pt">A leitura macro é direta. A Europa, atravessada por crises migratórias contínuas no Mediterrâneo, está construindo <strong>barreiras simultâneas</strong> — não físicas, mas administrativas, fiscais e processuais. Cada país a seu modo. Mas o resultado agregado é coerente: a entrada legal na Europa Ocidental se torna mais cara, mais difícil, mais filtrada.</span>
+      <span class="ng-fr">La lecture macro est directe. L'Europe, traversée par des crises migratoires continues en Méditerranée, construit des <strong>barrières simultanées</strong> — non physiques, mais administratives, fiscales et procédurales. Chaque pays à sa manière. Mais le résultat agrégé est cohérent : l'entrée légale en Europe occidentale devient plus chère, plus difficile, plus filtrée.</span>
+    </p>
+  </section>
+
+  <!-- DESTAQUE VISUAL: MAPA EUROPA -->
+  <div class="svg-frame">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYTE0MjIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEUxQTJCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNiZzMpIi8+CiAgCiAgPCEtLSBGb3JtYSBlc3RpbGl6YWRhIGRhIEV1cm9wYSAoc2lsaHVldGEgbWluaW1hbGlzdGEpIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMCwyMDApIiBvcGFjaXR5PSIuMjUiPgogICAgPHBhdGggZD0iTS0xODAsLTgwIFEtMTYwLC0xMDAgLTEyMCwtOTAgTC04MCwtOTUgUS00MCwtMTAwIDAsLTg1IEw2MCwtOTAgUTEyMCwtODUgMTYwLC03MCBRMTgwLC01MCAxNzUsLTIwIFExNzAsMTAgMTUwLDMwIEwxMjAsNTAgUTgwLDcwIDQwLDc1IEwtMjAsODAgUS02MCw4NSAtMTAwLDc1IEwtMTQwLDYwIFEtMTcwLDQwIC0xODAsMTAgUS0xODUsLTMwIC0xODAsLTgwIFoiIAogICAgICAgICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDwvZz4KICAKICA8IS0tIFBpbm9zIC8gcG9udG9zIHBvciBwYcOtcyAtLT4KICA8IS0tIEZyYW7Dp2EgKGNlbnRybykgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjgwLDIxMCkiPgogICAgPGNpcmNsZSByPSI4IiBmaWxsPSIjQzZBMTVCIi8+CiAgICA8Y2lyY2xlIHI9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iLjUiLz4KICAgIDxjaXJjbGUgcj0iMjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M2QTE1QiIgc3Ryb2tlLXdpZHRoPSIuNSIgb3BhY2l0eT0iLjMiLz4KICAgIDx0ZXh0IHk9Ii0yMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0Y0RjJFRCIgbGV0dGVyLXNwYWNpbmc9IjIiIG9wYWNpdHk9Ii45Ij5GUjwvdGV4dD4KICA8L2c+CiAgCiAgPCEtLSBSZWlubyBVbmlkbyAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMjAsMTUwKSI+CiAgICA8Y2lyY2xlIHI9IjUiIGZpbGw9IiNDNkExNUIiIG9wYWNpdHk9Ii43Ii8+CiAgICA8dGV4dCB5PSItMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjgiIGZpbGw9IiNGNEYyRUQiIGxldHRlci1zcGFjaW5nPSIyIiBvcGFjaXR5PSIuNyI+VUs8L3RleHQ+CiAgPC9nPgogIAogIDwhLS0gQWxlbWFuaGEgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQwLDE4MCkiPgogICAgPGNpcmNsZSByPSI1IiBmaWxsPSIjQzZBMTVCIiBvcGFjaXR5PSIuNyIvPgogICAgPHRleHQgeT0iLTEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI4IiBmaWxsPSIjRjRGMkVEIiBsZXR0ZXItc3BhY2luZz0iMiIgb3BhY2l0eT0iLjciPkRFPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIEl0w6FsaWEgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzMwLDI1MCkiPgogICAgPGNpcmNsZSByPSI1IiBmaWxsPSIjQzZBMTVCIiBvcGFjaXR5PSIuNyIvPgogICAgPHRleHQgeT0iLTEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI4IiBmaWxsPSIjRjRGMkVEIiBsZXR0ZXItc3BhY2luZz0iMiIgb3BhY2l0eT0iLjciPklUPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIEVzcGFuaGEgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjIwLDI2MCkiPgogICAgPGNpcmNsZSByPSI1IiBmaWxsPSIjQzZBMTVCIiBvcGFjaXR5PSIuNyIvPgogICAgPHRleHQgeT0iLTEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI4IiBmaWxsPSIjRjRGMkVEIiBsZXR0ZXItc3BhY2luZz0iMiIgb3BhY2l0eT0iLjciPkVTPC90ZXh0PgogIDwvZz4KICAKICA8IS0tIFBvcnR1Z2FsIC0tPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE4MCwyNjApIj4KICAgIDxjaXJjbGUgcj0iNSIgZmlsbD0iI0M2QTE1QiIgb3BhY2l0eT0iLjUiLz4KICAgIDx0ZXh0IHk9Ii0xMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0Y0RjJFRCIgbGV0dGVyLXNwYWNpbmc9IjIiIG9wYWNpdHk9Ii41Ij5QVDwvdGV4dD4KICA8L2c+CiAgCiAgPCEtLSBMaW5oYXMgY29uZWN0YW5kbyAtLT4KICA8ZyBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjUiIG9wYWNpdHk9Ii4yNSIgZmlsbD0ibm9uZSI+CiAgICA8bGluZSB4MT0iMjIwIiB5MT0iMTUwIiB4Mj0iMjgwIiB5Mj0iMjEwIi8+CiAgICA8bGluZSB4MT0iMjgwIiB5MT0iMjEwIiB4Mj0iMzQwIiB5Mj0iMTgwIi8+CiAgICA8bGluZSB4MT0iMjgwIiB5MT0iMjEwIiB4Mj0iMzMwIiB5Mj0iMjUwIi8+CiAgICA8bGluZSB4MT0iMjgwIiB5MT0iMjEwIiB4Mj0iMjIwIiB5Mj0iMjYwIi8+CiAgPC9nPgogIAogIDwhLS0gVMOtdHVsbyAtLT4KICA8dGV4dCB4PSI1MCIgeT0iNTAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjIyIiBmaWxsPSIjQzZBMTVCIiBmb250LXN0eWxlPSJpdGFsaWMiIG9wYWNpdHk9Ii45Ij5FdXJvcGEgZW0gZmVjaGFtZW50bzwvdGV4dD4KICA8bGluZSB4MT0iNTAiIHkxPSI2MCIgeDI9IjIwMCIgeTI9IjYwIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjUiIG9wYWNpdHk9Ii41Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5IiBmaWxsPSIjRjRGMkVEIiBsZXR0ZXItc3BhY2luZz0iMyIgb3BhY2l0eT0iLjYiPk1BUEEgRURJVE9SSUFMIMK3IDIwMjY8L3RleHQ+Cjwvc3ZnPg==" alt="Mapa estilizado da Europa em fechamento institucional">
+    <div class="svg-caption">
+      <span class="ng-pt">UK · Itália · Alemanha · França · Países Baixos. O movimento é continental.</span>
+      <span class="ng-fr">UK · Italie · Allemagne · France · Pays-Bas. Le mouvement est continental.</span>
+    </div>
+  </div>
+
+  <!-- VIII. O QUE O BRASILEIRO PRECISA DECIDIR -->
+  <section class="section">
+    <p class="section-num">VIII.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">O que o brasileiro <em>precisa decidir</em></span>
+      <span class="ng-fr">Ce que le Brésilien <em>doit décider</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">Diante deste cenário, três janelas de decisão se abrem com urgência.</span>
+      <span class="ng-fr">Face à ce scénario, trois fenêtres de décision s'ouvrent avec urgence.</span>
+    </p>
+
+    <!-- AÇÕES -->
+    <div class="actions-grid">
+      <div class="action-box">
+        <div class="icon">⏱</div>
+        <h4>
+          <span class="ng-pt">Antecipar quando puder</span>
+          <span class="ng-fr">Anticiper quand possible</span>
+        </h4>
+        <p>
+          <span class="ng-pt">Quem já está na França pode acelerar renovações e pedidos de naturalização ainda em maturação. A janela de proteção depende da data de depósito.</span>
+          <span class="ng-fr">Ceux déjà en France peuvent accélérer les renouvellements et demandes de naturalisation. La fenêtre de protection dépend de la date de dépôt.</span>
+        </p>
+      </div>
+      <div class="action-box">
+        <div class="icon">📊</div>
+        <h4>
+          <span class="ng-pt">Refazer o orçamento</span>
+          <span class="ng-fr">Refaire le budget</span>
+        </h4>
+        <p>
+          <span class="ng-pt">Um casal com filho que projetava primeiro título calculava 675 € antes. Agora precisa prever 1.050 €.</span>
+          <span class="ng-fr">Un couple avec enfant qui projetait premier titre calculait 675 € avant. Maintenant, il faut prévoir 1 050 €.</span>
+        </p>
+      </div>
+      <div class="action-box">
+        <div class="icon">🌐</div>
+        <h4>
+          <span class="ng-pt">Diversificar opções</span>
+          <span class="ng-fr">Diversifier les options</span>
+        </h4>
+        <p>
+          <span class="ng-pt">Portugal, Canadá, Espanha. O custo da França precisa ser comparado com o custo de oportunidade de outras travessias possíveis.</span>
+          <span class="ng-fr">Portugal, Canada, Espagne. Le coût de la France doit être comparé au coût d'opportunité d'autres traversées possibles.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IX. PROJEÇÃO -->
+  <section class="section">
+    <p class="section-num">IX.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">A <em>projeção</em></span>
+      <span class="ng-fr">La <em>projection</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">A medida francesa é, por desenho, o início — não o fim. A própria lei prevê <strong>reavaliações periódicas</strong>, e o ambiente político europeu sugere que outras correções para cima virão.</span>
+      <span class="ng-fr">La mesure française est, par conception, le début — non la fin. La loi elle-même prévoit des <strong>réévaluations périodiques</strong>, et l'environnement politique européen suggère que d'autres corrections à la hausse viendront.</span>
+    </p>
+    <p>
+      <span class="ng-pt">A próxima década da imigração brasileira na Europa será <strong>mais cara, mais documental, mais filtrada</strong>. Quem entender isso agora — e planejar com base nessa premissa — terá vantagem real frente a quem opera com expectativa do passado.</span>
+      <span class="ng-fr">La prochaine décennie de l'immigration brésilienne en Europe sera <strong>plus chère, plus documentale, plus filtrée</strong>. Ceux qui le comprennent maintenant — et planifient sur cette prémisse — auront un avantage réel face à ceux qui opèrent avec les attentes du passé.</span>
+    </p>
+
+    <div class="pull-quote">
+      <p>
+        <span class="ng-pt">A travessia continua possível. Mas o terreno <em>não é mais o mesmo</em>. A mobilidade não é mais apenas geográfica. Hoje, ela tem preço fiscal, exigência política e janela de oportunidade.</span>
+        <span class="ng-fr">La traversée reste possible. Mais le terrain <em>n'est plus le même</em>. La mobilité n'est plus seulement géographique. Aujourd'hui, elle a un prix fiscal, une exigence politique et une fenêtre d'opportunité.</span>
+      </p>
+      <span class="source">The Crossing Time</span>
+    </div>
+
+    <p style="text-align:center;font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--gold);margin:3rem 0 1rem;">
+      <span class="ng-pt">Informação é poder.</span>
+      <span class="ng-fr">L'information, c'est le pouvoir.</span>
+    </p>
+    <p style="text-align:center;font-size:.95rem;color:var(--gray);font-family:var(--serif);font-style:italic;">
+      <span class="ng-pt">E quem se move bem informado — atravessa em outro nível.</span>
+      <span class="ng-fr">Et ceux qui se déplacent bien informés — traversent à un autre niveau.</span>
+    </p>
+  </section>
+
+</article>
+
+<!-- ============= FOOTER ============= -->
+<footer class="article-footer">
+  <p class="fontes-title">
+    <span class="ng-pt">Fontes oficiais</span>
+    <span class="ng-fr">Sources officielles</span>
+  </p>
+  <p class="fontes-list">
+    Loi nº 2026-103 du 19 février 2026 (artigo 128) · Service-Public.fr · Ministère de l'Intérieur et des Outre-mer · Préfecture de l'Oise · Sénat français (JO Sénat 12/03/2026) · La Cimade · Unafo · Blog Avocats Deloitte
+  </p>
+
+  <div class="signature">
+    <h3>The Crossing Time</h3>
+    <p>
+      <span class="ng-pt">Plataforma editorial internacional · Mobilidade · Poder · Transformação</span>
+      <span class="ng-fr">Plateforme éditoriale internationale · Mobilité · Pouvoir · Transformation</span>
+    </p>
+    <p style="margin-top:1rem;">by Porta-Voz do Imigrante</p>
+  </div>
+</footer>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack() {
+  if (window.parent && window.parent !== window) {
+    try { window.parent.closeMateria(); return; } catch(e) {}
+  }
+  window.location.href = '../index.html#materias';
+}
+</script>
+
+</body>
+</html>

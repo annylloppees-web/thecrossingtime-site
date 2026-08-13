@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>76 anos de Europa. E de dúvidas. · The Crossing Time</title>
+<meta name="description" content="Em 9 de maio de 2026, a União Europeia celebra 76 anos da Declaração Schuman entre cessar-fogo ucraniano, ascensão da extrema-direita e tensão com Washington. Análise editorial de The Crossing Time.">
+<meta name="author" content="The Crossing Time, by Porta Voz do Imigrante">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy-1: #071a3d; --navy-2: #020814;
+    --offwhite: #F5F1E8; --ouro: #B8924A; --ouro-claro: #c7a45a;
+    --texto: #1a1a1a; --texto-suave: #4a4a4a;
+    --linha: rgba(184, 146, 74, 0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--offwhite); color: var(--texto); line-height: 1.7; font-size: 18px; -webkit-font-smoothing: antialiased; }
+
+  [lang-mode="pt"] .ng-fr { display: none !important; }
+  [lang-mode="fr"] .ng-pt { display: none !important; }
+
+  .art-back { position: fixed; top: 1rem; left: 1rem; z-index: 100; background: rgba(7,26,61,.92); backdrop-filter: blur(8px); color: #F4F2ED; border: none; border-radius: 999px; padding: 8px 16px 8px 12px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: .1em; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 12px rgba(0,0,0,.3); transition: all .2s; font-weight: 600; text-transform: uppercase; text-decoration: none; }
+  .art-back svg { width: 14px; height: 14px; stroke: #c7a45a; stroke-width: 2.5; fill: none; }
+  .art-back:hover { background: var(--navy-1); transform: translateX(-2px); }
+
+  .lang-bar { position: fixed; top: 1rem; right: 1rem; z-index: 100; display: flex; gap: 6px; background: rgba(7,26,61,.92); padding: 6px 8px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.3); backdrop-filter: blur(8px); }
+  .lang-btn { background: transparent; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.75); padding: 5px 11px; font-size: 10px; letter-spacing: .1em; font-family: 'Poppins', sans-serif; cursor: pointer; border-radius: 3px; transition: all .2s; font-weight: 500; }
+  .lang-btn:hover { color: #fff; }
+  .lang-btn.active { background: rgba(199,164,90,.2); border-color: var(--ouro); color: var(--ouro-claro); font-weight: 600; }
+
+  .top-bar { background: var(--navy-1); color: var(--offwhite); padding: 14px 0; border-bottom: 2px solid var(--ouro); }
+  .top-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; }
+  .top-bar .marca { font-weight: 700; color: var(--ouro-claro); }
+  .top-bar .pilares { color: rgba(245, 241, 232, 0.7); font-weight: 300; }
+
+  .hero { position: relative; width: 100%; height: 75vh; min-height: 600px; max-height: 800px; background: var(--navy-1); overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; filter: brightness(0.45) contrast(1.05) saturate(0.6); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0.55) 0%, rgba(7,26,61,0.70) 50%, rgba(2,8,20,0.94) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 80px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 14px; font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--ouro-claro); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
+  .hero-tag .bandeira-ue { width: 36px; height: 24px; background: #003399; position: relative; display: inline-flex; align-items: center; justify-content: center; color: #FFCC00; font-size: 14px; line-height: 1; }
+  .hero-tag .bandeira-ue::after { content: '★ ★'; letter-spacing: -2px; }
+  .hero-tag .linha-dourada { width: 50px; height: 2px; background: var(--ouro); }
+  .hero h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(40px, 6vw, 78px); line-height: 1.05; color: var(--offwhite); max-width: 900px; letter-spacing: -0.02em; }
+  .hero h1 .destaque { color: var(--ouro-claro); display: block; }
+  .hero-subtitle { font-family: 'Lora', serif; font-style: italic; font-weight: 400; font-size: clamp(20px, 2vw, 26px); color: rgba(245, 241, 232, 0.9); margin-top: 28px; max-width: 720px; line-height: 1.4; }
+  .hero-meta { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(199, 164, 90, 0.4); max-width: 720px; font-family: 'Poppins', sans-serif; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245, 241, 232, 0.7); }
+  .hero-meta strong { color: var(--ouro-claro); font-weight: 700; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  article { padding: 80px 0 60px; }
+  .lead { font-family: 'Lora', serif; font-size: 24px; line-height: 1.5; color: var(--texto); margin-bottom: 48px; font-weight: 500; }
+  .lead::first-letter { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 80px; float: left; line-height: 0.85; padding: 8px 12px 0 0; color: var(--ouro); }
+  h2.secao { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; color: var(--navy-1); margin: 64px 0 32px; }
+  .secao-numero { display: block; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ouro); margin-bottom: 12px; font-weight: 600; }
+  article p { margin-bottom: 24px; color: var(--texto); font-family: 'Lora', serif; }
+  article p strong { color: var(--navy-1); font-weight: 700; }
+
+  .quote-block { margin: 56px 0; padding: 40px; background: var(--navy-1); color: var(--offwhite); border-left: 6px solid var(--ouro); position: relative; }
+  .quote-block .quote-text { font-family: 'Lora', serif; font-style: italic; font-size: 26px; line-height: 1.4; color: var(--offwhite); margin-bottom: 16px; }
+  .quote-block .quote-author { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); font-weight: 600; }
+
+  .dados-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 48px 0; }
+  .dado-card { background: #fff; padding: 28px 20px; border-top: 4px solid var(--ouro); box-shadow: 0 2px 12px rgba(7,26,61,.08); border-radius: 4px; }
+  .dado-label { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 12px; }
+  .dado-numero { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(36px, 4vw, 48px); line-height: 1; color: var(--navy-1); margin-bottom: 12px; }
+  .dado-desc { font-family: 'Lora', serif; font-size: 14px; line-height: 1.45; color: var(--texto-suave); }
+
+  .article-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--linha); text-align: center; }
+  .article-footer .marca { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .article-footer .sub { font-family: 'Lora', serif; font-style: italic; color: var(--texto-suave); margin-bottom: 16px; font-size: 15px; }
+  .article-footer .pilares { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); }
+
+  @media (max-width: 768px) { body { font-size: 17px; } .hero { height: 70vh; min-height: 500px; } .hero-content { padding-bottom: 50px; } article { padding: 50px 0 40px; } .lead { font-size: 20px; } .lead::first-letter { font-size: 64px; } h2.secao { font-size: 26px; } .quote-block { padding: 28px 24px; } .quote-block .quote-text { font-size: 21px; } .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; } }
+</style>
+
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="marca">THE CROSSING TIME</div>
+    <div class="pilares">
+      <span class="ng-pt">Geopolítica • Europa • Relações Internacionais</span>
+      <span class="ng-fr">Géopolitique • Europe • Relations Internationales</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <img src="https://images.unsplash.com/photo-1608817576203-3c27ed168bd2?fm=jpg&q=80&w=2400&auto=format&fit=crop" alt="Bandeira da União Europeia em frente ao Parlamento Europeu em Bruxelas" class="hero-img" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="bandeira-ue"></span>
+      <span class="ng-pt">União Europeia • 9 de maio</span>
+      <span class="ng-fr">Union Européenne • 9 mai</span>
+      <span class="linha-dourada"></span>
+    </div>
+    <h1>
+      <span class="ng-pt">76 anos de Europa.<span class="destaque">E de dúvidas.</span></span>
+      <span class="ng-fr">76 ans d'Europe.<span class="destaque">Et de doutes.</span></span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="ng-pt">Entre cessar-fogo na Ucrânia, ascensão da extrema-direita e tensão com Washington, o Dia da Europa celebra-se em tempo de redefinição estratégica.</span>
+      <span class="ng-fr">Entre cessez-le-feu en Ukraine, ascension de l'extrême-droite et tension avec Washington, la Journée de l'Europe se célèbre en temps de redéfinition stratégique.</span>
+    </p>
+    <div class="hero-meta">
+      <strong><span class="ng-pt">Análise editorial</span><span class="ng-fr">Analyse éditoriale</span></strong> • 
+      <span class="ng-pt">Geopolítica & Europa</span><span class="ng-fr">Géopolitique & Europe</span> • 
+      <span class="ng-pt">12 de maio de 2026</span><span class="ng-fr">12 mai 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <p class="lead">
+      <span class="ng-pt">No dia 9 de maio de 2026, a União Europeia celebrou 76 anos da Declaração Schuman entre dois sinais contraditórios: bandeiras gigantes erguidas na Grand-Place de Bruxelas e uma trégua de três dias na Ucrânia decretada por Moscou para a celebração do Dia da Vitória russo. O calendário diplomático nunca foi tão denso de significados sobrepostos. O continente que nasceu da promessa de tornar a guerra impossível volta a se medir contra ela, dentro e fora de suas fronteiras.</span>
+      <span class="ng-fr">Le 9 mai 2026, l'Union européenne a célébré les 76 ans de la Déclaration Schuman entre deux signaux contradictoires : des drapeaux géants hissés sur la Grand-Place de Bruxelles et une trêve de trois jours en Ukraine décrétée par Moscou pour la célébration du Jour de la Victoire russe. Le calendrier diplomatique n'a jamais été aussi dense de significations superposées. Le continent qui est né de la promesse de rendre la guerre impossible se mesure à nouveau contre elle, à l'intérieur et à l'extérieur de ses frontières.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">I. O marco</span><span class="ng-fr">I. Le repère</span></span>
+      <span class="ng-pt">Schuman, 76 anos depois: um projeto exausto ou reativado?</span>
+      <span class="ng-fr">Schuman, 76 ans plus tard : un projet épuisé ou réactivé ?</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Em 9 de maio de 1950, no Salon de l'Horloge do Quai d'Orsay em Paris, o então ministro francês dos Negócios Estrangeiros, Robert Schuman, apresentou em coletiva de imprensa o que viria a ser conhecido como Declaração Schuman. A proposta, redigida por Jean Monnet, tinha um objetivo declarado e radical: tornar a guerra entre nações europeias <strong>"não apenas impensável, mas materialmente impossível"</strong>, mediante a colocação em comum da produção franco-alemã de carvão e aço. Daquele documento de poucas páginas nasceria, em sete décadas, a maior democracia supranacional do planeta.</span>
+      <span class="ng-fr">Le 9 mai 1950, dans le Salon de l'Horloge du Quai d'Orsay à Paris, le ministre français des Affaires étrangères, Robert Schuman, a présenté lors d'une conférence de presse ce qui allait être connu sous le nom de Déclaration Schuman. La proposition, rédigée par Jean Monnet, avait un objectif déclaré et radical : rendre la guerre entre nations européennes <strong>« non seulement impensable, mais matériellement impossible »</strong>, par la mise en commun de la production franco-allemande de charbon et d'acier. De ce document de quelques pages naîtrait, en sept décennies, la plus grande démocratie supranationale de la planète.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O bloco hoje reúne <strong>27 Estados-membros, 720 deputados europeus e mais de 450 milhões de cidadãos</strong>. Em 2026, o aniversário ganhou camadas adicionais de significado: marca também os 40 anos da adesão de Portugal e Espanha à então Comunidade Econômica Europeia, e os 40 anos das primeiras celebrações oficiais do Dia da Europa, instituídas pelo Conselho Europeu de Milão em 1985. Cidades como Bruxelas, Estrasburgo, Wiltz no Luxemburgo e Liubliana na Eslovênia receberam concertos, exposições, jornadas de portas abertas das instituições e uma bandeira gigante hasteada no centro da capital belga.</span>
+      <span class="ng-fr">Le bloc réunit aujourd'hui <strong>27 États membres, 720 députés européens et plus de 450 millions de citoyens</strong>. En 2026, l'anniversaire a gagné des couches supplémentaires de signification : il marque aussi les 40 ans de l'adhésion du Portugal et de l'Espagne à la Communauté Économique Européenne, et les 40 ans des premières célébrations officielles de la Journée de l'Europe, instituées par le Conseil Européen de Milan en 1985. Des villes comme Bruxelles, Strasbourg, Wiltz au Luxembourg et Ljubljana en Slovénie ont accueilli des concerts, expositions, journées portes ouvertes des institutions et un drapeau géant hissé au centre de la capitale belge.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A celebração institucional, porém, não escondeu a tensão. A presidente da Comissão Europeia, Ursula von der Leyen, reafirmou em discurso que a Europa precisa investir "na própria defesa" e privilegiar interesses próprios em "um mundo de predadores". O vocabulário escolhido revela o estado de espírito do continente. Em 1950, Schuman falava em integração econômica e reconciliação. Em 2026, fala-se em soberania militar, autonomia estratégica e sobrevivência política. O projeto europeu mudou de problema central.</span>
+      <span class="ng-fr">La célébration institutionnelle n'a cependant pas caché la tension. La présidente de la Commission européenne, Ursula von der Leyen, a réaffirmé dans son discours que l'Europe doit investir « dans sa propre défense » et privilégier ses intérêts propres dans « un monde de prédateurs ». Le vocabulaire choisi révèle l'état d'esprit du continent. En 1950, Schuman parlait d'intégration économique et de réconciliation. En 2026, on parle de souveraineté militaire, d'autonomie stratégique et de survie politique. Le projet européen a changé de problème central.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"A Europa nasceu para tornar a guerra impensável entre seus membros. Hoje, gasta-se inteira preparando-se para a guerra fora deles."</span>
+        <span class="ng-fr">« L'Europe est née pour rendre la guerre impensable entre ses membres. Aujourd'hui, elle se dépense entièrement à se préparer à la guerre en dehors d'eux. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">II. A frente externa</span><span class="ng-fr">II. Le front extérieur</span></span>
+      <span class="ng-pt">Ucrânia, Trump e o realinhamento atlântico</span>
+      <span class="ng-fr">Ukraine, Trump et le réalignement atlantique</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Quatro anos após o início da invasão russa em larga escala, a Ucrânia continua sendo o vetor estruturante da agenda externa europeia. Os números acumulados pela Comissão Europeia até início de 2026 totalizam <strong>€194,9 bilhões de apoio direto a Kiev, incluindo €70 bilhões para as forças armadas ucranianas</strong>. O programa SAFE, sigla em inglês para Ação de Segurança para a Europa, mobiliza €150 bilhões adicionais em investimentos em defesa, com 19 dos 27 Estados-membros incluindo projetos conjuntos com a Ucrânia em seus planos. O 20º pacote de sanções contra a Rússia tramita em Bruxelas, junto a uma proposta de €90 bilhões em ajuda adicional, bloqueada nos últimos meses por veto de Budapeste.</span>
+      <span class="ng-fr">Quatre ans après le début de l'invasion russe à grande échelle, l'Ukraine reste le vecteur structurant de l'agenda externe européen. Les chiffres accumulés par la Commission européenne jusqu'au début de 2026 totalisent <strong>194,9 milliards d'euros de soutien direct à Kiev, dont 70 milliards pour les forces armées ukrainiennes</strong>. Le programme SAFE, sigle en anglais pour Action de Sécurité pour l'Europe, mobilise 150 milliards d'euros supplémentaires en investissements de défense, avec 19 des 27 États membres incluant des projets conjoints avec l'Ukraine dans leurs plans. Le 20e paquet de sanctions contre la Russie est en cours d'examen à Bruxelles, accompagné d'une proposition de 90 milliards d'aide supplémentaire, bloquée ces derniers mois par le veto de Budapest.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O cenário, contudo, mudou desde a posse da segunda administração Trump em janeiro de 2025. Washington reduziu drasticamente o engajamento direto no conflito ucraniano, transferindo o peso operacional e financeiro para os europeus. Analistas descrevem o movimento como uma saída americana de seu "atoleiro" europeu, com os Estados-membros da UE forçados a procurar uma saída honrosa enquanto absorvem o custo militar e migratório do conflito. Em paralelo, Trump impôs tarifas comerciais a parceiros europeus, ameaçou taxar até 25% países que apoiam a Dinamarca em sua disputa pela Groenlândia, e mantém posicionamento ambíguo sobre as garantias da OTAN. A relação transatlântica nunca esteve tão tensionada desde os anos da Guerra do Iraque.</span>
+      <span class="ng-fr">Le scénario a cependant changé depuis l'investiture de la seconde administration Trump en janvier 2025. Washington a drastiquement réduit son engagement direct dans le conflit ukrainien, transférant le poids opérationnel et financier aux Européens. Les analystes décrivent le mouvement comme une sortie américaine de son « bourbier » européen, les États membres de l'UE étant contraints de chercher une sortie honorable tout en absorbant le coût militaire et migratoire du conflit. En parallèle, Trump a imposé des tarifs commerciaux aux partenaires européens, menacé de taxer jusqu'à 25 % les pays qui soutiennent le Danemark dans son différend sur le Groenland, et maintient un positionnement ambigu sur les garanties de l'OTAN. La relation transatlantique n'a jamais été aussi tendue depuis les années de la guerre d'Irak.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O 9 de maio deste ano coincidiu com um cessar-fogo de três dias decretado por Moscou para o Dia da Vitória russo, em comemoração ao 81º aniversário do fim da Segunda Guerra Mundial na Europa. As Forças Armadas ucranianas relataram violações pontuais do cessar-fogo, mas a trégua sinalizou, segundo analistas em Moscou, abertura para negociações mais longas. Para Bruxelas, o sinal é ambíguo: pode anunciar um caminho diplomático, pode também consolidar ganhos territoriais russos que reescrevam a arquitetura de segurança continental. A presidente von der Leyen e o presidente do Conselho Europeu, António Costa, reiteraram que o Kremlin não pode "desenhar de maneira unilateral um país europeu soberano".</span>
+      <span class="ng-fr">Le 9 mai de cette année a coïncidé avec un cessez-le-feu de trois jours décrété par Moscou pour le Jour de la Victoire russe, en commémoration du 81e anniversaire de la fin de la Seconde Guerre mondiale en Europe. Les Forces armées ukrainiennes ont signalé des violations ponctuelles du cessez-le-feu, mais la trêve a signalé, selon les analystes à Moscou, une ouverture pour des négociations plus longues. Pour Bruxelles, le signal est ambigu : il peut annoncer une voie diplomatique, il peut aussi consolider des gains territoriaux russes qui réécrivent l'architecture de sécurité continentale. La présidente von der Leyen et le président du Conseil Européen, António Costa, ont réitéré que le Kremlin ne peut pas « dessiner de manière unilatérale un pays européen souverain ».</span>
+    </p>
+
+    <div class="dados-grid">
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">UE em números</span><span class="ng-fr">UE en chiffres</span></div>
+        <div class="dado-numero">27</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Estados-membros, 720 deputados europeus, mais de 450 milhões de cidadãos representados em Bruxelas e Estrasburgo.</span>
+          <span class="ng-fr">États membres, 720 députés européens, plus de 450 millions de citoyens représentés à Bruxelles et Strasbourg.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Apoio à Ucrânia</span><span class="ng-fr">Soutien à l'Ukraine</span></div>
+        <div class="dado-numero">€194,9 bi</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Total disponibilizado pela UE a Kiev desde fevereiro de 2022, incluindo €70 bilhões para as forças armadas.</span>
+          <span class="ng-fr">Total fourni par l'UE à Kiev depuis février 2022, incluant 70 milliards d'euros pour les forces armées.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Defesa SAFE</span><span class="ng-fr">Défense SAFE</span></div>
+        <div class="dado-numero">€150 bi</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Mobilização do programa Ação de Segurança para a Europa, com 19 Estados-membros aderindo.</span>
+          <span class="ng-fr">Mobilisation du programme Action de Sécurité pour l'Europe, avec 19 États membres y adhérant.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label">Alemanha / AfD</div>
+        <div class="dado-numero">27,5%</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Intenção de voto na Alternativa para a Alemanha (AfD), que lidera as pesquisas em 2026.</span>
+          <span class="ng-fr">Intentions de vote pour l'Alternative pour l'Allemagne (AfD), qui mène les sondages en 2026.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">III. A frente interna</span><span class="ng-fr">III. Le front intérieur</span></span>
+      <span class="ng-pt">Extrema-direita avança, mapa político se redesenha</span>
+      <span class="ng-fr">L'extrême-droite avance, la carte politique se redessine</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Se a frente externa pressiona, a frente interna fragmenta. A Alternativa para a Alemanha lidera pesquisas eleitorais com <strong>27,5% das intenções de voto em 2026</strong>, posicionando-se como força que pode disputar a chancelaria após o ciclo Merz. Na França, o Reagrupamento Nacional de Jordan Bardella é projetado para vencer as eleições presidenciais de 2027 em todos os cenários testados pelas casas de pesquisa Odoxa, Ifop e Elabe. Na Itália, Giorgia Meloni completa três anos de governo conservador. Na Áustria, na Holanda, na Suécia, na Finlândia, governos de coalizão com participação direta ou apoio externo da extrema-direita já são realidade institucional.</span>
+      <span class="ng-fr">Si le front extérieur fait pression, le front intérieur fragmente. L'Alternative pour l'Allemagne mène les sondages électoraux avec <strong>27,5 % des intentions de vote en 2026</strong>, se positionnant comme une force pouvant disputer la chancellerie après le cycle Merz. En France, le Rassemblement National de Jordan Bardella est projeté pour gagner les élections présidentielles de 2027 dans tous les scénarios testés par les instituts Odoxa, Ifop et Elabe. En Italie, Giorgia Meloni complète trois ans de gouvernement conservateur. En Autriche, aux Pays-Bas, en Suède, en Finlande, des gouvernements de coalition avec participation directe ou soutien externe de l'extrême-droite sont déjà une réalité institutionnelle.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A leitura simplista reduziria isso a uma "onda nacionalista". O quadro é mais complexo. Em direção contrária, a Hungria viveu em abril de 2026 a maior reviravolta política de sua história recente: o partido Tisza, liderado por Péter Magyar, encerrou os 16 anos de governo de Viktor Orbán, conquistando supermaioria constitucional com <strong>138 das 199 cadeiras parlamentares</strong>. Magyar prometeu restaurar a independência judicial, desmantelar oligarquias midiáticas e reativar o engajamento húngaro com Bruxelas. Em paralelo, o veto sistemático que Budapeste exercia sobre pacotes de sanções e ajuda à Ucrânia tende a se desfazer.</span>
+      <span class="ng-fr">Une lecture simpliste réduirait cela à une « vague nationaliste ». Le tableau est plus complexe. En direction contraire, la Hongrie a vécu en avril 2026 le plus grand renversement politique de son histoire récente : le parti Tisza, dirigé par Péter Magyar, a mis fin aux 16 ans de gouvernement de Viktor Orbán, conquérant une supermajorité constitutionnelle avec <strong>138 des 199 sièges parlementaires</strong>. Magyar a promis de restaurer l'indépendance judiciaire, démanteler les oligarchies médiatiques et réactiver l'engagement hongrois avec Bruxelles. En parallèle, le veto systématique que Budapest exerçait sur les paquets de sanctions et d'aide à l'Ukraine tend à se défaire.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O mapa europeu de 2026 é, portanto, contraditório. A extrema-direita avança em economias que foram historicamente o motor da integração, Alemanha e França, enquanto recua em pelo menos um Estado-membro onde dominou por anos. O resultado é uma União Europeia que opera em três velocidades: instituições comunitárias tentando manter rumo, capitais nacionais oscilando entre defesa do projeto e contestação, e cidadãos divididos entre adesão pragmática e ressentimento crescente. Os temas que mobilizam o eleitorado são previsíveis: imigração, custo de vida, segurança urbana, identidade nacional. Mas o que está em disputa é estrutural: qual versão de Europa sobreviverá ao fim da década.</span>
+      <span class="ng-fr">La carte européenne de 2026 est donc contradictoire. L'extrême-droite avance dans des économies qui étaient historiquement le moteur de l'intégration — Allemagne et France — tandis qu'elle recule dans au moins un État membre où elle a dominé pendant des années. Le résultat est une Union européenne qui opère à trois vitesses : institutions communautaires essayant de maintenir le cap, capitales nationales oscillant entre défense du projet et contestation, et citoyens divisés entre adhésion pragmatique et ressentiment croissant. Les thèmes qui mobilisent l'électorat sont prévisibles : immigration, coût de la vie, sécurité urbaine, identité nationale. Mais ce qui est en jeu est structurel : quelle version de l'Europe survivra à la fin de la décennie.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">IV. A tensão</span><span class="ng-fr">IV. La tension</span></span>
+      <span class="ng-pt">Defesa comum, soberania nacional e o falso dilema</span>
+      <span class="ng-fr">Défense commune, souveraineté nationale et le faux dilemme</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A pressão externa forçou Bruxelas a colocar na mesa um debate que durante décadas foi adiado: o de uma defesa europeia integrada. O programa SAFE é o início de uma resposta orçamentária, mas a questão estratégica é mais profunda. Pode a União Europeia construir capacidade militar autônoma sem depender de Washington? Pode fazê-lo respeitando as soberanias nacionais dos Estados-membros? Pode harmonizar interesses contraditórios entre uma Polônia que quer mais OTAN, uma França que quer menos dependência americana, e uma Alemanha historicamente avessa ao protagonismo militar?</span>
+      <span class="ng-fr">La pression extérieure a forcé Bruxelles à mettre sur la table un débat qui a été reporté pendant des décennies : celui d'une défense européenne intégrée. Le programme SAFE est le début d'une réponse budgétaire, mais la question stratégique est plus profonde. L'Union européenne peut-elle construire une capacité militaire autonome sans dépendre de Washington ? Peut-elle le faire en respectant les souverainetés nationales des États membres ? Peut-elle harmoniser des intérêts contradictoires entre une Pologne qui veut plus d'OTAN, une France qui veut moins de dépendance américaine, et une Allemagne historiquement réticente au protagonisme militaire ?</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Há um falso dilema que se repete em coberturas superficiais. Trata-se da oposição entre "mais Europa" e "mais soberania nacional", como se fossem caminhos excludentes. A história institucional do bloco mostra o contrário. Cada salto de integração, do tratado de Roma à criação do euro, do espaço Schengen à União Bancária, foi feito por Estados nacionais que decidiram, soberanamente, ceder porções de competência em nome de ganhos coletivos. O que está em disputa hoje não é se a soberania nacional permanece, mas que conteúdo ela terá em uma ordem internacional onde nenhum Estado europeu, isoladamente, é grande o suficiente para se proteger.</span>
+      <span class="ng-fr">Il y a un faux dilemme qui se répète dans les couvertures superficielles. Il s'agit de l'opposition entre « plus d'Europe » et « plus de souveraineté nationale », comme s'il s'agissait de chemins exclusifs. L'histoire institutionnelle du bloc montre le contraire. Chaque saut d'intégration — du traité de Rome à la création de l'euro, de l'espace Schengen à l'Union Bancaire — a été fait par des États nationaux qui ont décidé, souverainement, de céder des portions de compétence au nom de gains collectifs. Ce qui est en jeu aujourd'hui n'est pas si la souveraineté nationale demeure, mais quel contenu elle aura dans un ordre international où aucun État européen, isolément, n'est suffisamment grand pour se protéger.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"A Europa não decide se será unida ou nacional. Decide se será relevante no século XXI ou se aceitará ser arbitrada por outros."</span>
+        <span class="ng-fr">« L'Europe ne décide pas si elle sera unie ou nationale. Elle décide si elle sera pertinente au XXIe siècle ou si elle acceptera d'être arbitrée par d'autres. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">V. O posicionamento</span><span class="ng-fr">V. Le positionnement</span></span>
+      <span class="ng-pt">Por que isso importa para quem está fora</span>
+      <span class="ng-fr">Pourquoi cela importe à ceux qui sont à l'extérieur</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Para quem observa o Dia da Europa a partir do Atlântico Sul, do Magrebe, do Leste Europeu não comunitário ou de qualquer ponto fora das 27 capitais do bloco, há um equívoco analítico recorrente. A Europa não é apenas destino de migração, mercado consumidor ou parceiro comercial. É um sistema normativo. Padrões europeus de proteção de dados, regulação de inteligência artificial, política climática, controle de fronteiras e regimes de visto não circulam apenas dentro do continente. São exportados, copiados, adaptados, contestados em outros sistemas regulatórios mundo afora. O que se decide em Bruxelas tem efeito jurídico real em São Paulo, Dakar, Belgrado e Buenos Aires.</span>
+      <span class="ng-fr">Pour ceux qui observent la Journée de l'Europe depuis l'Atlantique Sud, le Maghreb, l'Europe de l'Est non communautaire ou tout point en dehors des 27 capitales du bloc, il y a une erreur analytique récurrente. L'Europe n'est pas seulement une destination de migration, un marché de consommation ou un partenaire commercial. C'est un système normatif. Les standards européens de protection des données, régulation de l'intelligence artificielle, politique climatique, contrôle des frontières et régimes de visa ne circulent pas seulement à l'intérieur du continent. Ils sont exportés, copiés, adaptés, contestés dans d'autres systèmes réglementaires à travers le monde. Ce qui se décide à Bruxelles a un effet juridique réel à São Paulo, Dakar, Belgrade et Buenos Aires.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Há também a dimensão migratória, a mais sensível para o leitor que esta plataforma reconhece. As políticas europeias para fronteiras externas, asilo, regularização de indocumentados, reagrupamento familiar, acesso a vistos de trabalho e estudo serão diretamente impactadas pelos próximos ciclos eleitorais nacionais. Uma Europa em direção à extrema-direita aperta os critérios. Uma Europa em direção ao centro pragmático ajusta sem refundar. Uma Europa em direção a uma autonomia estratégica robusta integra a imigração na sua arquitetura econômica e demográfica, em vez de tratá-la como ameaça. Cada cenário tem efeitos práticos sobre quem pretende viver, estudar, trabalhar ou simplesmente atravessar o continente nos próximos anos.</span>
+      <span class="ng-fr">Il y a aussi la dimension migratoire, la plus sensible pour le lecteur que cette plateforme reconnaît. Les politiques européennes pour les frontières externes, l'asile, la régularisation des sans-papiers, le regroupement familial, l'accès aux visas de travail et d'études seront directement impactées par les prochains cycles électoraux nationaux. Une Europe en direction de l'extrême-droite serre les critères. Une Europe en direction du centre pragmatique ajuste sans refonder. Une Europe en direction d'une autonomie stratégique robuste intègre l'immigration dans son architecture économique et démographique, au lieu de la traiter comme une menace. Chaque scénario a des effets pratiques sur ceux qui prétendent vivre, étudier, travailler ou simplement traverser le continent dans les prochaines années.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A Declaração Schuman, em 1950, prometeu tornar a guerra impossível na Europa Ocidental. Setenta e seis anos depois, a guerra retornou ao leste continental e a paz no oeste virou problema de manutenção, não de fundação. O 9 de maio de 2026 não foi um aniversário rotineiro. Foi um marco em que o projeto europeu se mediu contra suas próprias contradições: defende uma ordem internacional baseada em regras enquanto Washington as desmonta, fala em valores comuns enquanto seus eleitorados questionam o pacto, ergue bandeiras gigantes em Bruxelas enquanto suas fronteiras externas se militarizam. A travessia europeia não terminou em 1992 com Maastricht, nem em 2004 com o grande alargamento. Ela está em curso. E o destino final, por enquanto, segue ilegível.</span>
+      <span class="ng-fr">La Déclaration Schuman, en 1950, a promis de rendre la guerre impossible en Europe occidentale. Soixante-seize ans plus tard, la guerre est revenue à l'est continental et la paix à l'ouest est devenue un problème de maintien, pas de fondation. Le 9 mai 2026 n'a pas été un anniversaire de routine. Il a été un repère où le projet européen s'est mesuré contre ses propres contradictions : il défend un ordre international basé sur des règles tandis que Washington les démonte, il parle de valeurs communes tandis que ses électorats questionnent le pacte, il hisse des drapeaux géants à Bruxelles tandis que ses frontières externes se militarisent. La traversée européenne n'a pas fini en 1992 avec Maastricht, ni en 2004 avec le grand élargissement. Elle est en cours. Et la destination finale, pour l'instant, reste illisible.</span>
+    </p>
+
+    <div class="article-footer">
+      <div class="marca">THE CROSSING TIME</div>
+      <div class="sub">
+        <span class="ng-pt">Plataforma editorial internacional</span>
+        <span class="ng-fr">Plateforme éditoriale internationale</span>
+      </div>
+      <div class="pilares">
+        <span class="ng-pt">MOBILIDADE • PODER • TRANSFORMAÇÃO</span>
+        <span class="ng-fr">MOBILITÉ • POUVOIR • TRANSFORMATION</span>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack() {
+  if (window.parent && window.parent !== window) {
+    try { window.parent.closeMateria(); return; } catch(e) {}
+  }
+  window.location.href = '../index.html#materias';
+}
+</script>
+</body>
+</html>

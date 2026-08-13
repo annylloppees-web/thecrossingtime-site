@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trabalho e direitos | The Crossing Time</title>
+<meta name="description" content="Autorização de trabalho, contrato, prud’hommes e os direitos que existem mesmo sem título regular. Dossiê bilingue PT/FR com fontes oficiais.">
+<meta property="og:title" content="Trabalho e direitos | The Crossing Time">
+<meta property="og:description" content="Autorização de trabalho, contrato, prud’hommes e os direitos que existem mesmo sem título regular. Dossiê bilingue PT/FR com fontes oficiais.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Crossing Time">
+<meta property="og:image" content="../og/dossie_trabalho_direitos.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1A2B;--gold:#C6A15B;--off:#F4F2ED;--ink:#111111;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--off);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
+
+/* ── bilingue ── */
+.ng-fr{display:none!important;}
+body[data-lang="fr"] .ng-pt{display:none!important;}
+body[data-lang="fr"] .ng-fr{display:revert!important;}
+
+/* ── topbar ── */
+.tct-topbar{position:fixed;top:0;left:0;right:0;height:54px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 1.1rem;z-index:9600;box-shadow:0 1px 12px rgba(14,26,43,.25);}
+.tct-back{background:none;border:0;color:var(--off);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:.5rem;padding:.5rem .2rem;}
+.tct-back:hover{color:var(--gold);}
+.tct-brand{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1rem;letter-spacing:.04em;}
+.lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.08);border-radius:999px;padding:3px;}
+.lang-bar button{background:none;border:0;color:rgba(244,242,237,.6);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;padding:.35rem .7rem;border-radius:999px;cursor:pointer;}
+.lang-bar button.on{background:var(--gold);color:var(--navy);font-weight:600;}
+
+/* ── hero ── */
+.hero{background:linear-gradient(180deg,#0E1A2B 0%,#1a2e4a 100%);color:var(--off);padding:7rem 1.5rem 3.5rem;text-align:center;}
+.hero .kicker{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.4rem;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;max-width:900px;margin:0 auto 1.3rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero .sub{max-width:680px;margin:0 auto 1.8rem;font-size:1.02rem;line-height:1.7;color:rgba(244,242,237,.82);font-style:italic;}
+.hero .meta{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(198,161,91,.85);}
+
+/* ── layout ── */
+.wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
+.sec{padding:3rem 0 0;}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.2;color:var(--navy);margin-bottom:.4rem;}
+h2 .num{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:.6rem;font-weight:600;}
+h3{font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);font-weight:600;margin:1.6rem 0 .5rem;}
+p{margin:.9rem 0;font-size:1.02rem;color:#2a2a2a;}
+a{color:var(--navy);}
+.lede{font-size:1.12rem;color:#333;font-style:italic;border-left:2px solid var(--gold);padding-left:1.1rem;}
+.rule{height:1px;background:rgba(14,26,43,.12);margin:2.6rem 0 0;}
+
+/* ── índice ── */
+.toc{background:#fff;border:1px solid rgba(14,26,43,.09);border-top:3px solid var(--gold);padding:1.6rem 1.6rem 1.3rem;margin-top:2.5rem;}
+.toc .lbl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.toc ol{margin:.9rem 0 0 1.1rem;}
+.toc li{font-family:'Jost',sans-serif;font-size:.92rem;margin:.42rem 0;line-height:1.5;}
+.toc a{text-decoration:none;border-bottom:1px solid rgba(198,161,91,.5);}
+.toc a:hover{color:var(--gold);}
+
+/* ── cartões ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.4rem 0 .4rem;}
+.tcard{background:#fff;border:1px solid rgba(14,26,43,.09);border-left:3px solid var(--gold);padding:1.2rem 1.2rem 1.1rem;}
+.tcard .t{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.tcard .n{font-family:'Cormorant Garamond',serif;font-size:1.28rem;color:var(--navy);margin:.35rem 0 .45rem;line-height:1.2;}
+.tcard p{font-size:.9rem;margin:0;color:#555;line-height:1.6;}
+
+/* ── caixas ── */
+.box{background:#fff;border:1px solid rgba(14,26,43,.09);padding:1.4rem 1.5rem;margin:1.5rem 0;}
+.box.gold{border-left:3px solid var(--gold);background:#FBF8F1;}
+.box.navy{background:var(--navy);color:var(--off);border:0;}
+.box.navy p{color:rgba(244,242,237,.86);}
+.box .bl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.6rem;}
+.box p{margin:.5rem 0;font-size:.98rem;}
+
+/* ── listas ── */
+ul.tct,ol.tct{margin:1rem 0 1rem 1.15rem;}
+ul.tct li,ol.tct li{margin:.6rem 0;font-size:1rem;color:#2a2a2a;line-height:1.7;}
+ul.tct li strong,ol.tct li strong{font-family:'Jost',sans-serif;font-weight:600;font-size:.93rem;letter-spacing:.02em;color:var(--navy);}
+
+/* ── tabela ── */
+.tbl{width:100%;border-collapse:collapse;margin:1.3rem 0;background:#fff;font-size:.93rem;}
+.tbl th{background:var(--navy);color:var(--off);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.75rem .8rem;text-align:left;}
+.tbl td{padding:.75rem .8rem;border-bottom:1px solid rgba(14,26,43,.08);vertical-align:top;color:#333;}
+.tbl tr:last-child td{border-bottom:0;}
+
+/* ── fontes ── */
+.srcs{margin:1.2rem 0 0;}
+.srcs a{display:block;font-family:'Jost',sans-serif;font-size:.9rem;text-decoration:none;color:var(--navy);padding:.7rem 0;border-bottom:1px solid rgba(14,26,43,.08);}
+.srcs a:hover{color:var(--gold);}
+.srcs a span.d{display:block;font-size:.78rem;color:#888;letter-spacing:.02em;margin-top:.15rem;}
+
+/* ── CTA / aviso ── */
+.disc{background:#fff;border:1px dashed rgba(14,26,43,.22);padding:1.3rem 1.4rem;margin:2rem 0 0;font-size:.9rem;color:#555;line-height:1.65;}
+.cta{background:var(--navy);color:var(--off);padding:2.6rem 1.6rem;text-align:center;margin-top:3rem;}
+.cta h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin-bottom:.7rem;}
+.cta p{color:rgba(244,242,237,.78);font-size:.98rem;max-width:520px;margin:0 auto 1.5rem;}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.95rem 1.8rem;border-radius:999px;text-decoration:none;}
+.btn:hover{background:#d4b06b;}
+.btn.ghost{background:none;border:1px solid rgba(198,161,91,.55);color:var(--gold);margin-left:.5rem;}
+
+/* ── assinatura / rodapé ── */
+.sign{display:flex;align-items:center;gap:1rem;margin:2.6rem 0 0;padding-top:1.6rem;border-top:1px solid rgba(14,26,43,.12);}
+.seal{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:.05em;flex-shrink:0;}
+.sign .nm{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:600;color:var(--navy);}
+.sign .rl{font-size:.83rem;color:#777;font-family:'Jost',sans-serif;}
+.foot{text-align:center;padding:2.5rem 1.5rem 4rem;color:#999;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.1em;}
+
+/* ── partilha ── */
+.share{position:fixed;right:1.1rem;bottom:1.1rem;display:flex;flex-direction:column;gap:.5rem;z-index:9500;}
+.share button{width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:var(--gold);cursor:pointer;box-shadow:0 4px 14px rgba(14,26,43,.22);font-size:15px;}
+.share button:hover{background:var(--gold);color:var(--navy);}
+
+@media(max-width:640px){
+  .hero{padding:6rem 1.2rem 2.6rem;}
+  .wrap{padding:0 1.2rem;}
+  .tbl{font-size:.85rem;}
+  .tbl th,.tbl td{padding:.6rem .5rem;}
+}
+</style>
+</head>
+<body data-lang="pt">
+
+<div class="tct-topbar">
+  <button class="tct-back" onclick="goBack()">
+    <span>&lsaquo;</span>
+    <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+  </button>
+  <span class="tct-brand">The Crossing Time</span>
+  <div class="lang-bar">
+    <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+<div class="hero">
+  <span class="kicker"><span class="ng-pt">TCT Especiais · Dossiê 3 · Imigração</span><span class="ng-fr">TCT Spéciaux · Dossier 3 · Immigration</span></span>
+  <h1><span class="ng-pt">Trabalho e direitos</span><span class="ng-fr">Travail et droits</span><br><em><span class="ng-pt">o que a lei francesa lhe garante</span><span class="ng-fr">ce que la loi française vous garantit</span></em></h1>
+  <p class="sub"><span class="ng-pt">Autorização de trabalho, contrato, prud’hommes e o que a lei protege mesmo quando o título não está regular.</span><span class="ng-fr">Autorisation de travail, contrat, prud'hommes et ce que la loi protège même quand le titre n'est pas régulier.</span></p>
+  <p class="meta"><span class="ng-pt">Por Anne Lopes · Actualizado em Julho de 2026 · Fontes oficiais .gouv.fr</span><span class="ng-fr">Par Anne Lopes · Mis à jour en juillet 2026 · Sources officielles .gouv.fr</span></p>
+</div>
+
+<div class="wrap">
+  <div class="sec">
+    <p class="lede"><span class="ng-pt">Há uma ideia que circula na comunidade e que custa muito dinheiro a quem nela acredita: a de que quem tem um problema de título não tem direitos laborais. A lei francesa diz exactamente o contrário — e diz por escrito.</span><span class="ng-fr">Une idée circule dans la communauté et coûte cher à ceux qui y croient : celle selon laquelle une personne ayant un problème de titre n'aurait pas de droits du travail. La loi française dit exactement le contraire — et elle le dit noir sur blanc.</span></p>
+    <div class="toc">
+      <span class="lbl"><span class="ng-pt">Neste dossiê</span><span class="ng-fr">Dans ce dossier</span></span>
+      <ol>
+        <li><a href="#t1"><span class="ng-pt">Autorização de trabalho: quem precisa, quem está dispensado</span><span class="ng-fr">Autorisation de travail : qui en a besoin, qui en est dispensé</span></a></li>
+        <li><a href="#t2"><span class="ng-pt">O contrato e o recibo de vencimento</span><span class="ng-fr">Le contrat et le bulletin de paie</span></a></li>
+        <li><a href="#t3"><span class="ng-pt">O conselho de prud’hommes</span><span class="ng-fr">Le conseil de prud'hommes</span></a></li>
+        <li><a href="#t4"><span class="ng-pt">Trabalhou sem autorização? Continua a ter direitos</span><span class="ng-fr">Travail sans autorisation : vos droits subsistent</span></a></li>
+        <li><a href="#t5"><span class="ng-pt">Trabalhar por conta própria</span><span class="ng-fr">Travailler à son compte</span></a></li>
+        <li><a href="#t6"><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec" id="t1">
+    <h2><span class="num">01</span><span class="ng-pt">Autorização de trabalho: quem precisa e quem está dispensado</span><span class="ng-fr">Autorisation de travail : qui en a besoin et qui en est dispensé</span></h2>
+    <p><span class="ng-pt">O empregador que quer contratar um estrangeiro não europeu tem de obter previamente uma autorização de trabalho. Certos vistos e títulos de residência dispensam essa formalidade — e é aqui que muita gente se engana sobre os seus próprios direitos.</span><span class="ng-fr">L'employeur qui souhaite embaucher un étranger non européen doit obtenir préalablement une autorisation de travail. Certains visas et titres de séjour dispensent de cette formalité — et c'est là que beaucoup se trompent sur leurs propres droits.</span></p>
+    <ul class="tct">
+      <li><span class="ng-pt"><strong>VLS-TS ou cartão salarié / travailleur temporaire</strong> — a autorização é obrigatória, e permite exercer apenas a actividade para a qual foi obtida. Cada novo contrato exige nova autorização.</span><span class="ng-fr"><strong>VLS-TS ou carte salarié / travailleur temporaire</strong> — l'autorisation est obligatoire et ne permet d'exercer que l'activité pour laquelle elle a été obtenue. Chaque nouveau contrat exige une nouvelle autorisation.</span></li>
+      <li><span class="ng-pt"><strong>Cartão talent</strong> — permite exercer a actividade que esteve na origem do título, e o empregador está dispensado de pedir autorização.</span><span class="ng-fr"><strong>Carte talent</strong> — permet d'exercer l'activité qui a justifié le titre, et l'employeur est dispensé de demander une autorisation.</span></li>
+      <li><span class="ng-pt"><strong>Verificação prévia</strong> — antes de contratar, o empregador deve verificar a autenticidade do título junto da préfecture do local de emprego, pelo menos dois dias úteis antes do início do contrato. Sem resposta nesse prazo, considera-se cumprida a obrigação. A verificação não é exigida se a pessoa constar da lista de candidatos a emprego da France Travail.</span><span class="ng-fr"><strong>Vérification préalable</strong> — avant l'embauche, l'employeur doit vérifier l'authenticité du titre auprès de la préfecture du lieu d'emploi, au moins deux jours ouvrables avant le début du contrat. Sans réponse dans ce délai, l'obligation est réputée remplie. La vérification n'est pas exigée si la personne figure sur la liste des demandeurs d'emploi de France Travail.</span></li>
+    </ul>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="t2">
+    <h2><span class="num">02</span><span class="ng-pt">O contrato e o recibo: os dois documentos que o protegem</span><span class="ng-fr">Le contrat et le bulletin de paie : les deux documents qui vous protègent</span></h2>
+    <p><span class="ng-pt">Sem contrato escrito e sem recibo de vencimento, provar a relação de trabalho torna-se difícil — e é sobre essa prova que assenta tudo o resto: a renovação do título, o acesso à segurança social, o cálculo da indemnização em caso de litígio. Guarde tudo, em papel e em digital.</span><span class="ng-fr">Sans contrat écrit et sans bulletin de paie, prouver la relation de travail devient difficile — et c'est sur cette preuve que repose tout le reste : le renouvellement du titre, l'accès à la sécurité sociale, le calcul de l'indemnité en cas de litige. Conservez tout, sur papier et en numérique.</span></p>
+    <div class="box gold">
+      <span class="bl"><span class="ng-pt">Guarde sempre</span><span class="ng-fr">Conservez toujours</span></span>
+      <p><span class="ng-pt">Contrato assinado, todos os recibos de vencimento, a declaração prévia de contratação, cartas e e-mails do empregador, registos de horas. Numa renovação de título, as fichas oficiais pedem justamente elementos que comprovem a manutenção do contrato — declaração social nominativa, atestado de actividade dos últimos doze meses.</span><span class="ng-fr">Contrat signé, tous les bulletins de paie, la déclaration préalable à l'embauche, courriers et e-mails de l'employeur, relevés d'heures. Lors d'un renouvellement de titre, les fiches officielles demandent précisément des éléments justifiant le maintien du contrat — déclaration sociale nominative, attestation d'activité des douze derniers mois.</span></p>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="t3">
+    <h2><span class="num">03</span><span class="ng-pt">Quando corre mal: o conselho de prud’hommes</span><span class="ng-fr">Quand ça tourne mal : le conseil de prud'hommes</span></h2>
+    <p><span class="ng-pt">O conselho de prud'hommes é o tribunal competente para os litígios individuais nascidos de um contrato de trabalho de direito privado. O processo começa por uma tentativa de conciliação e, se ela falhar, segue para julgamento. Para situações urgentes existe um procedimento de référé, que permite obter uma decisão rapidamente.</span><span class="ng-fr">Le conseil de prud'hommes est la juridiction compétente pour les litiges individuels nés d'un contrat de travail de droit privé. La procédure commence par une tentative de conciliation et, à défaut, se poursuit par le jugement. Pour les situations urgentes, une procédure de référé permet d'obtenir rapidement une décision.</span></p>
+    <p><span class="ng-pt">O conselho territorialmente competente é, em regra, o do local do estabelecimento onde trabalha — ou, na falta dele, o do local onde o contrato foi celebrado. A acção inicia-se com uma requerimento próprio (formulário oficial de saisine) e pode ser acompanhada ou representada por advogado, sindicato ou representante do pessoal.</span><span class="ng-fr">Le conseil territorialement compétent est, en principe, celui du lieu de l'établissement où vous travaillez — ou, à défaut, celui du lieu de conclusion du contrat. L'action s'introduit par une requête (formulaire officiel de saisine) et vous pouvez être assisté ou représenté par un avocat, un syndicat ou un représentant du personnel.</span></p>
+    <div class="box gold">
+      <span class="bl"><span class="ng-pt">Novidade de 2026 a ter em conta</span><span class="ng-fr">Nouveauté 2026 à connaître</span></span>
+      <p><span class="ng-pt">A lei de finanças para 2026 instituiu uma contribuição para a ajuda jurídica de 50 euros por instância introduzida em matéria civil e prud'homal, devida pela parte que inicia o processo. Aplica-se às instâncias introduzidas a partir de 1 de Março de 2026.</span><span class="ng-fr">La loi de finances pour 2026 a instauré une contribution pour l'aide juridique de 50 euros par instance introduite en matière civile et prud'homale, due par la partie demanderesse. Elle s'applique aux instances introduites depuis le 1er mars 2026.</span></p>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="t4">
+    <h2><span class="num">04</span><span class="ng-pt">Trabalhou sem autorização? Continua a ter direitos</span><span class="ng-fr">Vous avez travaillé sans autorisation ? Vous avez toujours des droits</span></h2>
+    <p><span class="ng-pt">Este é o ponto que mais silêncio produz — e o mais importante de dizer. O Código do Trabalho prevê expressamente que o estrangeiro não autorizado a trabalhar que tenha sido empregado no quadro de trabalho dissimulado beneficia do regime que lhe for mais favorável, e que o conselho de prud'hommes pode ordenar, a título provisório, o pagamento da indemnização fixa prevista na lei. Nada disso impede o trabalhador de pedir em juízo uma indemnização suplementar se conseguir demonstrar um prejuízo não reparado.</span><span class="ng-fr">C'est le point qui produit le plus de silence — et le plus important à dire. Le Code du travail prévoit expressément que l'étranger non autorisé à travailler qui a été employé dans le cadre d'un travail dissimulé bénéficie du régime le plus favorable, et que le conseil de prud'hommes peut ordonner, par provision, le versement de l'indemnité forfaitaire prévue par la loi. Rien n'empêche par ailleurs le salarié de demander en justice une indemnisation supplémentaire s'il établit un préjudice non réparé.</span></p>
+    <p><span class="ng-pt">Traduzido em linguagem simples: a irregularidade do seu título não apaga o trabalho que fez. Se está nesta situação, procure um advogado ou uma associação especializada antes de assinar qualquer documento que lhe seja apresentado pelo empregador.</span><span class="ng-fr">Traduit en langage simple : l'irrégularité de votre titre n'annule pas le travail que vous avez accompli. Si vous êtes dans cette situation, consultez un avocat ou une association spécialisée avant de signer tout document que l'employeur vous présenterait.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="t5">
+    <h2><span class="num">05</span><span class="ng-pt">Trabalhar por conta própria</span><span class="ng-fr">Travailler à son compte</span></h2>
+    <p><span class="ng-pt">Criar uma actividade independente em França implica inscrição, declaração da actividade e contribuições sociais — e o direito de o fazer depende do título de residência que possui. Antes de qualquer passo, confirme na ficha oficial correspondente ao seu título se a actividade independente lhe está aberta, e no portal das empresas quais são as formalidades de criação.</span><span class="ng-fr">Créer une activité indépendante en France implique une immatriculation, une déclaration d'activité et des cotisations sociales — et le droit de le faire dépend du titre de séjour dont vous disposez. Avant toute démarche, vérifiez sur la fiche officielle correspondant à votre titre si l'activité indépendante vous est ouverte, et sur le portail des entreprises quelles sont les formalités de création.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="t6">
+    <h2><span class="num">06</span><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></h2>
+    <div class="srcs">
+      <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2728" target="_blank" rel="noopener"><span class="ng-pt">Service-Public — Autorização de trabalho de um assalariado estrangeiro</span><span class="ng-fr">Service-Public — Autorisation de travail d'un salarié étranger</span><span class="d">service-public.gouv.fr</span></a>
+      <a href="https://www.justice.fr/fiche/autorisation-travail-salarie-etranger-france" target="_blank" rel="noopener"><span class="ng-pt">Justice.fr — Autorização de trabalho: ficha oficial</span><span class="ng-fr">Justice.fr — Autorisation de travail : fiche officielle</span><span class="d">justice.fr</span></a>
+      <a href="https://code.travail.gouv.fr/fiche-ministere-travail/le-conseil-de-prudhommes" target="_blank" rel="noopener"><span class="ng-pt">Código do Trabalho Digital — O conselho de prud’hommes</span><span class="ng-fr">Code du travail numérique — Le conseil de prud'hommes</span><span class="d">code.travail.gouv.fr</span></a>
+      <a href="https://code.travail.gouv.fr/fiche-service-public/saisir-le-conseil-de-prudhommes-cph" target="_blank" rel="noopener"><span class="ng-pt">Código do Trabalho Digital — Como accionar o conselho de prud’hommes</span><span class="ng-fr">Code du travail numérique — Saisir le conseil de prud'hommes</span><span class="d">code.travail.gouv.fr</span></a>
+      <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072050/LEGISCTA000006160851/" target="_blank" rel="noopener"><span class="ng-pt">Légifrance — Emprego de estrangeiros não autorizados a trabalhar</span><span class="ng-fr">Légifrance — Emploi d'étrangers non autorisés à travailler</span><span class="d">legifrance.gouv.fr</span></a>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+    <div class="disc">
+      <span class="ng-pt"><strong>Aviso.</strong> Este dossiê é informação editorial de interesse público, verificada em fontes oficiais francesas à data indicada. Não constitui aconselhamento jurídico individual e não substitui a análise do seu caso por um profissional habilitado.</span><span class="ng-fr"><strong>Avertissement.</strong> Ce dossier constitue une information éditoriale d'intérêt public, vérifiée auprès de sources officielles françaises à la date indiquée. Il ne constitue pas un conseil juridique individuel et ne remplace pas l'analyse de votre cas par un professionnel habilité.</span>
+    </div>
+
+    <div class="sign">
+      <div class="seal">AL</div>
+      <div>
+        <div class="nm"><span class="ng-pt">Por Anne Lopes</span><span class="ng-fr">Par Anne Lopes</span></div>
+        <div class="rl"><span class="ng-pt">CEO e Fundadora da The Crossing Time</span><span class="ng-fr">PDG et fondatrice de The Crossing Time</span></div>
+      </div>
+    </div>
+
+</div>
+
+<div class="cta">
+  <h4><span class="ng-pt">O seu caso é um litígio?</span><span class="ng-fr">Votre cas est-il un litige ?</span></h4>
+  <p><span class="ng-pt">The Crossing Time reúne colunistas juristas que escrevem regularmente sobre direito dos estrangeiros, direito patrimonial e direito internacional.</span><span class="ng-fr">The Crossing Time réunit des chroniqueurs juristes qui écrivent régulièrement sur le droit des étrangers, le droit patrimonial et le droit international.</span></p>
+  <a class="btn" href="../index.html#colunas" target="_top"><span class="ng-pt">Ver os colunistas juristas</span><span class="ng-fr">Voir les chroniqueurs juristes</span></a>
+  <a class="btn ghost" href="https://wa.me/message/STDV3OMZM6EGL1" target="_blank" rel="noopener"><span class="ng-pt">Falar com a redacção</span><span class="ng-fr">Contacter la rédaction</span></a>
+</div>
+
+<div class="foot">
+  <span class="ng-pt">The Crossing Time · By Porta-Voz do Imigrante · Dossiê actualizado em Julho de 2026</span>
+  <span class="ng-fr">The Crossing Time · By Porta-Voz do Imigrante · Dossier mis à jour en juillet 2026</span>
+</div>
+
+<div class="share">
+  <button onclick="shareWa()" title="WhatsApp">&#9993;</button>
+  <button onclick="copyLink()" title="Copiar link">&#128279;</button>
+</div>
+
+<script>
+function goBack(){
+  if(window.parent && window.parent !== window){
+    try{ window.parent.closeMateria(); return; }catch(e){}
+  }
+  window.location.href = '../index.html#civique';
+}
+function setLang(l){
+  document.body.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  var bp = document.getElementById('b-pt'), bf = document.getElementById('b-fr');
+  if(bp) bp.className = (l === 'pt') ? 'on' : '';
+  if(bf) bf.className = (l === 'fr') ? 'on' : '';
+  try{ localStorage.setItem('tct-lang', l); }catch(e){}
+}
+(function(){
+  var saved = 'pt';
+  try{ saved = localStorage.getItem('tct-lang') || 'pt'; }catch(e){}
+  if(saved === 'fr') setLang('fr');
+})();
+function shareWa(){
+  window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' — ' + window.location.href), '_blank');
+}
+function copyLink(){
+  var u = window.location.href;
+  if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ alert('Link copiado / Lien copie'); }); }
+  else { alert(u); }
+}
+</script>
+</body>
+</html>

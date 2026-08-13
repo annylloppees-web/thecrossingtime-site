@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ônibus cai no Sena durante treinamento — The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#0E1A2B; --navy2:#1a2e4a;
+  --gold:#C6A15B; --gold2:#a8863d;
+  --offwhite:#F4F2ED; --black:#111111;
+  --gray:#6E6E6E; --gray2:#4a4a4a;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+html{font-size:16px;scroll-behavior:smooth;}
+body{font-family:var(--sans);color:var(--black);background:var(--offwhite);line-height:1.7;}
+
+.lang-bar{position:fixed;top:14px;right:14px;z-index:100;display:flex;gap:6px;background:rgba(14,26,43,.92);padding:6px 8px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.2);backdrop-filter:blur(8px);}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:5px 11px;font-size:10px;letter-spacing:.1em;font-family:var(--sans);cursor:pointer;border-radius:3px;transition:all .2s;font-weight:500;}
+.lang-btn:hover{color:#fff;}
+.lang-btn.active{background:rgba(198,161,91,.2);border-color:var(--gold);color:var(--gold);font-weight:600;}
+
+/* HERO */
+.hero{position:relative;min-height:80vh;background:var(--navy);display:flex;align-items:flex-end;padding:5rem 2rem 4rem;overflow:hidden;}
+.hero::before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;background-color:#0E1A2B;}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,26,43,.2) 0%,rgba(14,26,43,.7) 65%,rgba(14,26,43,.95) 100%);}
+.hero-inner{max-width:900px;margin:0 auto;color:var(--offwhite);width:100%;position:relative;z-index:2;}
+.hero-tag{display:inline-block;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-family:var(--sans);font-weight:500;margin-bottom:1.5rem;padding:7px 16px;border:1px solid var(--gold);border-radius:2px;}
+.hero-title{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5.5vw,3.8rem);line-height:1.1;margin-bottom:1.5rem;letter-spacing:-.01em;}
+.hero-title em{color:var(--gold);font-weight:300;font-style:italic;}
+.hero-sub{font-size:1.25rem;line-height:1.7;color:rgba(244,242,237,.85);font-style:italic;font-family:var(--serif);max-width:760px;font-weight:400;}
+.hero-meta{margin-top:2rem;padding-top:1.5rem;border-top:.5px solid rgba(198,161,91,.3);display:flex;flex-wrap:wrap;gap:1.5rem;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,242,237,.65);font-family:var(--sans);}
+.hero-meta span strong{color:var(--gold);font-weight:600;}
+
+.article-body{max-width:760px;margin:0 auto;padding:4rem 1.5rem 2rem;}
+.section{margin-bottom:3.5rem;}
+.section-num{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--gold);letter-spacing:.05em;margin-bottom:.5rem;}
+.section-title{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3.5vw,2.2rem);line-height:1.2;color:var(--navy);margin-bottom:1.5rem;letter-spacing:-.005em;}
+.section-title em{color:var(--gold);font-style:italic;}
+.lead{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--gray2);margin-bottom:2rem;padding:0 0 1.5rem;border-bottom:.5px solid rgba(14,26,43,.12);}
+.lead em{color:var(--gold);font-style:normal;font-weight:500;}
+p{margin-bottom:1.3rem;font-size:1.02rem;color:var(--gray2);}
+p strong{color:var(--navy);font-weight:600;}
+em{color:var(--gold2);font-style:italic;}
+
+/* PULL QUOTE */
+.pull-quote{margin:3rem 0;padding:2rem 2.5rem;background:linear-gradient(135deg,#fafaf6 0%,#f4f2ed 100%);border-left:3px solid var(--gold);position:relative;}
+.pull-quote::before{content:'"';position:absolute;top:-15px;left:15px;font-family:var(--serif);font-size:6rem;color:var(--gold);opacity:.25;line-height:1;}
+.pull-quote p{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.5;color:var(--navy);margin-bottom:1rem;}
+.pull-quote .source{font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+
+/* STAT BOX */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2.5rem 0;}
+.stat-box{background:var(--navy);color:var(--offwhite);padding:2rem 1.5rem;text-align:center;border-radius:3px;}
+.stat-num{font-family:var(--serif);font-size:2.8rem;color:var(--gold);font-weight:400;line-height:1;margin-bottom:.5rem;}
+.stat-label{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,242,237,.7);font-family:var(--sans);font-weight:500;line-height:1.5;}
+
+/* SVG */
+.svg-frame{margin:3rem -1rem;border-radius:3px;overflow:hidden;box-shadow:0 2px 12px rgba(14,26,43,.1);}
+.svg-frame img{width:100%;display:block;}
+.svg-caption{text-align:center;padding:1rem 1.5rem;background:#fafaf6;font-size:.85rem;font-style:italic;color:var(--gray2);font-family:var(--serif);border-top:.5px solid rgba(14,26,43,.08);}
+
+/* CHECKLIST */
+.checklist{margin:2rem 0;background:#fff;border:.5px solid rgba(14,26,43,.12);border-left:3px solid var(--gold);padding:1.75rem 2rem;border-radius:3px;}
+.checklist-title{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--navy);margin-bottom:1.25rem;}
+.checklist ul{list-style:none;padding:0;}
+.checklist li{padding:.6rem 0 .6rem 1.6rem;border-bottom:.5px solid rgba(14,26,43,.06);position:relative;font-size:.95rem;color:var(--gray2);line-height:1.5;}
+.checklist li::before{content:"→";position:absolute;left:0;color:var(--gold);font-family:var(--serif);font-weight:600;}
+.checklist li:last-child{border-bottom:none;}
+
+.signature{margin-top:3rem;padding:2.5rem 2rem;background:var(--navy);color:var(--offwhite);text-align:center;border-radius:3px;}
+.signature h3{font-family:var(--serif);font-size:1.6rem;color:var(--gold);font-style:italic;font-weight:400;margin-bottom:.6rem;}
+.signature p{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:rgba(244,242,237,.7);margin:0;font-family:var(--sans);}
+
+[lang-mode="pt"] .ng-fr{display:none;}
+[lang-mode="fr"] .ng-pt{display:none;}
+
+@media (max-width:600px){
+  .hero{padding:3rem 1.5rem 3rem;min-height:70vh;}
+  .article-body{padding:2.5rem 1.25rem 2rem;}
+  .pull-quote{padding:1.5rem 1.5rem;margin:2rem -.5rem;}
+  .pull-quote p{font-size:1.15rem;}
+  .stat-num{font-size:2.2rem;}
+  .svg-frame{margin:2rem -1.25rem;}
+  .checklist{padding:1.5rem 1.5rem;}
+  }
+
+/* PHOTO FRAME */
+.photo-frame{margin:3rem -1rem;border-radius:3px;overflow:hidden;box-shadow:0 2px 12px rgba(14,26,43,.1);}
+.photo-img{width:100%;height:420px;background-size:cover;background-position:center;background-color:#0E1A2B;display:block;}
+.photo-caption{text-align:center;padding:1rem 1.5rem;background:#fafaf6;font-size:.85rem;font-style:italic;color:var(--gray2);font-family:var(--serif);border-top:.5px solid rgba(14,26,43,.08);}
+@media (max-width:600px){.photo-frame{margin:2rem -1.25rem;}.photo-img{height:280px;}}
+
+.art-back{position:fixed;top:1rem;left:1rem;z-index:100;background:rgba(14,26,43,.9);backdrop-filter:blur(8px);color:#F4F2ED;border:none;border-radius:999px;padding:8px 16px 8px 12px;font-family:sans-serif;font-size:11px;letter-spacing:.1em;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 12px rgba(0,0,0,.2);transition:all .2s;font-weight:600;text-transform:uppercase;}
+.art-back svg{width:14px;height:14px;stroke:#C6A15B;stroke-width:2.5;fill:none;}
+.art-back:hover{background:#0E1A2B;transform:translateX(-2px);}
+
+</style>
+</head>
+<body lang-mode="pt">
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">🇧🇷 PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">🇫🇷 FR</button>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">
+      <span class="ng-pt">Mobilidade & Segurança · 30 Abril 2026</span>
+      <span class="ng-fr">Mobilité & Sécurité · 30 Avril 2026</span>
+    </span>
+    <h1 class="hero-title">
+      <span class="ng-pt">Ônibus cai no <em>Sena</em><br>durante treinamento</span>
+      <span class="ng-fr">Un bus tombe dans la <em>Seine</em><br>pendant une formation</span>
+    </h1>
+    <p class="hero-sub">
+      <span class="ng-pt">Quatro pessoas foram resgatadas com vida em Juvisy-sur-Orge, ao sudeste de Paris. O acidente expõe um debate raro mas urgente: a segurança dos treinamentos práticos no transporte público.</span>
+      <span class="ng-fr">Quatre personnes ont été secourues à Juvisy-sur-Orge, au sud-est de Paris. L'accident expose un débat rare mais urgent : la sécurité des formations pratiques dans le transport public.</span>
+    </p>
+    <div class="hero-meta">
+      <span><strong>8 min</strong> · <span class="ng-pt">leitura</span><span class="ng-fr">lecture</span></span>
+      <span>Île-de-France</span>
+      <span>PT / FR</span>
+      <span><span class="ng-pt">Reportagem editorial</span><span class="ng-fr">Reportage éditorial</span></span>
+    </div>
+  </div>
+</header>
+
+<article class="article-body">
+
+  <p class="lead">
+    <span class="ng-pt">Um episódio que poderia ter sido tragédia tornou-se alerta — sobre <em>segurança, formação profissional e gestão de riscos</em> no transporte público da Île-de-France.</span>
+    <span class="ng-fr">Un épisode qui aurait pu être tragique est devenu une alerte — sur la <em>sécurité, la formation professionnelle et la gestion des risques</em> dans le transport public d'Île-de-France.</span>
+  </p>
+
+  <!-- I -->
+  <section class="section">
+    <p class="section-num">I.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">O <em>incidente</em></span>
+      <span class="ng-fr">L'<em>incident</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">Na manhã desta quinta-feira, <strong>30 de abril de 2026</strong>, um ônibus saiu da pista e caiu nas águas do rio Sena, na região de <strong>Juvisy-sur-Orge</strong>, ao sudeste de Paris. Segundo as autoridades locais, o veículo era conduzido por um <em>motorista em treinamento</em> no momento do acidente.</span>
+      <span class="ng-fr">Ce jeudi matin, <strong>30 avril 2026</strong>, un bus est sorti de la chaussée et est tombé dans les eaux de la Seine, dans la région de <strong>Juvisy-sur-Orge</strong>, au sud-est de Paris. Selon les autorités locales, le véhicule était conduit par un <em>chauffeur en formation</em> au moment de l'accident.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Quatro pessoas foram resgatadas com vida pelas equipes de socorro mobilizadas no local — bombeiros, mergulhadores e polícia. O nível de gravidade dos ferimentos não foi detalhado nas primeiras horas após o ocorrido.</span>
+      <span class="ng-fr">Quatre personnes ont été secourues vivantes par les équipes de secours mobilisées sur place — pompiers, plongeurs et police. Le degré de gravité des blessures n'a pas été détaillé dans les premières heures après l'incident.</span>
+    </p>
+
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="stat-num">04</div>
+        <div class="stat-label"><span class="ng-pt">Pessoas resgatadas</span><span class="ng-fr">Personnes secourues</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">0</div>
+        <div class="stat-label"><span class="ng-pt">Vítimas fatais</span><span class="ng-fr">Victimes fatales</span></div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">~20</div>
+        <div class="stat-label"><span class="ng-pt">min · resposta inicial</span><span class="ng-fr">min · réponse initiale</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUE SVG -->
+  <div class="svg-frame">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMiIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwRTFBMkIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMWEyZTRhIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNiZzIpIi8+CiAgCiAgPCEtLSBDcnV6IGNlbnRyYWwgZXN0aWxpemFkYSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMDAsMjAwKSIgb3BhY2l0eT0iLjc1Ij4KICAgIDxjaXJjbGUgcj0iOTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M2QTE1QiIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8Y2lyY2xlIHI9IjcyIiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjQiIG9wYWNpdHk9Ii41Ii8+CiAgICAKICAgIDwhLS0gQ3J1eiBkZW50cm8gLS0+CiAgICA8cmVjdCB4PSItMTIiIHk9Ii01MCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0M2QTE1QiIgb3BhY2l0eT0iLjciLz4KICAgIDxyZWN0IHg9Ii01MCIgeT0iLTEyIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjI0IiBmaWxsPSIjQzZBMTVCIiBvcGFjaXR5PSIuNyIvPgogICAgCiAgICA8IS0tIFRleHRvIC0tPgogICAgPHRleHQgeD0iMCIgeT0iMTE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5IiBmaWxsPSIjQzZBMTVCIiBsZXR0ZXItc3BhY2luZz0iMyIgZm9udC13ZWlnaHQ9IjYwMCI+U0VDT1VSUzwvdGV4dD4KICAgIDx0ZXh0IHg9IjAiIHk9IjEzMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiNGNEYyRUQiIGZvbnQtc3R5bGU9Iml0YWxpYyIgb3BhY2l0eT0iLjc1Ij40IHBlcnNvbm5lcyBzZWNvdXJ1ZXM8L3RleHQ+CiAgPC9nPgogIAogIDwhLS0gNCBwb250b3MgcmVwcmVzZW50YW5kbyB2w610aW1hcyAtLT4KICA8ZyBvcGFjaXR5PSIuNjUiPgogICAgPGNpcmNsZSBjeD0iMTIwIiBjeT0iMTgwIiByPSI2IiBmaWxsPSIjQzZBMTVCIi8+CiAgICA8Y2lyY2xlIGN4PSIxNDAiIGN5PSIyMjAiIHI9IjYiIGZpbGw9IiNDNkExNUIiLz4KICAgIDxjaXJjbGUgY3g9IjQ2MCIgY3k9IjE4MCIgcj0iNiIgZmlsbD0iI0M2QTE1QiIvPgogICAgPGNpcmNsZSBjeD0iNDgwIiBjeT0iMjIwIiByPSI2IiBmaWxsPSIjQzZBMTVCIi8+CiAgICA8dGV4dCB4PSIxMjAiIHk9IjE2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0Y0RjJFRCIgb3BhY2l0eT0iLjciPjAxPC90ZXh0PgogICAgPHRleHQgeD0iMTQwIiB5PSIyNDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjkiIGZpbGw9IiNGNEYyRUQiIG9wYWNpdHk9Ii43Ij4wMjwvdGV4dD4KICAgIDx0ZXh0IHg9IjQ2MCIgeT0iMTYwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5IiBmaWxsPSIjRjRGMkVEIiBvcGFjaXR5PSIuNyI+MDM8L3RleHQ+CiAgICA8dGV4dCB4PSI0ODAiIHk9IjI0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0Y0RjJFRCIgb3BhY2l0eT0iLjciPjA0PC90ZXh0PgogIDwvZz4KICAKICA8IS0tIExpbmhhcyBkZWNvcmF0aXZhcyAtLT4KICA8bGluZSB4MT0iNTAiIHkxPSI1MCIgeDI9IjU1MCIgeTI9IjUwIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjMiIG9wYWNpdHk9Ii40Ii8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iMzUwIiB4Mj0iNTUwIiB5Mj0iMzUwIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjMiIG9wYWNpdHk9Ii40Ii8+CiAgCiAgPHRleHQgeD0iNTAiIHk9IjM1IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSI5IiBmaWxsPSIjQzZBMTVCIiBsZXR0ZXItc3BhY2luZz0iMyIgb3BhY2l0eT0iLjciPk9Qw4lSQVRJT04gREUgU0FVVkVUQUdFPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIzODAiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjEwIiBmaWxsPSIjRjRGMkVEIiBmb250LXN0eWxlPSJpdGFsaWMiIG9wYWNpdHk9Ii41Ij5Qb21waWVycyDCtyBQbG9uZ2V1cnMgwrcgUG9saWNlPC90ZXh0Pgo8L3N2Zz4=" alt="Operação de resgate · 4 pessoas secorridas">
+    <div class="svg-caption">
+      <span class="ng-pt">A rapidez da resposta — bombeiros, mergulhadores, polícia — foi determinante para o desfecho.</span>
+      <span class="ng-fr">La rapidité de la réponse — pompiers, plongeurs, police — a été déterminante pour l'issue.</span>
+    </div>
+  </div>
+
+  <!-- II -->
+  <section class="section">
+    <p class="section-num">II.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">Formação em <em>campo</em>: necessidade e risco</span>
+      <span class="ng-fr">Formation sur le <em>terrain</em> : nécessité et risque</span>
+    </h2>
+    <p>
+      <span class="ng-pt">Na França, a formação de motoristas de transporte coletivo inclui <strong>etapas práticas obrigatórias</strong>, frequentemente realizadas em vias públicas. Este modelo busca preparar os profissionais para situações reais — tráfego intenso, condições climáticas variáveis, tomada de decisão sob pressão.</span>
+      <span class="ng-fr">En France, la formation des conducteurs de transport en commun inclut des <strong>étapes pratiques obligatoires</strong>, souvent réalisées sur la voie publique. Ce modèle vise à préparer les professionnels à des situations réelles — trafic intense, conditions météorologiques variables, prise de décision sous pression.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Mas o acidente levanta uma questão sensível: <strong>até que ponto os protocolos de segurança em treinamentos estão preparados para mitigar riscos extremos?</strong> A presença de um instrutor, as condições da via e possíveis falhas — mecânicas ou humanas — devem ser analisadas pelas autoridades competentes.</span>
+      <span class="ng-fr">Mais l'accident soulève une question sensible : <strong>dans quelle mesure les protocoles de sécurité en formation sont-ils préparés à atténuer les risques extrêmes ?</strong> La présence d'un instructeur, les conditions de la voie et les éventuelles défaillances — mécaniques ou humaines — devront être analysées par les autorités compétentes.</span>
+    </p>
+
+    <div class="pull-quote">
+      <p>
+        <span class="ng-pt">Treinar em ambiente real é necessário. Mas <em>treinar à beira-rio</em>, sem barreiras físicas eficazes entre o asfalto e a água, é uma decisão de gestão — não uma fatalidade.</span>
+        <span class="ng-fr">S'entraîner en milieu réel est nécessaire. Mais <em>s'entraîner au bord d'une rivière</em>, sans barrières physiques efficaces entre l'asphalte et l'eau, est une décision de gestion — pas une fatalité.</span>
+      </p>
+      <span class="source">The Crossing Time · 2026</span>
+    </div>
+  </section>
+
+  <!-- FOTO UNSPLASH: BOMBEIROS / SOCORRO -->
+  <div class="photo-frame">
+    <div class="photo-img" style="background-image:url('https://images.unsplash.com/photo-1599700403969-f77b3aa74837?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80');"></div>
+    <div class="photo-caption">
+      <span class="ng-pt">A coordenação entre bombeiros, mergulhadores e polícia define o desfecho de operações de resgate em meio aquático.</span>
+      <span class="ng-fr">La coordination entre pompiers, plongeurs et police détermine l'issue des opérations de sauvetage en milieu aquatique.</span>
+    </div>
+  </div>
+
+  <!-- III -->
+  <section class="section">
+    <p class="section-num">III.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">Infraestrutura e <em>segurança viária</em> em foco</span>
+      <span class="ng-fr">Infrastructure et <em>sécurité routière</em> en question</span>
+    </h2>
+    <p>
+      <span class="ng-pt">A região de <strong>Juvisy-sur-Orge</strong>, atravessada pelo Sena e por importantes eixos rodoviários, exige atenção redobrada quanto a <em>infraestrutura, sinalização e barreiras de proteção</em>. Acidentes envolvendo veículos pesados próximos a áreas aquáticas são raros — mas, quando ocorrem, demandam resposta imediata e altamente coordenada.</span>
+      <span class="ng-fr">La région de <strong>Juvisy-sur-Orge</strong>, traversée par la Seine et d'importants axes routiers, exige une attention redoublée quant à l'<em>infrastructure, la signalisation et les barrières de protection</em>. Les accidents impliquant des véhicules lourds près de zones aquatiques sont rares — mais, lorsqu'ils surviennent, ils exigent une réponse immédiate et hautement coordonnée.</span>
+    </p>
+  </section>
+
+  <!-- IV -->
+  <section class="section">
+    <p class="section-num">IV.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">Investigação e <em>próximos passos</em></span>
+      <span class="ng-fr">Enquête et <em>prochaines étapes</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">As autoridades francesas devem abrir investigação para determinar:</span>
+      <span class="ng-fr">Les autorités françaises devraient ouvrir une enquête pour déterminer :</span>
+    </p>
+
+    <div class="checklist">
+      <p class="checklist-title">
+        <span class="ng-pt">Pontos a apurar</span>
+        <span class="ng-fr">Points à éclaircir</span>
+      </p>
+      <ul>
+        <li><span class="ng-pt">As circunstâncias exatas da saída de pista</span><span class="ng-fr">Les circonstances exactes de la sortie de route</span></li>
+        <li><span class="ng-pt">O nível de experiência do condutor em formação</span><span class="ng-fr">Le niveau d'expérience du conducteur en formation</span></li>
+        <li><span class="ng-pt">A presença e atuação de um supervisor a bordo</span><span class="ng-fr">La présence et l'action d'un superviseur à bord</span></li>
+        <li><span class="ng-pt">Possíveis falhas técnicas no veículo</span><span class="ng-fr">Les éventuelles défaillances techniques du véhicule</span></li>
+        <li><span class="ng-pt">Adequação das barreiras de proteção viária no trecho</span><span class="ng-fr">L'adéquation des barrières de protection routière sur ce tronçon</span></li>
+      </ul>
+    </div>
+
+    <p>
+      <span class="ng-pt">Mais do que atribuir responsabilidades, o objetivo será entender <strong>o que pode ser aprimorado</strong> para evitar novos incidentes — em uma região onde milhões de passageiros dependem do transporte público diariamente.</span>
+      <span class="ng-fr">Plus que d'attribuer des responsabilités, l'objectif sera de comprendre <strong>ce qui peut être amélioré</strong> pour éviter de nouveaux incidents — dans une région où des millions de passagers dépendent quotidiennement des transports publics.</span>
+    </p>
+  </section>
+
+  <!-- V -->
+  <section class="section">
+    <p class="section-num">V.</p>
+    <h2 class="section-title">
+      <span class="ng-pt">Além do acidente — uma reflexão sobre <em>sistemas</em></span>
+      <span class="ng-fr">Au-delà de l'accident — une réflexion sur les <em>systèmes</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">O episódio evidencia uma realidade pouco discutida: <strong>os bastidores da formação dos profissionais que operam sistemas essenciais</strong> no cotidiano urbano. Transporte público, segurança viária e treinamento técnico formam um <em>tripé</em> que sustenta a mobilidade nas grandes cidades — e qualquer falha pode ter efeitos imediatos e amplificados.</span>
+      <span class="ng-fr">L'épisode met en évidence une réalité peu discutée : <strong>les coulisses de la formation des professionnels qui opèrent les systèmes essentiels</strong> du quotidien urbain. Transport public, sécurité routière et formation technique forment un <em>trépied</em> qui soutient la mobilité dans les grandes villes — et toute défaillance peut avoir des effets immédiats et amplifiés.</span>
+    </p>
+  </section>
+
+  <!-- DESTAQUE SVG: TRIPÉ -->
+  <div class="svg-frame">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImJnMyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwYTE0MjIiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEUxQTJCIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgZmlsbD0idXJsKCNiZzMpIi8+CiAgCiAgPCEtLSBUcmnDom5ndWxvIGRvIHRyaXDDqSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMDAsMjEwKSIgb3BhY2l0eT0iLjc1Ij4KICAgIDxwb2x5Z29uIHBvaW50cz0iMCwtMTAwIC0xMDAsNzAgMTAwLDcwIiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iMS4yIi8+CiAgICAKICAgIDwhLS0gVsOpcnRpY2VzIGNvbSBjaXJjdWxvcyAtLT4KICAgIDxjaXJjbGUgY3g9IjAiIGN5PSItMTAwIiByPSIyMiIgZmlsbD0iIzBFMUEyQiIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPGNpcmNsZSBjeD0iLTEwMCIgY3k9IjcwIiByPSIyMiIgZmlsbD0iIzBFMUEyQiIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogICAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iNzAiIHI9IjIyIiBmaWxsPSIjMEUxQTJCIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAKICAgIDwhLS0gU8OtbWJvbG9zIG1pbmltYWxpc3RhcyAtLT4KICAgIDwhLS0gVG9wbzogw7RuaWJ1cyBzaW1wbGlmaWNhZG8gLS0+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0xMDApIj4KICAgICAgPHJlY3QgeD0iLTEyIiB5PSItNSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjEwIiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjgiLz4KICAgICAgPGNpcmNsZSBjeD0iLTciIGN5PSI2IiByPSIyIiBmaWxsPSIjQzZBMTVCIi8+CiAgICAgIDxjaXJjbGUgY3g9IjciIGN5PSI2IiByPSIyIiBmaWxsPSIjQzZBMTVCIi8+CiAgICA8L2c+CiAgICA8IS0tIEVzcXVlcmRhOiBlc2N1ZG8gKHNlZ3VyYW7Dp2EpIC0tPgogICAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEwMCw3MCkiPgogICAgICA8cGF0aCBkPSJNMCwtOSBMOCwtNSBMOCwzIFE4LDggMCwxMCBRLTgsOCAtOCwzIEwtOCwtNSBaIiBmaWxsPSJub25lIiBzdHJva2U9IiNDNkExNUIiIHN0cm9rZS13aWR0aD0iLjgiLz4KICAgIDwvZz4KICAgIDwhLS0gRGlyZWl0YTogZ3JhZHVhw6fDo28gKHRyZWluYW1lbnRvKSAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCw3MCkiPgogICAgICA8cG9seWdvbiBwb2ludHM9Ii05LC0yIDAsLTcgOSwtMiAwLDMiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M2QTE1QiIgc3Ryb2tlLXdpZHRoPSIuOCIvPgogICAgICA8bGluZSB4MT0iMCIgeTE9IjMiIHgyPSIwIiB5Mj0iOSIgc3Ryb2tlPSIjQzZBMTVCIiBzdHJva2Utd2lkdGg9Ii44Ii8+CiAgICA8L2c+CiAgPC9nPgogIAogIDwhLS0gTGFiZWxzIC0tPgogIDx0ZXh0IHg9IjMwMCIgeT0iODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjQzZBMTVCIiBsZXR0ZXItc3BhY2luZz0iMyIgZm9udC1zdHlsZT0iaXRhbGljIj5UcmFuc3BvcnQ8L3RleHQ+CiAgPHRleHQgeD0iMTIwIiB5PSIzMjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjQzZBMTVCIiBsZXR0ZXItc3BhY2luZz0iMyIgZm9udC1zdHlsZT0iaXRhbGljIj5Tw6ljdXJpdMOpPC90ZXh0PgogIDx0ZXh0IHg9IjQ4MCIgeT0iMzIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iI0M2QTE1QiIgbGV0dGVyLXNwYWNpbmc9IjMiIGZvbnQtc3R5bGU9Iml0YWxpYyI+Rm9ybWF0aW9uPC90ZXh0PgogIAogIDwhLS0gVGV4dG8gZWRpdG9yaWFsIC0tPgogIDx0ZXh0IHg9IjUwIiB5PSIzNSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0Y0RjJFRCIgbGV0dGVyLXNwYWNpbmc9IjMiIG9wYWNpdHk9Ii41NSI+TEVTIDMgUElMSUVSUyBERSBMQSBNT0JJTElUw4kgVVJCQUlORTwvdGV4dD4KPC9zdmc+" alt="Os 3 pilares da mobilidade urbana">
+    <div class="svg-caption">
+      <span class="ng-pt">Transporte · Segurança · Formação. Os três pilares que sustentam a mobilidade urbana.</span>
+      <span class="ng-fr">Transport · Sécurité · Formation. Les trois piliers qui soutiennent la mobilité urbaine.</span>
+    </div>
+  </div>
+
+  <!-- VI - CONCLUSÃO -->
+  <section class="section">
+    <p class="section-num">VI.</p>
+    <h2 class="section-title">
+      <span class="ng-pt"><em>Conclusão</em></span>
+      <span class="ng-fr"><em>Conclusion</em></span>
+    </h2>
+    <p>
+      <span class="ng-pt">O acidente em Juvisy-sur-Orge não é apenas um fato isolado. Ele se insere em um <strong>debate maior sobre segurança, responsabilidade e preparação</strong> em ambientes de alta complexidade operacional.</span>
+      <span class="ng-fr">L'accident de Juvisy-sur-Orge n'est pas qu'un fait isolé. Il s'inscrit dans un <strong>débat plus large sur la sécurité, la responsabilité et la préparation</strong> dans des environnements à haute complexité opérationnelle.</span>
+    </p>
+
+    <div class="pull-quote">
+      <p>
+        <span class="ng-pt">Em um mundo onde a mobilidade urbana é cada vez mais estratégica, garantir que <em>formação e segurança caminhem juntas</em> deixa de ser uma opção — e passa a ser uma exigência.</span>
+        <span class="ng-fr">Dans un monde où la mobilité urbaine est de plus en plus stratégique, garantir que <em>formation et sécurité avancent ensemble</em> cesse d'être une option — et devient une exigence.</span>
+      </p>
+      <span class="source">The Crossing Time</span>
+    </div>
+  </section>
+
+  
+
+  
+
+  <div class="signature">
+    <h3>The Crossing Time</h3>
+    <p>
+      <span class="ng-pt">Plataforma editorial internacional · Mobilidade · Poder · Transformação</span>
+      <span class="ng-fr">Plateforme éditoriale internationale · Mobilité · Pouvoir · Transformation</span>
+    </p>
+    <p style="margin-top:1rem;">by Porta-Voz do Imigrante</p>
+  </div>
+
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+
+</body>
+</html>

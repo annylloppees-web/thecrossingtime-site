@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris redesenha o século · The Crossing Time</title>
+<meta name="description" content="Em 2026 e 2027, Paris ativa o CDG Express, a Linha 18, a Linha 15 Sul e a frota MF19. A capital francesa redesenha sua mobilidade para o século XXI. Análise editorial de The Crossing Time.">
+<meta name="author" content="The Crossing Time, by Porta Voz do Imigrante">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-1: #071a3d; --navy-2: #020814;
+    --offwhite: #F5F1E8; --ouro: #B8924A; --ouro-claro: #c7a45a;
+    --texto: #1a1a1a; --texto-suave: #4a4a4a;
+    --linha: rgba(184, 146, 74, 0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--offwhite); color: var(--texto); line-height: 1.7; font-size: 18px; -webkit-font-smoothing: antialiased; }
+
+  [lang-mode="pt"] .ng-fr { display: none !important; }
+  [lang-mode="fr"] .ng-pt { display: none !important; }
+
+  .art-back { position: fixed; top: 1rem; left: 1rem; z-index: 100; background: rgba(7,26,61,.92); backdrop-filter: blur(8px); color: #F4F2ED; border: none; border-radius: 999px; padding: 8px 16px 8px 12px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: .1em; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 12px rgba(0,0,0,.3); transition: all .2s; font-weight: 600; text-transform: uppercase; text-decoration: none; }
+  .art-back svg { width: 14px; height: 14px; stroke: #c7a45a; stroke-width: 2.5; fill: none; }
+  .art-back:hover { background: var(--navy-1); transform: translateX(-2px); }
+
+  .lang-bar { position: fixed; top: 1rem; right: 1rem; z-index: 100; display: flex; gap: 6px; background: rgba(7,26,61,.92); padding: 6px 8px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.3); backdrop-filter: blur(8px); }
+  .lang-btn { background: transparent; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.75); padding: 5px 11px; font-size: 10px; letter-spacing: .1em; font-family: 'Poppins', sans-serif; cursor: pointer; border-radius: 3px; transition: all .2s; font-weight: 500; }
+  .lang-btn:hover { color: #fff; }
+  .lang-btn.active { background: rgba(199,164,90,.2); border-color: var(--ouro); color: var(--ouro-claro); font-weight: 600; }
+
+  .top-bar { background: var(--navy-1); color: var(--offwhite); padding: 14px 0; border-bottom: 2px solid var(--ouro); }
+  .top-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; }
+  .top-bar .marca { font-weight: 700; color: var(--ouro-claro); }
+  .top-bar .pilares { color: rgba(245, 241, 232, 0.7); font-weight: 300; }
+
+  .hero { position: relative; width: 100%; height: 75vh; min-height: 600px; max-height: 800px; background: var(--navy-1); overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; filter: brightness(0.45) contrast(1.05) saturate(0.6); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0.55) 0%, rgba(7,26,61,0.70) 50%, rgba(2,8,20,0.94) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 80px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 14px; font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--ouro-claro); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
+  .hero-tag .bandeira-fr { width: 36px; height: 24px; background: linear-gradient(to right, #0055A4 33%, #fff 33%, #fff 66%, #EF4135 66%); display: inline-block; }
+  .hero-tag .bandeira-ue { width: 36px; height: 24px; background: #003399; position: relative; display: inline-flex; align-items: center; justify-content: center; color: #FFCC00; font-size: 14px; line-height: 1; }
+  .hero-tag .bandeira-ue::after { content: "★ ★"; letter-spacing: -2px; }
+  .hero-tag .linha-dourada { width: 50px; height: 2px; background: var(--ouro); }
+  .hero h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(40px, 6vw, 78px); line-height: 1.05; color: var(--offwhite); max-width: 900px; letter-spacing: -0.02em; }
+  .hero h1 .destaque { color: var(--ouro-claro); display: block; }
+  .hero-subtitle { font-family: 'Lora', serif; font-style: italic; font-weight: 400; font-size: clamp(20px, 2vw, 26px); color: rgba(245, 241, 232, 0.9); margin-top: 28px; max-width: 720px; line-height: 1.4; }
+  .hero-meta { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(199, 164, 90, 0.4); max-width: 720px; font-family: 'Poppins', sans-serif; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245, 241, 232, 0.7); }
+  .hero-meta strong { color: var(--ouro-claro); font-weight: 700; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  article { padding: 80px 0 60px; }
+  .lead { font-family: 'Lora', serif; font-size: 24px; line-height: 1.5; color: var(--texto); margin-bottom: 48px; font-weight: 500; }
+  .lead::first-letter { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 80px; float: left; line-height: 0.85; padding: 8px 12px 0 0; color: var(--ouro); }
+  h2.secao { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; color: var(--navy-1); margin: 64px 0 32px; }
+  .secao-numero { display: block; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ouro); margin-bottom: 12px; font-weight: 600; }
+  article p { margin-bottom: 24px; color: var(--texto); font-family: 'Lora', serif; }
+  article p strong { color: var(--navy-1); font-weight: 700; }
+
+  .quote-block { margin: 56px 0; padding: 40px; background: var(--navy-1); color: var(--offwhite); border-left: 6px solid var(--ouro); position: relative; }
+  .quote-block .quote-text { font-family: 'Lora', serif; font-style: italic; font-size: 26px; line-height: 1.4; color: var(--offwhite); margin-bottom: 16px; }
+  .quote-block .quote-author { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); font-weight: 600; }
+
+  .dados-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 48px 0; }
+  .dado-card { background: #fff; padding: 28px 20px; border-top: 4px solid var(--ouro); box-shadow: 0 2px 12px rgba(7,26,61,.08); border-radius: 4px; }
+  .dado-label { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 12px; }
+  .dado-numero { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(36px, 4vw, 48px); line-height: 1; color: var(--navy-1); margin-bottom: 12px; }
+  .dado-desc { font-family: 'Lora', serif; font-size: 14px; line-height: 1.45; color: var(--texto-suave); }
+
+  .timeline { margin: 48px 0; padding-left: 40px; position: relative; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: var(--linha); }
+  .timeline-item { margin-bottom: 32px; position: relative; }
+  .timeline-item::before { content: ''; position: absolute; left: -48px; top: 6px; width: 14px; height: 14px; background: var(--ouro); border-radius: 50%; box-shadow: 0 0 0 4px var(--offwhite), 0 0 0 5px var(--ouro); }
+  .timeline-data { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .timeline-texto { font-family: 'Lora', serif; font-size: 17px; line-height: 1.55; color: var(--texto); }
+  .timeline-texto strong { color: var(--navy-1); }
+
+  .article-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--linha); text-align: center; }
+  .article-footer .marca { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .article-footer .sub { font-family: 'Lora', serif; font-style: italic; color: var(--texto-suave); margin-bottom: 16px; font-size: 15px; }
+  .article-footer .pilares { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); }
+
+  @media (max-width: 768px) {
+    body { font-size: 17px; }
+    .hero { height: 70vh; min-height: 500px; }
+    .hero-content { padding-bottom: 50px; }
+    article { padding: 50px 0 40px; }
+    .lead { font-size: 20px; }
+    .lead::first-letter { font-size: 64px; }
+    h2.secao { font-size: 26px; }
+    .quote-block { padding: 28px 24px; }
+    .quote-block .quote-text { font-size: 21px; }
+    .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .timeline { padding-left: 24px; }
+    .timeline-item::before { left: -32px; }
+  }
+</style>
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="marca">THE CROSSING TIME</div>
+    <div class="pilares">
+      <span class="ng-pt">Cidades Globais • Infraestrutura • Mobilidade Internacional</span>
+      <span class="ng-fr">Villes Globales • Infrastructure • Mobilité Internationale</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <img src="https://images.unsplash.com/photo-1550681847-30b361a108bd?fm=jpg&q=80&w=2400&auto=format&fit=crop" alt="Estação ferroviária moderna — Paris redesenha mobilidade" class="hero-img" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="bandeira-fr"></span>
+      <span class="ng-pt">Paris • Mobilidade Urbana</span>
+      <span class="ng-fr">Paris • Mobilité Urbaine</span>
+      <span class="linha-dourada"></span>
+    </div>
+    <h1>
+      <span class="ng-pt">Paris redesenha o século.<span class="destaque">A mobilidade como geopolítica.</span></span>
+      <span class="ng-fr">Paris redessine le siècle.<span class="destaque">La mobilité comme géopolitique.</span></span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="ng-pt">Em 2027, o CDG Express, a Linha 15 Sul, a Linha 16 e a Linha 17 entram em serviço. A capital francesa não inaugura apenas trens. Inaugura uma metrópole.</span>
+      <span class="ng-fr">En 2027, le CDG Express, la Ligne 15 Sud, la Ligne 16 et la Ligne 17 entrent en service. La capitale française n'inaugure pas seulement des trains. Elle inaugure une métropole.</span>
+    </p>
+    <div class="hero-meta">
+      <strong><span class="ng-pt">Análise editorial</span><span class="ng-fr">Analyse éditoriale</span></strong> • 
+      <span class="ng-pt">Cidades Globais & Infraestrutura</span><span class="ng-fr">Villes Globales & Infrastructure</span> • 
+      <span class="ng-pt">13 de maio de 2026</span><span class="ng-fr">13 mai 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <p class="lead">
+      <span class="ng-pt">Por trás dos 700 milhões de consumidores, dos €111 bilhões em comércio bilateral anual e das centenas de tratores que cruzaram os Champs-Élysées em janeiro, está em vigor desde 1º de maio de 2026 o maior acordo de livre comércio jamais firmado pela União Europeia. Vinte e cinco anos de negociação. Cinco governos contra. Uma ação judicial pendente em Luxemburgo. Um continente agrícola em mobilização. Não é um tratado. É um teste de identidade europeia.</span>
+      <span class="ng-fr">Derrière les 700 millions de consommateurs, les 111 milliards d'euros en commerce bilatéral annuel et les centaines de tracteurs qui ont traversé les Champs-Élysées en janvier, est en vigueur depuis le 1er mai 2026 le plus grand accord de libre-échange jamais signé par l'Union européenne. Vingt-cinq ans de négociation. Cinq gouvernements contre. Une action en justice pendante à Luxembourg. Un continent agricole en mobilisation. Ce n'est pas un traité. C'est un test d'identité européenne.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">I. O acordo</span><span class="ng-fr">I. L'accord</span></span>
+      <span class="ng-pt">O que entrou em vigor em 1º de maio de 2026</span>
+      <span class="ng-fr">Ce qui est entré en vigueur le 1er mai 2026</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Negociado por 25 anos, o acordo de associação entre a União Europeia e o Mercosul, formado por Argentina, Brasil, Paraguai, Uruguai e Bolívia, foi formalmente assinado em <strong>17 de janeiro de 2026</strong>, em cerimônia realizada no Banco Central do Paraguai. Quatro meses depois, em <strong>1º de maio</strong>, entrou em aplicação provisória, validada por Bruxelas após ratificação por todos os parlamentos nacionais do Mercosul, mesmo sem que o Parlamento Europeu tenha concluído sua aprovação definitiva.</span>
+      <span class="ng-fr">Négocié pendant 25 ans, l'accord d'association entre l'Union européenne et le Mercosur — formé par l'Argentine, le Brésil, le Paraguay, l'Uruguay et la Bolivie — a été formellement signé le <strong>17 janvier 2026</strong>, en cérémonie au Banco Central du Paraguay. Quatre mois plus tard, le <strong>1er mai</strong>, il est entré en application provisoire, validée par Bruxelles après ratification par tous les parlements nationaux du Mercosur, même sans que le Parlement européen ait conclu son approbation définitive.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O acordo cria um espaço de livre comércio que reúne 27 Estados-membros da UE e 5 países sul-americanos, totalizando aproximadamente <strong>700 milhões de consumidores</strong> e cerca de 25% do produto interno bruto global. Em sua versão integral, prevê redução progressiva de tarifas em 91% a 92% das exportações entre os dois blocos ao longo de 15 anos. A Comissão Europeia projeta que o acordo eliminará anualmente <strong>€4 bilhões em taxas alfandegárias pagas por exportadores europeus</strong> e, até 2040, ampliará as exportações da UE em €49 bilhões e as do Mercosul em €9 bilhões. Em troca, o Mercosul ganha acesso facilitado para carne bovina, açúcar, soja, etanol e arroz aos mercados europeus, com cotas tarifárias específicas para os chamados "produtos sensíveis".</span>
+      <span class="ng-fr">L'accord crée un espace de libre-échange qui réunit 27 États membres de l'UE et 5 pays sud-américains, totalisant environ <strong>700 millions de consommateurs</strong> et environ 25 % du produit intérieur brut mondial. Dans sa version intégrale, il prévoit une réduction progressive des tarifs sur 91 % à 92 % des exportations entre les deux blocs sur 15 ans. La Commission européenne projette que l'accord éliminera annuellement <strong>4 milliards d'euros en taxes douanières payées par les exportateurs européens</strong> et, d'ici 2040, élargira les exportations de l'UE de 49 milliards et celles du Mercosur de 9 milliards. En échange, le Mercosur gagne un accès facilité pour la viande bovine, le sucre, le soja, l'éthanol et le riz aux marchés européens, avec des quotas tarifaires spécifiques pour les « produits sensibles ».</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O comércio bilateral entre os dois blocos hoje gira em torno de <strong>€111 bilhões anuais</strong>, segundo dados da Comissão Europeia. A UE é, há mais de duas décadas, o principal investidor estrangeiro no Mercosul, com estoque de €390 bilhões em 2023. A direção econômica do acordo é clara: vinhos, máquinas, veículos, produtos químicos e farmacêuticos europeus em fluxo para o Sul; commodities agrícolas e minerais críticos sul-americanos em fluxo para o Norte. A pergunta não é se o acordo redesenha cadeias produtivas. É como esse redesenho será absorvido socialmente.</span>
+      <span class="ng-fr">Le commerce bilatéral entre les deux blocs tourne aujourd'hui autour de <strong>111 milliards d'euros annuels</strong>, selon les données de la Commission européenne. L'UE est, depuis plus de deux décennies, le principal investisseur étranger dans le Mercosur, avec un stock de 390 milliards d'euros en 2023. La direction économique de l'accord est claire : vins, machines, véhicules, produits chimiques et pharmaceutiques européens en flux vers le Sud ; commodités agricoles et minerais critiques sud-américains en flux vers le Nord. La question n'est pas si l'accord redessine les chaînes productives. C'est comment ce redessin sera absorbé socialement.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"O acordo UE-Mercosul não é apenas um tratado comercial. É a tentativa europeia de provar que ainda existe um sistema multilateral funcional, quando Washington tarifa e Pequim compra mercados."</span>
+        <span class="ng-fr">« L'accord UE-Mercosur n'est pas seulement un traité commercial. C'est la tentative européenne de prouver qu'il existe encore un système multilatéral fonctionnel, quand Washington tarife et Pékin achète des marchés. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">II. A divisão europeia</span><span class="ng-fr">II. La division européenne</span></span>
+      <span class="ng-pt">Cinco contra, vinte e um a favor, um abstido</span>
+      <span class="ng-fr">Cinq contre, vingt-et-un pour, un abstenu</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Em <strong>9 de janeiro de 2026</strong>, o Conselho da União Europeia deu sinal verde ao acordo por maioria qualificada: 21 votos a favor, 5 contra, 1 abstenção. Votaram contra <strong>França, Áustria, Hungria, Irlanda e Polônia</strong>. Bélgica absteve-se. O bloqueio almejado por Paris, que vinha articulando minoria de bloqueio nos meses anteriores ao Conselho de dezembro, fracassou. A Comissão Europeia, presidida por Ursula von der Leyen, calculou que o ônus político de adiar mais uma vez um acordo de 25 anos seria maior do que o ônus de aprová-lo contra a vontade francesa.</span>
+      <span class="ng-fr">Le <strong>9 janvier 2026</strong>, le Conseil de l'Union européenne a donné son feu vert à l'accord par majorité qualifiée : 21 voix pour, 5 contre, 1 abstention. Ont voté contre <strong>France, Autriche, Hongrie, Irlande et Pologne</strong>. La Belgique s'est abstenue. Le blocage visé par Paris, qui articulait une minorité de blocage dans les mois précédant le Conseil de décembre, a échoué. La Commission européenne, présidée par Ursula von der Leyen, a calculé que le coût politique de reporter encore un accord de 25 ans serait plus grand que le coût de l'approuver contre la volonté française.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A oposição francesa tem raízes simultaneamente eleitorais e estruturais. Eleitorais, porque o Reagrupamento Nacional cresce em todas as pesquisas para 2027 capitalizando sobre o ressentimento do campo. Estruturais, porque a França é o maior produtor agrícola da União Europeia, e seus sindicatos rurais, especialmente a FNSEA e a Jeunes Agriculteurs, têm capacidade de mobilização territorial massiva. Em <strong>13 de janeiro de 2026</strong>, 350 tratores cruzaram a capital francesa em protesto, passando pelo Arco do Triunfo e descendo os Champs-Élysées até a Assembleia Nacional. O Ministério do Interior registrou 55 ações simultâneas em 31 departamentos.</span>
+      <span class="ng-fr">L'opposition française a des racines simultanément électorales et structurelles. Électorales, parce que le Rassemblement National croît dans tous les sondages pour 2027 en capitalisant sur le ressentiment des campagnes. Structurelles, parce que la France est le plus grand producteur agricole de l'Union européenne, et ses syndicats ruraux — notamment la FNSEA et les Jeunes Agriculteurs — ont une capacité de mobilisation territoriale massive. Le <strong>13 janvier 2026</strong>, 350 tracteurs ont traversé la capitale française en protestation, passant par l'Arc de Triomphe et descendant les Champs-Élysées jusqu'à l'Assemblée Nationale. Le Ministère de l'Intérieur a enregistré 55 actions simultanées dans 31 départements.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O Parlamento Europeu, sob pressão dos eurodeputados franceses e do bloco oposicionista, aprovou em <strong>21 de janeiro</strong>, por 334 votos a 324, o envio do acordo ao Tribunal de Justiça da União Europeia para parecer jurídico. A pergunta encaminhada ao TJUE é dupla: o acordo pode ser aplicado provisoriamente pela Comissão antes da ratificação plena pelos Estados-membros? E suas disposições restringem a capacidade da UE de definir suas próprias políticas ambientais e de saúde? A decisão pode levar até dois anos. Enquanto isso, o acordo opera de forma provisória, com efeitos práticos imediatos sobre tarifas, cotas e fluxos comerciais.</span>
+      <span class="ng-fr">Le Parlement européen, sous la pression des eurodéputés français et du bloc oppositionniste, a approuvé le <strong>21 janvier</strong>, par 334 voix contre 324, l'envoi de l'accord à la Cour de Justice de l'Union européenne pour avis juridique. La question soumise à la CJUE est double : l'accord peut-il être appliqué provisoirement par la Commission avant la ratification pleine par les États membres ? Et ses dispositions restreignent-elles la capacité de l'UE à définir ses propres politiques environnementales et sanitaires ? La décision peut prendre jusqu'à deux ans. Entre-temps, l'accord opère de manière provisoire, avec des effets pratiques immédiats sur tarifs, quotas et flux commerciaux.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">III. A cronologia</span><span class="ng-fr">III. La chronologie</span></span>
+      <span class="ng-pt">Vinte e cinco anos em dezoito meses decisivos</span>
+      <span class="ng-fr">Vingt-cinq ans en dix-huit mois décisifs</span>
+    </h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-data">1999</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Início das negociações entre Mercosul e União Europeia. O acordo proposto envolve comércio, cooperação e diálogo político.</span>
+          <span class="ng-fr">Début des négociations entre le Mercosur et l'Union européenne. L'accord proposé implique commerce, coopération et dialogue politique.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Jun / 2019</span><span class="ng-fr">Juin / 2019</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Anúncio do acordo "em princípio" durante a cúpula do G20 em Osaka, após 20 anos de negociação. Aprovação final fica suspensa por divergências ambientais e agrícolas.</span>
+          <span class="ng-fr">Annonce de l'accord « en principe » lors du sommet du G20 à Osaka, après 20 ans de négociation. L'approbation finale est suspendue par des divergences environnementales et agricoles.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Dez / 2025</span><span class="ng-fr">Déc / 2025</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Acordo formalizado pelos negociadores em <strong>6 de dezembro</strong>. Cúpula em Foz do Iguaçu reúne Lula, Milei e líderes europeus.</span>
+          <span class="ng-fr">Accord formalisé par les négociateurs le <strong>6 décembre</strong>. Sommet à Foz do Iguaçu réunit Lula, Milei et leaders européens.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Jan / 2026</span><span class="ng-fr">Jan / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Em <strong>9 de janeiro</strong>, Conselho da UE aprova por 21 a 5. Em <strong>13 de janeiro</strong>, 350 tratores protestam em Paris. Em <strong>17 de janeiro</strong>, cerimônia de assinatura no Banco Central do Paraguai. Em <strong>21 de janeiro</strong>, Parlamento Europeu envia acordo ao TJUE.</span>
+          <span class="ng-fr">Le <strong>9 janvier</strong>, le Conseil de l'UE approuve par 21 à 5. Le <strong>13 janvier</strong>, 350 tracteurs protestent à Paris. Le <strong>17 janvier</strong>, cérémonie de signature au Banco Central du Paraguay. Le <strong>21 janvier</strong>, le Parlement européen envoie l'accord à la CJUE.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Fev-Mar / 2026</span><span class="ng-fr">Fév-Mar / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Argentina ratifica em <strong>26 de fevereiro</strong>, Uruguai em 27. Brasil aprova em <strong>4 de março</strong>, com promulgação em <strong>17 de março</strong>. Paraguai ratifica no mesmo dia. Comissão Europeia anuncia aplicação provisória.</span>
+          <span class="ng-fr">L'Argentine ratifie le <strong>26 février</strong>, l'Uruguay le 27. Le Brésil approuve le <strong>4 mars</strong>, avec promulgation le <strong>17 mars</strong>. Le Paraguay ratifie le même jour. La Commission européenne annonce l'application provisoire.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">1º Mai / 2026</span><span class="ng-fr">1er Mai / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Acordo entra em <strong>aplicação provisória</strong>. Maior espaço de livre comércio do mundo em vigor. TJUE analisa pendência judicial.</span>
+          <span class="ng-fr">L'accord entre en <strong>application provisoire</strong>. Plus grand espace de libre-échange du monde en vigueur. La CJUE analyse la pendance judiciaire.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Mai / 2026</span><span class="ng-fr">Mai / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">UE vota suspensão de importações de carne brasileira a partir de setembro de 2026, citando uso de promotores antimicrobianos proibidos no bloco. Primeira fricção sanitária pós-aplicação.</span>
+          <span class="ng-fr">L'UE vote la suspension des importations de viande brésilienne à partir de septembre 2026, citant l'usage de promoteurs antimicrobiens interdits dans le bloc. Première friction sanitaire post-application.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">IV. Os números</span><span class="ng-fr">IV. Les chiffres</span></span>
+      <span class="ng-pt">A escala real do que entrou em vigor</span>
+      <span class="ng-fr">L'échelle réelle de ce qui est entré en vigueur</span>
+    </h2>
+
+    <div class="dados-grid">
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Consumidores</span><span class="ng-fr">Consommateurs</span></div>
+        <div class="dado-numero">700 mi</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Mercado total resultante: 449 milhões na UE somados a 260 milhões no Mercosul. Cerca de 25% do PIB global.</span>
+          <span class="ng-fr">Marché total résultant : 449 millions dans l'UE plus 260 millions dans le Mercosur. Environ 25 % du PIB mondial.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Comércio atual</span><span class="ng-fr">Commerce actuel</span></div>
+        <div class="dado-numero">€111 bi</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Fluxo bilateral anual entre os dois blocos. Projeção de expansão de €49 bi para a UE até 2040.</span>
+          <span class="ng-fr">Flux bilatéral annuel entre les deux blocs. Projection d'expansion de 49 Md€ pour l'UE d'ici 2040.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Tarifas eliminadas</span><span class="ng-fr">Tarifs éliminés</span></div>
+        <div class="dado-numero">€4 bi</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Em taxas alfandegárias anuais que exportadores europeus deixam de pagar para entrar no Mercosul.</span>
+          <span class="ng-fr">En taxes douanières annuelles que les exportateurs européens cessent de payer pour entrer au Mercosur.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Voto no Conselho</span><span class="ng-fr">Vote au Conseil</span></div>
+        <div class="dado-numero">21 a 5</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Maioria qualificada em 9 de janeiro de 2026. Contra: França, Áustria, Hungria, Irlanda, Polônia. Abstenção: Bélgica.</span>
+          <span class="ng-fr">Majorité qualifiée le 9 janvier 2026. Contre : France, Autriche, Hongrie, Irlande, Pologne. Abstention : Belgique.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">V. A tensão</span><span class="ng-fr">V. La tension</span></span>
+      <span class="ng-pt">Por que os agricultores europeus estão nas ruas</span>
+      <span class="ng-fr">Pourquoi les agriculteurs européens sont dans les rues</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A leitura simplista trata o conflito como protecionismo agrícola. A leitura mais precisa identifica quatro camadas sobrepostas. A primeira é assimetria regulatória: agricultores europeus operam sob padrões ambientais, sanitários e trabalhistas substancialmente mais rigorosos do que os exigidos no Mercosul, mas competirão com produtos sul-americanos com tarifas reduzidas. A segunda é desigualdade de escala: a pecuária argentina e brasileira opera em propriedades médias muitas vezes maiores que as francesas, irlandesas ou austríacas, com custos unitários estruturalmente inferiores.</span>
+      <span class="ng-fr">La lecture simpliste traite le conflit comme du protectionnisme agricole. La lecture plus précise identifie quatre couches superposées. La première est l'asymétrie réglementaire : les agriculteurs européens opèrent sous des standards environnementaux, sanitaires et de travail substantiellement plus rigoureux que ceux exigés au Mercosur, mais ils devront concurrencer des produits sud-américains à tarifs réduits. La deuxième est l'inégalité d'échelle : l'élevage argentin et brésilien opère sur des propriétés moyennes bien plus grandes que les françaises, irlandaises ou autrichiennes, avec des coûts unitaires structurellement inférieurs.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A terceira camada é política. O acordo chega no exato momento em que a extrema-direita europeia, especialmente o Reagrupamento Nacional francês e a Alternativa para a Alemanha, capitaliza sobre o sentimento de abandono rural. A quarta é identitária. Para a memória política francesa, alimento é soberania. A frase "pas de pays sans paysans", nenhum país sem camponeses, ouvida nos protestos de janeiro, não é slogan retórico. É declaração de princípio cultural. O Mercosul, nessa leitura, não ameaça apenas o agronegócio: ameaça uma ideia de França.</span>
+      <span class="ng-fr">La troisième couche est politique. L'accord arrive au moment exact où l'extrême-droite européenne, notamment le Rassemblement National français et l'Alternative pour l'Allemagne, capitalise sur le sentiment d'abandon rural. La quatrième est identitaire. Pour la mémoire politique française, l'aliment est souveraineté. La phrase « pas de pays sans paysans », entendue lors des protestations de janvier, n'est pas un slogan rhétorique. C'est une déclaration de principe culturel. Le Mercosur, dans cette lecture, ne menace pas seulement l'agro-industrie : il menace une idée de la France.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A Comissão Europeia respondeu com cláusulas de salvaguarda. Produtos classificados como "sensíveis" - carne bovina, frango, leite em pó, queijos, arroz, milho, açúcar, mel, etanol, biodiesel - têm cotas tarifárias limitadas. Se as importações sul-americanas crescerem mais de 10% em volume ou os preços caírem mais de 10%, a UE pode suspender o tratamento preferencial. Em <strong>maio de 2026</strong>, semanas após a entrada em vigor, o bloco já votou suspensão das importações de carne brasileira a partir de setembro, alegando uso de promotores antimicrobianos banidos na UE. A salvaguarda funciona. Mas não responde à pergunta política central: por quanto tempo a UE consegue conciliar abertura comercial e preservação do tecido rural?</span>
+      <span class="ng-fr">La Commission européenne a répondu par des clauses de sauvegarde. Les produits classés « sensibles » — viande bovine, poulet, lait en poudre, fromages, riz, maïs, sucre, miel, éthanol, biodiesel — ont des quotas tarifaires limités. Si les importations sud-américaines augmentent de plus de 10 % en volume ou les prix chutent de plus de 10 %, l'UE peut suspendre le traitement préférentiel. En <strong>mai 2026</strong>, semaines après l'entrée en vigueur, le bloc a déjà voté la suspension des importations de viande brésilienne à partir de septembre, alléguant l'usage de promoteurs antimicrobiens bannis dans l'UE. La sauvegarde fonctionne. Mais elle ne répond pas à la question politique centrale : combien de temps l'UE peut-elle concilier ouverture commerciale et préservation du tissu rural ?</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"A Europa não decide entre proteção e abertura. Ela decide se consegue defender ambas ao mesmo tempo, em escalas suficientes para sustentar a legitimidade do projeto continental."</span>
+        <span class="ng-fr">« L'Europe ne décide pas entre protection et ouverture. Elle décide si elle peut défendre les deux en même temps, à des échelles suffisantes pour soutenir la légitimité du projet continental. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">VI. O posicionamento</span><span class="ng-fr">VI. Le positionnement</span></span>
+      <span class="ng-pt">Por que isso importa para quem migra, comercia ou observa</span>
+      <span class="ng-fr">Pourquoi cela importe à ceux qui migrent, commercent ou observent</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">O acordo UE-Mercosul é, antes de qualquer outra coisa, uma declaração geopolítica. A Comissão Europeia descreveu o tratado como contraponto explícito ao "predadorismo" comercial atribuído à administração Trump em Washington e à influência crescente de Pequim na América Latina. Em um momento em que os Estados Unidos impõem tarifas a parceiros tradicionais e a China expande sua presença econômica em países do Mercosul através de investimentos em infraestrutura e cadeias de minerais críticos, Bruxelas opta por amarrar institucionalmente sua relação com a América do Sul antes que o espaço seja ocupado por outros. A leitura geoeconômica é tão importante quanto a comercial.</span>
+      <span class="ng-fr">L'accord UE-Mercosur est, avant toute autre chose, une déclaration géopolitique. La Commission européenne a décrit le traité comme un contrepoint explicite au « prédatorisme » commercial attribué à l'administration Trump à Washington et à l'influence croissante de Pékin en Amérique latine. À un moment où les États-Unis imposent des tarifs à des partenaires traditionnels et la Chine étend sa présence économique dans des pays du Mercosur via des investissements en infrastructure et chaînes de minerais critiques, Bruxelles opte pour ancrer institutionnellement sa relation avec l'Amérique du Sud avant que l'espace soit occupé par d'autres. La lecture géoéconomique est aussi importante que la lecture commerciale.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Para o leitor que esta plataforma reconhece, há ramificações concretas. Brasileiros que operam negócios na Europa terão tarifas reduzidas em diversos setores, mas precisarão se adaptar a padrões regulatórios europeus mais rigorosos, especialmente em produtos sensíveis. Argentinos com vínculos comerciais bilaterais ganham acesso facilitado. Profissionais europeus em trânsito pelo Mercosul podem ver os custos de exportação de serviços e equipamentos serem reduzidos. Comunidades migrantes do Sul Global vivendo na Europa observam um continente cujas decisões econômicas afetam diretamente seus países de origem, embora elas raramente sejam consultadas sobre essas decisões.</span>
+      <span class="ng-fr">Pour le lecteur que cette plateforme reconnaît, il y a des ramifications concrètes. Les Brésiliens qui opèrent des affaires en Europe auront des tarifs réduits dans divers secteurs, mais devront s'adapter à des standards réglementaires européens plus rigoureux, notamment sur les produits sensibles. Les Argentins avec des liens commerciaux bilatéraux gagnent un accès facilité. Les professionnels européens en transit par le Mercosur peuvent voir leurs coûts d'exportation de services et équipements réduits. Les communautés migrantes du Sud Global vivant en Europe observent un continent dont les décisions économiques affectent directement leurs pays d'origine, bien qu'elles soient rarement consultées sur ces décisions.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Há também a leitura que importa para o público que acompanha mobilidade internacional. Acordos comerciais dessa escala costumam preceder, em médio prazo, reorganizações migratórias laborais. Empresas europeias que ampliam exportações tendem a buscar profissionais qualificados para gerenciar relacionamentos bilaterais. Investimentos transatlânticos se intensificam. Demanda por intercâmbio educacional, principalmente em áreas técnicas, agronegócio, engenharia e tecnologia, tende a crescer. O acordo cria uma arquitetura nova, e dentro dela aparecem oportunidades que hoje sequer estão mapeadas.</span>
+      <span class="ng-fr">Il y a aussi la lecture qui importe pour le public qui suit la mobilité internationale. Des accords commerciaux de cette échelle précèdent généralement, à moyen terme, des réorganisations migratoires de travail. Les entreprises européennes qui élargissent leurs exportations tendent à chercher des professionnels qualifiés pour gérer les relations bilatérales. Les investissements transatlantiques s'intensifient. La demande d'échange éducatif, notamment dans les domaines techniques — agro-industrie, ingénierie et technologie — tend à croître. L'accord crée une architecture nouvelle, et à l'intérieur d'elle apparaissent des opportunités qui ne sont aujourd'hui même pas cartographiées.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Vinte e cinco anos depois, o acordo está em vigor. A disputa, porém, mal começou. A decisão do Tribunal de Justiça da UE, prevista para até 2028, definirá se o tratado sobreviverá em sua forma atual ou se será reescrito para acomodar as objeções ambientais, sanitárias e setoriais que o cercam. Enquanto o TJUE delibera, a economia real opera. Tarifas caem, cotas se abrem, navios atravessam o Atlântico, tratores bloqueiam autoestradas francesas. O maior acordo comercial do mundo entrou em vigor. Mas, como em toda travessia importante, o destino final ainda depende de quem segura o leme nos próximos meses.</span>
+      <span class="ng-fr">Vingt-cinq ans plus tard, l'accord est en vigueur. La dispute, cependant, ne fait que commencer. La décision de la Cour de Justice de l'UE, prévue jusqu'en 2028, définira si le traité survivra sous sa forme actuelle ou s'il sera réécrit pour accommoder les objections environnementales, sanitaires et sectorielles qui l'entourent. Pendant que la CJUE délibère, l'économie réelle opère. Les tarifs baissent, les quotas s'ouvrent, les navires traversent l'Atlantique, les tracteurs bloquent les autoroutes françaises. Le plus grand accord commercial du monde est entré en vigueur. Mais, comme dans toute traversée importante, la destination finale dépend encore de qui tient la barre dans les prochains mois.</span>
+    </p>
+
+    <div class="article-footer">
+      <div class="marca">THE CROSSING TIME</div>
+      <div class="sub">
+        <span class="ng-pt">Plataforma editorial internacional</span>
+        <span class="ng-fr">Plateforme éditoriale internationale</span>
+      </div>
+      <div class="pilares">
+        <span class="ng-pt">MOBILIDADE • PODER • TRANSFORMAÇÃO</span>
+        <span class="ng-fr">MOBILITÉ • POUVOIR • TRANSFORMATION</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+PORQUE E QUE OS BOTOES "DESAPARECERAM"
+=======================================
+
+Quase de certeza NAO e o codigo. E a CACHE.
+
+O TCT e uma aplicacao instalavel: tem um service worker (sw.js) que
+guarda o index.html no telemovel/computador para o site funcionar
+sem rede. Depois de publicar uma versao nova, o navegador CONTINUA
+A MOSTRAR A COPIA GUARDADA — as vezes durante dias.
+
+Se lhe faltam botoes na pagina inicial E dentro das materias ao
+mesmo tempo, e esse o sinal: esta a ver um index.html antigo, onde
+o leitor de audio nem sequer existia.
+
+COMO SABER QUAL A VERSAO QUE ESTA A VER
+---------------------------------------
+A partir desta entrega, o rodape do site mostra, em letra pequena
+e discreta:
+
+        VERSAO P14-V6 · 12AGO2026
+
+Va ao fundo da pagina inicial e leia.
+- Se disser p14-v6 -> esta a ver a versao nova. Se ainda assim
+  faltarem botoes, o problema e meu e mande-me foto.
+- Se NAO houver linha nenhuma -> esta a ver uma versao antiga em
+  cache. Faca o que esta abaixo.
+
+COMO FORCAR A VERSAO NOVA
+-------------------------
+COMPUTADOR (Chrome/Edge): Ctrl + Shift + R
+  Se nao chegar: F12 -> separador Application -> Storage ->
+  "Clear site data" -> voltar a carregar
+
+TELEMOVEL: fechar TODOS os separadores do site, e depois
+  Definicoes do Chrome -> Privacidade -> Limpar dados de navegacao
+  -> Imagens e ficheiros em cache
+  Se tem o app instalado no ecra inicial, feche-o de todo e reabra.
+
+O QUE ESTA VERSAO FAZ SOZINHA
+-----------------------------
+Ao detectar que a versao mudou, o index limpa as caches antigas e
+manda o service worker actualizar-se. Ou seja: da PROXIMA vez que
+publicarmos, isto nao volta a acontecer. Desta vez ainda tem de
+limpar a mao, porque o problema esta na versao que ja la esta.
+
+ONDE COPIAR
+-----------
+index.html        -> RAIZ do site
+tct-hero.mp4      -> RAIZ do site, ao lado do index.html
+materias/*.html   -> pasta materias/   (3 ficheiros)
+og/materias/*.jpg -> pasta og/materias/ (3 ficheiros)
+
+Este ficheiro (PRIMEIRO-LEIA-ISTO.txt) e para si. Nao o copie
+para o Netlify.

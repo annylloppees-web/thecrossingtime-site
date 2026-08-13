@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>França endurece combate às raves ilegais · The Crossing Time</title>
+<meta name="description" content="França anuncia medidas mais rígidas contra free parties: até 2 anos de prisão e €30.000 de multa. Análise editorial TCT sobre o conflito entre liberdade cultural e segurança pública.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F5F1E8;--bg-soft:#EDE7D9;
+  --primary:#0A1628;--gold:#B8924A;--gold-light:#D4B57E;
+  --neon-pink:#E83E8C;--neon-cyan:#2EC8C8;
+  --text:#1a1a1a;--muted:#666;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--bg);color:var(--primary);font-family:var(--sans);
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+
+[lang-mode="pt"] .ng-fr{display:none !important;}
+[lang-mode="fr"] .ng-pt{display:none !important;}
+
+.lang-bar{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:6px;background:rgba(14,26,43,.92);padding:6px 8px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.2);backdrop-filter:blur(8px);}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:5px 11px;font-size:10px;letter-spacing:.1em;font-family:sans-serif;cursor:pointer;border-radius:3px;transition:all .2s;font-weight:500;}
+.lang-btn:hover{color:#fff;}
+.lang-btn.active{background:rgba(198,161,91,.2);border-color:#C6A15B;color:#C6A15B;font-weight:600;}
+
+.art-back{position:fixed;top:1rem;left:1rem;z-index:100;background:rgba(14,26,43,.9);backdrop-filter:blur(8px);color:#F4F2ED;border:none;border-radius:999px;padding:8px 16px 8px 12px;font-family:sans-serif;font-size:11px;letter-spacing:.1em;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 12px rgba(0,0,0,.2);transition:all .2s;font-weight:600;text-transform:uppercase;text-decoration:none;}
+.art-back svg{width:14px;height:14px;stroke:#C6A15B;stroke-width:2.5;fill:none;}
+.art-back:hover{background:#0E1A2B;transform:translateX(-2px);}
+
+/* Neon bar */
+.neon-bar{height:6px;width:100%;background:linear-gradient(90deg,var(--neon-pink) 0%,var(--neon-cyan) 50%,var(--neon-pink) 100%);}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(135deg,#0A1628 0%,#1f0a2e 50%,#0A1628 100%);color:#F5F1E8;padding:5rem 1.5rem 4rem;overflow:hidden;}
+.hero::before{content:"";position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(232,62,140,.15) 0%,transparent 60%);pointer-events:none;}
+.hero::after{content:"";position:absolute;bottom:-150px;left:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(46,200,200,.12) 0%,transparent 60%);pointer-events:none;}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--neon-pink);font-weight:600;margin-bottom:1.75rem;padding:.5rem 1rem;background:rgba(232,62,140,.1);border:1px solid rgba(232,62,140,.3);border-radius:999px;}
+.hero-eyebrow::before{content:"";width:8px;height:8px;background:var(--neon-pink);border-radius:50%;box-shadow:0 0 8px rgba(232,62,140,.7);animation:glow 2.5s ease-in-out 5;}
+@keyframes glow{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.1;margin-bottom:1.5rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero h1 .neon-word{color:var(--neon-pink);font-style:italic;}
+.lead{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.6;color:rgba(245,241,232,.85);font-style:italic;font-family:var(--serif);max-width:780px;margin-bottom:2rem;}
+.byline{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(184,146,74,.2);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,241,232,.6);font-weight:500;}
+.byline span{display:flex;align-items:center;gap:.4rem;}
+.byline span::before{content:"";width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block;}
+
+/* ARTICLE */
+.article{max-width:760px;margin:0 auto;padding:4rem 1.5rem 5rem;}
+.article h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;line-height:1.2;margin:3rem 0 1.25rem;color:var(--primary);}
+.article h2 em{color:var(--gold);font-style:italic;}
+.article p{font-family:var(--serif);font-size:1.15rem;line-height:1.75;color:#333;margin-bottom:1.4rem;}
+.article p.dropcap::first-letter{font-size:4.5rem;float:left;line-height:.85;padding-right:.5rem;font-weight:500;color:var(--gold);font-family:var(--serif);}
+
+.tct-sep{display:flex;align-items:center;justify-content:center;margin:3rem 0;gap:1rem;}
+.tct-sep-line{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(184,146,74,.4),transparent);max-width:120px;}
+.tct-sep-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);}
+
+.svg-cover{margin:2rem 0;border-radius:6px;overflow:hidden;box-shadow:0 6px 24px rgba(10,22,40,.15);}
+.svg-cover img{display:block;width:100%;height:auto;}
+.photo-caption{font-size:.85rem;color:var(--muted);font-style:italic;text-align:center;margin-top:.75rem;padding:0 1rem;font-family:var(--sans);letter-spacing:.02em;}
+.photo-caption strong{display:block;color:var(--primary);font-style:normal;font-weight:600;font-family:var(--sans);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.25rem;}
+
+.callout{margin:2.5rem 0;padding:1.75rem 2rem;background:#fff;border-left:3px solid var(--neon-pink);border-radius:4px;box-shadow:0 4px 16px rgba(10,22,40,.06);}
+.callout-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--neon-pink);font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;}
+.callout-label::before{content:"";width:6px;height:6px;background:var(--neon-pink);border-radius:50%;}
+.callout-text{font-family:var(--serif);font-size:1.1rem;line-height:1.65;color:var(--primary);font-style:italic;}
+
+.big-stats{margin:2.5rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.big-stat{padding:2rem 1.5rem;background:linear-gradient(135deg,#0A1628 0%,#1f0a2e 100%);color:#F5F1E8;border-radius:6px;text-align:center;position:relative;overflow:hidden;}
+.big-stat-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.75rem;}
+.big-stat-value{font-family:var(--serif);font-size:clamp(2.5rem,6vw,3.5rem);font-weight:300;line-height:1;color:#fff;margin-bottom:.5rem;}
+.big-stat-value em{color:var(--neon-pink);font-style:italic;}
+.big-stat-desc{font-family:var(--serif);font-size:.92rem;font-style:italic;color:rgba(245,241,232,.75);line-height:1.4;}
+
+.tct-list{margin:1.5rem 0;padding-left:0;list-style:none;}
+.tct-list li{font-family:var(--serif);font-size:1.1rem;line-height:1.6;color:#333;margin-bottom:.85rem;padding-left:1.75rem;position:relative;}
+.tct-list li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:1px;background:var(--gold);}
+
+.debate-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0;}
+.debate-card{background:#fff;padding:1.75rem 1.5rem;border-radius:6px;box-shadow:0 2px 10px rgba(10,22,40,.06);}
+.debate-card.pro{border-top:3px solid var(--neon-cyan);}
+.debate-card.contra{border-top:3px solid var(--neon-pink);}
+.debate-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;margin-bottom:1rem;font-family:var(--sans);}
+.debate-card.pro .debate-label{color:var(--neon-cyan);}
+.debate-card.contra .debate-label{color:var(--neon-pink);}
+.debate-text{font-family:var(--serif);font-size:1rem;line-height:1.55;color:#333;}
+@media (max-width:640px){.debate-grid{grid-template-columns:1fr;}}
+
+.pull-quote{margin:3rem 0;padding:2rem 1.5rem;text-align:center;border-top:1px solid rgba(184,146,74,.2);border-bottom:1px solid rgba(184,146,74,.2);}
+.pull-quote-text{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--primary);}
+.pull-quote-text em{color:var(--gold);}
+
+.article-meta{margin-top:4rem;padding:2rem 0;border-top:1px solid rgba(184,146,74,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-family:var(--sans);font-weight:500;}
+
+@media (max-width:640px){
+  .hero{padding:3.5rem 1rem 3rem;}
+  .article{padding:2.5rem 1rem 3rem;}
+}
+</style>
+
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="neon-bar"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="ng-pt">Geopolítica · Sociedade · Segurança pública</span><span class="ng-fr">Géopolitique · Société · Sécurité publique</span>
+    </div>
+    <h1>
+      <span class="ng-pt">França endurece <span class="neon-word">combate</span> às <em>raves ilegais</em></span>
+      <span class="ng-fr">La France durcit <span class="neon-word">la lutte</span> contre les <em>raves illégales</em></span>
+    </h1>
+    <p class="lead">
+      <span class="ng-pt">Governo amplia punições após megaeventos clandestinos reunirem milhares de pessoas. A nova lei prevê até dois anos de prisão e multas que ultrapassam €30.000 — reacendendo o debate europeu entre liberdade cultural e ordem pública.</span>
+      <span class="ng-fr">Le gouvernement étend les sanctions après que des méga-événements clandestins ont réuni des milliers de personnes. La nouvelle loi prévoit jusqu'à deux ans de prison et des amendes dépassant 30 000 € — ravivant le débat européen entre liberté culturelle et ordre public.</span>
+    </p>
+    <div class="byline">
+      <span><span class="ng-pt">Edição editorial · The Crossing Time</span><span class="ng-fr">Édition éditoriale · The Crossing Time</span></span>
+      <span><span class="ng-pt">12 Maio 2026</span><span class="ng-fr">12 Mai 2026</span></span>
+      <span><span class="ng-pt">Tempo de leitura: 7 minutos</span><span class="ng-fr">Temps de lecture : 7 minutes</span></span>
+    </div>
+  </div>
+</section>
+
+<article class="article">
+  
+  <p class="dropcap">
+    <span class="ng-pt">A França iniciou uma nova ofensiva contra as chamadas <em>free parties</em> — festas clandestinas conhecidas popularmente como raves ilegais — após uma série de eventos não autorizados mobilizarem milhares de participantes em diferentes regiões do país. O governo francês anunciou medidas mais rígidas que incluem multas elevadas, apreensão de equipamentos e penas de prisão para organizadores.</span>
+    <span class="ng-fr">La France a lancé une nouvelle offensive contre les <em>free parties</em> — fêtes clandestines populairement connues sous le nom de raves illégales — après une série d'événements non autorisés ayant mobilisé des milliers de participants dans différentes régions du pays. Le gouvernement français a annoncé des mesures plus strictes incluant des amendes élevées, la saisie d'équipements et des peines de prison pour les organisateurs.</span>
+  </p>
+  
+  <p>
+    <span class="ng-pt">A decisão ocorre em meio ao crescimento de grandes encontros clandestinos realizados em áreas rurais, terrenos militares abandonados e espaços isolados, muitas vezes sem autorização das autoridades locais e sem estrutura de segurança adequada.</span>
+    <span class="ng-fr">La décision intervient dans un contexte de croissance des grands rassemblements clandestins organisés dans des zones rurales, terrains militaires abandonnés et espaces isolés, souvent sans autorisation des autorités locales et sans structure de sécurité adéquate.</span>
+  </p>
+
+  <h2><span class="ng-pt">O caso <em>Teknival</em></span><span class="ng-fr">Le cas <em>Teknival</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">O caso que acelerou o debate político foi o Teknival realizado na região de Cher, no centro da França, onde dezenas de milhares de pessoas participaram de uma rave instalada em um antigo campo militar. O evento mobilizou centenas de agentes da polícia e serviços de emergência, além de gerar preocupação devido à presença de munições não detonadas no local.</span>
+    <span class="ng-fr">Le cas qui a accéléré le débat politique fut le Teknival organisé dans la région du Cher, au centre de la France, où des dizaines de milliers de personnes ont participé à une rave installée sur un ancien camp militaire. L'événement a mobilisé des centaines d'agents de police et services d'urgence, et a généré de l'inquiétude en raison de la présence de munitions non explosées sur place.</span>
+  </p>
+
+  <!-- FOTO 1 — MULTIDÃO EM ARLES, FRANÇA -->
+  <div class="svg-cover">
+    <img src="https://images.unsplash.com/photo-1579125305607-15279d30d370?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="Multidão silhuetada em festival nocturno" loading="lazy">
+    <p class="photo-caption">
+      <strong><span class="ng-pt">A escala</span><span class="ng-fr">L'échelle</span></strong>
+      <span class="ng-pt">Multidão silhuetada num festival nocturno em Arles, França — imagem ilustrativa do tipo de aglomeração que caracteriza os grandes Teknivals. Foto: Fred Moon · Unsplash.</span>
+      <span class="ng-fr">Foule silhouettée lors d'un festival nocturne à Arles, France — image illustrative du type de rassemblement qui caractérise les grands Teknivals. Photo : Fred Moon · Unsplash.</span>
+    </p>
+  </div>
+
+  <p>
+    <span class="ng-pt">Segundo o Ministério do Interior francês, o endurecimento da legislação faz parte de um plano nacional de combate a eventos ilegais considerados de risco para a ordem pública, segurança sanitária e preservação ambiental.</span>
+    <span class="ng-fr">Selon le Ministère de l'Intérieur français, le durcissement de la législation fait partie d'un plan national de lutte contre les événements illégaux considérés à risque pour l'ordre public, la sécurité sanitaire et la préservation environnementale.</span>
+  </p>
+
+  <h2><span class="ng-pt">As <em>novas penalidades</em></span><span class="ng-fr">Les <em>nouvelles peines</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">O ministro do Interior, <strong>Laurent Nuñez</strong>, declarou que a nova proposta legislativa transformará a organização de raves ilegais em crime sujeito a até dois anos de prisão e multas que podem ultrapassar 30 mil euros.</span>
+    <span class="ng-fr">Le ministre de l'Intérieur, <strong>Laurent Nuñez</strong>, a déclaré que la nouvelle proposition législative transformera l'organisation de raves illégales en crime passible de jusqu'à deux ans de prison et d'amendes pouvant dépasser 30 000 euros.</span>
+  </p>
+
+  <div class="big-stats">
+    <div class="big-stat">
+      <div class="big-stat-label"><span class="ng-pt">Pena máxima</span><span class="ng-fr">Peine maximale</span></div>
+      <div class="big-stat-value"><em>2</em></div>
+      <div class="big-stat-desc"><span class="ng-pt">anos de prisão para organizadores</span><span class="ng-fr">ans de prison pour organisateurs</span></div>
+    </div>
+    <div class="big-stat">
+      <div class="big-stat-label"><span class="ng-pt">Multa</span><span class="ng-fr">Amende</span></div>
+      <div class="big-stat-value"><em>€30K</em></div>
+      <div class="big-stat-desc"><span class="ng-pt">valor mínimo previsto</span><span class="ng-fr">montant minimum prévu</span></div>
+    </div>
+  </div>
+  
+  <p>
+    <span class="ng-pt">Além da responsabilização criminal dos organizadores, o governo também pretende ampliar os poderes das autoridades para confiscar equipamentos de som, bloquear acessos e dispersar eventos antes mesmo do início.</span>
+    <span class="ng-fr">Au-delà de la responsabilité criminelle des organisateurs, le gouvernement entend également élargir les pouvoirs des autorités pour confisquer les équipements de son, bloquer les accès et disperser les événements avant même leur début.</span>
+  </p>
+
+  <h2><span class="ng-pt">Entre <em>liberdade cultural</em> e segurança pública</span><span class="ng-fr">Entre <em>liberté culturelle</em> et sécurité publique</span></h2>
+  
+  <p>
+    <span class="ng-pt">A decisão reacendeu um antigo debate na França sobre liberdade cultural, juventude e ocupação de espaços públicos.</span>
+    <span class="ng-fr">La décision a ravivé un ancien débat en France sur la liberté culturelle, la jeunesse et l'occupation des espaces publics.</span>
+  </p>
+
+  <div class="debate-grid">
+    <div class="debate-card pro">
+      <div class="debate-label"><span class="ng-pt">A favor das free parties</span><span class="ng-fr">Pour les free parties</span></div>
+      <p class="debate-text">
+        <span class="ng-pt">Defensores afirmam que o governo está criminalizando manifestações culturais alternativas e ignorando a falta de espaços acessíveis para eventos independentes. Argumentam que as free parties surgiram como resposta ao alto custo dos festivais comerciais.</span>
+        <span class="ng-fr">Les défenseurs affirment que le gouvernement criminalise les manifestations culturelles alternatives et ignore le manque d'espaces accessibles pour des événements indépendants. Ils soutiennent que les free parties ont émergé comme réponse au coût élevé des festivals commerciaux.</span>
+      </p>
+    </div>
+    <div class="debate-card contra">
+      <div class="debate-label"><span class="ng-pt">Pelo controle</span><span class="ng-fr">Pour le contrôle</span></div>
+      <p class="debate-text">
+        <span class="ng-pt">Autoridades locais destacam os impactos ambientais, o consumo excessivo de drogas, acidentes e dificuldades de controle durante esses encontros, especialmente quando realizados em locais isolados sem infraestrutura mínima.</span>
+        <span class="ng-fr">Les autorités locales soulignent les impacts environnementaux, la consommation excessive de drogues, les accidents et les difficultés de contrôle lors de ces rassemblements, notamment lorsqu'ils sont organisés dans des lieux isolés sans infrastructure minimale.</span>
+      </p>
+    </div>
+  </div>
+
+  <p>
+    <span class="ng-pt">Especialistas observam que o tema vai além da segurança pública e revela uma tensão crescente entre políticas de controle estatal e movimentos culturais alternativos em diversos países europeus.</span>
+    <span class="ng-fr">Les experts observent que le sujet va au-delà de la sécurité publique et révèle une tension croissante entre les politiques de contrôle étatique et les mouvements culturels alternatifs dans plusieurs pays européens.</span>
+  </p>
+
+  <!-- FOTO 2 — CONCERTO MULTIDÃO -->
+  <div class="svg-cover">
+    <img src="https://images.unsplash.com/photo-1549451371-64aa98a6f660?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="Multidão num festival com mãos no ar" loading="lazy">
+    <p class="photo-caption">
+      <strong><span class="ng-pt">A tensão cultural</span><span class="ng-fr">La tension culturelle</span></strong>
+      <span class="ng-pt">Multidão num festival de música — imagem ilustrativa do tipo de evento cultural em centro do debate entre liberdade artística e regulação. Foto: Lee Blanchflower · Unsplash.</span>
+      <span class="ng-fr">Foule lors d'un festival de musique — image illustrative du type d'événement culturel au centre du débat entre liberté artistique et régulation. Photo : Lee Blanchflower · Unsplash.</span>
+    </p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label"><span class="ng-pt">O dilema editorial</span><span class="ng-fr">Le dilemme éditorial</span></div>
+    <p class="callout-text">
+      <span class="ng-pt">A questão não é técnica nem legal: é cultural. Quando o Estado endurece contra eventos não autorizados, está a definir simultaneamente o que conta como "cultura legítima" — e o que fica fora desse perímetro.</span>
+      <span class="ng-fr">La question n'est ni technique ni légale : elle est culturelle. Quand l'État durcit contre les événements non autorisés, il définit simultanément ce qui compte comme "culture légitime" — et ce qui reste en dehors de ce périmètre.</span>
+    </p>
+  </div>
+
+  <h2><span class="ng-pt">Europa reforça <em>vigilância</em></span><span class="ng-fr">L'Europe renforce <em>la vigilance</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">A França não é o único país europeu a aumentar a fiscalização sobre grandes eventos ilegais. Nos últimos anos, governos de diferentes regiões da Europa ampliaram operações contra festas clandestinas devido a preocupações ligadas à segurança, saúde pública e ocupação irregular de territórios.</span>
+    <span class="ng-fr">La France n'est pas le seul pays européen à intensifier la surveillance des grands événements illégaux. Ces dernières années, des gouvernements de différentes régions d'Europe ont élargi leurs opérations contre les fêtes clandestines en raison de préoccupations liées à la sécurité, la santé publique et l'occupation irrégulière des territoires.</span>
+  </p>
+  
+  <ul class="tct-list">
+    <li><span class="ng-pt">Crescimento de eventos organizados via redes sociais e aplicativos criptografados</span><span class="ng-fr">Croissance d'événements organisés via réseaux sociaux et applications cryptées</span></li>
+    <li><span class="ng-pt">Pressão sobre legislações nacionais para harmonização europeia</span><span class="ng-fr">Pression sur les législations nationales pour une harmonisation européenne</span></li>
+    <li><span class="ng-pt">Debate entre soberania cultural local e padrões UE de segurança</span><span class="ng-fr">Débat entre souveraineté culturelle locale et standards UE de sécurité</span></li>
+    <li><span class="ng-pt">Tensão entre regulação estatal e movimentos culturais alternativos</span><span class="ng-fr">Tension entre régulation étatique et mouvements culturels alternatifs</span></li>
+  </ul>
+  
+  <p>
+    <span class="ng-pt">Analistas apontam que o endurecimento francês pode influenciar novas regulamentações em outros países da União Europeia, principalmente diante do crescimento de eventos organizados através de redes sociais e aplicativos criptografados.</span>
+    <span class="ng-fr">Les analystes soulignent que le durcissement français peut influencer de nouvelles réglementations dans d'autres pays de l'Union Européenne, notamment face à la croissance d'événements organisés via les réseaux sociaux et applications cryptées.</span>
+  </p>
+
+  <div class="pull-quote">
+    <p class="pull-quote-text">
+      <span class="ng-pt">"Onde acaba a <em>festa</em>, começa a fronteira entre liberdade individual e responsabilidade coletiva."</span>
+      <span class="ng-fr">"Là où finit <em>la fête</em>, commence la frontière entre liberté individuelle et responsabilité collective."</span>
+    </p>
+  </div>
+
+  <div class="tct-sep">
+    <div class="tct-sep-line"></div>
+    <div class="tct-sep-diamond"></div>
+    <div class="tct-sep-line"></div>
+  </div>
+
+  <h2><span class="ng-pt">Conclusão</span><span class="ng-fr">Conclusion</span></h2>
+  
+  <p>
+    <span class="ng-pt">Enquanto o Senado francês analisa o novo projeto de lei, o debate segue dividindo opiniões entre autoridades, movimentos culturais e defensores das liberdades individuais.</span>
+    <span class="ng-fr">Alors que le Sénat français analyse le nouveau projet de loi, le débat continue de diviser les opinions entre autorités, mouvements culturels et défenseurs des libertés individuelles.</span>
+  </p>
+  
+  <p>
+    <span class="ng-pt">O caso francês não é apenas sobre raves: é sobre como as democracias europeias respondem ao crescimento de uma cultura paralela que rejeita formatos comerciais. A resposta dirá muito sobre o equilíbrio futuro entre Estado, juventude e espaços públicos no continente.</span>
+    <span class="ng-fr">Le cas français ne concerne pas seulement les raves : il s'agit de la façon dont les démocraties européennes répondent à la croissance d'une culture parallèle qui rejette les formats commerciaux. La réponse en dira long sur l'équilibre futur entre État, jeunesse et espaces publics sur le continent.</span>
+  </p>
+
+  <div class="article-meta">
+    <span><span class="ng-pt">Geopolítica &amp; Sociedade</span><span class="ng-fr">Géopolitique &amp; Société</span></span>
+    <span><span class="ng-pt">Cultura &amp; Segurança · Maio 2026</span><span class="ng-fr">Culture &amp; Sécurité · Mai 2026</span></span>
+  </div>
+
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>

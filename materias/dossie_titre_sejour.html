@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Titre de séjour — o dossiê completo | The Crossing Time</title>
+<meta name="description" content="Quando pedir, onde pedir, o que muda em 2026 e como não ficar sem direitos durante a instrução. Dossiê bilingue PT/FR com fontes oficiais .gouv.fr.">
+<meta property="og:title" content="Titre de séjour — o dossiê completo | The Crossing Time">
+<meta property="og:description" content="Prazos, ANEF, récépissé, exame cívico e níveis de francês. Dossiê prático bilingue PT/FR, com fontes oficiais .gouv.fr.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Crossing Time">
+<meta property="og:image" content="../og/dossie_titre_sejour.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1A2B;--gold:#C6A15B;--off:#F4F2ED;--ink:#111111;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--off);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
+
+/* ── bilingue ── */
+.ng-fr{display:none!important;}
+body[data-lang="fr"] .ng-pt{display:none!important;}
+body[data-lang="fr"] .ng-fr{display:revert!important;}
+
+/* ── topbar ── */
+.tct-topbar{position:fixed;top:0;left:0;right:0;height:54px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 1.1rem;z-index:9600;box-shadow:0 1px 12px rgba(14,26,43,.25);}
+.tct-back{background:none;border:0;color:var(--off);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:.5rem;padding:.5rem .2rem;}
+.tct-back:hover{color:var(--gold);}
+.tct-brand{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1rem;letter-spacing:.04em;}
+.lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.08);border-radius:999px;padding:3px;}
+.lang-bar button{background:none;border:0;color:rgba(244,242,237,.6);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;padding:.35rem .7rem;border-radius:999px;cursor:pointer;}
+.lang-bar button.on{background:var(--gold);color:var(--navy);font-weight:600;}
+
+/* ── hero ── */
+.hero{background:linear-gradient(180deg,#0E1A2B 0%,#1a2e4a 100%);color:var(--off);padding:7rem 1.5rem 3.5rem;text-align:center;}
+.hero .kicker{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.4rem;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;max-width:900px;margin:0 auto 1.3rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero .sub{max-width:680px;margin:0 auto 1.8rem;font-size:1.02rem;line-height:1.7;color:rgba(244,242,237,.82);font-style:italic;}
+.hero .meta{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(198,161,91,.85);}
+
+/* ── layout ── */
+.wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
+.sec{padding:3rem 0 0;}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.2;color:var(--navy);margin-bottom:.4rem;}
+h2 .num{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:.6rem;font-weight:600;}
+h3{font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);font-weight:600;margin:1.6rem 0 .5rem;}
+p{margin:.9rem 0;font-size:1.02rem;color:#2a2a2a;}
+a{color:var(--navy);}
+.lede{font-size:1.12rem;color:#333;font-style:italic;border-left:2px solid var(--gold);padding-left:1.1rem;}
+.rule{height:1px;background:rgba(14,26,43,.12);margin:2.6rem 0 0;}
+
+/* ── índice ── */
+.toc{background:#fff;border:1px solid rgba(14,26,43,.09);border-top:3px solid var(--gold);padding:1.6rem 1.6rem 1.3rem;margin-top:2.5rem;}
+.toc .lbl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.toc ol{margin:.9rem 0 0 1.1rem;}
+.toc li{font-family:'Jost',sans-serif;font-size:.92rem;margin:.42rem 0;line-height:1.5;}
+.toc a{text-decoration:none;border-bottom:1px solid rgba(198,161,91,.5);}
+.toc a:hover{color:var(--gold);}
+
+/* ── cartões ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.4rem 0 .4rem;}
+.tcard{background:#fff;border:1px solid rgba(14,26,43,.09);border-left:3px solid var(--gold);padding:1.2rem 1.2rem 1.1rem;}
+.tcard .t{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.tcard .n{font-family:'Cormorant Garamond',serif;font-size:1.28rem;color:var(--navy);margin:.35rem 0 .45rem;line-height:1.2;}
+.tcard p{font-size:.9rem;margin:0;color:#555;line-height:1.6;}
+
+/* ── caixas ── */
+.box{background:#fff;border:1px solid rgba(14,26,43,.09);padding:1.4rem 1.5rem;margin:1.5rem 0;}
+.box.gold{border-left:3px solid var(--gold);background:#FBF8F1;}
+.box.navy{background:var(--navy);color:var(--off);border:0;}
+.box.navy p{color:rgba(244,242,237,.86);}
+.box .bl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.6rem;}
+.box p{margin:.5rem 0;font-size:.98rem;}
+
+/* ── listas ── */
+ul.tct,ol.tct{margin:1rem 0 1rem 1.15rem;}
+ul.tct li,ol.tct li{margin:.6rem 0;font-size:1rem;color:#2a2a2a;line-height:1.7;}
+ul.tct li strong,ol.tct li strong{font-family:'Jost',sans-serif;font-weight:600;font-size:.93rem;letter-spacing:.02em;color:var(--navy);}
+
+/* ── tabela ── */
+.tbl{width:100%;border-collapse:collapse;margin:1.3rem 0;background:#fff;font-size:.93rem;}
+.tbl th{background:var(--navy);color:var(--off);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.75rem .8rem;text-align:left;}
+.tbl td{padding:.75rem .8rem;border-bottom:1px solid rgba(14,26,43,.08);vertical-align:top;color:#333;}
+.tbl tr:last-child td{border-bottom:0;}
+
+/* ── fontes ── */
+.srcs{margin:1.2rem 0 0;}
+.srcs a{display:block;font-family:'Jost',sans-serif;font-size:.9rem;text-decoration:none;color:var(--navy);padding:.7rem 0;border-bottom:1px solid rgba(14,26,43,.08);}
+.srcs a:hover{color:var(--gold);}
+.srcs a span.d{display:block;font-size:.78rem;color:#888;letter-spacing:.02em;margin-top:.15rem;}
+
+/* ── CTA / aviso ── */
+.disc{background:#fff;border:1px dashed rgba(14,26,43,.22);padding:1.3rem 1.4rem;margin:2rem 0 0;font-size:.9rem;color:#555;line-height:1.65;}
+.cta{background:var(--navy);color:var(--off);padding:2.6rem 1.6rem;text-align:center;margin-top:3rem;}
+.cta h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin-bottom:.7rem;}
+.cta p{color:rgba(244,242,237,.78);font-size:.98rem;max-width:520px;margin:0 auto 1.5rem;}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.95rem 1.8rem;border-radius:999px;text-decoration:none;}
+.btn:hover{background:#d4b06b;}
+.btn.ghost{background:none;border:1px solid rgba(198,161,91,.55);color:var(--gold);margin-left:.5rem;}
+
+/* ── assinatura / rodapé ── */
+.sign{display:flex;align-items:center;gap:1rem;margin:2.6rem 0 0;padding-top:1.6rem;border-top:1px solid rgba(14,26,43,.12);}
+.seal{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:.05em;flex-shrink:0;}
+.sign .nm{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:600;color:var(--navy);}
+.sign .rl{font-size:.83rem;color:#777;font-family:'Jost',sans-serif;}
+.foot{text-align:center;padding:2.5rem 1.5rem 4rem;color:#999;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.1em;}
+
+/* ── partilha ── */
+.share{position:fixed;right:1.1rem;bottom:1.1rem;display:flex;flex-direction:column;gap:.5rem;z-index:9500;}
+.share button{width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:var(--gold);cursor:pointer;box-shadow:0 4px 14px rgba(14,26,43,.22);font-size:15px;}
+.share button:hover{background:var(--gold);color:var(--navy);}
+
+@media(max-width:640px){
+  .hero{padding:6rem 1.2rem 2.6rem;}
+  .wrap{padding:0 1.2rem;}
+  .tbl{font-size:.85rem;}
+  .tbl th,.tbl td{padding:.6rem .5rem;}
+}
+</style>
+</head>
+<body data-lang="pt">
+
+<!-- ══════ TOPBAR ══════ -->
+<div class="tct-topbar">
+  <button class="tct-back" onclick="goBack()">
+    <span>&lsaquo;</span>
+    <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+  </button>
+  <span class="tct-brand">The Crossing Time</span>
+  <div class="lang-bar">
+    <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+<!-- ══════ HERO ══════ -->
+<div class="hero">
+  <span class="kicker"><span class="ng-pt">TCT Especiais · Dossiê 1 · Imigração</span><span class="ng-fr">TCT Spéciaux · Dossier 1 · Immigration</span></span>
+  <h1>
+    <span class="ng-pt">Titre de séjour:<br><em>o dossiê completo</em></span>
+    <span class="ng-fr">Titre de séjour :<br><em>le dossier complet</em></span>
+  </h1>
+  <p class="sub">
+    <span class="ng-pt">Quando pedir, onde pedir, o que mudou em 2026 e como atravessar a instrução do processo sem ficar sem direitos. Um guia prático, verificado nas fontes oficiais francesas.</span>
+    <span class="ng-fr">Quand déposer, où déposer, ce qui a changé en 2026 et comment traverser l'instruction du dossier sans rupture de droits. Un guide pratique, vérifié auprès des sources officielles françaises.</span>
+  </p>
+  <p class="meta">
+    <span class="ng-pt">Por Anne Lopes · Actualizado em Julho de 2026 · Fontes oficiais .gouv.fr</span>
+    <span class="ng-fr">Par Anne Lopes · Mis à jour en juillet 2026 · Sources officielles .gouv.fr</span>
+  </p>
+</div>
+
+<div class="wrap">
+
+  <!-- ══════ LEDE ══════ -->
+  <div class="sec">
+    <p class="lede">
+      <span class="ng-pt">A maior parte dos problemas de residência em França não nasce de uma recusa. Nasce de um calendário mal gerido — um pedido depositado tarde de mais, um documento provisório que ninguém descarregou, um nível de francês deixado para o fim. Este dossiê existe para que isso não lhe aconteça.</span>
+      <span class="ng-fr">La plupart des problèmes de séjour en France ne naissent pas d'un refus. Ils naissent d'un calendrier mal géré — une demande déposée trop tard, un document provisoire que personne n'a téléchargé, un niveau de français laissé pour la fin. Ce dossier existe pour que cela ne vous arrive pas.</span>
+    </p>
+
+    <!-- índice -->
+    <div class="toc">
+      <span class="lbl"><span class="ng-pt">Neste dossiê</span><span class="ng-fr">Dans ce dossier</span></span>
+      <ol>
+        <li><a href="#s1"><span class="ng-pt">Os quatro documentos que estruturam a sua vida em França</span><span class="ng-fr">Les quatre documents qui structurent votre vie en France</span></a></li>
+        <li><a href="#s2"><span class="ng-pt">A regra de ouro do calendário: a janela dos 4 aos 2 meses</span><span class="ng-fr">La règle d'or du calendrier : la fenêtre de 4 à 2 mois</span></a></li>
+        <li><a href="#s3"><span class="ng-pt">Onde se deposita: ANEF ou préfecture</span><span class="ng-fr">Où déposer : ANEF ou préfecture</span></a></li>
+        <li><a href="#s4"><span class="ng-pt">Récépissé: o documento que garante a continuidade dos seus direitos</span><span class="ng-fr">Récépissé : le document qui garantit la continuité de vos droits</span></a></li>
+        <li><a href="#s5"><span class="ng-pt">O que mudou desde 1 de Janeiro de 2026</span><span class="ng-fr">Ce qui a changé depuis le 1er janvier 2026</span></a></li>
+        <li><a href="#s6"><span class="ng-pt">A base documental comum</span><span class="ng-fr">Le socle documentaire commun</span></a></li>
+        <li><a href="#s7"><span class="ng-pt">Sete erros que custam caro</span><span class="ng-fr">Sept erreurs qui coûtent cher</span></a></li>
+        <li><a href="#s8"><span class="ng-pt">Quando alguma coisa corre mal</span><span class="ng-fr">Quand quelque chose se passe mal</span></a></li>
+        <li><a href="#s9"><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></a></li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ══════ 1 ══════ -->
+  <div class="sec" id="s1">
+    <h2><span class="num">01</span>
+      <span class="ng-pt">Os quatro documentos que estruturam a sua vida em França</span>
+      <span class="ng-fr">Les quatre documents qui structurent votre vie en France</span>
+    </h2>
+    <p>
+      <span class="ng-pt">Antes de falar de prazos, é preciso saber em que degrau da escada está. Quase toda a trajectória de um estrangeiro não europeu em França passa por estes quatro documentos, por esta ordem.</span>
+      <span class="ng-fr">Avant de parler de délais, il faut savoir sur quelle marche de l'escalier vous vous trouvez. Presque tout parcours d'un étranger non européen en France passe par ces quatre documents, dans cet ordre.</span>
+    </p>
+
+    <div class="grid">
+      <div class="tcard">
+        <span class="t">VLS-TS</span>
+        <div class="n"><span class="ng-pt">Visto de longa duração</span><span class="ng-fr">Visa de long séjour</span></div>
+        <p><span class="ng-pt">O visto que vale como título de residência no primeiro ano. Tem de ser validado após a chegada.</span><span class="ng-fr">Le visa qui vaut titre de séjour la première année. Il doit être validé après l'arrivée.</span></p>
+      </div>
+      <div class="tcard">
+        <span class="t">CST · 1 <span class="ng-pt">ano</span><span class="ng-fr">an</span></span>
+        <div class="n"><span class="ng-pt">Carte de séjour temporaire</span><span class="ng-fr">Carte de séjour temporaire</span></div>
+        <p><span class="ng-pt">O primeiro cartão propriamente dito. Renovável, quase sempre anual.</span><span class="ng-fr">La première carte à proprement parler. Renouvelable, presque toujours annuelle.</span></p>
+      </div>
+      <div class="tcard">
+        <span class="t">CSP · 2–4 <span class="ng-pt">anos</span><span class="ng-fr">ans</span></span>
+        <div class="n"><span class="ng-pt">Carte pluriannuelle</span><span class="ng-fr">Carte pluriannuelle</span></div>
+        <p><span class="ng-pt">O salto de estabilidade. É aqui que entram as novas exigências de 2026.</span><span class="ng-fr">Le saut de stabilité. C'est ici qu'interviennent les nouvelles exigences de 2026.</span></p>
+      </div>
+      <div class="tcard">
+        <span class="t">CR · 10 <span class="ng-pt">anos</span><span class="ng-fr">ans</span></span>
+        <div class="n"><span class="ng-pt">Carte de résident</span><span class="ng-fr">Carte de résident</span></div>
+        <p><span class="ng-pt">A residência durável. Pode ser concedida como primeiro título em certas situações.</span><span class="ng-fr">Le séjour durable. Elle peut être délivrée comme premier titre dans certaines situations.</span></p>
+      </div>
+    </div>
+
+    <h3><span class="ng-pt">Dois percursos concretos</span><span class="ng-fr">Deux parcours concrets</span></h3>
+    <p>
+      <span class="ng-pt">O trajecto não é idêntico para todos. Segundo as fichas oficiais do Service-Public, quem está em França como <strong>estudante</strong> começa normalmente com um cartão de um ano e, ao fim de um ano de presença sob VLS-TS ou cartão temporário, pode obter uma pluriannuelle cuja duração acompanha os anos que faltam no ciclo de estudos em que está inscrito. Já quem tem um cartão <strong>salarié</strong> e continua empregado obtém, na renovação aceite, uma pluriannuelle de quatro anos; se estiver desempregado e indemnizado pela France Travail, recebe um novo cartão temporário de um ano.</span>
+      <span class="ng-fr">Le trajet n'est pas identique pour tous. Selon les fiches officielles de Service-Public, une personne présente en France comme <strong>étudiante</strong> commence normalement avec une carte d'un an puis, après un an de présence sous VLS-TS ou carte temporaire, peut obtenir une pluriannuelle dont la durée suit les années restant à courir dans son cycle d'études. Une personne titulaire d'une carte <strong>salarié</strong> qui occupe toujours un emploi obtient, si le renouvellement est accepté, une pluriannuelle de quatre ans ; en cas de chômage indemnisé par France Travail, une nouvelle carte temporaire d'un an est délivrée.</span>
+    </p>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 2 ══════ -->
+  <div class="sec" id="s2">
+    <h2><span class="num">02</span>
+      <span class="ng-pt">A regra de ouro do calendário: a janela dos 4 aos 2 meses</span>
+      <span class="ng-fr">La règle d'or du calendrier : la fenêtre de 4 à 2 mois</span>
+    </h2>
+    <p>
+      <span class="ng-pt">É o ponto mais importante deste dossiê, e o mais ignorado. Para os títulos cuja renovação se pede pela internet, as fichas oficiais fixam uma janela: <strong>no máximo 4 meses e no mínimo 2 meses antes do fim da validade</strong> do seu documento de residência. Fora dessa janela, o processo é recusado por prematuro ou tratado como fora de prazo.</span>
+      <span class="ng-fr">C'est le point le plus important de ce dossier, et le plus ignoré. Pour les titres dont le renouvellement se demande sur internet, les fiches officielles fixent une fenêtre : <strong>au plus tôt 4 mois et au plus tard 2 mois avant la fin de validité</strong> de votre document de séjour. En dehors de cette fenêtre, la demande est écartée comme prématurée ou traitée comme hors délai.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Alguns títulos ligados ao trabalho continuam a depositar-se na préfecture (ou sub-préfecture) da sua residência, e aí a regra oficial é depositar <strong>o mais tardar 2 meses antes</strong> da data de fim de validade.</span>
+      <span class="ng-fr">Certains titres liés au travail se déposent encore à la préfecture (ou sous-préfecture) de votre domicile, et la règle officielle y est de déposer <strong>au plus tard 2 mois avant</strong> la date de fin de validité.</span>
+    </p>
+
+    <div class="box gold">
+      <span class="bl"><span class="ng-pt">O que custa chegar atrasado</span><span class="ng-fr">Ce que coûte un retard</span></span>
+      <p>
+        <span class="ng-pt">Depositar fora de prazo tem um preço fixado: além do custo do próprio título, é devido um <strong>direito de visto de regularização de 180 €</strong> — salvo caso de força maior ou apresentação de um visto válido. Não é uma multa negociável; é uma taxa que aparece no fim do processo.</span>
+        <span class="ng-fr">Déposer hors délai a un prix fixé : outre le coût du titre lui-même, un <strong>droit de visa de régularisation de 180 €</strong> est dû — sauf cas de force majeure ou présentation d'un visa valide. Ce n'est pas une amende négociable ; c'est une taxe qui apparaît en fin de procédure.</span>
+      </p>
+    </div>
+
+    <div class="box navy">
+      <span class="bl"><span class="ng-pt">Faça isto hoje</span><span class="ng-fr">Faites ceci aujourd'hui</span></span>
+      <p>
+        <span class="ng-pt">Pegue no seu título, leia a data de fim de validade e crie dois alarmes no telemóvel: um a <strong>5 meses</strong> (preparar documentos, marcar exame ou certificação de francês se for caso disso) e outro a <strong>4 meses</strong> (abrir o processo). Esta é a intervenção mais barata e mais eficaz de todo o dossiê.</span>
+        <span class="ng-fr">Prenez votre titre, lisez la date de fin de validité et créez deux alarmes sur votre téléphone : une à <strong>5 mois</strong> (préparer les pièces, réserver l'examen ou la certification de français le cas échéant) et une à <strong>4 mois</strong> (ouvrir la demande). C'est l'intervention la moins chère et la plus efficace de tout le dossier.</span>
+      </p>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 3 ══════ -->
+  <div class="sec" id="s3">
+    <h2><span class="num">03</span>
+      <span class="ng-pt">Onde se deposita: ANEF ou préfecture</span>
+      <span class="ng-fr">Où déposer : ANEF ou préfecture</span>
+    </h2>
+    <p>
+      <span class="ng-pt">A ANEF — <em>Administration numérique pour les étrangers en France</em> — é hoje a via principal. Para vários títulos, as fichas oficiais indicam expressamente que o pedido de renovação <strong>deve</strong> ser feito pela internet. Ao depositar, recebe imediatamente uma <strong>atestação de depósito desmaterializada</strong>, pode acompanhar o estado do processo a qualquer momento, responder a pedidos de complemento e tomar conhecimento das decisões. Pode, ainda assim, ser necessário deslocar-se à préfecture para recolha de impressões digitais, se ainda não tiverem sido recolhidas.</span>
+      <span class="ng-fr">L'ANEF — <em>Administration numérique pour les étrangers en France</em> — est aujourd'hui la voie principale. Pour plusieurs titres, les fiches officielles indiquent expressément que la demande de renouvellement <strong>doit</strong> être faite sur internet. Au dépôt, vous recevez immédiatement une <strong>attestation de dépôt dématérialisée</strong>, vous pouvez suivre l'état d'avancement à tout moment, répondre aux demandes de complément et prendre connaissance des décisions. Un déplacement en préfecture peut rester nécessaire pour la prise d'empreintes, si elle n'a pas déjà été effectuée.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Nem tudo passa pela plataforma. Situações não cobertas pelo teleserviço continuam a depositar-se na préfecture — e aí vale a regra de nunca se apresentar sem marcação.</span>
+      <span class="ng-fr">Tout ne passe pas par la plateforme. Les situations non couvertes par le téléservice se déposent encore en préfecture — et là s'applique la règle de ne jamais se présenter sans rendez-vous.</span>
+    </p>
+    <div class="box">
+      <span class="bl"><span class="ng-pt">Detalhe prático que trava muitos processos</span><span class="ng-fr">Détail pratique qui bloque de nombreux dossiers</span></span>
+      <p>
+        <span class="ng-pt">Nos pedidos feitos online, a fotografia não se envia como ficheiro: indica-se o <strong>código da e-photo</strong>, fornecido pelo fotógrafo ou pela cabina certificada na folha de fotos. Sem esse código, o formulário não avança.</span>
+        <span class="ng-fr">Pour les demandes en ligne, la photo ne s'envoie pas en pièce jointe : on indique le <strong>code e-photo</strong>, fourni par le photographe ou la cabine agréée sur la planche photo. Sans ce code, le formulaire n'avance pas.</span>
+      </p>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 4 ══════ -->
+  <div class="sec" id="s4">
+    <h2><span class="num">04</span>
+      <span class="ng-pt">Récépissé: o documento que garante a continuidade dos seus direitos</span>
+      <span class="ng-fr">Récépissé : le document qui garantit la continuité de vos droits</span>
+    </h2>
+    <p>
+      <span class="ng-pt">Entre o depósito do pedido e a entrega do novo cartão pode passar tempo. É esse intervalo que assusta — e é exactamente para ele que existem os documentos provisórios: a atestação de depósito emitida pela ANEF e, depois, o récépissé. São eles que provam que está em situação regular durante a instrução do processo. Nas renovações, é também neles que consta, quando aplicável, a autorização para trabalhar: <strong>leia a menção inscrita no documento</strong>, porque é ela que o seu empregador vai olhar.</span>
+      <span class="ng-fr">Entre le dépôt de la demande et la remise de la nouvelle carte, du temps peut s'écouler. C'est cet intervalle qui inquiète — et c'est précisément pour lui qu'existent les documents provisoires : l'attestation de dépôt délivrée par l'ANEF puis, ensuite, le récépissé. Ce sont eux qui prouvent que vous êtes en situation régulière pendant l'instruction. En renouvellement, c'est aussi sur eux que figure, le cas échéant, l'autorisation de travailler : <strong>lisez la mention portée sur le document</strong>, car c'est elle que votre employeur regardera.</span>
+    </p>
+    <p>
+      <span class="ng-pt">Enquanto o cartão está a ser fabricado, algumas fichas oficiais prevêem ainda a entrega de uma atestação desmaterializada que autoriza a trabalhar. Descarregue sempre estes documentos do seu espaço pessoal e guarde uma cópia no telemóvel: são eles que apresenta num controlo, num banco ou na entidade patronal.</span>
+      <span class="ng-fr">Pendant la fabrication de la carte, certaines fiches officielles prévoient en outre la délivrance d'une attestation dématérialisée autorisant à travailler. Téléchargez toujours ces documents depuis votre espace personnel et gardez-en une copie sur votre téléphone : ce sont eux que vous présenterez lors d'un contrôle, à une banque ou à un employeur.</span>
+    </p>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 5 ══════ -->
+  <div class="sec" id="s5">
+    <h2><span class="num">05</span>
+      <span class="ng-pt">O que mudou desde 1 de Janeiro de 2026</span>
+      <span class="ng-fr">Ce qui a changé depuis le 1er janvier 2026</span>
+    </h2>
+    <p>
+      <span class="ng-pt">A lei de 26 de Janeiro de 2024 reforçou as exigências de integração republicana e de domínio da língua. As novas obrigações entraram em vigor a 1 de Janeiro de 2026 e aplicam-se aos títulos cuja validade começa a partir dessa data, <strong>seja qual for a data em que o pedido foi depositado</strong>. Há dois blocos: o exame cívico e o nível de francês.</span>
+      <span class="ng-fr">La loi du 26 janvier 2024 a renforcé les exigences d'intégration républicaine et de maîtrise de la langue. Les nouvelles obligations sont entrées en vigueur le 1er janvier 2026 et s'appliquent aux titres dont la validité commence à partir de cette date, <strong>quelle que soit la date de dépôt de la demande</strong>. Deux blocs : l'examen civique et le niveau de français.</span>
+    </p>
+
+    <h3><span class="ng-pt">Exame cívico</span><span class="ng-fr">Examen civique</span></h3>
+    <p>
+      <span class="ng-pt">Desde 1 de Janeiro de 2026, o estrangeiro não europeu que faz uma <strong>primeira</strong> pedido de carte de séjour pluriannuelle ou de carte de résident tem de justificar a aprovação num exame cívico. Por decreto de 15 de Julho de 2025, a mesma exigência passou a valer, na mesma data, para os pedidos de naturalização. Duas precisões que evitam muito pânico desnecessário: <strong>a renovação de uma pluriannuelle ou de uma carte de résident não exige o exame</strong>, e nem todas as cartas destas categorias estão abrangidas. Os beneficiários de protecção internacional e os nacionais de países abrangidos por certos acordos bilaterais não são visados.</span>
+      <span class="ng-fr">Depuis le 1er janvier 2026, l'étranger non européen qui dépose une <strong>première</strong> demande de carte de séjour pluriannuelle ou de carte de résident doit justifier de la réussite à un examen civique. Par décret du 15 juillet 2025, la même exigence vaut, à la même date, pour les demandes de naturalisation. Deux précisions qui évitent bien des paniques inutiles : <strong>le renouvellement d'une pluriannuelle ou d'une carte de résident n'exige pas l'examen</strong>, et toutes les cartes de ces catégories ne sont pas concernées. Les bénéficiaires de la protection internationale et les ressortissants de pays relevant de certains accords bilatéraux ne sont pas visés.</span>
+    </p>
+
+    <h3><span class="ng-pt">Nível de francês</span><span class="ng-fr">Niveau de français</span></h3>
+    <p>
+      <span class="ng-pt">O conhecimento suficiente da língua passou também a ser condição de acesso, com níveis do quadro europeu comum de referência que sobem consoante o título pretendido. A condição aplica-se ao primeiro acesso ao título — quem já tem uma pluriannuelle não precisa de voltar a justificar o nível para a renovar. O nível pode ser provado por diploma, certificação profissional ou certificação linguística.</span>
+      <span class="ng-fr">La connaissance suffisante de la langue est également devenue une condition d'accès, avec des niveaux du cadre européen commun de référence qui s'élèvent selon le titre visé. La condition s'applique au premier accès au titre — une personne déjà titulaire d'une pluriannuelle n'a pas à justifier de nouveau le niveau pour la renouveler. Le niveau peut être prouvé par un diplôme, une certification professionnelle ou une certification linguistique.</span>
+    </p>
+
+    <table class="tbl">
+      <tr>
+        <th><span class="ng-pt">Título pretendido</span><span class="ng-fr">Titre visé</span></th>
+        <th><span class="ng-pt">Nível de francês</span><span class="ng-fr">Niveau de français</span></th>
+        <th><span class="ng-pt">Exame cívico</span><span class="ng-fr">Examen civique</span></th>
+      </tr>
+      <tr>
+        <td><span class="ng-pt">Carte de séjour pluriannuelle (1ª)</span><span class="ng-fr">Carte de séjour pluriannuelle (1re)</span></td>
+        <td><strong>A2</strong></td>
+        <td><span class="ng-pt">Sim</span><span class="ng-fr">Oui</span></td>
+      </tr>
+      <tr>
+        <td><span class="ng-pt">Carte de résident, 10 anos (1ª)</span><span class="ng-fr">Carte de résident, 10 ans (1re)</span></td>
+        <td><strong>B1</strong></td>
+        <td><span class="ng-pt">Sim</span><span class="ng-fr">Oui</span></td>
+      </tr>
+      <tr>
+        <td><span class="ng-pt">Nacionalidade francesa</span><span class="ng-fr">Nationalité française</span></td>
+        <td><strong>B2</strong></td>
+        <td><span class="ng-pt">Sim</span><span class="ng-fr">Oui</span></td>
+      </tr>
+      <tr>
+        <td><span class="ng-pt">Renovação de CSP ou CR</span><span class="ng-fr">Renouvellement de CSP ou CR</span></td>
+        <td><span class="ng-pt">Não exigido de novo</span><span class="ng-fr">Non exigé de nouveau</span></td>
+        <td><span class="ng-pt">Não</span><span class="ng-fr">Non</span></td>
+      </tr>
+    </table>
+
+    <div class="box gold">
+      <span class="bl"><span class="ng-pt">Dispensas e adaptações</span><span class="ng-fr">Dispenses et aménagements</span></span>
+      <p>
+        <span class="ng-pt">As pessoas com mais de 65 anos e aquelas cujo estado de saúde ou deficiência torna impossível a realização da prova podem ser dispensadas ou beneficiar de adaptações. Nesse caso, é obrigatório apresentar o modelo oficial de certificado médico, preenchido por um médico, que ateste a necessidade de adaptações e as precise — ou que indique a impossibilidade da avaliação linguística e/ou cívica.</span>
+        <span class="ng-fr">Les personnes de plus de 65 ans et celles dont l'état de santé ou le handicap rend impossible le passage de l'épreuve peuvent être dispensées ou bénéficier d'aménagements. Dans ce cas, il faut impérativement produire le modèle officiel de certificat médical, complété par un médecin, attestant la nécessité d'aménagements et les précisant — ou indiquant l'impossibilité de l'évaluation linguistique et/ou civique.</span>
+      </p>
+    </div>
+
+    <div class="box navy">
+      <span class="bl"><span class="ng-pt">Já publicámos sobre isto</span><span class="ng-fr">Nous avons déjà publié là-dessus</span></span>
+      <p>
+        <span class="ng-pt">O exame cívico tem no The Crossing Time um dossiê próprio, com quatro matérias — quadro legal e formato, qual exame corresponde a cada título, dispensas e excepções, e o passo a passo da inscrição — além de um simulador bilingue para praticar.</span>
+        <span class="ng-fr">L'examen civique dispose au sein de The Crossing Time d'un dossier dédié, avec quatre articles — cadre légal et format, quel examen correspond à quel titre, dispenses et exceptions, et le pas-à-pas de l'inscription — ainsi qu'un simulateur bilingue pour s'entraîner.</span>
+      </p>
+      <p style="margin-top:1rem;">
+        <a class="btn" href="../index.html#civique" target="_top"><span class="ng-pt">Ver o dossiê do exame cívico</span><span class="ng-fr">Voir le dossier examen civique</span></a>
+      </p>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 6 ══════ -->
+  <div class="sec" id="s6">
+    <h2><span class="num">06</span>
+      <span class="ng-pt">A base documental comum</span>
+      <span class="ng-fr">Le socle documentaire commun</span>
+    </h2>
+    <p>
+      <span class="ng-pt">A lista exacta depende do motivo do seu título e não há atalho para isso: tem de consultar a ficha oficial correspondente à sua situação e o sítio da sua préfecture. Mas há um núcleo que se repete em quase todos os processos e que pode começar a reunir hoje.</span>
+      <span class="ng-fr">La liste exacte dépend du motif de votre titre et il n'y a pas de raccourci : il faut consulter la fiche officielle correspondant à votre situation et le site de votre préfecture. Mais il existe un socle qui revient dans presque toutes les demandes et que vous pouvez commencer à réunir dès aujourd'hui.</span>
+    </p>
+    <ul class="tct">
+      <li><strong><span class="ng-pt">Passaporte</span><span class="ng-fr">Passeport</span></strong> — <span class="ng-pt">páginas do estado civil, validade, carimbos de entrada e vistos.</span><span class="ng-fr">pages d'état civil, validité, cachets d'entrée et visas.</span></li>
+      <li><strong><span class="ng-pt">Comprovativo de morada</span><span class="ng-fr">Justificatif de domicile</span></strong> — <span class="ng-pt">com menos de 6 meses.</span><span class="ng-fr">de moins de 6 mois.</span></li>
+      <li><strong><span class="ng-pt">Fotografias</span><span class="ng-fr">Photographies</span></strong> — <span class="ng-pt">três fotos, ou o código da e-photo se o pedido for online.</span><span class="ng-fr">trois photos, ou le code e-photo si la demande est en ligne.</span></li>
+      <li><strong><span class="ng-pt">Justificação do motivo</span><span class="ng-fr">Justificatif du motif</span></strong> — <span class="ng-pt">contrato de trabalho, inscrição escolar, certidão de casamento, consoante o seu caso.</span><span class="ng-fr">contrat de travail, inscription scolaire, acte de mariage, selon votre cas.</span></li>
+      <li><strong><span class="ng-pt">Timbre fiscal</span><span class="ng-fr">Droit de timbre</span></strong> — <span class="ng-pt">o comprovativo de pagamento é normalmente entregue no momento da entrega do título.</span><span class="ng-fr">le justificatif de paiement est en principe remis au moment de la remise du titre.</span></li>
+      <li><strong><span class="ng-pt">Documentos específicos</span><span class="ng-fr">Pièces spécifiques</span></strong> — <span class="ng-pt">consoante o título: certificado médico do OFII, autorização de trabalho, elementos que comprovem a manutenção do contrato de trabalho.</span><span class="ng-fr">selon le titre : certificat médical de l'OFII, autorisation de travail, éléments justifiant le maintien du contrat de travail.</span></li>
+    </ul>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 7 ══════ -->
+  <div class="sec" id="s7">
+    <h2><span class="num">07</span>
+      <span class="ng-pt">Sete erros que custam caro</span>
+      <span class="ng-fr">Sept erreurs qui coûtent cher</span>
+    </h2>
+    <ol class="tct">
+      <li><strong><span class="ng-pt">Esperar que o título expire.</span><span class="ng-fr">Attendre l'expiration du titre.</span></strong> <span class="ng-pt">É o erro que abre a porta a todos os outros.</span><span class="ng-fr">C'est l'erreur qui ouvre la porte à toutes les autres.</span></li>
+      <li><strong><span class="ng-pt">Depositar cedo de mais.</span><span class="ng-fr">Déposer trop tôt.</span></strong> <span class="ng-pt">Antes dos 4 meses, o pedido é prematuro.</span><span class="ng-fr">Avant 4 mois, la demande est prématurée.</span></li>
+      <li><strong><span class="ng-pt">Enganar-se na via.</span><span class="ng-fr">Se tromper de voie.</span></strong> <span class="ng-pt">Verifique se o seu título se renova na ANEF ou na préfecture antes de começar.</span><span class="ng-fr">Vérifiez si votre titre se renouvelle sur l'ANEF ou en préfecture avant de commencer.</span></li>
+      <li><strong><span class="ng-pt">Não descarregar os documentos provisórios.</span><span class="ng-fr">Ne pas télécharger les documents provisoires.</span></strong> <span class="ng-pt">Sem eles, não tem como provar que está regular.</span><span class="ng-fr">Sans eux, vous ne pouvez pas prouver votre régularité.</span></li>
+      <li><strong><span class="ng-pt">Deixar morada e e-mail desactualizados.</span><span class="ng-fr">Laisser adresse et e-mail obsolètes.</span></strong> <span class="ng-pt">É por aí que chegam os pedidos de complemento.</span><span class="ng-fr">C'est par là qu'arrivent les demandes de complément.</span></li>
+      <li><strong><span class="ng-pt">Ignorar um pedido de complemento.</span><span class="ng-fr">Ignorer une demande de complément.</span></strong> <span class="ng-pt">Consulte o espaço pessoal regularmente, mesmo sem notificação.</span><span class="ng-fr">Consultez l'espace personnel régulièrement, même sans notification.</span></li>
+      <li><strong><span class="ng-pt">Deixar o francês e o exame cívico para o fim.</span><span class="ng-fr">Laisser le français et l'examen civique pour la fin.</span></strong> <span class="ng-pt">Uma certificação tem calendário próprio, que não se compadece com o seu.</span><span class="ng-fr">Une certification a son propre calendrier, qui ne s'adapte pas au vôtre.</span></li>
+    </ol>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 8 ══════ -->
+  <div class="sec" id="s8">
+    <h2><span class="num">08</span>
+      <span class="ng-pt">Quando alguma coisa corre mal</span>
+      <span class="ng-fr">Quand quelque chose se passe mal</span>
+    </h2>
+    <p>
+      <span class="ng-pt">Se o processo bloqueia, a primeira via é o próprio espaço pessoal da ANEF, onde pode responder e contactar o serviço instrutor. Se o bloqueio persiste e envolve o funcionamento de um serviço público, o <em>Défenseur des droits</em> é uma autoridade independente que pode ser accionada gratuitamente. E se a questão passa a ser jurídica — uma recusa, um prazo perdido, uma decisão a contestar — aí já não é matéria de guia: é matéria de advogado.</span>
+      <span class="ng-fr">Si le dossier se bloque, la première voie est l'espace personnel ANEF lui-même, où vous pouvez répondre et contacter le service instructeur. Si le blocage persiste et concerne le fonctionnement d'un service public, le <em>Défenseur des droits</em> est une autorité indépendante qui peut être saisie gratuitement. Et si la question devient juridique — un refus, un délai manqué, une décision à contester — ce n'est plus l'affaire d'un guide : c'est l'affaire d'un avocat.</span>
+    </p>
+  </div>
+  <div class="rule"></div>
+
+  <!-- ══════ 9 ══════ -->
+  <div class="sec" id="s9">
+    <h2><span class="num">09</span>
+      <span class="ng-pt">Fontes oficiais</span>
+      <span class="ng-fr">Sources officielles</span>
+    </h2>
+    <p>
+      <span class="ng-pt">Este dossiê foi construído exclusivamente a partir de fontes públicas francesas. Consulte-as sempre antes de agir — as regras evoluem, e a ficha correspondente à sua situação prevalece sobre qualquer guia.</span>
+      <span class="ng-fr">Ce dossier a été construit exclusivement à partir de sources publiques françaises. Consultez-les toujours avant d'agir — les règles évoluent, et la fiche correspondant à votre situation prime sur tout guide.</span>
+    </p>
+    <div class="srcs">
+      <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F34501" target="_blank" rel="noopener">
+        Service-Public — <span class="ng-pt">Justificar o conhecimento do francês (CSP e CR)</span><span class="ng-fr">Justifier de sa connaissance du français (CSP et CR)</span>
+        <span class="d">service-public.gouv.fr</span>
+      </a>
+      <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F39530" target="_blank" rel="noopener">
+        Service-Public — <span class="ng-pt">Como passar o exame cívico</span><span class="ng-fr">Comment passer l'examen civique</span>
+        <span class="d">service-public.gouv.fr</span>
+      </a>
+      <a href="https://www.immigration.interieur.gouv.fr/limmigration-en-france/sejour-des-etrangers/lexamen-civique-pour-demander-titre-de-sejour" target="_blank" rel="noopener">
+        <span class="ng-pt">Direcção-Geral dos Estrangeiros em França — Exame cívico e título de residência</span><span class="ng-fr">Direction générale des étrangers en France — Examen civique et titre de séjour</span>
+        <span class="d">immigration.interieur.gouv.fr</span>
+      </a>
+      <a href="https://formation-civique.interieur.gouv.fr/examen-civique/informations-g%C3%A9n%C3%A9rales-sur-lexamen-civique/" target="_blank" rel="noopener">
+        <span class="ng-pt">Ministério do Interior — Plataforma oficial de formação cívica</span><span class="ng-fr">Ministère de l'Intérieur — Plateforme officielle de formation civique</span>
+        <span class="d">formation-civique.interieur.gouv.fr</span>
+      </a>
+      <a href="https://www.interieur.gouv.fr/actualites/communiques-de-presse/a-partir-du-1er-janvier-2026-reussite-a-lexamen-civique-sera-necessaire-pour-obtenir-carte-de-sejour" target="_blank" rel="noopener">
+        <span class="ng-pt">Ministério do Interior — Comunicado sobre as regras de 1 de Janeiro de 2026</span><span class="ng-fr">Ministère de l'Intérieur — Communiqué sur les règles du 1er janvier 2026</span>
+        <span class="d">interieur.gouv.fr</span>
+      </a>
+      <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F2208" target="_blank" rel="noopener">
+        Service-Public — <span class="ng-pt">Carte de résident de 10 anos</span><span class="ng-fr">Carte de résident de 10 ans</span>
+        <span class="d">service-public.gouv.fr</span>
+      </a>
+    </div>
+
+    <div class="disc">
+      <span class="ng-pt"><strong>Aviso.</strong> Este dossiê é informação editorial de interesse público, verificada em fontes oficiais francesas à data indicada. Não constitui aconselhamento jurídico individual e não substitui a análise do seu processo por um profissional habilitado. Cada situação tem particularidades — nacionalidade, acordos bilaterais aplicáveis, histórico de residência — que podem alterar completamente a resposta.</span>
+      <span class="ng-fr"><strong>Avertissement.</strong> Ce dossier constitue une information éditoriale d'intérêt public, vérifiée auprès de sources officielles françaises à la date indiquée. Il ne constitue pas un conseil juridique individuel et ne remplace pas l'analyse de votre dossier par un professionnel habilité. Chaque situation comporte des particularités — nationalité, accords bilatéraux applicables, historique de séjour — qui peuvent changer entièrement la réponse.</span>
+    </div>
+
+    <!-- assinatura -->
+    <div class="sign">
+      <div class="seal">AL</div>
+      <div>
+        <div class="nm"><span class="ng-pt">Por Anne Lopes</span><span class="ng-fr">Par Anne Lopes</span></div>
+        <div class="rl"><span class="ng-pt">CEO e Fundadora da The Crossing Time</span><span class="ng-fr">PDG et fondatrice de The Crossing Time</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ CTA ══════ -->
+<div class="cta">
+  <h4><span class="ng-pt">O seu caso não cabe num guia?</span><span class="ng-fr">Votre cas ne tient pas dans un guide ?</span></h4>
+  <p>
+    <span class="ng-pt">The Crossing Time reúne colunistas juristas que escrevem regularmente sobre direito dos estrangeiros, direito patrimonial e direito internacional. Conheça-os e saiba a quem se dirigir.</span>
+    <span class="ng-fr">The Crossing Time réunit des chroniqueurs juristes qui écrivent régulièrement sur le droit des étrangers, le droit patrimonial et le droit international. Découvrez-les et sachez à qui vous adresser.</span>
+  </p>
+  <a class="btn" href="../index.html#colunas" target="_top"><span class="ng-pt">Ver os colunistas juristas</span><span class="ng-fr">Voir les chroniqueurs juristes</span></a>
+  <a class="btn ghost" href="https://wa.me/message/STDV3OMZM6EGL1" target="_blank" rel="noopener"><span class="ng-pt">Falar com a redacção</span><span class="ng-fr">Contacter la rédaction</span></a>
+</div>
+
+<div class="foot">
+  <span class="ng-pt">The Crossing Time · By Porta-Voz do Imigrante · Dossiê actualizado em Julho de 2026</span>
+  <span class="ng-fr">The Crossing Time · By Porta-Voz do Imigrante · Dossier mis à jour en juillet 2026</span>
+</div>
+
+<!-- ══════ PARTILHA ══════ -->
+<div class="share">
+  <button onclick="shareWa()" title="WhatsApp">&#9993;</button>
+  <button onclick="copyLink()" title="Copiar link">&#128279;</button>
+</div>
+
+<script>
+function goBack(){
+  if(window.parent && window.parent !== window){
+    try{ window.parent.closeMateria(); return; }catch(e){}
+  }
+  window.location.href = '../index.html#civique';
+}
+function setLang(l){
+  document.body.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  var bp = document.getElementById('b-pt'), bf = document.getElementById('b-fr');
+  if(bp) bp.className = (l === 'pt') ? 'on' : '';
+  if(bf) bf.className = (l === 'fr') ? 'on' : '';
+  try{ localStorage.setItem('tct-lang', l); }catch(e){}
+}
+(function(){
+  var saved = 'pt';
+  try{ saved = localStorage.getItem('tct-lang') || 'pt'; }catch(e){}
+  if(saved === 'fr') setLang('fr');
+})();
+function shareWa(){
+  var t = document.title;
+  window.open('https://wa.me/?text=' + encodeURIComponent(t + ' — ' + window.location.href), '_blank');
+}
+function copyLink(){
+  var u = window.location.href;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(u).then(function(){ alert('Link copiado / Lien copié'); });
+  } else {
+    alert(u);
+  }
+}
+</script>
+</body>
+</html>

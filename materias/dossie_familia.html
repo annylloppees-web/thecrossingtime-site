@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Família | The Crossing Time</title>
+<meta name="description" content="Reagrupamento familiar, PACS, casamento e escolaridade dos filhos. Dossiê bilingue PT/FR com fontes oficiais francesas.">
+<meta property="og:title" content="Família | The Crossing Time">
+<meta property="og:description" content="Reagrupamento familiar, PACS, casamento e escolaridade dos filhos. Dossiê bilingue PT/FR com fontes oficiais francesas.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Crossing Time">
+<meta property="og:image" content="../og/dossie_familia.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1A2B;--gold:#C6A15B;--off:#F4F2ED;--ink:#111111;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--off);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
+
+/* ── bilingue ── */
+.ng-fr{display:none!important;}
+body[data-lang="fr"] .ng-pt{display:none!important;}
+body[data-lang="fr"] .ng-fr{display:revert!important;}
+
+/* ── topbar ── */
+.tct-topbar{position:fixed;top:0;left:0;right:0;height:54px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 1.1rem;z-index:9600;box-shadow:0 1px 12px rgba(14,26,43,.25);}
+.tct-back{background:none;border:0;color:var(--off);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:.5rem;padding:.5rem .2rem;}
+.tct-back:hover{color:var(--gold);}
+.tct-brand{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1rem;letter-spacing:.04em;}
+.lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.08);border-radius:999px;padding:3px;}
+.lang-bar button{background:none;border:0;color:rgba(244,242,237,.6);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;padding:.35rem .7rem;border-radius:999px;cursor:pointer;}
+.lang-bar button.on{background:var(--gold);color:var(--navy);font-weight:600;}
+
+/* ── hero ── */
+.hero{background:linear-gradient(180deg,#0E1A2B 0%,#1a2e4a 100%);color:var(--off);padding:7rem 1.5rem 3.5rem;text-align:center;}
+.hero .kicker{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.4rem;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;max-width:900px;margin:0 auto 1.3rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero .sub{max-width:680px;margin:0 auto 1.8rem;font-size:1.02rem;line-height:1.7;color:rgba(244,242,237,.82);font-style:italic;}
+.hero .meta{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(198,161,91,.85);}
+
+/* ── layout ── */
+.wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
+.sec{padding:3rem 0 0;}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.2;color:var(--navy);margin-bottom:.4rem;}
+h2 .num{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:.6rem;font-weight:600;}
+h3{font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);font-weight:600;margin:1.6rem 0 .5rem;}
+p{margin:.9rem 0;font-size:1.02rem;color:#2a2a2a;}
+a{color:var(--navy);}
+.lede{font-size:1.12rem;color:#333;font-style:italic;border-left:2px solid var(--gold);padding-left:1.1rem;}
+.rule{height:1px;background:rgba(14,26,43,.12);margin:2.6rem 0 0;}
+
+/* ── índice ── */
+.toc{background:#fff;border:1px solid rgba(14,26,43,.09);border-top:3px solid var(--gold);padding:1.6rem 1.6rem 1.3rem;margin-top:2.5rem;}
+.toc .lbl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.toc ol{margin:.9rem 0 0 1.1rem;}
+.toc li{font-family:'Jost',sans-serif;font-size:.92rem;margin:.42rem 0;line-height:1.5;}
+.toc a{text-decoration:none;border-bottom:1px solid rgba(198,161,91,.5);}
+.toc a:hover{color:var(--gold);}
+
+/* ── cartões ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.4rem 0 .4rem;}
+.tcard{background:#fff;border:1px solid rgba(14,26,43,.09);border-left:3px solid var(--gold);padding:1.2rem 1.2rem 1.1rem;}
+.tcard .t{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.tcard .n{font-family:'Cormorant Garamond',serif;font-size:1.28rem;color:var(--navy);margin:.35rem 0 .45rem;line-height:1.2;}
+.tcard p{font-size:.9rem;margin:0;color:#555;line-height:1.6;}
+
+/* ── caixas ── */
+.box{background:#fff;border:1px solid rgba(14,26,43,.09);padding:1.4rem 1.5rem;margin:1.5rem 0;}
+.box.gold{border-left:3px solid var(--gold);background:#FBF8F1;}
+.box.navy{background:var(--navy);color:var(--off);border:0;}
+.box.navy p{color:rgba(244,242,237,.86);}
+.box .bl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.6rem;}
+.box p{margin:.5rem 0;font-size:.98rem;}
+
+/* ── listas ── */
+ul.tct,ol.tct{margin:1rem 0 1rem 1.15rem;}
+ul.tct li,ol.tct li{margin:.6rem 0;font-size:1rem;color:#2a2a2a;line-height:1.7;}
+ul.tct li strong,ol.tct li strong{font-family:'Jost',sans-serif;font-weight:600;font-size:.93rem;letter-spacing:.02em;color:var(--navy);}
+
+/* ── tabela ── */
+.tbl{width:100%;border-collapse:collapse;margin:1.3rem 0;background:#fff;font-size:.93rem;}
+.tbl th{background:var(--navy);color:var(--off);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.75rem .8rem;text-align:left;}
+.tbl td{padding:.75rem .8rem;border-bottom:1px solid rgba(14,26,43,.08);vertical-align:top;color:#333;}
+.tbl tr:last-child td{border-bottom:0;}
+
+/* ── fontes ── */
+.srcs{margin:1.2rem 0 0;}
+.srcs a{display:block;font-family:'Jost',sans-serif;font-size:.9rem;text-decoration:none;color:var(--navy);padding:.7rem 0;border-bottom:1px solid rgba(14,26,43,.08);}
+.srcs a:hover{color:var(--gold);}
+.srcs a span.d{display:block;font-size:.78rem;color:#888;letter-spacing:.02em;margin-top:.15rem;}
+
+/* ── CTA / aviso ── */
+.disc{background:#fff;border:1px dashed rgba(14,26,43,.22);padding:1.3rem 1.4rem;margin:2rem 0 0;font-size:.9rem;color:#555;line-height:1.65;}
+.cta{background:var(--navy);color:var(--off);padding:2.6rem 1.6rem;text-align:center;margin-top:3rem;}
+.cta h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin-bottom:.7rem;}
+.cta p{color:rgba(244,242,237,.78);font-size:.98rem;max-width:520px;margin:0 auto 1.5rem;}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.95rem 1.8rem;border-radius:999px;text-decoration:none;}
+.btn:hover{background:#d4b06b;}
+.btn.ghost{background:none;border:1px solid rgba(198,161,91,.55);color:var(--gold);margin-left:.5rem;}
+
+/* ── assinatura / rodapé ── */
+.sign{display:flex;align-items:center;gap:1rem;margin:2.6rem 0 0;padding-top:1.6rem;border-top:1px solid rgba(14,26,43,.12);}
+.seal{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:.05em;flex-shrink:0;}
+.sign .nm{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:600;color:var(--navy);}
+.sign .rl{font-size:.83rem;color:#777;font-family:'Jost',sans-serif;}
+.foot{text-align:center;padding:2.5rem 1.5rem 4rem;color:#999;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.1em;}
+
+/* ── partilha ── */
+.share{position:fixed;right:1.1rem;bottom:1.1rem;display:flex;flex-direction:column;gap:.5rem;z-index:9500;}
+.share button{width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:var(--gold);cursor:pointer;box-shadow:0 4px 14px rgba(14,26,43,.22);font-size:15px;}
+.share button:hover{background:var(--gold);color:var(--navy);}
+
+@media(max-width:640px){
+  .hero{padding:6rem 1.2rem 2.6rem;}
+  .wrap{padding:0 1.2rem;}
+  .tbl{font-size:.85rem;}
+  .tbl th,.tbl td{padding:.6rem .5rem;}
+}
+</style>
+</head>
+<body data-lang="pt">
+
+<div class="tct-topbar">
+  <button class="tct-back" onclick="goBack()">
+    <span>&lsaquo;</span>
+    <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+  </button>
+  <span class="tct-brand">The Crossing Time</span>
+  <div class="lang-bar">
+    <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+<div class="hero">
+  <span class="kicker"><span class="ng-pt">TCT Especiais · Dossiê 4 · Imigração</span><span class="ng-fr">TCT Spéciaux · Dossier 4 · Immigration</span></span>
+  <h1><span class="ng-pt">Família</span><span class="ng-fr">Famille</span><br><em><span class="ng-pt">reagrupamento, PACS e a escola dos filhos</span><span class="ng-fr">regroupement, PACS et l'école des enfants</span></em></h1>
+  <p class="sub"><span class="ng-pt">As três condições legais do reagrupamento, como é verificado o alojamento, o que conta como recurso e por que razão o cônjuge de francês segue outra via.</span><span class="ng-fr">Les trois conditions légales du regroupement, comment le logement est vérifié, ce qui compte comme ressource et pourquoi le conjoint de Français suit une autre voie.</span></p>
+  <p class="meta"><span class="ng-pt">Por Anne Lopes · Actualizado em Julho de 2026 · Fontes oficiais .gouv.fr</span><span class="ng-fr">Par Anne Lopes · Mis à jour en juillet 2026 · Sources officielles .gouv.fr</span></p>
+</div>
+
+<div class="wrap">
+  <div class="sec">
+    <p class="lede"><span class="ng-pt">Trazer a família é, quase sempre, a razão pela qual se atravessa um oceano. E é também o procedimento onde um pequeno erro de calendário ou de via administrativa custa meses de separação. Vale a pena preparar com frieza.</span><span class="ng-fr">Faire venir sa famille est, presque toujours, la raison pour laquelle on traverse un océan. C'est aussi la procédure où une petite erreur de calendrier ou de voie administrative coûte des mois de séparation. Cela vaut la peine de préparer à froid.</span></p>
+    <div class="toc">
+      <span class="lbl"><span class="ng-pt">Neste dossiê</span><span class="ng-fr">Dans ce dossier</span></span>
+      <ol>
+        <li><a href="#f1"><span class="ng-pt">As três condições legais do reagrupamento</span><span class="ng-fr">Les trois conditions légales du regroupement</span></a></li>
+        <li><a href="#f2"><span class="ng-pt">Antes de tudo: o simulador oficial</span><span class="ng-fr">Avant tout : le simulateur officiel</span></a></li>
+        <li><a href="#f3"><span class="ng-pt">Alojamento: como é verificado</span><span class="ng-fr">Logement : comment il est vérifié</span></a></li>
+        <li><a href="#f4"><span class="ng-pt">Recursos: o que conta e o que não conta</span><span class="ng-fr">Ressources : ce qui compte et ce qui ne compte pas</span></a></li>
+        <li><a href="#f5"><span class="ng-pt">Casado com um francês? A via é outra</span><span class="ng-fr">Marié à un Français ? Une autre voie</span></a></li>
+        <li><a href="#f6"><span class="ng-pt">A escola dos filhos</span><span class="ng-fr">L'école des enfants</span></a></li>
+        <li><a href="#f7"><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec" id="f1">
+    <h2><span class="num">01</span><span class="ng-pt">As três condições legais do reagrupamento familiar</span><span class="ng-fr">Les trois conditions légales du regroupement familial</span></h2>
+    <p><span class="ng-pt">O reagrupamento familiar não é um direito automático. O CESEDA fixa três condições cumulativas, e é sobre elas que a administração decide.</span><span class="ng-fr">Le regroupement familial n'est pas un droit automatique. Le CESEDA fixe trois conditions cumulatives, et c'est sur elles que l'administration décide.</span></p>
+    <ul class="tct">
+      <li><span class="ng-pt"><strong>Recursos estáveis e suficientes</strong> para prover às necessidades da família.</span><span class="ng-fr"><strong>Ressources stables et suffisantes</strong> pour subvenir aux besoins de la famille.</span></li>
+      <li><span class="ng-pt"><strong>Alojamento</strong> considerado normal para uma família comparável a viver na mesma região — de que disponha já ou de que venha a dispor à data da chegada da família.</span><span class="ng-fr"><strong>Logement</strong> considéré comme normal pour une famille comparable vivant dans la même région — dont vous disposez déjà ou dont vous disposerez à la date d'arrivée de la famille.</span></li>
+      <li><span class="ng-pt"><strong>Conformidade com os princípios essenciais</strong> que, de acordo com as leis da República, regem a vida familiar em França.</span><span class="ng-fr"><strong>Conformité aux principes essentiels</strong> qui, conformément aux lois de la République, régissent la vie familiale en France.</span></li>
+    </ul>
+    <div class="box gold">
+      <span class="bl"><span class="ng-pt">Quem pode ser reagrupado</span><span class="ng-fr">Qui peut être rejoint</span></span>
+      <p><span class="ng-pt">O procedimento diz respeito ao cônjuge maior e aos filhos menores, que devem residir no estrangeiro. Não abrange os pais do requerente nem os filhos maiores — para esses, a via é outra.</span><span class="ng-fr">La procédure concerne le conjoint majeur et les enfants mineurs, qui doivent résider à l'étranger. Elle ne couvre ni les parents du demandeur ni les enfants majeurs — pour eux, la voie est différente.</span></p>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="f2">
+    <h2><span class="num">02</span><span class="ng-pt">Antes de tudo: o simulador oficial</span><span class="ng-fr">Avant tout : le simulateur officiel</span></h2>
+    <p><span class="ng-pt">Existe um simulador público que permite saber, em poucos minutos, se cumpre as condições para depositar um processo junto do OFII. Use-o antes de reunir documentos ou pagar o que seja a quem seja: um depósito prematuro é recusado e obriga a recomeçar todo o procedimento.</span><span class="ng-fr">Un simulateur public permet de savoir, en quelques minutes, si vous remplissez les conditions pour déposer un dossier auprès de l'OFII. Utilisez-le avant de réunir des pièces ou de payer quoi que ce soit à qui que ce soit : un dépôt prématuré est refusé et oblige à reprendre toute la procédure.</span></p>
+    <div class="box navy">
+      <span class="bl"><span class="ng-pt">Ferramenta oficial</span><span class="ng-fr">Outil officiel</span></span>
+      <p><span class="ng-pt">Simulador do Service-Public: <em>Poderá beneficiar do reagrupamento familiar?</em> — gratuito, sem inscrição, na hiperligação listada nas fontes deste dossiê.</span><span class="ng-fr">Simulateur Service-Public : <em>Pouvez-vous bénéficier du regroupement familial ?</em> — gratuit, sans inscription, via le lien listé dans les sources de ce dossier.</span></p>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="f3">
+    <h2><span class="num">03</span><span class="ng-pt">Alojamento: como é verificado</span><span class="ng-fr">Logement : comment il est vérifié</span></h2>
+    <p><span class="ng-pt">A verificação das condições de alojamento é feita no terreno. Quando o requerente ainda não dispõe da habitação no momento do pedido, o regulamento prevê que a verificação se faça com base em documentos estabelecidos e assinados pelo proprietário ou vendedor e pelo requerente, indicando a data de disponibilidade, a superfície e as características que permitam avaliar o conforto e a habitabilidade.</span><span class="ng-fr">La vérification des conditions de logement se fait sur le terrain. Lorsque le demandeur ne dispose pas encore du logement au moment de la demande, la réglementation prévoit que la vérification s'opère au vu de documents établis et signés par le propriétaire ou le vendeur et par le demandeur, mentionnant la date de disponibilité, la superficie et les caractéristiques permettant d'apprécier le confort et l'habitabilité.</span></p>
+    <p><span class="ng-pt">No fim das verificações sobre recursos e alojamento, o presidente da câmara da comuna onde a família irá residir transmite o processo ao OFII, acompanhado dos resultados e do seu parecer fundamentado. É por isso que a relação com a mairie conta.</span><span class="ng-fr">À l'issue des vérifications sur les ressources et le logement, le maire de la commune où doit résider la famille transmet le dossier à l'OFII, accompagné des résultats et de son avis motivé. C'est pourquoi la relation avec la mairie compte.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="f4">
+    <h2><span class="num">04</span><span class="ng-pt">Recursos: o que conta e o que não conta</span><span class="ng-fr">Ressources : ce qui compte et ce qui ne compte pas</span></h2>
+    <p><span class="ng-pt">São tidos em conta todos os recursos do requerente e do seu cônjuge, mas a lei exclui expressamente do cálculo determinadas prestações sociais — entre elas as prestações familiares, o rendimento de solidariedade activa, o subsídio de solidariedade específico e o subsídio equivalente de reforma. E há situações em que a condição de recursos não se aplica: é o caso de quem é titular do subsídio para adultos com deficiência ou do subsídio suplementar previsto no código da segurança social.</span><span class="ng-fr">Toutes les ressources du demandeur et de son conjoint sont prises en compte, mais la loi exclut expressément du calcul certaines prestations sociales — notamment les prestations familiales, le revenu de solidarité active, l'allocation de solidarité spécifique et l'allocation équivalent retraite. Et il existe des situations où la condition de ressources ne s'applique pas : c'est le cas des titulaires de l'allocation aux adultes handicapés ou de l'allocation supplémentaire prévue par le code de la sécurité sociale.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="f5">
+    <h2><span class="num">05</span><span class="ng-pt">Casado com um francês? A via é outra</span><span class="ng-fr">Marié à un Français ? La voie est différente</span></h2>
+    <p><span class="ng-pt">Este é o erro de procedimento que custa mais meses. Quem é cônjuge de um cidadão francês não passa pelo reagrupamento familiar: o percurso constrói-se em torno do casamento, da nacionalidade francesa do cônjuge, da realidade da vida em comum e do pedido de visto pela via consular. Escolher o procedimento errado significa instruir um processo inteiro para depois ser reencaminhado.</span><span class="ng-fr">C'est l'erreur de procédure qui coûte le plus de mois. Le conjoint d'un citoyen français ne passe pas par le regroupement familial : le parcours se construit autour du mariage, de la nationalité française du conjoint, de la réalité de la vie commune et de la demande de visa par la voie consulaire. Choisir la mauvaise procédure, c'est instruire un dossier entier pour être ensuite réorienté.</span></p>
+    <p><span class="ng-pt">O PACS, por seu lado, não produz os mesmos efeitos que o casamento em matéria de residência, embora possa ser um elemento de prova da vida privada e familiar. Não é um atalho — é um dado a juntar.</span><span class="ng-fr">Le PACS, de son côté, ne produit pas les mêmes effets que le mariage en matière de séjour, même s'il peut constituer un élément de preuve de la vie privée et familiale. Ce n'est pas un raccourci — c'est une pièce à verser au dossier.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="f6">
+    <h2><span class="num">06</span><span class="ng-pt">A escola dos filhos não depende do seu título</span><span class="ng-fr">L'école des enfants ne dépend pas de votre titre</span></h2>
+    <p><span class="ng-pt">Vale a pena escrevê-lo sem rodeios, porque é fonte de angústia desnecessária: a instrução é obrigatória em França para todas as crianças residentes no território, dos 3 aos 16 anos, independentemente da situação administrativa dos pais. A inscrição faz-se junto da mairie da comuna de residência, para o primeiro ciclo, e junto do estabelecimento ou dos serviços académicos nos níveis seguintes.</span><span class="ng-fr">Cela vaut la peine de l'écrire sans détour, car c'est une source d'angoisse inutile : l'instruction est obligatoire en France pour tous les enfants résidant sur le territoire, de 3 à 16 ans, quelle que soit la situation administrative des parents. L'inscription se fait auprès de la mairie de la commune de résidence pour le premier degré, et auprès de l'établissement ou des services académiques aux niveaux suivants.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="f7">
+    <h2><span class="num">07</span><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></h2>
+    <div class="srcs">
+      <a href="https://www.service-public.gouv.fr/simulateur/calcul/Regroupement" target="_blank" rel="noopener"><span class="ng-pt">Service-Public — Simulador: pode beneficiar do reagrupamento familiar?</span><span class="ng-fr">Service-Public — Simulateur : pouvez-vous bénéficier du regroupement familial ?</span><span class="d">service-public.gouv.fr</span></a>
+      <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042771996/" target="_blank" rel="noopener"><span class="ng-pt">Légifrance — CESEDA, regime do reagrupamento familiar (artigos L434-1 e seguintes)</span><span class="ng-fr">Légifrance — CESEDA, régime du regroupement familial (articles L434-1 et suivants)</span><span class="d">legifrance.gouv.fr</span></a>
+      <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042801422/" target="_blank" rel="noopener"><span class="ng-pt">Légifrance — Verificação das condições de alojamento (artigos R434-18 e seguintes)</span><span class="ng-fr">Légifrance — Vérification des conditions de logement (articles R434-18 et suivants)</span><span class="d">legifrance.gouv.fr</span></a>
+      <a href="https://www.immigration.interieur.gouv.fr/Info-ressources/Demarches/Formulaires-Cerfa/Le-regroupement-familial" target="_blank" rel="noopener"><span class="ng-pt">Ministério do Interior — Formulários oficiais do reagrupamento familial</span><span class="ng-fr">Ministère de l'Intérieur — Formulaires officiels du regroupement familial</span><span class="d">immigration.interieur.gouv.fr</span></a>
+      <a href="https://www.ofii.fr" target="_blank" rel="noopener"><span class="ng-pt">OFII — Depósito e acompanhamento do processo</span><span class="ng-fr">OFII — Dépôt et suivi du dossier</span><span class="d">ofii.fr</span></a>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+    <div class="disc">
+      <span class="ng-pt"><strong>Aviso.</strong> Este dossiê é informação editorial de interesse público, verificada em fontes oficiais francesas à data indicada. Não constitui aconselhamento jurídico individual e não substitui a análise do seu caso por um profissional habilitado.</span><span class="ng-fr"><strong>Avertissement.</strong> Ce dossier constitue une information éditoriale d'intérêt public, vérifiée auprès de sources officielles françaises à la date indiquée. Il ne constitue pas un conseil juridique individuel et ne remplace pas l'analyse de votre cas par un professionnel habilité.</span>
+    </div>
+
+    <div class="sign">
+      <div class="seal">AL</div>
+      <div>
+        <div class="nm"><span class="ng-pt">Por Anne Lopes</span><span class="ng-fr">Par Anne Lopes</span></div>
+        <div class="rl"><span class="ng-pt">CEO e Fundadora da The Crossing Time</span><span class="ng-fr">PDG et fondatrice de The Crossing Time</span></div>
+      </div>
+    </div>
+
+</div>
+
+<div class="cta">
+  <h4><span class="ng-pt">A sua família está em espera?</span><span class="ng-fr">Votre famille est-elle en attente ?</span></h4>
+  <p><span class="ng-pt">The Crossing Time reúne colunistas juristas que escrevem regularmente sobre direito dos estrangeiros, direito patrimonial e direito internacional.</span><span class="ng-fr">The Crossing Time réunit des chroniqueurs juristes qui écrivent régulièrement sur le droit des étrangers, le droit patrimonial et le droit international.</span></p>
+  <a class="btn" href="../index.html#colunas" target="_top"><span class="ng-pt">Ver os colunistas juristas</span><span class="ng-fr">Voir les chroniqueurs juristes</span></a>
+  <a class="btn ghost" href="https://wa.me/message/STDV3OMZM6EGL1" target="_blank" rel="noopener"><span class="ng-pt">Falar com a redacção</span><span class="ng-fr">Contacter la rédaction</span></a>
+</div>
+
+<div class="foot">
+  <span class="ng-pt">The Crossing Time · By Porta-Voz do Imigrante · Dossiê actualizado em Julho de 2026</span>
+  <span class="ng-fr">The Crossing Time · By Porta-Voz do Imigrante · Dossier mis à jour en juillet 2026</span>
+</div>
+
+<div class="share">
+  <button onclick="shareWa()" title="WhatsApp">&#9993;</button>
+  <button onclick="copyLink()" title="Copiar link">&#128279;</button>
+</div>
+
+<script>
+function goBack(){
+  if(window.parent && window.parent !== window){
+    try{ window.parent.closeMateria(); return; }catch(e){}
+  }
+  window.location.href = '../index.html#civique';
+}
+function setLang(l){
+  document.body.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  var bp = document.getElementById('b-pt'), bf = document.getElementById('b-fr');
+  if(bp) bp.className = (l === 'pt') ? 'on' : '';
+  if(bf) bf.className = (l === 'fr') ? 'on' : '';
+  try{ localStorage.setItem('tct-lang', l); }catch(e){}
+}
+(function(){
+  var saved = 'pt';
+  try{ saved = localStorage.getItem('tct-lang') || 'pt'; }catch(e){}
+  if(saved === 'fr') setLang('fr');
+})();
+function shareWa(){
+  window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' — ' + window.location.href), '_blank');
+}
+function copyLink(){
+  var u = window.location.href;
+  if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ alert('Link copiado / Lien copie'); }); }
+  else { alert(u); }
+}
+</script>
+</body>
+</html>

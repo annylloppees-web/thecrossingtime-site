@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Lyon · Incêndio Criminoso · The Crossing Time</title>
+<meta name="description" content="Três mortos em incêndio criminoso na região de Lyon. Análise editorial TCT sobre a expansão da violência ligada ao narcotráfico em França.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F5F1E8;--bg-soft:#EDE7D9;
+  --primary:#0A1628;--gold:#B8924A;--gold-light:#D4B57E;
+  --red-alert:#C73E3A;--orange-fire:#E07B3E;
+  --text:#1a1a1a;--muted:#666;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--bg);color:var(--primary);font-family:var(--sans);
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;
+}
+
+[lang-mode="pt"] .ng-fr{display:none !important;}
+[lang-mode="fr"] .ng-pt{display:none !important;}
+
+.lang-bar{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:6px;background:rgba(14,26,43,.92);padding:6px 8px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.2);backdrop-filter:blur(8px);}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:5px 11px;font-size:10px;letter-spacing:.1em;font-family:sans-serif;cursor:pointer;border-radius:3px;transition:all .2s;font-weight:500;}
+.lang-btn:hover{color:#fff;}
+.lang-btn.active{background:rgba(198,161,91,.2);border-color:#C6A15B;color:#C6A15B;font-weight:600;}
+
+.art-back{position:fixed;top:1rem;left:1rem;z-index:100;background:rgba(14,26,43,.9);backdrop-filter:blur(8px);color:#F4F2ED;border:none;border-radius:999px;padding:8px 16px 8px 12px;font-family:sans-serif;font-size:11px;letter-spacing:.1em;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 12px rgba(0,0,0,.2);transition:all .2s;font-weight:600;text-transform:uppercase;text-decoration:none;}
+.art-back svg{width:14px;height:14px;stroke:#C6A15B;stroke-width:2.5;fill:none;}
+.art-back:hover{background:#0E1A2B;transform:translateX(-2px);}
+
+/* Alert bar */
+.alert-bar{height:6px;width:100%;background:linear-gradient(90deg,var(--red-alert) 0%,var(--orange-fire) 100%);}
+
+/* HERO */
+.hero{position:relative;background:linear-gradient(135deg,#0A1628 0%,#1a2e4a 50%,#0A1628 100%);color:#F5F1E8;padding:5rem 1.5rem 4rem;overflow:hidden;}
+.hero::before,.hero::after{content:"";position:absolute;border:1px solid rgba(184,146,74,.1);border-radius:50%;pointer-events:none;}
+.hero::before{top:-150px;right:-150px;width:500px;height:500px;}
+.hero::after{bottom:-200px;left:-200px;width:600px;height:600px;border-color:rgba(199,62,58,.1);}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--red-alert);font-weight:600;margin-bottom:1.75rem;padding:.5rem 1rem;background:rgba(199,62,58,.1);border:1px solid rgba(199,62,58,.3);border-radius:999px;}
+.hero-eyebrow::before{content:"";width:8px;height:8px;background:var(--red-alert);border-radius:50%;animation:pulse-red 2s ease-in-out 4;}
+@keyframes pulse-red{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.1;margin-bottom:1.5rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero h1 .red-word{color:var(--red-alert);font-style:italic;}
+.lead{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.6;color:rgba(245,241,232,.85);font-style:italic;font-family:var(--serif);max-width:780px;margin-bottom:2rem;}
+.byline{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(184,146,74,.2);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,241,232,.6);font-weight:500;}
+.byline span{display:flex;align-items:center;gap:.4rem;}
+.byline span::before{content:"";width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block;}
+
+/* ARTICLE */
+.article{max-width:760px;margin:0 auto;padding:4rem 1.5rem 5rem;}
+.article h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;line-height:1.2;margin:3rem 0 1.25rem;color:var(--primary);}
+.article h2 em{color:var(--gold);font-style:italic;}
+.article p{font-family:var(--serif);font-size:1.15rem;line-height:1.75;color:#333;margin-bottom:1.4rem;}
+.article p.dropcap::first-letter{font-size:4.5rem;float:left;line-height:.85;padding-right:.5rem;font-weight:500;color:var(--gold);font-family:var(--serif);}
+
+.tct-sep{display:flex;align-items:center;justify-content:center;margin:3rem 0;gap:1rem;}
+.tct-sep-line{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(184,146,74,.4),transparent);max-width:120px;}
+.tct-sep-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);}
+
+.svg-cover{margin:2rem 0;border-radius:6px;overflow:hidden;box-shadow:0 6px 24px rgba(10,22,40,.15);}
+.svg-cover img{display:block;width:100%;height:auto;}
+.photo-caption{font-size:.85rem;color:var(--muted);font-style:italic;text-align:center;margin-top:.75rem;padding:0 1rem;font-family:var(--sans);letter-spacing:.02em;}
+.photo-caption strong{display:block;color:var(--primary);font-style:normal;font-weight:600;font-family:var(--sans);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.25rem;}
+
+.callout{margin:2.5rem 0;padding:1.75rem 2rem;background:#fff;border-left:3px solid var(--red-alert);border-radius:4px;box-shadow:0 4px 16px rgba(10,22,40,.06);}
+.callout-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--red-alert);font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;}
+.callout-label::before{content:"";width:6px;height:6px;background:var(--red-alert);border-radius:50%;}
+.callout-text{font-family:var(--serif);font-size:1.1rem;line-height:1.65;color:var(--primary);font-style:italic;}
+
+.big-number{margin:2.5rem 0;padding:2.5rem 2rem;background:linear-gradient(135deg,#0A1628 0%,#1a2e4a 100%);color:#F5F1E8;border-radius:6px;text-align:center;position:relative;overflow:hidden;}
+.big-number::before{content:"";position:absolute;top:-40px;right:-40px;width:150px;height:150px;border:1px solid rgba(184,146,74,.15);border-radius:50%;}
+.big-number-label{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1rem;position:relative;z-index:1;}
+.big-number-value{font-family:var(--serif);font-size:clamp(3rem,8vw,5rem);font-weight:300;line-height:1;color:#fff;margin-bottom:.75rem;position:relative;z-index:1;}
+.big-number-value em{color:var(--gold);font-style:italic;}
+.big-number-text{font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(245,241,232,.85);line-height:1.5;max-width:480px;margin:0 auto;position:relative;z-index:1;}
+
+.tct-list{margin:1.5rem 0;padding-left:0;list-style:none;}
+.tct-list li{font-family:var(--serif);font-size:1.1rem;line-height:1.6;color:#333;margin-bottom:.85rem;padding-left:1.75rem;position:relative;}
+.tct-list li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:1px;background:var(--gold);}
+
+.cities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2rem 0;}
+.city-card{background:#fff;padding:1.5rem 1.25rem;border-radius:6px;border-left:2px solid var(--red-alert);box-shadow:0 2px 8px rgba(10,22,40,.05);}
+.city-name{font-family:var(--serif);font-size:1.4rem;font-weight:500;color:var(--primary);margin-bottom:.4rem;}
+.city-desc{font-size:.85rem;color:#666;font-family:var(--sans);}
+
+.pull-quote{margin:3rem 0;padding:2rem 1.5rem;text-align:center;border-top:1px solid rgba(184,146,74,.2);border-bottom:1px solid rgba(184,146,74,.2);}
+.pull-quote-text{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--primary);}
+.pull-quote-text em{color:var(--gold);}
+
+.article-meta{margin-top:4rem;padding:2rem 0;border-top:1px solid rgba(184,146,74,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-family:var(--sans);font-weight:500;}
+
+@media (max-width:640px){
+  .hero{padding:3.5rem 1rem 3rem;}
+  .article{padding:2.5rem 1rem 3rem;}
+}
+</style>
+
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="alert-bar"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="ng-pt">Segurança urbana · França</span><span class="ng-fr">Sécurité urbaine · France</span>
+    </div>
+    <h1>
+      <span class="ng-pt">Incêndio <span class="red-word">criminoso</span> deixa <em>três mortos</em> em Lyon e reacende alerta sobre o narcotráfico</span>
+      <span class="ng-fr">Incendie <span class="red-word">criminel</span> fait <em>trois morts</em> à Lyon et ravive l'alerte sur le narcotrafic</span>
+    </h1>
+    <p class="lead">
+      <span class="ng-pt">Episódio em prédio residencial na periferia de Lyon coloca a França diante de uma realidade urbana cada vez mais marcada por conflitos entre redes criminosas. Especialistas alertam para a expansão da violência ligada ao tráfico de drogas além das grandes metrópoles tradicionais.</span>
+      <span class="ng-fr">L'épisode dans un immeuble résidentiel à la périphérie de Lyon place la France face à une réalité urbaine de plus en plus marquée par les conflits entre réseaux criminels. Les experts alertent sur l'expansion de la violence liée au trafic de drogue au-delà des grandes métropoles traditionnelles.</span>
+    </p>
+    <div class="byline">
+      <span><span class="ng-pt">Edição editorial · The Crossing Time</span><span class="ng-fr">Édition éditoriale · The Crossing Time</span></span>
+      <span><span class="ng-pt">12 Maio 2026</span><span class="ng-fr">12 Mai 2026</span></span>
+      <span><span class="ng-pt">Tempo de leitura: 6 minutos</span><span class="ng-fr">Temps de lecture : 6 minutes</span></span>
+    </div>
+  </div>
+</section>
+
+<article class="article">
+  
+  <p class="dropcap">
+    <span class="ng-pt">A França voltou a enfrentar um episódio de violência urbana que levanta preocupações sobre o avanço de conflitos ligados ao narcotráfico em áreas residenciais. Na manhã de segunda-feira, três pessoas morreram após um incêndio criminoso atingir um prédio residencial na região metropolitana de Lyon. As autoridades francesas investigam a possibilidade de um acerto de contas relacionado ao tráfico de drogas.</span>
+    <span class="ng-fr">La France a de nouveau fait face à un épisode de violence urbaine qui soulève des inquiétudes sur l'avancée des conflits liés au narcotrafic dans des zones résidentielles. Lundi matin, trois personnes sont mortes après un incendie criminel ayant frappé un immeuble résidentiel dans la région métropolitaine de Lyon. Les autorités françaises enquêtent sur la possibilité d'un règlement de comptes lié au trafic de drogue.</span>
+  </p>
+
+  <h2><span class="ng-pt">O que <em>aconteceu</em></span><span class="ng-fr">Ce qui <em>s'est passé</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">O incêndio ocorreu durante a madrugada em um edifício residencial localizado na periferia de Lyon. Segundo informações preliminares, o fogo teria sido provocado de forma intencional, moradores ficaram presos no interior do prédio e equipes de emergência foram mobilizadas rapidamente.</span>
+    <span class="ng-fr">L'incendie s'est produit pendant la nuit dans un immeuble résidentiel situé en périphérie de Lyon. Selon les informations préliminaires, le feu aurait été provoqué de manière intentionnelle, des résidents ont été pris au piège à l'intérieur de l'immeuble et les équipes d'urgence ont été rapidement mobilisées.</span>
+  </p>
+  
+  <ul class="tct-list">
+    <li><span class="ng-pt">Fogo iniciado intencionalmente durante a madrugada</span><span class="ng-fr">Incendie déclenché intentionnellement pendant la nuit</span></li>
+    <li><span class="ng-pt">Moradores presos no interior do edifício</span><span class="ng-fr">Résidents piégés à l'intérieur du bâtiment</span></li>
+    <li><span class="ng-pt">Equipes de emergência mobilizadas rapidamente</span><span class="ng-fr">Équipes d'urgence rapidement mobilisées</span></li>
+    <li><span class="ng-pt">Apesar da intervenção dos bombeiros, três pessoas morreram no local</span><span class="ng-fr">Malgré l'intervention des pompiers, trois personnes sont mortes sur place</span></li>
+    <li><span class="ng-pt">Outros moradores precisaram ser evacuados às pressas</span><span class="ng-fr">D'autres résidents ont dû être évacués en urgence</span></li>
+  </ul>
+
+  <!-- FOTO 1 — BOMBEIROS NO COMBATE -->
+  <div class="svg-cover">
+    <img src="https://images.unsplash.com/photo-1741024177806-e05b6dff2277?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="Bombeiros combatendo incêndio em edifício" loading="lazy">
+    <p class="photo-caption">
+      <strong><span class="ng-pt">A intervenção</span><span class="ng-fr">L'intervention</span></strong>
+      <span class="ng-pt">Bombeiros enfrentam incêndio em edifício residencial — imagem ilustrativa do tipo de operação de emergência mobilizada em casos de fogo criminoso urbano. Foto: Ulises Escobar · Unsplash.</span>
+      <span class="ng-fr">Pompiers face à un incendie dans un immeuble résidentiel — image illustrative du type d'opération d'urgence mobilisée dans les cas d'incendies criminels urbains. Photo : Ulises Escobar · Unsplash.</span>
+    </p>
+  </div>
+
+  <h2><span class="ng-pt">Hipótese de ligação com <em>o narcotráfico</em></span><span class="ng-fr">Hypothèse de lien avec <em>le narcotrafic</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">Os investigadores analisam a possibilidade de que o incêndio esteja relacionado a disputas entre grupos ligados ao tráfico de drogas. A hipótese ganhou força à medida que os primeiros indícios apontaram para um ataque deliberado e direcionado, com modus operandi semelhante a outros episódios recentes em zonas controladas por redes criminosas.</span>
+    <span class="ng-fr">Les enquêteurs analysent la possibilité que l'incendie soit lié à des disputes entre groupes liés au trafic de drogue. L'hypothèse s'est renforcée à mesure que les premiers indices ont pointé vers une attaque délibérée et ciblée, avec un modus operandi similaire à d'autres épisodes récents dans des zones contrôlées par les réseaux criminels.</span>
+  </p>
+  
+  <p>
+    <span class="ng-pt">Nos últimos anos, diferentes regiões da França vêm enfrentando aumento da violência urbana, confrontos entre redes criminosas e ataques em bairros residenciais. Especialistas alertam que os métodos utilizados por organizações criminosas têm se tornado cada vez mais agressivos.</span>
+    <span class="ng-fr">Ces dernières années, différentes régions de France ont fait face à une augmentation de la violence urbaine, à des affrontements entre réseaux criminels et à des attaques dans des quartiers résidentiels. Les experts alertent que les méthodes utilisées par les organisations criminelles sont devenues de plus en plus agressives.</span>
+  </p>
+
+  <div class="big-number">
+    <div class="big-number-label"><span class="ng-pt">A dimensão</span><span class="ng-fr">La dimension</span></div>
+    <div class="big-number-value"><em>3</em></div>
+    <div class="big-number-text">
+      <span class="ng-pt">mortos confirmados num único episódio — número que sublinha a gravidade do método utilizado e a escalada da violência ligada ao crime organizado em França.</span>
+      <span class="ng-fr">morts confirmés en un seul épisode — chiffre qui souligne la gravité de la méthode utilisée et l'escalade de la violence liée au crime organisé en France.</span>
+    </div>
+  </div>
+
+  <h2><span class="ng-pt">Cidades francesas <em>sob pressão</em></span><span class="ng-fr">Villes françaises <em>sous pression</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">Casos ligados ao narcotráfico deixaram de ser concentrados apenas em grandes centros tradicionais. Regiões periféricas de várias cidades francesas registam aumento de episódios violentos associados ao controlo territorial e às disputas criminosas.</span>
+    <span class="ng-fr">Les cas liés au narcotrafic ne sont plus concentrés uniquement dans les grands centres traditionnels. Les régions périphériques de plusieurs villes françaises enregistrent une augmentation d'épisodes violents associés au contrôle territorial et aux disputes criminelles.</span>
+  </p>
+
+  <div class="cities-grid">
+    <div class="city-card">
+      <div class="city-name">Marselha</div>
+      <div class="city-desc"><span class="ng-pt">Epicentro histórico do narcotráfico no sul de França.</span><span class="ng-fr">Épicentre historique du narcotrafic dans le sud de la France.</span></div>
+    </div>
+    <div class="city-card">
+      <div class="city-name">Lyon</div>
+      <div class="city-desc"><span class="ng-pt">Crescente atividade criminosa nas zonas periféricas.</span><span class="ng-fr">Activité criminelle croissante dans les zones périphériques.</span></div>
+    </div>
+    <div class="city-card">
+      <div class="city-name">Paris</div>
+      <div class="city-desc"><span class="ng-pt">Banlieues registam tensão crescente entre redes rivais.</span><span class="ng-fr">Les banlieues enregistrent une tension croissante entre réseaux rivaux.</span></div>
+    </div>
+  </div>
+
+  <!-- FOTO 2 — BOMBEIRO E FOGO -->
+  <div class="svg-cover">
+    <img src="https://images.unsplash.com/photo-1563062067-723c14a7c7ba?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="Bombeiro no interior de edifício em chamas" loading="lazy">
+    <p class="photo-caption">
+      <strong><span class="ng-pt">O custo humano</span><span class="ng-fr">Le coût humain</span></strong>
+      <span class="ng-pt">Bombeiro no interior de edifício em chamas — imagem ilustrativa da realidade enfrentada pelas equipas de emergência em ataques contra zonas residenciais. Foto: Jay Heike · Unsplash.</span>
+      <span class="ng-fr">Pompier à l'intérieur d'un bâtiment en flammes — image illustrative de la réalité affrontée par les équipes d'urgence dans les attaques contre des zones résidentielles. Photo : Jay Heike · Unsplash.</span>
+    </p>
+  </div>
+
+  <h2><span class="ng-pt">Impacto na <em>população</em></span><span class="ng-fr">Impact sur <em>la population</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">Além das vítimas fatais, o episódio gerou forte impacto entre moradores da região. O medo crescente da violência urbana levanta discussões sobre segurança pública, atuação policial e vulnerabilidade de bairros residenciais antes considerados pacíficos.</span>
+    <span class="ng-fr">Au-delà des victimes fatales, l'épisode a généré un fort impact parmi les résidents de la région. La peur croissante de la violence urbaine soulève des discussions sur la sécurité publique, l'action policière et la vulnérabilité des quartiers résidentiels autrefois considérés comme pacifiques.</span>
+  </p>
+
+  <div class="callout">
+    <div class="callout-label"><span class="ng-pt">O dilema editorial</span><span class="ng-fr">Le dilemme éditorial</span></div>
+    <p class="callout-text">
+      <span class="ng-pt">Quando a violência criminal deixa de ser exceção e entra na rotina das cidades, o debate público é forçado a escolher: aceitar a normalização ou repensar profundamente o modelo de proteção dos espaços residenciais.</span>
+      <span class="ng-fr">Quand la violence criminelle cesse d'être l'exception et entre dans la routine des villes, le débat public est forcé de choisir : accepter la normalisation ou repenser profondément le modèle de protection des espaces résidentiels.</span>
+    </p>
+  </div>
+
+  <h2><span class="ng-pt">França endurece <em>combate ao crime organizado</em></span><span class="ng-fr">La France durcit <em>la lutte contre le crime organisé</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">O governo francês vem ampliando operações contra redes criminosas, especialmente relacionadas ao narcotráfico. As autoridades reforçam que as organizações criminosas estão mais estruturadas, o uso de violência extrema aumentou e os conflitos urbanos representam um desafio nacional crescente.</span>
+    <span class="ng-fr">Le gouvernement français élargit ses opérations contre les réseaux criminels, notamment liés au narcotrafic. Les autorités soulignent que les organisations criminelles sont plus structurées, l'utilisation de la violence extrême a augmenté et les conflits urbains représentent un défi national croissant.</span>
+  </p>
+
+  <div class="pull-quote">
+    <p class="pull-quote-text">
+      <span class="ng-pt">"Quando o fogo entra <em>em casa</em>, a fronteira entre crime organizado e tecido urbano deixa de existir."</span>
+      <span class="ng-fr">"Quand le feu entre <em>à la maison</em>, la frontière entre crime organisé et tissu urbain cesse d'exister."</span>
+    </p>
+  </div>
+
+  <div class="tct-sep">
+    <div class="tct-sep-line"></div>
+    <div class="tct-sep-diamond"></div>
+    <div class="tct-sep-line"></div>
+  </div>
+
+  <h2><span class="ng-pt">Conclusão</span><span class="ng-fr">Conclusion</span></h2>
+  
+  <p>
+    <span class="ng-pt">O incêndio criminoso na região de Lyon vai além de um caso isolado. Ele revela um cenário mais amplo: a expansão da violência ligada ao narcotráfico, a tensão crescente em áreas urbanas e uma insegurança que atinge diretamente moradores comuns, alheios às disputas das redes criminosas.</span>
+    <span class="ng-fr">L'incendie criminel dans la région de Lyon va au-delà d'un cas isolé. Il révèle un scénario plus large : l'expansion de la violence liée au narcotrafic, la tension croissante dans les zones urbaines et une insécurité qui atteint directement les résidents ordinaires, étrangers aux disputes des réseaux criminels.</span>
+  </p>
+  
+  <p>
+    <span class="ng-pt">A França enfrenta hoje não apenas uma questão criminal, mas um desafio social e urbano de grande escala — onde a resposta pública precisará combinar inteligência, presença policial e uma nova arquitetura de proteção dos bairros residenciais.</span>
+    <span class="ng-fr">La France affronte aujourd'hui non seulement une question criminelle, mais un défi social et urbain de grande échelle — où la réponse publique devra combiner intelligence, présence policière et une nouvelle architecture de protection des quartiers résidentiels.</span>
+  </p>
+
+  <div class="article-meta">
+    <span><span class="ng-pt">Segurança &amp; Sociedade</span><span class="ng-fr">Sécurité &amp; Société</span></span>
+    <span><span class="ng-pt">Alerta urbano · Maio 2026</span><span class="ng-fr">Alerte urbaine · Mai 2026</span></span>
+  </div>
+
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vagas e Empregos na França — sites de busca e agências de intérim · The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#071a3d;--navy2:#0c2452;--gold:#B8924A;--gold2:#c7a45a;--off:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a;--red:#b3261e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--off);color:var(--ink);font-family:'Lora',serif;line-height:1.75;font-size:18px}
+  .topbar{background:var(--navy);color:var(--off);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .topbar .brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:3px;font-size:15px}
+  .topbar .brand span{color:var(--gold2)}
+  .topbar .ed{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gold2);text-transform:uppercase}
+  .hero{position:relative;width:100%;max-height:76vh;overflow:hidden;background:var(--navy)}
+  .hero img{width:100%;height:76vh;object-fit:cover;object-position:center 50%;display:block}
+  .hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,61,.40) 0%,rgba(7,26,61,.22) 40%,rgba(7,26,61,.95) 100%)}
+  .hero .htext{position:absolute;left:0;right:0;bottom:0;padding:46px 24px 36px;max-width:980px;margin:0 auto}
+  .kicker{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:12px}
+  .badge{display:inline-block;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;padding:5px 12px;border-radius:2px;background:var(--red);color:#fff;margin-bottom:14px}
+  .hero h1{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:clamp(27px,4vw,45px);line-height:1.2;margin-bottom:14px}
+  .hero .sub{color:#e8e2d4;font-size:clamp(16px,2vw,20px);font-style:italic;line-height:1.5;max-width:850px;margin-bottom:10px}
+  .hero .cred{font-family:'Poppins',sans-serif;font-size:11px;color:#9aa6c0;letter-spacing:.8px}
+  .thero{background:linear-gradient(170deg,var(--navy) 0%,var(--navy2) 70%,#101c3a 100%);color:#fff;padding:72px 24px 64px}
+  .thero .inner{max-width:920px;margin:0 auto;border-top:1px solid rgba(199,164,90,.55);border-bottom:1px solid rgba(199,164,90,.55);padding:50px 32px 46px;text-align:center}
+  .thero .dia{color:var(--gold2);font-size:20px;letter-spacing:6px;margin-bottom:22px}
+  .thero .kicker{margin-bottom:20px}
+  .thero h1{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:clamp(24px,3.5vw,38px);line-height:1.25;margin-bottom:16px}
+  .thero .sub{color:#dcd6c6;font-size:clamp(15.5px,1.8vw,19px);font-style:italic;line-height:1.55;max-width:800px;margin:0 auto 30px}
+  .thero .nomes{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px;font-family:'Poppins',sans-serif;border-top:1px solid rgba(199,164,90,.35);max-width:820px;margin:0 auto}
+  .thero .n{text-align:center;padding:18px 8px 4px}
+  .thero .n .nm{font-family:'Lora',serif;font-style:italic;font-weight:600;color:var(--gold2);font-size:18px;line-height:1.3}
+  .thero .n .st{font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:#9aa6c0;margin-top:7px;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  .byline{display:flex;align-items:center;gap:14px;padding:30px 0 12px;border-bottom:1px solid rgba(7,26,61,.15)}
+  .byline .mono{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;flex-shrink:0}
+  .byline .who{font-family:'Poppins',sans-serif}
+  .byline .who b{display:block;font-size:15px;font-weight:600;color:var(--navy)}
+  .byline .who span{font-size:12.5px;color:#5a5a5a;letter-spacing:.4px}
+  .meta{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:1.4px;text-transform:uppercase;padding:14px 0 8px;display:flex;flex-wrap:wrap;gap:8px 18px}
+  .meta b{color:var(--wine);font-weight:600}
+  article{padding:26px 0 10px}
+  article p{margin-bottom:22px}
+  .lead{font-size:20.5px;line-height:1.7}
+  .lead::first-letter{font-family:'Lora',serif;font-weight:700;font-size:74px;line-height:.8;float:left;padding:8px 12px 0 0;color:var(--gold)}
+  .sec{margin:52px 0 24px}
+  .sec .num{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+  .sec h2{font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:clamp(24px,3vw,32px);line-height:1.25}
+  figure{margin:34px 0}
+  figure img{width:100%;display:block;border-radius:3px}
+  figure.narrow{max-width:420px;margin-left:auto;margin-right:auto}
+  figure.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+  @media(max-width:640px){figure.duo{grid-template-columns:1fr}}
+  figcaption{font-family:'Poppins',sans-serif;font-size:12.5px;color:#6a6a6a;padding-top:10px;line-height:1.5;grid-column:1/-1}
+  figcaption b{color:var(--navy)}
+  .quote{background:var(--navy);color:var(--off);border-left:5px solid var(--gold);padding:28px 30px;margin:36px 0;border-radius:3px}
+  .quote p{font-size:20px;font-style:italic;line-height:1.55;margin:0}
+  .quote .attr{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold2);margin-top:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:36px 0}
+  .card{background:#fff;border-top:4px solid var(--gold);border-radius:3px;padding:20px 18px}
+  .card .big{font-family:'Poppins',sans-serif;font-weight:700;font-size:25px;color:var(--navy);line-height:1.15}
+  .card .lbl{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:.8px;text-transform:uppercase;margin-top:8px;line-height:1.45}
+  .chart{background:#fff;border:1px solid rgba(184,146,74,.45);border-radius:3px;padding:26px 28px;margin:36px 0}
+  .chart h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:6px}
+  .chart .sub{font-family:'Poppins',sans-serif;font-size:12px;color:#7a7a7a;margin-bottom:18px}
+  .bar{margin-bottom:14px}
+  .bar .lb{font-family:'Poppins',sans-serif;font-size:13px;color:#3a3a3a;margin-bottom:5px;display:flex;justify-content:space-between;gap:12px}
+  .bar .lb b{color:var(--navy);white-space:nowrap}
+  .bar .tr{background:rgba(7,26,61,.07);border-radius:2px;height:22px;overflow:hidden}
+  .bar .fl{height:100%;background:linear-gradient(90deg,var(--gold) 0%,var(--wine) 100%);border-radius:2px}
+  .bar.hl .fl{background:linear-gradient(90deg,var(--wine) 0%,var(--red) 100%)}
+  .chart .note{font-family:'Poppins',sans-serif;font-size:11.5px;color:#8a8a8a;margin-top:14px;line-height:1.6;font-style:italic}
+  .crit{background:#fff;border:1px solid rgba(184,146,74,.45);border-radius:3px;padding:26px 28px;margin:36px 0}
+  .crit h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:16px}
+  .crit .item{display:flex;gap:14px;padding:9px 0;border-bottom:1px solid rgba(7,26,61,.08);font-size:16px;line-height:1.6}
+  .crit .item:last-child{border-bottom:none}
+  .crit .d{color:var(--gold);font-weight:700;flex-shrink:0}
+  .timeline{margin:36px 0;border-left:3px solid var(--gold);padding-left:26px}
+  .tl{position:relative;padding-bottom:22px}
+  .tl:last-child{padding-bottom:4px}
+  .tl::before{content:'';position:absolute;left:-34px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--navy);border:3px solid var(--gold)}
+  .tl .d{font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;letter-spacing:1.6px;color:var(--wine);text-transform:uppercase;margin-bottom:4px}
+  .tl .t{font-size:16.5px;line-height:1.6}
+  .servbox{background:#fff;border:1px solid rgba(184,146,74,.45);border-radius:3px;padding:26px 28px;margin:36px 0}
+  .servbox h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--wine);text-transform:uppercase;margin-bottom:12px}
+  .servbox p{font-size:16.5px;margin-bottom:10px}
+  .servbox p:last-child{margin-bottom:0}
+  .rednote{background:rgba(139,38,53,.07);border-left:4px solid var(--wine);padding:24px 26px;margin:44px 0 0;border-radius:3px}
+  .rednote h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--wine);text-transform:uppercase;margin-bottom:12px}
+  .rednote p{font-size:15.5px;line-height:1.7;margin-bottom:10px}
+  .rednote p:last-child{margin-bottom:0}
+  .ednote{background:rgba(7,26,61,.05);border-left:4px solid var(--navy);padding:24px 26px;margin:32px 0 28px;border-radius:3px}
+  .ednote h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:12px}
+  .ednote p{font-size:15px;line-height:1.7;color:#3a3a3a;margin-bottom:12px}
+  .ednote p:last-child{margin-bottom:0}
+  .imgdisc{border-top:1px solid rgba(7,26,61,.15);padding:22px 0;margin-top:8px}
+  .imgdisc p{font-family:'Poppins',sans-serif;font-size:12px;color:#7a7a7a;line-height:1.65;margin-bottom:8px}
+  .imgdisc p:last-child{margin-bottom:0;font-style:italic}
+  .pilares{background:var(--navy);color:var(--gold2);text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:4px;font-size:14px}
+  .sitefoot{background:var(--navy2);color:#cfc8b8;text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-size:12.5px;line-height:2}
+  .sitefoot b{color:#fff;letter-spacing:2px}
+  .sitefoot span{color:var(--gold2)}
+  .lista{margin:30px 0 34px;padding-left:0;list-style:none}
+  .lista li{position:relative;padding-left:26px;margin-bottom:11px;font-size:16.5px;line-height:1.65}
+  .lista li::before{content:'\25C6';position:absolute;left:0;top:0;color:var(--gold);font-size:12px}
+  figure.orig img{max-width:100%;width:auto;margin:0 auto;display:block}
+  .appeal{background:linear-gradient(170deg,var(--navy) 0%,var(--navy2) 70%,#101c3a 100%);color:#fff;padding:34px 24px 38px;border-bottom:4px solid var(--gold)}
+  .appeal .inner{max-width:900px;margin:0 auto}
+  .appeal .alert{display:inline-block;background:var(--wine);color:#fff;font-family:'Poppins',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:3px;text-transform:uppercase;padding:8px 16px;border-radius:2px;margin-bottom:22px}
+  .appeal .cols{display:grid;grid-template-columns:250px 1fr;gap:26px;align-items:start}
+  @media(max-width:640px){.appeal .cols{grid-template-columns:1fr}}
+  .appeal .ph img{width:100%;display:block;border-radius:3px;border:3px solid var(--gold)}
+  .appeal .dt{font-family:'Poppins',sans-serif}
+  .appeal .nm{font-family:'Lora',serif;font-weight:700;font-size:clamp(24px,3.2vw,34px);color:#fff;line-height:1.2;margin-bottom:16px}
+  .appeal .row{display:flex;gap:10px;flex-wrap:wrap;padding:7px 0;border-bottom:1px solid rgba(199,164,90,.25);font-size:13.5px}
+  .appeal .row span{color:#9aa6c0;text-transform:uppercase;letter-spacing:1.4px;font-size:11px;min-width:130px;padding-top:2px}
+  .appeal .row b{color:#fff;font-weight:600;flex:1;min-width:180px}
+  .appeal .tel{margin-top:16px;font-size:13.5px;color:#e8e2d4;line-height:1.9}
+  .appeal .tel b{color:var(--gold2);font-size:16px}
+  .mainh{font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:clamp(26px,3.8vw,40px);line-height:1.22;padding-top:34px}
+  .mainsub{font-size:clamp(16px,2vw,19.5px);font-style:italic;color:#4a4a4a;line-height:1.6;margin-top:14px}
+  .updated{background:rgba(139,38,53,.08);border:1px solid rgba(139,38,53,.3);border-radius:3px;padding:16px 22px;margin:0 0 30px;font-family:'Poppins',sans-serif;font-size:13px;color:#5a5a5a;line-height:1.7}
+  .updated b{color:var(--wine)}
+  .dir{margin:30px 0 40px;border-top:2px solid var(--navy)}
+  .dir .row{display:grid;grid-template-columns:200px 1fr;gap:18px;padding:16px 4px;border-bottom:1px solid rgba(7,26,61,.11);align-items:start}
+  @media(max-width:640px){.dir .row{grid-template-columns:1fr;gap:4px}}
+  .dir .nm{font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;color:var(--navy);line-height:1.35}
+  .dir .nm em{display:block;font-family:'Lora',serif;font-style:italic;font-weight:400;font-size:13px;color:var(--gold);margin-top:3px;letter-spacing:.2px}
+  .dir .ds{font-size:15.5px;line-height:1.65;color:#3a3a3a}
+  .dir .ds b{color:var(--navy)}
+  .dir .tag{display:inline-block;font-family:'Poppins',sans-serif;font-size:10px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:#fff;background:var(--gold);padding:3px 9px;border-radius:2px;margin-right:6px;vertical-align:2px}
+  .dir .tag.free{background:#2e7d4f}
+  .dir .tag.pt{background:var(--wine)}
+  .dirhead{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--gold);padding:26px 0 6px}
+  .alert{background:var(--wine);color:#fff;border-radius:3px;padding:28px 30px;margin:40px 0}
+  .alert h3{font-family:'Poppins',sans-serif;font-size:14px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;margin-bottom:16px;color:#fff}
+  .alert p{font-size:16.5px;line-height:1.7;margin-bottom:12px}
+  .alert p:last-child{margin-bottom:0}
+  .alert b{color:#f5d99b}
+</style>
+</head>
+<body data-lang="pt">
+<div id="tct-voltar" onclick="if(window.parent&&window.parent!==window){try{window.parent.closeMateria();}catch(e){window.location.href='../index.html#missing';}}else{window.location.href='../index.html#missing';}" style="position:fixed;top:12px;left:12px;z-index:99999;cursor:pointer;font-family:'Poppins','Jost',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:rgba(7,26,61,.9);color:#c7a45a;border:1px solid rgba(184,146,74,.6);padding:9px 15px;border-radius:2px;backdrop-filter:blur(4px);user-select:none;box-shadow:0 2px 10px rgba(0,0,0,.25);">&#8249;&nbsp;Voltar ao site</div>
+
+<div class="topbar">
+  <div class="brand">THE CROSSING <span>TIME</span></div>
+  <div class="ed">Vagas &amp; Empregos · Página viva · Atualizada em 12/08/2026</div>
+</div>
+
+<div class="thero">
+  <div class="inner">
+    <div class="dia">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>
+    <div class="kicker">França · Emprego · Diretório verificado</div>
+    <h1>Onde procurar vaga na França: os sites e as agências de intérim que realmente funcionam</h1>
+    <div class="sub">Diretório dos portais de emprego, das maiores redes de trabalho temporário e dos canais setoriais — com o que cada um serve, para quem, e como não cair em golpe</div>
+    <div class="nomes">
+      <div class="n">
+        <div class="nm">3 sites</div>
+        <div class="st">Bem acompanhados valem mais<br>que dez abertos ao acaso</div>
+      </div>
+      <div class="n">
+        <div class="nm">Intérim</div>
+        <div class="st">Principal porta de entrada —<br>e as missões contam para<br>a regularização</div>
+      </div>
+      <div class="n">
+        <div class="nm">Gratuito</div>
+        <div class="st">Nenhum canal desta página<br>cobra do candidato.<br>Quem cobra, é golpe</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="byline">
+    <div class="mono">AL</div>
+    <div class="who">
+      <b>Por Anne Lopes</b>
+      <span>CEO e Fundadora da THE CROSSING TIME</span>
+    </div>
+  </div>
+  <div class="meta">
+    <span>Quarta-feira, <b>12 de agosto de 2026</b></span>
+    <span>Página viva · atualizações periódicas</span>
+    <span>Tempo de leitura: 12 min</span>
+  </div>
+
+  <article>
+
+    <div class="updated">
+      <b>PÁGINA VIVA.</b> Este diretório é atualizado periodicamente pela redação. <b>Última revisão: 12 de agosto de 2026.</b> Sugestões de canais, correções de links e relatos de experiência podem ser enviados à redação pelo WhatsApp indicado no rodapé — verificamos antes de publicar.
+    </div>
+
+    <p class="lead">Esta página não é uma lista de anúncios. É o <strong>mapa dos canais</strong> onde as vagas realmente estão publicadas na França — e a explicação de para quem cada um serve.</p>
+
+    <p>A razão é simples e vale ser dita: anúncios individuais expiram em dias, e a redação não tem como verificar a autenticidade de cada um. Páginas que prometem "vagas para brasileiros na Europa" são um dos vetores mais frequentes de golpe contra a nossa comunidade. O que oferecemos aqui são <strong>instituições e empresas verificáveis</strong>, que você pode conferir sozinha.</p>
+
+    <div class="sec">
+      <div class="num">I · O método</div>
+      <h2>Três sites, bem acompanhados</h2>
+    </div>
+
+    <p>O erro mais comum de quem procura emprego na França é abrir dez portais e acompanhar nenhum. A recomendação convergente dos especialistas do mercado francês é outra: <strong>escolher três e configurá-los bem</strong>.</p>
+
+    <div class="crit">
+      <h3>A combinação que funciona</h3>
+      <div class="item"><span class="d">&#9670;</span><span><strong>Um portal-base</strong> — France Travail. Cobre todos os ofícios, é público e gratuito, e é onde ficam seus direitos e formações;</span></div>
+      <div class="item"><span class="d">&#9670;</span><span><strong>Um agregador de volume</strong> — Indeed ou HelloWork. Serve para varrer o mercado rapidamente;</span></div>
+      <div class="item"><span class="d">&#9670;</span><span><strong>Um canal do seu perfil</strong> — APEC se você é <em>cadre</em>, um portal setorial se trabalha em restauração ou saúde, LinkedIn se quer ser encontrada.</span></div>
+      <div class="item"><span class="d">&#9670;</span><span><strong>Configure alertas precisos</strong> em cada um. Em 2026, os alertas valem mais do que a navegação manual — e <strong>as primeiras candidaturas são as mais lidas</strong>;</span></div>
+      <div class="item"><span class="d">&#9670;</span><span><strong>Deposite seu CV nas CVthèques</strong> do France Travail e do Cadremploi. Recrutadores buscam tanto quanto publicam;</span></div>
+      <div class="item"><span class="d">&#9670;</span><span><strong>Adapte cada candidatura ao vocabulário do anúncio.</strong> Muitas empresas filtram currículos por palavra-chave antes de qualquer leitura humana.</span></div>
+    </div>
+
+    <div class="sec">
+      <div class="num">II · Os portais</div>
+      <h2>Sites de busca de emprego</h2>
+    </div>
+
+    <div class="dirhead">Generalistas &#9670; comece por aqui</div>
+    <div class="dir">
+      <div class="row">
+        <div class="nm">France Travail<em>francetravail.fr</em></div>
+        <div class="ds"><span class="tag free">Público e gratuito</span> O maior site de emprego do país, com cerca de <b>8,2 milhões de visitantes únicos por mês</b>. Cobre todos os ofícios e todas as regiões. Ponto essencial para o nosso leitor: <b>mesmo quem não pode se inscrever como <em>demandeur d'emploi</em> pode criar um espaço de candidato e acessar todas as ofertas, sem condição alguma.</b> É também onde se acessam formações e direitos.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Indeed<em>indeed.fr</em></div>
+        <div class="ds"><span class="tag">Maior volume</span> Agregador: aspira anúncios de centenas de sites de empregadores, portais setoriais e páginas de carreira. É a plataforma com <b>maior número de ofertas na França</b>. Vantagem: cobertura. Desvantagem: <b>anúncios duplicados e vagas já expiradas</b> — exige triagem.</div>
+      </div>
+      <div class="row">
+        <div class="nm">HelloWork<em>hellowork.com</em></div>
+        <div class="ds"><span class="tag">Forte fora de Paris</span> Principal site de emprego francês independente, cerca de <b>3 milhões de visitantes por mês</b>. Rico em ofertas locais e em vagas <b>fora das grandes cidades</b>. Diferencial: exibe <b>faixas salariais</b> em muitos anúncios, o que é raro na França.</div>
+      </div>
+      <div class="row">
+        <div class="nm">LinkedIn<em>linkedin.com/jobs</em></div>
+        <div class="ds"><span class="tag">Visibilidade</span> Menos um mural de vagas e mais uma rede: aqui, <b>ser encontrada vale tanto quanto se candidatar</b>. Útil para identificar recrutadores e entender a empresa antes da entrevista. Perfil atualizado gera contatos sem esforço adicional.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Meteojob</div>
+        <div class="ds">Aposta no <b>matching</b> entre perfil e vaga, em vez da busca manual. Alternativa para quem quer receber sugestões em vez de garimpar.</div>
+      </div>
+    </div>
+
+    <div class="dirhead">Qualificados, <em>cadres</em> e engenharia</div>
+    <div class="dir">
+      <div class="row">
+        <div class="nm">APEC<em>apec.fr</em></div>
+        <div class="ds"><span class="tag free">Gratuito</span> Association Pour l'Emploi des Cadres. Incontornável para <b>quadros, engenheiros e funções de gestão</b>. Volume menor de vagas, mas muito melhor qualificadas — e menos concorrência por anúncio. Funciona melhor como complemento, não como fonte única.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Cadremploi</div>
+        <div class="ds">Também voltado a <b>cadres</b>, com <b>CVthèque</b> onde recrutadores buscam candidatos ativamente. Vale depositar o currículo mesmo sem candidatura ativa.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Welcome to the Jungle<em>welcometothejungle.com</em></div>
+        <div class="ds"><span class="tag">Tech e startups</span> Cada página de empresa é praticamente uma reportagem — fotos, vídeos, entrevistas com funcionários. Ideal para <b>entender a empresa antes de se candidatar</b> e para perfis atraídos por startups e tecnologia.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Glassdoor</div>
+        <div class="ds">Não é para procurar vaga, é para <b>verificar o empregador</b>: avaliações de quem trabalha ou trabalhou lá. Dez minutos ali antes de uma entrevista rendem boas perguntas — e às vezes evitam um mau contrato.</div>
+      </div>
+    </div>
+
+    <div class="dirhead">Europa e mobilidade</div>
+    <div class="dir">
+      <div class="row">
+        <div class="nm">EURES<em>Portal Europeu do Emprego</em></div>
+        <div class="ds"><span class="tag free">Público e gratuito</span> Rede oficial da União Europeia. Vagas em <b>todos os países do bloco</b>, além de informação comparada sobre condições de trabalho, salários e seguridade em cada país. Útil para quem considera outro destino europeu.</div>
+      </div>
+      <div class="row">
+        <div class="nm">JobTeaser</div>
+        <div class="ds">Voltado a <b>estudantes, estágios e primeiro emprego</b>. Relevante para quem está na França com carta de estudante — lembrando o limite legal de <b>964 horas por ano</b> de trabalho.</div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="num">III · O intérim</div>
+      <h2>Trabalho temporário: a porta de entrada mais usada</h2>
+    </div>
+
+    <p>Para grande parte da nossa comunidade, o <em>intérim</em> não é um plano B — é o caminho real de entrada no mercado francês. E há uma razão adicional para levá-lo a sério em 2026:</p>
+
+    <div class="servbox">
+      <h3>Por que o intérim importa para quem busca regularização</h3>
+      <p>No dispositivo de regularização pelo trabalho por <em>métier en tension</em> — que <strong>termina em 31 de dezembro de 2026</strong> —, é preciso comprovar <strong>12 meses de atividade assalariada nos últimos 24</strong>.</p>
+      <p><strong>As missões de intérim contam</strong>, assim como os CDD e os períodos de auto-empreendedor declarado. Elas podem ser somadas para atingir os 12 meses exigidos. Guarde <strong>todos</strong> os contratos e contracheques de cada missão, por mais curta que tenha sido.</p>
+      <p>E peça à agência que os <strong>códigos FAP e ROME</strong> constem dos contracheques — é por eles que a administração identifica a profissão exercida.</p>
+    </div>
+
+    <p>Um dado de mercado: <strong>Adecco, Manpower e Randstad concentram mais da metade</strong> do mercado francês de trabalho temporário. E o setor que mais recruta em intérim na França é <strong>logística e transporte</strong>.</p>
+
+    <div class="dirhead">As maiores redes nacionais</div>
+    <div class="dir">
+      <div class="row">
+        <div class="nm">Adecco<em>adecco.fr</em></div>
+        <div class="ds"><span class="tag">Líder de mercado</span> Nº 1 mundial do trabalho temporário, com <b>mais de 900 agências na França</b>. Generalista: indústria, terciário, BTP, logística. Cobertura territorial mais ampla do país.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Manpower<em>manpower.fr</em></div>
+        <div class="ds"><b>Mais de 600 agências.</b> Especialista histórico do trabalho temporário, forte em <b>indústria, logística, terciário e engenharia</b>. Mais de 70 anos de atuação na França.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Randstad<em>randstad.fr</em></div>
+        <div class="ds"><b>Mais de 500 agências.</b> Segundo grupo mundial. Indústria, BTP, terciário e TI, com plataforma digital avançada e boa reputação no acompanhamento do candidato.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Synergie<em>synergie.fr</em></div>
+        <div class="ds"><b>Grupo francês, mais de 400 agências.</b> Fundado em Nantes em 1969. Indústria, BTP, logística, terciário e <b>agroalimentar</b>. Reconhecido pela presença local forte e pelo acompanhamento personalizado.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Crit<em>crit-job.com</em></div>
+        <div class="ds">Especialista em <b>perfis industriais qualificados</b>: aeronáutica, indústria, BTP, transporte e logística. Referência nos setores em tensão.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Proman</div>
+        <div class="ds">Ator <b>francês independente</b> em forte crescimento, presente em 16 países. BTP, indústria, logística e serviços.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Supplay</div>
+        <div class="ds">Filial do grupo Adecco, com <b>compromisso RSE marcado</b> e especialidades por ofício.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Samsic Emploi</div>
+        <div class="ds">Rede em rápido desenvolvimento, cobrindo <b>terciário, indústria e logística</b>.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Page Personnel</div>
+        <div class="ds">Filial do Michael Page, especializada em <b>perfis técnicos e de suporte</b>.</div>
+      </div>
+    </div>
+
+    <div class="servbox">
+      <h3>Como se inscrever em uma agência de intérim</h3>
+      <p><strong>Vá presencialmente à agência do seu bairro</strong>, além de se cadastrar no site. Em intérim, a relação com o consultor da agência local pesa mais do que o perfil online — é ele quem lembra de você quando entra uma missão urgente.</p>
+      <p><strong>Cadastre-se em várias.</strong> Não há exclusividade, e cada agência tem clientes diferentes.</p>
+      <p><strong>Leve:</strong> documento de identidade, título de residência válido, comprovante de domicílio, RIB (dados bancários), número de seguridade social se já tiver, e CV. Sem título válido, a agência não pode contratar.</p>
+      <p><strong>Ligue com frequência.</strong> Em intérim, quem aparece é lembrado.</p>
+    </div>
+
+    <div class="sec">
+      <div class="num">IV · Setoriais</div>
+      <h2>Canais por área</h2>
+    </div>
+
+    <div class="dirhead">Hotelaria e restauração &#9670; o setor com mais vagas isoladas</div>
+    <div class="dir">
+      <div class="row">
+        <div class="nm">L'Hôtellerie Restauration</div>
+        <div class="ds">Portal histórico do setor CHR (café, hotel, restaurante). Ofertas de restaurantes, hotéis, estabelecimentos sazonais e restauração coletiva.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Cookorico &#9670; Emploi CHR &#9670; Restaff</div>
+        <div class="ds">Portais especializados em hotelaria, restauração e turismo. Menos volume que os generalistas, mas <b>menos concorrência por anúncio</b> e vagas mais pertinentes.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Brigad &#9670; StaffMe</div>
+        <div class="ds"><span class="tag">Missões pontuais</span> Plataformas para <b>missões avulsas</b> em restauração e serviços — turnos isolados, extras, eventos. Modelo diferente do intérim clássico: verifique o estatuto sob o qual você seria contratada antes de aceitar.</div>
+      </div>
+    </div>
+
+    <div class="dirhead">Saúde, agricultura, construção e sazonais</div>
+    <div class="dir">
+      <div class="row">
+        <div class="nm">Saúde e cuidados</div>
+        <div class="ds">O setor com <b>maior número de vagas em 2026 (322 mil)</b> e um dos raros em crescimento. Busque por <b><em>aide-soignant</em>, <em>auxiliaire de vie</em>, <em>infirmier</em></b> no France Travail e nas agências de intérim médico. A formação de <em>aide-soignant</em> dura <b>12 meses</b> e leva a diploma de Estado.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Agricultura e vindimas</div>
+        <div class="ds"><b>193 mil vagas previstas em 2026.</b> Procure por <em>emplois saisonniers agricoles</em> e pelas estruturas de emprego agrícola de cada região. As vindimas concentram contratações entre agosto e outubro.</div>
+      </div>
+      <div class="row">
+        <div class="nm">BTP e indústria</div>
+        <div class="ds">Setores com forte tensão de recrutamento — <b>pedreiro qualificado, carpinteiro, operário de manutenção</b> estão entre os mais difíceis de preencher. Vá pelas agências de intérim: Crit, Proman, Synergie e Randstad são as mais fortes aqui.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Nuclear e baterias elétricas</div>
+        <div class="ds"><b>100 mil contratações previstas no nuclear até 2035.</b> Operadores, técnicos de manutenção, caldeireiros — profissões acessíveis <b>com ou sem diploma</b>, mediante formação. As <em>gigafactories</em> de Dunquerque recrutam em parceria direta com o France Travail.</div>
+      </div>
+    </div>
+
+    <div class="dirhead">Acompanhamento presencial e gratuito</div>
+    <div class="dir">
+      <div class="row">
+        <div class="nm">Missions Locales</div>
+        <div class="ds"><span class="tag free">Gratuito</span> Para quem tem <b>até 25 anos</b>. Acompanhamento individual, formação, orientação e ajuda concreta na busca. Existe uma em praticamente cada território.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Maisons de l'Emploi</div>
+        <div class="ds"><span class="tag free">Gratuito</span> Estruturas municipais ou intercomunais de apoio à busca de emprego, abertas a todos.</div>
+      </div>
+      <div class="row">
+        <div class="nm">Candidatura espontânea</div>
+        <div class="ds">Não subestime. <b>Duas em cada três contratações de 2026 virão de pequenas e microempresas</b> — que muitas vezes não publicam anúncio. Restaurantes, obras, hotéis e comércios do bairro continuam contratando na porta.</div>
+      </div>
+    </div>
+
+    <div class="alert">
+      <h3>&#9888; Como não cair em golpe</h3>
+      <p><strong>Nenhum canal desta página cobra do candidato.</strong> France Travail, APEC, Missions Locales, EURES e agências de intérim são <b>gratuitos para quem procura emprego</b>. As agências recebem da empresa contratante, nunca do trabalhador.</p>
+      <p><strong>Quem cobra taxa por vaga, por "reserva de posto", por análise de currículo ou por promessa de título de residência está aplicando golpe.</strong> Sem exceção.</p>
+      <p><strong>Sinais de alerta:</strong> contato apenas por WhatsApp sem endereço de agência &#9670; pedido de dinheiro adiantado por qualquer motivo &#9670; promessa de <em>papiers</em> junto com o emprego &#9670; pedido de documentos originais &#9670; salário muito acima do mercado para função sem qualificação &#9670; contrato que você não pode ler antes de assinar &#9670; pressão para decidir na hora.</p>
+      <p><strong>Cuidado com domínios falsos.</strong> Sites de phishing imitam os endereços das grandes agências trocando uma letra. <b>Chegue aos sites por busca, não por link recebido em mensagem</b> — e confira o endereço antes de digitar qualquer dado pessoal.</p>
+      <p><strong>Nenhum empregador legítimo</strong> pede que você trabalhe antes de assinar contrato, retém seus documentos ou paga fora da folha. Trabalho sem contrato deixa você sem contracheque — e <b>sem contracheque não há prova dos 12 meses</b> exigidos para a regularização.</p>
+    </div>
+
+    <div class="sec">
+      <div class="num">V · O contexto</div>
+      <h2>O que o mercado mostra em 2026</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card"><div class="big">2,28 mi</div><div class="lbl">Vagas previstas na França em 2026</div></div>
+      <div class="card"><div class="big">322 mil</div><div class="lbl">Só na saúde — setor em alta</div></div>
+      <div class="card"><div class="big">2 em 3</div><div class="lbl">Contratações virão de pequenas empresas</div></div>
+      <div class="card"><div class="big">1.867 €</div><div class="lbl">SMIC mensal bruto desde 1º/06/2026</div></div>
+    </div>
+
+    <p>Duas leituras práticas desses números. <strong>Primeira:</strong> com dois terços das vagas em pequenas empresas, a estratégia de disparar candidaturas em portais de grandes grupos rende pouco — o contato local rende mais. <strong>Segunda:</strong> a Île-de-France foi uma das regiões que <strong>mais reduziram</strong> intenções de contratação (−11,8%), enquanto Bretanha e Grand Est ficaram estáveis. Se a mobilidade for possível, ela pesa.</p>
+
+    <p>Nenhum salário pode ser inferior ao <strong>SMIC</strong> — 12,31 € brutos por hora, 1.867,02 € brutos por mês, cerca de 1.478 € líquidos. <strong>Isso vale independentemente de nacionalidade ou situação documental.</strong></p>
+
+    <div class="sec">
+      <div class="num">VI · Editorial</div>
+      <h2>O canal certo não substitui o direito de estar lá</h2>
+    </div>
+
+    <p>Um diretório como este resolve metade do problema. Ele diz onde as vagas estão. Não resolve a outra metade — quem tem permissão para ocupá-las.</p>
+
+    <p>É por isso que esta página existe ao lado do nosso guia sobre <strong>métiers en tension</strong>, e não no lugar dele. Procurar vaga sem entender as regras de autorização de trabalho leva a meses de candidaturas que não podem dar em nada. E entender as regras sem saber onde procurar leva ao mesmo lugar.</p>
+
+    <p>Há uma coisa, porém, que este diretório faz e que vale sublinhar: ele mostra que <strong>existe caminho legal e gratuito</strong>. France Travail, APEC, Missions Locales, EURES, as grandes redes de intérim — tudo público ou tudo pago pelo empregador. Quem chega e ouve que precisa pagar 500 euros a um "intermediário" para conseguir uma vaga está sendo enganado por alguém que aposta no seu desconhecimento.</p>
+
+    <p>Manteremos esta página viva. Se você encontrou um canal que funcionou, ou um que se revelou fraude, escreva para a redação. <strong>Informação de comunidade só circula se a comunidade a devolver.</strong></p>
+
+    <div class="rednote">
+      <h3>Nota da Redação</h3>
+      <p><strong>Página viva</strong>, revista em 12 de agosto de 2026. Nomes de empresas e portais são citados como <strong>referência informativa</strong>: a The Crossing Time <strong>não tem vínculo comercial com nenhum deles</strong>, não recebe comissão e não intermedeia contratações.</p>
+      <p>Endereços eletrônicos e condições podem mudar. <strong>Acesse os sites por busca, não por links recebidos em mensagens.</strong> Antes de qualquer decisão sobre título de residência ou contrato, procure orientação jurídica sobre o seu caso.</p>
+    </div>
+
+    <div class="ednote">
+      <h3>Nota Editorial</h3>
+      <p><strong>Método.</strong> Esta página <strong>não publica anúncios de vagas individuais</strong>. A decisão é editorial e permanente: anúncios expiram em dias, e a redação não tem meio de verificar a autenticidade de cada um. Publicar uma lista de vagas não verificadas exporia o leitor exatamente ao tipo de fraude que a página combate. Optamos por mapear <strong>instituições e empresas verificáveis</strong>, que o leitor pode conferir por conta própria.</p>
+      <p><strong>Verificação.</strong> Portais e agências foram identificados a partir de comparativos setoriais franceses de 2026 e de dados públicos. As dimensões citadas — cerca de 8,2 milhões de visitantes mensais no France Travail, cerca de 3 milhões no HelloWork, mais de 900 agências Adecco, mais de 600 Manpower, mais de 500 Randstad, mais de 400 Synergie — provêm dessas fontes. O dado de que <strong>Adecco, Manpower e Randstad concentram mais da metade do mercado</strong> de trabalho temporário francês, e de que <strong>logística e transporte</strong> é o setor que mais recruta em intérim, também.</p>
+      <p><strong>Dados de mercado</strong> extraídos da enquete Besoins en Main-d'Œuvre 2026 do France Travail, já detalhada no guia de emprego desta publicação: 2.274.951 projetos de contratação, 322 mil na saúde, 193 mil na agricultura, dois terços vindos de PME e microempresas, recuo de 11,8% na Île-de-France. SMIC conforme reajuste automático de 1º de junho de 2026.</p>
+      <p><strong>Ausência de indicações.</strong> Não recomendamos uma agência sobre outra. As descrições indicam <strong>setores de especialidade e porte</strong>, para que o leitor escolha conforme seu ofício e sua região — não conforme preferência da redação.</p>
+      <p><strong>Bloco antifraude.</strong> Foi incluído por decisão editorial, dada a frequência de golpes dirigidos à comunidade imigrante em torno de promessas de emprego e regularização. Ele é parte obrigatória desta página e será mantido em todas as atualizações.</p>
+      <p><strong>Imagens.</strong> Página publicada <strong>sem fotografias</strong>, com abertura tipográfica original. Diretórios de serviço desta publicação privilegiam legibilidade e blocos de dados a imagens ilustrativas.</p>
+    </div>
+
+    <div class="imgdisc">
+      <p><strong>Sobre as imagens desta edição:</strong> esta página não utiliza fotografias de terceiros. A arte de abertura é <strong>tipográfica e original da The Crossing Time</strong>. As marcas e denominações sociais citadas pertencem a seus respectivos titulares e são mencionadas com finalidade estritamente informativa, sem qualquer vínculo comercial com esta publicação.</p>
+      <p><strong>À propos :</strong> cette page n'utilise aucune photographie de tiers. Les marques et dénominations sociales citées appartiennent à leurs titulaires respectifs et sont mentionnées à titre strictement informatif, sans aucun lien commercial avec cette publication.</p>
+    </div>
+
+  </article>
+</div>
+
+<div class="pilares">MOBILIDADE&nbsp;&nbsp;&#9670;&nbsp;&nbsp;POUVOIR&nbsp;&nbsp;&#9670;&nbsp;&nbsp;TRANSFORMATION</div>
+<div class="sitefoot">
+  <b>THE CROSSING TIME</b> · by Porta Voz do Imigrante<br>
+  Geopolítica · Direito · Economia · Sociedade · Mobilidade Global<br>
+  <span>thecrossingtime.com</span> · WhatsApp +33 6 69 99 72 96 · Genebra · Paris · São Paulo
+</div>
+
+</body>
+</html>

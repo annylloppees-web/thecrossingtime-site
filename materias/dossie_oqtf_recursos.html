@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quando algo corre mal | The Crossing Time</title>
+<meta name="description" content="OQTF: prazos de recurso, tribunal administrativo, apoio judiciário e protecções legais. Dossiê bilingue PT/FR com fontes oficiais francesas.">
+<meta property="og:title" content="Quando algo corre mal | The Crossing Time">
+<meta property="og:description" content="OQTF: prazos de recurso, tribunal administrativo, apoio judiciário e protecções legais. Dossiê bilingue PT/FR com fontes oficiais francesas.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Crossing Time">
+<meta property="og:image" content="../og/dossie_oqtf_recursos.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1A2B;--gold:#C6A15B;--off:#F4F2ED;--ink:#111111;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--off);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
+
+/* ── bilingue ── */
+.ng-fr{display:none!important;}
+body[data-lang="fr"] .ng-pt{display:none!important;}
+body[data-lang="fr"] .ng-fr{display:revert!important;}
+
+/* ── topbar ── */
+.tct-topbar{position:fixed;top:0;left:0;right:0;height:54px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 1.1rem;z-index:9600;box-shadow:0 1px 12px rgba(14,26,43,.25);}
+.tct-back{background:none;border:0;color:var(--off);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:.5rem;padding:.5rem .2rem;}
+.tct-back:hover{color:var(--gold);}
+.tct-brand{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1rem;letter-spacing:.04em;}
+.lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.08);border-radius:999px;padding:3px;}
+.lang-bar button{background:none;border:0;color:rgba(244,242,237,.6);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;padding:.35rem .7rem;border-radius:999px;cursor:pointer;}
+.lang-bar button.on{background:var(--gold);color:var(--navy);font-weight:600;}
+
+/* ── hero ── */
+.hero{background:linear-gradient(180deg,#0E1A2B 0%,#1a2e4a 100%);color:var(--off);padding:7rem 1.5rem 3.5rem;text-align:center;}
+.hero .kicker{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.4rem;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;max-width:900px;margin:0 auto 1.3rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero .sub{max-width:680px;margin:0 auto 1.8rem;font-size:1.02rem;line-height:1.7;color:rgba(244,242,237,.82);font-style:italic;}
+.hero .meta{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(198,161,91,.85);}
+
+/* ── layout ── */
+.wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
+.sec{padding:3rem 0 0;}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.2;color:var(--navy);margin-bottom:.4rem;}
+h2 .num{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:.6rem;font-weight:600;}
+h3{font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);font-weight:600;margin:1.6rem 0 .5rem;}
+p{margin:.9rem 0;font-size:1.02rem;color:#2a2a2a;}
+a{color:var(--navy);}
+.lede{font-size:1.12rem;color:#333;font-style:italic;border-left:2px solid var(--gold);padding-left:1.1rem;}
+.rule{height:1px;background:rgba(14,26,43,.12);margin:2.6rem 0 0;}
+
+/* ── índice ── */
+.toc{background:#fff;border:1px solid rgba(14,26,43,.09);border-top:3px solid var(--gold);padding:1.6rem 1.6rem 1.3rem;margin-top:2.5rem;}
+.toc .lbl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.toc ol{margin:.9rem 0 0 1.1rem;}
+.toc li{font-family:'Jost',sans-serif;font-size:.92rem;margin:.42rem 0;line-height:1.5;}
+.toc a{text-decoration:none;border-bottom:1px solid rgba(198,161,91,.5);}
+.toc a:hover{color:var(--gold);}
+
+/* ── cartões ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.4rem 0 .4rem;}
+.tcard{background:#fff;border:1px solid rgba(14,26,43,.09);border-left:3px solid var(--gold);padding:1.2rem 1.2rem 1.1rem;}
+.tcard .t{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.tcard .n{font-family:'Cormorant Garamond',serif;font-size:1.28rem;color:var(--navy);margin:.35rem 0 .45rem;line-height:1.2;}
+.tcard p{font-size:.9rem;margin:0;color:#555;line-height:1.6;}
+
+/* ── caixas ── */
+.box{background:#fff;border:1px solid rgba(14,26,43,.09);padding:1.4rem 1.5rem;margin:1.5rem 0;}
+.box.gold{border-left:3px solid var(--gold);background:#FBF8F1;}
+.box.navy{background:var(--navy);color:var(--off);border:0;}
+.box.navy p{color:rgba(244,242,237,.86);}
+.box .bl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.6rem;}
+.box p{margin:.5rem 0;font-size:.98rem;}
+
+/* ── listas ── */
+ul.tct,ol.tct{margin:1rem 0 1rem 1.15rem;}
+ul.tct li,ol.tct li{margin:.6rem 0;font-size:1rem;color:#2a2a2a;line-height:1.7;}
+ul.tct li strong,ol.tct li strong{font-family:'Jost',sans-serif;font-weight:600;font-size:.93rem;letter-spacing:.02em;color:var(--navy);}
+
+/* ── tabela ── */
+.tbl{width:100%;border-collapse:collapse;margin:1.3rem 0;background:#fff;font-size:.93rem;}
+.tbl th{background:var(--navy);color:var(--off);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.75rem .8rem;text-align:left;}
+.tbl td{padding:.75rem .8rem;border-bottom:1px solid rgba(14,26,43,.08);vertical-align:top;color:#333;}
+.tbl tr:last-child td{border-bottom:0;}
+
+/* ── fontes ── */
+.srcs{margin:1.2rem 0 0;}
+.srcs a{display:block;font-family:'Jost',sans-serif;font-size:.9rem;text-decoration:none;color:var(--navy);padding:.7rem 0;border-bottom:1px solid rgba(14,26,43,.08);}
+.srcs a:hover{color:var(--gold);}
+.srcs a span.d{display:block;font-size:.78rem;color:#888;letter-spacing:.02em;margin-top:.15rem;}
+
+/* ── CTA / aviso ── */
+.disc{background:#fff;border:1px dashed rgba(14,26,43,.22);padding:1.3rem 1.4rem;margin:2rem 0 0;font-size:.9rem;color:#555;line-height:1.65;}
+.cta{background:var(--navy);color:var(--off);padding:2.6rem 1.6rem;text-align:center;margin-top:3rem;}
+.cta h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin-bottom:.7rem;}
+.cta p{color:rgba(244,242,237,.78);font-size:.98rem;max-width:520px;margin:0 auto 1.5rem;}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.95rem 1.8rem;border-radius:999px;text-decoration:none;}
+.btn:hover{background:#d4b06b;}
+.btn.ghost{background:none;border:1px solid rgba(198,161,91,.55);color:var(--gold);margin-left:.5rem;}
+
+/* ── assinatura / rodapé ── */
+.sign{display:flex;align-items:center;gap:1rem;margin:2.6rem 0 0;padding-top:1.6rem;border-top:1px solid rgba(14,26,43,.12);}
+.seal{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:.05em;flex-shrink:0;}
+.sign .nm{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:600;color:var(--navy);}
+.sign .rl{font-size:.83rem;color:#777;font-family:'Jost',sans-serif;}
+.foot{text-align:center;padding:2.5rem 1.5rem 4rem;color:#999;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.1em;}
+
+/* ── partilha ── */
+.share{position:fixed;right:1.1rem;bottom:1.1rem;display:flex;flex-direction:column;gap:.5rem;z-index:9500;}
+.share button{width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:var(--gold);cursor:pointer;box-shadow:0 4px 14px rgba(14,26,43,.22);font-size:15px;}
+.share button:hover{background:var(--gold);color:var(--navy);}
+
+@media(max-width:640px){
+  .hero{padding:6rem 1.2rem 2.6rem;}
+  .wrap{padding:0 1.2rem;}
+  .tbl{font-size:.85rem;}
+  .tbl th,.tbl td{padding:.6rem .5rem;}
+}
+</style>
+</head>
+<body data-lang="pt">
+
+<div class="tct-topbar">
+  <button class="tct-back" onclick="goBack()">
+    <span>&lsaquo;</span>
+    <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+  </button>
+  <span class="tct-brand">The Crossing Time</span>
+  <div class="lang-bar">
+    <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+<div class="hero">
+  <span class="kicker"><span class="ng-pt">TCT Especiais · Dossiê 6 · Imigração</span><span class="ng-fr">TCT Spéciaux · Dossier 6 · Immigration</span></span>
+  <h1><span class="ng-pt">Quando algo corre mal</span><span class="ng-fr">Quand ça tourne mal</span><br><em><span class="ng-pt">OQTF, recurso e apoio jurídico</span><span class="ng-fr">OQTF, recours et aide juridique</span></em></h1>
+  <p class="sub"><span class="ng-pt">Os dois regimes, os prazos que não perdoam, a diferença entre escrever ao prefeito e accionar o tribunal, e como obter um advogado sem ter dinheiro.</span><span class="ng-fr">Les deux régimes, les délais qui ne pardonnent pas, la différence entre écrire au préfet et saisir le tribunal, et comment obtenir un avocat sans argent.</span></p>
+  <p class="meta"><span class="ng-pt">Por Anne Lopes · Actualizado em Julho de 2026 · Fontes oficiais .gouv.fr</span><span class="ng-fr">Par Anne Lopes · Mis à jour en juillet 2026 · Sources officielles .gouv.fr</span></p>
+</div>
+
+<div class="wrap">
+  <div class="sec">
+    <p class="lede"><span class="ng-pt">Este é o dossiê que ninguém quer precisar de ler. Está escrito com o cuidado que o assunto exige: sem alarmismo, sem promessas, e com uma única prioridade — que ninguém perca um prazo por não ter tido a informação a tempo.</span><span class="ng-fr">C'est le dossier que personne ne souhaite avoir à lire. Il est écrit avec le soin que le sujet exige : sans alarmisme, sans promesses, et avec une seule priorité — que personne ne perde un délai faute d'avoir eu l'information à temps.</span></p>
+    <div class="toc">
+      <span class="lbl"><span class="ng-pt">Neste dossiê</span><span class="ng-fr">Dans ce dossier</span></span>
+      <ol>
+        <li><a href="#o1"><span class="ng-pt">Leia a decisão até ao fim</span><span class="ng-fr">Lisez la décision jusqu'au bout</span></a></li>
+        <li><a href="#o2"><span class="ng-pt">Dois regimes: com prazo ou sem prazo</span><span class="ng-fr">Deux régimes : avec ou sans délai</span></a></li>
+        <li><a href="#o3"><span class="ng-pt">O prazo de recurso não é sempre o mesmo</span><span class="ng-fr">Le délai de recours n'est pas toujours le même</span></a></li>
+        <li><a href="#o4"><span class="ng-pt">Graciosos, hierárquico e contencioso</span><span class="ng-fr">Gracieux, hiérarchique et contentieux</span></a></li>
+        <li><a href="#o5"><span class="ng-pt">Apoio jurídico sem dinheiro</span><span class="ng-fr">Aide juridique sans argent</span></a></li>
+        <li><a href="#o6"><span class="ng-pt">Protecções previstas na lei</span><span class="ng-fr">Protections prévues par la loi</span></a></li>
+        <li><a href="#o7"><span class="ng-pt">Cinco coisas para nunca fazer</span><span class="ng-fr">Cinq choses à ne jamais faire</span></a></li>
+        <li><a href="#o8"><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></a></li>
+      </ol>
+    </div>
+  </div>
+    <div class="box navy">
+      <span class="bl"><span class="ng-pt">Se leu isto hoje porque recebeu uma decisão</span><span class="ng-fr">Si vous lisez ceci parce que vous avez reçu une décision</span></span>
+      <p><span class="ng-pt">Não entre em pânico e não parta de imediato. Há prazos curtos, mas há prazos — e um recurso apresentado em tempo tem efeitos que uma partida precipitada faz perder. Localize a data de notificação e procure hoje um advogado ou uma associação especializada.</span><span class="ng-fr">Ne paniquez pas et ne partez pas dans l'immédiat. Les délais sont courts, mais ils existent — et un recours déposé dans les temps produit des effets qu'un départ précipité fait perdre. Repérez la date de notification et contactez dès aujourd'hui un avocat ou une association spécialisée.</span></p>
+    </div>
+
+  <div class="sec" id="o1">
+    <h2><span class="num">01</span><span class="ng-pt">Primeiro: leia a decisão até ao fim</span><span class="ng-fr">D'abord : lisez la décision jusqu'au bout</span></h2>
+    <p><span class="ng-pt">Uma obrigação de deixar o território francês tem de ser fundamentada. A própria decisão indica o prazo de partida, o país de reenvio e as vias de recurso disponíveis. E indica — este é o ponto decisivo — a data de notificação, que é o ponto de partida de todos os prazos. Escreva essa data num papel e guarde a decisão inteira, incluindo o envelope.</span><span class="ng-fr">Une obligation de quitter le territoire français doit être motivée. La décision elle-même indique le délai de départ, le pays de renvoi et les voies de recours disponibles. Et elle indique — c'est le point décisif — la date de notification, qui constitue le point de départ de tous les délais. Notez cette date sur un papier et conservez la décision entière, enveloppe comprise.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="o2">
+    <h2><span class="num">02</span><span class="ng-pt">Dois regimes: com prazo de partida ou sem prazo</span><span class="ng-fr">Deux régimes : avec délai de départ ou sans délai</span></h2>
+    <p><span class="ng-pt">A regulamentação varia consoante seja obrigado a partir num prazo de trinta dias ou sem prazo algum. Segundo a ficha oficial do Service-Public, o regime dos trinta dias abrange, entre outras, estas situações:</span><span class="ng-fr">La réglementation varie selon que vous êtes obligé de partir dans un délai de trente jours ou sans délai. Selon la fiche officielle de Service-Public, le régime des trente jours couvre notamment ces situations :</span></p>
+    <ul class="tct">
+      <li><span class="ng-pt">Entrada irregular em França ou no espaço Schengen, sem título de residência.</span><span class="ng-fr">Entrée irrégulière en France ou dans l'espace Schengen, sans titre de séjour.</span></li>
+      <li><span class="ng-pt">Entrada regular, mas permanência além da validade do visto — ou, se dispensado de visto, mais de três meses após a entrada.</span><span class="ng-fr">Entrée régulière, mais maintien au-delà de la validité du visa — ou, si vous êtes dispensé de visa, plus de trois mois après l'entrée.</span></li>
+      <li><span class="ng-pt">Récépissé de pedido de título ou autorização provisória de residência não renovado ou retirado.</span><span class="ng-fr">Récépissé de demande de titre ou autorisation provisoire de séjour non renouvelé ou retiré.</span></li>
+      <li><span class="ng-pt">Título de residência retirado, recusado ou não renovado.</span><span class="ng-fr">Titre de séjour retiré, refusé ou non renouvelé.</span></li>
+    </ul>
+    <p><span class="ng-pt">O regime sem prazo de partida voluntária aplica-se em situações mais restritas — por exemplo, quando o comportamento é considerado uma ameaça à ordem pública e a residência em França é inferior a três meses, ou quando há trabalho sem autorização nesse mesmo contexto de residência recente.</span><span class="ng-fr">Le régime sans délai de départ volontaire s'applique à des situations plus restreintes — par exemple lorsque le comportement est considéré comme une menace pour l'ordre public et que la résidence en France est inférieure à trois mois, ou en cas de travail sans autorisation dans ce même contexte de séjour récent.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="o3">
+    <h2><span class="num">03</span><span class="ng-pt">O prazo de recurso não é sempre o mesmo</span><span class="ng-fr">Le délai de recours n'est pas toujours le même</span></h2>
+    <p><span class="ng-pt">É aqui que se perdem processos que teriam vencido. De acordo com as fichas oficiais do Ministério da Justiça, o prazo para recorrer é de trinta dias quando a decisão se segue, por exemplo, à recusa ou retirada de um título de residência, ou à recusa de renovação de um récépissé ou de uma autorização provisória. E é de quinze dias noutras situações — nomeadamente quando não se consegue justificar a entrada regular no território, quando houve permanência além da validade do visto, quando não se pediu a renovação de um título temporário ou pluriannual, ou quando a protecção internacional foi recusada.</span><span class="ng-fr">C'est ici que se perdent des dossiers qui auraient été gagnés. Selon les fiches officielles du ministère de la Justice, le délai de recours est de trente jours lorsque la décision suit, par exemple, le refus ou le retrait d'un titre de séjour, ou le refus de renouvellement d'un récépissé ou d'une autorisation provisoire. Et il est de quinze jours dans d'autres situations — notamment lorsque l'entrée régulière sur le territoire ne peut être justifiée, en cas de maintien au-delà de la validité du visa, lorsque le renouvellement d'un titre temporaire ou pluriannuel n'a pas été demandé, ou lorsque la protection internationale a été refusée.</span></p>
+    <div class="box gold">
+      <span class="bl"><span class="ng-pt">Regra de sobrevivência</span><span class="ng-fr">Règle de survie</span></span>
+      <p><span class="ng-pt">O prazo que conta é o que está escrito na sua decisão. Se estiver em retenção administrativa ou sob residência vigiada, os prazos são drasticamente mais curtos e a situação é uma urgência absoluta — nesse caso, procure assistência jurídica no próprio dia, no local onde se encontra.</span><span class="ng-fr">Le délai qui compte est celui inscrit sur votre décision. Si vous êtes en rétention administrative ou assigné à résidence, les délais sont drastiquement plus courts et la situation relève de l'urgence absolue — dans ce cas, cherchez une assistance juridique le jour même, sur place.</span></p>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="o4">
+    <h2><span class="num">04</span><span class="ng-pt">Recurso graciosos, hierárquico e contencioso: não confundir</span><span class="ng-fr">Recours gracieux, hiérarchique et contentieux : ne pas confondre</span></h2>
+    <p><span class="ng-pt">Existem três caminhos e eles não valem o mesmo. Pode dirigir um recurso graciosos ao prefeito e um recurso hierárquico ao ministro do Interior. Mas é o tribunal administrativo que julga a legalidade da decisão, e é o recurso contencioso apresentado nesse tribunal, dentro do prazo, que estrutura a defesa. Escrever ao prefeito não substitui accionar o tribunal, e o tempo gasto a esperar resposta corre contra o prazo de recurso.</span><span class="ng-fr">Il existe trois chemins et ils ne se valent pas. Vous pouvez adresser un recours gracieux au préfet et un recours hiérarchique au ministre de l'Intérieur. Mais c'est le tribunal administratif qui juge la légalité de la décision, et c'est le recours contentieux déposé devant ce tribunal, dans le délai, qui structure la défense. Écrire au préfet ne remplace pas la saisine du tribunal, et le temps passé à attendre une réponse court contre le délai de recours.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="o5">
+    <h2><span class="num">05</span><span class="ng-pt">Apoio jurídico: não é preciso ter dinheiro</span><span class="ng-fr">Aide juridique : il n'est pas nécessaire d'avoir de l'argent</span></h2>
+    <p><span class="ng-pt">O apoio judiciário permite que o Estado suporte, total ou parcialmente, os honorários de advogado e as despesas do processo, sob condição de recursos. O pedido faz-se junto do serviço de apoio judiciário do tribunal competente e deve ser apresentado dentro do prazo de recurso — não depois. Existem também associações especializadas no direito dos estrangeiros que prestam apoio gratuito na preparação do processo.</span><span class="ng-fr">L'aide juridictionnelle permet à l'État de prendre en charge, en tout ou partie, les honoraires d'avocat et les frais de procédure, sous conditions de ressources. La demande se fait auprès du bureau d'aide juridictionnelle du tribunal compétent et doit être présentée dans le délai de recours — pas après. Il existe également des associations spécialisées en droit des étrangers qui apportent une aide gratuite à la préparation du dossier.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="o6">
+    <h2><span class="num">06</span><span class="ng-pt">Protecções previstas na lei</span><span class="ng-fr">Protections prévues par la loi</span></h2>
+    <p><span class="ng-pt">A lei prevê situações em que o afastamento não pode ter lugar ou em que se aplicam regras próprias. Um menor não pode ser obrigado pela administração a deixar França — ainda que possa ser afastado com os pais, se estes forem objecto de tal medida. Aplicam-se regras diferentes aos nacionais de países europeus e aos seus familiares residentes em França, e também aos nacionais de países que celebraram com a França acordos específicos sobre a gestão dos fluxos migratórios. São elementos que têm de ser invocados expressamente: não se presumem.</span><span class="ng-fr">La loi prévoit des situations dans lesquelles l'éloignement ne peut avoir lieu ou dans lesquelles s'appliquent des règles propres. Un mineur ne peut être obligé par l'administration de quitter la France — même s'il peut être éloigné avec ses parents si ceux-ci font l'objet d'une telle mesure. Des règles différentes s'appliquent aux ressortissants de pays européens et aux membres de leur famille résidant en France, ainsi qu'aux ressortissants de pays ayant conclu avec la France des accords spécifiques sur la gestion des flux migratoires. Ce sont des éléments qui doivent être invoqués expressément : ils ne se présument pas.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="o7">
+    <h2><span class="num">07</span><span class="ng-pt">Cinco coisas para nunca fazer</span><span class="ng-fr">Cinq choses à ne jamais faire</span></h2>
+    <ol class="tct">
+      <li><span class="ng-pt">Deixar passar o prazo. Um recurso fora de prazo é rejeitado sem que o mérito seja apreciado, por sólido que seja.</span><span class="ng-fr">Laisser passer le délai. Un recours hors délai est rejeté sans examen du fond, aussi solide soit-il.</span></li>
+      <li><span class="ng-pt">Assinar documentos sem os ler ou sem compreender o que assina.</span><span class="ng-fr">Signer des documents sans les lire ou sans comprendre ce que l'on signe.</span></li>
+      <li><span class="ng-pt">Mudar de morada sem comunicar: é para lá que segue tudo o que se decide sobre a sua situação.</span><span class="ng-fr">Changer d'adresse sans le signaler : c'est là que part tout ce qui se décide sur votre situation.</span></li>
+      <li><span class="ng-pt">Contar que uma carta ao prefeito trave o processo no tribunal.</span><span class="ng-fr">Compter sur un courrier au préfet pour arrêter la procédure devant le tribunal.</span></li>
+      <li><span class="ng-pt">Pagar a intermediários que prometem resultados. Nenhum resultado é vendável — e o apoio judiciário existe precisamente para isso.</span><span class="ng-fr">Payer des intermédiaires qui promettent des résultats. Aucun résultat n'est vendable — et l'aide juridictionnelle existe précisément pour cela.</span></li>
+    </ol>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="o8">
+    <h2><span class="num">08</span><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></h2>
+    <div class="srcs">
+      <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F18362" target="_blank" rel="noopener"><span class="ng-pt">Service-Public — Obrigação de deixar o território francês</span><span class="ng-fr">Service-Public — Obligation de quitter le territoire français</span><span class="d">service-public.gouv.fr</span></a>
+      <a href="https://www.justice.fr/fiche/obligation-quitter-territoire-francais-oqtf" target="_blank" rel="noopener"><span class="ng-pt">Justice.fr — Ficha oficial: obrigação de deixar o território</span><span class="ng-fr">Justice.fr — Fiche officielle : obligation de quitter le territoire</span><span class="d">justice.fr</span></a>
+      <a href="https://www.justice.fr/notice/idtdb2078-obligation-quitter-territoire-fran%C3%A7ais" target="_blank" rel="noopener"><span class="ng-pt">Justice.fr — Prazos e vias de recurso</span><span class="ng-fr">Justice.fr — Délais et voies de recours</span><span class="d">justice.fr</span></a>
+      <a href="https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070158/LEGISCTA000042772744/" target="_blank" rel="noopener"><span class="ng-pt">Légifrance — CESEDA, artigos L610-1 a L615-2</span><span class="ng-fr">Légifrance — CESEDA, articles L610-1 à L615-2</span><span class="d">legifrance.gouv.fr</span></a>
+      <a href="https://www.defenseurdesdroits.fr" target="_blank" rel="noopener"><span class="ng-pt">Defensor dos Direitos — Autoridade independente, accionamento gratuito</span><span class="ng-fr">Défenseur des droits — Autorité indépendante, saisine gratuite</span><span class="d">defenseurdesdroits.fr</span></a>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+    <div class="disc">
+      <span class="ng-pt"><strong>Aviso.</strong> Este dossiê é informação editorial de interesse público, verificada em fontes oficiais francesas à data indicada. Não constitui aconselhamento jurídico individual e não substitui a análise do seu caso por um profissional habilitado.</span><span class="ng-fr"><strong>Avertissement.</strong> Ce dossier constitue une information éditoriale d'intérêt public, vérifiée auprès de sources officielles françaises à la date indiquée. Il ne constitue pas un conseil juridique individuel et ne remplace pas l'analyse de votre cas par un professionnel habilité.</span>
+    </div>
+
+    <div class="sign">
+      <div class="seal">AL</div>
+      <div>
+        <div class="nm"><span class="ng-pt">Por Anne Lopes</span><span class="ng-fr">Par Anne Lopes</span></div>
+        <div class="rl"><span class="ng-pt">CEO e Fundadora da The Crossing Time</span><span class="ng-fr">PDG et fondatrice de The Crossing Time</span></div>
+      </div>
+    </div>
+
+</div>
+
+<div class="cta">
+  <h4><span class="ng-pt">Precisa de um advogado agora?</span><span class="ng-fr">Besoin d'un avocat maintenant ?</span></h4>
+  <p><span class="ng-pt">The Crossing Time reúne colunistas juristas que escrevem regularmente sobre direito dos estrangeiros, direito patrimonial e direito internacional.</span><span class="ng-fr">The Crossing Time réunit des chroniqueurs juristes qui écrivent régulièrement sur le droit des étrangers, le droit patrimonial et le droit international.</span></p>
+  <a class="btn" href="../index.html#colunas" target="_top"><span class="ng-pt">Ver os colunistas juristas</span><span class="ng-fr">Voir les chroniqueurs juristes</span></a>
+  <a class="btn ghost" href="https://wa.me/message/STDV3OMZM6EGL1" target="_blank" rel="noopener"><span class="ng-pt">Falar com a redacção</span><span class="ng-fr">Contacter la rédaction</span></a>
+</div>
+
+<div class="foot">
+  <span class="ng-pt">The Crossing Time · By Porta-Voz do Imigrante · Dossiê actualizado em Julho de 2026</span>
+  <span class="ng-fr">The Crossing Time · By Porta-Voz do Imigrante · Dossier mis à jour en juillet 2026</span>
+</div>
+
+<div class="share">
+  <button onclick="shareWa()" title="WhatsApp">&#9993;</button>
+  <button onclick="copyLink()" title="Copiar link">&#128279;</button>
+</div>
+
+<script>
+function goBack(){
+  if(window.parent && window.parent !== window){
+    try{ window.parent.closeMateria(); return; }catch(e){}
+  }
+  window.location.href = '../index.html#civique';
+}
+function setLang(l){
+  document.body.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  var bp = document.getElementById('b-pt'), bf = document.getElementById('b-fr');
+  if(bp) bp.className = (l === 'pt') ? 'on' : '';
+  if(bf) bf.className = (l === 'fr') ? 'on' : '';
+  try{ localStorage.setItem('tct-lang', l); }catch(e){}
+}
+(function(){
+  var saved = 'pt';
+  try{ saved = localStorage.getItem('tct-lang') || 'pt'; }catch(e){}
+  if(saved === 'fr') setLang('fr');
+})();
+function shareWa(){
+  window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' — ' + window.location.href), '_blank');
+}
+function copyLink(){
+  var u = window.location.href;
+  if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ alert('Link copiado / Lien copie'); }); }
+  else { alert(u); }
+}
+</script>
+</body>
+</html>

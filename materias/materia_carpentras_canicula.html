@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- THE CROSSING TIME — Edição #30 — Tragédia na canícula: duas crianças em Carpentras -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tragédia na canícula: duas crianças morrem em carro em Carpentras — The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#071a3d;--navy-2:#0c2452;--gold:#B8924A;--gold-light:#c7a45a;--offwhite:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a;--serif:'Lora',Georgia,serif;--sans:'Poppins',system-ui,sans-serif;--maxw:760px;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--serif);color:var(--ink);background:var(--offwhite);line-height:1.75;font-size:18px;-webkit-font-smoothing:antialiased;}
+  .topbar{background:var(--navy);color:var(--offwhite);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);}
+  .topbar .brand{font-family:var(--sans);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:14px;}
+  .topbar .brand span{color:var(--gold-light);}
+  .topbar .pillars{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:.22em;color:var(--gold-light);text-transform:uppercase;}
+  .hero-typo{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--offwhite);padding:88px 24px 78px;text-align:center;position:relative;overflow:hidden;}
+  .hero-typo::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,rgba(184,146,74,.14),transparent 60%);pointer-events:none;}
+  .hero-typo .kicker{font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-light);margin-bottom:24px;display:block;position:relative;z-index:1;}
+  .hero-typo h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5.4vw,46px);line-height:1.18;max-width:820px;margin:0 auto;position:relative;z-index:1;}
+  .hero-typo .dek{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(17px,2.4vw,21px);color:#cdd6e6;max-width:640px;margin:22px auto 0;position:relative;z-index:1;}
+  .article{max-width:var(--maxw);margin:0 auto;padding:48px 24px 0;}
+  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.03em;color:#6b6b6b;margin-bottom:14px;line-height:1.5;}
+  .byline strong{color:var(--navy);font-weight:600;}
+  .meta{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b6b6b;border-bottom:1px solid #d8d2c4;padding-bottom:18px;margin-bottom:36px;display:flex;gap:18px;flex-wrap:wrap;}
+  .meta strong{color:var(--navy);font-weight:600;}
+  .lead{font-size:20px;line-height:1.7;margin-bottom:34px;}
+  .lead::first-letter{font-family:var(--serif);font-weight:600;font-size:68px;line-height:.8;float:left;margin:6px 12px 0 0;color:var(--gold);}
+  p{margin-bottom:22px;}
+  .dateline{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.06em;color:var(--navy);text-transform:uppercase;}
+  .section-head{margin:48px 0 22px;}
+  .section-head .num{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:6px;}
+  .section-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(23px,3.4vw,30px);line-height:1.25;color:var(--navy);}
+  .inst-box{background:#fff;border:1px solid #e5dfd0;border-left:4px solid var(--wine);padding:26px 28px;margin:36px 0;border-radius:3px;}
+  .inst-box h3{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--wine);margin-bottom:12px;}
+  .inst-box ul{margin:0;padding-left:20px;}
+  .inst-box li{margin-bottom:8px;font-size:16px;}
+  .data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:36px 0;}
+  .data-card{background:#fff;border:1px solid #e5dfd0;border-top:3px solid var(--gold);padding:24px 20px;border-radius:3px;}
+  .data-card .figure{font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);line-height:1.1;}
+  .data-card .label{font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:#6b6b6b;text-transform:uppercase;margin-top:8px;display:block;}
+  .editorial-note{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.7;color:#4a4a4a;border-top:1px solid #d8d2c4;border-bottom:1px solid #d8d2c4;padding:26px 0;margin:44px 0;}
+  .editorial-note strong{font-style:normal;color:var(--navy);}
+  .img-disclaimer{font-family:var(--sans);font-size:12px;line-height:1.6;color:#7a7a7a;background:#efe9db;border-radius:3px;padding:18px 22px;margin:40px 0 0;}
+  .img-disclaimer .fr{display:block;margin-top:8px;color:#8a8a8a;font-style:italic;}
+  .article-footer{text-align:center;margin:56px auto 0;max-width:var(--maxw);padding:40px 24px;border-top:2px solid var(--gold);}
+  .article-footer .mark{font-family:var(--sans);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:15px;color:var(--navy);}
+  .article-footer .pillars{font-family:var(--sans);font-weight:300;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:14px;}
+  .site-footer{background:var(--navy);color:#aeb8cc;text-align:center;padding:34px 24px;margin-top:48px;font-family:var(--sans);font-size:13px;line-height:1.8;}
+  .site-footer .brand{color:var(--offwhite);font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
+  .site-footer a{color:var(--gold-light);text-decoration:none;}
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">THE CROSSING TIME <span>· Porta Voz do Imigrante</span></div>
+    <div class="pillars">Mobilidade · Pouvoir · Transformation</div>
+  </header>
+
+  <section class="hero-typo">
+    <span class="kicker">França · Vaucluse · Canícula</span>
+    <h1>Duas crianças morrem dentro de um carro durante a canícula em Carpentras</h1>
+    <p class="dek">Os irmãos, de 2 e 4 anos, ter-se-iam trancado no veículo da família sem que a mãe percebesse. A autópsia aponta para a exposição ao calor.</p>
+  </section>
+
+  <main class="article">
+
+    <div class="byline">Por <strong>Carlos Guilherme Cordovil da Silva</strong> — Jornalista e Chefe de Cobertura Oficial da The Crossing Time no Brasil</div>
+
+    <div class="meta">
+      <span><strong>The Crossing Time</strong></span>
+      <span>Carpentras, França</span>
+      <span>26 de junho de 2026</span>
+      <span>Edição #30</span>
+    </div>
+
+    <p class="lead"><span class="dateline">Carpentras (França) —</span> Em meio a uma das ondas de calor mais severas dos últimos anos, uma tragédia abalou a França. Na segunda-feira, 22 de junho, dois irmãos de 2 e 4 anos foram encontrados sem vida dentro de um carro da família, em Carpentras, no departamento de Vaucluse, no sul do país. Segundo o Ministério Público local, foi a mãe quem os encontrou no veículo, estacionado em pleno sol, e acionou de imediato o socorro — que, apesar das tentativas de reanimação, não conseguiu salvá-los.</p>
+
+    <div class="section-head"><span class="num">I</span><h2>O que se sabe até agora</h2></div>
+
+    <p>De acordo com a procuradora de Carpentras, os primeiros elementos da investigação indicam que as crianças <strong>ter-se-iam trancado sozinhas no veículo, sem o conhecimento da mãe</strong>. Demasiado chocada, ela não pôde ser ouvida na segunda-feira; foi ouvida livremente, como testemunha, no dia seguinte, e confirmou essa versão. A autópsia, realizada na terça-feira, confirmou a hipótese de morte por exposição a uma chaleur excessiva — ainda sujeita aos resultados de análises complementares em curso. Foi aberta uma investigação por homicídio involuntário, procedimento habitual nesses casos, conduzida pela polícia nacional.</p>
+
+    <p>O drama ocorreu com o Vaucluse em vigilância laranja de canícula, com a temperatura externa beirando os 40°C naquele dia.</p>
+
+    <div class="section-head"><span class="num">II</span><h2>O perigo invisível do calor dentro de um carro</h2></div>
+
+    <p>Especialistas em saúde pública alertam há anos para um risco que se materializa em minutos: o interior de um automóvel fechado aquece muito mais rápido do que o ambiente. Mesmo com 35°C a 40°C lá fora, o habitáculo pode ultrapassar os 55°C em menos de quinze minutos. As crianças pequenas são especialmente vulneráveis, porque seu organismo aquece mais depressa que o de um adulto, o que pode levar rapidamente à hipertermia, à desidratação grave e à falência de órgãos.</p>
+
+    <div class="inst-box">
+      <h3>Prevenção: o que toda família deve saber</h3>
+      <ul>
+        <li>Nunca deixe uma criança sozinha dentro de um veículo — nem por poucos minutos.</li>
+        <li>Verifique sempre o interior do carro antes de trancá-lo.</li>
+        <li>Mantenha as chaves fora do alcance de crianças pequenas, para que não consigam entrar e se trancar.</li>
+        <li>Em dias de calor, atenção redobrada a carros, piscinas e áreas externas sem sombra — zonas de risco com temperaturas elevadas.</li>
+      </ul>
+    </div>
+
+    <div class="section-head"><span class="num">III</span><h2>Uma canícula que faz vítimas</h2></div>
+
+    <p>A tragédia acontece enquanto grande parte da França enfrenta temperaturas excepcionalmente altas, com vários departamentos sob vigilância da Météo-France e máximas acima dos 40°C em algumas regiões. Às temperaturas diurnas somam-se as "noites tropicais", que dificultam a recuperação do organismo e elevam o risco para crianças, idosos e pessoas com doenças crônicas. Diante do choque, autoridades locais renovaram o apelo à vigilância de pais e avós com os mais pequenos. Mais do que um número, a perda das duas crianças é um lembrete doloroso de que, nesses dias, a prevenção salva vidas.</p>
+
+    <div class="data-grid">
+      <div class="data-card"><span class="figure">2 e 4 anos</span><span class="label">Idades das crianças</span></div>
+      <div class="data-card"><span class="figure">22 jun 2026</span><span class="label">Carpentras (Vaucluse)</span></div>
+      <div class="data-card"><span class="figure">&gt;55°C</span><span class="label">No habitáculo, em &lt;15 min</span></div>
+      <div class="data-card"><span class="figure">~40°C</span><span class="label">Temperatura externa no dia</span></div>
+    </div>
+
+    <p class="editorial-note"><strong>Nota editorial.</strong> Informações atribuídas ao Ministério Público de Carpentras e à imprensa francesa; a investigação prossegue e elementos podem ser atualizados. Por respeito às crianças e à família, e por se tratar de pessoas privadas em luto, não divulgamos identidades nem detalhes que possam identificá-las, e esta edição usa arte tipográfica original, sem fotografias — nunca imagens do incidente ou das vítimas. Publicamos o caso pelo seu valor de prevenção: em dias de calor extremo, alguns minutos podem ser fatais.</p>
+
+    <p class="img-disclaimer">
+      Esta edição não utiliza fotografias: por respeito às vítimas e à família, e dada a gravidade do caso, optou-se por arte tipográfica original, sem imagens de terceiros nem do incidente.
+      <span class="fr">Cette édition n’utilise aucune photographie : par respect pour les victimes et leur famille, et vu la gravité des faits, nous avons choisi une création typographique originale, sans images de tiers ni de l’incident.</span>
+    </p>
+
+  </main>
+
+  <div class="article-footer">
+    <div class="mark">The Crossing Time, by Porta Voz do Imigrante</div>
+    <div class="pillars">Mobilidade • Pouvoir • Transformation</div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="brand">The Crossing Time</div>
+    <div>Plateforme éditoriale internationale</div>
+    <div><a href="https://thecrossingtime.com">thecrossingtime.com</a> · WhatsApp +33 6 69 99 72 96</div>
+  </footer>
+
+</body>
+</html>

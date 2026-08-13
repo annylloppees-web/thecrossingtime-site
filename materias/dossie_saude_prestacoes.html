@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saúde e prestações | The Crossing Time</title>
+<meta name="description" content="Cobertura de saúde em França para estrangeiros: protecção universal, Carte Vitale, complementar solidária, AME e PASS. Dossiê bilingue PT/FR.">
+<meta property="og:title" content="Saúde e prestações | The Crossing Time">
+<meta property="og:description" content="Cobertura de saúde em França para estrangeiros: protecção universal, Carte Vitale, complementar solidária, AME e PASS. Dossiê bilingue PT/FR.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="The Crossing Time">
+<meta property="og:image" content="../og/dossie_saude_prestacoes.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E1A2B;--gold:#C6A15B;--off:#F4F2ED;--ink:#111111;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--off);color:var(--ink);font-family:'Lora',Georgia,serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
+
+/* ── bilingue ── */
+.ng-fr{display:none!important;}
+body[data-lang="fr"] .ng-pt{display:none!important;}
+body[data-lang="fr"] .ng-fr{display:revert!important;}
+
+/* ── topbar ── */
+.tct-topbar{position:fixed;top:0;left:0;right:0;height:54px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 1.1rem;z-index:9600;box-shadow:0 1px 12px rgba(14,26,43,.25);}
+.tct-back{background:none;border:0;color:var(--off);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;gap:.5rem;padding:.5rem .2rem;}
+.tct-back:hover{color:var(--gold);}
+.tct-brand{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:1rem;letter-spacing:.04em;}
+.lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.08);border-radius:999px;padding:3px;}
+.lang-bar button{background:none;border:0;color:rgba(244,242,237,.6);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;padding:.35rem .7rem;border-radius:999px;cursor:pointer;}
+.lang-bar button.on{background:var(--gold);color:var(--navy);font-weight:600;}
+
+/* ── hero ── */
+.hero{background:linear-gradient(180deg,#0E1A2B 0%,#1a2e4a 100%);color:var(--off);padding:7rem 1.5rem 3.5rem;text-align:center;}
+.hero .kicker{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.4rem;}
+.hero h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.08;max-width:900px;margin:0 auto 1.3rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero .sub{max-width:680px;margin:0 auto 1.8rem;font-size:1.02rem;line-height:1.7;color:rgba(244,242,237,.82);font-style:italic;}
+.hero .meta{font-family:'Jost',sans-serif;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(198,161,91,.85);}
+
+/* ── layout ── */
+.wrap{max-width:760px;margin:0 auto;padding:0 1.5rem;}
+.sec{padding:3rem 0 0;}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.2;color:var(--navy);margin-bottom:.4rem;}
+h2 .num{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:.6rem;font-weight:600;}
+h3{font-family:'Jost',sans-serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);font-weight:600;margin:1.6rem 0 .5rem;}
+p{margin:.9rem 0;font-size:1.02rem;color:#2a2a2a;}
+a{color:var(--navy);}
+.lede{font-size:1.12rem;color:#333;font-style:italic;border-left:2px solid var(--gold);padding-left:1.1rem;}
+.rule{height:1px;background:rgba(14,26,43,.12);margin:2.6rem 0 0;}
+
+/* ── índice ── */
+.toc{background:#fff;border:1px solid rgba(14,26,43,.09);border-top:3px solid var(--gold);padding:1.6rem 1.6rem 1.3rem;margin-top:2.5rem;}
+.toc .lbl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.toc ol{margin:.9rem 0 0 1.1rem;}
+.toc li{font-family:'Jost',sans-serif;font-size:.92rem;margin:.42rem 0;line-height:1.5;}
+.toc a{text-decoration:none;border-bottom:1px solid rgba(198,161,91,.5);}
+.toc a:hover{color:var(--gold);}
+
+/* ── cartões ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin:1.4rem 0 .4rem;}
+.tcard{background:#fff;border:1px solid rgba(14,26,43,.09);border-left:3px solid var(--gold);padding:1.2rem 1.2rem 1.1rem;}
+.tcard .t{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+.tcard .n{font-family:'Cormorant Garamond',serif;font-size:1.28rem;color:var(--navy);margin:.35rem 0 .45rem;line-height:1.2;}
+.tcard p{font-size:.9rem;margin:0;color:#555;line-height:1.6;}
+
+/* ── caixas ── */
+.box{background:#fff;border:1px solid rgba(14,26,43,.09);padding:1.4rem 1.5rem;margin:1.5rem 0;}
+.box.gold{border-left:3px solid var(--gold);background:#FBF8F1;}
+.box.navy{background:var(--navy);color:var(--off);border:0;}
+.box.navy p{color:rgba(244,242,237,.86);}
+.box .bl{font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:.6rem;}
+.box p{margin:.5rem 0;font-size:.98rem;}
+
+/* ── listas ── */
+ul.tct,ol.tct{margin:1rem 0 1rem 1.15rem;}
+ul.tct li,ol.tct li{margin:.6rem 0;font-size:1rem;color:#2a2a2a;line-height:1.7;}
+ul.tct li strong,ol.tct li strong{font-family:'Jost',sans-serif;font-weight:600;font-size:.93rem;letter-spacing:.02em;color:var(--navy);}
+
+/* ── tabela ── */
+.tbl{width:100%;border-collapse:collapse;margin:1.3rem 0;background:#fff;font-size:.93rem;}
+.tbl th{background:var(--navy);color:var(--off);font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:.75rem .8rem;text-align:left;}
+.tbl td{padding:.75rem .8rem;border-bottom:1px solid rgba(14,26,43,.08);vertical-align:top;color:#333;}
+.tbl tr:last-child td{border-bottom:0;}
+
+/* ── fontes ── */
+.srcs{margin:1.2rem 0 0;}
+.srcs a{display:block;font-family:'Jost',sans-serif;font-size:.9rem;text-decoration:none;color:var(--navy);padding:.7rem 0;border-bottom:1px solid rgba(14,26,43,.08);}
+.srcs a:hover{color:var(--gold);}
+.srcs a span.d{display:block;font-size:.78rem;color:#888;letter-spacing:.02em;margin-top:.15rem;}
+
+/* ── CTA / aviso ── */
+.disc{background:#fff;border:1px dashed rgba(14,26,43,.22);padding:1.3rem 1.4rem;margin:2rem 0 0;font-size:.9rem;color:#555;line-height:1.65;}
+.cta{background:var(--navy);color:var(--off);padding:2.6rem 1.6rem;text-align:center;margin-top:3rem;}
+.cta h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.7rem;margin-bottom:.7rem;}
+.cta p{color:rgba(244,242,237,.78);font-size:.98rem;max-width:520px;margin:0 auto 1.5rem;}
+.btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;padding:.95rem 1.8rem;border-radius:999px;text-decoration:none;}
+.btn:hover{background:#d4b06b;}
+.btn.ghost{background:none;border:1px solid rgba(198,161,91,.55);color:var(--gold);margin-left:.5rem;}
+
+/* ── assinatura / rodapé ── */
+.sign{display:flex;align-items:center;gap:1rem;margin:2.6rem 0 0;padding-top:1.6rem;border-top:1px solid rgba(14,26,43,.12);}
+.seal{width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;letter-spacing:.05em;flex-shrink:0;}
+.sign .nm{font-family:'Jost',sans-serif;font-size:.95rem;font-weight:600;color:var(--navy);}
+.sign .rl{font-size:.83rem;color:#777;font-family:'Jost',sans-serif;}
+.foot{text-align:center;padding:2.5rem 1.5rem 4rem;color:#999;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.1em;}
+
+/* ── partilha ── */
+.share{position:fixed;right:1.1rem;bottom:1.1rem;display:flex;flex-direction:column;gap:.5rem;z-index:9500;}
+.share button{width:44px;height:44px;border-radius:50%;border:0;background:var(--navy);color:var(--gold);cursor:pointer;box-shadow:0 4px 14px rgba(14,26,43,.22);font-size:15px;}
+.share button:hover{background:var(--gold);color:var(--navy);}
+
+@media(max-width:640px){
+  .hero{padding:6rem 1.2rem 2.6rem;}
+  .wrap{padding:0 1.2rem;}
+  .tbl{font-size:.85rem;}
+  .tbl th,.tbl td{padding:.6rem .5rem;}
+}
+</style>
+</head>
+<body data-lang="pt">
+
+<div class="tct-topbar">
+  <button class="tct-back" onclick="goBack()">
+    <span>&lsaquo;</span>
+    <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+  </button>
+  <span class="tct-brand">The Crossing Time</span>
+  <div class="lang-bar">
+    <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+<div class="hero">
+  <span class="kicker"><span class="ng-pt">TCT Especiais · Dossiê 5 · Imigração</span><span class="ng-fr">TCT Spéciaux · Dossier 5 · Immigration</span></span>
+  <h1><span class="ng-pt">Saúde e prestações</span><span class="ng-fr">Santé et prestations</span><br><em><span class="ng-pt">Carte Vitale, complementar, CAF e AME</span><span class="ng-fr">Carte Vitale, complémentaire, CAF et AME</span></em></h1>
+  <p class="sub"><span class="ng-pt">Como se abre a cobertura de base, o que fazer enquanto o cartão não chega, o que é a ajuda médica do Estado e onde ir quando não há cobertura nenhuma.</span><span class="ng-fr">Comment ouvrir la couverture de base, que faire en attendant la carte, ce qu'est l'aide médicale de l'État et où aller quand il n'y a aucune couverture.</span></p>
+  <p class="meta"><span class="ng-pt">Por Anne Lopes · Actualizado em Julho de 2026 · Fontes oficiais .gouv.fr</span><span class="ng-fr">Par Anne Lopes · Mis à jour en juillet 2026 · Sources officielles .gouv.fr</span></p>
+</div>
+
+<div class="wrap">
+  <div class="sec">
+    <p class="lede"><span class="ng-pt">Adiar uma consulta por não ter ainda o cartão na mão é um dos erros mais comuns e mais caros — caro em saúde, não em euros. Este dossiê explica o que já lhe pertence antes de o plástico chegar.</span><span class="ng-fr">Reporter une consultation faute d'avoir encore la carte en main est l'une des erreurs les plus fréquentes et les plus coûteuses — coûteuses en santé, pas en euros. Ce dossier explique ce qui vous appartient déjà avant l'arrivée du plastique.</span></p>
+    <div class="toc">
+      <span class="lbl"><span class="ng-pt">Neste dossiê</span><span class="ng-fr">Dans ce dossier</span></span>
+      <ol>
+        <li><a href="#s1"><span class="ng-pt">A cobertura de base</span><span class="ng-fr">La couverture de base</span></a></li>
+        <li><a href="#s2"><span class="ng-pt">Enquanto a Carte Vitale não chega</span><span class="ng-fr">En attendant la Carte Vitale</span></a></li>
+        <li><a href="#s3"><span class="ng-pt">A ajuda médica do Estado</span><span class="ng-fr">L'aide médicale de l'État</span></a></li>
+        <li><a href="#s4"><span class="ng-pt">Quando não há cobertura nenhuma: as PASS</span><span class="ng-fr">Aucune couverture : les PASS</span></a></li>
+        <li><a href="#s5"><span class="ng-pt">Prestações familiares e sociais</span><span class="ng-fr">Prestations familiales et sociales</span></a></li>
+        <li><a href="#s6"><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></a></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="sec" id="s1">
+    <h2><span class="num">01</span><span class="ng-pt">A cobertura de base: a protecção universal de saúde</span><span class="ng-fr">La couverture de base : la protection universelle maladie</span></h2>
+    <p><span class="ng-pt">A protecção universal de saúde é a porta de entrada no sistema francês. Segundo a Assurance Maladie, para beneficiar da cobertura dos custos de saúde é necessário trabalhar em França ou viver no país de maneira estável e regular há mais de três meses, com residência efectiva no território. O processo deposita-se na caixa primária de seguro de doença do seu local de residência, e é dele que resulta a atribuição do número de segurança social.</span><span class="ng-fr">La protection universelle maladie est la porte d'entrée dans le système français. Selon l'Assurance Maladie, pour bénéficier de la prise en charge des frais de santé, il faut travailler en France ou y vivre de manière stable et régulière depuis plus de trois mois, avec une résidence effective sur le territoire. Le dossier se dépose auprès de la caisse primaire d'assurance maladie de votre lieu de résidence, et c'est de là que découle l'attribution du numéro de sécurité sociale.</span></p>
+    <p><span class="ng-pt">Quando a afiliação se faz com base no critério de residência, há controlos periódicos: pede-se que justifique pelo menos seis meses de residência em França nos últimos doze. Mantenha os comprovativos organizados.</span><span class="ng-fr">Lorsque l'affiliation repose sur le critère de résidence, des contrôles périodiques existent : il vous est demandé de justifier au moins six mois de résidence en France sur les douze derniers mois. Gardez vos justificatifs organisés.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="s2">
+    <h2><span class="num">02</span><span class="ng-pt">Enquanto a Carte Vitale não chega</span><span class="ng-fr">En attendant la Carte Vitale</span></h2>
+    <p><span class="ng-pt">O cartão físico demora. Isso não significa que esteja sem cobertura, e é aqui que muita gente adia consultas sem necessidade: a partir do momento em que os direitos estão abertos, a atestação de direitos disponível na sua conta pessoal do seguro de doença comprova a cobertura junto dos profissionais de saúde. Não adie cuidados por causa de um plástico.</span><span class="ng-fr">La carte physique met du temps. Cela ne signifie pas que vous êtes sans couverture, et c'est là que beaucoup reportent des consultations sans nécessité : dès l'ouverture des droits, l'attestation de droits disponible dans votre compte personnel de l'assurance maladie prouve la couverture auprès des professionnels de santé. Ne différez pas des soins à cause d'un bout de plastique.</span></p>
+    <div class="box gold">
+      <span class="bl"><span class="ng-pt">Dois gestos que mudam a factura</span><span class="ng-fr">Deux gestes qui changent la facture</span></span>
+      <p><span class="ng-pt">Declare um médico de família: o percurso de cuidados coordenado melhora o nível de reembolso. E verifique se tem direito à complementar solidária de saúde, que cobre a parte que o regime de base não paga — é um pedido distinto, sujeito a condições de recursos, e não é automático.</span><span class="ng-fr">Déclarez un médecin traitant : le parcours de soins coordonné améliore le niveau de remboursement. Et vérifiez votre droit à la complémentaire santé solidaire, qui couvre la part non prise en charge par le régime de base — c'est une demande distincte, soumise à conditions de ressources, et elle n'est pas automatique.</span></p>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="s3">
+    <h2><span class="num">03</span><span class="ng-pt">Sem título de residência: a ajuda médica do Estado</span><span class="ng-fr">Sans titre de séjour : l'aide médicale de l'État</span></h2>
+    <p><span class="ng-pt">A ajuda médica do Estado dirige-se a estrangeiros em situação irregular e precária. Segundo a Assurance Maladie, é preciso responder a condições de recursos e de residência estável em França. Uma vez aceite o pedido, a pessoa é convocada pela caixa do seu local de residência para receber o cartão de admissão, no qual figura a sua fotografia — e é esse cartão que permite fazer valer os direitos junto dos profissionais de saúde e beneficiar da dispensa de adiantamento de despesas.</span><span class="ng-fr">L'aide médicale de l'État s'adresse aux étrangers en situation irrégulière et précaire. Selon l'Assurance Maladie, il faut répondre à des conditions de ressources et de résidence stable en France. Une fois la demande acceptée, la personne est convoquée par la caisse de son lieu de résidence pour recevoir la carte d'admission, sur laquelle figure sa photographie — et c'est cette carte qui permet de faire valoir ses droits auprès des professionnels de santé et de bénéficier de la dispense d'avance de frais.</span></p>
+    <ul class="tct">
+      <li><span class="ng-pt"><strong>Duração</strong> — é concedida por um ano, a contar da data do depósito do pedido.</span><span class="ng-fr"><strong>Durée</strong> — elle est accordée pour un an, à compter de la date de dépôt de la demande.</span></li>
+      <li><span class="ng-pt"><strong>Crianças</strong> — é atribuída sem condição de recursos às crianças menores cujos pais estão em situação irregular, mesmo que estes ainda não beneficiem dela ou excedam o limite de recursos.</span><span class="ng-fr"><strong>Enfants</strong> — elle est attribuée sans condition de ressources aux enfants mineurs dont les parents sont en situation irrégulière, même si ces derniers n'en bénéficient pas encore ou dépassent le plafond de ressources.</span></li>
+      <li><span class="ng-pt"><strong>Limites</strong> — a admissão não permite obter a Carte Vitale nem o cartão europeu de seguro de doença.</span><span class="ng-fr"><strong>Limites</strong> — l'admission ne permet d'obtenir ni la Carte Vitale ni la carte européenne d'assurance maladie.</span></li>
+      <li><span class="ng-pt"><strong>Se as condições não estiverem reunidas</strong> — pode existir, sob certas condições, cobertura ao título dos cuidados urgentes. E a ajuda pode ainda ser concedida, excepcionalmente, a título humanitário.</span><span class="ng-fr"><strong>Si les conditions ne sont pas réunies</strong> — une prise en charge au titre des soins urgents peut exister sous certaines conditions. Et l'aide peut aussi être accordée, exceptionnellement, à titre humanitaire.</span></li>
+    </ul>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="s4">
+    <h2><span class="num">04</span><span class="ng-pt">Quando não há cobertura nenhuma: as PASS</span><span class="ng-fr">Quand il n'y a aucune couverture : les PASS</span></h2>
+    <p><span class="ng-pt">Os hospitais públicos dispõem de permanências de acesso aos cuidados de saúde, criadas justamente para acolher pessoas sem cobertura ou em grande precariedade, e para ajudar a abrir os direitos. É a via a usar em vez de esperar que uma situação se agrave — e é gratuita.</span><span class="ng-fr">Les hôpitaux publics disposent de permanences d'accès aux soins de santé, créées précisément pour accueillir les personnes sans couverture ou en grande précarité, et pour aider à l'ouverture des droits. C'est la voie à emprunter plutôt que d'attendre l'aggravation d'une situation — et c'est gratuit.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="s5">
+    <h2><span class="num">05</span><span class="ng-pt">Prestações familiares e sociais: verifique antes de contar com elas</span><span class="ng-fr">Prestations familiales et sociales : vérifiez avant de compter dessus</span></h2>
+    <p><span class="ng-pt">As prestações geridas pela caixa de subsídios familiares têm condições próprias, distintas das da saúde: condições de residência, de regularidade do título e, para algumas prestações, de duração de residência. Não há regra única que se aplique a todas. Antes de fazer contas com um apoio, confirme a sua elegibilidade nos simuladores oficiais e junto da sua caixa — e desconfie de quem lhe garanta um valor sem ter visto a sua situação.</span><span class="ng-fr">Les prestations gérées par la caisse d'allocations familiales ont leurs propres conditions, distinctes de celles de la santé : conditions de résidence, de régularité du titre et, pour certaines prestations, de durée de séjour. Il n'existe pas de règle unique applicable à toutes. Avant de compter sur une aide, vérifiez votre éligibilité sur les simulateurs officiels et auprès de votre caisse — et méfiez-vous de qui vous garantit un montant sans avoir examiné votre situation.</span></p>
+    <p><span class="ng-pt">Uma nota importante para o reagrupamento familiar: a lei exclui várias destas prestações do cálculo dos recursos exigidos. Recebê-las não melhora esse processo — e não as receber não o impede.</span><span class="ng-fr">Une note importante pour le regroupement familial : la loi exclut plusieurs de ces prestations du calcul des ressources exigées. Les percevoir n'améliore pas ce dossier — et ne pas les percevoir ne l'empêche pas.</span></p>
+
+  </div>
+  <div class="rule"></div>
+
+  <div class="sec" id="s6">
+    <h2><span class="num">06</span><span class="ng-pt">Fontes oficiais</span><span class="ng-fr">Sources officielles</span></h2>
+    <div class="srcs">
+      <a href="https://www.ameli.fr/assure/droits-demarches/situations-particulieres/situation-irreguliere-ame" target="_blank" rel="noopener"><span class="ng-pt">Assurance Maladie — Ajuda médica do Estado: as suas diligências</span><span class="ng-fr">Assurance Maladie — Aide médicale de l'État : vos démarches</span><span class="d">ameli.fr</span></a>
+      <a href="https://www.ameli.fr" target="_blank" rel="noopener"><span class="ng-pt">Assurance Maladie — Conta pessoal, atestação de direitos e reembolsos</span><span class="ng-fr">Assurance Maladie — Compte personnel, attestation de droits et remboursements</span><span class="d">ameli.fr</span></a>
+      <a href="https://www.caf.fr" target="_blank" rel="noopener"><span class="ng-pt">Caixa de subsídios familiares — Prestações e simuladores</span><span class="ng-fr">Caisse d'allocations familiales — Prestations et simulateurs</span><span class="d">caf.fr</span></a>
+      <a href="https://www.service-public.gouv.fr" target="_blank" rel="noopener"><span class="ng-pt">Service-Public — Fichas oficiais por situação</span><span class="ng-fr">Service-Public — Fiches officielles par situation</span><span class="d">service-public.gouv.fr</span></a>
+    </div>
+
+  </div>
+  <div class="rule"></div>
+    <div class="disc">
+      <span class="ng-pt"><strong>Aviso.</strong> Este dossiê é informação editorial de interesse público, verificada em fontes oficiais francesas à data indicada. Não constitui aconselhamento jurídico individual e não substitui a análise do seu caso por um profissional habilitado.</span><span class="ng-fr"><strong>Avertissement.</strong> Ce dossier constitue une information éditoriale d'intérêt public, vérifiée auprès de sources officielles françaises à la date indiquée. Il ne constitue pas un conseil juridique individuel et ne remplace pas l'analyse de votre cas par un professionnel habilité.</span>
+    </div>
+
+    <div class="sign">
+      <div class="seal">AL</div>
+      <div>
+        <div class="nm"><span class="ng-pt">Por Anne Lopes</span><span class="ng-fr">Par Anne Lopes</span></div>
+        <div class="rl"><span class="ng-pt">CEO e Fundadora da The Crossing Time</span><span class="ng-fr">PDG et fondatrice de The Crossing Time</span></div>
+      </div>
+    </div>
+
+</div>
+
+<div class="cta">
+  <h4><span class="ng-pt">Tem uma dúvida sobre direitos sociais?</span><span class="ng-fr">Une question sur vos droits sociaux ?</span></h4>
+  <p><span class="ng-pt">The Crossing Time reúne colunistas juristas que escrevem regularmente sobre direito dos estrangeiros, direito patrimonial e direito internacional.</span><span class="ng-fr">The Crossing Time réunit des chroniqueurs juristes qui écrivent régulièrement sur le droit des étrangers, le droit patrimonial et le droit international.</span></p>
+  <a class="btn" href="../index.html#colunas" target="_top"><span class="ng-pt">Ver os colunistas juristas</span><span class="ng-fr">Voir les chroniqueurs juristes</span></a>
+  <a class="btn ghost" href="https://wa.me/message/STDV3OMZM6EGL1" target="_blank" rel="noopener"><span class="ng-pt">Falar com a redacção</span><span class="ng-fr">Contacter la rédaction</span></a>
+</div>
+
+<div class="foot">
+  <span class="ng-pt">The Crossing Time · By Porta-Voz do Imigrante · Dossiê actualizado em Julho de 2026</span>
+  <span class="ng-fr">The Crossing Time · By Porta-Voz do Imigrante · Dossier mis à jour en juillet 2026</span>
+</div>
+
+<div class="share">
+  <button onclick="shareWa()" title="WhatsApp">&#9993;</button>
+  <button onclick="copyLink()" title="Copiar link">&#128279;</button>
+</div>
+
+<script>
+function goBack(){
+  if(window.parent && window.parent !== window){
+    try{ window.parent.closeMateria(); return; }catch(e){}
+  }
+  window.location.href = '../index.html#civique';
+}
+function setLang(l){
+  document.body.setAttribute('data-lang', l);
+  document.documentElement.setAttribute('lang', l);
+  var bp = document.getElementById('b-pt'), bf = document.getElementById('b-fr');
+  if(bp) bp.className = (l === 'pt') ? 'on' : '';
+  if(bf) bf.className = (l === 'fr') ? 'on' : '';
+  try{ localStorage.setItem('tct-lang', l); }catch(e){}
+}
+(function(){
+  var saved = 'pt';
+  try{ saved = localStorage.getItem('tct-lang') || 'pt'; }catch(e){}
+  if(saved === 'fr') setLang('fr');
+})();
+function shareWa(){
+  window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' — ' + window.location.href), '_blank');
+}
+function copyLink(){
+  var u = window.location.href;
+  if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ alert('Link copiado / Lien copie'); }); }
+  else { alert(u); }
+}
+</script>
+</body>
+</html>

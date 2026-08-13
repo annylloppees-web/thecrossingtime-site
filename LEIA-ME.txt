@@ -1,0 +1,52 @@
+TCT — PARTE 14 · v10 · O BOTAO DEIXA DE DESAPARECER
+====================================================
+
+SUBSTITUI todas as anteriores. Rodape: VERSAO P14-V10 · 12AGO2026
+
+PORQUE E QUE APARECIA E DESAPARECIA
+------------------------------------
+O botao estava PENDURADO DENTRO DA PAGINA INICIAL.
+
+O site tem 16 paginas dentro do mesmo index.html, e muda de pagina
+escondendo umas e mostrando outras (display:none). Eu tinha metido
+o leitor dentro do #page-home. Assim que o site mudava de pagina —
+ou restaurava a ultima pagina vista ao abrir — o page-home levava
+display:none e o botao ia atras dele.
+
+Estar "fixo ao ecra" nao salva: um elemento fixo dentro de um pai
+escondido desaparece na mesma.
+
+CORRIGIDO
+---------
+O leitor saiu de dentro das paginas e passou para o FIM do
+documento, fora de todas elas. Agora nao ha pagina que o possa
+esconder.
+
+O video ficou onde estava — dentro da pagina inicial — porque e
+conteudo da pagina inicial e deve mesmo desaparecer quando muda
+de seccao.
+
+VERIFICACAO QUE O SCRIPT FAZ SOZINHO
+------------------------------------
+O script de montagem compara agora as POSICOES no ficheiro e
+recusa-se a gravar se o leitor ficar antes da ultima pagina:
+
+   leitor na posicao 6.512.693
+   ultima pagina termina em 6.478.173   -> esta depois. OK
+   video na posicao 101.580, dentro da pagina inicial. OK
+
+ONDE COPIAR
+-----------
+index.html        -> RAIZ do site
+tct-hero.mp4      -> RAIZ do site, ao lado do index.html
+materias/*.html   -> pasta materias/   (3 ficheiros)
+og/materias/*.jpg -> pasta og/materias/ (3 ficheiros)
+
+DEPOIS DE PUBLICAR
+------------------
+Ctrl+Shift+R no computador. No telemovel, fechar todos os
+separadores e limpar cache. Rodape tem de dizer P14-V10.
+
+TESTE: navegue pelo menu — Revista, Colunas, Missing, Imigracao.
+O botao tem de continuar la em TODAS. Era exactamente isso que
+falhava.

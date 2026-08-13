@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>França aprova lei histórica sobre o fim da vida — The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#071a3d; --navy2:#0c2452; --gold:#B8924A; --gold2:#c7a45a;
+    --off:#F5F1E8; --wine:#8B2635; --ink:#1a1a1a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--off);color:var(--ink);font-family:'Lora',serif;line-height:1.75;font-size:18px}
+  .topbar{background:var(--navy);color:var(--off);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .topbar .brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:3px;font-size:15px}
+  .topbar .brand span{color:var(--gold2)}
+  .topbar .ed{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gold2);text-transform:uppercase}
+  /* HERO TIPOGRÁFICO */
+  .thero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 58%,#132f66 100%);color:#fff;padding:74px 24px 66px;position:relative;overflow:hidden}
+  .thero::before{content:'';position:absolute;inset:0;background:
+    repeating-linear-gradient(90deg, rgba(199,164,90,.05) 0 2px, transparent 2px 120px)}
+  .thero .inner{max-width:980px;margin:0 auto;position:relative;border:1px solid rgba(199,164,90,.5);padding:56px 42px 50px}
+  .thero .corner{position:absolute;width:22px;height:22px;border-color:var(--gold2);border-style:solid}
+  .thero .c1{top:-1px;left:-1px;border-width:3px 0 0 3px}
+  .thero .c2{top:-1px;right:-1px;border-width:3px 3px 0 0}
+  .thero .c3{bottom:-1px;left:-1px;border-width:0 0 3px 3px}
+  .thero .c4{bottom:-1px;right:-1px;border-width:0 3px 3px 0}
+  .thero .kicker{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:4px;color:var(--gold2);text-transform:uppercase;margin-bottom:22px;text-align:center}
+  .thero .frword{font-family:'Lora',serif;font-style:italic;font-weight:600;color:var(--gold2);font-size:clamp(34px,5.6vw,62px);text-align:center;line-height:1.1;margin-bottom:10px}
+  .thero .frsub{font-family:'Poppins',sans-serif;font-size:12.5px;letter-spacing:3px;color:#b9c3d8;text-transform:uppercase;text-align:center;margin-bottom:34px}
+  .thero h1{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:clamp(26px,3.7vw,42px);line-height:1.22;text-align:center;margin-bottom:18px}
+  .thero .sub{color:#dcd6c6;font-size:clamp(16px,1.9vw,20px);font-style:italic;line-height:1.55;text-align:center;max-width:800px;margin:0 auto}
+  .thero .votes{display:flex;justify-content:center;align-items:baseline;gap:26px;margin-top:36px;font-family:'Poppins',sans-serif}
+  .thero .votes .v{text-align:center}
+  .thero .votes .n{font-weight:800;font-size:clamp(34px,4.5vw,52px);line-height:1}
+  .thero .votes .pro{color:var(--gold2)}
+  .thero .votes .con{color:#c9d2e6}
+  .thero .votes .x{color:rgba(199,164,90,.8);font-size:22px}
+  .thero .votes .l{font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:#9aa6c0;margin-top:8px}
+  .wrap{max-width:860px;margin:0 auto;padding:0 24px}
+  .byline{display:flex;align-items:center;gap:14px;padding:30px 0 12px;border-bottom:1px solid rgba(7,26,61,.15)}
+  .byline .mono{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:18px;flex-shrink:0}
+  .byline .who{font-family:'Poppins',sans-serif}
+  .byline .who b{display:block;font-size:15px;font-weight:600;color:var(--navy)}
+  .byline .who span{font-size:12.5px;color:#5a5a5a;letter-spacing:.4px}
+  .meta{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:1.4px;text-transform:uppercase;padding:14px 0 8px;display:flex;flex-wrap:wrap;gap:8px 18px}
+  .meta b{color:var(--wine);font-weight:600}
+  article{padding:26px 0 10px}
+  article p{margin-bottom:22px}
+  .lead{font-size:21px;line-height:1.7}
+  .lead::first-letter{font-family:'Lora',serif;font-weight:700;font-size:76px;line-height:.8;float:left;padding:8px 12px 0 0;color:var(--gold)}
+  .sec{margin:52px 0 24px}
+  .sec .num{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+  .sec h2{font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:clamp(24px,3vw,32px);line-height:1.25}
+  .quote{background:var(--navy);color:var(--off);border-left:5px solid var(--gold);padding:30px 32px;margin:36px 0;border-radius:3px}
+  .quote p{font-size:20px;font-style:italic;line-height:1.55;margin:0}
+  .quote .attr{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold2);margin-top:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:36px 0}
+  .card{background:#fff;border-top:4px solid var(--gold);border-radius:3px;padding:22px 20px;box-shadow:0 1px 4px rgba(7,26,61,.08)}
+  .card .big{font-family:'Poppins',sans-serif;font-weight:700;font-size:28px;color:var(--navy);line-height:1.1}
+  .card .lbl{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:.8px;text-transform:uppercase;margin-top:8px;line-height:1.45}
+  .crit{background:#fff;border:1px solid rgba(184,146,74,.45);border-radius:3px;padding:28px 30px;margin:36px 0}
+  .crit h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:16px}
+  .crit .item{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid rgba(7,26,61,.08);font-size:16.5px;line-height:1.6}
+  .crit .item:last-child{border-bottom:none}
+  .crit .d{color:var(--gold);font-weight:700;flex-shrink:0}
+  .timeline{margin:36px 0;border-left:3px solid var(--gold);padding-left:26px}
+  .tl{position:relative;padding-bottom:24px}
+  .tl:last-child{padding-bottom:4px}
+  .tl::before{content:'';position:absolute;left:-34px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--navy);border:3px solid var(--gold)}
+  .tl .d{font-family:'Poppins',sans-serif;font-weight:700;font-size:13px;letter-spacing:1.6px;color:var(--wine);text-transform:uppercase;margin-bottom:4px}
+  .tl .t{font-size:16.5px;line-height:1.6}
+  .ednote{background:rgba(7,26,61,.05);border-left:4px solid var(--navy);padding:26px 28px;margin:48px 0 30px;border-radius:3px}
+  .ednote h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:12px}
+  .ednote p{font-size:15.5px;line-height:1.7;color:#3a3a3a;margin-bottom:12px}
+  .ednote p:last-child{margin-bottom:0}
+  .imgdisc{border-top:1px solid rgba(7,26,61,.15);padding:24px 0;margin-top:8px}
+  .imgdisc p{font-family:'Poppins',sans-serif;font-size:12.5px;color:#7a7a7a;line-height:1.65;margin-bottom:8px}
+  .imgdisc p:last-child{margin-bottom:0;font-style:italic}
+  .pilares{background:var(--navy);color:var(--gold2);text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:4px;font-size:14px}
+  .sitefoot{background:var(--navy2);color:#cfc8b8;text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-size:12.5px;line-height:2}
+  .sitefoot b{color:#fff;letter-spacing:2px}
+  .sitefoot span{color:var(--gold2)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">THE CROSSING <span>TIME</span></div>
+  <div class="ed">Edição Nº 38 · Pouvoir · França</div>
+</div>
+
+<div class="thero">
+  <div class="inner">
+    <div class="corner c1"></div><div class="corner c2"></div><div class="corner c3"></div><div class="corner c4"></div>
+    <div class="kicker">Assemblée Nationale · Paris · 15 de julho de 2026</div>
+    <div class="frword">Aide à mourir</div>
+    <div class="frsub">O direito à ajuda para morrer</div>
+    <h1>França aprova lei histórica sobre o fim da vida: Assembleia Nacional dá sinal verde à ajuda para morrer</h1>
+    <div class="sub">Parlamento francês aprova, em votação final e sob critérios rigorosos, o suicídio assistido — e, em situações específicas, a assistência médica para morrer a pacientes com doenças graves e incuráveis.</div>
+    <div class="votes">
+      <div class="v"><div class="n pro">291</div><div class="l">votos a favor</div></div>
+      <div class="x">×</div>
+      <div class="v"><div class="n con">241</div><div class="l">votos contra</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="byline">
+    <div class="mono">CG</div>
+    <div class="who">
+      <b>Por Carlos Guilherme Cordovil da Silva</b>
+      <span>Jornalista e Chefe de Cobertura Oficial da The Crossing Time no Brasil</span>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div><b>Tema:</b> fim da vida · legislação</div>
+    <div><b>Votação final:</b> 15 de julho de 2026</div>
+    <div><b>Próxima etapa:</b> Conselho Constitucional</div>
+  </div>
+
+  <article>
+
+    <p class="lead">A França vive um dos momentos mais marcantes de sua história legislativa contemporânea. Após anos de debates éticos, médicos, religiosos e políticos, a Assembleia Nacional aprovou, em votação final realizada em 15 de julho de 2026, a proposição de lei que cria o direito à "ajuda para morrer" (<em>aide à mourir</em>) — permitindo, em condições estritas, o acesso ao suicídio assistido e, em situações específicas, a administração da substância letal por um profissional de saúde.</p>
+
+    <div class="sec">
+      <div class="num">I · A votação</div>
+      <h2>Quarta e última votação — e a palavra final da Assembleia</h2>
+    </div>
+
+    <p>A votação terminou com <strong>291 votos favoráveis e 241 contrários</strong>, refletindo a profunda divisão existente sobre um dos temas mais sensíveis da sociedade francesa. Foi a quarta vez que os deputados aprovaram o texto — depois das leituras de maio de 2025, fevereiro de 2026 e junho de 2026 —, enquanto o Senado, de maioria à direita, o rejeitou em três ocasiões.</p>
+
+    <p>Diante do impasse, o Executivo decidiu dar a palavra final à Assembleia Nacional, como permite o processo legislativo francês. Segundo a imprensa francesa, o texto foi aprovado com o apoio da ampla maioria dos deputados de esquerda e de grande parte do centro, enquanto direita e extrema direita votaram majoritariamente contra.</p>
+
+    <p>A proposição é de autoria do ex-deputado Olivier Falorni (MoDem), relator-geral do texto, e a reforma remonta à convenção cidadã lançada pelo presidente Emmanuel Macron, que se pronunciou em fevereiro de 2023 a favor de uma "ajuda ativa para morrer". Após a aprovação, o presidente agradeceu aos parlamentares pelo debate.</p>
+
+    <div class="grid">
+      <div class="card"><div class="big">291 × 241</div><div class="lbl">placar da votação final, em 15 de julho</div></div>
+      <div class="card"><div class="big">4ª</div><div class="lbl">votação do texto na Assembleia Nacional</div></div>
+      <div class="card"><div class="big">3</div><div class="lbl">rejeições do Senado ao longo da tramitação</div></div>
+      <div class="card"><div class="big">~1 mês</div><div class="lbl">prazo do Conselho Constitucional para decidir</div></div>
+    </div>
+
+    <div class="sec">
+      <div class="num">II · Os critérios</div>
+      <h2>Quem poderá solicitar a ajuda para morrer?</h2>
+    </div>
+
+    <p>A nova legislação estabelece critérios rigorosos para evitar abusos. Somente poderão solicitar o procedimento pessoas que preencham, cumulativamente, as condições abaixo.</p>
+
+    <div class="crit">
+      <h3>Condições previstas na lei</h3>
+      <div class="item"><span class="d">◆</span><span>Ter <strong>18 anos ou mais</strong>;</span></div>
+      <div class="item"><span class="d">◆</span><span>Ser <strong>cidadã francesa ou residente legal</strong> na França;</span></div>
+      <div class="item"><span class="d">◆</span><span>Sofrer de uma <strong>doença grave e incurável</strong>, em estágio avançado ou terminal;</span></div>
+      <div class="item"><span class="d">◆</span><span>Apresentar <strong>sofrimento constante, considerado insuportável</strong> e que não possa ser aliviado de forma satisfatória;</span></div>
+      <div class="item"><span class="d">◆</span><span>Estar <strong>plenamente capaz de expressar sua vontade</strong> de maneira livre e consciente.</span></div>
+    </div>
+
+    <p>Pacientes cuja única condição seja um transtorno psiquiátrico, bem como pessoas cujo discernimento esteja comprometido por doenças neurodegenerativas — como determinados estágios do Alzheimer —, ficam fora do alcance da lei.</p>
+
+    <div class="sec">
+      <div class="num">III · O procedimento</div>
+      <h2>Como funcionará na prática</h2>
+    </div>
+
+    <p>O pedido deverá ser analisado por um médico responsável, com consulta a outros profissionais de saúde e respeito a um período obrigatório de reflexão — fixado em um mínimo de dois dias após a autorização médica, um dos pontos que ainda serão examinados pelo Conselho Constitucional.</p>
+
+    <p>A regra geral prevê que <strong>o próprio paciente administre a substância letal</strong>. Apenas quando houver incapacidade física comprovada será permitida a administração por um médico ou enfermeiro. A lei também garante o <strong>direito de objeção de consciência</strong> aos profissionais de saúde que não desejarem participar do procedimento.</p>
+
+    <div class="sec">
+      <div class="num">IV · A próxima etapa</div>
+      <h2>O texto ainda passará pelo Conselho Constitucional</h2>
+    </div>
+
+    <p>O percurso da lei não terminou com a votação. O primeiro-ministro Sébastien Lecornu anunciou, na véspera do voto final, que acionaria o Conselho Constitucional sobre três aspectos do texto: a duração do prazo de retratação concedido ao paciente, à luz dos princípios de liberdade pessoal e de dignidade humana; a situação dos maiores de idade sob proteção legal e sua capacidade de expressar um consentimento livre e esclarecido; e a articulação entre a cláusula de consciência dos profissionais e a obrigação de todos os estabelecimentos de saúde e médico-sociais de praticar a ajuda para morrer.</p>
+
+    <p>O presidente do Senado, Gérard Larcher (Les Républicains), também havia anunciado a intenção de acionar a corte. Os "Sábios" terão o prazo de um mês para decidir — segundo a imprensa francesa, a decisão pode sair antes de meados de agosto. Somente após esse controle a lei poderá entrar em vigor.</p>
+
+    <div class="sec">
+      <div class="num">V · O debate</div>
+      <h2>Uma sociedade dividida</h2>
+    </div>
+
+    <p>A aprovação foi recebida com entusiasmo por associações que defendem o direito à autonomia no fim da vida. Para os defensores da proposta, a legislação garante dignidade, liberdade de escolha e respeito à vontade de pacientes que enfrentam sofrimento irreversível.</p>
+
+    <p>Por outro lado, entidades religiosas, parte da comunidade médica e parlamentares conservadores manifestaram preocupação com possíveis riscos para pessoas vulneráveis e defenderam que o investimento em cuidados paliativos deveria ser a prioridade. Durante a tramitação, deputados contrários ao texto invocaram o juramento de Hipócrates e alertaram para o que consideram uma ruptura com a tradição de prevenção do suicídio; um dos críticos, o deputado e médico Philippe Juvin (Les Républicains), argumentou que a lei se aplicará sobretudo a quem tem menos condições de escolher.</p>
+
+    <div class="sec">
+      <div class="num">VI · Em paralelo</div>
+      <h2>Cuidados paliativos também avançam</h2>
+    </div>
+
+    <p>Paralelamente ao debate sobre a ajuda para morrer, o Parlamento francês aprovou — com amplo consenso — uma legislação destinada a ampliar o acesso aos cuidados paliativos em todo o país, reforçando o atendimento de pacientes com doenças graves e incuráveis. Os dois textos tramitaram juntos desde 2025, como faces complementares da reforma do fim da vida.</p>
+
+    <div class="sec">
+      <div class="num">VII · Editorial</div>
+      <h2>Um marco histórico</h2>
+    </div>
+
+    <p>A aprovação coloca a França entre os países que passaram a permitir, sob condições rigorosas, formas de assistência médica ao fim da vida — grupo que inclui, com modelos distintos, Bélgica, Suíça, Canadá e Uruguai, entre outros.</p>
+
+    <p>Mais do que uma mudança jurídica, o tema representa uma profunda transformação social, ética e médica, que continuará gerando debates nos próximos anos. Enquanto aguarda a análise do Conselho Constitucional, a nova lei já é considerada uma das reformas sociais mais importantes do atual mandato presidencial francês.</p>
+
+    <div class="timeline">
+      <div class="tl"><div class="d">Fevereiro de 2023</div><div class="t">Convenção cidadã lançada pelo presidente Emmanuel Macron pronuncia-se a favor de uma "ajuda ativa para morrer".</div></div>
+      <div class="tl"><div class="d">Maio de 2025</div><div class="t">Assembleia Nacional aprova o texto em primeira leitura; em paralelo, avança a lei de reforço dos cuidados paliativos.</div></div>
+      <div class="tl"><div class="d">Fevereiro e junho de 2026</div><div class="t">Deputados confirmam a aprovação em segunda e terceira leituras; o Senado rejeita o texto pela terceira vez.</div></div>
+      <div class="tl"><div class="d">15 de julho de 2026</div><div class="t">Votação final na Assembleia Nacional: 291 votos a 241. O texto é adotado definitivamente pelo Parlamento.</div></div>
+      <div class="tl"><div class="d">Até meados de agosto de 2026</div><div class="t">Conselho Constitucional examina os três pontos questionados pelo governo antes da entrada em vigor.</div></div>
+    </div>
+
+    <div class="ednote">
+      <h3>Nota Editorial</h3>
+      <p><strong>Verificação.</strong> Os fatos desta edição foram checados em fontes públicas francesas — imprensa (France 24, franceinfo) e comunicação oficial do governo (info.gouv.fr). Ficam confirmados: o placar de 291 a 241 na votação final de 15 de julho de 2026; as três rejeições do Senado e a palavra final dada à Assembleia Nacional; a autoria da proposição pelo deputado Olivier Falorni; e o acionamento do Conselho Constitucional anunciado pelo primeiro-ministro Sébastien Lecornu sobre três pontos do texto. Em relação ao texto-base, foram feitas duas precisões: trata-se de uma <em>proposição</em> de lei (iniciativa parlamentar), e o Senado rejeitou o texto três vezes ao longo da tramitação; foram acrescentados a data da votação, o prazo de reflexão mínimo de dois dias e os detalhes do controle constitucional.</p>
+      <p><strong>Neutralidade.</strong> Por se tratar de tema ético e politicamente sensível, esta edição apresenta as posições favoráveis e contrárias com atribuição, sem juízo editorial sobre o mérito da lei. A situação segue em evolução até a decisão do Conselho Constitucional, e esta reportagem será atualizada se houver desdobramentos.</p>
+      <p><strong>Imagem.</strong> Esta edição utiliza arte tipográfica original, sem fotografias. A imagem recebida para ilustrar a matéria foi descartada por conter marca d'água de veículo de imprensa terceiro, em conformidade com a política editorial da The Crossing Time de respeito a direitos autorais.</p>
+    </div>
+
+    <div class="imgdisc">
+      <p><strong>Sobre as imagens desta edição:</strong> esta é uma edição tipográfica. Toda a arte visual é criação original da The Crossing Time, sem utilização de fotografias de terceiros.</p>
+      <p><strong>À propos des images :</strong> cette édition est typographique. Tous les visuels sont des créations originales de The Crossing Time, sans photographies de tiers.</p>
+    </div>
+
+  </article>
+</div>
+
+<div class="pilares">MOBILIDADE&nbsp;&nbsp;◆&nbsp;&nbsp;POUVOIR&nbsp;&nbsp;◆&nbsp;&nbsp;TRANSFORMATION</div>
+
+<div class="sitefoot">
+  <b>THE CROSSING TIME</b> · by Porta Voz do Imigrante<br>
+  Geopolítica · Direito · Economia · Sociedade · Mobilidade Global<br>
+  <span>thecrossingtime.com</span> · WhatsApp +33 6 69 99 72 96 · Genebra · Paris · São Paulo
+</div>
+
+</body>
+</html>

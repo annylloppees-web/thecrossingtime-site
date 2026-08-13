@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- THE CROSSING TIME — Edição #32 — Caso Louis (Narbonne) -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caso Louis: novos elementos na morte do adolescente agredido em Narbonne — The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#071a3d;--navy-2:#0c2452;--gold:#B8924A;--gold-light:#c7a45a;--offwhite:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a;--serif:'Lora',Georgia,serif;--sans:'Poppins',system-ui,sans-serif;--maxw:760px;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--serif);color:var(--ink);background:var(--offwhite);line-height:1.75;font-size:18px;-webkit-font-smoothing:antialiased;}
+  .topbar{background:var(--navy);color:var(--offwhite);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);gap:12px;}
+  .topbar .brand{font-family:var(--sans);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:14px;}
+  .topbar .brand span{color:var(--gold-light);}
+  .art-back{font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:var(--offwhite);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:7px 13px;border-radius:30px;cursor:pointer;display:inline-flex;align-items:center;gap:5px;transition:background .2s;white-space:nowrap;line-height:1;}
+  .art-back:hover{background:rgba(198,161,91,.28);}
+  .lang-toggle{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:30px;overflow:hidden;flex-shrink:0;}
+  .lang-toggle button{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.05em;color:var(--offwhite);background:transparent;border:0;padding:6px 12px;cursor:pointer;transition:background .2s,color .2s;}
+  .lang-toggle button.active{background:var(--gold);color:var(--navy);}
+  .ng-fr{display:none;}
+  body[data-lang="fr"] .ng-pt{display:none;}
+  body[data-lang="fr"] .ng-fr{display:revert;}
+  @media(max-width:560px){.topbar .brand{font-size:12px;}.topbar .brand span{display:none;}}
+  .hero-typo{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--offwhite);padding:88px 24px 78px;text-align:center;position:relative;overflow:hidden;}
+  .hero-typo::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,rgba(184,146,74,.14),transparent 60%);pointer-events:none;}
+  .hero-typo .kicker{font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-light);margin-bottom:24px;display:block;position:relative;z-index:1;}
+  .hero-typo h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5.4vw,46px);line-height:1.18;max-width:820px;margin:0 auto;position:relative;z-index:1;}
+  .hero-typo .dek{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(17px,2.4vw,21px);color:#cdd6e6;max-width:660px;margin:22px auto 0;position:relative;z-index:1;}
+  .article{max-width:var(--maxw);margin:0 auto;padding:48px 24px 0;}
+  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.03em;color:#6b6b6b;margin-bottom:14px;line-height:1.5;}
+  .byline strong{color:var(--navy);font-weight:600;}
+  .meta{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b6b6b;border-bottom:1px solid #d8d2c4;padding-bottom:18px;margin-bottom:36px;display:flex;gap:18px;flex-wrap:wrap;}
+  .meta strong{color:var(--navy);font-weight:600;}
+  .lead{font-size:20px;line-height:1.7;margin-bottom:34px;}
+  .lead::first-letter{font-family:var(--serif);font-weight:600;font-size:68px;line-height:.8;float:left;margin:6px 12px 0 0;color:var(--gold);}
+  p{margin-bottom:22px;}
+  .dateline{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.06em;color:var(--navy);text-transform:uppercase;}
+  .section-head{margin:48px 0 22px;}
+  .section-head .num{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:6px;}
+  .section-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(23px,3.4vw,30px);line-height:1.25;color:var(--navy);}
+  .quote{background:var(--navy);color:var(--offwhite);border-left:5px solid var(--gold);padding:30px 34px;margin:38px 0;border-radius:2px;}
+  .quote p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.55;margin:0;}
+  .quote cite{display:block;font-family:var(--sans);font-style:normal;font-size:13px;letter-spacing:.06em;color:var(--gold-light);margin-top:16px;text-transform:uppercase;}
+  .data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:36px 0;}
+  .data-card{background:#fff;border:1px solid #e5dfd0;border-top:3px solid var(--gold);padding:24px 20px;border-radius:3px;}
+  .data-card .figure{font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);line-height:1.1;}
+  .data-card .label{font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:#6b6b6b;text-transform:uppercase;margin-top:8px;display:block;}
+  .editorial-note{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.7;color:#4a4a4a;border-top:1px solid #d8d2c4;border-bottom:1px solid #d8d2c4;padding:26px 0;margin:44px 0;}
+  .editorial-note strong{font-style:normal;color:var(--navy);}
+  .img-disclaimer{font-family:var(--sans);font-size:12px;line-height:1.6;color:#7a7a7a;background:#efe9db;border-radius:3px;padding:18px 22px;margin:40px 0 0;}
+  .article-footer{text-align:center;margin:56px auto 0;max-width:var(--maxw);padding:40px 24px;border-top:2px solid var(--gold);}
+  .article-footer .mark{font-family:var(--sans);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:15px;color:var(--navy);}
+  .article-footer .pillars{font-family:var(--sans);font-weight:300;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:14px;}
+  .site-footer{background:var(--navy);color:#aeb8cc;text-align:center;padding:34px 24px;margin-top:48px;font-family:var(--sans);font-size:13px;line-height:1.8;}
+  .site-footer .brand{color:var(--offwhite);font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
+  .site-footer a{color:var(--gold-light);text-decoration:none;}
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <button class="art-back" onclick="goBack()" aria-label="Voltar / Retour">‹ <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span></button>
+    <div class="brand">THE CROSSING TIME <span>· Porta Voz do Imigrante</span></div>
+    <div class="lang-toggle"><button data-l="pt" class="active" onclick="setLang('pt')">PT</button><button data-l="fr" onclick="setLang('fr')">FR</button></div>
+  </header>
+
+  <section class="hero-typo">
+    <span class="kicker"><span class="ng-pt">França · Aude · Justiça</span><span class="ng-fr">France · Aude · Justice</span></span>
+    <h1><span class="ng-pt">Caso Louis: novos elementos na morte do adolescente agredido em Narbonne</span><span class="ng-fr">Affaire Louis : de nouveaux éléments dans la mort de l'adolescent agressé à Narbonne</span></h1>
+    <p class="dek"><span class="ng-pt">A investigação avança enquanto a França acompanha, com comoção, um dos casos de violência juvenil mais marcantes do ano.</span><span class="ng-fr">L'enquête progresse tandis que la France suit, avec émotion, l'une des affaires de violence chez les jeunes les plus marquantes de l'année.</span></p>
+  </section>
+
+  <main class="article">
+
+    <div class="byline"><span class="ng-pt">Por <strong>Carlos Guilherme Cordovil da Silva</strong> — Jornalista e Chefe de Cobertura Oficial da The Crossing Time no Brasil</span><span class="ng-fr">Par <strong>Carlos Guilherme Cordovil da Silva</strong> — Journaliste et chef de la couverture officielle de The Crossing Time au Brésil</span></div>
+
+    <div class="meta">
+      <span><strong>The Crossing Time</strong></span>
+      <span><span class="ng-pt">Narbonne, França</span><span class="ng-fr">Narbonne, France</span></span>
+      <span><span class="ng-pt">27 de junho de 2026</span><span class="ng-fr">27 juin 2026</span></span>
+      <span><span class="ng-pt">Edição #32</span><span class="ng-fr">Édition #32</span></span>
+    </div>
+
+    <p class="lead"><span class="dateline">Narbonne (<span class="ng-pt">França</span><span class="ng-fr">France</span>) —</span> <span class="ng-pt">A morte de Louis, de apenas 17 anos, continua a causar forte comoção na França. O adolescente faleceu após ser agredido com extrema violência em Narbonne, no departamento de Aude, e novos elementos divulgados pelas autoridades ampliam a gravidade do caso.</span><span class="ng-fr">La mort de Louis, âgé de seulement 17 ans, continue de susciter une forte émotion en France. L'adolescent est décédé après avoir été agressé avec une extrême violence à Narbonne, dans le département de l'Aude, et de nouveaux éléments communiqués par les autorités aggravent encore l'affaire.</span></p>
+
+    <div class="section-head"><span class="num">I</span><h2><span class="ng-pt">O que se sabe sobre a agressão</span><span class="ng-fr">Ce que l'on sait de l'agression</span></h2></div>
+
+    <p><span class="ng-pt">Segundo os primeiros elementos da investigação, Louis teria sido vítima de uma emboscada na noite de 19 para 20 de junho. O jovem foi agredido por um grupo de cinco indivíduos e encontrado gravemente ferido num canteiro de obras. Apesar do atendimento médico, morreu dias depois, em decorrência da gravidade dos ferimentos.</span><span class="ng-fr">Selon les premiers éléments de l'enquête, Louis aurait été victime d'un guet-apens dans la nuit du 19 au 20 juin. Le jeune homme a été agressé par un groupe de cinq individus et retrouvé grièvement blessé sur un chantier. Malgré la prise en charge médicale, il est décédé quelques jours plus tard, en raison de la gravité de ses blessures.</span></p>
+
+    <div class="section-head"><span class="num">II</span><h2><span class="ng-pt">Vídeos entram na investigação</span><span class="ng-fr">Des vidéos versées à l'enquête</span></h2></div>
+
+    <p><span class="ng-pt">Entre os novos elementos analisados pelos investigadores está a informação de que alguns dos agressores teriam filmado parte da violência com telemóveis. As imagens e outros conteúdos digitais passaram a integrar o inquérito e poderão servir de prova para esclarecer a dinâmica da agressão e o grau de participação de cada suspeito. As autoridades francesas também investigam se o ataque foi premeditado e quais teriam sido as motivações da emboscada.</span><span class="ng-fr">Parmi les nouveaux éléments examinés par les enquêteurs figure l'information selon laquelle certains des agresseurs auraient filmé une partie des violences avec leurs téléphones. Ces images et d'autres contenus numériques font désormais partie de l'enquête et pourraient servir de preuves pour éclaircir le déroulement de l'agression et le degré de participation de chaque suspect. Les autorités françaises cherchent également à savoir si l'attaque était préméditée et quelles auraient été les motivations du guet-apens.</span></p>
+
+    <div class="section-head"><span class="num">III</span><h2><span class="ng-pt">A investigação em curso</span><span class="ng-fr">L'enquête en cours</span></h2></div>
+
+    <p><span class="ng-pt">A Procuradoria responsável pelo caso trabalha na análise de depoimentos, imagens de videovigilância, perícias técnicas e materiais apreendidos. Até ao momento, as autoridades não divulgaram oficialmente todos os detalhes da motivação, preservando o andamento do processo. O caso continua a ser tratado como uma investigação criminal de elevada gravidade.</span><span class="ng-fr">Le parquet en charge de l'affaire travaille à l'analyse des témoignages, des images de vidéosurveillance, des expertises techniques et des éléments saisis. À ce stade, les autorités n'ont pas officiellement divulgué tous les détails de la motivation, afin de préserver le bon déroulement de la procédure. L'affaire continue d'être traitée comme une enquête criminelle d'une grande gravité.</span></p>
+
+    <blockquote class="quote">
+      <p><span class="ng-pt">As autoridades reforçam que todos os suspeitos têm direito à presunção de inocência até eventual condenação definitiva pela Justiça francesa.</span><span class="ng-fr">Les autorités rappellent que tous les suspects ont droit à la présomption d'innocence jusqu'à une éventuelle condamnation définitive par la justice française.</span></p>
+      <cite><span class="ng-pt">Princípio editorial · The Crossing Time</span><span class="ng-fr">Principe éditorial · The Crossing Time</span></cite>
+    </blockquote>
+
+    <div class="section-head"><span class="num">IV</span><h2><span class="ng-pt">Um debate nacional sobre violência juvenil</span><span class="ng-fr">Un débat national sur la violence des jeunes</span></h2></div>
+
+    <p><span class="ng-pt">A morte de Louis reacendeu o debate nacional sobre a crescente violência envolvendo adolescentes e jovens adultos. Nos últimos anos, vários episódios de agressões coletivas registados em diferentes cidades francesas suscitaram discussões sobre prevenção da violência, redes sociais, influência de grupos e proteção da juventude. Especialistas defendem uma atuação mais conjunta entre escolas, famílias, autoridades e políticas públicas de prevenção da criminalidade juvenil.</span><span class="ng-fr">La mort de Louis a ravivé le débat national sur la montée des violences impliquant des adolescents et de jeunes adultes. Ces dernières années, plusieurs épisodes d'agressions collectives survenus dans différentes villes françaises ont nourri les discussions sur la prévention de la violence, les réseaux sociaux, l'influence des groupes et la protection de la jeunesse. Des spécialistes plaident pour une action plus concertée entre écoles, familles, autorités et politiques publiques de prévention de la délinquance juvénile.</span></p>
+
+    <div class="data-grid">
+      <div class="data-card"><span class="figure">17</span><span class="label"><span class="ng-pt">Idade da vítima (anos)</span><span class="ng-fr">Âge de la victime (ans)</span></span></div>
+      <div class="data-card"><span class="figure">19–20 jun</span><span class="label"><span class="ng-pt">Noite da agressão</span><span class="ng-fr">Nuit de l'agression</span></span></div>
+      <div class="data-card"><span class="figure">5</span><span class="label"><span class="ng-pt">Indivíduos (investigação)</span><span class="ng-fr">Individus (enquête)</span></span></div>
+      <div class="data-card"><span class="figure">Narbonne</span><span class="label"><span class="ng-pt">Aude, sul da França</span><span class="ng-fr">Aude, sud de la France</span></span></div>
+    </div>
+
+    <div class="section-head"><span class="num">V</span><h2><span class="ng-pt">Comoção nacional</span><span class="ng-fr">Une émotion nationale</span></h2></div>
+
+    <p><span class="ng-pt">A morte do adolescente provocou manifestações de solidariedade em Narbonne e noutras cidades francesas. Nas redes sociais, milhares de pessoas prestaram homenagem à vítima e pediram justiça para a família. Entretanto, a investigação prossegue para esclarecer por completo as circunstâncias da agressão e definir as responsabilidades penais dos envolvidos.</span><span class="ng-fr">La mort de l'adolescent a suscité des marques de solidarité à Narbonne et dans d'autres villes françaises. Sur les réseaux sociaux, des milliers de personnes ont rendu hommage à la victime et réclamé justice pour la famille. Dans le même temps, l'enquête se poursuit afin d'éclaircir pleinement les circonstances de l'agression et d'établir les responsabilités pénales des personnes impliquées.</span></p>
+
+    <p class="editorial-note"><span class="ng-pt"><strong>Nota editorial.</strong> Informações atribuídas à Procuradoria e à imprensa francesa; a investigação prossegue e os elementos podem ser atualizados. Todos os suspeitos beneficiam da presunção de inocência até decisão judicial definitiva. Por respeito à vítima — um menor — e à família, em luto, não divulgamos detalhes que possam identificá-los, não reproduzimos as imagens da agressão e esta edição usa arte tipográfica original, sem fotografias de terceiros nem do incidente.</span><span class="ng-fr"><strong>Note éditoriale.</strong> Informations attribuées au parquet et à la presse française ; l'enquête se poursuit et les éléments peuvent être actualisés. Tous les suspects bénéficient de la présomption d'innocence jusqu'à une décision judiciaire définitive. Par respect pour la victime — un mineur — et pour sa famille, en deuil, nous ne divulguons pas de détails susceptibles de les identifier, nous ne reproduisons pas les images de l'agression, et cette édition utilise une création typographique originale, sans photographies de tiers ni de l'incident.</span></p>
+
+    <p class="img-disclaimer">
+      <span class="ng-pt">Esta edição não utiliza fotografias: por respeito à vítima e à família, e dada a gravidade do caso, optou-se por arte tipográfica original, sem imagens de terceiros nem do incidente.</span>
+      <span class="ng-fr">Cette édition n'utilise aucune photographie : par respect pour la victime et sa famille, et vu la gravité de l'affaire, nous avons choisi une création typographique originale, sans images de tiers ni de l'incident.</span>
+    </p>
+
+  </main>
+
+  <div class="article-footer">
+    <div class="mark">The Crossing Time, by Porta Voz do Imigrante</div>
+    <div class="pillars">Mobilidade • Pouvoir • Transformation</div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="brand">The Crossing Time</div>
+    <div>Plateforme éditoriale internationale</div>
+    <div><a href="https://thecrossingtime.com">thecrossingtime.com</a> · WhatsApp +33 6 69 99 72 96</div>
+  </footer>
+
+<script>
+function goBack(){
+  if(window.parent && window.parent!==window){ try{ window.parent.closeMateria(); return; }catch(e){} }
+  window.location.href='../index.html#materias';
+}
+function setLang(l){
+  document.body.setAttribute('data-lang', l);
+  var bs=document.querySelectorAll('.lang-toggle button');
+  for(var i=0;i<bs.length;i++){ bs[i].classList.toggle('active', bs[i].getAttribute('data-l')===l); }
+}
+</script>
+</body>
+</html>

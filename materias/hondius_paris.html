@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris em alerta sanitário · The Crossing Time</title>
+<meta name="description" content="A repatriação de cinco franceses do navio MV Hondius, isolados no Hospital Bichat após exposição ao hantavírus Andes, reativa o debate sobre biossegurança e mobilidade global. Análise editorial de The Crossing Time.">
+<meta name="author" content="The Crossing Time, by Porta Voz do Imigrante">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy-1: #071a3d; --navy-2: #020814;
+    --offwhite: #F5F1E8; --ouro: #B8924A; --ouro-claro: #c7a45a;
+    --texto: #1a1a1a; --texto-suave: #4a4a4a;
+    --linha: rgba(184, 146, 74, 0.25);
+    --alerta: #C73E3A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--offwhite); color: var(--texto); line-height: 1.7; font-size: 18px; -webkit-font-smoothing: antialiased; }
+
+  [lang-mode="pt"] .ng-fr { display: none !important; }
+  [lang-mode="fr"] .ng-pt { display: none !important; }
+
+  .art-back { position: fixed; top: 1rem; left: 1rem; z-index: 100; background: rgba(7,26,61,.92); backdrop-filter: blur(8px); color: #F4F2ED; border: none; border-radius: 999px; padding: 8px 16px 8px 12px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: .1em; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 12px rgba(0,0,0,.3); transition: all .2s; font-weight: 600; text-transform: uppercase; text-decoration: none; }
+  .art-back svg { width: 14px; height: 14px; stroke: #c7a45a; stroke-width: 2.5; fill: none; }
+  .art-back:hover { background: var(--navy-1); transform: translateX(-2px); }
+
+  .lang-bar { position: fixed; top: 1rem; right: 1rem; z-index: 100; display: flex; gap: 6px; background: rgba(7,26,61,.92); padding: 6px 8px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.3); backdrop-filter: blur(8px); }
+  .lang-btn { background: transparent; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.75); padding: 5px 11px; font-size: 10px; letter-spacing: .1em; font-family: 'Poppins', sans-serif; cursor: pointer; border-radius: 3px; transition: all .2s; font-weight: 500; }
+  .lang-btn:hover { color: #fff; }
+  .lang-btn.active { background: rgba(199,164,90,.2); border-color: var(--ouro); color: var(--ouro-claro); font-weight: 600; }
+
+  .top-bar { background: var(--navy-1); color: var(--offwhite); padding: 14px 0; border-bottom: 2px solid var(--ouro); }
+  .top-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; }
+  .top-bar .marca { font-weight: 700; color: var(--ouro-claro); }
+  .top-bar .pilares { color: rgba(245, 241, 232, 0.7); font-weight: 300; }
+
+  .hero { position: relative; width: 100%; height: 75vh; min-height: 600px; max-height: 800px; background: var(--navy-1); overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; filter: brightness(0.4) contrast(1.05) saturate(0.5); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0.55) 0%, rgba(7,26,61,0.70) 50%, rgba(2,8,20,0.94) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 80px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 14px; font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--ouro-claro); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
+  .hero-tag .bandeira-fr { width: 36px; height: 24px; background: linear-gradient(to right, #0055A4 33%, #fff 33%, #fff 66%, #EF4135 66%); display: inline-block; }
+  .hero-tag .linha-dourada { width: 50px; height: 2px; background: var(--ouro); }
+  .hero h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(40px, 6vw, 78px); line-height: 1.05; color: var(--offwhite); max-width: 900px; letter-spacing: -0.02em; }
+  .hero h1 .destaque { color: var(--ouro-claro); display: block; }
+  .hero-subtitle { font-family: 'Lora', serif; font-style: italic; font-weight: 400; font-size: clamp(20px, 2vw, 26px); color: rgba(245, 241, 232, 0.9); margin-top: 28px; max-width: 720px; line-height: 1.4; }
+  .hero-meta { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(199, 164, 90, 0.4); max-width: 720px; font-family: 'Poppins', sans-serif; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245, 241, 232, 0.7); }
+  .hero-meta strong { color: var(--ouro-claro); font-weight: 700; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  article { padding: 80px 0 60px; }
+  .lead { font-family: 'Lora', serif; font-size: 24px; line-height: 1.5; color: var(--texto); margin-bottom: 48px; font-weight: 500; }
+  .lead::first-letter { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 80px; float: left; line-height: 0.85; padding: 8px 12px 0 0; color: var(--ouro); }
+  h2.secao { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; color: var(--navy-1); margin: 64px 0 32px; }
+  .secao-numero { display: block; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ouro); margin-bottom: 12px; font-weight: 600; }
+  article p { margin-bottom: 24px; color: var(--texto); font-family: 'Lora', serif; }
+  article p strong { color: var(--navy-1); font-weight: 700; }
+
+  .quote-block { margin: 56px 0; padding: 40px; background: var(--navy-1); color: var(--offwhite); border-left: 6px solid var(--alerta); position: relative; }
+  .quote-block .quote-text { font-family: 'Lora', serif; font-style: italic; font-size: 26px; line-height: 1.4; color: var(--offwhite); margin-bottom: 16px; }
+  .quote-block .quote-author { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); font-weight: 600; }
+
+  .dados-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 48px 0; }
+  .dado-card { background: #fff; padding: 28px 20px; border-top: 4px solid var(--alerta); box-shadow: 0 2px 12px rgba(7,26,61,.08); border-radius: 4px; }
+  .dado-label { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--alerta); font-weight: 700; margin-bottom: 12px; }
+  .dado-numero { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(36px, 4vw, 48px); line-height: 1; color: var(--navy-1); margin-bottom: 12px; }
+  .dado-desc { font-family: 'Lora', serif; font-size: 14px; line-height: 1.45; color: var(--texto-suave); }
+
+  .article-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--linha); text-align: center; }
+  .article-footer .marca { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .article-footer .sub { font-family: 'Lora', serif; font-style: italic; color: var(--texto-suave); margin-bottom: 16px; font-size: 15px; }
+  .article-footer .pilares { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); }
+
+  @media (max-width: 768px) { body { font-size: 17px; } .hero { height: 70vh; min-height: 500px; } .hero-content { padding-bottom: 50px; } article { padding: 50px 0 40px; } .lead { font-size: 20px; } .lead::first-letter { font-size: 64px; } h2.secao { font-size: 26px; } .quote-block { padding: 28px 24px; } .quote-block .quote-text { font-size: 21px; } .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; } }
+</style>
+
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="marca">THE CROSSING TIME</div>
+    <div class="pilares">
+      <span class="ng-pt">Saúde Global • Geopolítica • Mobilidade Internacional</span>
+      <span class="ng-fr">Santé Globale • Géopolitique • Mobilité Internationale</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <img src="https://images.unsplash.com/photo-1764608054270-9dfc5a47abe7?fm=jpg&q=80&w=2400&auto=format&fit=crop" alt="Navio de cruzeiro em porto — operação sanitária" class="hero-img" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="bandeira-fr"></span>
+      <span class="ng-pt">França • Saúde Global</span>
+      <span class="ng-fr">France • Santé Globale</span>
+      <span class="linha-dourada"></span>
+    </div>
+    <h1>
+      <span class="ng-pt">Paris em alerta sanitário.<span class="destaque">A memória pandêmica reativada.</span></span>
+      <span class="ng-fr">Paris en alerte sanitaire.<span class="destaque">La mémoire pandémique réactivée.</span></span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="ng-pt">A repatriação de cinco franceses do navio MV Hondius reabre o debate europeu sobre biossegurança, mobilidade global e os limites da cooperação sanitária internacional.</span>
+      <span class="ng-fr">Le rapatriement de cinq Français du navire MV Hondius rouvre le débat européen sur la biosécurité, la mobilité globale et les limites de la coopération sanitaire internationale.</span>
+    </p>
+    <div class="hero-meta">
+      <strong><span class="ng-pt">Análise editorial</span><span class="ng-fr">Analyse éditoriale</span></strong> • 
+      <span class="ng-pt">Saúde Global & Mobilidade</span><span class="ng-fr">Santé Globale & Mobilité</span> • 
+      <span class="ng-pt">12 de maio de 2026</span><span class="ng-fr">12 mai 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <p class="lead">
+      <span class="ng-pt">Cinco cidadãos franceses retirados do navio de expedição MV Hondius desembarcaram em Paris no domingo, 10 de maio. Um deles apresentou sintomas durante o voo de repatriamento e todos foram colocados em isolamento rigoroso. A operação envolveu dezenove nacionalidades, três continentes e a Organização Mundial da Saúde. Não é uma pandemia. É a fotografia de uma Europa que, cinco anos após o início do ciclo Covid, ainda não decidiu como conviver com o risco infeccioso.</span>
+      <span class="ng-fr">Cinq citoyens français retirés du navire d'expédition MV Hondius ont débarqué à Paris dimanche 10 mai. L'un d'eux a présenté des symptômes durant le vol de rapatriement et tous ont été placés en isolement rigoureux. L'opération a impliqué dix-neuf nationalités, trois continents et l'Organisation Mondiale de la Santé. Ce n'est pas une pandémie. C'est la photographie d'une Europe qui, cinq ans après le début du cycle Covid, n'a pas encore décidé comment cohabiter avec le risque infectieux.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">I. O caso</span><span class="ng-fr">I. Le cas</span></span>
+      <span class="ng-pt">Cinco franceses, um sintoma, uma cadeia logística internacional</span>
+      <span class="ng-fr">Cinq Français, un symptôme, une chaîne logistique internationale</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">O MV Hondius, navio operado pela companhia neerlandesa Oceanwide Expeditions, partiu de Ushuaia, na Argentina, em 1º de abril, em rota de expedição pela Antártida e Atlântico Sul, com passageiros e tripulantes de pelo menos dezenove nacionalidades a bordo. No início de maio, o sequenciamento genético realizado em laboratório identificou que dois passageiros sintomáticos estavam infectados pelo <strong>hantavírus Andes</strong>, variante rara da família Hantaviridae. Diferentemente da maioria dos hantavírus, esta cepa apresenta capacidade documentada de transmissão entre humanos, ainda que limitada.</span>
+      <span class="ng-fr">Le MV Hondius, navire opéré par la compagnie néerlandaise Oceanwide Expeditions, est parti d'Ushuaïa, en Argentine, le 1er avril, en route d'expédition par l'Antarctique et l'Atlantique Sud, avec des passagers et membres d'équipage d'au moins dix-neuf nationalités à bord. Début mai, le séquençage génétique réalisé en laboratoire a identifié que deux passagers symptomatiques étaient infectés par le <strong>hantavirus Andes</strong>, variante rare de la famille Hantaviridae. Contrairement à la plupart des hantavirus, cette souche présente une capacité documentée de transmission entre humains, bien que limitée.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A operação de desembarque em Granadilla, Tenerife, no dia 10 de maio, mobilizou autoridades sanitárias da Espanha, França, Reino Unido, Alemanha, Argentina e Cabo Verde, entre outros países cujos cidadãos estavam a bordo. A ministra espanhola da Saúde, Mónica García, classificou a articulação como operação de envergadura internacional sem precedentes recentes. Os cinco passageiros franceses foram conduzidos a Paris no domingo. Um deles apresentou sintomas durante o voo, segundo informações divulgadas por fontes diplomáticas europeias. Todos passaram a integrar o regime de isolamento rigoroso recomendado pelos protocolos sanitários franceses para casos de exposição a vírus emergentes.</span>
+      <span class="ng-fr">L'opération de débarquement à Granadilla, Tenerife, le 10 mai, a mobilisé les autorités sanitaires de l'Espagne, France, Royaume-Uni, Allemagne, Argentine et Cap-Vert, parmi d'autres pays dont les citoyens étaient à bord. La ministre espagnole de la Santé, Mónica García, a qualifié l'articulation d'opération d'envergure internationale sans précédent récent. Les cinq passagers français ont été conduits à Paris dimanche. L'un d'eux a présenté des symptômes durant le vol, selon des informations divulguées par des sources diplomatiques européennes. Tous ont intégré le régime d'isolement rigoureux recommandé par les protocoles sanitaires français pour les cas d'exposition à des virus émergents.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A Organização Mundial da Saúde recomendou quarentena de <strong>até 42 dias</strong> para todos os passageiros e tripulantes do MV Hondius, cobrindo a janela máxima de incubação do hantavírus Andes. Médicos infecciologistas ouvidos pela imprensa francesa e portuguesa ressaltaram que o período tão extenso reflete também a dimensão de alarme social do caso, e não apenas o risco epidemiológico estrito. O hantavírus Andes, embora grave em pacientes sintomáticos, está longe de apresentar o perfil de disseminação dos vírus respiratórios pandêmicos clássicos.</span>
+      <span class="ng-fr">L'Organisation Mondiale de la Santé a recommandé une quarantaine de <strong>jusqu'à 42 jours</strong> pour tous les passagers et membres d'équipage du MV Hondius, couvrant la fenêtre maximale d'incubation du hantavirus Andes. Les médecins infectiologues entendus par la presse française et portugaise ont souligné que la période aussi étendue reflète aussi la dimension d'alarme sociale du cas, et pas seulement le risque épidémiologique strict. Le hantavirus Andes, bien que grave chez les patients symptomatiques, est loin de présenter le profil de dissémination des virus respiratoires pandémiques classiques.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"Não é a magnitude do hantavírus que assusta a Europa. É o eco que ele produz na memória de uma sociedade que ainda não terminou de processar a pandemia anterior."</span>
+        <span class="ng-fr">« Ce n'est pas la magnitude du hantavirus qui effraie l'Europe. C'est l'écho qu'il produit dans la mémoire d'une société qui n'a pas encore terminé de traiter la pandémie précédente. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">II. O contexto</span><span class="ng-fr">II. Le contexte</span></span>
+      <span class="ng-pt">A Europa pós-Covid e o reflexo condicionado</span>
+      <span class="ng-fr">L'Europe post-Covid et le réflexe conditionné</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Cinco anos após o início da pandemia de Covid-19, a Europa opera em estado permanente de vigilância sanitária. O Centro Europeu de Prevenção e Controle das Doenças foi reestruturado, os protocolos nacionais de resposta rápida foram acelerados, e os sistemas de rastreamento epidemiológico em aeroportos e fronteiras passaram por upgrades técnicos significativos. Em teoria, o continente está mais preparado do que nunca para identificar e conter um surto. Na prática, a maturidade institucional convive com um traço emocional que nenhum protocolo dimensiona: o reflexo condicionado do trauma coletivo.</span>
+      <span class="ng-fr">Cinq ans après le début de la pandémie de Covid-19, l'Europe opère en état permanent de vigilance sanitaire. Le Centre européen de prévention et de contrôle des maladies a été restructuré, les protocoles nationaux de réponse rapide ont été accélérés, et les systèmes de traçage épidémiologique dans les aéroports et frontières ont subi des mises à niveau techniques significatives. En théorie, le continent est plus préparé que jamais à identifier et contenir une épidémie. En pratique, la maturité institutionnelle cohabite avec un trait émotionnel qu'aucun protocole ne dimensionne : le réflexe conditionné du trauma collectif.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Ao primeiro sinal de alerta envolvendo um vírus emergente, redes sociais, círculos políticos e veículos de comunicação reagem com intensidade desproporcional ao risco epidemiológico real. Especialistas em saúde pública chamam esse fenômeno de "fadiga de alarme com efeito invertido": após anos de baixo limiar para emergência, a sociedade desenvolveu hipersensibilidade a qualquer notificação. O caso Hondius é o exemplo mais recente. Não há evidência de transmissão comunitária. Não há recomendação de fechamento de fronteiras. Não há restrições internacionais propostas pela OMS. Ainda assim, o debate sobre confinamentos voltou a aparecer em pautas editoriais e em discussões parlamentares europeias na primeira semana após a divulgação dos casos.</span>
+      <span class="ng-fr">Au premier signe d'alerte impliquant un virus émergent, les réseaux sociaux, cercles politiques et médias réagissent avec une intensité disproportionnée au risque épidémiologique réel. Les spécialistes en santé publique appellent ce phénomène « fatigue d'alarme à effet inversé » : après des années de seuil bas pour l'urgence, la société a développé une hypersensibilité à toute notification. Le cas Hondius est l'exemple le plus récent. Il n'y a pas d'évidence de transmission communautaire. Il n'y a pas de recommandation de fermeture de frontières. Il n'y a pas de restrictions internationales proposées par l'OMS. Néanmoins, le débat sur les confinements est réapparu dans les agendas éditoriaux et discussions parlementaires européennes dans la première semaine après la divulgation des cas.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O paradoxo é estruturante. Quanto mais a sociedade europeia investe em sistemas de detecção rápida, mais expostos ficam os ruídos que esses sistemas produzem. Uma quarentena preventiva em Paris, que em 2018 talvez fosse notícia de duas colunas de jornal, em 2026 vira manchete continental. A vigilância sanitária passou a operar simultaneamente como ferramenta médica e como gatilho psicológico coletivo.</span>
+      <span class="ng-fr">Le paradoxe est structurant. Plus la société européenne investit dans des systèmes de détection rapide, plus les bruits que ces systèmes produisent sont exposés. Une quarantaine préventive à Paris, qui en 2018 aurait peut-être été une nouvelle de deux colonnes de journal, en 2026 devient une manchette continentale. La vigilance sanitaire opère désormais simultanément comme outil médical et comme déclencheur psychologique collectif.</span>
+    </p>
+
+    <div class="dados-grid">
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Quarentena</span><span class="ng-fr">Quarantaine</span></div>
+        <div class="dado-numero">42</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Dias de isolamento recomendados pela OMS. Cobre a janela de incubação do hantavírus Andes.</span>
+          <span class="ng-fr">Jours d'isolement recommandés par l'OMS. Couvre la fenêtre d'incubation du hantavirus Andes.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Franceses</span><span class="ng-fr">Français</span></div>
+        <div class="dado-numero">5</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Cidadãos repatriados a Paris em 10 de maio. Um deles sintomático durante o voo de retorno.</span>
+          <span class="ng-fr">Citoyens rapatriés à Paris le 10 mai. L'un d'eux symptomatique durant le vol de retour.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Operação</span><span class="ng-fr">Opération</span></div>
+        <div class="dado-numero">19</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Nacionalidades a bordo do MV Hondius. Operação de descontaminação envolveu cooperação multilateral.</span>
+          <span class="ng-fr">Nationalités à bord du MV Hondius. Opération de décontamination a impliqué une coopération multilatérale.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Rota</span><span class="ng-fr">Route</span></div>
+        <div class="dado-numero">40+</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Dias entre a partida de Ushuaia (1º de abril) e o desembarque em Tenerife (10 de maio).</span>
+          <span class="ng-fr">Jours entre le départ d'Ushuaïa (1er avril) et le débarquement à Tenerife (10 mai).</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">III. A tensão</span><span class="ng-fr">III. La tension</span></span>
+      <span class="ng-pt">Mobilidade global e biossegurança: o equilíbrio impossível</span>
+      <span class="ng-fr">Mobilité globale et biosécurité : l'équilibre impossible</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">O caso Hondius expõe uma tensão estrutural que a Europa pós-2020 ainda não resolveu: como manter abertura à mobilidade internacional, base econômica e demográfica do continente, sem expor populações urbanas densas a riscos epidemiológicos emergentes. A resposta atual é uma combinação heterogênea de vigilância passiva (declarações sanitárias em aeroportos), monitoramento ativo de surtos em territórios de origem, capacidade laboratorial de sequenciamento genético rápido, e protocolos de isolamento em rede hospitalar. O sistema funciona. Mas funciona às custas de uma carga regulatória crescente sobre quem viaja, opera no setor de turismo, ou trabalha em mobilidade internacional.</span>
+      <span class="ng-fr">Le cas Hondius expose une tension structurelle que l'Europe post-2020 n'a pas encore résolue : comment maintenir l'ouverture à la mobilité internationale, base économique et démographique du continent, sans exposer les populations urbaines denses à des risques épidémiologiques émergents. La réponse actuelle est une combinaison hétérogène de vigilance passive (déclarations sanitaires aux aéroports), surveillance active des épidémies dans les territoires d'origine, capacité laboratoire de séquençage génétique rapide, et protocoles d'isolement en réseau hospitalier. Le système fonctionne. Mais il fonctionne au prix d'une charge réglementaire croissante sur ceux qui voyagent, opèrent dans le secteur du tourisme, ou travaillent en mobilité internationale.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Há também uma camada geopolítica raramente nomeada nas coberturas técnicas. A operação de Tenerife foi exemplar porque envolveu cooperação entre Estados-membros da União Europeia, território britânico ultramarino (Tristão da Cunha, escala intermediária do navio), e países da América Latina e África Ocidental cujos cidadãos estavam a bordo. Em uma Europa onde o eurocepticismo cresce, onde a cooperação atlântica com Washington se tensiona, e onde fronteiras externas se militarizam, episódios como o Hondius lembram que a infraestrutura sanitária ainda é um dos poucos campos onde o multilateralismo funciona com fluidez relativa. Esse capital institucional, porém, não é eterno. A próxima crise sanitária pode encontrar uma cooperação europeia mais fragmentada.</span>
+      <span class="ng-fr">Il y a aussi une couche géopolitique rarement nommée dans les couvertures techniques. L'opération de Tenerife a été exemplaire parce qu'elle a impliqué la coopération entre États membres de l'Union européenne, territoire britannique ultramarin (Tristan da Cunha, escale intermédiaire du navire), et pays d'Amérique latine et d'Afrique occidentale dont les citoyens étaient à bord. Dans une Europe où l'eurosceptisme croît, où la coopération atlantique avec Washington se tend, et où les frontières externes se militarisent, des épisodes comme le Hondius rappellent que l'infrastructure sanitaire reste l'un des rares champs où le multilatéralisme fonctionne avec une fluidité relative. Ce capital institutionnel, cependant, n'est pas éternel. La prochaine crise sanitaire peut trouver une coopération européenne plus fragmentée.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"A mobilidade global construiu o mundo em que vivemos. Também construiu a vulnerabilidade que enfrentamos. As duas verdades coexistem."</span>
+        <span class="ng-fr">« La mobilité globale a construit le monde dans lequel nous vivons. Elle a aussi construit la vulnérabilité à laquelle nous faisons face. Les deux vérités coexistent. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">IV. O posicionamento</span><span class="ng-fr">IV. Le positionnement</span></span>
+      <span class="ng-pt">Não é pânico. É travessia.</span>
+      <span class="ng-fr">Ce n'est pas la panique. C'est une traversée.</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Para o leitor que esta plataforma reconhece, há um equívoco a evitar e uma postura a manter. O equívoco é tratar o caso Hondius como prenúncio de uma nova pandemia. Os dados disponíveis não sustentam essa leitura. O hantavírus Andes é grave para indivíduos sintomáticos, mas não tem perfil de disseminação capaz de gerar emergência sanitária internacional. O alarme institucional reflete proteção, não previsão. A quarentena de 42 dias é cautela ampliada, não confirmação de risco extremo.</span>
+      <span class="ng-fr">Pour le lecteur que cette plateforme reconnaît, il y a une erreur à éviter et une posture à maintenir. L'erreur est de traiter le cas Hondius comme un présage d'une nouvelle pandémie. Les données disponibles ne soutiennent pas cette lecture. Le hantavirus Andes est grave pour les individus symptomatiques, mais n'a pas le profil de dissémination capable de générer une urgence sanitaire internationale. L'alarme institutionnelle reflète une protection, pas une prévision. La quarantaine de 42 jours est une précaution amplifiée, pas la confirmation d'un risque extrême.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A postura a manter é mais sutil. Vigilância sanitária em rotas internacionais não é apenas resposta técnica a vírus emergentes. É infraestrutura silenciosa de mobilidade contemporânea. Quem viaja, quem migra, quem opera negócios entre continentes, quem estuda fora, todos circulam dentro dessa arquitetura. Os próximos anos verão essa arquitetura se intensificar: rastreamento epidemiológico mais granular, exigências de vacinação atualizadas para certas rotas, declarações sanitárias digitais integradas a sistemas de visto. Isso não é estado de exceção. É o novo desenho institucional da circulação global.</span>
+      <span class="ng-fr">La posture à maintenir est plus subtile. La vigilance sanitaire sur les routes internationales n'est pas seulement une réponse technique aux virus émergents. C'est une infrastructure silencieuse de la mobilité contemporaine. Ceux qui voyagent, ceux qui migrent, ceux qui opèrent des affaires entre continents, ceux qui étudient à l'étranger, tous circulent dans cette architecture. Les prochaines années verront cette architecture s'intensifier : traçage épidémiologique plus granulaire, exigences de vaccination mises à jour pour certaines routes, déclarations sanitaires numériques intégrées aux systèmes de visa. Ce n'est pas un état d'exception. C'est le nouveau dessin institutionnel de la circulation globale.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A travessia, no sentido editorial em que esta plataforma usa a palavra, não é só geográfica. É também regulatória, sanitária, institucional. O passageiro do MV Hondius que aterrissou em Paris no domingo carrega, sem saber, um pedaço de futuro: o futuro em que mover-se entre continentes vai exigir, cada vez mais, prestar contas a sistemas de vigilância que operam abaixo da camada visível do passaporte. Não é distopia. É a forma contemporânea da soberania sanitária. E ela, ao contrário do que sugere a retórica do alarme, raramente fecha fronteiras. Apenas torna sua travessia mais densa de protocolos.</span>
+      <span class="ng-fr">La traversée, au sens éditorial où cette plateforme utilise le mot, n'est pas que géographique. Elle est aussi réglementaire, sanitaire, institutionnelle. Le passager du MV Hondius qui a atterri à Paris dimanche porte, sans le savoir, un morceau d'avenir : l'avenir où se déplacer entre continents exigera, de plus en plus, de rendre des comptes à des systèmes de vigilance qui opèrent sous la couche visible du passeport. Ce n'est pas une dystopie. C'est la forme contemporaine de la souveraineté sanitaire. Et elle, contrairement à ce que suggère la rhétorique de l'alarme, ferme rarement les frontières. Elle rend juste sa traversée plus dense en protocoles.</span>
+    </p>
+
+    <div class="article-footer">
+      <div class="marca">THE CROSSING TIME</div>
+      <div class="sub">
+        <span class="ng-pt">Plataforma editorial internacional</span>
+        <span class="ng-fr">Plateforme éditoriale internationale</span>
+      </div>
+      <div class="pilares">
+        <span class="ng-pt">MOBILIDADE • PODER • TRANSFORMAÇÃO</span>
+        <span class="ng-fr">MOBILITÉ • POUVOIR • TRANSFORMATION</span>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>

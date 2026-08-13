@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Currículo e Carta de Motivação — Modelos Editáveis · The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#071a3d;--navy2:#0c2452;--gold:#B8924A;--gold2:#c7a45a;--off:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a;--green:#2e7d4f;--red:#b3261e}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--off);color:var(--ink);font-family:'Lora',serif;line-height:1.7;font-size:17px}
+
+  .topbar{background:var(--navy);color:var(--off);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .topbar .brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:3px;font-size:15px}
+  .topbar .brand span{color:var(--gold2)}
+  .topbar .ed{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gold2);text-transform:uppercase}
+
+  .hero{background:linear-gradient(170deg,var(--navy) 0%,var(--navy2) 70%,#101c3a 100%);color:#fff;padding:52px 24px 46px;text-align:center}
+  .hero .dia{color:var(--gold2);letter-spacing:8px;font-size:15px;margin-bottom:18px}
+  .hero .kicker{font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:3.4px;color:var(--gold2);text-transform:uppercase;margin-bottom:14px}
+  .hero h1{font-family:'Lora',serif;font-weight:700;font-size:clamp(26px,4.2vw,42px);line-height:1.22;max-width:820px;margin:0 auto 16px}
+  .hero .sub{color:#dcd6c6;font-style:italic;font-size:clamp(15px,1.9vw,19px);max-width:700px;margin:0 auto;line-height:1.6}
+
+  .privacy{max-width:1180px;margin:26px auto 0;padding:0 20px}
+  .privacy .box{background:#eaf4ee;border:2px solid var(--green);border-radius:4px;padding:20px 24px;font-family:'Poppins',sans-serif;font-size:14px;line-height:1.75;color:#1f4733}
+  .privacy .box b{color:var(--green)}
+  .privacy .box .t{font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12.5px;color:var(--green);margin-bottom:8px;display:block}
+
+  .tabs{max-width:1180px;margin:28px auto 0;padding:0 20px;display:flex;gap:8px;flex-wrap:wrap}
+  .tab{font-family:'Poppins',sans-serif;font-weight:600;font-size:13.5px;letter-spacing:.6px;padding:13px 20px;border:1px solid rgba(7,26,61,.2);background:#fff;color:var(--navy);border-radius:3px;cursor:pointer;transition:.15s}
+  .tab:hover{border-color:var(--gold)}
+  .tab.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+  .app{max-width:1180px;margin:22px auto 0;padding:0 20px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;align-items:start}
+  @media(max-width:900px){.app{grid-template-columns:1fr}}
+
+  .panel{background:#fff;border:1px solid rgba(184,146,74,.45);border-radius:4px;padding:26px 24px}
+  .panel h2{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+  .panel .hint{font-family:'Poppins',sans-serif;font-size:12.5px;color:#7a7a7a;margin-bottom:20px;line-height:1.6}
+
+  .grp{margin-bottom:18px}
+  .grp label{display:block;font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:#5a5a5a;margin-bottom:6px}
+  .grp input,.grp textarea,.grp select{width:100%;font-family:'Poppins',sans-serif;font-size:14.5px;padding:11px 12px;border:1px solid rgba(7,26,61,.25);border-radius:3px;background:#fdfcfa;color:var(--ink);line-height:1.5}
+  .grp textarea{min-height:96px;resize:vertical;font-family:'Lora',serif;font-size:15.5px}
+  .grp input:focus,.grp textarea:focus,.grp select:focus{outline:none;border-color:var(--gold);background:#fff}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:520px){.two{grid-template-columns:1fr}}
+  .tip{font-family:'Poppins',sans-serif;font-size:11.5px;color:#8a8a8a;margin-top:5px;line-height:1.55;font-style:normal}
+
+  .blocks .item{border:1px solid rgba(7,26,61,.14);border-radius:3px;padding:16px 16px 4px;margin-bottom:12px;background:#fbfaf7;position:relative}
+  .blocks .item .del{position:absolute;top:9px;right:10px;background:none;border:none;color:var(--wine);font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;cursor:pointer;text-transform:uppercase}
+  .addbtn{font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:1px;padding:10px 16px;background:#fff;border:1px dashed var(--gold);color:var(--navy);border-radius:3px;cursor:pointer;width:100%;margin-bottom:6px}
+  .addbtn:hover{background:#fffaf0}
+
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;padding-top:20px;border-top:1px solid rgba(7,26,61,.12)}
+  .btn{font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;letter-spacing:.8px;padding:13px 20px;border-radius:3px;border:none;cursor:pointer;transition:.15s}
+  .btn.primary{background:var(--navy);color:#fff}
+  .btn.primary:hover{background:var(--navy2)}
+  .btn.gold{background:var(--gold);color:#fff}
+  .btn.gold:hover{background:var(--gold2)}
+  .btn.ghost{background:#fff;color:var(--wine);border:1px solid rgba(139,38,53,.4)}
+  .btn.ghost:hover{background:#fdf3f4}
+
+  .prevwrap{position:sticky;top:16px}
+  .prevhead{font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;color:#8a8a8a;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .paper{background:#fff;border:1px solid rgba(7,26,61,.18);border-radius:3px;padding:42px 40px;box-shadow:0 2px 18px rgba(7,26,61,.07);min-height:400px;font-size:14.5px;line-height:1.6}
+  @media(max-width:520px){.paper{padding:26px 22px}}
+
+  /* documento gerado */
+  .doc .dname{font-family:'Poppins',sans-serif;font-weight:700;font-size:27px;letter-spacing:1px;color:var(--navy);line-height:1.15}
+  .doc .drole{font-family:'Lora',serif;font-style:italic;font-size:17px;color:var(--gold);margin-top:4px}
+  .doc .dcontact{font-family:'Poppins',sans-serif;font-size:12.5px;color:#4a4a4a;margin-top:12px;line-height:1.9}
+  .doc .dbar{height:3px;background:var(--gold);margin:18px 0 22px;width:70px}
+  .doc h3{font-family:'Poppins',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--navy);border-bottom:1px solid rgba(184,146,74,.5);padding-bottom:6px;margin:24px 0 12px}
+  .doc .entry{margin-bottom:14px}
+  .doc .etitle{font-family:'Poppins',sans-serif;font-weight:600;font-size:14.5px;color:var(--navy)}
+  .doc .emeta{font-family:'Poppins',sans-serif;font-size:12px;color:#7a7a7a;letter-spacing:.3px;margin:2px 0 4px}
+  .doc .edesc{font-size:14px;color:#3a3a3a;line-height:1.55}
+  .doc .tagline{display:inline-block;font-family:'Poppins',sans-serif;font-size:12.5px;background:#f3efe4;border:1px solid rgba(184,146,74,.4);color:var(--navy);padding:4px 11px;border-radius:2px;margin:0 6px 6px 0}
+  .doc p.body{margin-bottom:12px;text-align:justify}
+  .doc .letterhead{font-family:'Poppins',sans-serif;font-size:13px;line-height:1.75;color:#3a3a3a}
+  .doc .lright{text-align:right;margin-bottom:22px}
+  .doc .empty{color:#b5b0a4;font-style:italic}
+
+  /* cartão buscando trabalho */
+  .seek{background:linear-gradient(168deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;border-radius:4px;padding:34px 32px}
+  .seek .lbl{font-family:'Poppins',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);margin-bottom:14px}
+  .seek .nm{font-family:'Lora',serif;font-weight:700;font-size:26px;line-height:1.2;margin-bottom:6px}
+  .seek .ar{font-family:'Lora',serif;font-style:italic;font-size:18px;color:var(--gold2);margin-bottom:20px}
+  .seek .rw{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid rgba(199,164,90,.25);font-family:'Poppins',sans-serif;font-size:13px;flex-wrap:wrap}
+  .seek .rw span{color:#9aa6c0;text-transform:uppercase;letter-spacing:1.3px;font-size:10.5px;min-width:120px;padding-top:2px}
+  .seek .rw b{color:#fff;font-weight:600;flex:1;min-width:170px}
+  .seek .ft{margin-top:20px;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold2)}
+
+  .links{max-width:1180px;margin:52px auto 0;padding:0 20px}
+  .links h2{font-family:'Lora',serif;font-weight:700;font-size:26px;color:var(--navy);margin-bottom:6px}
+  .links .sb{font-family:'Poppins',sans-serif;font-size:13px;color:#7a7a7a;margin-bottom:22px}
+  .lgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .lcard{background:#fff;border:1px solid rgba(184,146,74,.4);border-left:4px solid var(--gold);border-radius:3px;padding:16px 18px;text-decoration:none;display:block;transition:.15s}
+  .lcard:hover{border-left-color:var(--wine);box-shadow:0 2px 10px rgba(7,26,61,.08)}
+  .lcard .n{font-family:'Poppins',sans-serif;font-weight:700;font-size:14.5px;color:var(--navy)}
+  .lcard .u{font-family:'Poppins',sans-serif;font-size:11.5px;color:var(--gold);margin-top:2px;word-break:break-all}
+  .lcard .d{font-size:13.5px;color:#5a5a5a;margin-top:6px;line-height:1.5}
+
+  .warn{max-width:1180px;margin:34px auto 0;padding:0 20px}
+  .warn .box{background:var(--wine);color:#fff;border-radius:4px;padding:24px 26px;font-family:'Poppins',sans-serif;font-size:14px;line-height:1.7}
+  .warn .box b{color:#f5d99b}
+  .warn .box .t{font-weight:700;letter-spacing:2.4px;text-transform:uppercase;font-size:12.5px;margin-bottom:10px;display:block}
+
+  .pilares{background:var(--navy);color:var(--gold2);text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:4px;font-size:13.5px;margin-top:56px}
+  .sitefoot{background:var(--navy2);color:#cfc8b8;text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-size:12.5px;line-height:2}
+  .sitefoot b{color:#fff;letter-spacing:2px}
+  .sitefoot span{color:var(--gold2)}
+
+  .hide{display:none!important}
+
+  @media print{
+    body{background:#fff}
+    .topbar,.hero,.privacy,.tabs,.panel,.links,.warn,.pilares,.sitefoot,.prevhead,.actions{display:none!important}
+    .app{display:block;padding:0;margin:0;max-width:none}
+    .prevwrap{position:static}
+    .paper{border:none;box-shadow:none;padding:0;min-height:0}
+  }
+</style>
+</head>
+<body data-lang="pt">
+<div id="tct-voltar" onclick="if(window.parent&&window.parent!==window){try{window.parent.closeMateria();}catch(e){window.location.href='../index.html#missing';}}else{window.location.href='../index.html#missing';}" style="position:fixed;top:12px;left:12px;z-index:99999;cursor:pointer;font-family:'Poppins','Jost',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background:rgba(7,26,61,.9);color:#c7a45a;border:1px solid rgba(184,146,74,.6);padding:9px 15px;border-radius:2px;backdrop-filter:blur(4px);user-select:none;box-shadow:0 2px 10px rgba(0,0,0,.25);">&#8249;&nbsp;Voltar ao site</div>
+
+
+<div class="topbar">
+  <div class="brand">THE CROSSING <span>TIME</span></div>
+  <div class="ed">Ferramenta gratuita &#9670; Nada é salvo</div>
+</div>
+
+<div class="hero">
+  <div class="dia">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>
+  <div class="kicker">França &#9670; Emprego &#9670; Ferramenta</div>
+  <h1>Monte seu currículo e sua carta de motivação — e baixe na hora</h1>
+  <div class="sub">Modelos no padrão francês, prontos para preencher. Tudo funciona dentro do seu navegador: nenhuma informação é enviada, guardada ou vista por ninguém.</div>
+</div>
+
+<div class="privacy">
+  <div class="box">
+    <span class="t">&#128274; Privacidade total — leia como funciona</span>
+    Tudo o que você digitar fica <b>apenas na memória temporária do seu navegador</b>. Esta página <b>não envia nada para nenhum servidor</b>, <b>não usa cookies</b>, <b>não grava no seu aparelho</b> e <b>não guarda histórico</b>.
+    Ao fechar, recarregar ou sair desta página, <b>todos os dados são apagados automaticamente</b> e não há como recuperá-los — nem por você, nem por nós.
+    <br><br><b>Por isso: baixe o arquivo antes de sair.</b> Se fechar sem baixar, perde o que preencheu.
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab on" data-t="cv">1 &#9670; Currículo (CV)</button>
+  <button class="tab" data-t="lm">2 &#9670; Carta de motivação</button>
+  <button class="tab" data-t="bt">3 &#9670; Estou buscando trabalho</button>
+</div>
+
+<!-- ============ CURRÍCULO ============ -->
+<div class="app" id="pane-cv">
+  <div class="panel">
+    <h2>Preencha seu currículo</h2>
+    <div class="hint">Padrão francês. Preencha o que tiver — campos vazios simplesmente não aparecem no documento final.</div>
+
+    <div class="grp">
+      <label>Idioma do documento</label>
+      <select id="cvLang">
+        <option value="fr">Français — para empregadores franceses (recomendado)</option>
+        <option value="pt">Português</option>
+      </select>
+      <div class="tip">Muda apenas os títulos das seções. O texto que você escrever permanece como digitou.</div>
+    </div>
+
+    <div class="two">
+      <div class="grp"><label>Nome completo</label><input id="cvName" autocomplete="off" placeholder="Maria Silva Santos"></div>
+      <div class="grp"><label>Cargo ou área</label><input id="cvRole" autocomplete="off" placeholder="Aide-soignante"></div>
+    </div>
+    <div class="two">
+      <div class="grp"><label>Telefone</label><input id="cvPhone" autocomplete="off" placeholder="+33 6 00 00 00 00"></div>
+      <div class="grp"><label>E-mail</label><input id="cvMail" autocomplete="off" placeholder="seu@email.com"></div>
+    </div>
+    <div class="two">
+      <div class="grp"><label>Cidade / região</label><input id="cvCity" autocomplete="off" placeholder="Paris (75)"></div>
+      <div class="grp"><label>Situação de trabalho</label><input id="cvStatus" autocomplete="off" placeholder="Autorizada a trabalhar na França"></div>
+    </div>
+    <div class="tip" style="margin:-10px 0 18px">Na França não se coloca foto, idade, estado civil nem nacionalidade no CV — a lei protege contra discriminação. Não inclua número de documento.</div>
+
+    <div class="grp"><label>Apresentação (2 a 4 linhas)</label><textarea id="cvAbout" placeholder="Profissional com 6 anos de experiência em cuidados a pessoas idosas..."></textarea></div>
+
+    <h2 style="margin-top:26px">Experiência profissional</h2>
+    <div class="blocks" id="cvExp"></div>
+    <button class="addbtn" data-add="exp">+ Adicionar experiência</button>
+
+    <h2 style="margin-top:26px">Formação</h2>
+    <div class="blocks" id="cvEdu"></div>
+    <button class="addbtn" data-add="edu">+ Adicionar formação</button>
+
+    <div class="grp" style="margin-top:22px"><label>Competências (separe por vírgula)</label><textarea id="cvSkills" placeholder="Higiene e conforto do paciente, trabalho em equipe, HACCP, CACES 3"></textarea></div>
+    <div class="grp"><label>Idiomas</label><input id="cvLangs" autocomplete="off" placeholder="Português (nativo), Francês (B2), Espanhol (intermediário)"></div>
+    <div class="grp"><label>Outras informações</label><input id="cvExtra" autocomplete="off" placeholder="Carta de condução B · Disponibilidade imediata"></div>
+
+    <div class="actions">
+      <button class="btn primary" data-dl="cv">&#11015; Baixar currículo</button>
+      <button class="btn gold" onclick="window.print()">&#128424; Imprimir / salvar em PDF</button>
+      <button class="btn ghost" data-clear="cv">Limpar tudo</button>
+    </div>
+  </div>
+
+  <div class="prevwrap">
+    <div class="prevhead"><span>Pré-visualização em tempo real</span><span>&#128274; nada é salvo</span></div>
+    <div class="paper doc" id="cvPrev"></div>
+  </div>
+</div>
+
+<!-- ============ CARTA DE MOTIVAÇÃO ============ -->
+<div class="app hide" id="pane-lm">
+  <div class="panel">
+    <h2>Carta de motivação</h2>
+    <div class="hint">Estrutura francesa clássica. Use um dos modelos prontos e depois adapte com suas palavras.</div>
+
+    <div class="grp">
+      <label>Idioma do documento</label>
+      <select id="lmLang">
+        <option value="fr">Français (recomendado)</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
+
+    <div class="grp">
+      <label>Modelo pronto — clique para preencher o corpo</label>
+      <select id="lmModel">
+        <option value="">— escolher um modelo —</option>
+        <option value="geral">Candidatura geral (sem experiência no setor)</option>
+        <option value="exp">Candidatura com experiência na área</option>
+        <option value="spont">Candidatura espontânea (empresa sem vaga anunciada)</option>
+        <option value="interim">Inscrição em agência de intérim</option>
+      </select>
+      <div class="tip">O modelo é um ponto de partida. <strong>Reescreva com suas palavras</strong> — cartas idênticas são reconhecidas na hora.</div>
+    </div>
+
+    <div class="two">
+      <div class="grp"><label>Seu nome</label><input id="lmName" autocomplete="off" placeholder="Maria Silva Santos"></div>
+      <div class="grp"><label>Sua cidade</label><input id="lmCity" autocomplete="off" placeholder="Paris"></div>
+    </div>
+    <div class="two">
+      <div class="grp"><label>Telefone</label><input id="lmPhone" autocomplete="off" placeholder="+33 6 00 00 00 00"></div>
+      <div class="grp"><label>E-mail</label><input id="lmMail" autocomplete="off" placeholder="seu@email.com"></div>
+    </div>
+    <div class="two">
+      <div class="grp"><label>Empresa / destinatário</label><input id="lmTo" autocomplete="off" placeholder="Restaurant Le Marais"></div>
+      <div class="grp"><label>Cargo pretendido</label><input id="lmPos" autocomplete="off" placeholder="Commis de cuisine"></div>
+    </div>
+    <div class="grp"><label>Corpo da carta</label><textarea id="lmBody" style="min-height:230px" placeholder="Escreva ou escolha um modelo acima..."></textarea></div>
+
+    <div class="actions">
+      <button class="btn primary" data-dl="lm">&#11015; Baixar carta</button>
+      <button class="btn gold" onclick="window.print()">&#128424; Imprimir / salvar em PDF</button>
+      <button class="btn ghost" data-clear="lm">Limpar tudo</button>
+    </div>
+  </div>
+
+  <div class="prevwrap">
+    <div class="prevhead"><span>Pré-visualização em tempo real</span><span>&#128274; nada é salvo</span></div>
+    <div class="paper doc" id="lmPrev"></div>
+  </div>
+</div>
+
+<!-- ============ ESTOU BUSCANDO TRABALHO ============ -->
+<div class="app hide" id="pane-bt">
+  <div class="panel">
+    <h2>Estou buscando trabalho</h2>
+    <div class="hint">Um cartão curto para enviar em grupos, mostrar numa agência ou anexar a uma candidatura espontânea. Preencha só o que quiser tornar público.</div>
+
+    <div class="two">
+      <div class="grp"><label>Nome (ou só o primeiro nome)</label><input id="btName" autocomplete="off" placeholder="Maria S."></div>
+      <div class="grp"><label>Cidade / região onde procura</label><input id="btCity" autocomplete="off" placeholder="Île-de-France"></div>
+    </div>
+    <div class="grp"><label>Área que busca</label><input id="btArea" autocomplete="off" placeholder="Restauração — cozinha ou sala"></div>
+    <div class="grp"><label>Descreva o que procura</label><textarea id="btDesc" placeholder="Procuro posição em cozinha, CDD ou CDI, período integral. Tenho 4 anos de experiência..."></textarea></div>
+    <div class="two">
+      <div class="grp"><label>Disponibilidade</label><input id="btAvail" autocomplete="off" placeholder="Imediata · segunda a sábado"></div>
+      <div class="grp"><label>Tipo de contrato</label><input id="btType" autocomplete="off" placeholder="CDD, CDI ou intérim"></div>
+    </div>
+    <div class="grp"><label>Experiência profissional resumida</label><textarea id="btExp" placeholder="Commis de cuisine — Brasserie du Nord, Paris (2024–2026)"></textarea></div>
+
+    <h2 style="margin-top:26px">Referências profissionais</h2>
+    <div class="hint" style="margin-bottom:14px">Só inclua uma referência se a pessoa <strong>autorizou</strong> que seu nome e contato sejam divulgados.</div>
+    <div class="blocks" id="btRefs"></div>
+    <button class="addbtn" data-add="ref">+ Adicionar referência</button>
+
+    <h2 style="margin-top:26px">Seu contato</h2>
+    <div class="two">
+      <div class="grp"><label>Telefone / WhatsApp</label><input id="btPhone" autocomplete="off" placeholder="+33 6 00 00 00 00"></div>
+      <div class="grp"><label>E-mail</label><input id="btMail" autocomplete="off" placeholder="seu@email.com"></div>
+    </div>
+    <div class="tip" style="margin:-8px 0 0">Se for publicar em grupo aberto, pense bem antes de colocar endereço, documento ou dados de família. Telefone e e-mail bastam.</div>
+
+    <div class="actions">
+      <button class="btn primary" data-dl="bt">&#11015; Baixar cartão</button>
+      <button class="btn gold" onclick="window.print()">&#128424; Imprimir / salvar em PDF</button>
+      <button class="btn ghost" data-clear="bt">Limpar tudo</button>
+    </div>
+  </div>
+
+  <div class="prevwrap">
+    <div class="prevhead"><span>Pré-visualização em tempo real</span><span>&#128274; nada é salvo</span></div>
+    <div class="paper" id="btPrev"></div>
+  </div>
+</div>
+
+<!-- ============ LINKS ============ -->
+<div class="links">
+  <h2>Agora envie: onde publicar e se candidatar</h2>
+  <div class="sb">Canais oficiais e gratuitos. Nenhum deles cobra do candidato. Abrem em nova aba.</div>
+  <div class="lgrid">
+    <a class="lcard" href="https://www.francetravail.fr" target="_blank" rel="noopener noreferrer"><div class="n">France Travail</div><div class="u">francetravail.fr</div><div class="d">Maior base de vagas do país. Mesmo sem poder se inscrever, você pode criar espaço de candidato e ver todas as ofertas.</div></a>
+    <a class="lcard" href="https://fr.indeed.com" target="_blank" rel="noopener noreferrer"><div class="n">Indeed</div><div class="u">fr.indeed.com</div><div class="d">Agregador com o maior volume de anúncios da França. Bom para varrer o mercado rapidamente.</div></a>
+    <a class="lcard" href="https://www.hellowork.com" target="_blank" rel="noopener noreferrer"><div class="n">HelloWork</div><div class="u">hellowork.com</div><div class="d">Maior site francês independente. Forte fora das grandes cidades e mostra faixas salariais.</div></a>
+    <a class="lcard" href="https://www.apec.fr" target="_blank" rel="noopener noreferrer"><div class="n">APEC</div><div class="u">apec.fr</div><div class="d">Para quadros, engenheiros e funções de gestão. Menos volume, muito melhor qualificado.</div></a>
+    <a class="lcard" href="https://www.welcometothejungle.com" target="_blank" rel="noopener noreferrer"><div class="n">Welcome to the Jungle</div><div class="u">welcometothejungle.com</div><div class="d">Startups e tecnologia. Permite entender a empresa antes de se candidatar.</div></a>
+    <a class="lcard" href="https://eures.europa.eu" target="_blank" rel="noopener noreferrer"><div class="n">EURES</div><div class="u">eures.europa.eu</div><div class="d">Portal oficial da União Europeia. Vagas em todo o bloco e comparação de condições por país.</div></a>
+    <a class="lcard" href="https://www.adecco.fr" target="_blank" rel="noopener noreferrer"><div class="n">Adecco &#9670; intérim</div><div class="u">adecco.fr</div><div class="d">Mais de 900 agências. Generalista: indústria, terciário, BTP e logística.</div></a>
+    <a class="lcard" href="https://www.manpower.fr" target="_blank" rel="noopener noreferrer"><div class="n">Manpower &#9670; intérim</div><div class="u">manpower.fr</div><div class="d">Mais de 600 agências. Forte em indústria, logística, terciário e engenharia.</div></a>
+    <a class="lcard" href="https://www.randstad.fr" target="_blank" rel="noopener noreferrer"><div class="n">Randstad &#9670; intérim</div><div class="u">randstad.fr</div><div class="d">Mais de 500 agências. Indústria, BTP, terciário e TI.</div></a>
+    <a class="lcard" href="https://www.synergie.fr" target="_blank" rel="noopener noreferrer"><div class="n">Synergie &#9670; intérim</div><div class="u">synergie.fr</div><div class="d">Grupo francês, mais de 400 agências. Indústria, BTP, logística e agroalimentar.</div></a>
+    <a class="lcard" href="https://www.crit-job.com" target="_blank" rel="noopener noreferrer"><div class="n">Crit &#9670; intérim</div><div class="u">crit-job.com</div><div class="d">Perfis industriais qualificados: aeronáutica, indústria, BTP, transporte e logística.</div></a>
+    <a class="lcard" href="https://www.linkedin.com/jobs" target="_blank" rel="noopener noreferrer"><div class="n">LinkedIn Jobs</div><div class="u">linkedin.com/jobs</div><div class="d">Menos mural de vagas, mais rede. Aqui ser encontrada vale tanto quanto se candidatar.</div></a>
+  </div>
+</div>
+
+<div class="warn">
+  <div class="box">
+    <span class="t">&#9888; Antes de enviar seus dados a alguém</span>
+    <b>Nenhum canal desta página cobra do candidato.</b> Agências de intérim recebem da empresa contratante, nunca do trabalhador. Quem pedir dinheiro por vaga, por "reserva de posto", por análise de currículo ou por promessa de título de residência <b>está aplicando golpe</b>.<br><br>
+    <b>Chegue aos sites por busca, não por link recebido em mensagem</b> — existem domínios falsos que imitam as grandes agências trocando uma letra. E <b>nunca entregue documentos originais</b> nem trabalhe sem contrato: sem contracheque não há prova dos 12 meses exigidos para a regularização pelo trabalho.
+  </div>
+</div>
+
+<div class="pilares">MOBILIDADE&nbsp;&nbsp;&#9670;&nbsp;&nbsp;POUVOIR&nbsp;&nbsp;&#9670;&nbsp;&nbsp;TRANSFORMATION</div>
+<div class="sitefoot">
+  <b>THE CROSSING TIME</b> · by Porta Voz do Imigrante<br>
+  Geopolítica · Direito · Economia · Sociedade · Mobilidade Global<br>
+  <span>thecrossingtime.com</span> · WhatsApp +33 6 69 99 72 96 · Genebra · Paris · São Paulo
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------------------------------------------------------
+     PRIVACIDADE: nenhuma chamada a localStorage, sessionStorage,
+     cookies, fetch ou XHR. Tudo vive em variáveis desta função e
+     é destruído quando a página é fechada ou recarregada.
+  --------------------------------------------------------------- */
+
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(s){
+    return String(s == null ? "" : s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  };
+  var nl = function(s){ return esc(s).replace(/\n/g,"<br>"); };
+  var has = function(s){ return s && String(s).trim().length > 0; };
+
+  var L = {
+    fr:{exp:"Expérience professionnelle",edu:"Formation",skills:"Compétences",langs:"Langues",
+        extra:"Informations complémentaires",about:"Profil"},
+    pt:{exp:"Experiência profissional",edu:"Formação",skills:"Competências",langs:"Idiomas",
+        extra:"Informações complementares",about:"Perfil"}
+  };
+
+  /* ---------- abas ---------- */
+  var panes = {cv:$("pane-cv"), lm:$("pane-lm"), bt:$("pane-bt")};
+  Array.prototype.forEach.call(document.querySelectorAll(".tab"), function(b){
+    b.addEventListener("click", function(){
+      Array.prototype.forEach.call(document.querySelectorAll(".tab"), function(x){ x.classList.remove("on"); });
+      b.classList.add("on");
+      for (var k in panes){ panes[k].classList.add("hide"); }
+      panes[b.dataset.t].classList.remove("hide");
+      window.scrollTo({top: panes[b.dataset.t].offsetTop - 90, behavior:"smooth"});
+    });
+  });
+
+  /* ---------- blocos dinâmicos ---------- */
+  function addBlock(where, fields){
+    var wrap = $(where);
+    var div = document.createElement("div");
+    div.className = "item";
+    var html = '<button class="del" type="button">remover</button>';
+    fields.forEach(function(f){
+      if (f.t === "ta") {
+        html += '<div class="grp"><label>'+f.l+'</label><textarea data-f="'+f.k+'" placeholder="'+(f.p||"")+'"></textarea></div>';
+      } else {
+        html += '<div class="grp"><label>'+f.l+'</label><input data-f="'+f.k+'" autocomplete="off" placeholder="'+(f.p||"")+'"></div>';
+      }
+    });
+    div.innerHTML = html;
+    div.querySelector(".del").addEventListener("click", function(){ div.remove(); render(); });
+    Array.prototype.forEach.call(div.querySelectorAll("input,textarea"), function(i){
+      i.addEventListener("input", render);
+    });
+    wrap.appendChild(div);
+    render();
+  }
+  function readBlocks(where){
+    var out = [];
+    Array.prototype.forEach.call($(where).querySelectorAll(".item"), function(it){
+      var o = {};
+      Array.prototype.forEach.call(it.querySelectorAll("[data-f]"), function(i){ o[i.dataset.f] = i.value; });
+      out.push(o);
+    });
+    return out;
+  }
+  var EXPF = [{k:"role",l:"Cargo",p:"Commis de cuisine"},{k:"org",l:"Empresa e cidade",p:"Brasserie du Nord — Paris"},
+              {k:"per",l:"Período",p:"03/2024 – 07/2026"},{k:"desc",l:"O que você fazia",t:"ta",p:"Preparação de entradas, respeito às normas HACCP..."}];
+  var EDUF = [{k:"deg",l:"Curso ou diploma",p:"Diplôme d'État d'aide-soignant"},{k:"org",l:"Instituição e cidade",p:"IFAS — Paris"},
+              {k:"per",l:"Ano",p:"2025"}];
+  var REFF = [{k:"name",l:"Nome",p:"Sr. Jean Dupont"},{k:"rel",l:"Cargo e empresa",p:"Chef de cuisine — Brasserie du Nord"},
+              {k:"contact",l:"Contato (com autorização)",p:"+33 6 00 00 00 00"}];
+
+  Array.prototype.forEach.call(document.querySelectorAll("[data-add]"), function(b){
+    b.addEventListener("click", function(){
+      var t = b.dataset.add;
+      if (t === "exp") addBlock("cvExp", EXPF);
+      if (t === "edu") addBlock("cvEdu", EDUF);
+      if (t === "ref") addBlock("btRefs", REFF);
+    });
+  });
+
+  /* ---------- modelos de carta ---------- */
+  var MODELS = {
+    fr:{
+      geral:"Madame, Monsieur,\n\nActuellement à la recherche d'un poste de {POS}, je me permets de vous adresser ma candidature.\n\nMotivée et rigoureuse, je suis prête à m'investir pleinement dans les missions qui me seront confiées. J'apprends vite, je respecte les consignes et le travail en équipe est pour moi essentiel. Je suis disponible rapidement et flexible sur les horaires.\n\nJe serais heureuse de vous rencontrer afin de vous exposer plus en détail ma motivation.\n\nDans l'attente de votre réponse, je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
+      exp:"Madame, Monsieur,\n\nVotre offre pour le poste de {POS} a retenu toute mon attention et je vous soumets ma candidature.\n\nFort de plusieurs années d'expérience dans ce domaine, j'ai développé une bonne maîtrise des exigences du métier ainsi que le sens de l'organisation et du travail en équipe. Habitué à des rythmes soutenus, je sais m'adapter rapidement à un nouvel environnement.\n\nJe reste à votre entière disposition pour un entretien à votre convenance.\n\nJe vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
+      spont:"Madame, Monsieur,\n\nJe me permets de vous adresser une candidature spontanée pour un poste de {POS} au sein de votre établissement.\n\nVotre maison bénéficie d'une réputation qui m'a donné envie de vous proposer mes services. Sérieuse, ponctuelle et volontaire, je souhaite m'inscrire durablement dans une équipe et contribuer à son bon fonctionnement.\n\nSi aucun poste n'est disponible actuellement, je vous serais reconnaissante de conserver ma candidature.\n\nJe vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
+      interim:"Madame, Monsieur,\n\nJe souhaite m'inscrire auprès de votre agence en qualité de {POS}.\n\nJe suis disponible immédiatement, mobile et ouverte à des missions de courte comme de longue durée. Je dispose des documents nécessaires à une embauche et je peux me présenter en agence à votre convenance.\n\nJe vous remercie de l'attention portée à ma demande et vous prie d'agréer, Madame, Monsieur, mes salutations distinguées."
+    },
+    pt:{
+      geral:"Prezados senhores,\n\nAtualmente em busca de uma posição de {POS}, permito-me enviar minha candidatura.\n\nSou uma profissional motivada e cuidadosa, disposta a me dedicar plenamente às funções que me forem confiadas. Aprendo rápido, respeito as orientações e considero o trabalho em equipe essencial. Tenho disponibilidade imediata e flexibilidade de horários.\n\nFicaria feliz em conversar pessoalmente para detalhar minha motivação.\n\nNo aguardo de sua resposta, apresento meus cordiais cumprimentos.",
+      exp:"Prezados senhores,\n\nA vaga de {POS} despertou meu interesse e envio minha candidatura.\n\nCom vários anos de experiência na área, desenvolvi bom domínio das exigências da função, além de senso de organização e de trabalho em equipe. Acostumada a ritmos intensos, adapto-me rapidamente a novos ambientes.\n\nColoco-me à disposição para uma entrevista no momento que lhes for conveniente.\n\nApresento meus cordiais cumprimentos.",
+      spont:"Prezados senhores,\n\nEnvio candidatura espontânea para uma posição de {POS} em seu estabelecimento.\n\nA reputação da casa despertou meu interesse em oferecer meus serviços. Sou uma pessoa séria, pontual e comprometida, e desejo integrar-me de forma duradoura a uma equipe.\n\nCaso não haja vaga disponível no momento, agradeceria que mantivessem minha candidatura em arquivo.\n\nApresento meus cordiais cumprimentos.",
+      interim:"Prezados senhores,\n\nGostaria de me cadastrar em sua agência na função de {POS}.\n\nTenho disponibilidade imediata, mobilidade e interesse tanto em missões curtas quanto longas. Disponho da documentação necessária para contratação e posso comparecer à agência quando for conveniente.\n\nAgradeço a atenção e apresento meus cordiais cumprimentos."
+    }
+  };
+  $("lmModel").addEventListener("change", function(){
+    var m = $("lmModel").value; if (!m) return;
+    var lang = $("lmLang").value;
+    var txt = MODELS[lang][m].replace(/\{POS\}/g, $("lmPos").value || "…");
+    $("lmBody").value = txt;
+    render();
+  });
+
+  /* ---------- render ---------- */
+  function cvHTML(){
+    var lang = $("cvLang").value, t = L[lang];
+    var name = $("cvName").value, role = $("cvRole").value;
+    var contact = [$("cvPhone").value, $("cvMail").value, $("cvCity").value, $("cvStatus").value]
+                  .filter(has).map(esc).join(" &nbsp;&#9670;&nbsp; ");
+    var h = "";
+    h += '<div class="dname">' + (has(name) ? esc(name) : '<span class="empty">Seu nome aparecerá aqui</span>') + '</div>';
+    if (has(role)) h += '<div class="drole">' + esc(role) + '</div>';
+    if (contact)   h += '<div class="dcontact">' + contact + '</div>';
+    h += '<div class="dbar"></div>';
+    if (has($("cvAbout").value)) h += '<h3>' + t.about + '</h3><div class="edesc">' + nl($("cvAbout").value) + '</div>';
+    var ex = readBlocks("cvExp").filter(function(e){ return has(e.role)||has(e.org)||has(e.desc); });
+    if (ex.length){
+      h += '<h3>' + t.exp + '</h3>';
+      ex.forEach(function(e){
+        h += '<div class="entry">';
+        if (has(e.role)) h += '<div class="etitle">' + esc(e.role) + '</div>';
+        var meta = [e.org, e.per].filter(has).map(esc).join(" &nbsp;&#183;&nbsp; ");
+        if (meta) h += '<div class="emeta">' + meta + '</div>';
+        if (has(e.desc)) h += '<div class="edesc">' + nl(e.desc) + '</div>';
+        h += '</div>';
+      });
+    }
+    var ed = readBlocks("cvEdu").filter(function(e){ return has(e.deg)||has(e.org); });
+    if (ed.length){
+      h += '<h3>' + t.edu + '</h3>';
+      ed.forEach(function(e){
+        h += '<div class="entry">';
+        if (has(e.deg)) h += '<div class="etitle">' + esc(e.deg) + '</div>';
+        var meta = [e.org, e.per].filter(has).map(esc).join(" &nbsp;&#183;&nbsp; ");
+        if (meta) h += '<div class="emeta">' + meta + '</div>';
+        h += '</div>';
+      });
+    }
+    if (has($("cvSkills").value)){
+      h += '<h3>' + t.skills + '</h3><div>';
+      $("cvSkills").value.split(",").forEach(function(s){
+        if (has(s)) h += '<span class="tagline">' + esc(s.trim()) + '</span>';
+      });
+      h += '</div>';
+    }
+    if (has($("cvLangs").value)) h += '<h3>' + t.langs + '</h3><div class="edesc">' + esc($("cvLangs").value) + '</div>';
+    if (has($("cvExtra").value)) h += '<h3>' + t.extra + '</h3><div class="edesc">' + esc($("cvExtra").value) + '</div>';
+    return h;
+  }
+
+  function lmHTML(){
+    var lang = $("lmLang").value;
+    var d = new Date();
+    var months = lang === "fr"
+      ? ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]
+      : ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+    var city = $("lmCity").value || "";
+    var dateline = (has(city) ? esc(city) + ", " : "") +
+      (lang === "fr" ? "le " : "") + d.getDate() + " " + months[d.getMonth()] + " " + d.getFullYear();
+    var h = '<div class="letterhead">';
+    h += '<div>' + (has($("lmName").value) ? '<strong>' + esc($("lmName").value) + '</strong><br>' : '') +
+         [$("lmPhone").value, $("lmMail").value].filter(has).map(esc).join("<br>") + '</div>';
+    h += '<div class="lright" style="margin-top:20px">' +
+         (has($("lmTo").value) ? '<strong>' + esc($("lmTo").value) + '</strong><br>' : '') + dateline + '</div>';
+    h += '</div>';
+    if (has($("lmPos").value)){
+      h += '<p class="body"><strong>' + (lang === "fr" ? "Objet : candidature au poste de " : "Assunto: candidatura para a vaga de ") +
+           esc($("lmPos").value) + '</strong></p>';
+    }
+    var body = $("lmBody").value;
+    if (has(body)){
+      body.split(/\n\s*\n/).forEach(function(p){
+        if (has(p)) h += '<p class="body">' + nl(p.trim()) + '</p>';
+      });
+    } else {
+      h += '<p class="body empty">O texto da sua carta aparecerá aqui. Escolha um modelo acima para começar.</p>';
+    }
+    if (has($("lmName").value)) h += '<p class="body" style="text-align:right;margin-top:26px">' + esc($("lmName").value) + '</p>';
+    return h;
+  }
+
+  function btHTML(){
+    var h = '<div class="seek">';
+    h += '<div class="lbl">&#9670; Estou buscando trabalho</div>';
+    h += '<div class="nm">' + (has($("btName").value) ? esc($("btName").value) : "Seu nome") + '</div>';
+    if (has($("btArea").value)) h += '<div class="ar">' + esc($("btArea").value) + '</div>';
+    var rows = [
+      ["Onde procuro", $("btCity").value],
+      ["Disponibilidade", $("btAvail").value],
+      ["Tipo de contrato", $("btType").value],
+      ["Experiência", $("btExp").value]
+    ];
+    rows.forEach(function(r){
+      if (has(r[1])) h += '<div class="rw"><span>' + r[0] + '</span><b>' + nl(r[1]) + '</b></div>';
+    });
+    if (has($("btDesc").value)) h += '<div class="rw"><span>O que procuro</span><b>' + nl($("btDesc").value) + '</b></div>';
+    var refs = readBlocks("btRefs").filter(function(r){ return has(r.name); });
+    refs.forEach(function(r, i){
+      var v = [r.rel, r.contact].filter(has).map(esc).join(" &#9670; ");
+      h += '<div class="rw"><span>' + (i === 0 ? "Referências" : "&nbsp;") + '</span><b>' + esc(r.name) +
+           (v ? '<br><span style="color:#c7a45a;font-size:11.5px">' + v + '</span>' : '') + '</b></div>';
+    });
+    var ct = [$("btPhone").value, $("btMail").value].filter(has).map(esc).join(" &nbsp;&#9670;&nbsp; ");
+    if (ct) h += '<div class="rw" style="border-bottom:none"><span>Contato</span><b>' + ct + '</b></div>';
+    h += '<div class="ft">The Crossing Time</div></div>';
+    return h;
+  }
+
+  function render(){
+    $("cvPrev").innerHTML = cvHTML();
+    $("lmPrev").innerHTML = lmHTML();
+    $("btPrev").innerHTML = btHTML();
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("input,textarea,select"), function(i){
+    i.addEventListener("input", render);
+    i.addEventListener("change", render);
+  });
+
+  /* ---------- download (100% local, via Blob) ---------- */
+  var DOCCSS = "body{font-family:Georgia,'Times New Roman',serif;color:#1a1a1a;line-height:1.6;max-width:760px;margin:40px auto;padding:0 30px;font-size:14.5px}"
+    + ".dname{font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:27px;letter-spacing:1px;color:#071a3d}"
+    + ".drole{font-style:italic;font-size:17px;color:#B8924A;margin-top:4px}"
+    + ".dcontact{font-family:Helvetica,Arial,sans-serif;font-size:12.5px;color:#4a4a4a;margin-top:12px;line-height:1.9}"
+    + ".dbar{height:3px;background:#B8924A;margin:18px 0 22px;width:70px}"
+    + "h3{font-family:Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:2.6px;text-transform:uppercase;color:#071a3d;border-bottom:1px solid rgba(184,146,74,.5);padding-bottom:6px;margin:24px 0 12px}"
+    + ".entry{margin-bottom:14px}.etitle{font-family:Helvetica,Arial,sans-serif;font-weight:700;font-size:14.5px;color:#071a3d}"
+    + ".emeta{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#7a7a7a;margin:2px 0 4px}"
+    + ".edesc{font-size:14px;color:#3a3a3a}.tagline{display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:12.5px;background:#f3efe4;border:1px solid rgba(184,146,74,.4);color:#071a3d;padding:4px 11px;margin:0 6px 6px 0}"
+    + "p.body{margin-bottom:12px;text-align:justify}.letterhead{font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:1.75;color:#3a3a3a}"
+    + ".lright{text-align:right;margin-bottom:22px}.empty{display:none}"
+    + ".seek{background:#071a3d;color:#fff;padding:34px 32px}"
+    + ".seek .lbl{font-family:Helvetica,Arial,sans-serif;font-size:10.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c7a45a;margin-bottom:14px}"
+    + ".seek .nm{font-weight:700;font-size:26px;margin-bottom:6px}.seek .ar{font-style:italic;font-size:18px;color:#c7a45a;margin-bottom:20px}"
+    + ".seek .rw{padding:9px 0;border-bottom:1px solid rgba(199,164,90,.25);font-family:Helvetica,Arial,sans-serif;font-size:13px}"
+    + ".seek .rw span{color:#9aa6c0;text-transform:uppercase;letter-spacing:1.3px;font-size:10.5px;display:block}"
+    + ".seek .rw b{color:#fff;display:block;margin-top:3px}"
+    + ".seek .ft{margin-top:20px;font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:#c7a45a}";
+
+  function download(kind){
+    var body, title, base;
+    if (kind === "cv"){ body = cvHTML(); title = "Curriculum Vitae"; base = ($("cvName").value || "curriculo"); }
+    else if (kind === "lm"){ body = lmHTML(); title = "Lettre de motivation"; base = ($("lmName").value || "carta-motivacao"); }
+    else { body = btHTML(); title = "Estou buscando trabalho"; base = ($("btName").value || "buscando-trabalho"); }
+
+    var file = "<!DOCTYPE html><html lang=\"pt\"><head><meta charset=\"UTF-8\">"
+      + "<title>" + esc(title) + "</title><style>" + DOCCSS + "</style></head><body>" + body + "</body></html>";
+
+    var slug = base.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+                   .replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"") || "documento";
+    var name = kind + "-" + slug + ".html";
+
+    var blob = new Blob([file], {type:"text/html;charset=utf-8"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click();
+    document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1500);
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-dl]"), function(b){
+    b.addEventListener("click", function(){ download(b.dataset.dl); });
+  });
+
+  /* ---------- limpar ---------- */
+  function wipe(scope){
+    var root = scope ? panes[scope] : document;
+    Array.prototype.forEach.call(root.querySelectorAll("input,textarea"), function(i){ i.value = ""; });
+    Array.prototype.forEach.call(root.querySelectorAll("select"), function(s){ if (s.id === "lmModel") s.value = ""; });
+    Array.prototype.forEach.call(root.querySelectorAll(".blocks .item"), function(i){ i.remove(); });
+    render();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-clear]"), function(b){
+    b.addEventListener("click", function(){
+      if (confirm("Apagar tudo o que você preencheu nesta seção? Isto não pode ser desfeito.")) wipe(b.dataset.clear);
+    });
+  });
+
+  /* ---------- apagar ao sair ---------- */
+  window.addEventListener("beforeunload", function(e){
+    var dirty = false;
+    Array.prototype.forEach.call(document.querySelectorAll("input,textarea"), function(i){
+      if (has(i.value)) dirty = true;
+    });
+    if (dirty){ e.preventDefault(); e.returnValue = ""; return ""; }
+  });
+  window.addEventListener("pagehide", function(){ wipe(); });
+  window.addEventListener("unload", function(){ wipe(); });
+
+  /* ---------- início ---------- */
+  addBlock("cvExp", EXPF);
+  addBlock("cvEdu", EDUF);
+  addBlock("btRefs", REFF);
+  render();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brasil e Portugal, a equivalência que redesenha a sala de aula · The Crossing Time</title>
+<meta name="description" content="Em 8 de maio de 2026, a Assembleia da República portuguesa ratificou o acordo de equivalência escolar com o Brasil, 26 anos após Porto Seguro. Por trás da burocracia, uma realidade demográfica: quase metade dos alunos estrangeiros nas escolas públicas portuguesas é brasileira. Análise editorial de The Crossing Time.">
+<meta name="author" content="The Crossing Time, by Porta Voz do Imigrante">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-1: #071a3d; --navy-2: #020814;
+    --offwhite: #F5F1E8; --ouro: #B8924A; --ouro-claro: #c7a45a;
+    --texto: #1a1a1a; --texto-suave: #4a4a4a;
+    --linha: rgba(184, 146, 74, 0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--offwhite); color: var(--texto); line-height: 1.7; font-size: 18px; -webkit-font-smoothing: antialiased; }
+
+  [lang-mode="pt"] .ng-fr { display: none !important; }
+  [lang-mode="fr"] .ng-pt { display: none !important; }
+
+  .art-back { position: fixed; top: 1rem; left: 1rem; z-index: 100; background: rgba(7,26,61,.92); backdrop-filter: blur(8px); color: #F4F2ED; border: none; border-radius: 999px; padding: 8px 16px 8px 12px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: .1em; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 12px rgba(0,0,0,.3); transition: all .2s; font-weight: 600; text-transform: uppercase; text-decoration: none; }
+  .art-back svg { width: 14px; height: 14px; stroke: #c7a45a; stroke-width: 2.5; fill: none; }
+  .art-back:hover { background: var(--navy-1); transform: translateX(-2px); }
+
+  .lang-bar { position: fixed; top: 1rem; right: 1rem; z-index: 100; display: flex; gap: 6px; background: rgba(7,26,61,.92); padding: 6px 8px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.3); backdrop-filter: blur(8px); }
+  .lang-btn { background: transparent; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.75); padding: 5px 11px; font-size: 10px; letter-spacing: .1em; font-family: 'Poppins', sans-serif; cursor: pointer; border-radius: 3px; transition: all .2s; font-weight: 500; }
+  .lang-btn:hover { color: #fff; }
+  .lang-btn.active { background: rgba(199,164,90,.2); border-color: var(--ouro); color: var(--ouro-claro); font-weight: 600; }
+
+  .top-bar { background: var(--navy-1); color: var(--offwhite); padding: 14px 0; border-bottom: 2px solid var(--ouro); }
+  .top-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; }
+  .top-bar .marca { font-weight: 700; color: var(--ouro-claro); }
+  .top-bar .pilares { color: rgba(245, 241, 232, 0.7); font-weight: 300; }
+
+  .hero { position: relative; width: 100%; height: 75vh; min-height: 600px; max-height: 800px; background: var(--navy-1); overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; filter: brightness(0.45) contrast(1.05) saturate(0.6); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0.55) 0%, rgba(7,26,61,0.70) 50%, rgba(2,8,20,0.94) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 80px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 14px; font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--ouro-claro); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; flex-wrap: wrap; }
+  .hero-tag .bandeira-fr { width: 36px; height: 24px; background: linear-gradient(to right, #0055A4 33%, #fff 33%, #fff 66%, #EF4135 66%); display: inline-block; }
+  .hero-tag .bandeira-pt { width: 36px; height: 24px; background: linear-gradient(to right, #006600 38%, #FF0000 38%); display: inline-block; position: relative; }
+  .hero-tag .bandeira-pt::after { content: ""; position: absolute; left: 28%; top: 50%; transform: translate(-50%, -50%); width: 14px; height: 14px; background: #FFD700; border-radius: 50%; border: 2px solid #006600; }
+  .hero-tag .bandeira-br { width: 36px; height: 24px; background: #009C3B; display: inline-block; position: relative; }
+  .hero-tag .bandeira-br::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(45deg); width: 18px; height: 12px; background: #FFDF00; }
+  .hero-tag .bandeira-br::before { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 8px; height: 8px; background: #002776; border-radius: 50%; z-index: 2; }
+  .hero-tag .bandeira-ue { width: 36px; height: 24px; background: #003399; position: relative; display: inline-flex; align-items: center; justify-content: center; color: #FFCC00; font-size: 14px; line-height: 1; }
+  .hero-tag .bandeira-ue::after { content: "★ ★"; letter-spacing: -2px; }
+  .hero-tag .linha-dourada { width: 50px; height: 2px; background: var(--ouro); }
+  .hero h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(40px, 6vw, 78px); line-height: 1.05; color: var(--offwhite); max-width: 900px; letter-spacing: -0.02em; }
+  .hero h1 .destaque { color: var(--ouro-claro); display: block; }
+  .hero-subtitle { font-family: 'Lora', serif; font-style: italic; font-weight: 400; font-size: clamp(20px, 2vw, 26px); color: rgba(245, 241, 232, 0.9); margin-top: 28px; max-width: 720px; line-height: 1.4; }
+  .hero-meta { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(199, 164, 90, 0.4); max-width: 720px; font-family: 'Poppins', sans-serif; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245, 241, 232, 0.7); }
+  .hero-meta strong { color: var(--ouro-claro); font-weight: 700; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  article { padding: 80px 0 60px; }
+  .lead { font-family: 'Lora', serif; font-size: 24px; line-height: 1.5; color: var(--texto); margin-bottom: 48px; font-weight: 500; }
+  .lead::first-letter { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 80px; float: left; line-height: 0.85; padding: 8px 12px 0 0; color: var(--ouro); }
+  h2.secao { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; color: var(--navy-1); margin: 64px 0 32px; }
+  .secao-numero { display: block; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ouro); margin-bottom: 12px; font-weight: 600; }
+  article p { margin-bottom: 24px; color: var(--texto); font-family: 'Lora', serif; }
+  article p strong { color: var(--navy-1); font-weight: 700; }
+
+  .quote-block { margin: 56px 0; padding: 40px; background: var(--navy-1); color: var(--offwhite); border-left: 6px solid var(--ouro); position: relative; }
+  .quote-block .quote-text { font-family: 'Lora', serif; font-style: italic; font-size: 26px; line-height: 1.4; color: var(--offwhite); margin-bottom: 16px; }
+  .quote-block .quote-author { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); font-weight: 600; }
+
+  .dados-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 48px 0; }
+  .dado-card { background: #fff; padding: 28px 20px; border-top: 4px solid var(--ouro); box-shadow: 0 2px 12px rgba(7,26,61,.08); border-radius: 4px; }
+  .dado-label { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 12px; }
+  .dado-numero { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(36px, 4vw, 48px); line-height: 1; color: var(--navy-1); margin-bottom: 12px; }
+  .dado-desc { font-family: 'Lora', serif; font-size: 14px; line-height: 1.45; color: var(--texto-suave); }
+
+  .timeline { margin: 48px 0; padding-left: 40px; position: relative; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: var(--linha); }
+  .timeline-item { margin-bottom: 32px; position: relative; }
+  .timeline-item::before { content: ''; position: absolute; left: -48px; top: 6px; width: 14px; height: 14px; background: var(--ouro); border-radius: 50%; box-shadow: 0 0 0 4px var(--offwhite), 0 0 0 5px var(--ouro); }
+  .timeline-data { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .timeline-texto { font-family: 'Lora', serif; font-size: 17px; line-height: 1.55; color: var(--texto); }
+  .timeline-texto strong { color: var(--navy-1); }
+
+  .img-inline { margin: 48px 0; }
+  .img-inline img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 4px 24px rgba(7,26,61,.15); }
+  .img-inline .legenda { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-suave); margin-top: 12px; text-align: center; font-weight: 500; }
+
+  .article-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--linha); text-align: center; }
+  .article-footer .marca { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .article-footer .sub { font-family: 'Lora', serif; font-style: italic; color: var(--texto-suave); margin-bottom: 16px; font-size: 15px; }
+  .article-footer .pilares { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); }
+
+  @media (max-width: 768px) {
+    body { font-size: 17px; }
+    .hero { height: 70vh; min-height: 500px; }
+    .hero-content { padding-bottom: 50px; }
+    article { padding: 50px 0 40px; }
+    .lead { font-size: 20px; }
+    .lead::first-letter { font-size: 64px; }
+    h2.secao { font-size: 26px; }
+    .quote-block { padding: 28px 24px; }
+    .quote-block .quote-text { font-size: 21px; }
+    .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .timeline { padding-left: 24px; }
+    .timeline-item::before { left: -32px; }
+  }
+</style>
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="marca">THE CROSSING TIME</div>
+    <div class="pilares">
+      <span class="ng-pt">Sociedade • Mobilidade Educacional • Direito Internacional</span>
+      <span class="ng-fr">Société • Mobilité Éducative • Droit International</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <img src="https://images.unsplash.com/photo-1758270704286-83476deb3bd1?fm=jpg&q=80&w=2400&auto=format&fit=crop" alt="Estudantes levantando a mão em sala de aula — equivalência escolar Brasil-Portugal" class="hero-img" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="bandeira-br"></span>
+      <span class="bandeira-pt"></span>
+      <span class="ng-pt">Brasil • Portugal • Educação</span>
+      <span class="ng-fr">Brésil • Portugal • Éducation</span>
+      <span class="linha-dourada"></span>
+    </div>
+    <h1>
+      <span class="ng-pt">26 anos depois, ratificado.<span class="destaque">A equivalência que redesenha a sala de aula.</span></span>
+      <span class="ng-fr">26 ans plus tard, ratifié.<span class="destaque">L'équivalence qui redessine la salle de classe.</span></span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="ng-pt">Em 8 de maio de 2026, a Assembleia da República portuguesa ratificou o acordo escolar com o Brasil assinado em Porto Seguro no ano 2000. Por trás da burocracia, uma realidade demográfica: quase metade dos alunos estrangeiros nas escolas públicas portuguesas já é brasileira.</span>
+      <span class="ng-fr">Le 8 mai 2026, l'Assemblée de la République portugaise a ratifié l'accord scolaire avec le Brésil signé à Porto Seguro en l'an 2000. Derrière la bureaucratie, une réalité démographique : près de la moitié des élèves étrangers dans les écoles publiques portugaises est déjà brésilienne.</span>
+    </p>
+    <div class="hero-meta">
+      <strong><span class="ng-pt">Análise editorial</span><span class="ng-fr">Analyse éditoriale</span></strong> • 
+      <span class="ng-pt">Sociedade & Mobilidade</span><span class="ng-fr">Société & Mobilité</span> • 
+      <span class="ng-pt">14 de maio de 2026</span><span class="ng-fr">14 mai 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <p class="lead">
+      <span class="ng-pt">Há 88.159 crianças e adolescentes brasileiros matriculados em escolas públicas portuguesas. Eles representam quase metade de todos os alunos estrangeiros do sistema. São maioria no pré-escolar, no primeiro ciclo, e estão em todos os outros. Para essas famílias, e para os milhares que ainda atravessarão o Atlântico nos próximos anos, a Assembleia da República portuguesa acaba de ratificar um acordo que esperava na gaveta há vinte e seis anos. Não é generosidade institucional. É reconhecimento tardio de uma realidade demográfica que a escola pública portuguesa já vinha absorvendo, com ou sem tratado.</span>
+      <span class="ng-fr">Il y a 88 159 enfants et adolescents brésiliens inscrits dans des écoles publiques portugaises. Ils représentent près de la moitié de tous les élèves étrangers du système. Ils sont majoritaires dans le préscolaire, dans le premier cycle, et présents dans tous les autres. Pour ces familles, et pour les milliers qui traverseront encore l'Atlantique dans les prochaines années, l'Assemblée de la République portugaise vient de ratifier un accord qui attendait dans le tiroir depuis vingt-six ans. Ce n'est pas de la générosité institutionnelle. C'est la reconnaissance tardive d'une réalité démographique que l'école publique portugaise absorbait déjà, avec ou sans traité.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">I. O acordo</span><span class="ng-fr">I. L'accord</span></span>
+      <span class="ng-pt">O que foi ratificado em 8 de maio de 2026</span>
+      <span class="ng-fr">Ce qui a été ratifié le 8 mai 2026</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A Assembleia da República portuguesa aprovou em <strong>8 de maio de 2026</strong>, uma sexta-feira, a ratificação do Acordo Complementar ao Tratado de Amizade, Cooperação e Consulta entre a República Portuguesa e a República Federativa do Brasil. O instrumento original foi assinado em <strong>22 de abril de 2000</strong>, na cidade brasileira de Porto Seguro, na Bahia, em cerimônia que marcou os 500 anos do descobrimento. O acordo complementar específico sobre equivalência de estudos esperou 26 anos pela ratificação parlamentar do lado português. O voto foi favorável em todas as bancadas. A única exceção foi o Chega, partido de extrema-direita, que se absteve.</span>
+      <span class="ng-fr">L'Assemblée de la République portugaise a approuvé le <strong>8 mai 2026</strong>, un vendredi, la ratification de l'Accord Complémentaire au Traité d'Amitié, Coopération et Consultation entre la République Portugaise et la République Fédérative du Brésil. L'instrument original a été signé le <strong>22 avril 2000</strong>, dans la ville brésilienne de Porto Seguro, en Bahia, lors d'une cérémonie qui marquait les 500 ans de la découverte. L'accord complémentaire spécifique sur l'équivalence des études a attendu 26 ans la ratification parlementaire du côté portugais. Le vote a été favorable dans toutes les bancades. La seule exception a été Chega, parti d'extrême-droite, qui s'est abstenu.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O conteúdo do acordo é tecnicamente preciso e politicamente limitado. Estabelece o <strong>reconhecimento automático</strong> entre o ensino fundamental e o ensino médio brasileiros, de um lado, e o ensino básico e o ensino secundário portugueses, do outro. Na prática, isso significa que um aluno brasileiro que conclui o ensino médio pode, ao migrar para Portugal, ter sua escolaridade validada sem passar pelo procedimento individual de equivalência administrativa. O caminho inverso também passa a operar: alunos portugueses que estudam no Brasil terão suas habilitações reconhecidas sem caso a caso. O eixo do acordo é a remoção da fricção burocrática que, até aqui, exigia que cada família migrante atravessasse o mesmo labirinto documental, com prazos variáveis, exigências mutáveis e custos imprevisíveis.</span>
+      <span class="ng-fr">Le contenu de l'accord est techniquement précis et politiquement limité. Il établit la <strong>reconnaissance automatique</strong> entre l'enseignement fondamental et l'enseignement moyen brésiliens, d'un côté, et l'enseignement basique et l'enseignement secondaire portugais, de l'autre. En pratique, cela signifie qu'un élève brésilien qui termine l'enseignement moyen peut, en migrant vers le Portugal, faire valider sa scolarité sans passer par la procédure individuelle d'équivalence administrative. Le chemin inverse opère aussi : des élèves portugais qui étudient au Brésil verront leurs habilitations reconnues sans cas par cas. L'axe de l'accord est la suppression de la friction bureaucratique qui, jusqu'ici, exigeait que chaque famille migrante traverse le même labyrinthe documentaire, avec des délais variables, des exigences changeantes et des coûts imprévisibles.</span>
+    </p>
+
+    <div class="img-inline">
+      <img src="img/consulado-acordo.jpg" alt="Bandeiras de Brasil e Portugal com selo do Consulado-Geral do Brasil">
+      <div class="legenda">
+        <span class="ng-pt">Acordo Complementar Brasil-Portugal · Reconhecimento institucional</span>
+        <span class="ng-fr">Accord Complémentaire Brésil-Portugal · Reconnaissance institutionnelle</span>
+      </div>
+    </div>
+
+    <p>
+      <span class="ng-pt">A ratificação portuguesa, no entanto, ainda não basta. Para o tratado entrar efetivamente em vigor, é necessária também a ratificação pelo Parlamento brasileiro, que, na data deste artigo, ainda tramita a proposta. Enquanto isso, a Embaixada do Brasil em Portugal mantém um procedimento intermediário: passou a validar históricos escolares online, e em 2025 reconheceu mais de <strong>16 mil documentos</strong> dessa forma, segundo dados do próprio Ministério da Educação português. O acordo ratificado pelo lado luso é, portanto, um marco político e jurídico decisivo. Mas a entrada em vigor plena depende ainda do trâmite no Congresso brasileiro.</span>
+      <span class="ng-fr">La ratification portugaise, cependant, ne suffit pas encore. Pour que le traité entre effectivement en vigueur, la ratification par le Parlement brésilien est également nécessaire, qui, à la date de cet article, est encore en cours d'examen. Pendant ce temps, l'Ambassade du Brésil au Portugal maintient une procédure intermédiaire : elle a commencé à valider les historiques scolaires en ligne, et en 2025 a reconnu plus de <strong>16 000 documents</strong> de cette manière, selon les données du ministère portugais de l'Éducation. L'accord ratifié du côté portugais est donc un jalon politique et juridique décisif. Mais l'entrée en vigueur pleine dépend encore du parcours au Congrès brésilien.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"Vinte e seis anos entre a assinatura em Porto Seguro e a ratificação em Lisboa não revelam apenas a lentidão diplomática. Revelam que a integração luso-brasileira sempre operou na ausência do tratado que agora se atualiza."</span>
+        <span class="ng-fr">« Vingt-six ans entre la signature à Porto Seguro et la ratification à Lisbonne ne révèlent pas seulement la lenteur diplomatique. Ils révèlent que l'intégration luso-brésilienne a toujours opéré en l'absence du traité qui se met maintenant à jour. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">II. A demografia que explica o acordo</span><span class="ng-fr">II. La démographie qui explique l'accord</span></span>
+      <span class="ng-pt">Quase metade dos alunos estrangeiros já é brasileira</span>
+      <span class="ng-fr">Près de la moitié des élèves étrangers est déjà brésilienne</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A justificativa política do acordo é educacional. A pressão real que o produziu é demográfica. Dados do Ministério da Educação, Ciência e Inovação português, divulgados em 2025, mostram que no ano letivo de 2024/2025 havia <strong>178.133 alunos estrangeiros</strong> matriculados nas escolas públicas portuguesas. Desses, <strong>88.159 eram brasileiros</strong>, ou seja, <strong>49,5% do total</strong>. Quase um em cada dois alunos imigrantes da rede pública portuguesa veio do Brasil. A presença é ainda mais acentuada nos primeiros anos da escolaridade: brasileiros somam <strong>51,2%</strong> dos alunos estrangeiros na educação pré-escolar e <strong>50,9%</strong> no primeiro ciclo. No segundo ciclo, são 48,2%. No terceiro, 48,5%. No secundário, 48,4%.</span>
+      <span class="ng-fr">La justification politique de l'accord est éducative. La pression réelle qui l'a produit est démographique. Des données du ministère portugais de l'Éducation, de la Science et de l'Innovation, divulguées en 2025, montrent que durant l'année scolaire 2024/2025 il y avait <strong>178 133 élèves étrangers</strong> inscrits dans les écoles publiques portugaises. Parmi eux, <strong>88 159 étaient brésiliens</strong>, soit <strong>49,5 % du total</strong>. Près d'un élève immigré sur deux du réseau public portugais venait du Brésil. La présence est encore plus accentuée dans les premières années de scolarité : les Brésiliens représentent <strong>51,2 %</strong> des élèves étrangers dans l'éducation préscolaire et <strong>50,9 %</strong> au premier cycle. Au deuxième cycle, ils sont 48,2 %. Au troisième, 48,5 %. Au secondaire, 48,4 %.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O número de estudantes estrangeiros na rede pública portuguesa cresceu <strong>10,85%</strong> entre os anos letivos de 2023/2024 e 2024/2025. Entre os brasileiros, especificamente, o crescimento foi de <strong>5%</strong> no mesmo período. O quadro mais amplo: segundo a Agência para a Integração, Migrações e Asilo (Aima), Portugal abrigava cerca de <strong>1,6 milhão de imigrantes</strong> ao final de 2024, número que se traduz na escola pública como sala de aula transformada estruturalmente. O Banco de Portugal já registrara redução populacional sistemática durante dez anos consecutivos, até 2018. A inversão da tendência, a partir de 2019, foi puxada precisamente pela imigração brasileira. A criança que levanta a mão na sala de aula em Lisboa, Porto, Braga ou Faro hoje é, com frequência crescente, filha dessa virada demográfica.</span>
+      <span class="ng-fr">Le nombre d'élèves étrangers dans le réseau public portugais a augmenté de <strong>10,85 %</strong> entre les années scolaires 2023/2024 et 2024/2025. Parmi les Brésiliens, spécifiquement, la croissance a été de <strong>5 %</strong> sur la même période. Le tableau plus large : selon l'Agence pour l'Intégration, les Migrations et l'Asile (Aima), le Portugal abritait environ <strong>1,6 million d'immigrés</strong> à la fin de 2024, chiffre qui se traduit dans l'école publique par une salle de classe transformée structurellement. La Banque du Portugal avait déjà enregistré une réduction démographique systématique pendant dix années consécutives, jusqu'en 2018. L'inversion de la tendance, à partir de 2019, a été tirée précisément par l'immigration brésilienne. L'enfant qui lève la main dans la salle de classe à Lisbonne, Porto, Braga ou Faro aujourd'hui est, avec une fréquence croissante, l'enfant de ce tournant démographique.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A geografia desse fenômeno também merece registro. Nas escolas privadas portuguesas, os brasileiros representam parcela menor: <strong>24,8% dos 34.798 alunos estrangeiros</strong> matriculados em 2023/2024, segundo dados do mesmo ministério. A diferença não é casual. A escola pública portuguesa, gratuita e descentralizada, é a porta de entrada padrão das famílias migrantes que chegam com recursos limitados. O acordo ratificado em Lisboa atinge, portanto, primeiro e principalmente, a rede que já estava sustentando o esforço integrador na prática cotidiana, sem instrumento jurídico que o reconhecesse.</span>
+      <span class="ng-fr">La géographie de ce phénomène mérite aussi d'être enregistrée. Dans les écoles privées portugaises, les Brésiliens représentent une part plus petite : <strong>24,8 % des 34 798 élèves étrangers</strong> inscrits en 2023/2024, selon les données du même ministère. La différence n'est pas fortuite. L'école publique portugaise, gratuite et décentralisée, est la porte d'entrée standard des familles migrantes qui arrivent avec des ressources limitées. L'accord ratifié à Lisbonne touche donc, d'abord et surtout, le réseau qui soutenait déjà l'effort intégrateur dans la pratique quotidienne, sans instrument juridique qui le reconnaisse.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">III. A cronologia</span><span class="ng-fr">III. La chronologie</span></span>
+      <span class="ng-pt">De Porto Seguro a Lisboa: 26 anos entre a assinatura e a ratificação</span>
+      <span class="ng-fr">De Porto Seguro à Lisbonne : 26 ans entre la signature et la ratification</span>
+    </h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Abr / 2000</span><span class="ng-fr">Avr / 2000</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt"><strong>Porto Seguro, Bahia.</strong> Em 22 de abril, durante a cerimônia dos 500 anos do descobrimento, Brasil e Portugal assinam o Tratado de Amizade, Cooperação e Consulta, com Acordo Complementar específico sobre equivalência escolar.</span>
+          <span class="ng-fr"><strong>Porto Seguro, Bahia.</strong> Le 22 avril, pendant la cérémonie des 500 ans de la découverte, le Brésil et le Portugal signent le Traité d'Amitié, Coopération et Consultation, avec un Accord Complémentaire spécifique sur l'équivalence scolaire.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">2000-2018</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">O acordo complementar permanece sem ratificação parlamentar em Portugal. A população imigrante brasileira no país segue baixa em comparação com fluxos anteriores. Equivalência escolar opera caso a caso, com prazos imprevisíveis.</span>
+          <span class="ng-fr">L'accord complémentaire reste sans ratification parlementaire au Portugal. La population immigrée brésilienne dans le pays reste basse en comparaison avec les flux antérieurs. L'équivalence scolaire opère cas par cas, avec des délais imprévisibles.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">2019</div>
+        <div class="timeline-texto">
+          <span class="ng-pt"><strong>Inversão demográfica.</strong> Após dez anos de redução populacional contínua, Portugal volta a crescer, puxado pela imigração, com brasileiros como contingente principal. A pressão sobre o sistema escolar começa a se intensificar.</span>
+          <span class="ng-fr"><strong>Inversion démographique.</strong> Après dix ans de réduction démographique continue, le Portugal recommence à croître, tiré par l'immigration, avec les Brésiliens comme contingent principal. La pression sur le système scolaire commence à s'intensifier.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">2024-2025</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Brasileiros são <strong>49,5%</strong> dos alunos estrangeiros na rede pública portuguesa. A Embaixada do Brasil em Lisboa passa a validar históricos escolares online e reconhece mais de <strong>16 mil documentos</strong> apenas em 2025.</span>
+          <span class="ng-fr">Les Brésiliens sont <strong>49,5 %</strong> des élèves étrangers dans le réseau public portugais. L'Ambassade du Brésil à Lisbonne commence à valider les historiques scolaires en ligne et reconnaît plus de <strong>16 000 documents</strong> rien qu'en 2025.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Abr / 2026</span><span class="ng-fr">Avr / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Visita oficial do presidente Lula a Lisboa. O governo de Luís Montenegro envia ao Parlamento a proposta de ratificação do acordo de 2000. A tramitação acelera.</span>
+          <span class="ng-fr">Visite officielle du président Lula à Lisbonne. Le gouvernement de Luís Montenegro envoie au Parlement la proposition de ratification de l'accord de 2000. Le processus s'accélère.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">8 Mai / 2026</span><span class="ng-fr">8 Mai / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt"><strong>Ratificação na Assembleia da República.</strong> Aprovação por todas as bancadas, exceção do Chega, que se absteve. O secretário de Estado das Comunidades Portuguesas, Emídio Sousa, defende a medida como resposta ao crescimento brasileiro nas escolas.</span>
+          <span class="ng-fr"><strong>Ratification à l'Assemblée de la République.</strong> Approbation par toutes les bancades, à l'exception de Chega, qui s'est abstenu. Le secrétaire d'État des Communautés Portugaises, Emídio Sousa, défend la mesure comme réponse à la croissance brésilienne dans les écoles.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Próximos meses</span><span class="ng-fr">Prochains mois</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Ratificação pendente no <strong>Congresso brasileiro</strong>. Após aprovação nos dois lados, o tratado entra formalmente em vigor e o reconhecimento automático passa a operar sem necessidade de validação consular intermediária.</span>
+          <span class="ng-fr">Ratification en attente au <strong>Congrès brésilien</strong>. Après approbation des deux côtés, le traité entre formellement en vigueur et la reconnaissance automatique opère sans nécessité de validation consulaire intermédiaire.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">IV. Os números</span><span class="ng-fr">IV. Les chiffres</span></span>
+      <span class="ng-pt">A escala real do que está em jogo</span>
+      <span class="ng-fr">L'échelle réelle de l'enjeu</span>
+    </h2>
+
+    <div class="dados-grid">
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Alunos brasileiros</span><span class="ng-fr">Élèves brésiliens</span></div>
+        <div class="dado-numero">88 mil</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Matriculados nas escolas públicas portuguesas em 2024/2025. Quase metade de todos os alunos estrangeiros do sistema.</span>
+          <span class="ng-fr">Inscrits dans les écoles publiques portugaises en 2024/2025. Près de la moitié de tous les élèves étrangers du système.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Participação</span><span class="ng-fr">Participation</span></div>
+        <div class="dado-numero">49,5%</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Dos alunos estrangeiros nas escolas públicas portuguesas. Maioria absoluta no pré-escolar (51,2%) e no primeiro ciclo (50,9%).</span>
+          <span class="ng-fr">Des élèves étrangers dans les écoles publiques portugaises. Majorité absolue dans le préscolaire (51,2 %) et au premier cycle (50,9 %).</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Anos de espera</span><span class="ng-fr">Années d'attente</span></div>
+        <div class="dado-numero">26</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Entre a assinatura do acordo em Porto Seguro (abril de 2000) e a ratificação na Assembleia da República (maio de 2026).</span>
+          <span class="ng-fr">Entre la signature de l'accord à Porto Seguro (avril 2000) et la ratification à l'Assemblée de la République (mai 2026).</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Documentos consulares</span><span class="ng-fr">Documents consulaires</span></div>
+        <div class="dado-numero">16 mil</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Históricos escolares validados pela Embaixada do Brasil em Portugal apenas em 2025, antes da ratificação do acordo automático.</span>
+          <span class="ng-fr">Historiques scolaires validés par l'Ambassade du Brésil au Portugal rien qu'en 2025, avant la ratification de l'accord automatique.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">V. O que muda na escola</span><span class="ng-fr">V. Ce qui change à l'école</span></span>
+      <span class="ng-pt">Da incerteza administrativa ao enquadramento previsível</span>
+      <span class="ng-fr">De l'incertitude administrative à l'encadrement prévisible</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A diferença prática entre o regime anterior e o que o tratado ratificado prevê é considerável. Até aqui, uma família brasileira que chegava a Portugal com um filho em idade escolar precisava cumprir um conjunto não padronizado de etapas. Apresentar histórico escolar emitido pelo Brasil. Solicitar validação à direção regional de educação correspondente ao distrito de residência. Em muitos casos, obter tradução juramentada de documentos. Aguardar análise individual, com prazos variáveis. Em determinados distritos, a aprovação podia levar semanas; em outros, meses. Esse intervalo significava, na prática, interrupção da trajetória escolar do aluno, ou ingresso provisório em uma série abaixo da que ele cursaria por direito.</span>
+      <span class="ng-fr">La différence pratique entre le régime antérieur et ce que le traité ratifié prévoit est considérable. Jusqu'ici, une famille brésilienne qui arrivait au Portugal avec un enfant en âge scolaire devait remplir un ensemble non standardisé d'étapes. Présenter l'historique scolaire émis par le Brésil. Solliciter la validation auprès de la direction régionale de l'éducation correspondant au district de résidence. Dans de nombreux cas, obtenir une traduction assermentée des documents. Attendre l'analyse individuelle, avec des délais variables. Dans certains districts, l'approbation pouvait prendre des semaines ; dans d'autres, des mois. Cet intervalle signifiait, en pratique, l'interruption de la trajectoire scolaire de l'élève, ou une entrée provisoire dans une année inférieure à celle qu'il aurait dû fréquenter.</span>
+    </p>
+
+    <div class="img-inline">
+      <img src="img/estudantes-prova.jpg" alt="Estudantes em sala de aula durante avaliação">
+      <div class="legenda">
+        <span class="ng-pt">Sala de aula · Sistema público de ensino</span>
+        <span class="ng-fr">Salle de classe · Système public d'enseignement</span>
+      </div>
+    </div>
+
+    <p>
+      <span class="ng-pt">Com o reconhecimento automático plenamente em vigor, depois da ratificação brasileira pendente, esse percurso é encurtado. A criança ou adolescente brasileiro apresenta seu histórico escolar, e a escola portuguesa enquadra automaticamente na série correspondente, segundo a tabela de equivalência prevista pelo tratado. Não há análise documental discricionária. Não há prazo de avaliação. Não há custos administrativos. A integração escolar passa a ser uma matrícula, não um processo. Isso tem três efeitos práticos concretos: <strong>integração social mais rápida</strong>, porque a criança entra no convívio escolar imediatamente; <strong>continuidade pedagógica</strong>, porque a trajetória educacional não é interrompida pela burocracia migratória; e <strong>segurança jurídica</strong>, porque a tabela de equivalência substitui a interpretação individual de cada estabelecimento.</span>
+      <span class="ng-fr">Avec la reconnaissance automatique pleinement en vigueur, après la ratification brésilienne en attente, ce parcours est raccourci. L'enfant ou l'adolescent brésilien présente son historique scolaire, et l'école portugaise l'encadre automatiquement dans l'année correspondante, selon le tableau d'équivalence prévu par le traité. Il n'y a pas d'analyse documentaire discrétionnaire. Il n'y a pas de délai d'évaluation. Il n'y a pas de coûts administratifs. L'intégration scolaire devient une inscription, pas un processus. Cela a trois effets pratiques concrets : <strong>intégration sociale plus rapide</strong>, parce que l'enfant entre immédiatement dans la sociabilité scolaire ; <strong>continuité pédagogique</strong>, parce que la trajectoire éducative n'est pas interrompue par la bureaucratie migratoire ; et <strong>sécurité juridique</strong>, parce que le tableau d'équivalence remplace l'interprétation individuelle de chaque établissement.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O ponto que merece sublinhado é institucional. O acordo não cria privilégios, não estabelece tratamento preferencial. Apenas converte uma interpretação caso a caso em norma comum. Para uma rede pública que já absorvia metade dos alunos estrangeiros como brasileiros, o tratado é, na prática, regularização tardia. O sistema fazia o trabalho integrador. Faltava o respaldo jurídico que reconhecesse o que a escola já vinha fazendo.</span>
+      <span class="ng-fr">Le point qui mérite d'être souligné est institutionnel. L'accord ne crée pas de privilèges, n'établit pas de traitement préférentiel. Il convertit seulement une interprétation cas par cas en norme commune. Pour un réseau public qui absorbait déjà la moitié des élèves étrangers comme brésiliens, le traité est, en pratique, une régularisation tardive. Le système faisait le travail intégrateur. Il manquait le soutien juridique qui reconnaisse ce que l'école faisait déjà.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">VI. O posicionamento</span><span class="ng-fr">VI. Le positionnement</span></span>
+      <span class="ng-pt">Por que essa ratificação importa, e por que ela ainda é insuficiente</span>
+      <span class="ng-fr">Pourquoi cette ratification importe, et pourquoi elle est encore insuffisante</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">O acordo ratificado em 8 de maio é uma vitória educacional concreta, mas seu desenho político revela um limite estrutural. O tratado abrange ensino fundamental e médio. <strong>Não inclui o ensino superior.</strong> Diplomas universitários brasileiros continuam dependendo de processo separado de reconhecimento em Portugal, com avaliação curricular detalhada, correspondência entre cargas horárias e conteúdos, validação por instituição de ensino superior portuguesa, eventual exigência de complementação acadêmica e, em profissões reguladas, aprovação das ordens profissionais correspondentes. O embaixador do Brasil em Portugal, Raimundo Carreiro, defende explicitamente a necessidade de um acordo equivalente para diplomas universitários. Por enquanto, essa frente continua aberta.</span>
+      <span class="ng-fr">L'accord ratifié le 8 mai est une victoire éducative concrète, mais son dessin politique révèle une limite structurelle. Le traité couvre l'enseignement fondamental et moyen. <strong>Il n'inclut pas l'enseignement supérieur.</strong> Les diplômes universitaires brésiliens continuent de dépendre d'un processus séparé de reconnaissance au Portugal, avec une évaluation curriculaire détaillée, correspondance entre charges horaires et contenus, validation par une institution d'enseignement supérieur portugaise, exigence éventuelle de complément académique et, dans les professions régulées, approbation des ordres professionnels correspondants. L'ambassadeur du Brésil au Portugal, Raimundo Carreiro, défend explicitement la nécessité d'un accord équivalent pour les diplômes universitaires. Pour l'instant, ce front reste ouvert.</span>
+    </p>
+
+    <div class="img-inline">
+      <img src="img/ilustracao-diplomas.jpg" alt="Ilustração conceitual de reconhecimento de diplomas entre dois países">
+      <div class="legenda">
+        <span class="ng-pt">Reconhecimento de diplomas · Ilustração conceitual</span>
+        <span class="ng-fr">Reconnaissance de diplômes · Illustration conceptuelle</span>
+      </div>
+    </div>
+
+    <p>
+      <span class="ng-pt">A omissão do ensino superior não é tecnicamente injustificável, mas é politicamente reveladora. Quanto mais alta a qualificação, mais o reconhecimento se complica, porque envolve compatibilidade curricular, padrões acadêmicos comparáveis, e, sobretudo, regulação profissional. Médicos, advogados, engenheiros, arquitetos, professores universitários, todos esses dependem de validação setorial específica que escapa ao alcance de um tratado bilateral genérico. Mas o efeito real dessa lacuna recai sobre uma população concreta. <strong>Profissionais brasileiros formados que migram para Portugal frequentemente operam, durante anos, em ocupações abaixo de sua qualificação.</strong> A subutilização do capital humano migrante é um custo invisível tanto para o trabalhador, que perde renda e carreira, quanto para o país receptor, que perde produtividade.</span>
+      <span class="ng-fr">L'omission de l'enseignement supérieur n'est pas techniquement injustifiable, mais elle est politiquement révélatrice. Plus la qualification est élevée, plus la reconnaissance se complique, parce qu'elle implique la compatibilité curriculaire, des standards académiques comparables, et surtout, la régulation professionnelle. Médecins, avocats, ingénieurs, architectes, professeurs universitaires, tous dépendent d'une validation sectorielle spécifique qui échappe à la portée d'un traité bilatéral générique. Mais l'effet réel de cette lacune retombe sur une population concrète. <strong>Des professionnels brésiliens diplômés qui migrent vers le Portugal opèrent fréquemment, pendant des années, dans des occupations inférieures à leur qualification.</strong> La sous-utilisation du capital humain immigré est un coût invisible tant pour le travailleur, qui perd revenu et carrière, que pour le pays d'accueil, qui perd en productivité.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"A mobilidade internacional opera em camadas. A escolar acaba de ser destravada. A acadêmica e a profissional continuam fechadas. Compreender essas camadas é o que separa uma migração que progride de uma migração que se reinicia."</span>
+        <span class="ng-fr">« La mobilité internationale opère en couches. La couche scolaire vient d'être débloquée. Les couches académique et professionnelle restent fermées. Comprendre ces couches est ce qui sépare une migration qui progresse d'une migration qui recommence. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <p>
+      <span class="ng-pt">Para o leitor que esta plataforma reconhece, o acordo de Porto Seguro ratificado em Lisboa importa por três razões concretas. Primeiro, porque resolve uma fricção real para as famílias brasileiras que já migraram com filhos em idade escolar, ou que pretendem fazê-lo nos próximos anos. Segundo, porque sinaliza uma direção institucional clara: a CPLP, e particularmente o eixo luso-brasileiro, está se reorganizando para reconhecer juridicamente uma integração que a vida cotidiana já produziu. Terceiro, porque revela o que ainda falta. Equivalência escolar é o piso. Reconhecimento profissional é o teto. Entre os dois, há uma travessia que continua exigindo planejamento, informação e estratégia para que a chegada não signifique perda de patamar.</span>
+      <span class="ng-fr">Pour le lecteur que cette plateforme reconnaît, l'accord de Porto Seguro ratifié à Lisbonne importe pour trois raisons concrètes. Premièrement, parce qu'il résout une friction réelle pour les familles brésiliennes qui ont déjà migré avec des enfants en âge scolaire, ou qui ont l'intention de le faire dans les prochaines années. Deuxièmement, parce qu'il signale une direction institutionnelle claire : la CPLP, et particulièrement l'axe luso-brésilien, se réorganise pour reconnaître juridiquement une intégration que la vie quotidienne a déjà produite. Troisièmement, parce qu'il révèle ce qui manque encore. L'équivalence scolaire est le plancher. La reconnaissance professionnelle est le plafond. Entre les deux, il y a une traversée qui continue d'exiger planification, information et stratégie pour que l'arrivée ne signifie pas une perte de niveau.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Vinte e seis anos depois de Porto Seguro, o tratado finalmente saiu da gaveta no lado português. A próxima etapa está em Brasília. Quando os dois parlamentos terminarem o trabalho, oitenta e oito mil crianças brasileiras nas escolas públicas portuguesas, e as que ainda virão, deixarão de depender da paciência administrativa de cada direção regional. A travessia escolar passa a estar prevista em norma. A acadêmica e a profissional ainda não. E é nessa diferença que a próxima frente da integração luso-brasileira já começou a se desenhar.</span>
+      <span class="ng-fr">Vingt-six ans après Porto Seguro, le traité est enfin sorti du tiroir du côté portugais. La prochaine étape est à Brasília. Quand les deux parlements auront terminé leur travail, quatre-vingt-huit mille enfants brésiliens dans les écoles publiques portugaises, et ceux qui viendront encore, cesseront de dépendre de la patience administrative de chaque direction régionale. La traversée scolaire est désormais prévue par la norme. L'académique et la professionnelle ne le sont pas encore. Et c'est dans cette différence que le prochain front de l'intégration luso-brésilienne a déjà commencé à se dessiner.</span>
+    </p>
+
+    <div class="article-footer">
+      <div class="marca">THE CROSSING TIME</div>
+      <div class="sub">
+        <span class="ng-pt">Plataforma editorial internacional</span>
+        <span class="ng-fr">Plateforme éditoriale internationale</span>
+      </div>
+      <div class="pilares">
+        <span class="ng-pt">MOBILIDADE • PODER • TRANSFORMAÇÃO</span>
+        <span class="ng-fr">MOBILITÉ • POUVOIR • TRANSFORMATION</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>

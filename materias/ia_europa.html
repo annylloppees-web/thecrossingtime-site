@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quem controla a verdade na era da IA? · The Crossing Time</title>
+<meta name="description" content="A União Europeia ativa o AI Act em agosto de 2026, multa Meta e TikTok pelo DSA e tenta liderar a regulação global do espaço digital. Análise editorial de The Crossing Time.">
+<meta name="author" content="The Crossing Time, by Porta Voz do Imigrante">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy-1: #071a3d;
+    --navy-2: #020814;
+    --offwhite: #F5F1E8;
+    --ouro: #B8924A;
+    --ouro-claro: #c7a45a;
+    --texto: #1a1a1a;
+    --texto-suave: #4a4a4a;
+    --linha: rgba(184, 146, 74, 0.25);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--offwhite);
+    color: var(--texto);
+    line-height: 1.7;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  [lang-mode="pt"] .ng-fr { display: none !important; }
+  [lang-mode="fr"] .ng-pt { display: none !important; }
+
+  /* BACK BUTTON */
+  .art-back {
+    position: fixed; top: 1rem; left: 1rem; z-index: 100;
+    background: rgba(7,26,61,.92); backdrop-filter: blur(8px);
+    color: #F4F2ED; border: none; border-radius: 999px;
+    padding: 8px 16px 8px 12px;
+    font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: .1em;
+    cursor: pointer; display: flex; align-items: center; gap: 6px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.3);
+    transition: all .2s; font-weight: 600; text-transform: uppercase;
+    text-decoration: none;
+  }
+  .art-back svg { width: 14px; height: 14px; stroke: #c7a45a; stroke-width: 2.5; fill: none; }
+  .art-back:hover { background: var(--navy-1); transform: translateX(-2px); }
+
+  /* LANG BAR */
+  .lang-bar {
+    position: fixed; top: 1rem; right: 1rem; z-index: 100;
+    display: flex; gap: 6px;
+    background: rgba(7,26,61,.92); padding: 6px 8px; border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3); backdrop-filter: blur(8px);
+  }
+  .lang-btn {
+    background: transparent; border: 1px solid rgba(255,255,255,.25);
+    color: rgba(255,255,255,.75); padding: 5px 11px; font-size: 10px;
+    letter-spacing: .1em; font-family: 'Poppins', sans-serif;
+    cursor: pointer; border-radius: 3px; transition: all .2s; font-weight: 500;
+  }
+  .lang-btn:hover { color: #fff; }
+  .lang-btn.active { background: rgba(199,164,90,.2); border-color: var(--ouro); color: var(--ouro-claro); font-weight: 600; }
+
+  /* TOP BAR */
+  .top-bar {
+    background: var(--navy-1);
+    color: var(--offwhite);
+    padding: 14px 0;
+    border-bottom: 2px solid var(--ouro);
+  }
+  .top-bar-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .top-bar .marca { font-weight: 700; color: var(--ouro-claro); }
+  .top-bar .pilares { color: rgba(245, 241, 232, 0.7); font-weight: 300; }
+
+  /* HERO */
+  .hero {
+    position: relative; width: 100%; height: 75vh;
+    min-height: 600px; max-height: 800px;
+    background: var(--navy-1); overflow: hidden;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center center;
+    filter: brightness(0.45) contrast(1.05) saturate(0.6);
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(7,26,61,0.55) 0%, rgba(7,26,61,0.70) 50%, rgba(2,8,20,0.94) 100%);
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 1200px; margin: 0 auto; padding: 0 32px;
+    height: 100%; display: flex; flex-direction: column;
+    justify-content: flex-end; padding-bottom: 80px;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-family: 'Poppins', sans-serif; font-weight: 700;
+    color: var(--ouro-claro); font-size: 14px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-tag .bandeira-ue {
+    width: 36px; height: 24px; background: #003399;
+    position: relative; display: inline-flex; align-items: center;
+    justify-content: center; color: #FFCC00; font-size: 14px; line-height: 1;
+  }
+  .hero-tag .bandeira-ue::after { content: '★ ★'; letter-spacing: -2px; }
+  .hero-tag .linha-dourada { width: 50px; height: 2px; background: var(--ouro); }
+  .hero h1 {
+    font-family: 'Poppins', sans-serif; font-weight: 700;
+    font-size: clamp(40px, 6vw, 78px);
+    line-height: 1.05; color: var(--offwhite);
+    max-width: 900px; letter-spacing: -0.02em;
+  }
+  .hero h1 .destaque { color: var(--ouro-claro); display: block; }
+  .hero-subtitle {
+    font-family: 'Lora', serif; font-style: italic; font-weight: 400;
+    font-size: clamp(20px, 2vw, 26px);
+    color: rgba(245, 241, 232, 0.9);
+    margin-top: 28px; max-width: 720px; line-height: 1.4;
+  }
+  .hero-meta {
+    margin-top: 32px; padding-top: 20px;
+    border-top: 1px solid rgba(199, 164, 90, 0.4);
+    max-width: 720px;
+    font-family: 'Poppins', sans-serif; font-size: 13px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(245, 241, 232, 0.7);
+  }
+  .hero-meta strong { color: var(--ouro-claro); font-weight: 700; }
+
+  /* ARTIGO */
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  article { padding: 80px 0 60px; }
+  .lead {
+    font-family: 'Lora', serif; font-size: 24px;
+    line-height: 1.5; color: var(--texto);
+    margin-bottom: 48px; font-weight: 500;
+  }
+  .lead::first-letter {
+    font-family: 'Poppins', sans-serif; font-weight: 700;
+    font-size: 80px; float: left; line-height: 0.85;
+    padding: 8px 12px 0 0; color: var(--ouro);
+  }
+  h2.secao {
+    font-family: 'Poppins', sans-serif; font-weight: 700;
+    font-size: clamp(28px, 3vw, 36px);
+    line-height: 1.2; color: var(--navy-1);
+    margin: 64px 0 32px; position: relative; padding-left: 0;
+  }
+  .secao-numero {
+    display: block; font-size: 12px; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--ouro);
+    margin-bottom: 12px; font-weight: 600;
+  }
+  article p {
+    margin-bottom: 24px; color: var(--texto);
+    font-family: 'Lora', serif;
+  }
+  article p strong { color: var(--navy-1); font-weight: 700; }
+  
+  /* QUOTE */
+  .quote-block {
+    margin: 56px 0; padding: 40px;
+    background: var(--navy-1); color: var(--offwhite);
+    border-left: 6px solid var(--ouro);
+    position: relative;
+  }
+  .quote-block .quote-text {
+    font-family: 'Lora', serif; font-style: italic;
+    font-size: 26px; line-height: 1.4;
+    color: var(--offwhite); margin-bottom: 16px;
+  }
+  .quote-block .quote-author {
+    font-family: 'Poppins', sans-serif; font-size: 12px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ouro-claro); font-weight: 600;
+  }
+  
+  /* DADOS GRID */
+  .dados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px; margin: 48px 0;
+  }
+  .dado-card {
+    background: #fff; padding: 28px 20px;
+    border-top: 4px solid var(--ouro);
+    box-shadow: 0 2px 12px rgba(7,26,61,.08);
+    border-radius: 4px;
+  }
+  .dado-label {
+    font-family: 'Poppins', sans-serif; font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ouro); font-weight: 700; margin-bottom: 12px;
+  }
+  .dado-numero {
+    font-family: 'Poppins', sans-serif; font-weight: 800;
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 1; color: var(--navy-1); margin-bottom: 12px;
+  }
+  .dado-desc {
+    font-family: 'Lora', serif; font-size: 14px;
+    line-height: 1.45; color: var(--texto-suave);
+  }
+
+  /* TIMELINE */
+  .timeline {
+    margin: 48px 0; padding-left: 40px;
+    position: relative;
+  }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 2px; background: var(--linha);
+  }
+  .timeline-item {
+    margin-bottom: 32px; position: relative;
+  }
+  .timeline-item::before {
+    content: ''; position: absolute;
+    left: -48px; top: 6px;
+    width: 14px; height: 14px;
+    background: var(--ouro); border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--offwhite), 0 0 0 5px var(--ouro);
+  }
+  .timeline-data {
+    font-family: 'Poppins', sans-serif; font-size: 12px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ouro); font-weight: 700; margin-bottom: 8px;
+  }
+  .timeline-texto {
+    font-family: 'Lora', serif; font-size: 17px;
+    line-height: 1.55; color: var(--texto);
+  }
+  .timeline-texto strong { color: var(--navy-1); }
+
+  /* ARTICLE FOOTER */
+  .article-footer {
+    margin-top: 80px; padding-top: 40px;
+    border-top: 1px solid var(--linha);
+    text-align: center;
+  }
+  .article-footer .marca {
+    font-family: 'Poppins', sans-serif; font-size: 12px;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--ouro); font-weight: 700; margin-bottom: 8px;
+  }
+  .article-footer .sub {
+    font-family: 'Lora', serif; font-style: italic;
+    color: var(--texto-suave); margin-bottom: 16px; font-size: 15px;
+  }
+  .article-footer .pilares {
+    font-family: 'Poppins', sans-serif; font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ouro-claro);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    body { font-size: 17px; }
+    .hero { height: 70vh; min-height: 500px; }
+    .hero-content { padding-bottom: 50px; }
+    article { padding: 50px 0 40px; }
+    .lead { font-size: 20px; }
+    .lead::first-letter { font-size: 64px; }
+    h2.secao { font-size: 26px; }
+    .quote-block { padding: 28px 24px; }
+    .quote-block .quote-text { font-size: 21px; }
+    .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .timeline { padding-left: 24px; }
+    .timeline-item::before { left: -32px; }
+  }
+</style>
+
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="marca">THE CROSSING TIME</div>
+    <div class="pilares">
+      <span class="ng-pt">Geopolítica • Tecnologia • Sociedade</span>
+      <span class="ng-fr">Géopolitique • Technologie • Société</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <img src="https://images.unsplash.com/photo-1696258686263-9f42a5e34371?fm=jpg&q=80&w=2400&auto=format&fit=crop" alt="Boston Dynamics Spot robot — IA e regulação europeia" class="hero-img" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="bandeira-ue"></span>
+      <span class="ng-pt">União Europeia • Tecnologia</span>
+      <span class="ng-fr">Union Européenne • Technologie</span>
+      <span class="linha-dourada"></span>
+    </div>
+    <h1>
+      <span class="ng-pt">Quem controla a verdade<span class="destaque">na era da inteligência artificial?</span></span>
+      <span class="ng-fr">Qui contrôle la vérité<span class="destaque">à l'ère de l'intelligence artificielle ?</span></span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="ng-pt">A Europa ativa o AI Act, multa Meta e TikTok e tenta liderar a regulação global do espaço digital. O resto do mundo decide se acompanha ou resiste.</span>
+      <span class="ng-fr">L'Europe active l'AI Act, sanctionne Meta et TikTok et tente de mener la régulation mondiale de l'espace numérique. Le reste du monde décide s'il suit ou résiste.</span>
+    </p>
+    <div class="hero-meta">
+      <strong><span class="ng-pt">Análise editorial</span><span class="ng-fr">Analyse éditoriale</span></strong> • 
+      <span class="ng-pt">Tecnologia & Sociedade</span><span class="ng-fr">Technologie & Société</span> • 
+      <span class="ng-pt">12 de maio de 2026</span><span class="ng-fr">12 mai 2026</span>
+    </div>
+  </div>
+</header>
+
+<!-- ARTIGO -->
+<article>
+  <div class="container">
+
+    <p class="lead">
+      <span class="ng-pt">Em agosto de 2026, a União Europeia ligará oficialmente a regulação mais ambiciosa do mundo sobre inteligência artificial. As obrigações de transparência do AI Act entram em vigor, exigindo que todo conteúdo gerado por IA seja rotulado, que deepfakes sejam identificados e que plataformas digitais respondam pelo que circula em seus algoritmos. Não é uma reforma técnica. É uma tentativa de redesenhar quem detém autoridade sobre a informação no século XXI.</span>
+      <span class="ng-fr">En août 2026, l'Union européenne activera officiellement la régulation la plus ambitieuse au monde sur l'intelligence artificielle. Les obligations de transparence de l'AI Act entrent en vigueur, exigeant que tout contenu généré par IA soit étiqueté, que les deepfakes soient identifiés et que les plateformes numériques répondent de ce qui circule dans leurs algorithmes. Ce n'est pas une réforme technique. C'est une tentative de redessiner qui détient l'autorité sur l'information au XXIe siècle.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">I. O novo marco</span><span class="ng-fr">I. Le nouveau cadre</span></span>
+      <span class="ng-pt">A Europa decidiu não esperar pelo consenso global</span>
+      <span class="ng-fr">L'Europe a décidé de ne pas attendre le consensus mondial</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">O AI Act foi aprovado politicamente em 2023 e entra em sua fase mais sensível em <strong>2 de agosto de 2026</strong>, quando as obrigações de transparência previstas no artigo 50 do regulamento passam a vigorar. A partir dessa data, prestadores e operadores de sistemas geradores de conteúdo sintético, imagens, áudios, vídeos e textos, terão que marcar seus produtos em formato legível por máquina. Marcas d'água, metadados embutidos, métodos criptográficos de proveniência. Tudo o que for gerado por IA precisará ser declarável como tal.</span>
+      <span class="ng-fr">L'AI Act a été approuvé politiquement en 2023 et entre dans sa phase la plus sensible le <strong>2 août 2026</strong>, lorsque les obligations de transparence prévues à l'article 50 du règlement entrent en vigueur. À partir de cette date, les fournisseurs et opérateurs de systèmes générateurs de contenu synthétique — images, audios, vidéos et textes — devront marquer leurs produits dans un format lisible par machine. Filigranes, métadonnées intégrées, méthodes cryptographiques de provenance. Tout ce qui sera généré par IA devra être déclarable comme tel.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A medida é especialmente rigorosa para deepfakes. O regulamento define deepfake como qualquer conteúdo de imagem, áudio ou vídeo gerado ou manipulado por IA que se assemelhe a pessoas, objetos, lugares, entidades ou eventos reais e possa induzir alguém a acreditar erroneamente em sua autenticidade. A definição não exige intenção de enganar: alcança criações artísticas, satíricas e publicitárias. Quem operar esse tipo de sistema na União Europeia precisará revelar a artificialidade de forma clara, destacada e acessível ao usuário final.</span>
+      <span class="ng-fr">La mesure est particulièrement rigoureuse pour les deepfakes. Le règlement définit le deepfake comme tout contenu d'image, audio ou vidéo généré ou manipulé par IA qui ressemble à des personnes, objets, lieux, entités ou événements réels et peut induire quelqu'un à croire à tort en son authenticité. La définition n'exige pas d'intention de tromper : elle atteint les créations artistiques, satiriques et publicitaires. Ceux qui opèrent ce type de système dans l'Union européenne devront révéler l'artificialité de manière claire, distincte et accessible à l'utilisateur final.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O regime sancionatório é severo. Violações das proibições de risco inaceitável podem custar <strong>até €35 milhões ou 7% do faturamento global anual</strong>, o que for maior. Para obrigações de alto risco e modelos de IA de uso geral, o teto é €15 milhões ou 3% do faturamento. Informações falsas a autoridades, €7,5 milhões ou 1,5%. Em 7 de maio de 2026, semana passada, Conselho e Parlamento Europeu fecharam um acordo político adicional, conhecido como AI Omnibus, que simplifica parte da implementação e bane apps de "nudification", aplicativos que removem digitalmente roupas de imagens de pessoas reais.</span>
+      <span class="ng-fr">Le régime sanctionnaire est sévère. Les violations des interdictions de risque inacceptable peuvent coûter <strong>jusqu'à 35 millions d'euros ou 7 % du chiffre d'affaires mondial annuel</strong>, selon le montant le plus élevé. Pour les obligations à haut risque et les modèles d'IA à usage général, le plafond est de 15 millions d'euros ou 3 % du chiffre d'affaires. Informations fausses aux autorités : 7,5 millions ou 1,5 %. Le 7 mai 2026, la semaine dernière, le Conseil et le Parlement européen ont conclu un accord politique supplémentaire, connu sous le nom d'AI Omnibus, qui simplifie une partie de la mise en œuvre et bannit les applications de « nudification », des applications qui retirent numériquement les vêtements d'images de personnes réelles.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"A União Europeia decidiu que a verdade no espaço digital não pode mais ser uma escolha das plataformas. Tornou-se obrigação regulatória."</span>
+        <span class="ng-fr">« L'Union européenne a décidé que la vérité dans l'espace numérique ne peut plus être un choix des plateformes. Elle est devenue une obligation réglementaire. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">II. O cerco às plataformas</span><span class="ng-fr">II. L'étau autour des plateformes</span></span>
+      <span class="ng-pt">Meta e TikTok já estão no banco dos réus</span>
+      <span class="ng-fr">Meta et TikTok déjà sur le banc des accusés</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">O AI Act não opera sozinho. Funciona em camadas com o Digital Services Act (DSA), em vigor desde 2024, e com o Digital Markets Act (DMA), que regula práticas de concorrência das chamadas plataformas online muito grandes. Em outubro de 2025, a Comissão Europeia anunciou conclusão preliminar de que <strong>Meta e TikTok violaram regras de transparência do DSA</strong>, em particular por dificultarem o acesso de pesquisadores independentes a dados públicos das plataformas.</span>
+      <span class="ng-fr">L'AI Act n'opère pas seul. Il fonctionne en couches avec le Digital Services Act (DSA), en vigueur depuis 2024, et avec le Digital Markets Act (DMA), qui régule les pratiques de concurrence des plateformes en ligne très grandes. En octobre 2025, la Commission européenne a annoncé la conclusion préliminaire que <strong>Meta et TikTok ont violé les règles de transparence du DSA</strong>, notamment en compliquant l'accès des chercheurs indépendants aux données publiques des plateformes.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A Meta também foi acusada de manter o que a Comissão chama de padrões enganosos, interfaces que dificultam a denúncia de conteúdos ilegais e o recurso contra decisões de moderação. Caso a violação seja confirmada após resposta formal das empresas, as multas podem chegar a <strong>6% do faturamento global anual</strong>, o que, considerando o porte das companhias, representa cifras na casa dos bilhões de euros. Não é a primeira sanção do continente contra a Meta: em abril de 2025, a empresa foi multada em €200 milhões pelo DMA por falhas na forma como obtinha consentimento dos usuários para coleta de dados.</span>
+      <span class="ng-fr">Meta a également été accusée de maintenir ce que la Commission appelle des modèles trompeurs, des interfaces qui compliquent le signalement de contenus illégaux et le recours contre les décisions de modération. Si la violation est confirmée après la réponse formelle des entreprises, les amendes peuvent atteindre <strong>6 % du chiffre d'affaires mondial annuel</strong>, ce qui, compte tenu de la taille des entreprises, représente des chiffres de l'ordre du milliard d'euros. Ce n'est pas la première sanction du continent contre Meta : en avril 2025, l'entreprise a été condamnée à 200 millions d'euros par le DMA pour des défaillances dans la manière d'obtenir le consentement des utilisateurs pour la collecte de données.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O TikTok, por sua vez, já havia sido punido em maio de 2025 pela autoridade irlandesa de proteção de dados em <strong>€530 milhões</strong>, em razão de transferências indevidas de dados de usuários europeus para a China. As três frentes regulatórias, DSA, DMA e AI Act, formam um cerco coordenado: Bruxelas não trata mais as plataformas como simples intermediárias neutras. Trata-as como atores responsáveis pelo ambiente informacional que produzem.</span>
+      <span class="ng-fr">TikTok, à son tour, avait déjà été sanctionné en mai 2025 par l'autorité irlandaise de protection des données à hauteur de <strong>530 millions d'euros</strong>, en raison de transferts indus de données d'utilisateurs européens vers la Chine. Les trois fronts réglementaires — DSA, DMA et AI Act — forment un encerclement coordonné : Bruxelles ne traite plus les plateformes comme de simples intermédiaires neutres. Il les traite comme des acteurs responsables de l'environnement informationnel qu'ils produisent.</span>
+    </p>
+
+    <div class="dados-grid">
+      <div class="dado-card">
+        <div class="dado-label">AI Act</div>
+        <div class="dado-numero">7%</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Teto da multa sobre faturamento global anual para violações de risco inaceitável. Até €35 milhões.</span>
+          <span class="ng-fr">Plafond d'amende sur le chiffre d'affaires mondial annuel pour violations de risque inacceptable. Jusqu'à 35 M€.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label">DSA</div>
+        <div class="dado-numero">6%</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Teto de multa do Digital Services Act, aplicável a Meta e TikTok em investigação preliminar.</span>
+          <span class="ng-fr">Plafond d'amende du Digital Services Act, applicable à Meta et TikTok en enquête préliminaire.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label">TikTok</div>
+        <div class="dado-numero">€530M</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Multa aplicada pela autoridade irlandesa de proteção de dados em maio de 2025 por transferência ilegal de dados.</span>
+          <span class="ng-fr">Amende infligée par l'autorité irlandaise de protection des données en mai 2025 pour transfert illégal de données.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label">Meta</div>
+        <div class="dado-numero">€200M</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Multa pelo DMA em abril de 2025 por falhas no consentimento de usuários para coleta de dados.</span>
+          <span class="ng-fr">Amende par le DMA en avril 2025 pour défaillances dans le consentement des utilisateurs à la collecte de données.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">III. A cronologia</span><span class="ng-fr">III. La chronologie</span></span>
+      <span class="ng-pt">Como a Europa chegou até aqui</span>
+      <span class="ng-fr">Comment l'Europe est arrivée jusqu'ici</span>
+    </h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-data">2018</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">O <strong>GDPR</strong> entra em vigor e impõe multas de até 4% do faturamento por violações à proteção de dados. Primeira grande lei europeia a aplicar sanções proporcionais à receita global das empresas.</span>
+          <span class="ng-fr">Le <strong>RGPD</strong> entre en vigueur et impose des amendes pouvant atteindre 4 % du chiffre d'affaires pour violations de la protection des données. Première grande loi européenne à appliquer des sanctions proportionnelles aux revenus mondiaux des entreprises.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Fev / 2024</span><span class="ng-fr">Fév / 2024</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">O <strong>Digital Services Act</strong> começa a valer plenamente. Estabelece responsabilidade das plataformas online muito grandes pela moderação de conteúdo, transparência algorítmica e proteção de menores.</span>
+          <span class="ng-fr">Le <strong>Digital Services Act</strong> entre pleinement en vigueur. Il établit la responsabilité des très grandes plateformes en ligne pour la modération de contenu, la transparence algorithmique et la protection des mineurs.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Mai / 2025</span><span class="ng-fr">Mai / 2025</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Autoridade irlandesa de proteção de dados multa o <strong>TikTok em €530 milhões</strong> por transferências indevidas de dados de usuários europeus para a China.</span>
+          <span class="ng-fr">L'autorité irlandaise de protection des données condamne <strong>TikTok à 530 millions d'euros</strong> pour transferts indus de données d'utilisateurs européens vers la Chine.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Out / 2025</span><span class="ng-fr">Oct / 2025</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Comissão Europeia conclui investigação preliminar e acusa <strong>Meta e TikTok de violar o DSA</strong>. Empresas podem ser multadas em até 6% do faturamento global.</span>
+          <span class="ng-fr">La Commission européenne conclut son enquête préliminaire et accuse <strong>Meta et TikTok de violer le DSA</strong>. Les entreprises peuvent être condamnées à des amendes pouvant atteindre 6 % du chiffre d'affaires mondial.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Mai / 2026</span><span class="ng-fr">Mai / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Acordo político sobre o <strong>AI Omnibus</strong> simplifica implementação do AI Act e proíbe expressamente aplicativos de geração de conteúdo sexual não consentido.</span>
+          <span class="ng-fr">Accord politique sur l'<strong>AI Omnibus</strong> qui simplifie la mise en œuvre de l'AI Act et interdit expressément les applications de génération de contenu sexuel non consenti.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Ago / 2026</span><span class="ng-fr">Aoû / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Entram em vigor as <strong>obrigações de transparência do AI Act</strong>. Conteúdo gerado por IA deve ser rotulado em formato legível por máquina. Deepfakes precisam ser claramente identificados.</span>
+          <span class="ng-fr">Entrent en vigueur les <strong>obligations de transparence de l'AI Act</strong>. Le contenu généré par IA doit être étiqueté dans un format lisible par machine. Les deepfakes doivent être clairement identifiés.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">Dez / 2027</span><span class="ng-fr">Déc / 2027</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Entram em vigor as regras para sistemas de IA de <strong>alto risco</strong> em áreas como biometria, infraestrutura crítica, educação, emprego, migração, asilo e controle de fronteiras.</span>
+          <span class="ng-fr">Entrent en vigueur les règles pour les systèmes d'IA à <strong>haut risque</strong> dans des domaines comme la biométrie, les infrastructures critiques, l'éducation, l'emploi, la migration, l'asile et le contrôle des frontières.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">IV. A tensão</span><span class="ng-fr">IV. La tension</span></span>
+      <span class="ng-pt">Liberdade digital ou controle estatal: o falso dilema</span>
+      <span class="ng-fr">Liberté numérique ou contrôle étatique : le faux dilemme</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">Críticos do modelo europeu acusam a regulação de produzir censura disfarçada de transparência. Argumentam que rotulagem obrigatória, supervisão algorítmica e multas bilionárias podem inibir a inovação, sufocar startups e concentrar ainda mais o mercado nas mãos das empresas capazes de arcar com custos de conformidade. A acusação tem peso, e Meta e TikTok já levaram à Justiça europeia, em Luxemburgo, contestação à taxa de supervisão do DSA, fixada em 0,05% da receita líquida global. Decisão prevista para o primeiro semestre de 2026.</span>
+      <span class="ng-fr">Les critiques du modèle européen accusent la régulation de produire de la censure déguisée en transparence. Ils soutiennent que l'étiquetage obligatoire, la supervision algorithmique et les amendes milliardaires peuvent inhiber l'innovation, étouffer les startups et concentrer encore davantage le marché aux mains des entreprises capables d'assumer les coûts de conformité. L'accusation a du poids, et Meta et TikTok ont déjà saisi la Justice européenne, à Luxembourg, pour contester la taxe de supervision du DSA, fixée à 0,05 % du revenu net mondial. Décision attendue pour le premier semestre 2026.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Há, porém, um equívoco recorrente nessa leitura. A oposição entre "liberdade digital" e "controle estatal" assume que existe uma terceira opção, um espaço informacional verdadeiramente livre. Esse espaço nunca existiu. As plataformas sempre exerceram poder editorial implícito, através de algoritmos de recomendação, políticas de moderação opacas e decisões comerciais sobre o que ganha visibilidade. O AI Act e o DSA não inauguram o controle. Tornam o controle explícito, auditável e sujeito a responsabilização democrática.</span>
+      <span class="ng-fr">Il y a cependant une erreur récurrente dans cette lecture. L'opposition entre « liberté numérique » et « contrôle étatique » suppose qu'il existe une troisième option, un espace informationnel véritablement libre. Cet espace n'a jamais existé. Les plateformes ont toujours exercé un pouvoir éditorial implicite, à travers des algorithmes de recommandation, des politiques de modération opaques et des décisions commerciales sur ce qui gagne en visibilité. L'AI Act et le DSA n'inaugurent pas le contrôle. Ils rendent le contrôle explicite, auditable et soumis à la responsabilité démocratique.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Para usuários europeus, os efeitos práticos já são visíveis. Feeds cronológicos voltaram a ser oferecidos em Instagram, Facebook e TikTok como alternativa aos feeds algorítmicos. Anúncios baseados em dados sensíveis, origem étnica, posicionamento político ou orientação sexual, foram proibidos. Conteúdos gerados por IA começam a aparecer rotulados. A camada de transparência mudou. Resta saber se mudará também a camada de poder.</span>
+      <span class="ng-fr">Pour les utilisateurs européens, les effets pratiques sont déjà visibles. Les flux chronologiques sont de nouveau proposés sur Instagram, Facebook et TikTok comme alternative aux flux algorithmiques. Les publicités basées sur des données sensibles — origine ethnique, positionnement politique ou orientation sexuelle — ont été interdites. Les contenus générés par IA commencent à apparaître étiquetés. La couche de transparence a changé. Il reste à savoir si la couche de pouvoir changera aussi.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"Algoritmos não são neutros. Nunca foram. A diferença, agora, é que a Europa decidiu que isso precisa ser dito em voz alta."</span>
+        <span class="ng-fr">« Les algorithmes ne sont pas neutres. Ils ne l'ont jamais été. La différence, maintenant, est que l'Europe a décidé que cela doit être dit à voix haute. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">V. O posicionamento</span><span class="ng-fr">V. Le positionnement</span></span>
+      <span class="ng-pt">Não é só uma questão europeia</span>
+      <span class="ng-fr">Ce n'est pas qu'une question européenne</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A regulação europeia é, na prática, um experimento geopolítico. Bruxelas tenta replicar o efeito que o GDPR teve sobre proteção de dados desde 2018: estabelecer um padrão tão rigoroso que multinacionais prefiram aplicá-lo globalmente, em vez de manter sistemas paralelos para mercados diferentes. Esse fenômeno foi batizado pelos juristas como "efeito Bruxelas". Se funcionar com o AI Act, os requisitos europeus de transparência sobre conteúdo sintético podem se tornar, por inércia industrial, o padrão global de fato.</span>
+      <span class="ng-fr">La régulation européenne est, dans les faits, une expérience géopolitique. Bruxelles tente de répliquer l'effet que le RGPD a eu sur la protection des données depuis 2018 : établir une norme si rigoureuse que les multinationales préfèrent l'appliquer mondialement, plutôt que de maintenir des systèmes parallèles pour différents marchés. Ce phénomène a été baptisé par les juristes « effet Bruxelles ». S'il fonctionne avec l'AI Act, les exigences européennes de transparence sur le contenu synthétique peuvent devenir, par inertie industrielle, le standard mondial de facto.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Os Estados Unidos seguem caminho oposto. Sem legislação federal abrangente sobre IA, os americanos delegam regulação a Estados (Califórnia, Colorado, Texas) e a iniciativas voluntárias do setor. A China construiu um modelo próprio, mais centralizado, com obrigações de marca d'água em conteúdo sintético desde 2023, mas com objetivo declarado de controle político. O Brasil tramita o PL 2338/2023, conhecido como Marco Legal da IA, com abordagem similar à europeia mas adaptada à realidade local. Cada bloco define, em sua própria velocidade, qual versão de futuro digital pretende defender.</span>
+      <span class="ng-fr">Les États-Unis suivent le chemin opposé. Sans législation fédérale globale sur l'IA, les Américains délèguent la régulation aux États (Californie, Colorado, Texas) et aux initiatives volontaires du secteur. La Chine a construit son propre modèle, plus centralisé, avec des obligations de filigrane sur le contenu synthétique depuis 2023, mais avec un objectif déclaré de contrôle politique. Le Brésil examine le PL 2338/2023, connu sous le nom de Cadre Légal de l'IA, avec une approche similaire à l'européenne mais adaptée à la réalité locale. Chaque bloc définit, à sa propre vitesse, quelle version d'avenir numérique il entend défendre.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Para quem produz conteúdo, opera negócios digitais, faz publicidade online, ou simplesmente usa redes sociais a partir da Europa, as mudanças não são abstratas. Conteúdos publicados, alcance de postagens, regras para criadores, ferramentas de IA generativa, tudo passa a operar sob nova arquitetura jurídica. Influenciadores precisarão declarar uso de IA em campanhas. Empresas que integrem chatbots em sites comerciais precisarão informar que o usuário está conversando com sistema automatizado. Plataformas que falharem em remover deepfakes não rotulados após notificação compartilharão responsabilidade civil pelos danos.</span>
+      <span class="ng-fr">Pour ceux qui produisent du contenu, opèrent des entreprises numériques, font de la publicité en ligne, ou utilisent simplement les réseaux sociaux depuis l'Europe, les changements ne sont pas abstraits. Contenus publiés, portée des publications, règles pour les créateurs, outils d'IA générative — tout passe à opérer sous une nouvelle architecture juridique. Les influenceurs devront déclarer l'usage d'IA dans les campagnes. Les entreprises qui intègrent des chatbots dans des sites commerciaux devront informer que l'utilisateur converse avec un système automatisé. Les plateformes qui n'arrivent pas à retirer les deepfakes non étiquetés après notification partageront la responsabilité civile des dommages.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A pergunta editorial que abre esta matéria, quem controla a verdade na era da inteligência artificial, não terá resposta simples. A Europa apostou em uma resposta: a verdade não é controlada, é declarada, identificada, marcada, auditada. O conteúdo continua livre para existir. Mas precisa anunciar o que é. Quem operar no espaço digital europeu a partir de agosto de 2026 não terá mais a opção de fingir que algoritmos são neutros, que vídeos são autênticos, que perfis representam pessoas reais. A travessia para essa nova economia da atenção começou. E, como sempre, a Europa decidiu liderá-la legislando.</span>
+      <span class="ng-fr">La question éditoriale qui ouvre cet article — qui contrôle la vérité à l'ère de l'intelligence artificielle — n'aura pas de réponse simple. L'Europe a parié sur une réponse : la vérité n'est pas contrôlée, elle est déclarée, identifiée, marquée, auditée. Le contenu reste libre d'exister. Mais il doit annoncer ce qu'il est. Ceux qui opéreront dans l'espace numérique européen à partir d'août 2026 n'auront plus l'option de prétendre que les algorithmes sont neutres, que les vidéos sont authentiques, que les profils représentent des personnes réelles. La traversée vers cette nouvelle économie de l'attention a commencé. Et, comme toujours, l'Europe a décidé de la mener en légiférant.</span>
+    </p>
+
+    <div class="article-footer">
+      <div class="marca">THE CROSSING TIME</div>
+      <div class="sub">
+        <span class="ng-pt">Plataforma editorial internacional</span>
+        <span class="ng-fr">Plateforme éditoriale internationale</span>
+      </div>
+      <div class="pilares">
+        <span class="ng-pt">MOBILIDADE • PODER • TRANSFORMAÇÃO</span>
+        <span class="ng-fr">MOBILITÉ • POUVOIR • TRANSFORMATION</span>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>

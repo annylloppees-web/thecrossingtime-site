@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- THE CROSSING TIME — Edição #31 — Calor e o retorno do banho no Sena -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calor leva parisienses à água: o retorno do banho no Sena — The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#071a3d;--navy-2:#0c2452;--gold:#B8924A;--gold-light:#c7a45a;--offwhite:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a;--serif:'Lora',Georgia,serif;--sans:'Poppins',system-ui,sans-serif;--maxw:760px;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--serif);color:var(--ink);background:var(--offwhite);line-height:1.75;font-size:18px;-webkit-font-smoothing:antialiased;}
+  .topbar{background:var(--navy);color:var(--offwhite);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);}
+  .topbar .brand{font-family:var(--sans);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:14px;}
+  .topbar .brand span{color:var(--gold-light);}
+  .topbar .pillars{font-family:var(--sans);font-weight:300;font-size:10px;letter-spacing:.22em;color:var(--gold-light);text-transform:uppercase;}
+  .hero-typo{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:var(--offwhite);padding:88px 24px 78px;text-align:center;position:relative;overflow:hidden;}
+  .hero-typo::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 120%,rgba(184,146,74,.16),transparent 60%);pointer-events:none;}
+  .hero-typo .kicker{font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-light);margin-bottom:24px;display:block;position:relative;z-index:1;}
+  .hero-typo h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5.6vw,48px);line-height:1.16;max-width:820px;margin:0 auto;position:relative;z-index:1;}
+  .hero-typo .dek{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(17px,2.4vw,21px);color:#cdd6e6;max-width:640px;margin:22px auto 0;position:relative;z-index:1;}
+  .article{max-width:var(--maxw);margin:0 auto;padding:48px 24px 0;}
+  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.03em;color:#6b6b6b;margin-bottom:14px;line-height:1.5;}
+  .byline strong{color:var(--navy);font-weight:600;}
+  .meta{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#6b6b6b;border-bottom:1px solid #d8d2c4;padding-bottom:18px;margin-bottom:36px;display:flex;gap:18px;flex-wrap:wrap;}
+  .meta strong{color:var(--navy);font-weight:600;}
+  .lead{font-size:20px;line-height:1.7;margin-bottom:34px;}
+  .lead::first-letter{font-family:var(--serif);font-weight:600;font-size:68px;line-height:.8;float:left;margin:6px 12px 0 0;color:var(--gold);}
+  p{margin-bottom:22px;}
+  .dateline{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.06em;color:var(--navy);text-transform:uppercase;}
+  .section-head{margin:48px 0 22px;}
+  .section-head .num{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.2em;color:var(--gold);display:block;margin-bottom:6px;}
+  .section-head h2{font-family:var(--serif);font-weight:600;font-size:clamp(23px,3.4vw,30px);line-height:1.25;color:var(--navy);}
+  .inst-box{background:#fff;border:1px solid #e5dfd0;border-left:4px solid var(--navy);padding:26px 28px;margin:36px 0;border-radius:3px;}
+  .inst-box.warn{border-left-color:var(--wine);}
+  .inst-box h3{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);margin-bottom:12px;}
+  .inst-box.warn h3{color:var(--wine);}
+  .inst-box ul{margin:0;padding-left:20px;}
+  .inst-box li{margin-bottom:8px;font-size:16px;}
+  .data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:36px 0;}
+  .data-card{background:#fff;border:1px solid #e5dfd0;border-top:3px solid var(--gold);padding:24px 20px;border-radius:3px;}
+  .data-card .figure{font-family:var(--sans);font-weight:700;font-size:26px;color:var(--navy);line-height:1.1;}
+  .data-card .label{font-family:var(--sans);font-size:12px;letter-spacing:.04em;color:#6b6b6b;text-transform:uppercase;margin-top:8px;display:block;}
+  .editorial-note{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.7;color:#4a4a4a;border-top:1px solid #d8d2c4;border-bottom:1px solid #d8d2c4;padding:26px 0;margin:44px 0;}
+  .editorial-note strong{font-style:normal;color:var(--navy);}
+  .img-disclaimer{font-family:var(--sans);font-size:12px;line-height:1.6;color:#7a7a7a;background:#efe9db;border-radius:3px;padding:18px 22px;margin:40px 0 0;}
+  .img-disclaimer .fr{display:block;margin-top:8px;color:#8a8a8a;font-style:italic;}
+  .article-footer{text-align:center;margin:56px auto 0;max-width:var(--maxw);padding:40px 24px;border-top:2px solid var(--gold);}
+  .article-footer .mark{font-family:var(--sans);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:15px;color:var(--navy);}
+  .article-footer .pillars{font-family:var(--sans);font-weight:300;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-top:14px;}
+  .site-footer{background:var(--navy);color:#aeb8cc;text-align:center;padding:34px 24px;margin-top:48px;font-family:var(--sans);font-size:13px;line-height:1.8;}
+  .site-footer .brand{color:var(--offwhite);font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
+  .site-footer a{color:var(--gold-light);text-decoration:none;}
+</style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">THE CROSSING TIME <span>· Porta Voz do Imigrante</span></div>
+    <div class="pillars">Mobilidade · Pouvoir · Transformation</div>
+  </header>
+
+  <section class="hero-typo">
+    <span class="kicker">Paris · Canícula · Sociedade</span>
+    <h1>O calor leva Paris à água — e o Sena reaprende a ser banho</h1>
+    <p class="dek">Com a capital em alerta vermelho, parisienses buscam onde se refrescar. O Sena volta a ser nadável após décadas, mas há uma ressalva importante: data e lugar certos.</p>
+  </section>
+
+  <main class="article">
+
+    <div class="byline">Por <strong>Carlos Guilherme Cordovil da Silva</strong> — Jornalista e Chefe de Cobertura Oficial da The Crossing Time no Brasil</div>
+
+    <div class="meta">
+      <span><strong>The Crossing Time</strong></span>
+      <span>Paris</span>
+      <span>26 de junho de 2026</span>
+      <span>Edição #31</span>
+    </div>
+
+    <p class="lead"><span class="dateline">Paris —</span> A canícula que atinge a França transformou a rotina da capital. Com a região em alerta vermelho e termômetros que beiraram os 41°C — um dos dias mais quentes já registrados no país —, moradores e turistas procuram qualquer ponto de frescor. E um cenário emblemático voltou ao centro das atenções: o Rio Sena, que, depois de mais de um século de proibição, reaprende a ser um lugar de banho. Mas há uma ressalva essencial — e é sobre data e lugar.</p>
+
+    <div class="section-head"><span class="num">I</span><h2>O Sena renasce, como legado dos Jogos</h2></div>
+
+    <p>Durante boa parte do século XX, nadar no Sena era impensável: a poluição levou as autoridades a proibirem o banho por razões sanitárias. Isso começou a mudar com o "plano Baignade", lançado em 2016, que mobilizou cerca de <strong>1,3 bilhão de euros</strong> em melhorias da rede de esgoto, conexão de portos e barcos ao saneamento e obras de armazenamento de água da chuva — esforço acelerado pelos Jogos Olímpicos de Paris 2024. Em 2025, na primeira temporada, os três pontos parisienses funcionaram em cerca de dois terços dos dias de julho e agosto e receberam quase 100 mil banhistas, sob monitoramento da qualidade da água pela agência regional de saúde, sem alerta sanitário.</p>
+
+    <p>Para 2026, são oito locais de banho permanentes na Grande Paris, três deles no Sena: o Bras de Grenelle (15º), o Bras Marie — agora junto à Pont Louis-Philippe (4º) — e Bercy (12º). A novidade: esses três pontos do Sena <strong>abrem em 4 de julho e vão até o fim de agosto</strong>, gratuitamente. Ou seja, em plena onda de calor de junho, eles ainda não estão abertos.</p>
+
+    <div class="section-head"><span class="num">II</span><h2>O que está aberto agora, durante o calor</h2></div>
+
+    <p>A resposta imediata da cidade ao calor veio por outro caminho. Desde 17 de junho, a Prefeitura abriu uma zona de banho vigiada no <strong>Canal Saint-Martin</strong> (bassin des Récollets, 10º arrondissement), com nadadores-salvadores, para funcionar durante os episódios de forte calor do verão. A medida foi anunciada após a circulação de imagens de jovens se atirando no canal — e sendo afastados pela polícia — durante o calor de maio. É, por ora, a opção supervisionada e gratuita para quem quer se refrescar na água, enquanto os sites do Sena não abrem.</p>
+
+    <div class="section-head"><span class="num">III</span><h2>Atenção: fora das zonas autorizadas, o risco é real</h2></div>
+
+    <p>As imagens de gente se refrescando no rio são tentadoras, mas as autoridades são taxativas: <strong>o banho em meio natural continua proibido fora dos locais autorizados e dos horários de vigilância</strong>. Na Seine e nos canais, a "baignade sauvage" envolve risco sério de afogamento — correnteza forte, fundo enlameado com plantas que prendem, tráfego fluvial intenso e risco de hidrocussão. A Préfecture de Police e as autoridades locais reforçam a fiscalização. Como resumem os serviços públicos: por alguns minutos de frescor, banhistas colocam a própria vida em risco.</p>
+
+    <div class="inst-box warn">
+      <h3>No calor extremo, refresque-se com segurança</h3>
+      <ul>
+        <li>Use apenas locais oficiais e vigiados (no momento, o Canal Saint-Martin; os sites do Sena abrem em 4 de julho).</li>
+        <li>Nunca entre no Sena ou em canais fora das zonas e horários autorizados.</li>
+        <li>Hidrate-se com frequência e evite o sol forte entre 11h e 17h.</li>
+        <li>Use protetor solar e roupas leves; procure locais climatizados.</li>
+        <li>Acompanhe idosos, crianças e pessoas vulneráveis — e nunca deixe crianças sozinhas perto da água.</li>
+      </ul>
+    </div>
+
+    <div class="data-grid">
+      <div class="data-card"><span class="figure">4 jul</span><span class="label">Abertura dos sites do Sena (2026)</span></div>
+      <div class="data-card"><span class="figure">~€1,3 bi</span><span class="label">Plano Baignade desde 2016</span></div>
+      <div class="data-card"><span class="figure">~100 mil</span><span class="label">Banhistas na temporada 2025</span></div>
+      <div class="data-card"><span class="figure">Vermelho</span><span class="label">Alerta de canícula em Paris</span></div>
+    </div>
+
+    <div class="section-head"><span class="num">IV</span><h2>Um símbolo de adaptação ao clima</h2></div>
+
+    <p>Mais do que um cartão-postal, o retorno do banho ao Sena é apresentado como resposta às mudanças climáticas: com eventos de calor cada vez mais frequentes, Paris ampliou piscinas públicas, pontos de hidratação, áreas de resfriamento e espaços verdes, e abriu os rios e canais à população — sempre sob vigilância sanitária. O rio que atravessa a história da cidade volta a ser, nos próximos verões, um espaço de convivência e qualidade de vida. A condição para que isso dê certo é simples: paciência até a abertura e respeito às zonas autorizadas.</p>
+
+    <p class="editorial-note"><strong>Nota editorial.</strong> Informações atribuídas à Ville de Paris (plano Baignade), à Préfecture de Police, à VNF e à Météo-France. Datas e aberturas dependem da qualidade da água e das condições de segurança, podendo mudar; confira sempre os canais oficiais antes de ir. Esta matéria evita estimular o banho fora das áreas autorizadas, por se tratar de risco real à vida.</p>
+
+    <p class="img-disclaimer">
+      Esta edição usa arte tipográfica original, sem fotografias de terceiros; optou-se por não ilustrar com imagens de banho para não sugerir a prática fora das zonas autorizadas.
+      <span class="fr">Cette édition utilise une création typographique originale, sans photographies de tiers ; nous avons choisi de ne pas illustrer par des images de baignade afin de ne pas suggérer la pratique hors des zones autorisées.</span>
+    </p>
+
+  </main>
+
+  <div class="article-footer">
+    <div class="mark">The Crossing Time, by Porta Voz do Imigrante</div>
+    <div class="pillars">Mobilidade • Pouvoir • Transformation</div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="brand">The Crossing Time</div>
+    <div>Plateforme éditoriale internationale</div>
+    <div><a href="https://thecrossingtime.com">thecrossingtime.com</a> · WhatsApp +33 6 69 99 72 96</div>
+  </footer>
+
+</body>
+</html>

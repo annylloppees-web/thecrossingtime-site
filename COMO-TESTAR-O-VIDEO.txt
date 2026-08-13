@@ -1,0 +1,43 @@
+PORQUE E QUE VIA SO A IMAGEM FIXA
+==================================
+
+DUAS CAUSAS. UMA MINHA, OUTRA DO WINDOWS.
+
+1. A MINHA (corrigida nesta versao)
+-----------------------------------
+Eu tinha posto preload="metadata" e mandava o video tocar quando o
+navegador avisasse que ja tinha o primeiro fotograma. Com "metadata"
+o navegador carrega so a ficha tecnica e nunca da esse aviso.
+Ficava a espera de um sinal que nunca chegava.
+
+Corrigido: preload="auto", autoplay, e quatro gatilhos diferentes —
+o primeiro que chegar serve. Se ao fim de 6 segundos ainda nao
+houver imagem, desiste e fica o cartaz, sem insistir.
+
+2. A DO WINDOWS (e provavelmente o que aconteceu)
+-------------------------------------------------
+O endereco que aparecia no seu ecra era:
+  C:\Users\Lopes\AppData\Local\Temp\...zip.719\index.html
+
+Isso e uma pasta TEMPORARIA. Quando se faz duplo clique num
+ficheiro DENTRO do ZIP, o Windows extrai SO ESSE FICHEIRO para o
+Temp. O tct-hero.mp4 ficou dentro do zip. O index foi procurar um
+video que, naquela pasta, nao existia.
+
+COMO TESTAR EM CONDICOES
+------------------------
+1. Clicar com o botao direito no ZIP -> "Extrair tudo..."
+2. Escolher uma pasta normal (o Ambiente de trabalho serve)
+3. Abrir o index.html DE DENTRO DESSA PASTA
+4. Confirmar que o tct-hero.mp4 esta na MESMA pasta que o index.html
+
+Se estiverem os dois lado a lado e o video correr, esta certo.
+
+NO SITE PUBLICADO
+-----------------
+Vale a mesma regra: o tct-hero.mp4 vai para a RAIZ, ao lado do
+index.html. Depois de publicar, confirme abrindo:
+  thecrossingtime.com/tct-hero.mp4
+Se o video abrir nesse endereco, esta no sitio certo.
+Se der erro 404, nao subiu — e ai fica o cartaz, que e a rede de
+seguranca, e o site nao quebra.

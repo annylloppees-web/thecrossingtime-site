@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MV Hondius · Hantavírus · The Crossing Time</title>
+<meta name="description" content="Franceses do cruzeiro MV Hondius isolados em Paris após surto de hantavírus dos Andes. Análise editorial TCT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F5F1E8;--bg-soft:#EDE7D9;--bg-dark:#0A1628;
+  --primary:#0A1628;--gold:#B8924A;--gold-light:#D4B57E;
+  --red-alert:#C73E3A;--text:#1a1a1a;--muted:#666;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',-apple-system,sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  background:var(--bg);color:var(--primary);font-family:var(--sans);
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+
+/* ─── BILINGUE PROTECTION ─── */
+[lang-mode="pt"] .ng-fr{display:none !important;}
+[lang-mode="fr"] .ng-pt{display:none !important;}
+
+/* ─── LANG BAR ─── */
+.lang-bar{position:fixed;top:1rem;right:1rem;z-index:100;display:flex;gap:6px;background:rgba(14,26,43,.92);padding:6px 8px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.2);backdrop-filter:blur(8px);}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);padding:5px 11px;font-size:10px;letter-spacing:.1em;font-family:sans-serif;cursor:pointer;border-radius:3px;transition:all .2s;font-weight:500;}
+.lang-btn:hover{color:#fff;}
+.lang-btn.active{background:rgba(198,161,91,.2);border-color:#C6A15B;color:#C6A15B;font-weight:600;}
+
+/* ─── ART BACK ─── */
+.art-back{position:fixed;top:1rem;left:1rem;z-index:100;background:rgba(14,26,43,.9);backdrop-filter:blur(8px);color:#F4F2ED;border:none;border-radius:999px;padding:8px 16px 8px 12px;font-family:sans-serif;font-size:11px;letter-spacing:.1em;cursor:pointer;display:flex;align-items:center;gap:6px;box-shadow:0 2px 12px rgba(0,0,0,.2);transition:all .2s;font-weight:600;text-transform:uppercase;text-decoration:none;}
+.art-back svg{width:14px;height:14px;stroke:#C6A15B;stroke-width:2.5;fill:none;}
+.art-back:hover{background:#0E1A2B;transform:translateX(-2px);}
+
+/* ─── ALERT BAR (vermelho topo) ─── */
+.alert-bar{height:6px;width:100%;background:var(--red-alert);}
+
+/* ─── HERO ─── */
+.hero{position:relative;background:linear-gradient(135deg,#0A1628 0%,#1a2e4a 50%,#0A1628 100%);color:#F5F1E8;padding:5rem 1.5rem 4rem;overflow:hidden;}
+.hero::before,.hero::after{content:"";position:absolute;border:1px solid rgba(184,146,74,.1);border-radius:50%;pointer-events:none;}
+.hero::before{top:-150px;right:-150px;width:500px;height:500px;}
+.hero::after{bottom:-200px;left:-200px;width:600px;height:600px;border-color:rgba(199,62,58,.1);}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--red-alert);font-weight:600;margin-bottom:1.75rem;padding:.5rem 1rem;background:rgba(199,62,58,.1);border:1px solid rgba(199,62,58,.3);border-radius:999px;}
+.hero-eyebrow::before{content:"";width:8px;height:8px;background:var(--red-alert);border-radius:50%;animation:pulse-red 2s ease-in-out 4;}
+@keyframes pulse-red{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+.hero h1{font-family:var(--serif);font-size:clamp(2.2rem,5vw,4rem);font-weight:300;line-height:1.1;margin-bottom:1.5rem;}
+.hero h1 em{color:var(--gold);font-style:italic;}
+.hero h1 .red-word{color:var(--red-alert);font-style:italic;}
+.lead{font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.6;color:rgba(245,241,232,.85);font-style:italic;font-family:var(--serif);max-width:780px;margin-bottom:2rem;}
+.byline{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(184,146,74,.2);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:rgba(245,241,232,.6);font-weight:500;}
+.byline span{display:flex;align-items:center;gap:.4rem;}
+.byline span::before{content:"";width:4px;height:4px;background:var(--gold);border-radius:50%;display:inline-block;}
+
+/* ─── ARTICLE BODY ─── */
+.article{max-width:760px;margin:0 auto;padding:4rem 1.5rem 5rem;}
+.article h2{font-family:var(--serif);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:400;line-height:1.2;margin:3rem 0 1.25rem;color:var(--primary);}
+.article h2 em{color:var(--gold);font-style:italic;}
+.article p{font-family:var(--serif);font-size:1.15rem;line-height:1.75;color:#333;margin-bottom:1.4rem;}
+.article p.dropcap::first-letter{font-size:4.5rem;float:left;line-height:.85;padding-right:.5rem;font-weight:500;color:var(--gold);font-family:var(--serif);}
+
+/* Separadores */
+.tct-sep{display:flex;align-items:center;justify-content:center;margin:3rem 0;gap:1rem;}
+.tct-sep-line{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(184,146,74,.4),transparent);max-width:120px;}
+.tct-sep-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);}
+
+/* SVG Cover */
+.svg-cover{margin:2rem 0;border-radius:6px;overflow:hidden;box-shadow:0 6px 24px rgba(10,22,40,.15);}
+.svg-cover svg{display:block;width:100%;height:auto;}
+.photo-caption{font-size:.85rem;color:var(--muted);font-style:italic;text-align:center;margin-top:.75rem;padding:0 1rem;font-family:var(--sans);letter-spacing:.02em;}
+.photo-caption strong{display:block;color:var(--primary);font-style:normal;font-weight:600;font-family:var(--sans);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.25rem;}
+
+/* Callouts */
+.callout{margin:2.5rem 0;padding:1.75rem 2rem;background:#fff;border-left:3px solid var(--red-alert);border-radius:4px;box-shadow:0 4px 16px rgba(10,22,40,.06);}
+.callout-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--red-alert);font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;}
+.callout-label::before{content:"";width:6px;height:6px;background:var(--red-alert);border-radius:50%;}
+.callout-text{font-family:var(--serif);font-size:1.1rem;line-height:1.65;color:var(--primary);font-style:italic;}
+
+/* Big number */
+.big-number{margin:2.5rem 0;padding:2.5rem 2rem;background:linear-gradient(135deg,#0A1628 0%,#1a2e4a 100%);color:#F5F1E8;border-radius:6px;text-align:center;position:relative;overflow:hidden;}
+.big-number::before{content:"";position:absolute;top:-40px;right:-40px;width:150px;height:150px;border:1px solid rgba(184,146,74,.15);border-radius:50%;}
+.big-number-label{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:1rem;position:relative;z-index:1;}
+.big-number-value{font-family:var(--serif);font-size:clamp(3rem,8vw,5rem);font-weight:300;line-height:1;color:#fff;margin-bottom:.75rem;position:relative;z-index:1;}
+.big-number-value em{color:var(--gold);font-style:italic;}
+.big-number-text{font-family:var(--serif);font-size:1rem;font-style:italic;color:rgba(245,241,232,.85);line-height:1.5;max-width:480px;margin:0 auto;position:relative;z-index:1;}
+
+/* List */
+.tct-list{margin:1.5rem 0;padding-left:0;list-style:none;}
+.tct-list li{font-family:var(--serif);font-size:1.1rem;line-height:1.6;color:#333;margin-bottom:.85rem;padding-left:1.75rem;position:relative;}
+.tct-list li::before{content:"";position:absolute;left:0;top:.7em;width:14px;height:1px;background:var(--gold);}
+
+/* Pull quote */
+.pull-quote{margin:3rem 0;padding:2rem 1.5rem;text-align:center;border-top:1px solid rgba(184,146,74,.2);border-bottom:1px solid rgba(184,146,74,.2);}
+.pull-quote-text{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--primary);}
+.pull-quote-text em{color:var(--gold);}
+
+/* Meta footer */
+.article-meta{margin-top:4rem;padding:2rem 0;border-top:1px solid rgba(184,146,74,.15);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-family:var(--sans);font-weight:500;}
+
+@media (max-width:640px){
+  .hero{padding:3.5rem 1rem 3rem;}
+  .article{padding:2.5rem 1rem 3rem;}
+  body{font-size:16px;}
+}
+</style>
+
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="alert-bar"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="ng-pt">Alerta sanitário · Europa</span><span class="ng-fr">Alerte sanitaire · Europe</span>
+    </div>
+    <h1>
+      <span class="ng-pt">Franceses do cruzeiro <em>MV Hondius</em> chegam a Paris sob <span class="red-word">isolamento rigoroso</span></span>
+      <span class="ng-fr">Les Français du croisière <em>MV Hondius</em> arrivent à Paris sous <span class="red-word">isolement strict</span></span>
+    </h1>
+    <p class="lead">
+      <span class="ng-pt">Cinco passageiros repatriados ao Hospital Bichat após surto de hantavírus dos Andes. Um caso sintomático confirmado em voo. A Europa volta a olhar a mobilidade global como vetor de vigilância sanitária permanente.</span>
+      <span class="ng-fr">Cinq passagers rapatriés à l'Hôpital Bichat après une flambée d'hantavirus des Andes. Un cas symptomatique confirmé en vol. L'Europe regarde à nouveau la mobilité globale comme vecteur de surveillance sanitaire permanente.</span>
+    </p>
+    <div class="byline">
+      <span><span class="ng-pt">Edição editorial · The Crossing Time</span><span class="ng-fr">Édition éditoriale · The Crossing Time</span></span>
+      <span><span class="ng-pt">12 Maio 2026</span><span class="ng-fr">12 Mai 2026</span></span>
+      <span><span class="ng-pt">Tempo de leitura: 7 minutos</span><span class="ng-fr">Temps de lecture : 7 minutes</span></span>
+    </div>
+  </div>
+</section>
+
+<article class="article">
+  
+  <p class="dropcap">
+    <span class="ng-pt">O retorno de passageiros franceses do navio MV Hondius colocou as autoridades sanitárias europeias em estado de atenção máxima. Após um surto de hantavírus identificado a bordo, cinco franceses foram repatriados para Paris e colocados sob isolamento hospitalar rigoroso no Hospital Bichat. Um dos passageiros apresentou sintomas durante o voo de retorno e teve teste positivo confirmado para o chamado "vírus dos Andes".</span>
+    <span class="ng-fr">Le retour des passagers français du navire MV Hondius a mis les autorités sanitaires européennes en état d'alerte maximale. Après une flambée d'hantavirus identifiée à bord, cinq Français ont été rapatriés à Paris et placés sous isolement hospitalier strict à l'Hôpital Bichat. L'un des passagers a présenté des symptômes pendant le vol de retour et a été testé positif pour ce qu'on appelle le "virus des Andes".</span>
+  </p>
+
+  <h2><span class="ng-pt">O que <em>está acontecendo</em></span><span class="ng-fr">Ce qui <em>se passe</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">O foco de infecção surgiu a bordo do navio MV Hondius, que realizava uma rota iniciada em Ushuaia, na Argentina. Segundo autoridades internacionais, a situação evolui com vigilância constante de múltiplos órgãos sanitários:</span>
+    <span class="ng-fr">Le foyer d'infection est apparu à bord du navire MV Hondius, qui effectuait une route initiée à Ushuaia, en Argentine. Selon les autorités internationales, la situation évolue avec une vigilance constante de multiples organismes sanitaires :</span>
+  </p>
+  
+  <ul class="tct-list">
+    <li><span class="ng-pt">Passageiros começaram a apresentar sintomas respiratórios graves</span><span class="ng-fr">Des passagers ont commencé à présenter des symptômes respiratoires graves</span></li>
+    <li><span class="ng-pt">Ao menos três mortes já foram registradas</span><span class="ng-fr">Au moins trois décès ont déjà été enregistrés</span></li>
+    <li><span class="ng-pt">Diversos países europeus monitoram casos suspeitos e contatos próximos</span><span class="ng-fr">Plusieurs pays européens surveillent les cas suspects et les contacts proches</span></li>
+    <li><span class="ng-pt">A Organização Mundial da Saúde acompanha o caso de perto</span><span class="ng-fr">L'Organisation mondiale de la Santé suit l'affaire de près</span></li>
+  </ul>
+
+  <!-- FOTO NAVIO (Unsplash — Eric Prouzet) -->
+  <div class="svg-cover">
+    <img src="https://images.unsplash.com/photo-1764608054270-9dfc5a47abe7?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="Navio de cruzeiro ancorado no porto" loading="lazy" style="display:block;width:100%;height:auto;">
+    <p class="photo-caption">
+      <strong><span class="ng-pt">A travessia</span><span class="ng-fr">La traversée</span></strong>
+      <span class="ng-pt">Navio de cruzeiro ancorado num porto europeu — imagem ilustrativa do tipo de embarcação envolvida no incidente do MV Hondius. Foto: Eric Prouzet · Unsplash.</span>
+      <span class="ng-fr">Navire de croisière ancré dans un port européen — image illustrative du type de bateau impliqué dans l'incident du MV Hondius. Photo : Eric Prouzet · Unsplash.</span>
+    </p>
+  </div>
+
+  <h2><span class="ng-pt">O vírus que <em>preocupa especialistas</em></span><span class="ng-fr">Le virus qui <em>préoccupe les experts</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">O vírus identificado é o hantavírus dos Andes (ANDV), considerado raro e particularmente sensível por um motivo: ele é um dos poucos hantavírus conhecidos com possibilidade de transmissão entre humanos.</span>
+    <span class="ng-fr">Le virus identifié est l'hantavirus des Andes (ANDV), considéré comme rare et particulièrement sensible pour une raison : il est l'un des rares hantavirus connus avec possibilité de transmission entre humains.</span>
+  </p>
+  
+  <p>
+    <span class="ng-pt">Especialistas explicam que a transmissão exige contato próximo e prolongado, diferentemente de vírus altamente aéreos como a Covid-19. Ainda assim, o risco levou autoridades francesas a adotarem protocolos excepcionais.</span>
+    <span class="ng-fr">Les experts expliquent que la transmission exige un contact proche et prolongé, contrairement aux virus hautement aériens comme la Covid-19. Néanmoins, le risque a conduit les autorités françaises à adopter des protocoles exceptionnels.</span>
+  </p>
+
+  <div class="big-number">
+    <div class="big-number-label"><span class="ng-pt">O dado crítico</span><span class="ng-fr">La donnée critique</span></div>
+    <div class="big-number-value"><em>42</em> <span style="font-size:.5em;color:rgba(245,241,232,.85)">dias</span></div>
+    <div class="big-number-text">
+      <span class="ng-pt">é a duração máxima da quarentena para passageiros de risco elevado. Período baseado no ciclo viral conhecido do hantavírus dos Andes.</span>
+      <span class="ng-fr">c'est la durée maximale de la quarantaine pour les passagers à risque élevé. Période basée sur le cycle viral connu de l'hantavirus des Andes.</span>
+    </div>
+  </div>
+
+  <h2><span class="ng-pt">Quarentena rígida e <em>vigilância hospitalar</em></span><span class="ng-fr">Quarantaine stricte et <em>surveillance hospitalière</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">Os passageiros franceses estão submetidos a protocolos completos de biossegurança e monitoramento:</span>
+    <span class="ng-fr">Les passagers français sont soumis à des protocoles complets de biosécurité et de surveillance :</span>
+  </p>
+  
+  <ul class="tct-list">
+    <li><span class="ng-pt">Isolamento hospitalar no Bichat</span><span class="ng-fr">Isolement hospitalier au Bichat</span></li>
+    <li><span class="ng-pt">Monitoramento intensivo dos sinais vitais e respiratórios</span><span class="ng-fr">Surveillance intensive des signes vitaux et respiratoires</span></li>
+    <li><span class="ng-pt">Quarentena de até 42 dias para casos de risco elevado</span><span class="ng-fr">Quarantaine jusqu'à 42 jours pour les cas à risque élevé</span></li>
+  </ul>
+  
+  <p>
+    <span class="ng-pt">Além disso, dezenas de "cas contacts" foram identificados na França. Passageiros de voos relacionados também estão sendo monitorados e alguns hospitais europeus reforçaram protocolos de biossegurança preventivamente.</span>
+    <span class="ng-fr">De plus, des dizaines de "cas contacts" ont été identifiés en France. Les passagers des vols associés sont également surveillés et certains hôpitaux européens ont renforcé préventivement les protocoles de biosécurité.</span>
+  </p>
+
+  <!-- FOTO AMBULÂNCIA (Unsplash — Lalithmalhaar Gudi) -->
+  <div class="svg-cover">
+    <img src="https://images.unsplash.com/photo-1619025873875-59dfdd2bbbd6?fm=jpg&q=80&w=1600&auto=format&fit=crop" alt="Ambulância em deslocação urbana" loading="lazy" style="display:block;width:100%;height:auto;">
+    <p class="photo-caption">
+      <strong><span class="ng-pt">A resposta</span><span class="ng-fr">La réponse</span></strong>
+      <span class="ng-pt">Ambulância em deslocação urgente — imagem ilustrativa da resposta de emergência médica em grandes cidades europeias. Foto: Lalithmalhaar Gudi · Unsplash.</span>
+      <span class="ng-fr">Ambulance en intervention urgente — image illustrative de la réponse médicale d'urgence dans les grandes villes européennes. Photo : Lalithmalhaar Gudi · Unsplash.</span>
+    </p>
+  </div>
+
+  <h2><span class="ng-pt">A <em>origem provável</em> do surto</span><span class="ng-fr">L'<em>origine probable</em> de la flambée</span></h2>
+  
+  <p>
+    <span class="ng-pt">Investigações apontam que o chamado "paciente zero" teria sido contaminado antes do embarque, em uma região próxima a Ushuaia, onde há circulação do vírus entre roedores silvestres. O ambiente fechado do navio pode ter favorecido a exposição e o monitoramento tardio dos primeiros sintomas.</span>
+    <span class="ng-fr">Les enquêtes indiquent que le "patient zéro" aurait été contaminé avant l'embarquement, dans une région proche d'Ushuaia, où le virus circule parmi les rongeurs sauvages. L'environnement fermé du navire peut avoir favorisé l'exposition et la surveillance tardive des premiers symptômes.</span>
+  </p>
+
+  <div class="callout">
+    <div class="callout-label"><span class="ng-pt">A contradição</span><span class="ng-fr">La contradiction</span></div>
+    <p class="callout-text">
+      <span class="ng-pt">Apesar da repercussão, autoridades europeias e a OMS insistem: não há cenário de pandemia, o risco para a população geral é considerado baixo e o foco está sob vigilância sanitária rigorosa. Mas a memória recente do mundo aprendeu a ler estes sinais com olhos diferentes.</span>
+      <span class="ng-fr">Malgré la répercussion, les autorités européennes et l'OMS insistent : il n'y a pas de scénario pandémique, le risque pour la population générale est considéré comme faible et le foyer est sous surveillance sanitaire stricte. Mais la mémoire récente du monde a appris à lire ces signes avec d'autres yeux.</span>
+    </p>
+  </div>
+
+  <h2><span class="ng-pt">Europa tenta <em>evitar pânico</em></span><span class="ng-fr">L'Europe tente d'<em>éviter la panique</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">Mesmo assim, o caso reacende memórias recentes sobre mobilidade internacional, vulnerabilidade em viagens marítimas e velocidade de circulação global de agentes infecciosos. A Europa que esqueceu — ou tentou esquecer — voltou a ouvir um eco familiar.</span>
+    <span class="ng-fr">Néanmoins, l'affaire ranime des souvenirs récents sur la mobilité internationale, la vulnérabilité dans les voyages maritimes et la vitesse de circulation globale des agents infectieux. L'Europe qui a oublié — ou a tenté d'oublier — entend à nouveau un écho familier.</span>
+  </p>
+
+  <h2><span class="ng-pt">O impacto <em>além da saúde</em></span><span class="ng-fr">L'impact <em>au-delà de la santé</em></span></h2>
+  
+  <p>
+    <span class="ng-pt">O episódio evidencia uma nova realidade: viagens internacionais e cruzeiros tornaram-se espaços de vigilância epidemiológica permanente.</span>
+    <span class="ng-fr">L'épisode met en évidence une nouvelle réalité : les voyages internationaux et les croisières sont devenus des espaces de surveillance épidémiologique permanente.</span>
+  </p>
+  
+  <p>
+    <span class="ng-pt">Companhias marítimas, aeroportos e governos europeus enfrentam agora o desafio de equilibrar três variáveis sensíveis ao mesmo tempo: segurança sanitária, mobilidade global e comunicação pública sem gerar pânico.</span>
+    <span class="ng-fr">Les compagnies maritimes, les aéroports et les gouvernements européens font face au défi d'équilibrer trois variables sensibles en même temps : sécurité sanitaire, mobilité globale et communication publique sans générer de panique.</span>
+  </p>
+
+  <div class="pull-quote">
+    <p class="pull-quote-text">
+      <span class="ng-pt">"Em um mundo hiperconectado, <em>cada cabine</em> se torna uma fronteira sanitária."</span>
+      <span class="ng-fr">"Dans un monde hyperconnecté, <em>chaque cabine</em> devient une frontière sanitaire."</span>
+    </p>
+  </div>
+
+  <div class="tct-sep">
+    <div class="tct-sep-line"></div>
+    <div class="tct-sep-diamond"></div>
+    <div class="tct-sep-line"></div>
+  </div>
+
+  <h2><span class="ng-pt">Conclusão</span><span class="ng-fr">Conclusion</span></h2>
+  
+  <p>
+    <span class="ng-pt">O caso do MV Hondius mostra como o mundo hiperconectado transformou surtos localizados em preocupações globais quase instantâneas. Mais do que um incidente médico, o episódio revela a fragilidade das cadeias internacionais de circulação, a importância da resposta rápida e o novo papel estratégico da vigilância sanitária global.</span>
+    <span class="ng-fr">Le cas du MV Hondius montre comment le monde hyperconnecté a transformé des flambées localisées en préoccupations globales quasi instantanées. Plus qu'un incident médical, l'épisode révèle la fragilité des chaînes internationales de circulation, l'importance de la réponse rapide et le nouveau rôle stratégique de la surveillance sanitaire globale.</span>
+  </p>
+  
+  <p>
+    <span class="ng-pt">Em um cenário internacional cada vez mais móvel, saúde pública e mobilidade passaram a caminhar juntas. Ou, mais precisamente: deixaram de ter escolha.</span>
+    <span class="ng-fr">Dans un scénario international de plus en plus mobile, santé publique et mobilité ont commencé à marcher ensemble. Ou, plus précisément : elles n'ont plus le choix.</span>
+  </p>
+
+  <div class="article-meta">
+    <span><span class="ng-pt">Saúde &amp; Mobilidade</span><span class="ng-fr">Santé &amp; Mobilité</span></span>
+    <span><span class="ng-pt">Alerta sanitário · Maio 2026</span><span class="ng-fr">Alerte sanitaire · Mai 2026</span></span>
+  </div>
+
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>

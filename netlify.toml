@@ -1,0 +1,35 @@
+# The Crossing Time — configuração Netlify (colocar na RAIZ do repositório)
+
+[build]
+  publish = "."          # o index.html está na raiz
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# ---- Cache: ficheiros pesados que raramente mudam ----
+[[headers]]
+  for = "/flipbook-1-edicao.html"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+[[headers]]
+  for = "/flipbook-2-edicao.html"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+[[headers]]
+  for = "/materias/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+[[headers]]
+  for = "/og/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+[[headers]]
+  for = "/tct-hero.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+# o index muda com frequência → revalidar sempre
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
