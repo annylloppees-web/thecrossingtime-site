@@ -1,32 +1,4 @@
-# The Crossing Time — thecrossingtime.com
-# Revista digital bilingue PT/FR · Porta-Voz do Imigrante
-
-# Motores de busca: bem-vindos. Queremos ser encontrados e indexados.
 User-agent: *
 Allow: /
-
-# Agregadores de conteúdo por IA: leitura não autorizada para treino.
-# Sem valor legal absoluto, mas é a declaração de vontade que os
-# operadores respeitáveis dizem respeitar.
-User-agent: GPTBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
 
 Sitemap: https://thecrossingtime.com/sitemap.xml
