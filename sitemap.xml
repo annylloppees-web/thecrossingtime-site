@@ -241,6 +241,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/crd6_bancos_2027.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/creche_braga.html</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -333,6 +339,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/educacao.html</loc>
     <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/ees_etias_2026.html</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -813,6 +825,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/mundo_tempo_real.html</loc>
     <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/nepal_inundacoes_2026.html</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
