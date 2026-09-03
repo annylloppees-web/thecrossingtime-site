@@ -1343,8 +1343,40 @@ h3.mat-cover-title {
   #tct-ticker .tk-fita{animation-duration:60s;}
 }
 </style>
+<style id="tct-news-css">
+#tct-news{position:fixed;inset:0;z-index:99999;display:none;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+#tct-news.on{display:block}
+#tct-news .tn-backdrop{position:absolute;inset:0;background:rgba(8,15,26,.72);backdrop-filter:blur(2px)}
+#tct-news .tn-card{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(460px,92vw);
+ background:#FBFAF7;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.5);overflow:hidden;
+ border-top:5px solid #C6A15B;animation:tnpop .32s cubic-bezier(.2,.8,.2,1)}
+@keyframes tnpop{from{opacity:0;transform:translate(-50%,-46%) scale(.96)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+#tct-news .tn-x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:26px;line-height:1;color:#8a94a2;cursor:pointer}
+#tct-news .tn-x:hover{color:#0E1A2B}
+#tct-news .tn-body{padding:30px 30px 26px 30px}
+#tct-news .tn-badge{display:inline-block;background:#C6A15B;color:#fff;font-weight:800;font-size:11px;letter-spacing:.16em;padding:5px 11px;border-radius:4px;margin-bottom:14px}
+#tct-news .tn-title{font-family:Georgia,serif;font-size:24px;line-height:1.2;color:#0E1A2B;margin:0 0 10px 0;font-weight:700}
+#tct-news .tn-sub{font-size:14.5px;line-height:1.55;color:#4a5361;margin:0 0 18px 0}
+#tct-news .tn-email{width:100%;box-sizing:border-box;padding:14px 15px;font-size:15px;border:1.5px solid #d6d2c6;border-radius:8px;outline:none;margin-bottom:13px;background:#fff}
+#tct-news .tn-email:focus{border-color:#C6A15B}
+#tct-news .tn-consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.45;color:#5b6470;margin-bottom:16px;cursor:pointer}
+#tct-news .tn-consent input{margin-top:2px;width:17px;height:17px;flex:0 0 auto;accent-color:#0E1A2B}
+#tct-news .tn-btn{width:100%;padding:15px;font-size:15px;font-weight:800;letter-spacing:.02em;color:#fff;background:#0E1A2B;border:0;border-radius:8px;cursor:pointer;transition:background .15s}
+#tct-news .tn-btn:hover{background:#16283f}
+#tct-news .tn-note{font-size:11.5px;color:#8a94a2;text-align:center;margin:12px 0 0 0}
+#tct-news .tn-hp{position:absolute;left:-9999px;opacity:0}
+#tct-news .tn-thanks{padding:40px 30px;text-align:center}
+#tct-news .tn-check{width:64px;height:64px;line-height:64px;border-radius:50%;background:#C6A15B;color:#fff;font-size:34px;margin:0 auto 16px auto}
+#tct-news .tn-thanks p{font-size:16px;color:#0E1A2B;line-height:1.5;margin:0}
+#tct-news .tn-err{color:#c0392b;font-size:12.5px;margin:0 0 10px 0;display:none}
+@media(max-width:560px){
+ #tct-news .tn-card{left:0;right:0;bottom:0;top:auto;width:100%;transform:none;border-radius:16px 16px 0 0;animation:tnup .3s ease}
+ @keyframes tnup{from{transform:translateY(100%)}to{transform:translateY(0)}}
+ #tct-news .tn-title{font-size:21px}
+}
+</style>
 </head>
-<body data-tct-build="p15-v34 · 3set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v35 · 3set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1503,7 +1535,7 @@ h3.mat-cover-title {
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v34 · 3set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v35 · 3set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -6727,12 +6759,82 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v34 · 3set2026';try{
+(function(){var BUILD='p15-v35 · 3set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
    navigator.serviceWorker.getRegistrations().then(function(rs){rs.forEach(function(r){r.update();});});}
  }}catch(e){}})();
+</script>
+<div id="tct-news" aria-hidden="true">
+ <div class="tn-backdrop" onclick="tctNewsClose()"></div>
+ <div class="tn-card" role="dialog" aria-modal="true" aria-label="Newsletter The Crossing Time">
+  <button class="tn-x" onclick="tctNewsClose()" aria-label="Fechar">&times;</button>
+  <div class="tn-body">
+   <div class="tn-badge"><span class="ng-pt">RESUMO DI&Aacute;RIO</span><span class="ng-fr" style="display:none;">R&Eacute;SUM&Eacute; QUOTIDIEN</span></div>
+   <h3 class="tn-title"><span class="ng-pt">Receba o resumo do dia no seu e-mail</span><span class="ng-fr" style="display:none;">Recevez le r&eacute;sum&eacute; du jour par e-mail</span></h3>
+   <p class="tn-sub"><span class="ng-pt">Todos os dias, as principais not&iacute;cias para brasileiros e imigrantes na Fran&ccedil;a e na Europa &mdash; direto na sua caixa de entrada.</span><span class="ng-fr" style="display:none;">Chaque jour, l'essentiel de l'actualit&eacute; pour les Br&eacute;siliens et les immigr&eacute;s en France et en Europe &mdash; directement dans votre bo&icirc;te mail.</span></p>
+   <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="tn-form" onsubmit="return tctNewsSubmit(event)">
+    <input type="hidden" name="form-name" value="newsletter">
+    <input type="hidden" name="idioma" id="tn-lang" value="pt">
+    <p class="tn-hp"><label>N&atilde;o preencha se for humano: <input name="bot-field"></label></p>
+    <p class="tn-err" id="tn-err"><span class="ng-pt">Confirme o e-mail e marque a caixa de consentimento.</span><span class="ng-fr" style="display:none;">V&eacute;rifiez l'e-mail et cochez la case de consentement.</span></p>
+    <input class="tn-email" type="email" name="email" required placeholder="seu@email.com" aria-label="E-mail">
+    <label class="tn-consent"><input type="checkbox" name="consentimento" value="sim" required>
+     <span><span class="ng-pt">Concordo em receber os e-mails da The Crossing Time e com o uso do meu e-mail para esse fim. Posso cancelar quando quiser.</span><span class="ng-fr" style="display:none;">J'accepte de recevoir les e-mails de The Crossing Time et l'utilisation de mon adresse &agrave; cette fin. Je peux me d&eacute;sabonner &agrave; tout moment.</span></span>
+    </label>
+    <button class="tn-btn" type="submit"><span class="ng-pt">Concordo e quero receber</span><span class="ng-fr" style="display:none;">Je m'inscris</span></button>
+    <p class="tn-note"><span class="ng-pt">N&atilde;o compartilhamos o seu e-mail com ningu&eacute;m.</span><span class="ng-fr" style="display:none;">Nous ne partageons jamais votre adresse.</span></p>
+   </form>
+   <div class="tn-thanks" hidden>
+    <div class="tn-check">&#10003;</div>
+    <p><span class="ng-pt">Pronto! Voc&ecirc; vai come&ccedil;ar a receber o resumo do dia. Obrigada por acompanhar. &#128153;</span><span class="ng-fr" style="display:none;">C'est fait&nbsp;! Vous allez recevoir le r&eacute;sum&eacute; du jour. Merci de nous suivre. &#128153;</span></p>
+   </div>
+  </div>
+ </div>
+</div>
+<script id="tct-news-js">
+(function(){
+  var KEY_SUB='tct_news_sub', SES='tct_news_shown';
+  function subscribed(){try{return localStorage.getItem(KEY_SUB)==='1';}catch(e){return false;}}
+  function shownCount(){try{return parseInt(sessionStorage.getItem(SES)||'0',10);}catch(e){return 0;}}
+  function bump(){try{sessionStorage.setItem(SES,String(shownCount()+1));}catch(e){}}
+  window.tctNewsShow=function(){
+    if(subscribed())return;
+    var el=document.getElementById('tct-news'); if(!el)return;
+    // sync idioma escondido com o modo atual do site
+    try{var fr=document.body.getAttribute('lang-mode')==='fr'||document.body.classList.contains('fr');
+        var li=document.getElementById('tn-lang'); if(li)li.value=fr?'fr':'pt';}catch(e){}
+    el.classList.add('on'); el.setAttribute('aria-hidden','false'); bump();
+  };
+  window.tctNewsClose=function(){
+    var el=document.getElementById('tct-news'); if(!el)return;
+    el.classList.remove('on'); el.setAttribute('aria-hidden','true');
+    if(!subscribed() && shownCount()<3){ setTimeout(window.tctNewsShow,120000); } // volta em 2 min, até 3x
+  };
+  window.tctNewsSubmit=function(e){
+    e.preventDefault();
+    var f=e.target, err=document.getElementById('tn-err');
+    var email=f.email.value.trim(), ok=f.consentimento.checked;
+    if(!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || !ok){ if(err)err.style.display='block'; return false; }
+    if(err)err.style.display='none';
+    try{var li=document.getElementById('tn-lang'); if(li)li.value=(document.body.getAttribute('lang-mode')==='fr')?'fr':'pt';}catch(_){}
+    var data=new URLSearchParams(new FormData(f)).toString();
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data})
+      .then(function(){ done(); })
+      .catch(function(){ done(); }); // mesmo offline, agradece (evita perder o lead)
+    return false;
+  };
+  function done(){
+    try{localStorage.setItem(KEY_SUB,'1');}catch(e){}
+    var card=document.querySelector('#tct-news .tn-form'), th=document.querySelector('#tct-news .tn-thanks');
+    if(card)card.style.display='none'; if(th)th.hidden=false;
+    setTimeout(window.tctNewsClose,3000);
+  }
+  // aparece ~7s após carregar, se ainda não assinou
+  function init(){ if(!subscribed() && shownCount()<1){ setTimeout(window.tctNewsShow,7000); } }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
+})();
 </script>
 </body>
 </html>
