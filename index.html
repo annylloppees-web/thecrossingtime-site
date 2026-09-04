@@ -1423,7 +1423,7 @@ h3.mat-cover-title {
 @media(max-width:560px){.vip-title{font-size:25px}.vip-page .vip-wrap{padding:32px 18px 60px}}
 </style>
 </head>
-<body data-tct-build="p15-v38 · 4set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v39 · 4set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1472,7 +1472,8 @@ h3.mat-cover-title {
     <span class="vip-badge" id="vip-badge" style="display:none;">● Assinante VIP</span>
     <button class="btn-ghost" id="btn-login-nav" onclick="showPage('vip')"><span class="ng-pt">Entrar</span><span class="ng-fr">Connexion</span></button>
     <button class="btn-gold" id="btn-assinar-nav" onclick="showPage('vip')" style="letter-spacing:.08em;font-size:11px;">✦ Área VIP</button>
-    <button class="btn-ghost" id="btn-logout" style="display:none;" onclick="logoutVIP()"><span class="ng-pt">Sair</span><span class="ng-fr">Déconnexion</span></button>
+    <span id="vip-nav-name" style="display:none;font:800 12px 'Jost',Arial,sans-serif;letter-spacing:.06em;color:#C6A15B;align-self:center;white-space:nowrap;"></span>
+    <button class="btn-ghost" id="btn-logout" style="display:none;" onclick="vipLogout()"><span class="ng-pt">Sair</span><span class="ng-fr">Déconnexion</span></button>
   </div>
 
   <div class="nav-lang" style="display:flex;align-items:center;gap:4px;margin-left:12px;border-left:0.5px solid rgba(255,255,255,.15);padding-left:12px;">
@@ -1582,7 +1583,7 @@ h3.mat-cover-title {
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v38 · 4set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v39 · 4set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3793,12 +3794,8 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
 
   <div id="vip-app" hidden>
-   <div class="vip-appbar">
-    <div><p class="vip-eyebrow" style="margin-bottom:4px"><span class="ng-pt">ÁREA VIP</span><span class="ng-fr" style="display:none;">ESPACE VIP</span></p>
-    <h1 class="vip-title" id="vip-welcome" style="font-size:24px;margin:0"><span class="ng-pt">Bem-vindo à Área VIP</span><span class="ng-fr" style="display:none;">Bienvenue dans l'Espace VIP</span></h1></div>
-    <button class="vip-logout" type="button" onclick="vipLogout()"><span class="ng-pt">Sair</span><span class="ng-fr" style="display:none;">Se déconnecter</span></button>
-   </div>
-   <p class="vip-sub"><span class="ng-pt">Você é um Membro Fundador. Aproveite o conteúdo exclusivo.</span><span class="ng-fr" style="display:none;">Vous êtes Membre Fondateur. Profitez du contenu exclusif.</span></p>
+   <p class="vip-eyebrow"><span class="ng-pt">ÁREA VIP · CONTEÚDO EXCLUSIVO</span><span class="ng-fr" style="display:none;">ESPACE VIP · CONTENU EXCLUSIF</span></p>
+   <h1 class="vip-title" style="font-size:27px;margin:0 0 18px"><span class="ng-pt">Conteúdo exclusivo para membros</span><span class="ng-fr" style="display:none;">Contenu exclusif pour les membres</span></h1>
    <div id="vip-list" class="vip-list"><p class="vip-empty"><span class="ng-pt">Carregando…</span><span class="ng-fr" style="display:none;">Chargement…</span></p></div>
   </div>
  </div>
@@ -5870,7 +5867,7 @@ function searchCivique(query){
       +'<div class="ap-head-r"><div class="ap-lang">'
         +'<button type="button" data-l="pt" class="'+(lg==="pt"?"on":"")+'">PT</button>'
         +'<button type="button" data-l="fr" class="'+(lg==="fr"?"on":"")+'">FR</button></div>'
-      +'<button class="ap-x" type="button" aria-label="Fechar" title="Fechar">&times;</button></div></div>'
+      +'<button class="ap-x" type="button" aria-label="Fechar" title="Fechar" onclick="window.__tctAdHide&&window.__tctAdHide()">&times;</button></div></div>'
       +'<div class="ap-top"><div class="ap-logo"><img src="'+a.logo+'" alt="'+a.name+'"></div>'
       +'<div style="min-width:0"><div class="ap-name">'+a.name+'</div><div class="ap-cat">'+L(a.cat)+'</div></div></div>'
       +'<div class="ap-detail">'+L(a.detail)+'</div>'
@@ -5891,10 +5888,12 @@ function searchCivique(query){
     clearTimeout(hideT); hideT=setTimeout(function(){ hide(false); }, AUTO_CLOSE);
   }
   function hide(closed){
-    if(!open) return; open=false; el.classList.remove('show'); clearTimeout(hideT);
-    if(closed){ lastShow=Date.now()+MANUAL_EXTRA; }
+    open=false; el.classList.remove('show'); clearTimeout(hideT);
+    if(closed){ lastShow=Date.now()+MANUAL_EXTRA; try{sessionStorage.setItem('tct-ad-off','1');}catch(e){} }
   }
+  window.__tctAdHide=function(){ hide(true); };
   function trigger(){
+    try{ if(sessionStorage.getItem('tct-ad-off')==='1') return; }catch(e){}
     if(overlayOpen()) return;
     if(Date.now()-lastShow < COOLDOWN) return;
     present();
@@ -6826,7 +6825,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v38 · 4set2026';try{
+(function(){var BUILD='p15-v39 · 4set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -6920,11 +6919,19 @@ function ouvirToggle(){
     return v;
   }
 
-  function showAuth(){ var a=$('vip-auth'),p=$('vip-app'); if(a)a.hidden=false; if(p)p.hidden=true; }
+  function vipNav(on,nome){
+    var fn=(nome||'').trim().split(/\s+/)[0]||'';
+    var chip=$('vip-nav-name'), bl=$('btn-login-nav'), ba=$('btn-assinar-nav'), lo=$('btn-logout');
+    if(chip){ chip.textContent=on?(fn?fn+' · VIP':'VIP'):''; chip.style.display=on?'inline-block':'none'; }
+    if(bl) bl.style.display=on?'none':'';
+    if(ba) ba.style.display=on?'none':'';
+    if(lo) lo.style.display=on?'inline-block':'none';
+  }
+  function showAuth(){ var a=$('vip-auth'),p=$('vip-app'); if(a)a.hidden=false; if(p)p.hidden=true; vipNav(false); }
   function showApp(profile){
     var a=$('vip-auth'),p=$('vip-app'); if(a)a.hidden=true; if(p)p.hidden=false;
     var nome=(profile&&profile.nome)?profile.nome:'';
-    var w=$('vip-welcome'); if(w)w.textContent=T('Bem-vindo à Área VIP, '+nome+'!','Bienvenue dans l\'Espace VIP, '+nome+' !').replace(', !',' !');
+    vipNav(true,nome);
     loadPosts();
   }
 
