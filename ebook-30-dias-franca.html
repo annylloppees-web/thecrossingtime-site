@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chegou na França: os 30 primeiros dias · The Crossing Time</title>
+<style>
+  :root{--navy:#0E1A2B;--gold:#C6A15B;--paper:#FBFAF7;--ink:#2a2f38;--muted:#5b6470;--line:#e6e2d8;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 -apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+  .wrap{max-width:780px;margin:0 auto;padding:0 22px 90px;}
+  .topbar{position:sticky;top:0;background:rgba(251,250,247,.94);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);z-index:5;}
+  .brand{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--navy);font-size:16px;}
+  .brand small{display:block;font:800 9px Arial,sans-serif;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-top:3px;}
+  .langbar{display:flex;gap:4px;background:#eee9df;padding:4px;border-radius:8px;}
+  .langbar button{border:0;background:none;padding:6px 12px;border-radius:6px;font:700 13px Arial,sans-serif;color:var(--muted);cursor:pointer;}
+  .langbar button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.12);}
+
+  .cover{background:linear-gradient(160deg,#0E1A2B,#1a2e4a);color:#F4F2ED;border-radius:16px;padding:44px 34px 38px;margin:26px 0 8px;position:relative;overflow:hidden;}
+  .cover:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),transparent);}
+  .cover .eyebrow{font:800 11px Arial,sans-serif;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin:0 0 14px;}
+  .cover h1{font-family:Georgia,serif;font-size:37px;line-height:1.12;margin:0 0 12px;font-weight:700;}
+  .cover .lede{font-size:17px;line-height:1.6;color:rgba(244,242,237,.9);margin:0;max-width:44ch;}
+  .cover .sample-tag{display:inline-block;margin-top:20px;background:rgba(198,161,91,.18);border:1px solid rgba(198,161,91,.5);color:#F4D9A8;font:700 11px Arial,sans-serif;letter-spacing:.05em;padding:7px 13px;border-radius:6px;}
+
+  .whofor{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:18px 20px;margin:20px 0;}
+  .whofor h2{font-family:Georgia,serif;font-size:18px;color:var(--navy);margin:0 0 8px;}
+  .whofor p{margin:0;font-size:14.5px;color:var(--muted);}
+
+  .updbar{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:12.5px;color:var(--muted);margin:14px 0 6px;}
+  .updbar b{color:var(--navy);}
+
+  .sec{margin:40px 0 0;}
+  .sec-num{font:800 12px Arial,sans-serif;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin:0 0 6px;}
+  .sec h2{font-family:Georgia,serif;font-size:26px;line-height:1.2;color:var(--navy);margin:0 0 14px;font-weight:700;}
+  .sec h3{font-family:Georgia,serif;font-size:19px;color:var(--navy);margin:24px 0 8px;}
+  .sec p{margin:0 0 14px;}
+  .sec ul{margin:0 0 16px;padding-left:20px;}
+  .sec li{margin:0 0 8px;}
+  strong{color:var(--navy);}
+
+  .box{border-radius:10px;padding:15px 18px;margin:16px 0;font-size:14.5px;line-height:1.6;}
+  .box b.box-t{display:block;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 6px;}
+  .box-prazo{background:#eef3fb;border:1px solid #cfe0f5;} .box-prazo .box-t{color:#1c4e8a;}
+  .box-doc{background:#f3f0e7;border:1px solid #e2dcc7;} .box-doc .box-t{color:#7a6a34;}
+  .box-custo{background:#eef7f0;border:1px solid #c9e6d3;} .box-custo .box-t{color:#1e6b41;}
+  .box-atencao{background:#fdf0ec;border:1px solid #f4cdbf;} .box-atencao .box-t{color:#a5432a;}
+  .box-fonte{background:#fff;border:1px dashed var(--gold);font-size:13px;color:var(--muted);} .box-fonte .box-t{color:var(--gold);}
+  .box ul{margin:6px 0 0;padding-left:20px;} .box li{margin:0 0 5px;}
+  .box a{color:var(--navy);}
+
+  .vip-continua{background:linear-gradient(160deg,#0E1A2B,#1a2e4a);color:#F4F2ED;border-radius:14px;padding:30px 28px;margin:46px 0 0;text-align:center;}
+  .vip-continua .eyebrow{font:800 11px Arial,sans-serif;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin:0 0 10px;}
+  .vip-continua h2{font-family:Georgia,serif;font-size:23px;margin:0 0 10px;color:#fff;}
+  .vip-continua p{font-size:14.5px;color:rgba(244,242,237,.88);margin:0 auto;max-width:52ch;}
+  .vip-continua .rest{margin-top:16px;font-size:13.5px;color:rgba(244,242,237,.82);}
+
+  .foot{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);}
+  .foot h3{font-family:Georgia,serif;font-size:15px;color:var(--navy);margin:0 0 8px;}
+  .foot a{color:var(--navy);}
+  .disclaimer{background:#f7f5ef;border-radius:9px;padding:13px 16px;margin:16px 0 0;font-size:12px;color:var(--muted);line-height:1.55;}
+
+  [data-lang="pt"] .fr,[data-lang="fr"] .pt{display:none;}
+
+  /* GATE VIP */
+  body[data-gate="locked"] .vip-only{display:none;}
+  body[data-gate="unlocked"] #ebook-lock{display:none;}
+  #ebook-lock{background:linear-gradient(160deg,#0E1A2B,#1a2e4a);color:#F4F2ED;border-radius:14px;padding:34px 28px;margin:42px 0 0;text-align:center;}
+  #ebook-lock .lk-ic{font-size:32px;line-height:1;}
+  #ebook-lock .eyebrow{font:800 11px Arial,sans-serif;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin:12px 0 8px;}
+  #ebook-lock h2{font-family:Georgia,serif;font-size:24px;margin:0 0 10px;color:#fff;}
+  #ebook-lock p{font-size:14.5px;color:rgba(244,242,237,.88);margin:0 auto 18px;max-width:54ch;}
+  #ebook-lock .lk-btn{display:inline-block;background:var(--gold);color:#0E1A2B;font:800 14px Arial,sans-serif;padding:14px 26px;border-radius:8px;text-decoration:none;}
+  #ebook-lock .lk-note{font-size:12px;color:rgba(244,242,237,.7);margin:14px 0 0;}
+  .checklist{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin:24px 0;}
+  .checklist h3{margin-top:20px;}
+  .checklist h3:first-of-type{margin-top:4px;}
+  .checklist ul{list-style:none;padding:0;margin:0 0 6px;}
+  .checklist li{padding:8px 0 8px 30px;position:relative;border-bottom:1px solid #f0ede4;font-size:14.5px;line-height:1.45;}
+  .checklist li:before{content:"\2610";position:absolute;left:2px;top:6px;color:var(--gold);font-size:18px;}
+  .printbtn{background:var(--navy);color:#fff;border:0;border-radius:8px;padding:12px 20px;font:700 13px Arial,sans-serif;cursor:pointer;margin-top:12px;}
+  @media print{.topbar,#ebook-lock,.printbtn{display:none!important}.cover{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body data-lang="pt">
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand">The Crossing Time<small><span class="pt">Guia · Área VIP</span><span class="fr">Guide · Espace VIP</span></small></div>
+    <div class="langbar">
+      <button type="button" id="l-pt" class="on" onclick="setL('pt')">PT</button>
+      <button type="button" id="l-fr" onclick="setL('fr')">FR</button>
+    </div>
+  </div>
+
+  <!-- CAPA -->
+  <div class="cover">
+    <p class="eyebrow"><span class="pt">Guia The Crossing Time</span><span class="fr">Guide The Crossing Time</span></p>
+    <h1><span class="pt">Chegou na França:<br>os 30 primeiros dias</span><span class="fr">Arrivée en France :<br>les 30 premiers jours</span></h1>
+    <p class="lede"><span class="pt">Do aeroporto à vida organizada — sem se perder na burocracia.</span><span class="fr">De l'aéroport à une vie organisée — sans vous perdre dans la paperasse.</span></p>
+    <span class="sample-tag"><span class="pt">Guia completo · 12 seções · Área VIP</span><span class="fr">Guide complet · 12 sections · Espace VIP</span></span>
+  </div>
+
+  <div class="whofor">
+    <h2><span class="pt">Para quem é este guia</span><span class="fr">À qui s'adresse ce guide</span></h2>
+    <p><span class="pt">Para quem acabou de chegar (ou está prestes a chegar) à França e precisa resolver, na ordem certa, documento, moradia, saúde, banco e dinheiro. Passo a passo, em português e francês, com as fontes oficiais ao lado de cada informação.</span><span class="fr">Pour celles et ceux qui viennent d'arriver (ou vont arriver) en France et doivent régler, dans le bon ordre, les papiers, le logement, la santé, la banque et l'argent. Pas à pas, en portugais et en français, avec les sources officielles à côté de chaque information.</span></p>
+  </div>
+
+  <div class="updbar">
+    <span><b><span class="pt">Atualizado em:</span><span class="fr">Mis à jour le :</span></b> 04/09/2026</span>
+    <span><b><span class="pt">Idiomas:</span><span class="fr">Langues :</span></b> PT / FR</span>
+    <span><b><span class="pt">Conteúdo:</span><span class="fr">Contenu :</span></b> <span class="pt">12 seções + checklist</span><span class="fr">12 sections + checklist</span></span>
+  </div>
+
+  <!-- SEÇÃO 1 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 1</span><span class="fr">Section 1</span></p>
+    <h2><span class="pt">Na bagagem de mão: os documentos que você não pode perder</span><span class="fr">Dans le bagage à main : les documents à ne jamais perdre</span></h2>
+
+    <p><span class="pt">Se você vem morar na França, quase certamente entrou com um <strong>visto de longa duração</strong>. O mais comum é o <strong>VLS-TS</strong> — o "visto de longa duração que vale como título de residência". Guarde bem essa sigla: é ela que, nos primeiros três meses, vira a sua autorização de morar aqui. E há uma coisa que precisa ficar clara antes de qualquer outra: <strong>o VLS-TS não está pronto quando você desembarca — ele precisa ser validado</strong>. Voltamos a isso na Seção 2.</span><span class="fr">Si vous venez vivre en France, vous êtes presque certainement entré avec un <strong>visa de long séjour</strong>. Le plus courant est le <strong>VLS-TS</strong> — le « visa de long séjour valant titre de séjour ». Retenez bien ce sigle : c'est lui qui, pendant les trois premiers mois, tient lieu de titre de séjour. Et une chose doit être claire avant tout : <strong>le VLS-TS n'est pas finalisé à votre descente d'avion — il doit être validé</strong>. On y revient en Section 2.</span></p>
+
+    <p><span class="pt">Antes de embarcar, reúna e leve <strong>na bagagem de mão</strong> (nunca na mala despachada) os documentos abaixo — e uma cópia digital de tudo, guardada no seu e-mail ou na nuvem.</span><span class="fr">Avant de partir, réunissez et gardez <strong>dans votre bagage à main</strong> (jamais en soute) les documents ci-dessous — avec une copie numérique de tout, dans votre e-mail ou dans le cloud.</span></p>
+
+    <div class="box box-doc">
+      <b class="box-t"><span class="pt">📄 Leve com você</span><span class="fr">📄 À emporter</span></b>
+      <ul>
+        <li><span class="pt"><strong>Passaporte com o visto de longa duração</strong> (VLS-TS) válido.</span><span class="fr"><strong>Passeport avec le visa de long séjour</strong> (VLS-TS) valide.</span></li>
+        <li><span class="pt">O <strong>comprovante do motivo da vinda</strong>: contrato ou promessa de trabalho, carta de aceitação da universidade, ou os comprovantes de recursos, conforme o seu caso.</span><span class="fr">Le <strong>justificatif du motif de séjour</strong> : contrat ou promesse d'embauche, attestation d'inscription universitaire, ou justificatifs de ressources, selon votre situation.</span></li>
+        <li><span class="pt"><strong>Certidões de nascimento e de casamento</strong> — de preferência com <strong>tradução juramentada</strong> para o francês; elas são pedidas em muitos trâmites.</span><span class="fr"><strong>Actes de naissance et de mariage</strong> — de préférence avec <strong>traduction assermentée</strong> en français ; ils sont demandés dans de nombreuses démarches.</span></li>
+        <li><span class="pt">Fotos de identidade recentes (padrão francês), o seu diploma e, se tiver, a carteira de habilitação com tradução.</span><span class="fr">Photos d'identité récentes (format français), votre diplôme et, le cas échéant, votre permis de conduire traduit.</span></li>
+      </ul>
+    </div>
+
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">⚠️ Atenção</span><span class="fr">⚠️ Attention</span></b>
+      <p style="margin:0"><span class="pt">Faça <strong>fotos ou digitalizações de tudo</strong> antes de viajar e guarde numa pasta na nuvem. Documento perdido no exterior atrasa semanas — cópia salva resolve quase tudo no momento do aperto.</span><span class="fr">Faites <strong>des photos ou des scans de tout</strong> avant de partir et rangez-les dans un dossier cloud. Un document perdu à l'étranger fait perdre des semaines — une copie sauvegardée dépanne presque toujours au moment critique.</span></p>
+    </div>
+
+    <div class="box box-fonte">
+      <b class="box-t">🔗 <span class="pt">Fontes oficiais</span><span class="fr">Sources officielles</span></b>
+      <span class="pt">France-Visas (« Votre arrivée en France ») e Service-Public.fr. Confira sempre o seu caso específico antes de viajar.</span><span class="fr">France-Visas (« Votre arrivée en France ») et Service-Public.fr. Vérifiez toujours votre cas précis avant de partir.</span>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 2 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 2</span><span class="fr">Section 2</span></p>
+    <h2><span class="pt">A primeira tarefa séria: validar o seu visto (e o OFII)</span><span class="fr">La première vraie tâche : valider votre visa (et l'OFII)</span></h2>
+
+    <p><span class="pt">Esta é a tarefa mais importante das suas primeiras semanas. Se você tem um <strong>VLS-TS</strong>, precisa <strong>validá-lo online em até 3 meses</strong> a contar da data de entrada na França. Sem essa validação, o visto não vale como título de residência — e você pode perder a situação regular.</span><span class="fr">C'est la tâche la plus importante de vos premières semaines. Si vous avez un <strong>VLS-TS</strong>, vous devez le <strong>valider en ligne dans les 3 mois</strong> suivant votre date d'entrée en France. Sans cette validation, le visa ne vaut pas titre de séjour — et vous risquez de perdre votre situation régulière.</span></p>
+
+    <h3><span class="pt">Onde e como se faz</span><span class="fr">Où et comment faire</span></h3>
+    <p><span class="pt">A validação é <strong>100% online</strong>, no portal oficial do Ministério do Interior (ANEF): <strong>administration-etrangers-en-france.interieur.gouv.fr</strong>. Você vai precisar de:</span><span class="fr">La validation est <strong>100 % en ligne</strong>, sur le portail officiel du ministère de l'Intérieur (ANEF) : <strong>administration-etrangers-en-france.interieur.gouv.fr</strong>. Il vous faudra :</span></p>
+    <div class="box box-doc">
+      <b class="box-t"><span class="pt">📄 O que você precisa ter à mão</span><span class="fr">📄 Ce qu'il faut avoir sous la main</span></b>
+      <ul>
+        <li><span class="pt">Os <strong>dados do seu visto</strong> e a <strong>data de entrada</strong> na França;</span><span class="fr">Les <strong>informations de votre visa</strong> et votre <strong>date d'entrée</strong> en France ;</span></li>
+        <li><span class="pt">O seu <strong>endereço na França</strong>;</span><span class="fr">Votre <strong>adresse en France</strong> ;</span></li>
+        <li><span class="pt">Um <strong>cartão de crédito</strong> para pagar a taxa (o timbre fiscal eletrônico).</span><span class="fr">Une <strong>carte bancaire</strong> pour payer la taxe (le timbre fiscal électronique).</span></li>
+      </ul>
+    </div>
+
+    <div class="box box-custo">
+      <b class="box-t"><span class="pt">💶 Quanto custa (valores desde 1º de maio de 2026)</span><span class="fr">💶 Combien ça coûte (montants depuis le 1er mai 2026)</span></b>
+      <p style="margin:0 0 6px"><span class="pt">A taxa de validação do VLS-TS passou a ser:</span><span class="fr">La taxe de validation du VLS-TS est désormais de :</span></p>
+      <ul>
+        <li><span class="pt"><strong>300 €</strong> — tarifa normal (antes eram 200 €);</span><span class="fr"><strong>300 €</strong> — tarif normal (auparavant 200 €) ;</span></li>
+        <li><span class="pt"><strong>100 €</strong> — tarifa reduzida, para <strong>estudantes, estagiários, au pair, reagrupamento familiar e trabalhadores sazonais</strong> (antes eram 50 €).</span><span class="fr"><strong>100 €</strong> — tarif réduit, pour <strong>étudiants, stagiaires, au pair, regroupement familial et travailleurs saisonniers</strong> (auparavant 50 €).</span></li>
+      </ul>
+      <p style="margin:8px 0 0"><span class="pt">Cidadãos da UE/EEE/Suíça e seus familiares são isentos. O valor pode mudar por lei — confirme no site oficial na hora de pagar.</span><span class="fr">Les citoyens UE/EEE/Suisse et leur famille en sont exonérés. Le montant peut évoluer par la loi — vérifiez sur le site officiel au moment de payer.</span></p>
+    </div>
+
+    <div class="box box-prazo">
+      <b class="box-t"><span class="pt">⏰ Prazo — e o que acontece se perder</span><span class="fr">⏰ Délai — et ce qui arrive si vous le manquez</span></b>
+      <p style="margin:0"><span class="pt"><strong>3 meses</strong> a partir da entrada. Se você <strong>não validar</strong> dentro do prazo, perde a situação regular na França e pode ficar <strong>impedido de reentrar no Espaço Schengen</strong>. Não deixe para a última semana.</span><span class="fr"><strong>3 mois</strong> à compter de l'entrée. Si vous <strong>ne validez pas</strong> dans les délais, vous perdez votre situation régulière et pouvez être <strong>empêché de revenir dans l'espace Schengen</strong>. N'attendez pas la dernière semaine.</span></p>
+    </div>
+
+    <h3><span class="pt">E o OFII / o contrato de integração (CIR)?</span><span class="fr">Et l'OFII / le contrat d'intégration (CIR) ?</span></h3>
+    <p><span class="pt">Quem chega para <strong>se instalar de forma duradoura</strong> (por exemplo, com título de vida privada e familiar) normalmente é convocado pelo <strong>OFII</strong> — o escritório francês de imigração e integração — para assinar o <strong>Contrato de Integração Republicana (CIR)</strong>. Ele inclui uma <strong>formação cívica</strong> e, conforme a avaliação, uma <strong>formação de francês</strong> (nível A1/A2). Respeitar o CIR é condição para depois conseguir um título plurianual ou de residente.</span><span class="fr">Celles et ceux qui viennent <strong>s'installer durablement</strong> (par exemple avec un titre vie privée et familiale) sont en général convoqués par l'<strong>OFII</strong> — l'Office français de l'immigration et de l'intégration — pour signer le <strong>Contrat d'Intégration Républicaine (CIR)</strong>. Il comprend une <strong>formation civique</strong> et, selon l'évaluation, une <strong>formation linguistique</strong> (niveau A1/A2). Respecter le CIR est une condition pour obtenir ensuite un titre pluriannuel ou de résident.</span></p>
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">⚠️ Você pode estar dispensado</span><span class="fr">⚠️ Vous pouvez en être dispensé</span></b>
+      <p style="margin:0"><span class="pt">Em geral, <strong>estudantes, visitantes, trabalhadores temporários e sazonais, passaporte-talento</strong> e quem já estudou na França não assinam o CIR. Se você é estudante, foque na validação do visto — o CIR provavelmente não é para o seu caso.</span><span class="fr">En général, <strong>étudiants, visiteurs, travailleurs temporaires et saisonniers, passeport-talent</strong> et les personnes ayant déjà étudié en France ne signent pas le CIR. Si vous êtes étudiant, concentrez-vous sur la validation du visa — le CIR ne vous concerne probablement pas.</span></p>
+    </div>
+
+    <div class="box box-fonte">
+      <b class="box-t">🔗 <span class="pt">Fontes oficiais</span><span class="fr">Sources officielles</span></b>
+      <span class="pt">Portal ANEF (administration-etrangers-en-france.interieur.gouv.fr); France-Visas; Service-Public.fr; e a nota das préfectures sobre os novos montantes das taxas a partir de 1º de maio de 2026 (loi de finances 2026). O CIR é gerido pelo OFII (ofii.fr).</span><span class="fr">Portail ANEF (administration-etrangers-en-france.interieur.gouv.fr) ; France-Visas ; Service-Public.fr ; et la note des préfectures sur les nouveaux montants des taxes à compter du 1er mai 2026 (loi de finances 2026). Le CIR est géré par l'OFII (ofii.fr).</span>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 3 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 3</span><span class="fr">Section 3</span></p>
+    <h2><span class="pt">Telefone, internet e o endereço que destrava tudo</span><span class="fr">Téléphone, internet et l'adresse qui débloque tout</span></h2>
+
+    <p><span class="pt">Na França, uma palavra vai te seguir por toda parte: <strong>justificatif de domicile</strong> — o comprovante de endereço. Ele é pedido para abrir conta no banco, assinar um plano de telefone, tratar com a préfecture, pedir ajudas... quase tudo. Por isso, ter um endereço comprovável é a chave que abre as outras portas.</span><span class="fr">En France, un mot va vous suivre partout : le <strong>justificatif de domicile</strong>. Il est demandé pour ouvrir un compte en banque, souscrire un forfait téléphonique, traiter avec la préfecture, demander des aides… presque tout. Avoir une adresse justifiable est donc la clé qui ouvre les autres portes.</span></p>
+
+    <div class="box box-doc">
+      <b class="box-t"><span class="pt">📄 O que costuma valer como comprovante de endereço</span><span class="fr">📄 Ce qui fait généralement office de justificatif</span></b>
+      <ul>
+        <li><span class="pt">Uma <strong>fatura recente</strong> (menos de 3 meses) de luz, gás, água ou internet no seu nome;</span><span class="fr">Une <strong>facture récente</strong> (moins de 3 mois) d'électricité, gaz, eau ou internet à votre nom ;</span></li>
+        <li><span class="pt">O <strong>contrato de aluguel</strong> (bail) ou o <strong>seguro habitação</strong>;</span><span class="fr">Le <strong>contrat de location</strong> (bail) ou l'<strong>attestation d'assurance habitation</strong> ;</span></li>
+        <li><span class="pt">Se você mora com alguém: uma <strong>declaração de hospedagem</strong> (attestation d'hébergement) + documento de identidade e um comprovante de endereço do anfitrião.</span><span class="fr">Si vous logez chez quelqu'un : une <strong>attestation d'hébergement</strong> + la pièce d'identité et un justificatif de domicile de l'hébergeant.</span></li>
+      </ul>
+    </div>
+
+    <h3><span class="pt">Chip e internet: comece simples</span><span class="fr">Puce et internet : commencez simple</span></h3>
+    <p><span class="pt">No começo, um <strong>chip pré-pago</strong> resolve: costuma pedir só um documento de identidade e já te dá um número francês — o que, por sua vez, ajuda em outros cadastros. Os <strong>planos mensais</strong> (forfait), mais baratos no longo prazo, geralmente exigem um <strong>RIB</strong> (dados da sua conta bancária francesa) e, às vezes, o comprovante de endereço. Ou seja: pré-pago primeiro, plano depois de abrir a conta.</span><span class="fr">Au début, une <strong>carte SIM prépayée</strong> suffit : on ne demande souvent qu'une pièce d'identité et vous obtenez un numéro français — ce qui, à son tour, facilite d'autres inscriptions. Les <strong>forfaits mensuels</strong>, moins chers sur la durée, exigent en général un <strong>RIB</strong> (les coordonnées de votre compte bancaire français) et parfois le justificatif de domicile. Donc : prépayé d'abord, forfait après l'ouverture du compte.</span></p>
+
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">⚠️ Detalhe que trava gente</span><span class="fr">⚠️ Le détail qui bloque</span></b>
+      <p style="margin:0"><span class="pt">Muitos comprovantes precisam estar <strong>no seu nome</strong>. Se as contas da casa estão no nome de outra pessoa, providencie logo a <strong>attestation d'hébergement</strong> — é ela que "empresta" o endereço de forma oficial enquanto você ainda não tem faturas próprias.</span><span class="fr">Beaucoup de justificatifs doivent être <strong>à votre nom</strong>. Si les factures du logement sont au nom d'une autre personne, préparez vite l'<strong>attestation d'hébergement</strong> — c'est elle qui « prête » l'adresse de façon officielle tant que vous n'avez pas de factures à vous.</span></p>
+    </div>
+
+    <div class="box box-fonte">
+      <b class="box-t">🔗 <span class="pt">Fonte oficial</span><span class="fr">Source officielle</span></b>
+      <span class="pt">Service-Public.fr (« justificatif de domicile »). A lista de documentos aceitos pode variar conforme quem pede — confirme com o banco/operadora antes.</span><span class="fr">Service-Public.fr (« justificatif de domicile »). La liste des documents acceptés peut varier selon l'organisme — vérifiez auprès de la banque/l'opérateur.</span>
+    </div>
+  </div>
+
+  <!-- ===== MURO VIP ===== -->
+  <div id="ebook-lock">
+    <div class="lk-ic">🔒</div>
+    <p class="eyebrow"><span class="pt">A partir daqui é só para membros</span><span class="fr">À partir d'ici, réservé aux membres</span></p>
+    <h2><span class="pt">Faltam 9 seções — o guia completo dos 30 dias</span><span class="fr">Il reste 9 sections — le guide complet des 30 jours</span></h2>
+    <p><span class="pt">Você leu a parte aberta. O restante — moradia, banco, saúde, impostos, trabalho, escola dos filhos, vida prática e o <strong>checklist imprimível dos 30 primeiros dias</strong> — é exclusivo da Área VIP. Nesta fase de teste, o acesso é gratuito.</span><span class="fr">Vous avez lu la partie ouverte. La suite — logement, banque, santé, impôts, travail, école des enfants, vie pratique et la <strong>checklist imprimable des 30 premiers jours</strong> — est réservée à l'Espace VIP. Durant cette phase de test, l'accès est gratuit.</span></p>
+    <a class="lk-btn" href="index.html"><span class="pt">Entrar na Área VIP →</span><span class="fr">Rejoindre l'Espace VIP →</span></a>
+    <p class="lk-note"><span class="pt">Já é membro? Entre na Área VIP e volte a esta página — o guia abre automaticamente.</span><span class="fr">Déjà membre ? Connectez-vous à l'Espace VIP puis revenez ici — le guide s'ouvre automatiquement.</span></p>
+  </div>
+
+  <!-- ===== CONTEÚDO VIP (seções 4–12) ===== -->
+  <div class="vip-only">
+
+  <!-- SEÇÃO 4 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 4</span><span class="fr">Section 4</span></p>
+    <h2><span class="pt">Moradia: o dossiê, o fiador e a ajuda da CAF</span><span class="fr">Logement : le dossier, le garant et l'aide de la CAF</span></h2>
+    <p><span class="pt">Alugar na França é, antes de tudo, uma disputa de <strong>dossiê</strong>. Quem apresenta a papelada mais completa e organizada leva o imóvel. Monte uma pasta (física e digital) e tenha-a pronta para enviar no mesmo dia em que visitar algo.</span><span class="fr">Louer en France, c'est d'abord une affaire de <strong>dossier</strong>. Celui qui présente le dossier le plus complet et le plus soigné emporte le logement. Préparez une pochette (papier et numérique) prête à envoyer le jour même de la visite.</span></p>
+    <div class="box box-doc">
+      <b class="box-t"><span class="pt">📄 O dossiê do inquilino</span><span class="fr">📄 Le dossier du locataire</span></b>
+      <ul>
+        <li><span class="pt">Documento de identidade (passaporte + título/visto);</span><span class="fr">Pièce d'identité (passeport + titre/visa) ;</span></li>
+        <li><span class="pt">Comprovantes de renda (contracheques, contrato de trabalho) ou de recursos/bolsa;</span><span class="fr">Justificatifs de revenus (bulletins de paie, contrat de travail) ou de ressources/bourse ;</span></li>
+        <li><span class="pt">Comprovante de endereço atual e, se houver, do fiador;</span><span class="fr">Justificatif de domicile actuel et, le cas échéant, celui du garant ;</span></li>
+        <li><span class="pt">RIB (dados bancários) — voltamos a ele na Seção 5.</span><span class="fr">RIB (coordonnées bancaires) — voir Section 5.</span></li>
+      </ul>
+    </div>
+    <h3><span class="pt">Sem fiador na França? Existe o Visale (gratuito)</span><span class="fr">Pas de garant en France ? Il y a Visale (gratuit)</span></h3>
+    <p><span class="pt">Muitos proprietários pedem um <strong>garant</strong> (fiador) que more na França. Se você não tem, a <strong>Visale</strong> — da Action Logement — funciona como um fiador oficial e <strong>gratuito</strong>: se você não pagar, a Action Logement paga o proprietário e depois cobra de você. É muito usada por jovens e recém-chegados. Em 2026, a cobertura passou a valer para os <strong>3 primeiros anos</strong> de contrato, com tetos de aluguel que variam por região. Peça o seu visto Visale <strong>antes</strong> de procurar imóvel, no site oficial.</span><span class="fr">Beaucoup de propriétaires exigent un <strong>garant</strong> résidant en France. Si vous n'en avez pas, <strong>Visale</strong> — d'Action Logement — joue le rôle de garant officiel et <strong>gratuit</strong> : en cas d'impayé, Action Logement paie le propriétaire puis se retourne vers vous. Très utilisée par les jeunes et les nouveaux arrivants. En 2026, la couverture porte sur les <strong>3 premières années</strong> du bail, avec des plafonds de loyer variables selon la région. Demandez votre visa Visale <strong>avant</strong> de chercher, sur le site officiel.</span></p>
+    <div class="box box-custo">
+      <b class="box-t"><span class="pt">💶 Caução, seguro e a ajuda ao aluguel</span><span class="fr">💶 Dépôt, assurance et aide au loyer</span></b>
+      <ul>
+        <li><span class="pt"><strong>Caução (dépôt de garantie):</strong> em geral <strong>1 mês</strong> de aluguel (sem encargos) num imóvel vazio, e até <strong>2 meses</strong> num mobiliado.</span><span class="fr"><strong>Dépôt de garantie :</strong> en général <strong>1 mois</strong> de loyer (hors charges) en location vide, jusqu'à <strong>2 mois</strong> en meublé.</span></li>
+        <li><span class="pt"><strong>Seguro habitação:</strong> é <strong>obrigatório</strong> para o inquilino; costuma ser pedido na assinatura do contrato.</span><span class="fr"><strong>Assurance habitation :</strong> <strong>obligatoire</strong> pour le locataire ; demandée à la signature du bail.</span></li>
+        <li><span class="pt"><strong>CAF / APL:</strong> depois de entrar no imóvel, você pode ter direito a uma <strong>ajuda ao aluguel</strong> (APL), conforme a sua renda. Faça o pedido no site da CAF logo que tiver o contrato.</span><span class="fr"><strong>CAF / APL :</strong> une fois installé, vous pouvez avoir droit à une <strong>aide au loyer</strong> (APL), selon vos revenus. Faites la demande sur le site de la CAF dès que vous avez le bail.</span></li>
+      </ul>
+    </div>
+    <div class="box box-fonte"><b class="box-t">🔗 <span class="pt">Fontes oficiais</span><span class="fr">Sources officielles</span></b><span class="pt">Service-Public.fr (bail, dépôt de garantie, assurance habitation) · visale.fr · caf.fr.</span><span class="fr">Service-Public.fr (bail, dépôt de garantie, assurance habitation) · visale.fr · caf.fr.</span></div>
+  </div>
+
+  <!-- SEÇÃO 5 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 5</span><span class="fr">Section 5</span></p>
+    <h2><span class="pt">Banco: a conta e o RIB que abrem portas</span><span class="fr">Banque : le compte et le RIB qui ouvrent les portes</span></h2>
+    <p><span class="pt">Assim que puder, abra uma <strong>conta bancária francesa</strong>. Dela sai o <strong>RIB</strong> — o documento com os seus dados bancários — pedido para receber salário, pagar aluguel, contratar telefone e receber ajudas da CAF. Sem RIB francês, a vida trava.</span><span class="fr">Dès que possible, ouvrez un <strong>compte bancaire français</strong>. Il vous donne le <strong>RIB</strong> — le document avec vos coordonnées bancaires — demandé pour recevoir un salaire, payer le loyer, souscrire un forfait et toucher les aides de la CAF. Sans RIB français, tout se bloque.</span></p>
+    <div class="box box-doc">
+      <b class="box-t"><span class="pt">📄 Para abrir a conta</span><span class="fr">📄 Pour ouvrir le compte</span></b>
+      <ul>
+        <li><span class="pt">Documento de identidade (passaporte) e o seu título/visto;</span><span class="fr">Pièce d'identité (passeport) et votre titre/visa ;</span></li>
+        <li><span class="pt">Comprovante de endereço (justificatif de domicile);</span><span class="fr">Justificatif de domicile ;</span></li>
+        <li><span class="pt">Às vezes, um comprovante da situação (estudo/trabalho).</span><span class="fr">Parfois, un justificatif de situation (études/travail).</span></li>
+      </ul>
+    </div>
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">⚠️ Recusaram a sua conta? Existe o "direito à conta"</span><span class="fr">⚠️ Compte refusé ? Il existe le « droit au compte »</span></b>
+      <p style="margin:0"><span class="pt">Se um banco recusar abrir a sua conta, você pode acionar o <strong>droit au compte</strong> junto ao <strong>Banco da França</strong> (Banque de France): ele designa um banco obrigado a abrir uma conta com serviços básicos gratuitos. As <strong>neobancos</strong> (contas 100% online) costumam ser o caminho mais rápido no começo.</span><span class="fr">Si une banque refuse, vous pouvez actionner le <strong>droit au compte</strong> auprès de la <strong>Banque de France</strong> : elle désigne une banque tenue d'ouvrir un compte avec des services de base gratuits. Les <strong>néo-banques</strong> (100 % en ligne) sont souvent la voie la plus rapide au début.</span></p>
+    </div>
+    <div class="box box-fonte"><b class="box-t">🔗 <span class="pt">Fontes oficiais</span><span class="fr">Sources officielles</span></b><span class="pt">Service-Public.fr (« ouverture d'un compte bancaire ») · Banque de France (droit au compte).</span><span class="fr">Service-Public.fr (« ouverture d'un compte bancaire ») · Banque de France (droit au compte).</span></div>
+  </div>
+
+  <!-- SEÇÃO 6 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 6</span><span class="fr">Section 6</span></p>
+    <h2><span class="pt">Saúde: a Sécu, a Carte Vitale e a mutuelle</span><span class="fr">Santé : la Sécu, la Carte Vitale et la mutuelle</span></h2>
+    <p><span class="pt">Morando na França de forma estável e regular, você tem direito à <strong>seguridade social de saúde</strong> (a "Sécu"). O caminho: registrar-se na <strong>CPAM</strong> (a caixa do seu departamento), receber um <strong>número de seguridade social</strong> (primeiro provisório, depois definitivo), pedir a <strong>Carte Vitale</strong> e escolher o seu <strong>médecin traitant</strong> (médico de referência).</span><span class="fr">En résidant en France de façon stable et régulière, vous avez droit à l'<strong>assurance maladie</strong> (la « Sécu »). Le parcours : s'inscrire à la <strong>CPAM</strong> (la caisse de votre département), obtenir un <strong>numéro de sécurité sociale</strong> (provisoire puis définitif), demander la <strong>Carte Vitale</strong> et choisir votre <strong>médecin traitant</strong>.</span></p>
+    <div class="box box-doc">
+      <b class="box-t"><span class="pt">📄 Para se registrar na CPAM</span><span class="fr">📄 Pour s'inscrire à la CPAM</span></b>
+      <ul>
+        <li><span class="pt">Documento de identidade e título de residência/visto validado;</span><span class="fr">Pièce d'identité et titre de séjour/visa validé ;</span></li>
+        <li><span class="pt">Certidão de nascimento (traduzida), RIB e comprovante de endereço;</span><span class="fr">Acte de naissance (traduit), RIB et justificatif de domicile ;</span></li>
+        <li><span class="pt">O formulário de pedido de afiliação (no ameli.fr).</span><span class="fr">Le formulaire de demande d'affiliation (sur ameli.fr).</span></li>
+      </ul>
+    </div>
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">⚠️ Enquanto o número não sai</span><span class="fr">⚠️ En attendant le numéro</span></b>
+      <p style="margin:0"><span class="pt">O registro leva tempo — pode levar <strong>semanas ou meses</strong>. <strong>Guarde todas as faturas e recibos</strong> de médico e farmácia: depois de afiliado, muitos gastos são reembolsados de forma retroativa. A Sécu costuma cobrir cerca de <strong>70%</strong> das consultas de base; o restante fica com a <strong>mutuelle</strong> (seguro complementar) — vale contratar uma. Em emergência, o hospital atende antes de qualquer papelada; ligue 15 ou 112.</span><span class="fr">L'inscription prend du temps — parfois <strong>des semaines ou des mois</strong>. <strong>Conservez toutes vos factures</strong> de médecin et de pharmacie : une fois affilié, beaucoup de frais sont remboursés rétroactivement. La Sécu couvre environ <strong>70 %</strong> des consultations de base ; le reste relève de la <strong>mutuelle</strong> (complémentaire) — mieux vaut en souscrire une. En urgence, l'hôpital soigne avant toute paperasse ; appelez le 15 ou le 112.</span></p>
+    </div>
+    <div class="box box-fonte"><b class="box-t">🔗 <span class="pt">Fonte oficial</span><span class="fr">Source officielle</span></b><span class="pt">ameli.fr · Service-Public.fr (protection maladie).</span><span class="fr">ameli.fr · Service-Public.fr (protection maladie).</span></div>
+  </div>
+
+  <!-- SEÇÃO 7 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 7</span><span class="fr">Section 7</span></p>
+    <h2><span class="pt">Dinheiro e impostos: o básico do primeiro ano</span><span class="fr">Argent et impôts : les bases de la première année</span></h2>
+    <p><span class="pt">Na França, quem <strong>mora</strong> aqui declara o imposto de renda — mesmo no primeiro ano e mesmo com renda baixa ou nenhuma. A declaração é <strong>anual</strong> (a campanha abre na primavera) e, muitas vezes, dá acesso a benefícios e a documentos (o <em>avis d'imposition</em>) que você vai precisar em outros trâmites.</span><span class="fr">En France, celui qui <strong>réside</strong> ici déclare ses revenus — même la première année et même avec de faibles revenus, voire aucun. La déclaration est <strong>annuelle</strong> (la campagne ouvre au printemps) et donne souvent accès à des aides et à des documents (l'<em>avis d'imposition</em>) demandés dans d'autres démarches.</span></p>
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">⚠️ Primeiro passo: o número fiscal</span><span class="fr">⚠️ Première étape : le numéro fiscal</span></b>
+      <p style="margin:0"><span class="pt">Para declarar pela primeira vez, você precisa de um <strong>número fiscal</strong>. Solicite-o no <strong>impots.gouv.fr</strong> (ou no centro de impostos da sua região). O imposto é descontado ao longo do ano pelo <strong>prélèvement à la source</strong> (retido na fonte), mas a declaração anual continua obrigatória para acertar as contas.</span><span class="fr">Pour déclarer la première fois, il vous faut un <strong>numéro fiscal</strong>. Demandez-le sur <strong>impots.gouv.fr</strong> (ou auprès de votre centre des finances publiques). L'impôt est prélevé au fil de l'année via le <strong>prélèvement à la source</strong>, mais la déclaration annuelle reste obligatoire pour régulariser.</span></p>
+    </div>
+    <div class="box box-fonte"><b class="box-t">🔗 <span class="pt">Fonte oficial</span><span class="fr">Source officielle</span></b><span class="pt">impots.gouv.fr (« je déclare pour la première fois » e seção internacional) · economie.gouv.fr.</span><span class="fr">impots.gouv.fr (« je déclare pour la première fois » et rubrique internationale) · economie.gouv.fr.</span></div>
+  </div>
+
+  <!-- SEÇÃO 8 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 8</span><span class="fr">Section 8</span></p>
+    <h2><span class="pt">Trabalho: France Travail e o seu diploma</span><span class="fr">Travail : France Travail et votre diplôme</span></h2>
+    <p><span class="pt">O seu <strong>direito de trabalhar</strong> depende do seu título de residência — confira o que o seu permite. Para procurar emprego e ter acesso a serviços e formações, inscreva-se no <strong>France Travail</strong> (o antigo Pôle emploi). E adapte o seu <strong>CV e a lettre de motivation</strong> ao padrão francês: currículo curto (1 página), objetivo e sem foto obrigatória.</span><span class="fr">Votre <strong>droit de travailler</strong> dépend de votre titre de séjour — vérifiez ce qu'il autorise. Pour chercher un emploi et accéder aux services et formations, inscrivez-vous à <strong>France Travail</strong> (ex-Pôle emploi). Et adaptez votre <strong>CV et votre lettre de motivation</strong> au format français : CV court (1 page), précis, sans photo obligatoire.</span></p>
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">⚠️ O seu diploma estrangeiro</span><span class="fr">⚠️ Votre diplôme étranger</span></b>
+      <p style="margin:0"><span class="pt">A França raramente faz "equivalência automática" de diplomas. O que existe é uma <strong>attestation de comparabilité</strong> emitida pelo <strong>ENIC-NARIC France</strong>, que compara o seu diploma ao sistema francês — muito útil em processos seletivos. Profissões regulamentadas (saúde, direito, etc.) têm regras próprias.</span><span class="fr">La France fait rarement une « équivalence automatique » des diplômes. Ce qui existe, c'est une <strong>attestation de comparabilité</strong> délivrée par <strong>ENIC-NARIC France</strong>, qui situe votre diplôme dans le système français — très utile en recrutement. Les professions réglementées (santé, droit, etc.) ont leurs propres règles.</span></p>
+    </div>
+    <div class="box box-fonte"><b class="box-t">🔗 <span class="pt">Fontes oficiais</span><span class="fr">Sources officielles</span></b><span class="pt">francetravail.fr · ENIC-NARIC France · Service-Public.fr.</span><span class="fr">francetravail.fr · ENIC-NARIC France · Service-Public.fr.</span></div>
+  </div>
+
+  <!-- SEÇÃO 9 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 9</span><span class="fr">Section 9</span></p>
+    <h2><span class="pt">Filhos: escola e creche</span><span class="fr">Enfants : école et crèche</span></h2>
+    <p><span class="pt">Na França, a <strong>instrução é obrigatória dos 3 aos 16 anos</strong>. Toda criança tem direito à escola pública, <strong>independentemente da situação administrativa</strong> da família. Para a escola primária, a matrícula começa na <strong>mairie</strong> (prefeitura do bairro); para o collège/lycée, no estabelecimento ou via os serviços de educação.</span><span class="fr">En France, l'<strong>instruction est obligatoire de 3 à 16 ans</strong>. Tout enfant a droit à l'école publique, <strong>quelle que soit la situation administrative</strong> de la famille. Pour l'école primaire, l'inscription commence à la <strong>mairie</strong> ; pour le collège/lycée, auprès de l'établissement ou des services de l'éducation.</span></p>
+    <div class="box box-doc">
+      <b class="box-t"><span class="pt">📄 Para matricular</span><span class="fr">📄 Pour inscrire</span></b>
+      <ul>
+        <li><span class="pt">Documento de identidade da criança e do responsável;</span><span class="fr">Pièce d'identité de l'enfant et du responsable ;</span></li>
+        <li><span class="pt">Comprovante de endereço;</span><span class="fr">Justificatif de domicile ;</span></li>
+        <li><span class="pt">Caderneta de vacinação (as vacinas obrigatórias são exigidas).</span><span class="fr">Carnet de vaccination (les vaccins obligatoires sont exigés).</span></li>
+      </ul>
+    </div>
+    <p><span class="pt">Para os menores de 3 anos, as vagas de <strong>creche</strong> são disputadas: procure a mairie e a CAF o quanto antes; há também assistentes maternais (<em>assistantes maternelles</em>) e o périscolaire para depois da aula.</span><span class="fr">Pour les moins de 3 ans, les places en <strong>crèche</strong> sont très demandées : contactez la mairie et la CAF au plus tôt ; il existe aussi les <em>assistantes maternelles</em> et le périscolaire après l'école.</span></p>
+    <div class="box box-fonte"><b class="box-t">🔗 <span class="pt">Fontes oficiais</span><span class="fr">Sources officielles</span></b><span class="pt">Service-Public.fr (scolarité) · a mairie da sua cidade · caf.fr.</span><span class="fr">Service-Public.fr (scolarité) · la mairie de votre ville · caf.fr.</span></div>
+  </div>
+
+  <!-- SEÇÃO 10 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 10</span><span class="fr">Section 10</span></p>
+    <h2><span class="pt">Vida prática: transporte, idioma e emergências</span><span class="fr">Vie pratique : transports, langue et urgences</span></h2>
+    <p><span class="pt">Cada região tem o seu <strong>passe de transporte</strong> (em Île-de-France, o Navigo; em outras cidades, passes locais) — quase sempre compensa a assinatura mensal. Para o <strong>francês</strong>, além da formação do CIR (Seção 2), há cursos gratuitos ou baratos em associações e na mairie; falar a língua acelera tudo.</span><span class="fr">Chaque région a son <strong>titre de transport</strong> (en Île-de-France, le Navigo ; ailleurs, des passes locaux) — l'abonnement mensuel est presque toujours rentable. Pour le <strong>français</strong>, en plus de la formation du CIR (Section 2), il existe des cours gratuits ou peu chers en association et à la mairie ; parler la langue accélère tout.</span></p>
+    <div class="box box-atencao">
+      <b class="box-t"><span class="pt">🚨 Números de emergência (guarde no celular)</span><span class="fr">🚨 Numéros d'urgence (à enregistrer)</span></b>
+      <ul>
+        <li><strong>112</strong> — <span class="pt">emergência europeia (funciona em toda a UE);</span><span class="fr">urgence européenne (dans toute l'UE) ;</span></li>
+        <li><strong>15</strong> — <span class="pt">SAMU (urgência médica);</span><span class="fr">SAMU (urgence médicale) ;</span></li>
+        <li><strong>17</strong> — <span class="pt">polícia;</span><span class="fr">police ;</span></li>
+        <li><strong>18</strong> — <span class="pt">bombeiros;</span><span class="fr">pompiers ;</span></li>
+        <li><strong>114</strong> — <span class="pt">emergência por SMS (surdos e mudos);</span><span class="fr">urgence par SMS (sourds et malentendants) ;</span></li>
+        <li><strong>115</strong> — <span class="pt">abrigo/sem-teto · <strong>119</strong> — crianças em perigo.</span><span class="fr">hébergement d'urgence · <strong>119</strong> — enfance en danger.</span></li>
+      </ul>
+    </div>
+    <div class="box box-fonte"><b class="box-t">🔗 <span class="pt">Fontes oficiais</span><span class="fr">Sources officielles</span></b><span class="pt">Service-Public.fr · ofii.fr (CIR/aulas de francês) · sites de transporte da sua região.</span><span class="fr">Service-Public.fr · ofii.fr (CIR/cours de français) · sites de transport de votre région.</span></div>
+  </div>
+
+  <!-- SEÇÃO 11 — CHECKLIST -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 11</span><span class="fr">Section 11</span></p>
+    <h2><span class="pt">Checklist dos 30 primeiros dias</span><span class="fr">Checklist des 30 premiers jours</span></h2>
+    <p><span class="pt">Imprima esta página e vá marcando. A ordem importa: sem endereço e conta, o resto emperra.</span><span class="fr">Imprimez cette page et cochez au fur et à mesure. L'ordre compte : sans adresse ni compte, le reste coince.</span></p>
+    <div class="checklist">
+      <h3><span class="pt">Semana 1</span><span class="fr">Semaine 1</span></h3>
+      <ul>
+        <li><span class="pt">Guardar em segurança passaporte, visto e cópias digitais de tudo.</span><span class="fr">Mettre en sécurité passeport, visa et copies numériques de tout.</span></li>
+        <li><span class="pt">Definir um endereço e providenciar o comprovante (ou a attestation d'hébergement).</span><span class="fr">Fixer une adresse et obtenir le justificatif (ou l'attestation d'hébergement).</span></li>
+        <li><span class="pt">Comprar um chip pré-pago (número francês).</span><span class="fr">Acheter une carte SIM prépayée (numéro français).</span></li>
+      </ul>
+      <h3><span class="pt">Semana 2</span><span class="fr">Semaine 2</span></h3>
+      <ul>
+        <li><span class="pt"><strong>Validar o VLS-TS</strong> no portal ANEF e pagar a taxa (não deixar para depois).</span><span class="fr"><strong>Valider le VLS-TS</strong> sur le portail ANEF et payer la taxe (ne pas remettre à plus tard).</span></li>
+        <li><span class="pt">Abrir a conta bancária e guardar o RIB.</span><span class="fr">Ouvrir le compte bancaire et conserver le RIB.</span></li>
+      </ul>
+      <h3><span class="pt">Semanas 3–4</span><span class="fr">Semaines 3–4</span></h3>
+      <ul>
+        <li><span class="pt">Iniciar o registro na CPAM (saúde) e escolher o médecin traitant.</span><span class="fr">Lancer l'inscription à la CPAM (santé) et choisir le médecin traitant.</span></li>
+        <li><span class="pt">Contratar o seguro habitação e pedir a APL na CAF (se for o caso).</span><span class="fr">Souscrire l'assurance habitation et demander l'APL à la CAF (le cas échéant).</span></li>
+        <li><span class="pt">Se tiver filhos: matricular na escola/creche.</span><span class="fr">Si vous avez des enfants : inscrire à l'école/crèche.</span></li>
+        <li><span class="pt">Assinar o passe de transporte; se for o caso, aguardar a convocação do OFII (CIR).</span><span class="fr">Souscrire le titre de transport ; le cas échéant, attendre la convocation OFII (CIR).</span></li>
+        <li><span class="pt">Pedir o número fiscal (impots.gouv.fr) e inscrever-se no France Travail, se for procurar emprego.</span><span class="fr">Demander le numéro fiscal (impots.gouv.fr) et s'inscrire à France Travail si recherche d'emploi.</span></li>
+      </ul>
+      <button class="printbtn" type="button" onclick="window.print()"><span class="pt">🖨️ Imprimir o checklist</span><span class="fr">🖨️ Imprimer la checklist</span></button>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 12 -->
+  <div class="sec">
+    <p class="sec-num"><span class="pt">Seção 12</span><span class="fr">Section 12</span></p>
+    <h2><span class="pt">Você não está sozinho</span><span class="fr">Vous n'êtes pas seul</span></h2>
+    <p><span class="pt">Chegar é a parte difícil — e você acaba de dar os passos que mais confundem. Guarde este guia: vamos <strong>mantê-lo atualizado</strong> a cada mudança de regra. E conte com a gente: se faltou alguma coisa que <em>você</em> precisou, escreva pela Área VIP — é assim que este guia melhora.</span><span class="fr">Arriver, c'est le plus dur — et vous venez de franchir les étapes les plus déroutantes. Gardez ce guide : nous le <strong>tiendrons à jour</strong> à chaque changement de règle. Et comptez sur nous : s'il manque quelque chose dont <em>vous</em> avez eu besoin, écrivez-nous via l'Espace VIP — c'est ainsi que ce guide s'améliore.</span></p>
+  </div>
+
+  </div><!-- /vip-only -->
+
+  <div class="foot">
+    <h3><span class="pt">Fontes oficiais consultadas</span><span class="fr">Sources officielles consultées</span></h3>
+    <p>
+      France-Visas — <a href="https://france-visas.gouv.fr/en/votre-arrivee-en-france" target="_blank" rel="noopener">votre arrivée en France</a> ·
+      Service-Public.fr (validation VLS-TS ; justificatif de domicile ; bail ; compte bancaire ; scolarité) ·
+      ANEF — administration-etrangers-en-france.interieur.gouv.fr ·
+      <span class="pt">Préfectures — novos montantes das taxas a partir de 1º/05/2026 (loi de finances 2026)</span><span class="fr">Préfectures — nouveaux montants des taxes au 1er/05/2026 (loi de finances 2026)</span> ·
+      OFII (ofii.fr) — CIR · visale.fr · caf.fr · Banque de France (droit au compte) · ameli.fr · impots.gouv.fr · francetravail.fr · ENIC-NARIC France.
+    </p>
+    <div class="disclaimer">
+      <span class="pt"><strong>Aviso.</strong> Este guia é informativo e não substitui aconselhamento jurídico. Regras, prazos e valores mudam e podem variar conforme a sua préfecture e a sua situação. Confirme sempre na fonte oficial antes de agir. Atualizado em 04/09/2026.</span>
+      <span class="fr"><strong>Avertissement.</strong> Ce guide est informatif et ne remplace pas un conseil juridique. Les règles, délais et montants évoluent et peuvent varier selon votre préfecture et votre situation. Vérifiez toujours à la source officielle avant d'agir. Mis à jour le 04/09/2026.</span>
+    </div>
+    <p style="margin-top:16px">© 2026 The Crossing Time · <span class="pt">Guia da Área VIP</span><span class="fr">Guide de l'Espace VIP</span></p>
+  </div>
+
+</div>
+
+<script>
+  function setL(l){
+    document.body.setAttribute('data-lang',l);
+    document.documentElement.lang=l;
+    document.getElementById('l-pt').className=(l==='pt')?'on':'';
+    document.getElementById('l-fr').className=(l==='fr')?'on':'';
+  }
+  (function(){
+    var q=(location.search.match(/[?&]lang=(pt|fr)/)||[])[1];
+    if(q){ setL(q); return; }
+    if((navigator.language||'').toLowerCase().indexOf('fr')===0) setL('fr');
+  })();
+</script>
+
+<!-- Gate VIP: destrava as seções 4–12 se a pessoa estiver logada na Área VIP (sessão compartilhada no mesmo domínio) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+  var SUPABASE_URL='https://vafapralyahudvkqvjdu.supabase.co';
+  var SUPABASE_ANON_KEY='sb_publishable_YQDnfpu-_MFUleKlv1rmHw_w4bGrjf0';
+  function setGate(s){ document.body.setAttribute('data-gate', s); }
+  setGate('locked'); // padrão seguro: começa travado
+  try{
+    if(window.supabase && window.supabase.createClient){
+      var sb=window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      function apply(sess){
+        if(!sess || !sess.user || !sess.user.id){ setGate('locked'); return; }
+        sb.from('vip_members').select('is_subscriber').eq('user_id', sess.user.id).maybeSingle()
+          .then(function(res){ setGate(res && res.data && res.data.is_subscriber===true ? 'unlocked' : 'locked'); })
+          .catch(function(){ setGate('locked'); });
+      }
+      sb.auth.getSession().then(function(r){ apply(r && r.data && r.data.session); }).catch(function(){ setGate('locked'); });
+      sb.auth.onAuthStateChange(function(ev, sess){ apply(sess); });
+    }
+  }catch(e){ setGate('locked'); }
+})();
+</script>
+<script id="tct-ga-ebook">
+(function(){
+  var GA_ID='G-RZC583GSQY';
+  try{ if(localStorage.getItem('tct_ga_consent')!=='granted') return; }catch(e){ return; }
+  var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments);} window.gtag=gtag;
+  gtag('js',new Date()); gtag('config',GA_ID,{anonymize_ip:true});
+})();
+</script>
+</body>
+</html>

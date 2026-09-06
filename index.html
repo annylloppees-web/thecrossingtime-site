@@ -1422,8 +1422,22 @@ h3.mat-cover-title {
 .vip-lock .vip-btn{max-width:320px;margin:0 auto}
 @media(max-width:560px){.vip-title{font-size:25px}.vip-page .vip-wrap{padding:32px 18px 60px}}
 </style>
+<style id="tct-vip-css2">
+.vip-cta{background:#fff;border:1px solid #e6e2d8;border-left:4px solid #C6A15B;border-radius:10px;padding:16px 18px;margin:0 0 8px}
+.vip-cta p{margin:0 0 12px;font-size:14.5px;color:#3a4250}
+.vip-cta-btns{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.vip-cta .vip-btn{width:auto;padding:12px 20px}
+.vip-sec{margin:30px 0 0}
+.vip-sec-h{font-family:Georgia,'Times New Roman',serif;font-size:19px;color:#0E1A2B;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #e6e2d8;font-weight:700}
+.vip-badge-free{background:#2e7d55}
+.vc-autor{font:700 12px Arial,Helvetica,sans-serif;letter-spacing:.04em;color:#C6A15B;text-transform:uppercase;margin:0 0 4px}
+.vc-open{display:inline-block;margin-top:12px;background:#0E1A2B;color:#fff;font:700 13px Arial,Helvetica,sans-serif;padding:11px 18px;border-radius:7px;text-decoration:none}
+.vc-open:hover{background:#16283f}
+.vip-unlock{width:auto;max-width:none;margin:0}
+.vip-lock{margin-top:12px}
+</style>
 </head>
-<body data-tct-build="p15-v39 · 4set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v43 · 6set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1583,7 +1597,7 @@ h3.mat-cover-title {
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v39 · 4set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v43 · 6set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3757,10 +3771,56 @@ document.addEventListener('DOMContentLoaded', function(){
 
 <div class="page vip-page" id="page-vip" style="display:none;">
  <div class="vip-wrap">
-  <div id="vip-auth">
-   <p class="vip-eyebrow"><span class="ng-pt">ÁREA VIP · MEMBROS FUNDADORES</span><span class="ng-fr" style="display:none;">ESPACE VIP · MEMBRES FONDATEURS</span></p>
-   <h1 class="vip-title"><span class="ng-pt">O melhor da The Crossing Time, só para membros</span><span class="ng-fr" style="display:none;">Le meilleur de The Crossing Time, réservé aux membres</span></h1>
-   <p class="vip-sub"><span class="ng-pt">Crie a sua conta para acessar os conteúdos exclusivos. Nesta fase de teste, é gratuito.</span><span class="ng-fr" style="display:none;">Créez votre compte pour accéder aux contenus exclusifs. Durant cette phase de test, c'est gratuit.</span></p>
+
+  <div id="vip-vitrine">
+   <p class="vip-eyebrow"><span class="ng-pt">ÁREA VIP</span><span class="ng-fr" style="display:none;">ESPACE VIP</span></p>
+   <h1 class="vip-title"><span class="ng-pt">O melhor da The Crossing Time</span><span class="ng-fr" style="display:none;">Le meilleur de The Crossing Time</span></h1>
+   <p class="vip-sub"><span class="ng-pt">Colunas, e-books, guias de imigração e a revista completa. Uma parte é aberta a todos; o conteúdo completo é exclusivo dos membros.</span><span class="ng-fr" style="display:none;">Chroniques, e-books, guides d'immigration et le magazine complet. Une partie est ouverte à tous ; le contenu complet est réservé aux membres.</span></p>
+
+   <div id="vip-cta-guest" class="vip-cta">
+    <p><span class="ng-pt">Crie a sua conta <b>gratuita</b> nesta fase de teste e desbloqueie tudo.</span><span class="ng-fr" style="display:none;">Créez votre compte <b>gratuit</b> durant cette phase de test et débloquez tout.</span></p>
+    <div class="vip-cta-btns">
+     <button class="vip-btn" type="button" onclick="vipShowAuth('cad')"><span class="ng-pt">Criar conta grátis</span><span class="ng-fr" style="display:none;">Créer un compte gratuit</span></button>
+     <button class="vip-link" type="button" onclick="vipShowAuth('log')"><span class="ng-pt">Já sou membro · Entrar</span><span class="ng-fr" style="display:none;">Déjà membre · Se connecter</span></button>
+    </div>
+   </div>
+
+  <div id="vip-paywall" class="vip-cta" style="display:none;">
+   <p><span class="ng-pt">Assine para desbloquear tudo — colunas, e-books, guias e a revista completa.</span><span class="ng-fr" style="display:none;">Abonnez-vous pour tout débloquer — chroniques, e-books, guides et le magazine complet.</span></p>
+   <div class="vip-cta-btns">
+    <button class="vip-btn" type="button" onclick="vipCheckout('monthly')"><span class="ng-pt">Assinar · €2,99/mês</span><span class="ng-fr" style="display:none;">S\'abonner · 2,99 €/mois</span></button>
+    <button class="vip-btn" type="button" style="background:#16283f" onclick="vipCheckout('annual')"><span class="ng-pt">Anual · €29/ano</span><span class="ng-fr" style="display:none;">Annuel · 29 €/an</span></button>
+   </div>
+   <p style="font-size:12px;color:#8a94a2;margin:10px 0 0"><span class="ng-pt">Pagamento seguro via Stripe. Cancele quando quiser.</span><span class="ng-fr" style="display:none;">Paiement sécurisé via Stripe. Annulable à tout moment.</span></p>
+  </div>
+
+  <div id="vip-manage" style="display:none;margin:0 0 8px;">
+   <button class="vip-link" type="button" onclick="vipPortal()"><span class="ng-pt">Gerenciar assinatura</span><span class="ng-fr" style="display:none;">Gérer l\'abonnement</span></button>
+  </div>
+
+  <section class="vip-sec" id="vip-sec-edicao">
+   <h2 class="vip-sec-h"><span class="ng-pt">Edições da revista</span><span class="ng-fr" style="display:none;">Éditions du magazine</span></h2>
+   <div class="vip-list" data-cat="edicao"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
+  </section>
+  <section class="vip-sec" id="vip-sec-coluna">
+   <h2 class="vip-sec-h"><span class="ng-pt">Colunas</span><span class="ng-fr" style="display:none;">Chroniques</span></h2>
+   <div class="vip-list" data-cat="coluna"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
+  </section>
+  <section class="vip-sec" id="vip-sec-ebook">
+   <h2 class="vip-sec-h"><span class="ng-pt">E-books</span><span class="ng-fr" style="display:none;">E-books</span></h2>
+   <div class="vip-list" data-cat="ebook"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
+  </section>
+  <section class="vip-sec" id="vip-sec-imigracao">
+   <h2 class="vip-sec-h"><span class="ng-pt">Imigração</span><span class="ng-fr" style="display:none;">Immigration</span></h2>
+   <div class="vip-list" data-cat="imigracao"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
+  </section>
+  </div>
+
+  <div id="vip-auth" hidden>
+   <button type="button" class="vip-link" onclick="vipHideAuth()" style="margin-bottom:14px">&larr; <span class="ng-pt">Voltar</span><span class="ng-fr" style="display:none;">Retour</span></button>
+   <p class="vip-eyebrow"><span class="ng-pt">ÁREA VIP · ACESSO GRATUITO</span><span class="ng-fr" style="display:none;">ESPACE VIP · ACCÈS GRATUIT</span></p>
+   <h1 class="vip-title" style="font-size:26px"><span class="ng-pt">Crie a sua conta</span><span class="ng-fr" style="display:none;">Créez votre compte</span></h1>
+   <p class="vip-sub"><span class="ng-pt">Nesta fase de teste é gratuito. Desbloqueie colunas, e-books, guias de imigração e a revista completa.</span><span class="ng-fr" style="display:none;">Durant cette phase de test, c'est gratuit. Débloquez chroniques, e-books, guides d'immigration et le magazine complet.</span></p>
    <div class="vip-tabs">
     <button id="vip-tab-cad" class="on" type="button" onclick="vipTab('cad')"><span class="ng-pt">Criar conta</span><span class="ng-fr" style="display:none;">Créer un compte</span></button>
     <button id="vip-tab-log" type="button" onclick="vipTab('log')"><span class="ng-pt">Entrar</span><span class="ng-fr" style="display:none;">Se connecter</span></button>
@@ -3791,12 +3851,6 @@ document.addEventListener('DOMContentLoaded', function(){
     <button class="vip-btn" type="submit"><span class="ng-pt">Entrar</span><span class="ng-fr" style="display:none;">Se connecter</span></button>
     <p class="vip-alt"><button type="button" class="vip-link" onclick="vipReset()"><span class="ng-pt">Esqueci a minha senha</span><span class="ng-fr" style="display:none;">Mot de passe oublié</span></button></p>
    </form>
-  </div>
-
-  <div id="vip-app" hidden>
-   <p class="vip-eyebrow"><span class="ng-pt">ÁREA VIP · CONTEÚDO EXCLUSIVO</span><span class="ng-fr" style="display:none;">ESPACE VIP · CONTENU EXCLUSIF</span></p>
-   <h1 class="vip-title" style="font-size:27px;margin:0 0 18px"><span class="ng-pt">Conteúdo exclusivo para membros</span><span class="ng-fr" style="display:none;">Contenu exclusif pour les membres</span></h1>
-   <div id="vip-list" class="vip-list"><p class="vip-empty"><span class="ng-pt">Carregando…</span><span class="ng-fr" style="display:none;">Chargement…</span></p></div>
   </div>
  </div>
 </div>
@@ -6825,7 +6879,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v39 · 4set2026';try{
+(function(){var BUILD='p15-v43 · 6set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -6927,13 +6981,39 @@ function ouvirToggle(){
     if(ba) ba.style.display=on?'none':'';
     if(lo) lo.style.display=on?'inline-block':'none';
   }
-  function showAuth(){ var a=$('vip-auth'),p=$('vip-app'); if(a)a.hidden=false; if(p)p.hidden=true; vipNav(false); }
-  function showApp(profile){
-    var a=$('vip-auth'),p=$('vip-app'); if(a)a.hidden=true; if(p)p.hidden=false;
-    var nome=(profile&&profile.nome)?profile.nome:'';
-    vipNav(true,nome);
-    loadPosts();
+  var VIPLOGGED=false, VIPSUB=false;
+  var VIP_FN='https://vafapralyahudvkqvjdu.supabase.co/functions/v1/stripe-vip';
+  function setVipCTAs(state){
+    var g=$('vip-cta-guest'), p=$('vip-paywall'), m=$('vip-manage');
+    if(g) g.style.display=(state==='guest')?'':'none';
+    if(p) p.style.display=(state==='nonsub')?'':'none';
+    if(m) m.style.display=(state==='sub')?'':'none';
   }
+  function showAuth(){ var a=$('vip-auth'); if(a)a.hidden=true; var v=$('vip-vitrine'); if(v)v.hidden=false; VIPLOGGED=false; VIPSUB=false; vipNav(false); loadVip(false); setVipCTAs('guest'); }
+  function showApp(profile){
+    var a=$('vip-auth'); if(a)a.hidden=true; var v=$('vip-vitrine'); if(v)v.hidden=false;
+    var nome=(profile&&profile.nome)?profile.nome:'';
+    VIPLOGGED=true; VIPSUB=(profile&&profile.is_subscriber===true);
+    vipNav(true,nome);
+    loadVip(VIPSUB);
+    setVipCTAs(VIPSUB?'sub':'nonsub');
+  }
+  window.vipUnlockClick=function(){ if(VIPLOGGED){ var p=$('vip-paywall'); if(p&&p.scrollIntoView){try{p.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}} } else { if(window.vipShowAuth)vipShowAuth('cad'); } };
+  function vipCall(path,payload){
+    if(!READY)return;
+    sb.auth.getSession().then(function(r){
+      var t=r.data&&r.data.session&&r.data.session.access_token;
+      if(!t){ if(window.vipShowAuth)vipShowAuth('log'); return; }
+      fetch(VIP_FN+path,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+t},body:JSON.stringify(payload||{})})
+        .then(function(x){return x.json();})
+        .then(function(d){ if(d&&d.url){ location.href=d.url; } else { alert(T('Não foi possível abrir o pagamento. Tente de novo.','Impossible d\'ouvrir le paiement. Réessayez.')); } })
+        .catch(function(){ alert(T('Erro de conexão. Tente novamente.','Erreur de connexion. Réessayez.')); });
+    });
+  }
+  window.vipCheckout=function(plan){ vipCall('/checkout',{plan:plan}); };
+  window.vipPortal=function(){ vipCall('/portal',{}); };
+  window.vipShowAuth=function(which){ var a=$('vip-auth'); if(a){a.hidden=false;} if(window.vipTab)vipTab(which||'cad'); if(a&&a.scrollIntoView){try{a.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){}} };
+  window.vipHideAuth=function(){ var a=$('vip-auth'); if(a)a.hidden=true; clearMsg(); };
 
   function vipRefresh(){
     if(!READY){ showAuth(); msg('info','A Área VIP está a ser configurada. Volte em breve.','L\'Espace VIP est en cours de configuration. Revenez bientôt.'); return; }
@@ -6945,7 +7025,7 @@ function ouvirToggle(){
   }
 
   function fetchProfileAndShow(uid){
-    sb.from('vip_members').select('nome,idioma').eq('user_id',uid).maybeSingle()
+    sb.from('vip_members').select('nome,idioma,is_subscriber').eq('user_id',uid).maybeSingle()
       .then(function(r){ showApp(r.data||{}); })
       .catch(function(){ showApp({}); });
   }
@@ -6969,32 +7049,52 @@ function ouvirToggle(){
       });
   }
 
-  function loadPosts(){
-    var box=$('vip-list'); if(!box)return;
-    sb.from('vip_posts').select('id,chave,titulo_pt,titulo_fr,teaser_pt,teaser_fr,corpo_pt,corpo_fr,capa_url,publicado_em')
-      .eq('is_vip',true).order('publicado_em',{ascending:false})
-      .then(function(r){
-        var rows=r.data||[];
-        if(!rows.length){ box.innerHTML='<p class="vip-empty">'+T('Em breve, os primeiros conteúdos exclusivos.','Bientôt, les premiers contenus exclusifs.')+'</p>'; return; }
-        box.innerHTML='';
-        rows.forEach(function(p){
-          var fr=curLang()==='fr';
-          var ti=(fr?p.titulo_fr:p.titulo_pt)||p.titulo_pt||'';
-          var te=(fr?p.teaser_fr:p.teaser_pt)||p.teaser_pt||'';
-          var co=(fr?p.corpo_fr:p.corpo_pt)||p.corpo_pt||'';
-          var el=document.createElement('div'); el.className='vip-card';
-          var cap=p.capa_url?'<img class="vc-cap" src="'+p.capa_url+'" alt="">':'';
-          el.innerHTML=cap+'<div class="vc-body"><span class="vip-badge">VIP</span>'+
-            '<h3>'+esc(ti)+'</h3><p class="vc-teaser">'+esc(te)+'</p>'+
-            '<div class="vc-corpo" hidden>'+esc(co)+'</div>'+
-            '<button class="vc-more" type="button">'+T('Ler na íntegra ↓','Lire l\'intégralité ↓')+'</button></div>';
-          var btn=el.querySelector('.vc-more'), body=el.querySelector('.vc-corpo');
-          btn.addEventListener('click',function(){ var h=body.hasAttribute('hidden'); if(h){body.removeAttribute('hidden');btn.textContent=T('Recolher ↑','Réduire ↑');} else {body.setAttribute('hidden','');btn.textContent=T('Ler na íntegra ↓','Lire l\'intégralité ↓');} });
-          box.appendChild(el);
-        });
-      })
-      .catch(function(e){ box.innerHTML='<p class="vip-empty">'+T('Não foi possível carregar agora.','Impossible de charger pour le moment.')+'</p>'; });
+  function loadVip(logged){
+    var cols='id,categoria,chave,autor,ordem,titulo_pt,titulo_fr,teaser_pt,teaser_fr,corpo_pt,corpo_fr,capa_url,is_vip,link_url,publicado_em';
+    if(!READY){ renderVip([],logged); return; }
+    var src=logged?'vip_posts':'vip_public';
+    var q=sb.from(src).select(cols);
+    if(logged) q=q.eq('publicado',true);
+    q.order('ordem',{ascending:true}).order('publicado_em',{ascending:false})
+     .then(function(r){ renderVip(r.data||[],logged); })
+     .catch(function(){ renderVip([],logged); });
   }
+  function vipCardHTML(p,logged){
+    var fr=curLang()==='fr';
+    var ti=(fr?p.titulo_fr:p.titulo_pt)||p.titulo_pt||'';
+    var te=(fr?p.teaser_fr:p.teaser_pt)||p.teaser_pt||'';
+    var co=(fr?p.corpo_fr:p.corpo_pt)||p.corpo_pt||'';
+    var isVip=(p.is_vip!==false);
+    var cap=p.capa_url?'<img class="vc-cap" src="'+esc(p.capa_url)+'" alt="">':'';
+    var badge=isVip?'<span class="vip-badge">VIP</span>':'<span class="vip-badge vip-badge-free">'+T('ABERTO','OUVERT')+'</span>';
+    var autor=p.autor?'<div class="vc-autor">'+esc(p.autor)+'</div>':'';
+    var body='';
+    if(p.link_url && (!isVip||logged)){
+      body='<a class="vc-open" href="'+esc(p.link_url)+'" target="_blank" rel="noopener">'+T('Abrir ↗','Ouvrir ↗')+'</a>';
+    } else if(co){
+      body='<div class="vc-corpo" hidden>'+esc(co)+'</div><button class="vc-more" type="button">'+T('Ler na íntegra ↓','Lire l\'intégralité ↓')+'</button>';
+    } else if(isVip && !logged){
+      body='<div class="vip-lock"><p>'+T('🔒 O conteúdo completo é exclusivo dos membros.','🔒 Le contenu complet est réservé aux membres.')+'</p><button class="vip-btn vip-unlock" type="button">'+T('Entre para ler tudo','Se connecter pour tout lire')+'</button></div>';
+    }
+    return '<div class="vip-card">'+cap+'<div class="vc-body">'+badge+autor+'<h3>'+esc(ti)+'</h3><p class="vc-teaser">'+esc(te)+'</p>'+body+'</div></div>';
+  }
+  function renderVip(rows,logged){
+    var byCat={};
+    (rows||[]).forEach(function(p){ var c=p.categoria||'coluna'; (byCat[c]=byCat[c]||[]).push(p); });
+    var boxes=document.querySelectorAll('#vip-vitrine .vip-list');
+    for(var i=0;i<boxes.length;i++){
+      var box=boxes[i], c=box.getAttribute('data-cat'), list=byCat[c]||[];
+      if(!list.length){ box.innerHTML='<p class="vip-empty">'+T('Primeiros conteúdos em breve.','Premiers contenus bientôt.')+'</p>'; continue; }
+      var html=''; for(var k=0;k<list.length;k++){ html+=vipCardHTML(list[k],logged); }
+      box.innerHTML=html;
+    }
+    var mores=document.querySelectorAll('#vip-vitrine .vc-more');
+    for(var m=0;m<mores.length;m++){ (function(btn){ btn.addEventListener('click',function(){ var body=btn.previousElementSibling; if(!body)return; var h=body.hasAttribute('hidden'); if(h){body.removeAttribute('hidden');btn.textContent=T('Recolher ↑','Réduire ↑');}else{body.setAttribute('hidden','');btn.textContent=T('Ler na íntegra ↓','Lire l\'intégralité ↓');} }); })(mores[m]); }
+    var unlocks=document.querySelectorAll('#vip-vitrine .vip-unlock');
+    for(var u=0;u<unlocks.length;u++){ unlocks[u].addEventListener('click',function(){ if(window.vipUnlockClick)vipUnlockClick(); }); }
+    /* CTAs controlados por setVipCTAs() */
+  }
+  window.__vipRender=renderVip;
   function esc(x){return (x||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
   window.vipRegister=function(e){
@@ -7007,8 +7107,8 @@ function ouvirToggle(){
     .then(function(r){ btn.disabled=false;
       if(r.error){ msg('err','Erro: '+r.error.message,'Erreur : '+r.error.message); return; }
       if(r.data && r.data.session){ vipRefresh(); }
-      else { msg('ok','Verifique o seu e-mail — enviámos um link para confirmar o seu acesso VIP.',
-                       'Vérifiez votre e-mail — nous avons envoyé un lien pour confirmer votre accès VIP.'); f.reset(); }
+      else { msg('ok','Conta criada! Confirme pelo link que enviámos para o seu e-mail. ⚠️ Veja também a caixa de spam/lixo — o e-mail chega em nome de "The Crossing Time".',
+                       'Compte créé ! Confirmez via le lien envoyé à votre e-mail. ⚠️ Vérifiez aussi les spams/indésirables — l\'e-mail vient de « The Crossing Time ».'); f.reset(); }
     }).catch(function(){ btn.disabled=false; msg('err','Erro de conexão. Tente novamente.','Erreur de connexion. Réessayez.'); });
     return false;
   };
@@ -7045,9 +7145,49 @@ function ouvirToggle(){
   window.vipOpen=function(){ if(window.showPage)showPage('vip'); vipRefresh(); };
 
   if(READY){ sb.auth.onAuthStateChange(function(ev,sess){ if(ev==='SIGNED_IN'||ev==='SIGNED_OUT')vipRefresh(); }); }
+  if(typeof window.setLang==='function'){ var _vsl=window.setLang; window.setLang=function(){ var r=_vsl.apply(this,arguments); try{ if(document.getElementById('vip-vitrine')) loadVip(VIPLOGGED); }catch(e){} return r; }; }
   function init(){ vipRefresh(); }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
 })();
 </script>
+<!-- ══════ Google Analytics + consentimento (RGPD/CNIL) ══════ -->
+<style id="tct-cookie-css">
+#tct-cookie{position:fixed;left:14px;right:14px;bottom:14px;z-index:100000;max-width:520px;margin:0 auto;background:#0E1A2B;color:#F4F2ED;border:1px solid rgba(198,161,91,.5);border-radius:12px;box-shadow:0 16px 44px rgba(0,0,0,.42);padding:16px 18px;font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;display:none}
+#tct-cookie.show{display:block}
+#tct-cookie p{margin:0 0 12px;font-size:13px;line-height:1.5;color:rgba(244,242,237,.92)}
+#tct-cookie a{color:#C6A15B}
+#tct-cookie .ck-btns{display:flex;gap:10px;flex-wrap:wrap}
+#tct-cookie button{border:0;border-radius:7px;padding:10px 16px;font:700 13px Arial,Helvetica,sans-serif;cursor:pointer}
+#tct-cookie .ck-ok{background:#C6A15B;color:#0E1A2B}
+#tct-cookie .ck-no{background:transparent;color:#F4F2ED;border:1px solid rgba(244,242,237,.4)}
+</style>
+<div id="tct-cookie" role="dialog" aria-label="Cookies">
+  <p><span class="ng-pt">Usamos cookies do Google Analytics para entender como o site &eacute; usado e melhorar o conte&uacute;do. Voc&ecirc; pode aceitar ou recusar &mdash; recusar n&atilde;o afeta o seu acesso. Veja a <a href="privacidade.html" target="_blank" rel="noopener">pol&iacute;tica de privacidade</a>.</span><span class="ng-fr" style="display:none;">Nous utilisons des cookies Google Analytics pour comprendre l'usage du site et l'am&eacute;liorer. Vous pouvez accepter ou refuser &mdash; refuser n'affecte pas votre acc&egrave;s. Voir la <a href="privacidade.html" target="_blank" rel="noopener">politique de confidentialit&eacute;</a>.</span></p>
+  <div class="ck-btns">
+    <button class="ck-ok" type="button" onclick="tctCookie(true)"><span class="ng-pt">Aceitar</span><span class="ng-fr" style="display:none;">Accepter</span></button>
+    <button class="ck-no" type="button" onclick="tctCookie(false)"><span class="ng-pt">Recusar</span><span class="ng-fr" style="display:none;">Refuser</span></button>
+  </div>
+</div>
+<script id="tct-ga-js">
+(function(){
+  var GA_ID='G-RZC583GSQY', KEY='tct_ga_consent';
+  function loadGA(){
+    if(window.__gaLoaded)return; window.__gaLoaded=true;
+    var sc=document.createElement('script'); sc.async=true; sc.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(sc);
+    window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments);} window.gtag=gtag;
+    gtag('js',new Date()); gtag('config',GA_ID,{anonymize_ip:true});
+  }
+  window.tctCookie=function(ok){
+    try{localStorage.setItem(KEY, ok?'granted':'denied');}catch(e){}
+    var el=document.getElementById('tct-cookie'); if(el)el.classList.remove('show');
+    if(ok)loadGA();
+  };
+  var c=null; try{c=localStorage.getItem(KEY);}catch(e){}
+  if(c==='granted'){ loadGA(); }
+  else if(c!=='denied'){ var el=document.getElementById('tct-cookie'); if(el)el.classList.add('show'); }
+})();
+</script>
+<!-- ══════ /Google Analytics ══════ -->
+
 </body>
 </html>
