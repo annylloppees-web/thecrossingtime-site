@@ -1430,6 +1430,11 @@ h3.mat-cover-title {
 .vip-sec{margin:30px 0 0}
 .vip-sec-h{font-family:Georgia,'Times New Roman',serif;font-size:19px;color:#0E1A2B;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #e6e2d8;font-weight:700}
 .vip-badge-free{background:#C6A15B;color:#0E1A2B}
+.vip-sec-h{cursor:pointer;}
+.vip-sec-h:after{content:"\002B";float:right;color:var(--gold);font-weight:700;font-family:Arial,sans-serif;}
+.vip-sec.vs-open .vip-sec-h:after{content:"\2212";}
+.vip-sec-desc{cursor:pointer;margin:2px 0 10px;color:var(--muted);font-size:14px;}
+.vip-sec:not(.vs-open) .vip-list{display:none;}
 .vc-autor{font:700 12px Arial,Helvetica,sans-serif;letter-spacing:.04em;color:#C6A15B;text-transform:uppercase;margin:0 0 4px}
 .vc-open{display:inline-block;margin-top:12px;background:#0E1A2B;color:#fff;font:700 13px Arial,Helvetica,sans-serif;padding:11px 18px;border-radius:7px;text-decoration:none}
 .vc-open:hover{background:#16283f}
@@ -1437,7 +1442,7 @@ h3.mat-cover-title {
 .vip-lock{margin-top:12px}
 </style>
 </head>
-<body data-tct-build="p15-v50 · 6set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v51 · 6set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1597,7 +1602,7 @@ h3.mat-cover-title {
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v50 · 6set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v51 · 6set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3784,20 +3789,24 @@ document.addEventListener('DOMContentLoaded', function(){
   <div id="vip-manage" style="display:none;margin:0 0 8px;">
    <button class="vip-link" type="button" onclick="vipPortal()"><span class="ng-pt">Gerenciar assinatura</span><span class="ng-fr" style="display:none;">Gérer l\'abonnement</span></button>
   </div>
-  <section class="vip-sec" id="vip-sec-imigracao">
-   <h2 class="vip-sec-h"><span class="ng-pt">Imigração</span><span class="ng-fr" style="display:none;">Immigration</span></h2>
+    <section class="vip-sec" id="vip-sec-imigracao">
+   <h2 class="vip-sec-h" onclick="vipToggleSec(this)"><span class="ng-pt">Imigração</span><span class="ng-fr" style="display:none;">Immigration</span></h2>
+   <p class="vip-sec-desc" onclick="vipToggleSec(this.previousElementSibling)"><span class="ng-pt">Guias e e-books: chegada, regularização, impostos e fiscalidade.</span><span class="ng-fr" style="display:none;">Guides et e-books : arrivée, régularisation, impôts et fiscalité.</span></p>
    <div class="vip-list" data-cat="imigracao"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
   </section>
   <section class="vip-sec" id="vip-sec-emprego">
-   <h2 class="vip-sec-h"><span class="ng-pt">Emprego</span><span class="ng-fr" style="display:none;">Emploi</span></h2>
+   <h2 class="vip-sec-h" onclick="vipToggleSec(this)"><span class="ng-pt">Emprego</span><span class="ng-fr" style="display:none;">Emploi</span></h2>
+   <p class="vip-sec-desc" onclick="vipToggleSec(this.previousElementSibling)"><span class="ng-pt">Guia de emprego, currículo e carta, e diretório de vagas.</span><span class="ng-fr" style="display:none;">Guide emploi, CV et lettre, annuaire des offres.</span></p>
    <div class="vip-list" data-cat="emprego"></div>
   </section>
   <section class="vip-sec" id="vip-sec-moradia">
-   <h2 class="vip-sec-h"><span class="ng-pt">Moradia</span><span class="ng-fr" style="display:none;">Logement</span></h2>
+   <h2 class="vip-sec-h" onclick="vipToggleSec(this)"><span class="ng-pt">Moradia</span><span class="ng-fr" style="display:none;">Logement</span></h2>
+   <p class="vip-sec-desc" onclick="vipToggleSec(this.previousElementSibling)"><span class="ng-pt">Onde procurar, os seus direitos e como evitar golpes.</span><span class="ng-fr" style="display:none;">Où chercher, vos droits et comment éviter les arnaques.</span></p>
    <div class="vip-list" data-cat="moradia"></div>
   </section>
   <section class="vip-sec" id="vip-sec-coluna">
-   <h2 class="vip-sec-h"><span class="ng-pt">Colunas</span><span class="ng-fr" style="display:none;">Chroniques</span></h2>
+   <h2 class="vip-sec-h" onclick="vipToggleSec(this)"><span class="ng-pt">Colunas</span><span class="ng-fr" style="display:none;">Chroniques</span></h2>
+   <p class="vip-sec-desc" onclick="vipToggleSec(this.previousElementSibling)"><span class="ng-pt">As colunas dos nossos colunistas juristas.</span><span class="ng-fr" style="display:none;">Les chroniques de nos chroniqueurs juristes.</span></p>
    <div class="vip-list" data-cat="coluna"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
   </section>
   </div>
@@ -6866,7 +6875,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v50 · 6set2026';try{
+(function(){var BUILD='p15-v51 · 6set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7068,6 +7077,7 @@ function ouvirToggle(){
     }
     return '<div class="vip-card">'+cap+'<div class="vc-body">'+badge+autor+'<h3>'+esc(ti)+'</h3><p class="vc-teaser">'+esc(te)+'</p>'+body+'</div></div>';
   }
+  window.vipToggleSec=function(h){ var sec=h&&h.closest?h.closest(".vip-sec"):null; if(sec) sec.classList.toggle("vs-open"); };
   function vipAreaPreview(c,logged){
     var A={
       emprego:{pt:['Emprego na França','Guia de emprego, modelo de currículo e carta, e o diretório de vagas e agências — completo na Área VIP.'],fr:['Emploi en France','Guide emploi, modèle de CV et lettre, et l’annuaire des offres — complet dans l’Espace VIP.'],go:"openMateria('emprego')"},
