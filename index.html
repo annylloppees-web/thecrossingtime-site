@@ -1429,7 +1429,7 @@ h3.mat-cover-title {
 .vip-cta .vip-btn{width:auto;padding:12px 20px}
 .vip-sec{margin:30px 0 0}
 .vip-sec-h{font-family:Georgia,'Times New Roman',serif;font-size:19px;color:#0E1A2B;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #e6e2d8;font-weight:700}
-.vip-badge-free{background:#2e7d55}
+.vip-badge-free{background:#C6A15B;color:#0E1A2B}
 .vc-autor{font:700 12px Arial,Helvetica,sans-serif;letter-spacing:.04em;color:#C6A15B;text-transform:uppercase;margin:0 0 4px}
 .vc-open{display:inline-block;margin-top:12px;background:#0E1A2B;color:#fff;font:700 13px Arial,Helvetica,sans-serif;padding:11px 18px;border-radius:7px;text-decoration:none}
 .vc-open:hover{background:#16283f}
@@ -1437,7 +1437,7 @@ h3.mat-cover-title {
 .vip-lock{margin-top:12px}
 </style>
 </head>
-<body data-tct-build="p15-v49 · 6set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v50 · 6set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1597,7 +1597,7 @@ h3.mat-cover-title {
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v49 · 6set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v50 · 6set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3784,17 +3784,21 @@ document.addEventListener('DOMContentLoaded', function(){
   <div id="vip-manage" style="display:none;margin:0 0 8px;">
    <button class="vip-link" type="button" onclick="vipPortal()"><span class="ng-pt">Gerenciar assinatura</span><span class="ng-fr" style="display:none;">Gérer l\'abonnement</span></button>
   </div>
-  <section class="vip-sec" id="vip-sec-coluna">
-   <h2 class="vip-sec-h"><span class="ng-pt">Colunas</span><span class="ng-fr" style="display:none;">Chroniques</span></h2>
-   <div class="vip-list" data-cat="coluna"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
-  </section>
-  <section class="vip-sec" id="vip-sec-ebook">
-   <h2 class="vip-sec-h"><span class="ng-pt">E-books</span><span class="ng-fr" style="display:none;">E-books</span></h2>
-   <div class="vip-list" data-cat="ebook"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
-  </section>
   <section class="vip-sec" id="vip-sec-imigracao">
    <h2 class="vip-sec-h"><span class="ng-pt">Imigração</span><span class="ng-fr" style="display:none;">Immigration</span></h2>
    <div class="vip-list" data-cat="imigracao"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
+  </section>
+  <section class="vip-sec" id="vip-sec-emprego">
+   <h2 class="vip-sec-h"><span class="ng-pt">Emprego</span><span class="ng-fr" style="display:none;">Emploi</span></h2>
+   <div class="vip-list" data-cat="emprego"></div>
+  </section>
+  <section class="vip-sec" id="vip-sec-moradia">
+   <h2 class="vip-sec-h"><span class="ng-pt">Moradia</span><span class="ng-fr" style="display:none;">Logement</span></h2>
+   <div class="vip-list" data-cat="moradia"></div>
+  </section>
+  <section class="vip-sec" id="vip-sec-coluna">
+   <h2 class="vip-sec-h"><span class="ng-pt">Colunas</span><span class="ng-fr" style="display:none;">Chroniques</span></h2>
+   <div class="vip-list" data-cat="coluna"><p class="vip-empty"><span class="ng-pt">Primeiros conteúdos em breve.</span><span class="ng-fr" style="display:none;">Premiers contenus bientôt.</span></p></div>
   </section>
   </div>
 
@@ -6862,7 +6866,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v49 · 6set2026';try{
+(function(){var BUILD='p15-v50 · 6set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7052,7 +7056,7 @@ function ouvirToggle(){
     var co=(fr?p.corpo_fr:p.corpo_pt)||p.corpo_pt||'';
     var isVip=(p.is_vip!==false);
     var cap=p.capa_url?'<img class="vc-cap" src="'+esc(p.capa_url)+'" alt="">':'';
-    var badge=isVip?'<span class="vip-badge">VIP</span>':'<span class="vip-badge vip-badge-free">'+T('ABERTO','OUVERT')+'</span>';
+    var badge=isVip?'<span class="vip-badge">VIP</span>':'<span class="vip-badge vip-badge-free">'+T('AMOSTRA','Aperçu')+'</span>';
     var autor=p.autor?'<div class="vc-autor">'+esc(p.autor)+'</div>':'';
     var body='';
     if(p.link_url && (!isVip||logged)){
@@ -7064,14 +7068,25 @@ function ouvirToggle(){
     }
     return '<div class="vip-card">'+cap+'<div class="vc-body">'+badge+autor+'<h3>'+esc(ti)+'</h3><p class="vc-teaser">'+esc(te)+'</p>'+body+'</div></div>';
   }
+  function vipAreaPreview(c,logged){
+    var A={
+      emprego:{pt:['Emprego na França','Guia de emprego, modelo de currículo e carta, e o diretório de vagas e agências — completo na Área VIP.'],fr:['Emploi en France','Guide emploi, modèle de CV et lettre, et l’annuaire des offres — complet dans l’Espace VIP.'],go:"openMateria('emprego')"},
+      moradia:{pt:['Moradia e aluguel','Onde procurar, os seus direitos, o que o proprietário não pode exigir e como evitar golpes — completo na Área VIP.'],fr:['Logement et location','Où chercher, vos droits et comment éviter les arnaques — complet dans l’Espace VIP.'],go:"openMateria('moradia_aluguel_franca')"}
+    };
+    var a=A[c]; if(!a) return '';
+    var fr=curLang()==='fr'; var t=fr?a.fr:a.pt;
+    return '<div class="vip-card"><div class="vc-body"><span class="vip-badge">VIP</span><h3>'+esc(t[0])+'</h3><p class="vc-teaser">'+esc(t[1])+'</p><a class="vc-open" href="javascript:void(0)" onclick="'+a.go+'">'+T('Abrir ↗','Ouvrir ↗')+'</a></div></div>';
+  }
   function renderVip(rows,logged){
+    var EB_AREA={'ebook-30-dias-franca':'imigracao','metiers-en-tension':'imigracao','declarar-impostos':'imigracao','fiscalidade-vol2':'imigracao','marketing-juridico':'coluna'};
     var byCat={};
-    (rows||[]).forEach(function(p){ var c=p.categoria||'coluna'; (byCat[c]=byCat[c]||[]).push(p); });
+    (rows||[]).forEach(function(p){ var c=p.categoria||'coluna'; if(c==='ebook'){ c=EB_AREA[p.chave]||'imigracao'; } (byCat[c]=byCat[c]||[]).push(p); });
     var boxes=document.querySelectorAll('#vip-vitrine .vip-list');
     for(var i=0;i<boxes.length;i++){
       var box=boxes[i], c=box.getAttribute('data-cat'), list=byCat[c]||[];
-      if(!list.length){ box.innerHTML='<p class="vip-empty">'+T('Primeiros conteúdos em breve.','Premiers contenus bientôt.')+'</p>'; continue; }
-      var html=''; for(var k=0;k<list.length;k++){ html+=vipCardHTML(list[k],logged); }
+      var html=vipAreaPreview(c,logged);
+      for(var k=0;k<list.length;k++){ html+=vipCardHTML(list[k],logged); }
+      if(!html){ html='<p class="vip-empty">'+T('Primeiros conteúdos em breve.','Premiers contenus bientôt.')+'</p>'; }
       box.innerHTML=html;
     }
     var mores=document.querySelectorAll('#vip-vitrine .vc-more');
