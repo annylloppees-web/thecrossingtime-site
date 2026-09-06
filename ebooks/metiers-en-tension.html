@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Métiers en Tension · The Crossing Time</title>
+<style>
+  :root{--navy:#0E1A2B;--gold:#C6A15B;--paper:#FBFAF7;--ink:#2a2f38;--muted:#5b6470;--line:#e6e2d8;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 -apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px 90px;}
+  .topbar{position:sticky;top:0;background:rgba(251,250,247,.94);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);z-index:5;}
+  .brand{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--navy);font-size:16px;}
+  .brand small{display:block;font:800 9px Arial,sans-serif;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-top:3px;}
+  .back{font:700 12px Arial,sans-serif;color:var(--navy);text-decoration:none;border:1px solid var(--line);padding:8px 13px;border-radius:7px;}
+  .cover{background:linear-gradient(160deg,#0E1A2B,#1a2e4a);color:#F4F2ED;border-radius:16px;padding:46px 34px 40px;margin:26px 0 10px;position:relative;overflow:hidden;}
+  .cover:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),transparent);}
+  .cover .eyebrow{font:800 11px Arial,sans-serif;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin:0 0 14px;}
+  .cover h1{font-family:Georgia,serif;font-size:36px;line-height:1.12;margin:0 0 12px;font-weight:700;}
+  .cover .lede{font-size:16.5px;line-height:1.6;color:rgba(244,242,237,.9);margin:0;max-width:46ch;}
+  .cover .pub{margin-top:22px;font:700 10.5px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,242,237,.66);}
+  .updbar{font-size:12.5px;color:var(--muted);margin:14px 0 6px;}
+  .eb-h2{font-family:Georgia,serif;font-size:25px;line-height:1.2;color:var(--navy);margin:40px 0 14px;padding-top:22px;border-top:2px solid var(--line);font-weight:700;}
+  .eb-h3{font-family:Georgia,serif;font-size:19px;color:var(--navy);margin:24px 0 8px;}
+  p{margin:0 0 14px;}
+  ul{margin:0 0 16px;padding-left:22px;} li{margin:0 0 8px;}
+  strong{color:var(--navy);}
+  .eb-callout{background:#f3f0e7;border:1px solid #e2dcc7;border-left:4px solid var(--gold);border-radius:9px;padding:15px 18px;margin:18px 0;}
+  .eb-callout b{display:block;font:800 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#7a6a34;margin:0 0 6px;}
+  .eb-callout p{margin:0;font-size:14.5px;}
+  #ebook-lock{background:linear-gradient(160deg,#0E1A2B,#1a2e4a);color:#F4F2ED;border-radius:14px;padding:34px 28px;margin:42px 0 0;text-align:center;}
+  #ebook-lock .lk-ic{font-size:32px;}
+  #ebook-lock .eyebrow{font:800 11px Arial,sans-serif;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin:12px 0 8px;}
+  #ebook-lock h2{font-family:Georgia,serif;font-size:23px;margin:0 0 10px;color:#fff;}
+  #ebook-lock p{font-size:14.5px;color:rgba(244,242,237,.88);margin:0 auto 18px;max-width:52ch;}
+  #ebook-lock .lk-btn{display:inline-block;background:var(--gold);color:#0E1A2B;font:800 14px Arial,sans-serif;padding:14px 26px;border-radius:8px;text-decoration:none;}
+  #ebook-lock .lk-note{font-size:12px;color:rgba(244,242,237,.7);margin:14px 0 0;}
+  body[data-gate="locked"] #vipbody{display:none;}
+  body[data-gate="unlocked"] #ebook-lock{display:none;}
+  .foot{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);}
+  .foot h3{font-family:Georgia,serif;font-size:15px;color:var(--navy);margin:0 0 8px;}
+  .disclaimer{background:#f7f5ef;border-radius:9px;padding:13px 16px;margin:12px 0 0;font-size:12px;color:var(--muted);line-height:1.55;}
+  @media print{.topbar,#ebook-lock{display:none!important}}
+</style>
+</head>
+<body data-gate="locked">
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand">The Crossing Time<small>E-book · Área VIP</small></div>
+    <a class="back" href="index.html">← Área VIP</a>
+  </div>
+
+  <div class="cover">
+    <p class="eyebrow">E-book · Área VIP</p>
+    <h1>Métiers en Tension</h1>
+    <p class="lede">O guia completo para imigrantes se regularizarem na França pelo trabalho.</p>
+    <p class="pub">Uma publicação Alyg Global Company · na The Crossing Time</p>
+  </div>
+  <p class="updbar">Atualizado em: 04/09/2026</p>
+
+  <div id="openbody">
+<p>Sobre este guia Este e-book foi preparado para imigrantes que vivem na França — ou desejam viver — e precisam entender, em português claro, como funcionam os métiers en tension e o papel que eles desempenham na regularização pelo trabalho.</p>
+<p>Você não vai encontrar aqui promessas nem atalhos. Vai encontrar o que a lei diz, o que a nova circulaire Retailleau mudou, quais profissões estão na lista de 2025 por região, e principalmente um passo a passo para organizar um pedido de Admission Exceptionnelle au Séjour (AES) de forma séria.</p>
+<div class="eb-callout"><b>AVISO IMPORTANTE</b><p>Este material tem finalidade informativa e educacional. Ele não substitui a consulta com um(a) advogado(a) especializado(a) em droit des étrangers. Cada situação é única, e erros no pedido podem resultar em uma OQTF (ordem de deixar o território francês).</p></div>
+<p>Fontes utilizadas neste guia Arrêté do 21 de maio de 2025 (publicado no JO de 22/05/2025); circulaire Retailleau de 23 de janeiro de 2025; loi du 26 janvier 2024 (loi Immigration/Darmanin); artigos L. 435-1 e seguintes do CESEDA; publicações do GISTI, info.gouv.fr, Amnesty France, service-public.fr e análises de diversos cabinets d'avocats franceses.</p>
+<h2 class="eb-h2">O que é um métier en tension?</h2>
+<p>Se você é imigrante e mora na França — ou planeja morar — provavelmente já ouviu essa expressão em algum grupo de WhatsApp, vídeo no YouTube ou consulta com advogado. "Métier en tension" virou uma das palavras mais faladas pela comunidade imigrante nos últimos anos. Mas o que ela significa, exatamente?</p>
+<h3 class="eb-h3">A definição em linguagem simples</h3>
+<p>Um métier en tension é uma profissão em que há mais vagas abertas do que candidatos disponíveis no mercado de trabalho francês. São setores onde os empregadores têm dificuldade concreta e persistente de contratar: ou faltam profissionais qualificados, ou as condições de trabalho são consideradas duras, ou o setor vem crescendo mais rápido do que a mão de obra consegue acompanhar.</p>
+<p>O Estado francês publica, regularmente, uma lista oficial dessas profissões — dividida por região — e é a partir dessa lista que uma série de benefícios jurídicos se ativam para trabalhadores estrangeiros.</p>
+<h3 class="eb-h3">Por que essa lista existe?</h3>
+<p>A lógica é simples. O governo francês reconhece que a economia precisa dessas profissões para funcionar: construção civil, cuidado de idosos, agricultura, hotelaria, restauração, entre outras. Como os franceses e europeus disponíveis não conseguem preencher todas as vagas, o Estado flexibiliza as regras para que trabalhadores de fora da União Europeia possam ocupar esses postos de forma regular.</p>
+<div class="eb-callout"><b>EM UMA FRASE</b><p>Métier en tension = profissão onde falta mão de obra, e por isso o Estado facilita tanto a contratação quanto a regularização de trabalhadores estrangeiros.</p></div>
+<h3 class="eb-h3">Os dois benefícios práticos</h3>
+<p>Quando uma profissão está na lista de métiers en tension, duas coisas mudam na prática:</p>
+<p>1. Para o empregador que contrata um estrangeiro. Ele fica dispensado da opposabilité de la situation de l'emploi. Em termos mais simples: ele não precisa provar que tentou contratar alguém já presente na França antes de recorrer a você. O processo de autorização de trabalho é mais rápido e leve.</p>
+<p>2. Para o trabalhador estrangeiro sem papéis. Ele pode pedir uma regularização (Admission Exceptionnelle au Séjour) se cumprir critérios de residência e experiência no setor. Esse é o</p>
+<p>caminho que milhares de imigrantes estão tentando hoje, e é o foco central deste guia.</p>
+<h3 class="eb-h3">A lista muda — e muda por região</h3>
+<p>Um ponto absolutamente crítico: a lista não é a mesma no país inteiro. Cada região administrativa francesa (Île-de-France, PACA, Auvergne-Rhône-Alpes, Occitanie, etc.) tem a sua própria lista. Uma profissão pode estar em tensão em Lyon, mas não em Paris; pode estar em tensão na Bretagne, mas não na Normandie.</p>
+<p>Além disso, a lista é revisada — em tese, anualmente. A atual foi publicada pelo arrêté de 21 de maio de 2025 (JO de 22 de maio de 2025) e substituiu a lista anterior, que vinha de 2021 com uma pequena atualização em março de 2024.</p>
+<h2 class="eb-h2">Por que este tema importa para os imigrantes</h2>
+<p>A França abriga milhões de imigrantes de diferentes nacionalidades. Uma parte considerável dessa população vive em situação administrativa irregular — entrou com visto de turista e ficou, chegou sem visto (pelo Schengen por outro país europeu) ou perdeu o título de residência. São pessoas que trabalham, pagam aluguel, criam filhos e contribuem com a economia francesa, mas vivem na sombra jurídica.</p>
+<h3 class="eb-h3">O perfil profissional dos imigrantes</h3>
+<p>Se olharmos para onde a comunidade imigrante majoritariamente trabalha na França, uma coisa salta aos olhos: a maior parte está justamente em setores considerados em tensão. Entre as atividades mais comuns:</p>
+<p>Isso não é coincidência. São exatamente os setores em que os empregadores franceses têm dificuldade de recrutar e, por isso, contratam — mesmo sabendo da irregularidade — trabalhadores dispostos a começar de baixo.</p>
+<ul><li>Construção civil (BTP) — pintores, pedreiros, eletricistas, carpinteiros</li><li>Hotelaria e restauração — cozinheiros, ajudantes de cozinha, faxineiros de hotel</li><li>Serviços domésticos — faxineiras, babás, cuidadoras (aide à domicile)</li><li>Entregas e logística — coursiers, livreurs, operários de armazém</li><li>Agricultura — em regiões rurais, trabalho em vinhedos, colheitas, horticultura</li></ul>
+<h3 class="eb-h3">A janela que a lei abriu</h3>
+<p>A loi Immigration de 26 de janeiro de 2024 (conhecida como loi Darmanin) criou um novo artigo no CESEDA — o artigo L. 435-4 — que permite a regularização de estrangeiros em situação irregular que trabalham em um métier en tension, cumpridas certas condições de residência e de experiência.</p>
+<p>Pela primeira vez, o trabalhador pode fazer esse pedido em nome próprio, sem depender da assinatura ou colaboração do empregador. Essa é uma mudança significativa: antes da reforma, o patrão precisava estar de acordo e fornecer documentos. Muitos se recusavam, com medo de multas. Agora, o trabalhador tem mais autonomia.</p>
+<div class="eb-callout"><b>REALIDADE CONHECIDA</b><p>Grande parte dos imigrantes que consulta um advogado sobre regularização descobre que já trabalha há anos em um setor em tensão — limpeza, construção, restaurante — sem saber que isso abria uma possibilidade concreta de ter papéis regulares. Conhecer seus direitos é o primeiro passo.</p></div>
+<h3 class="eb-h3">Mas atenção: não é automático</h3>
+<p>Apesar do entusiasmo que esse dispositivo gerou, é fundamental entender: a regularização por métier en tension não é um direito automático. O pedido é uma admission exceptionnelle au séjour, e como o próprio nome diz, é excepcional. A decisão final está nas mãos do préfet (prefeito administrativo da sua região), que tem amplo poder de apreciação.</p>
+<p>A circulaire Retailleau, de 23 de janeiro de 2025, reforçou esse caráter excepcional e endureceu os critérios. O próximo capítulo explica exatamente o que mudou.</p>
+  </div>
+
+  <div id="ebook-lock">
+    <div class="lk-ic">🔒</div>
+    <p class="eyebrow">A partir daqui é só para membros</p>
+    <h2>Continue lendo na Área VIP</h2>
+    <p>O restante deste guia é exclusivo dos membros. Nesta fase de teste, o acesso é gratuito.</p>
+    <a class="lk-btn" href="index.html">Entrar na Área VIP →</a>
+    <p class="lk-note">Já é membro? Entre na Área VIP e volte a esta página — o guia abre automaticamente.</p>
+  </div>
+
+  <div id="vipbody">
+<h2 class="eb-h2">A base legal: loi Immigration e circulaire Retailleau</h2>
+<h3 class="eb-h3">A base legal: da loi Immigration à</h3>
+<p>circulaire Retailleau Para entender seus direitos, você precisa conhecer três normas: uma lei, um arrêté e uma circular. Parece burocrático — e é —, mas cada uma desempenha um papel específico.</p>
+<p>1. A loi du 26 janvier 2024 (loi Immigration ou loi Darmanin) Foi essa lei que criou o dispositivo legal permitindo a regularização pelo trabalho em métier en tension. Ela introduziu no CESEDA (Code de l'entrée et du séjour des étrangers et du droit d'asile) o famoso artigo L. 435-4, que é a base jurídica do pedido.</p>
+<p>Pontos-chave da lei:</p>
+<p>renovável.</p>
+<ul><li>Cria a possibilidade de regularização pelo exercício de um métier en tension;</li><li>Permite que o pedido seja feito pelo próprio estrangeiro, sem depender do empregador;</li><li>Prevê que a lista de métiers en tension seja revista anualmente;</li><li>Estabelece que, em caso de aprovação, o título de residência é emitido pelo prazo de 1 ano,</li></ul>
+<p>2. O arrêté de 21 de maio de 2025 (a lista atualizada) É o texto que define, concretamente, quais são as profissões em tensão hoje, organizadas por região. Foi publicado no Journal Officiel em 22 de maio de 2025 e substituiu a lista anterior (arrêté de 1º de abril de 2021, complementado pelo arrêté de 1º de março de 2024).</p>
+<p>O grande debate em torno desse arrêté é que a nova lista, embora mais ampla em algumas regiões, suprimiu várias profissões mais qualificadas e manteve discrepâncias importantes — como ter pouquíssimos metiers da restauração na Île-de-France, justamente onde trabalha a maior parte dos imigrantes.</p>
+<p>3. A circulaire Retailleau (23 de janeiro de 2025) Aqui mora um ponto importante. A circulaire Retailleau não é uma lei — é uma instrução administrativa que o então ministro do Interior Bruno Retailleau enviou aos préfets para orientá-los sobre como julgar os pedidos de AES. Ela revogou a antiga circulaire Valls de 2012, que era consideravelmente mais generosa.</p>
+<p>Embora uma circular, tecnicamente, seja apenas uma recomendação hierárquica, na prática ela funciona como se tivesse força obrigatória: os préfets aplicam à risca, e os agentes de ponta (guichês das préfectures) usam essas orientações como se fossem regras. Para quem depende da administração para conseguir papéis, a circulaire é decisiva.</p>
+<div class="eb-callout"><b>O QUE É UMA CIRCULAIRE?</b><p>Uma circular administrativa não tem força de lei — é, em essência, uma recomendação do ministro aos seus subordinados. Na prática, porém, os préfets seguem a orientação à risca. Para o estrangeiro, ela é decisiva no dia a dia do processo.</p></div>
+<h3 class="eb-h3">O que a circulaire Retailleau mudou</h3>
+<p>excepcional. Os préfets recebem orientação expressa para serem restritivos.</p>
+<ul><li>Endurecimento geral: a regularização passa a ser tratada como medida verdadeiramente</li></ul>
+<p>en tension. Outras situações ficam no âmbito geral (L. 435-1), muito mais difícil de obter.</p>
+<ul><li>Duas portas apenas: a regularização pelo trabalho só é possível agora através de um métier</li></ul>
+<p>respeito aos valores da República (contrato a ser assinado), comportamento cívico.</p>
+<ul><li>Critérios reforçados de integração: exige-se prova de conhecimento da língua francesa,</li></ul>
+<p>esta via.</p>
+<ul><li>Exclusão em caso de OQTF: quem já tem uma ordem de deixar o território não pode usar</li></ul>
+<p>saída junto com a recusa do pedido. Isso torna o processo mais arriscado do que antes.</p>
+<ul><li>OQTF quase sistemática em caso de recusa: o préfet é instruído a emitir uma ordem de</li></ul>
+<div class="eb-callout"><b>CUIDADO REAL</b><p>Pedir uma AES virou um jogo de alto risco: se o préfet recusar, você pode sair da experiência com uma OQTF na mão. Por isso, nunca inicie o procedimento sem antes fazer um diagnóstico honesto das suas chances — de preferência com um(a) advogado(a).</p></div>
+<h2 class="eb-h2">As duas portas de entrada para a regularização</h2>
+<p>Depois da circulaire Retailleau, o cenário jurídico da AES ficou mais simples de descrever — e também mais limitado. Existem, na prática, duas portas possíveis para um imigrante em situação irregular se regularizar na França pela via administrativa.</p>
+<h3 class="eb-h3">Porta 1 — Artigo L. 435-1: via humanitária/familiar</h3>
+<p>Essa porta existe há muitos anos. É a AES clássica, pensada para motivos humanitários ou circunstâncias excepcionais — por exemplo, laços familiares muito fortes na França, filhos escolarizados há muito tempo, vínculos afetivos estáveis com cidadão(ã) francês(a), situação médica grave, longo tempo de residência.</p>
+<p>O que a circulaire Retailleau mudou: os critérios ficaram mais apertados. Não basta mais, por exemplo, ter filhos na escola há anos — é preciso demonstrar uma integração global, com prova de aprendizado do francês, inserção social comprovada, ausência de ameaça à ordem pública.</p>
+<p>Porta 2 — Artigo L. 435-4: via métier en tension Esta é a porta criada pela loi de 2024. É a que interessa diretamente a este e-book. Ela exige requisitos objetivos, mas foi desenhada pensando em trabalhadores já inseridos no mercado de trabalho francês, ainda que informalmente.</p>
+<p>L. 435-1 (Humanitária) L. 435-4 (Métier en tension)</p>
+<p>Pessoas com situação pessoal ou Trabalhador(a) já empregado(a) em Quem pode usar familiar forte profissão da lista</p>
+<p>Residência mínima Em geral 5 anos ou mais 3 anos na França</p>
+<p>12 meses no setor em tensão, nos últimos 24 Experiência exigida Não é o critério central meses</p>
+<h3 class="eb-h3">Precisa do</h3>
+<p>Não necessariamente Pedido pode ser feito em nome próprio empregador?</p>
+<p>Título concedido Vie privée et familiale ou salarié Salarié (CDI) ou travailleur temporaire (CDD)</p>
+<p>Validade inicial 1 ano, renovável 1 ano, renovável</p>
+<p>Na maioria dos casos de imigrantes trabalhando informalmente na França, a porta 2 é a mais realista — desde que a profissão apareça na lista da região onde mora. Sem isso, o pedido simplesmente não se encaixa no artigo L. 435-4.</p>
+<div class="eb-callout"><b>DICA IMPORTANTE</b><p>Antes de iniciar qualquer procedimento, verifique duas coisas: (1) se sua profissão está na lista da sua região no arrêté de 21/05/2025; (2) se você consegue comprovar, com documentos concretos, os 12 meses de atividade. Sem essas duas bases, o pedido está condenado antes de começar.</p></div>
+<h2 class="eb-h2">Os critérios da AES pelo métier en tension</h2>
+<p>Vamos entrar no detalhe dos critérios exigidos pela L. 435-4. A ordem importa: se um único item faltar, o pedido pode ser recusado na análise inicial.</p>
+<p>Critério 1 — Residência de pelo menos 3 anos na França Você precisa comprovar que vive na França de forma habitual e contínua há pelo menos 36 meses. A prova se faz por múltiplos documentos que mostrem sua presença ao longo do tempo: contratos de aluguel, contas de energia/água/internet, extratos bancários, atestados médicos, matrículas escolares dos filhos, declarações fiscais, recibos de envio de dinheiro, fichas de consulta em PMI.</p>
+<div class="eb-callout"><b>O SEGREDO AQUI</b><p>O ideal é apresentar pelo menos 2 a 3 documentos por mês, ao longo dos 3 anos. Pode parecer exagerado, mas é assim que os préfets gostam: quanto mais denso o histórico, menos dúvida sobre sua presença efetiva no território.</p></div>
+<p>Critério 2 — 12 meses de trabalho nos últimos 24 meses Esse é o coração do pedido. Você precisa provar que trabalhou pelo menos 12 meses — consecutivos ou não — em uma profissão listada como em tensão na sua região, durante os 24 meses anteriores ao pedido. A experiência pode ser somada em diferentes empregadores.</p>
+<h3 class="eb-h3">Como comprovar essa experiência?</h3>
+<ul><li>Fiches de paie (contracheques) — o documento mais forte, se você trabalhou declarado</li><li>Contrato de trabalho (CDI, CDD, mesmo que antigo)</li><li>Certificats de travail fornecidos pelos empregadores</li><li>Attestations d'employeur detalhando função e período</li><li>Declaração de impostos (avis d'imposition) mostrando rendimentos do trabalho</li><li>Relevés URSSAF ou atestados de quitação de contribuições sociais</li></ul>
+<div class="eb-callout"><b>E QUEM TRABALHOU SEM CONTRATO?</b><p>Se você sempre trabalhou au noir (sem declaração), a circulaire e os tribunais administrativos vêm admitindo provas alternativas: atestações de colegas, recibos, conversas por WhatsApp com o patrão, histórico bancário de depósitos em dinheiro, fotos no local de trabalho. O caminho é mais incerto. Um caminho comum é pedir ao empregador atual que declare você retroativamente e forneça uma promesse d'embauche — mas isso exige negociação e boa-fé.</p></div>
+<h3 class="eb-h3">Critério 3 — Vínculo de emprego atual (ou promessa)</h3>
+<p>No momento do pedido, você precisa estar empregado(a) em um métier en tension ou ter uma promessa concreta de contratação (promesse d'embauche) para um desses postos. Sem vínculo atual, a porta L. 435-4 se fecha — mesmo que você tenha um histórico longo de trabalho no setor.</p>
+<p>O tipo de contrato também importa: em caso de CDI (contrato por tempo indeterminado), você recebe uma carte de séjour salarié de 1 ano renovável. Em caso de CDD (contrato a prazo), recebe uma carte travailleur temporaire válida pelo período do contrato.</p>
+<h3 class="eb-h3">Critério 4 — Integração na República</h3>
+<p>Desde a loi de 2024, e reforçado pela circulaire Retailleau, você precisa:</p>
+<p>compromisso formal com os valores republicanos (igualdade, laicidade, liberdade, etc.)</p>
+<ul><li>Assinar o contrat d'engagement au respect des principes de la République —</li></ul>
+<p>diploma ou certificado de organismo reconhecido). Quanto mais alto, melhor</p>
+<ul><li>Comprovar conhecimento da língua francesa — nível A2 no mínimo (documentado por</li></ul>
+<p>vínculos comunitários, matrícula dos filhos na escola francesa, laços com franceses ou residentes regulares</p>
+<ul><li>Não viver em poligamia</li><li>Não constituir ameaça à ordem pública — ter casier judiciaire limpo</li><li>Demonstrar inserção social e familiar — cartas de apoio, participação em associações,</li></ul>
+<h3 class="eb-h3">Critério 5 — Não estar excluído do dispositivo</h3>
+<p>Certas situações tornam o pedido juridicamente impossível:</p>
+<p>salariados. Empregos sazonais e experiência acumulada com título de estudante também não contam</p>
+<ul><li>Ter uma OQTF em vigor (ordem de deixar o território francês)</li><li>Ter sofrido uma interdiction de retour (proibição de retorno)</li><li>Constituir ameaça grave à ordem pública</li><li>Ter obtido documentos fraudulentos</li><li>Ter atividade apenas como autônomo (auto-entrepreneur) — a via L. 435-4 é para</li></ul>
+<h2 class="eb-h2">Lista oficial 2025 — profissões nacionais e regionais</h2>
+<h3 class="eb-h3">Lista oficial 2025 — profissões em tensão</h3>
+<p>A lista completa do arrêté de 21 de maio de 2025 tem centenas de entradas e varia região por região. Neste capítulo, apresentamos os grupos mais relevantes para a comunidade imigrante. A lista detalhada por região vem no próximo capítulo.</p>
+<p>Os setores que mais empregam imigrantes (e estão em tensão) Alguns setores aparecem em tensão em praticamente todas as regiões — especialmente os metiers agrícolas, que estão listados em todo o território francês pelo arrêté de março de 2024 (ainda em vigor para esses grupos). São eles:</p>
+<h3 class="eb-h3">Agricultura, pecuária e pesca (todo o território)</h3>
+<p>Hotelaria e restauração</p>
+<p>Serviços à pessoa e limpeza</p>
+<p>Construção civil (BTP)</p>
+<ul><li>Agricultores, viticultores, horticultores</li><li>Maraîchers (produtores de hortaliças)</li><li>Criadores de gado (éleveurs)</li><li>Pescadores e aquicultores</li><li>Bûcherons, sylviculteurs e agentes florestais</li><li>Ajudantes de cozinha (aides de cuisine, commis)</li><li>Cozinheiros (cuisiniers) — recentemente adicionado em Île-de-France</li><li>Empregados polivalentes de restaurante</li><li>Agentes de limpeza em hotéis (femmes / valets de chambre)</li><li>Aides à domicile (cuidadoras de idosos e pessoas dependentes)</li><li>Aides ménagères (empregadas domésticas)</li><li>Employés de maison</li><li>Agents d'entretien de locaux (limpeza de escritórios, edifícios)</li><li>Pedreiros (maçons)</li><li>Couvreurs (telhadistas)</li><li>Charpentiers (carpinteiros)</li><li>Plâtriers-peintres</li><li>Électriciens do bâtiment</li></ul>
+<p>Saúde e cuidado</p>
+<p>Indústria, logística e transportes</p>
+<ul><li>Techniciens des travaux publics</li><li>Chaudronniers, tôliers, serruriers (varia por região)</li><li>Infirmiers (enfermeiros) — tensão em várias regiões</li><li>Aides-soignants</li><li>Auxiliaires de puériculture</li><li>Ouvriers de l'emballage e manutentionnaires</li><li>Ouvriers das indústrias químicas e plásticas</li><li>Condutores (conducteurs routiers, livreurs courte distance — varia por região)</li><li>Régleurs, soudeurs, operadores industriais</li><li>Techniciens de maintenance</li></ul>
+<div class="eb-callout"><b>ONDE CONFERIR A LISTA OFICIAL</b><p>A lista completa e juridicamente vinculante está no site oficial do Estado francês: legifrance.gouv.fr. Busque por: "arrêté du 21 mai 2025 liste des métiers en tension". Use sempre o texto oficial, não resumos de terceiros.</p></div>
+<h2 class="eb-h2">Foco por região: onde estão as oportunidades</h2>
+<p>Como cada região tem sua própria lista, aqui estão destaques região por região, com base no arrêté de 2025 e nos metiers agrícolas nacionais. Atenção: esta é uma seleção representativa, não a lista integral.</p>
+<h3 class="eb-h3">Île-de-France</h3>
+<p>Paris e arredores — onde vive a maior parte dos imigrantes</p>
+<p>Observação: poucas profissões da restauração estão nesta região.</p>
+<ul><li>Agents de maîtrise das indústrias de process</li><li>Cozinheiros (recentemente adicionado)</li><li>Employés de maison (recentemente adicionado)</li><li>Carrossiers automobiles</li><li>Chaudronniers, tôliers, traceurs, serruriers, métalliers, forgerons</li><li>Dessinateurs em eletricidade/eletrônica e em mecânica</li><li>Enfermeiros</li><li>Engenheiros e quadros de TI, chefs de projets informatiques</li><li>Ouvriers de l'électricité et de l'électronique</li><li>Ouvriers do mobiliário e trabalho em madeira</li><li>Régleurs, responsáveis logísticos</li><li>Techniciens dos serviços contábeis e financeiros</li><li>Techniciens dos transportes e turismo, techniciens experts</li></ul>
+<h3 class="eb-h3">Auvergne-Rhône-Alpes</h3>
+<p>Lyon, Grenoble, Saint-Étienne, Clermont-Ferrand</p>
+<ul><li>Bouchers (açougueiros)</li><li>Agents d'entretien de locaux</li><li>Formateurs</li><li>Régleurs</li><li>Engenheiros e quadros de estudo, chefs de projets informatiques</li><li>Mainteniciens em eletrodomésticos</li><li>Ouvriers de l'emballage et manutentionnaires</li><li>Ouvriers das indústrias químicas e plásticas</li></ul>
+<h3 class="eb-h3">Provence-Alpes-Côte d'Azur (PACA)</h3>
+<p>Marselha, Nice, Toulon, Aix-en-Provence</p>
+<ul><li>Bouchers</li><li>Condutores rodoviários</li><li>Condutores de equipamentos agrícolas ou florestais</li><li>Formateurs</li><li>Enfermeiros</li><li>Intérpretes</li><li>Chefs de projets informatiques</li><li>Ouvriers do trabalho artesanal de couro e têxtil</li><li>Ouvriers do mobiliário e trabalho em madeira</li><li>Techniciens de estudo e desenvolvimento em TI</li></ul>
+<h3 class="eb-h3">Occitanie</h3>
+<p>Toulouse, Montpellier, Perpignan</p>
+<ul><li>Bouchers</li><li>Bûcherons, sylviculteurs e agentes florestais</li><li>Chefs de projets informatiques</li><li>Enfermeiros</li><li>Ouvriers do trabalho artesanal de couro e têxtil</li></ul>
+<h3 class="eb-h3">Nouvelle-Aquitaine</h3>
+<p>Bordeaux, La Rochelle, Limoges, Poitiers</p>
+<ul><li>Bûcherons, sylviculteurs e agentes florestais</li><li>Formateurs</li><li>Mainteniciens em eletrodomésticos</li><li>Pescadores, aquicultores</li><li>Sportifs e animadores esportivos</li></ul>
+<h3 class="eb-h3">Bretagne</h3>
+<p>Rennes, Brest, Lorient, Saint-Brieuc</p>
+<p>Observação: poucos metiers de saúde/cuidado nesta região.</p>
+<ul><li>Ouvriers das indústrias químicas e plásticas</li><li>Pescadores, aquicultores</li><li>Techniciens em eletricidade e eletrônica</li><li>Techniciens e agentes de maîtrise da manutenção e do meio ambiente</li></ul>
+<h3 class="eb-h3">Normandie</h3>
+<p>Rouen, Caen, Le Havre, Cherbourg</p>
+<ul><li>Chercheurs (pesquisadores)</li><li>Géomètres</li><li>Enfermeiros</li><li>Pescadores, aquicultores</li><li>Régleurs</li><li>Techniciens experts</li></ul>
+<h3 class="eb-h3">Hauts-de-France</h3>
+<p>Lille, Amiens, Dunkerque</p>
+<ul><li>Bûcherons, sylviculteurs e agentes florestais</li><li>Chercheurs (exceto indústria e ensino superior)</li><li>Enfermeiros</li><li>Engenheiros e quadros de administração, manutenção em TI</li><li>Engenheiros e quadros das telecomunicações</li><li>Chefs de projets informatiques</li><li>Artesãos do têxtil e do couro</li><li>Techniciens em mecânica e trabalho dos metais</li></ul>
+<h3 class="eb-h3">Grand Est</h3>
+<p>Strasbourg, Metz, Nancy, Reims</p>
+<ul><li>Bouchers</li><li>Condutores e livreurs de curta distância</li><li>Enfermeiros</li><li>Ouvriers de l'emballage e manutentionnaires</li></ul>
+<h3 class="eb-h3">Pays de la Loire</h3>
+<p>Nantes, Angers, Le Mans</p>
+<ul><li>Agents de maîtrise das indústrias de process</li><li>Chercheurs (exceto indústria e ensino superior)</li><li>Chefs de projets informatiques</li><li>Pescadores, aquicultores</li><li>Techniciens dos serviços contábeis e financeiros</li><li>Techniciens e agentes de maîtrise da manutenção e do meio ambiente</li></ul>
+<h3 class="eb-h3">Centre-Val de Loire</h3>
+<p>Orléans, Tours, Blois</p>
+<ul><li>Bouchers</li><li>Bûcherons, sylviculteurs e agentes florestais</li><li>Ouvriers de l'emballage e manutentionnaires</li><li>Ouvriers da manutenção em mecânica</li><li>Ouvriers de armazenagem e manutenção</li><li>Techniciens dos serviços contábeis e financeiros</li><li>Techniciens em eletricidade e eletrônica</li><li>Techniciens em mecânica e trabalho dos metais</li></ul>
+<h3 class="eb-h3">Bourgogne-Franche-Comté</h3>
+<p>Dijon, Besançon, Belfort</p>
+<ul><li>Enfermeiros</li><li>Bouchers</li><li>Ouvriers de l'emballage e manutentionnaires</li><li>Ouvriers das indústrias químicas e plásticas</li><li>Techniciens em eletricidade e eletrônica</li><li>Techniciens em mecânica e trabalho dos metais</li></ul>
+<h3 class="eb-h3">Corse</h3>
+<p>Ajaccio, Bastia</p>
+<p>Lista restrita — confira legifrance para a lista completa.</p>
+<ul><li>Agents d'entretien de locaux</li><li>Livreurs</li></ul>
+<div class="eb-callout"><b>SOBRE A ÎLE-DE-FRANCE</b><p>Associações como o GISTI criticaram que a lista da Île-de-France contempla marginalmente os setores onde os sans-papiers realmente trabalham (construção, restauração, serviços à pessoa). Se você trabalha em Paris em um desses setores, verifique com cuidado se a sua profissão exata está listada — cada intitulé tem peso jurídico.</p></div>
+<h2 class="eb-h2">Passo a passo: como montar o dossiê</h2>
+<p>Um dossiê bem montado é aquele que antecipa as objeções do préfet. Cada documento deve contar uma parte da sua história, e o conjunto deve formar uma narrativa coerente: você está na França há tempo, trabalha em um setor que precisa de pessoas como você, se integrou, fala a língua, respeita as leis.</p>
+<p>1 Verifique sua elegibilidade antes de qualquer coisa</p>
+<p>Antes de juntar um único papel, confirme três pontos: sua profissão está na lista da sua região? Você vive na França há pelo menos 3 anos? Você consegue comprovar 12 meses de trabalho no setor nos últimos 24 meses? Se a resposta a qualquer uma dessas perguntas for "não" ou "não tenho certeza", procure um advogado antes de avançar.</p>
+<p>2 Reúna as provas de residência dos últimos 3 anos</p>
+<p>Comece organizando por ano e por mês. O objetivo é ter pelo menos 2 documentos por mês ao longo dos 36 meses. Coisas que valem: contratos de aluguel, quittances de loyer, contas de água / eletricidade / internet no seu nome ou do cônjuge, extratos bancários (mesmo de conta simples como Nickel ou Revolut), declarações fiscais, cartas oficiais da CAF, Ameli ou escola, atestações médicas, comprovantes de transporte, recibos de remessa internacional.</p>
+<p>3 Monte a cronologia profissional</p>
+<p>Para cada período de trabalho, liste: empregador, profissão exata, endereço, telefone, datas de início e fim, tipo de contrato (ou ausência de contrato). Reúna fiches de paie, contratos, certificats de travail, attestations d'employeur. Se trabalhou sem declaração mas o patrão aceita regularizar, negocie uma declaração retroativa ou uma promesse d'embauche atual.</p>
+<p>4 Obtenha a promessa de contratação ou contrato atual</p>
+<p>Ter um CDI é o cenário ideal. Se é um CDD, lembre-se que o título de residência será pelo período do contrato. Se ainda não tem contrato, um(a) empregador(a) pode emitir uma promesse d'embauche — documento formal em que o patrão declara a intenção de contratar, especificando função, data de início, salário e horário. Essa profissão precisa ser a mesma listada no arrêté regional.</p>
+<p>5 Comprove seu nível de francês (A2 mínimo)</p>
+<p>Inscreva-se em um teste oficial de francês: TCF, DELF ou TEF. O nível A2 é o mínimo esperado, mas apresentar B1 ou B2 fortalece muito o dossiê. Organismos como a Alliance Française, o Centre de langue francesa, a OFII e escolas municipais oferecem preparação. Alguns testes custam entre 60 e 150 euros.</p>
+<p>6 Reúna as provas de integração social e familiar</p>
+<p>O préfet quer ver que você está enraizado. Reúna: cartas de apoio de pessoas próximas (de preferência franceses ou residentes regulares há anos), comprovantes de participação em associações (igreja, clube, voluntariado), comprovante de matrícula dos filhos na escola e boletins escolares, atestação de união (PACS, casamento, concubinage se houver), fotos de família e eventos relevantes, comprovantes de amizades e vínculos.</p>
+<p>7 Assine o contrato de respeito aos princípios republicanos</p>
+<p>Esse documento é obrigatório desde 2024. Ele é fornecido pela préfecture ou pela administração que receber seu pedido. Ao assinar, você se compromete formalmente a respeitar a laicidade, a igualdade entre homens e mulheres, a liberdade de expressão e a recusa de toda forma de violência. Não é apenas simbólico: o descumprimento pode levar à retirada do título de residência.</p>
+<p>8 Organize o dossiê físico em ordem lógica</p>
+<p>A apresentação importa. Use um classificador com separadores: (1) identidade e estado civil, (2) provas de residência, (3) provas de trabalho, (4) contrato ou promessa atual, (5) comprovante do nível de francês, (6) provas de integração, (7) contrato de princípios republicanos, (8) formulário CERFA preenchido. Faça uma cópia integral para você antes de entregar.</p>
+<p>9 Identifique a sua préfecture e o canal correto</p>
+<p>Em muitas préfectures, o pedido se faz online pela plataforma ANEF. Em outras, presencialmente, com agendamento (RDV). Verifique o site da préfecture do departamento onde você mora antes de agir — o canal varia. Nunca vá à préfecture sem agendamento; isso é quase sempre inútil e pode gerar controles.</p>
+<p>10 Entregue o pedido e guarde todos os comprovantes</p>
+<p>Ao entregar, exija um accusé de réception (recibo oficial) com data, carimbo e número de dossiê. Esse recibo vale ouro: é a prova de que seu pedido foi protocolado. Guarde também cópias escaneadas no celular e em e-mail pessoal.</p>
+<h2 class="eb-h2">Documentos obrigatórios (checklist)</h2>
+<h3 class="eb-h3">Documentos obrigatórios — checklist</h3>
+<p>completo Use esta lista como referência para organizar seu dossiê. Leve sempre originais e cópias — a préfecture pode pedir ambos.</p>
+<h3 class="eb-h3">Identidade e estado civil</h3>
+<p>■ Passaporte em validade + cópia de todas as páginas ■ Certidão de nascimento — original + tradução juramentada (traduction assermentée) ■ Certidão de casamento (se aplicável) — original + tradução juramentada ■ 3 fotos de identidade recentes, padrão francês (35 × 45 mm) ■ Declaração sobre a honra de não viver em poligamia</p>
+<h3 class="eb-h3">Comprovação de residência (3 anos)</h3>
+<p>■ Contrato(s) de aluguel, attestation de hébergement ou ato notarial de propriedade ■ Quittances de loyer (recibos de aluguel) regulares ■ Contas de eletricidade (EDF, Engie), gás, água, internet ■ Extratos bancários (preferível banco francês — BNP, LCL, Crédit Agricole, La Banque Postale) ■ Avis d'imposition (declaração de imposto de renda) dos últimos 3 anos ■ Atestações médicas, cartões vitale, relevés da Sécurité Sociale ou CMU ■ Comprovantes de transporte (assinaturas Navigo, cartões regionais) ■ Correspondência oficial (CAF, France Travail, escola dos filhos)</p>
+<h3 class="eb-h3">Comprovação de experiência profissional</h3>
+<p>■ Fiches de paie (contracheques) organizados por empregador ■ Contratos de trabalho (mesmo expirados) ■ Certificats de travail de cada empregador ■ Attestations d'employeur descrevendo função e período ■ Avis d'imposition com linha de salários ■ Em caso de trabalho não declarado: promesse d'embauche atual + declarações de testemunhas + indícios como mensagens com o patrão</p>
+<h3 class="eb-h3">Vínculo profissional atual</h3>
+<p>■ CDI assinado ou CDD atual em um métier en tension; OU ■ Promesse d'embauche detalhada (função, salário, horário, data de início, duração prevista) ■ Cerfa de demande d'autorisation de travail (normalmente preenchido pelo empregador)</p>
+<h3 class="eb-h3">Nível de francês</h3>
+<p>■ Diploma ou certificado: TCF, DELF, TEF ou equivalente — nível A2 mínimo ■ Em alternativa: diploma francês obtido (se você fez curso na França)</p>
+<h3 class="eb-h3">Integração e valores da República</h3>
+<p>■ Contrato de compromisso com os princípios da República, assinado ■ Cartas de apoio ou recomendação (2 a 5 é razoável) ■ Comprovantes de participação em associação, clube, igreja, voluntariado ■ Para famílias: certificados de escolaridade dos filhos, últimos bulletins ■ Comprovante de PACS, casamento ou vida em comum, se aplicável ■ Casier judiciaire francês (bulletin n° 3) + atestado de antecedentes criminais do país de origem com apostila</p>
+<h3 class="eb-h3">Formulário e taxa</h3>
+<p>■ Formulaire CERFA correspondente ao pedido de AES por métier en tension ■ Timbre fiscal (quando exigido) — pago online em timbres.impots.gouv.fr</p>
+<div class="eb-callout"><b>TRADUÇÕES JURAMENTADAS</b><p>Documentos do país de origem precisam ser traduzidos por traducteur assermenté inscrito junto a uma Cour d'Appel francesa. Traduções feitas fora da França geralmente não são aceitas. Busque por "traducteur assermenté [sua língua] [sua cidade]" ou consulte a lista oficial no site da Cour de Cassation.</p></div>
+<h2 class="eb-h2">O que esperar depois do pedido</h2>
+<p>Depositar o dossiê é só o começo. A partir daí, você entra em um longo período de espera — que pode durar de alguns meses a dois anos, dependendo da préfecture.</p>
+<h3 class="eb-h3">Os tempos aproximados (com grandes variações)</h3>
+<p>enquanto o pedido é analisado</p>
+<ul><li>Accusé de réception: na hora da entrega ou em até 2 semanas por correio</li><li>Récépissé provisório: em alguns casos, entre 1 e 6 meses — permite trabalhar legalmente</li></ul>
+<ul><li>Decisão final: de 3 meses a 2 anos, dependendo da préfecture e da complexidade do dossiê</li></ul>
+<h3 class="eb-h3">Três desfechos possíveis</h3>
+<p>1. Deferimento (acordo) Você é convocado(a) para buscar o título de residência. Em geral, recebe primeiro um récépissé e depois a carte de séjour física. Se o contrato é CDI, a carte é de 1 ano renovável. Se é CDD, a validade acompanha a duração do contrato.</p>
+<p>2. Silêncio administrativo Se a préfecture não responde dentro do prazo legal (geralmente 4 meses a contar da entrega completa do dossiê), há um refus implicite (recusa tácita). Você tem 2 meses para apresentar um recours contentieux ao tribunal administrativo. Nesses casos, a assistência de um advogado é quase indispensável.</p>
+<p>3. Recusa explícita A préfecture envia uma decisão motivada (a décision de refus). Na era da circulaire Retailleau, a recusa frequentemente vem acompanhada de uma OQTF (ordem de deixar o território francês). Você tem, em regra, 30 dias para contestar judicialmente a OQTF — recurso ao tribunal administrativo. Esse prazo é inflexível e perdê-lo é catastrófico.</p>
+<div class="eb-callout"><b>PRAZO DE 30 DIAS É CRÍTICO</b><p>Se você recebe uma OQTF, conte o dia seguinte à notificação como o primeiro dia. Não espere: contate um(a) advogado(a) em droit des étrangers imediatamente. A aide juridictionnelle (ajuda jurídica gratuita) está disponível para quem tem renda baixa.</p></div>
+<h3 class="eb-h3">Enquanto o pedido está pendente</h3>
+<p>Durante a análise, sua situação permanece formalmente irregular até que você receba o récépissé ou a carte de séjour. O accusé de réception, porém, é um documento muito útil: comprova que o Estado está ciente de você e em processo de análise. Mostre-o se for parado em um controle policial — ele não impede a detenção, mas costuma diminuir as chances de deportação imediata.</p>
+<h2 class="eb-h2">Erros comuns que fazem o pedido ser recusado</h2>
+<p>Em conversas com advogados e com a comunidade imigrante, alguns erros se repetem. Evitá-los aumenta significativamente suas chances.</p>
+<p>ERRO 1 Confundir a profissão declarada com um intitulé fora da lista Se você trabalha como "faxineiro em hotel" e declara "agent d'entretien", pode ser um problema — os intitulés oficiais têm peso jurídico. Use o nome exato do ofício como aparece no arrêté de 21/05/2025 e no seu contrato de trabalho.</p>
+<h3 class="eb-h3">ERRO 2 Apresentar dossiê magro em provas de residência</h3>
+<p>Muitos apresentam apenas 2 ou 3 documentos por ano. Isso é quase sempre insuficiente. A lógica é saturar o dossiê: quanto mais documentos diferentes, por mais meses, mais sólido.</p>
+<h3 class="eb-h3">ERRO 3 Usar a experiência como auto-entrepreneur</h3>
+<p>A L. 435-4 exige trabalho assalariado em métier en tension. Experiência como micro-empreendedor, freelancer ou empreendedor não entra no cômputo dos 12 meses.</p>
+<p>ERRO 4 Trabalhar sob visto de estudante e tentar usar essa experiência O trabalho exercido enquanto estudante (com as limitações de horas semanais do título étudiant) não conta para os 12 meses de experiência exigidos.</p>
+<h3 class="eb-h3">ERRO 5 Usar empregos sazonais como prova</h3>
+<p>Contratos sazonais (colheitas, vindimas, temporada turística) são excluídos do dispositivo. Verifique os termos exatos do seu contrato.</p>
+<h3 class="eb-h3">ERRO 6 Ignorar a dimensão da integração</h3>
+<p>Mesmo com profissão e experiência adequadas, um dossiê frio, sem cartas de apoio, sem comprovação de aprendizado do francês, sem laços sociais, pode ser recusado por "falta de integração suficiente".</p>
+<h3 class="eb-h3">ERRO 7 Apresentar documentos sem tradução juramentada</h3>
+<p>Documentos em línguas que não o francês, sem tradução assermentée na França, são, em regra, ignorados. Invista em traduções profissionais — custa, mas é requisito.</p>
+<h3 class="eb-h3">ERRO 8 Depositar pedido com OQTF em vigor</h3>
+<p>Se você tem uma OQTF ativa, a L. 435-4 está fechada. É preciso primeiro contestar ou esperar a caducidade da OQTF (1 ano em geral) para só depois pedir a AES. Consulte um advogado.</p>
+<h3 class="eb-h3">ERRO 9 Confiar em intermediários sem credenciais</h3>
+<p>Cuidado com pessoas que prometem "garantir" a regularização por valores altos. A única pessoa autorizada a atuar legalmente é um(a) advogado(a) inscrito(a) na ordem. Associações reconhecidas (La Cimade, GISTI, Secours Catholique) também oferecem apoio — muitas vezes gratuito.</p>
+<h3 class="eb-h3">ERRO 10 Esperar silêncio da administração sem agir</h3>
+<p>O silêncio de 4 meses vira recusa tácita. Muitos perdem o prazo de 2 meses para recorrer porque não percebem que a ausência de resposta já é uma decisão negativa.</p>
+<h2 class="eb-h2">Perguntas frequentes dos imigrantes</h2>
+<p>Eu entrei na França como turista e fiquei. Posso pedir AES por métier en tension? Sim, em princípio, desde que cumpra os critérios: 3 anos de residência, 12 meses de trabalho no setor nos últimos 24, vínculo atual, integração. A entrada como turista não impede o pedido. Mas ela terá de ser comprovada (carimbos no passaporte).</p>
+<p>Trabalho há 2 anos como femme de ménage em Paris, mas tudo sem contrato. O que fazer? Tente negociar com as famílias atuais ou com um(a) empregador(a) da casa uma declaração retroativa pelo CESU (Chèque emploi service universel), ou ao menos um contrato novo com promesse d'embauche. O trabalho não declarado é o maior obstáculo prático; sem papelada, mesmo profissões na lista não permitem o pedido. Busque uma associação como La Cimade ou um(a) advogado(a) antes de avançar.</p>
+<p>Meu filho estuda na escola francesa há 4 anos. Isso me regulariza? A escolarização dos filhos é um elemento importante da integração, mas a circulaire Retailleau retirou dela o papel de critério autônomo. Na prática, você precisa somar a escolaridade das crianças a outros elementos fortes — preferencialmente via métier en tension (L. 435-4) ou vida familiar (se houver cônjuge francês ou residente).</p>
+<p>E se minha profissão está em tensão em outra região, mas não na minha? A análise é feita pela préfecture do seu local de residência. Se a profissão não está na lista da sua região, a L. 435-4 não se aplica ali. Em tese, uma mudança de residência para outra região pode abrir a porta — mas isso exige tempo, novas provas de residência, e um plano sério, não improvisado.</p>
+<h3 class="eb-h3">Posso trazer meu marido ou esposa pelo meu pedido?</h3>
+<p>A regularização pela L. 435-4 é individual. Para trazer familiares, você usará outros procedimentos depois: o regroupement familial (após ter um ano de residência regular) ou outros títulos específicos. Consulte um(a) advogado(a) sobre o momento certo.</p>
+<p>Meus filhos nascidos na França têm direito à nacionalidade francesa? Crianças nascidas na França de pais estrangeiros adquirem a nacionalidade francesa aos 18 anos, sob condições de residência (5 anos na França entre 11 e 18 anos, contínuos ou não). Podem também antecipar o pedido a partir dos 13 anos, com condições. Este ponto não tem relação direta com métier en tension, mas é frequentemente perguntado.</p>
+<h3 class="eb-h3">Vale a pena recorrer a advogado? Quanto custa?</h3>
+<p>Em procedimentos tão sensíveis, a resposta é sim. Honorários para AES giram, em geral, entre 1.500 e 3.000 euros, com variações. Se sua renda for baixa, você tem direito à aide juridictionnelle, que cobre parcial ou totalmente os honorários. Muitas associações têm plantão jurídico gratuito.</p>
+<p>Quanto tempo leva até eu ter a carte de séjour em mãos? Depende da préfecture. Em situações boas, de 6 meses a 1 ano. Em préfectures sobrecarregadas (como as da Île-de-France), pode passar de 18 meses. Durante a espera, se a administração não responde em 4 meses, você pode acionar o tribunal administrativo.</p>
+<p>Se eu viajar para o exterior durante o processo, perco meu pedido? Em princípio, uma viagem curta não é proibida, mas sem título de residência regular, sair da França é arriscado: você pode ser barrado(a) no retorno. Evite viajar enquanto o pedido está pendente. Só considere depois de ter pelo menos um récépissé válido permitindo a saída e retorno.</p>
+<h3 class="eb-h3">Falo pouco francês. Isso inviabiliza meu pedido?</h3>
+<p>Um nível A2 é o mínimo formal. Se você está abaixo, invista meses em aulas antes de depositar o dossiê. Existem cursos gratuitos ou a baixo custo em muitas mairies, associações e centros sociais. O investimento em francês é o que mais transforma suas chances — e a sua vida na França.</p>
+<h2 class="eb-h2">Glossário português-francês</h2>
+<p>Dicionário rápido dos termos jurídicos e administrativos que você vai encontrar em cada etapa do processo. Conhecer o vocabulário em francês evita confusões nas préfectures e nos formulários.</p>
+<h3 class="eb-h3">Francês                                  Português</h3>
+<p>Admission Exceptionnelle au Admissão Excepcional à Residência — procedimento para Séjour (AES) regularizar estrangeiro em situação irregular</p>
+<p>Arrêté Portaria ministerial — norma administrativa que fixa detalhes técnicos</p>
+<p>Attestation Atestação, declaração formal (de empregador, de residência, etc.)</p>
+<p>Avocat en droit des étrangers Advogado especializado em direito dos estrangeiros</p>
+<p>Carte de séjour Carteira de residência</p>
+<p>CESEDA Código da entrada e residência dos estrangeiros e do direito de asilo</p>
+<p>Cerfa Formulário administrativo oficial numerado</p>
+<p>Circulaire Circular administrativa — orientação do ministério aos préfets, sem força de lei</p>
+<p>Contrat d'engagement républicain Contrato de compromisso com os princípios da República</p>
+<p>Dossier Dossiê, conjunto de documentos do pedido</p>
+<h3 class="eb-h3">Étranger                                 Estrangeiro</h3>
+<h3 class="eb-h3">Fiche de paie / bulletin de salaire      Contracheque</h3>
+<p>Métier en tension Profissão em tensão, com escassez de mão de obra</p>
+<p>OQTF Obligation de Quitter le Territoire — ordem de deixar o território francês</p>
+<p>Opposabilité de la situation de Regra que obriga o empregador a provar a busca prévia por l'emploi candidato local</p>
+<p>Préfet / Préfecture Prefeito administrativo / Prefeitura (autoridade estatal no departamento)</p>
+<p>Promesse d'embauche Promessa de contratação — documento formal do empregador</p>
+<p>Récépissé Recibo provisório que vale como autorização temporária durante a análise</p>
+<p>Régularisation Regularização — processo para obter título de residência</p>
+<p>Salarié Assalariado — tipo de carte de séjour ligado a CDI</p>
+<p>Sans-papiers Pessoa em situação irregular</p>
+<p>Travailleur temporaire Trabalhador temporário — carte de séjour ligado a CDD</p>
+<p>Traducteur assermenté Tradutor juramentado, autorizado a fazer traduções oficiais na França</p>
+<p>Titre de séjour Título de residência</p>
+<h2 class="eb-h2">Fontes e leituras recomendadas</h2>
+<h3 class="eb-h3">Fontes oficiais e leituras recomendadas</h3>
+<p>Para aprofundar-se ou verificar cada informação deste e-book, consulte sempre fontes primárias. Desconfie de resumos em redes sociais e busque os textos oficiais.</p>
+<h3 class="eb-h3">Textos legais oficiais</h3>
+<p>disponível em legifrance.gouv.fr</p>
+<ul><li>Loi n° 2024-42 du 26 janvier 2024 pour contrôler l'immigration, améliorer l'intégration —</li></ul>
+<p>difficultés de recrutement — legifrance.gouv.fr</p>
+<p>relatives à l'admission exceptionnelle au séjour — texto completo no site do GISTI</p>
+<ul><li>Arrêté du 21 mai 2025 fixant la liste des métiers et zones géographiques caractérisés par des</li><li>Circulaire do 23 janvier 2025 (NOR: INTK2435521J) relative aux orientations générales</li></ul>
+<ul><li>Articles L. 435-1 e L. 435-4 do CESEDA — base jurídica da AES</li></ul>
+<h3 class="eb-h3">Sites oficiais úteis</h3>
+<p>administrativo</p>
+<ul><li>service-public.fr — informações oficiais do Estado sobre qualquer procedimento</li></ul>
+<p>pedidos</p>
+<ul><li>info.gouv.fr — atualidades governamentais, incluindo sobre imigração</li><li>ANEF (administration-etrangers-en-france.interieur.gouv.fr) — plataforma online para muitos</li></ul>
+<ul><li>legifrance.gouv.fr — textos oficiais da legislação francesa</li><li>timbres.impots.gouv.fr — compra de timbres fiscais quando exigidos</li></ul>
+<h3 class="eb-h3">Associações e ONGs de apoio ao estrangeiro</h3>
+<p>notas excelentes sobre jurisprudência</p>
+<ul><li>La Cimade — acolhimento jurídico e acompanhamento para estrangeiros (cimade.org)</li><li>GISTI — Groupe d'information et de soutien des immigré·e·s (gisti.org), publicações técnicas e</li></ul>
+<ul><li>Secours Catholique — Caritas France — apoio social e jurídico</li><li>France Terre d'Asile — foco em demandantes de asilo, com atuação mais ampla</li><li>Amnesty International France — análises e alertas sobre direitos humanos</li><li>Ligue des Droits de l'Homme (LDH)</li></ul>
+<h3 class="eb-h3">Recursos gerais para imigrantes</h3>
+<ul><li>Consulados do seu país em Paris — documentação, registros civis, apostilamentos</li></ul>
+<p>busque com critério, prefira os que citam fontes oficiais</p>
+<ul><li>Consulados regionais em Lyon, Marseille, Bordeaux, Toulouse, Strasbourg</li><li>Associações comunitárias e espaços culturais nas grandes cidades</li><li>Grupos e podcasts em sua língua — muitos criadores falam sobre direitos e procedimentos;</li></ul>
+<h3 class="eb-h3">Palavra final</h3>
+<p>Regularizar-se na França pela via do métier en tension não é um caminho simples, mas é, para muitos imigrantes, o caminho mais realista. O que faz a diferença, no fim, quase nunca é o valor do advogado — é a qualidade do dossiê, a clareza da narrativa pessoal e a capacidade de provar, com dezenas de documentos, que você já faz parte da França.</p>
+<p>Se este e-book ajudou a clarear o terreno, ele cumpriu o objetivo. Use cada capítulo como um checklist, releia as seções no momento certo e não hesite em buscar apoio especializado — você não precisa fazer isso sozinho(a).</p>
+<p>Boa sorte com o seu pedido.</p>
+<p>Este guia foi preparado com base em fontes oficiais disponíveis em abril de 2026. A legislação francesa sobre imigração muda com frequência — verifique sempre se há atualizações antes de iniciar um pedido formal. Este material não substitui, em nenhuma hipótese, a consulta com um(a) advogado(a) especializado(a).</p>
+
+  <div class="foot">
+    <h3>Fontes e aviso</h3>
+    <p>Arrêté de 21/05/2025 (JO 22/05/2025); circulaire Retailleau de 23/01/2025; loi du 26/01/2024; artigos L.435-1 e seg. do CESEDA; GISTI, info.gouv.fr, service-public.fr. Publicação original: Alyg Global Company.</p>
+    <div class="disclaimer">Material informativo e educacional. Não substitui a consulta com advogado(a) especializado(a) em droit des étrangers. Cada caso é único; erros no pedido podem levar a uma OQTF. Confirme sempre na fonte oficial.</div>
+    <p style="margin-top:14px">© 2026 The Crossing Time · Área VIP</p>
+  </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script>
+(function(){
+  function setGate(s){document.body.setAttribute('data-gate',s);}
+  setGate('locked');
+  try{
+    if(window.supabase&&window.supabase.createClient){
+      var sb=window.supabase.createClient('https://vafapralyahudvkqvjdu.supabase.co','sb_publishable_YQDnfpu-_MFUleKlv1rmHw_w4bGrjf0');
+      function apply(sess){
+        if(!sess||!sess.user||!sess.user.id){setGate('locked');return;}
+        sb.from('vip_members').select('is_subscriber').eq('user_id',sess.user.id).maybeSingle()
+          .then(function(res){setGate(res&&res.data&&res.data.is_subscriber===true?'unlocked':'locked');})
+          .catch(function(){setGate('locked');});
+      }
+      sb.auth.getSession().then(function(r){apply(r&&r.data&&r.data.session);}).catch(function(){setGate('locked');});
+      sb.auth.onAuthStateChange(function(ev,sess){apply(sess);});
+    }
+  }catch(e){setGate('locked');}
+})();
+</script>
+<script id="tct-ga-ebook">
+(function(){
+  var GA_ID='G-RZC583GSQY';
+  try{ if(localStorage.getItem('tct_ga_consent')!=='granted') return; }catch(e){ return; }
+  var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID; document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments);} window.gtag=gtag;
+  gtag('js',new Date()); gtag('config',GA_ID,{anonymize_ip:true});
+})();
+</script>
+</body>
+</html>
