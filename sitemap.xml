@@ -19,6 +19,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/afd_saxonia_anhalt_2026.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/alemanha_russia_leipzig_drone_2026.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -189,6 +195,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/ceuta_crise_fronteira.html</loc>
     <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/ceuta_porto_migrantes_2026.html</loc>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1215,6 +1227,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/ucrania_kyiv.html</loc>
     <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/ucrania_plano_paz_2026.html</loc>
+    <lastmod>2026-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
