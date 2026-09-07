@@ -415,8 +415,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/eleicoes_brasil_2026.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/eleicoes_consulares_2026.html</loc>
     <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/eleicoes_eua_2026.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/eleicoes_franca_2027.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -759,6 +777,24 @@
   <url>
     <loc>https://thecrossingtime.com/materias/lyon.html</loc>
     <lastmod>2026-08-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_eleicoes_brasil_2026_foto.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_eleicoes_eua_2026_foto.html</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_eleicoes_franca_2027_foto.html</loc>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
