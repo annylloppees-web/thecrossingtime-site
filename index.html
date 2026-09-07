@@ -1456,7 +1456,7 @@ h3.mat-cover-title {
 .vip-lock{margin-top:12px}
 </style>
 </head>
-<body data-tct-build="p15-v58 · 7set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v62 · 7set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1616,7 +1616,7 @@ h3.mat-cover-title {
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v58 · 7set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v62 · 7set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -6905,7 +6905,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v58 · 7set2026';try{
+(function(){var BUILD='p15-v62 · 7set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7262,6 +7262,122 @@ function ouvirToggle(){
       gsb.auth.onAuthStateChange(function(){ tctRefresh(); });
     }
   }catch(e){}
+})();
+</script>
+<style id="tct-langpick-css">
+#tct-langpick{position:fixed;inset:0;z-index:2147483000;display:none;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 40%,#16294a,#0E1A2B 70%);}
+#tct-langpick .lp-box{max-width:600px;width:calc(100% - 40px);text-align:center;color:#F4F2ED;padding:12px;}
+#tct-langpick .lp-map{width:100%;height:auto;display:block;margin:0 auto 14px;max-width:560px;}
+#tct-langpick .lp-map text{font-family:Arial,sans-serif;font-size:15px;letter-spacing:.18em;fill:#C6A15B;font-weight:700;}
+#tct-langpick .lp-brand{font-family:Georgia,'Times New Roman',serif;font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:#C6A15B;margin:0 0 22px;}
+#tct-langpick .lp-title{font-family:Georgia,serif;font-weight:300;margin:0 0 4px;color:#fff;}
+#tct-langpick .lp-title .lp-l{display:block;font-size:22px;line-height:1.5;color:#fff;}
+#tct-langpick .lp-title .lp-fr{position:relative;padding-top:12px;margin-top:10px;}
+#tct-langpick .lp-title .lp-fr:before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:26px;height:1px;background:#C6A15B;opacity:.7;}
+#tct-langpick .lp-btns{display:flex;gap:14px;justify-content:center;margin:30px 0 16px;flex-wrap:wrap;}
+#tct-langpick .lp-btn{cursor:pointer;background:transparent;border:1px solid #C6A15B;color:#F4F2ED;border-radius:6px;
+  padding:18px 26px;min-width:150px;font-family:Arial,sans-serif;transition:background .18s,transform .18s;}
+#tct-langpick .lp-btn:hover{background:#C6A15B;color:#0E1A2B;transform:translateY(-2px);}
+#tct-langpick .lp-flag{font-size:30px;display:block;margin-bottom:8px;}
+#tct-langpick .lp-lang{font-size:15px;font-weight:700;letter-spacing:.02em;}
+#tct-langpick .lp-note{font-size:11.5px;color:rgba(244,242,237,.6);margin:8px 0 0;}
+@media (prefers-reduced-motion: reduce){#tct-langpick .lp-map animate,#tct-langpick .lp-map animateMotion{display:none}}
+</style>
+<div id="tct-langpick" role="dialog" aria-label="Idioma / Langue">
+  <div class="lp-box">
+    <svg class="lp-map" viewBox="0 0 960 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <defs>
+  <clipPath id="lpBR"><path d="M58.6,36.0 L68.9,40.0 L84.0,29.0 L79.5,26.4 L74.0,13.1 L88.2,18.2 L89.3,15.0 L101.9,11.1 L104.5,6.0 L109.4,7.0 L108.2,11.2 L112.6,15.7 L109.3,25.0 L111.8,32.1 L117.7,36.1 L130.6,30.1 L139.1,31.2 L139.1,26.3 L161.2,28.8 L172.3,12.8 L177.8,29.2 L183.8,36.4 L168.5,55.4 L163.4,56.8 L168.7,57.1 L176.5,52.2 L180.1,60.3 L188.1,58.1 L185.8,65.1 L197.0,50.7 L203.2,50.0 L222.5,58.3 L221.8,62.2 L224.5,62.9 L222.0,69.2 L225.7,63.7 L225.9,66.2 L231.9,63.0 L257.1,66.6 L277.7,82.0 L289.7,83.6 L292.0,86.9 L294.0,108.2 L269.9,141.5 L265.3,141.1 L263.1,177.9 L249.5,210.2 L241.8,217.3 L222.7,218.1 L196.3,235.8 L192.4,235.4 L194.9,237.1 L191.9,259.5 L176.3,279.6 L168.0,286.0 L178.8,273.5 L173.5,270.4 L173.6,275.8 L158.2,298.2 L157.0,294.0 L160.0,290.7 L155.3,285.6 L141.7,276.6 L138.8,278.3 L132.7,271.0 L126.9,271.6 L140.8,256.7 L154.8,248.6 L156.0,241.9 L153.5,237.0 L149.0,237.0 L151.8,225.5 L143.1,224.8 L140.3,212.8 L124.2,210.5 L123.1,193.3 L127.8,181.8 L121.1,174.4 L121.5,167.3 L108.0,167.2 L105.6,148.6 L72.5,135.0 L69.5,118.0 L60.8,119.4 L45.7,128.5 L30.8,127.7 L31.5,115.9 L19.4,120.2 L18.0,116.5 L11.8,115.7 L13.6,112.6 L6.0,101.8 L12.4,93.7 L14.2,83.6 L29.6,76.5 L35.7,77.4 L40.0,54.1 L35.1,40.8 L41.8,40.2 L36.6,37.2 L36.6,32.3 L54.7,29.3 L58.6,36.0 Z"/></clipPath>
+  <clipPath id="lpFR"><path d="M202.8,168.2 L204.0,185.2 L199.0,200.1 L193.7,196.1 L194.8,193.8 L192.5,192.6 L192.8,189.3 L191.2,189.2 L192.2,185.9 L190.7,184.6 L191.9,182.2 L190.4,180.7 L193.8,175.7 L200.7,173.6 L201.4,167.5 L202.8,168.2 ZM177.2,76.0 L173.5,79.2 L169.5,78.1 L167.3,80.0 L168.7,81.5 L161.2,88.9 L160.6,92.8 L155.8,98.7 L156.2,102.3 L154.5,103.6 L155.0,105.0 L157.6,104.0 L158.1,101.2 L160.8,99.3 L165.6,99.8 L165.6,104.6 L169.0,109.4 L165.8,113.1 L170.8,119.9 L169.8,123.1 L163.7,126.5 L165.1,129.4 L168.6,131.3 L169.1,133.5 L166.5,137.7 L167.3,141.2 L173.1,145.1 L177.5,144.6 L178.1,146.2 L175.5,152.5 L164.8,160.4 L162.8,163.9 L156.5,166.4 L146.7,163.3 L141.9,159.0 L137.1,160.4 L127.9,156.0 L126.0,156.6 L117.0,164.0 L114.1,169.5 L114.6,176.0 L116.3,179.2 L100.0,180.8 L95.5,177.8 L95.5,175.8 L91.6,175.9 L90.5,174.0 L82.5,171.1 L81.1,171.1 L80.6,174.1 L71.3,174.1 L67.7,171.3 L63.8,171.9 L61.3,169.1 L53.9,165.8 L51.7,166.8 L52.4,163.1 L47.1,159.7 L51.3,156.6 L54.7,136.7 L57.0,134.1 L55.9,132.6 L54.7,134.5 L56.9,117.2 L60.5,120.3 L62.3,126.0 L64.3,127.9 L60.9,118.5 L55.3,113.6 L57.6,113.1 L56.0,101.7 L47.2,97.6 L43.4,91.7 L44.0,87.1 L41.5,84.6 L43.8,82.4 L47.8,83.6 L44.6,81.7 L37.3,81.7 L38.3,78.5 L33.6,77.6 L33.3,75.4 L17.9,71.2 L12.2,71.4 L10.6,68.5 L7.2,67.1 L12.0,64.5 L8.6,62.1 L13.2,61.8 L6.6,60.6 L6.0,58.9 L9.2,55.5 L27.2,51.1 L30.3,52.1 L34.6,57.2 L38.0,54.9 L44.2,56.3 L45.5,54.0 L52.8,54.9 L50.2,51.8 L50.0,43.9 L46.2,34.3 L54.5,34.3 L56.1,40.2 L69.6,42.0 L77.6,39.0 L73.7,37.8 L74.5,33.9 L89.1,28.0 L93.9,22.9 L93.7,13.2 L95.0,10.2 L106.8,6.0 L107.8,10.4 L110.1,12.9 L114.9,12.3 L117.2,17.3 L121.6,18.4 L122.9,21.8 L126.5,21.2 L129.6,23.0 L129.7,28.7 L134.8,28.7 L138.5,24.9 L139.2,32.2 L144.9,34.4 L148.1,37.7 L158.2,38.0 L162.3,40.0 L165.1,44.7 L174.9,44.9 L184.4,48.4 L184.5,50.2 L180.3,55.2 L177.2,64.8 L176.0,74.4 L177.2,76.0 Z"/></clipPath>
+  <filter id="lpWave" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.010 0.024" numOctaves="2" seed="4" result="n">
+      <animate attributeName="baseFrequency" dur="9s" values="0.010 0.024;0.015 0.020;0.010 0.024" repeatCount="indefinite"/>
+    </feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <linearGradient id="lpSheen" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#fff" stop-opacity="0"/><stop offset="50%" stop-color="#fff" stop-opacity=".22"/><stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+ </defs>
+
+ <!-- BRASIL -->
+ <g transform="translate(60,60)">
+   <g clip-path="url(#lpBR)">
+     <g filter="url(#lpWave)">
+       <rect x="-10" y="-10" width="320" height="324.2" fill="#009B3A"/>
+       <path d="M150.0,34.099999999999994 L300.0,152.1 L150.0,270.1 L0.0,152.1 Z" fill="#FEDF00"/>
+       <circle cx="150.0" cy="152.1" r="52" fill="#002776"/>
+     </g>
+     <rect class="sheen" x="-260" y="-10" width="180" height="324.2" fill="url(#lpSheen)">
+       <animate attributeName="x" values="-260;340" dur="5s" repeatCount="indefinite"/>
+     </rect>
+   </g>
+   <path d="M58.6,36.0 L68.9,40.0 L84.0,29.0 L79.5,26.4 L74.0,13.1 L88.2,18.2 L89.3,15.0 L101.9,11.1 L104.5,6.0 L109.4,7.0 L108.2,11.2 L112.6,15.7 L109.3,25.0 L111.8,32.1 L117.7,36.1 L130.6,30.1 L139.1,31.2 L139.1,26.3 L161.2,28.8 L172.3,12.8 L177.8,29.2 L183.8,36.4 L168.5,55.4 L163.4,56.8 L168.7,57.1 L176.5,52.2 L180.1,60.3 L188.1,58.1 L185.8,65.1 L197.0,50.7 L203.2,50.0 L222.5,58.3 L221.8,62.2 L224.5,62.9 L222.0,69.2 L225.7,63.7 L225.9,66.2 L231.9,63.0 L257.1,66.6 L277.7,82.0 L289.7,83.6 L292.0,86.9 L294.0,108.2 L269.9,141.5 L265.3,141.1 L263.1,177.9 L249.5,210.2 L241.8,217.3 L222.7,218.1 L196.3,235.8 L192.4,235.4 L194.9,237.1 L191.9,259.5 L176.3,279.6 L168.0,286.0 L178.8,273.5 L173.5,270.4 L173.6,275.8 L158.2,298.2 L157.0,294.0 L160.0,290.7 L155.3,285.6 L141.7,276.6 L138.8,278.3 L132.7,271.0 L126.9,271.6 L140.8,256.7 L154.8,248.6 L156.0,241.9 L153.5,237.0 L149.0,237.0 L151.8,225.5 L143.1,224.8 L140.3,212.8 L124.2,210.5 L123.1,193.3 L127.8,181.8 L121.1,174.4 L121.5,167.3 L108.0,167.2 L105.6,148.6 L72.5,135.0 L69.5,118.0 L60.8,119.4 L45.7,128.5 L30.8,127.7 L31.5,115.9 L19.4,120.2 L18.0,116.5 L11.8,115.7 L13.6,112.6 L6.0,101.8 L12.4,93.7 L14.2,83.6 L29.6,76.5 L35.7,77.4 L40.0,54.1 L35.1,40.8 L41.8,40.2 L36.6,37.2 L36.6,32.3 L54.7,29.3 L58.6,36.0 Z" fill="none" stroke="#F4F2ED" stroke-width="2.4" opacity=".9"/>
+ </g>
+ <text class="lbl" x="210.0" y="390.2" text-anchor="middle">Brasil</text>
+
+ <!-- FRANÇA -->
+ <g transform="translate(690,95)">
+   <g clip-path="url(#lpFR)">
+     <g filter="url(#lpWave)">
+       <rect x="-10" y="-10" width="80.0" height="226.1" fill="#0055A4"/>
+       <rect x="70.0" y="-10" width="70.0" height="226.1" fill="#F4F2ED"/>
+       <rect x="140.0" y="-10" width="80.0" height="226.1" fill="#EF4135"/>
+     </g>
+     <rect class="sheen" x="-200" y="-10" width="120" height="226.1" fill="url(#lpSheen)">
+       <animate attributeName="x" values="-200;240" dur="5s" repeatCount="indefinite"/>
+     </rect>
+   </g>
+   <path d="M202.8,168.2 L204.0,185.2 L199.0,200.1 L193.7,196.1 L194.8,193.8 L192.5,192.6 L192.8,189.3 L191.2,189.2 L192.2,185.9 L190.7,184.6 L191.9,182.2 L190.4,180.7 L193.8,175.7 L200.7,173.6 L201.4,167.5 L202.8,168.2 ZM177.2,76.0 L173.5,79.2 L169.5,78.1 L167.3,80.0 L168.7,81.5 L161.2,88.9 L160.6,92.8 L155.8,98.7 L156.2,102.3 L154.5,103.6 L155.0,105.0 L157.6,104.0 L158.1,101.2 L160.8,99.3 L165.6,99.8 L165.6,104.6 L169.0,109.4 L165.8,113.1 L170.8,119.9 L169.8,123.1 L163.7,126.5 L165.1,129.4 L168.6,131.3 L169.1,133.5 L166.5,137.7 L167.3,141.2 L173.1,145.1 L177.5,144.6 L178.1,146.2 L175.5,152.5 L164.8,160.4 L162.8,163.9 L156.5,166.4 L146.7,163.3 L141.9,159.0 L137.1,160.4 L127.9,156.0 L126.0,156.6 L117.0,164.0 L114.1,169.5 L114.6,176.0 L116.3,179.2 L100.0,180.8 L95.5,177.8 L95.5,175.8 L91.6,175.9 L90.5,174.0 L82.5,171.1 L81.1,171.1 L80.6,174.1 L71.3,174.1 L67.7,171.3 L63.8,171.9 L61.3,169.1 L53.9,165.8 L51.7,166.8 L52.4,163.1 L47.1,159.7 L51.3,156.6 L54.7,136.7 L57.0,134.1 L55.9,132.6 L54.7,134.5 L56.9,117.2 L60.5,120.3 L62.3,126.0 L64.3,127.9 L60.9,118.5 L55.3,113.6 L57.6,113.1 L56.0,101.7 L47.2,97.6 L43.4,91.7 L44.0,87.1 L41.5,84.6 L43.8,82.4 L47.8,83.6 L44.6,81.7 L37.3,81.7 L38.3,78.5 L33.6,77.6 L33.3,75.4 L17.9,71.2 L12.2,71.4 L10.6,68.5 L7.2,67.1 L12.0,64.5 L8.6,62.1 L13.2,61.8 L6.6,60.6 L6.0,58.9 L9.2,55.5 L27.2,51.1 L30.3,52.1 L34.6,57.2 L38.0,54.9 L44.2,56.3 L45.5,54.0 L52.8,54.9 L50.2,51.8 L50.0,43.9 L46.2,34.3 L54.5,34.3 L56.1,40.2 L69.6,42.0 L77.6,39.0 L73.7,37.8 L74.5,33.9 L89.1,28.0 L93.9,22.9 L93.7,13.2 L95.0,10.2 L106.8,6.0 L107.8,10.4 L110.1,12.9 L114.9,12.3 L117.2,17.3 L121.6,18.4 L122.9,21.8 L126.5,21.2 L129.6,23.0 L129.7,28.7 L134.8,28.7 L138.5,24.9 L139.2,32.2 L144.9,34.4 L148.1,37.7 L158.2,38.0 L162.3,40.0 L165.1,44.7 L174.9,44.9 L184.4,48.4 L184.5,50.2 L180.3,55.2 L177.2,64.8 L176.0,74.4 L177.2,76.0 Z" fill="none" stroke="#0E1A2B" stroke-width="1.6" opacity=".5"/>
+   <path d="M202.8,168.2 L204.0,185.2 L199.0,200.1 L193.7,196.1 L194.8,193.8 L192.5,192.6 L192.8,189.3 L191.2,189.2 L192.2,185.9 L190.7,184.6 L191.9,182.2 L190.4,180.7 L193.8,175.7 L200.7,173.6 L201.4,167.5 L202.8,168.2 ZM177.2,76.0 L173.5,79.2 L169.5,78.1 L167.3,80.0 L168.7,81.5 L161.2,88.9 L160.6,92.8 L155.8,98.7 L156.2,102.3 L154.5,103.6 L155.0,105.0 L157.6,104.0 L158.1,101.2 L160.8,99.3 L165.6,99.8 L165.6,104.6 L169.0,109.4 L165.8,113.1 L170.8,119.9 L169.8,123.1 L163.7,126.5 L165.1,129.4 L168.6,131.3 L169.1,133.5 L166.5,137.7 L167.3,141.2 L173.1,145.1 L177.5,144.6 L178.1,146.2 L175.5,152.5 L164.8,160.4 L162.8,163.9 L156.5,166.4 L146.7,163.3 L141.9,159.0 L137.1,160.4 L127.9,156.0 L126.0,156.6 L117.0,164.0 L114.1,169.5 L114.6,176.0 L116.3,179.2 L100.0,180.8 L95.5,177.8 L95.5,175.8 L91.6,175.9 L90.5,174.0 L82.5,171.1 L81.1,171.1 L80.6,174.1 L71.3,174.1 L67.7,171.3 L63.8,171.9 L61.3,169.1 L53.9,165.8 L51.7,166.8 L52.4,163.1 L47.1,159.7 L51.3,156.6 L54.7,136.7 L57.0,134.1 L55.9,132.6 L54.7,134.5 L56.9,117.2 L60.5,120.3 L62.3,126.0 L64.3,127.9 L60.9,118.5 L55.3,113.6 L57.6,113.1 L56.0,101.7 L47.2,97.6 L43.4,91.7 L44.0,87.1 L41.5,84.6 L43.8,82.4 L47.8,83.6 L44.6,81.7 L37.3,81.7 L38.3,78.5 L33.6,77.6 L33.3,75.4 L17.9,71.2 L12.2,71.4 L10.6,68.5 L7.2,67.1 L12.0,64.5 L8.6,62.1 L13.2,61.8 L6.6,60.6 L6.0,58.9 L9.2,55.5 L27.2,51.1 L30.3,52.1 L34.6,57.2 L38.0,54.9 L44.2,56.3 L45.5,54.0 L52.8,54.9 L50.2,51.8 L50.0,43.9 L46.2,34.3 L54.5,34.3 L56.1,40.2 L69.6,42.0 L77.6,39.0 L73.7,37.8 L74.5,33.9 L89.1,28.0 L93.9,22.9 L93.7,13.2 L95.0,10.2 L106.8,6.0 L107.8,10.4 L110.1,12.9 L114.9,12.3 L117.2,17.3 L121.6,18.4 L122.9,21.8 L126.5,21.2 L129.6,23.0 L129.7,28.7 L134.8,28.7 L138.5,24.9 L139.2,32.2 L144.9,34.4 L148.1,37.7 L158.2,38.0 L162.3,40.0 L165.1,44.7 L174.9,44.9 L184.4,48.4 L184.5,50.2 L180.3,55.2 L177.2,64.8 L176.0,74.4 L177.2,76.0 Z" fill="none" stroke="#F4F2ED" stroke-width="2.2" opacity=".85"/>
+ </g>
+ <text class="lbl" x="795.0" y="327.1" text-anchor="middle">France</text>
+
+ <!-- ROTA + AVIÃO -->
+ <clipPath id="lpReveal"><rect x="345" y="70" width="0" height="150"><animate attributeName="width" values="0;360;360" keyTimes="0;0.82;1" dur="3.8s" repeatCount="indefinite"/></rect></clipPath>
+ <path id="lpRoute" d="M355,175 C470,80 600,80 700,180" fill="none" stroke="#C6A15B" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 12" clip-path="url(#lpReveal)"/>
+ <g><g transform="translate(-13,-13)"><path d="M13,1 C14.4,1 15.2,3 15.4,7.5 L24,13.2 L24,15.4 L15.4,13.2 L15.2,20 L18,22 L18,23.6 L13,22.4 L8,23.6 L8,22 L10.8,20 L10.6,13.2 L2,15.4 L2,13.2 L10.6,7.5 C10.8,3 11.6,1 13,1 Z" fill="#F4F2ED"/></g>
+   <animateMotion dur="3.8s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.82;1" calcMode="linear"><mpath href="#lpRoute"/></animateMotion>
+ </g>
+</svg>
+    <p class="lp-brand">The Crossing Time</p>
+    <h2 class="lp-title"><span class="lp-l">Escolha o seu idioma</span><span class="lp-l lp-fr">Choisissez votre langue</span></h2>
+    <div class="lp-btns">
+      <button type="button" class="lp-btn" data-lang="pt"><span class="lp-flag">🇧🇷</span><span class="lp-lang">Português</span></button>
+      <button type="button" class="lp-btn" data-lang="fr"><span class="lp-flag">🇫🇷</span><span class="lp-lang">Français</span></button>
+    </div>
+    <p class="lp-note">Você pode trocar depois no menu &middot; Vous pouvez changer ensuite dans le menu</p>
+  </div>
+</div>
+<script id="tct-langpick-js">
+(function(){
+  var KEY='tct-lang';
+  // persistir a escolha sempre que setLang for chamado (menu tb passa a lembrar)
+  try{
+    if(window.setLang && !window._tctLangPersist){
+      var _o=window.setLang;
+      window.setLang=function(l){ try{localStorage.setItem(KEY, (l==='fr'?'fr':'pt'));}catch(e){} return _o.apply(this,arguments); };
+      window._tctLangPersist=1;
+    }
+  }catch(e){}
+  function apply(l){ try{ if(window.setLang) setLang(l); }catch(e){} }
+  var stored=null; try{stored=localStorage.getItem(KEY);}catch(e){}
+  if(stored==='fr'||stored==='pt'){ apply(stored); return; }
+  function init(){
+    var ov=document.getElementById('tct-langpick'); if(!ov) return;
+    ov.style.display='flex';
+    var bs=ov.querySelectorAll('[data-lang]');
+    for(var i=0;i<bs.length;i++){(function(b){
+      b.addEventListener('click',function(){
+        var l=b.getAttribute('data-lang');
+        try{localStorage.setItem(KEY,l);}catch(e){}
+        apply(l);
+        ov.style.display='none';
+      });
+    })(bs[i]);}
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();
 </script>
 </body>
