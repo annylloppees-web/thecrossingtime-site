@@ -1463,7 +1463,7 @@ body[lang-mode="es"] .ng-pt,body[lang-mode="es"] .ng-fr{display:none!important}
 body[lang-mode="es"] .ng-es{display:revert!important}
 </style>
 </head>
-<body data-tct-build="p15-v76 · 8set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v77 · 8set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1639,7 +1639,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v76 · 8set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v77 · 8set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -6318,14 +6318,15 @@ document.addEventListener('keydown', function(e){
   if (eIOS() && !jaInstalado()) setTimeout(mostrar, 55000);
 
   /* registar o service worker (guarda os icones e responde offline) */
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js', {updateViaCache:'none'}).then(function(reg){ try{reg.update();}catch(e){} }).catch(function () {});
-      var __tctReloaded=false;
-      navigator.serviceWorker.addEventListener('controllerchange', function(){
-        if(__tctReloaded) return; __tctReloaded=true; try{location.reload();}catch(e){}
-      });
-    });
+  /* PWA DESLIGADA — remove qualquer Service Worker antigo e limpa o cache,
+     para o site nunca mais ficar preso numa versao antiga. */
+  if ('serviceWorker' in navigator && navigator.serviceWorker.getRegistrations) {
+    navigator.serviceWorker.getRegistrations().then(function(rs){
+      rs.forEach(function(r){ try{ r.unregister(); }catch(e){} });
+    }).catch(function(){});
+  }
+  if (window.caches && caches.keys) {
+    caches.keys().then(function(ks){ ks.forEach(function(k){ try{ caches.delete(k); }catch(e){} }); }).catch(function(){});
   }
 })();
 </script>
@@ -7139,7 +7140,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v76 · 8set2026';try{
+(function(){var BUILD='p15-v77 · 8set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
