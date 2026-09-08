@@ -1,14 +1,94 @@
-<!-- ============================================================
-     PÁGINA: Signaler un contenu / Sinalizar um conteúdo
-     Slug (endereço da página): signaler-un-contenu
-     Título sugerido: Signaler un contenu · Sinalizar um conteúdo
-     Conteúdo pronto para colar no editor do WordPress (bloco HTML).
-     ============================================================ -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signaler un contenu · The Crossing Time</title>
+<style>
+  :root{--navy:#0E1A2B;--gold:#C6A15B;--paper:#FBFAF7;--ink:#2a2f38;--muted:#5b6470;--line:#e6e2d8;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 -apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 22px 90px;}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:8px;flex-wrap:wrap;}
+  .brand{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--navy);font-size:19px;letter-spacing:.01em;}
+  .brand small{display:block;font:800 10px Arial,sans-serif;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-top:4px;}
+  .langbar{display:flex;gap:4px;background:#eee9df;padding:4px;border-radius:8px;}
+  .langbar button{border:0;background:none;padding:7px 13px;border-radius:6px;font:700 13px Arial,sans-serif;color:var(--muted);cursor:pointer;}
+  .langbar button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.12);}
+  .eyebrow{font:800 12px Arial,sans-serif;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin:26px 0 8px;}
+  h1{font-family:Georgia,serif;font-size:32px;line-height:1.18;color:var(--navy);margin:0 0 6px;font-weight:700;}
+  .upd{font-size:13px;color:var(--muted);margin:0 0 22px;}
+  p{margin:0 0 14px;}
+  a{color:var(--navy);}
+  .box{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:16px 18px;margin:0 0 16px;}
+  .foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  .foot a{color:var(--navy);}
+  [data-lang="pt"] .fr,[data-lang="pt"] .en,[data-lang="fr"] .pt,[data-lang="fr"] .en,[data-lang="en"] .pt,[data-lang="en"] .fr{display:none;}
+</style>
+</head>
+<body data-lang="fr">
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="index.html" style="text-decoration:none;">The Crossing Time<small>By Porta-Voz do Imigrante</small></a>
+    <div class="langbar">
+      <button type="button" id="l-pt" onclick="setL('pt')">PT</button>
+      <button type="button" id="l-fr" class="on" onclick="setL('fr')">FR</button>
+      <button type="button" id="l-en" onclick="setL('en')">EN</button>
+    </div>
+  </div>
+  <p style="margin:16px 0 0;"><a href="index.html" style="color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;"><span class="pt">&larr; Voltar ao site</span><span class="fr">&larr; Retour au site</span><span class="en">&larr; Back to the site</span></a></p>
 
-<p><strong>Français</strong></p>
-<p>Pour signaler un contenu, écrivez à <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a> en précisant : l'adresse (URL) de la page concernée, la description du contenu signalé et le motif du signalement. L'éditeur s'engage à examiner chaque signalement et à retirer promptement, ou à rendre inaccessible, tout contenu reconnu comme illicite.</p>
+  <!-- ============ FR ============ -->
+  <div class="fr">
+    <p class="eyebrow">Mentions légales · LCEN</p>
+    <h1>Signaler un contenu</h1>
+    <p class="upd">Dernière mise à jour : 12 août 2026</p>
+    <p>Pour signaler un contenu, écrivez à <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a> en précisant : l'adresse (URL) de la page concernée, la description du contenu signalé et le motif du signalement. L'éditeur s'engage à examiner chaque signalement et à retirer promptement, ou à rendre inaccessible, tout contenu reconnu comme illicite.</p>
+  </div>
 
-<hr>
+  <!-- ============ PT ============ -->
+  <div class="pt">
+    <p class="eyebrow">Avisos legais · LCEN</p>
+    <h1>Sinalizar um conteúdo</h1>
+    <p class="upd">Última atualização: 12 de agosto de 2026</p>
+    <p>Para sinalizar, escreva para <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a> informando: o endereço (URL) da página, a descrição do conteúdo e o motivo. O editor se compromete a analisar cada sinalização e a remover prontamente qualquer conteúdo reconhecido como ilícito.</p>
+  </div>
 
-<p><strong>Português</strong></p>
-<p>Para sinalizar, escreva para <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a> informando: o endereço (URL) da página, a descrição do conteúdo e o motivo. O editor se compromete a analisar cada sinalização e a remover prontamente qualquer conteúdo reconhecido como ilícito.</p>
+  <!-- ============ EN ============ -->
+  <div class="en">
+    <p class="eyebrow">Legal notice · LCEN</p>
+    <h1>Report content</h1>
+    <p class="upd">Last updated: 12 August 2026</p>
+    <p>To report content, write to <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a>, specifying: the address (URL) of the page concerned, a description of the reported content and the reason for the report. The publisher undertakes to review each report and to promptly remove, or block access to, any content recognized as unlawful.</p>
+  </div>
+
+  <div class="foot">
+    <span class="fr">© 2026 The Crossing Time · <a href="index.html">Retour au site</a></span>
+    <span class="pt">© 2026 The Crossing Time · <a href="index.html">Voltar ao site</a></span>
+    <span class="en">© 2026 The Crossing Time · <a href="index.html">Back to the site</a></span>
+  </div>
+</div>
+
+<script>
+  function setL(l){
+    document.body.setAttribute('data-lang',l);
+    document.documentElement.lang=l;
+    document.getElementById('l-pt').className=(l==='pt')?'on':'';
+    document.getElementById('l-fr').className=(l==='fr')?'on':'';
+    document.getElementById('l-en').className=(l==='en')?'on':'';
+    try{localStorage.setItem('tct-lang',l);}catch(e){}
+  }
+  // prioridade: ?lang= → idioma escolhido no site (localStorage) → idioma do navegador
+  (function(){
+    var q=(location.search.match(/[?&]lang=(pt|fr|en)/)||[])[1];
+    if(q){ setL(q); return; }
+    var s=null; try{s=localStorage.getItem('tct-lang');}catch(e){}
+    if(s==='pt'||s==='fr'||s==='en'){ setL(s); return; }
+    var nav=(navigator.language||'').toLowerCase();
+    if(nav.indexOf('pt')===0){ setL('pt'); return; }
+    if(nav.indexOf('en')===0){ setL('en'); return; }
+    // default FR (público principal em França)
+  })();
+</script>
+</body>
+</html>
