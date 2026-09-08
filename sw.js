@@ -1,83 +1,74 @@
-/*  The Crossing Time — service worker
- *  ESTRATEGIA: rede primeiro para paginas e materias. NUNCA servir
- *  jornalismo desactualizado a partir da cache. A cache existe apenas
- *  para o caso de o leitor ficar sem ligacao.
- */
-var CACHE = 'tct-v1';
-var ESSENCIAIS = [
-  '/favicon.ico',
-  '/favicon-32x32.png',
-  '/apple-touch-icon.png',
-  '/icon-192.png',
-  '/icon-512.png',
-  '/site.webmanifest'
-];
+/* The Crossing Time — Service Worker
+   Estratégia: "network-first" para páginas (HTML) → carrega SEMPRE a versão
+   mais recente quando há ligação; usa o cache só como reserva offline.
+   Ativa-se de imediato (skipWaiting + clients.claim) e apaga caches antigos,
+   corrigindo o problema de "fica na versão antiga" após publicar.
+*/
+var VERSION = 'tct-2026-09-08-v71';
+var CACHE = 'tct-cache-' + VERSION;
 
 self.addEventListener('install', function (e) {
-  e.waitUntil(
-    caches.open(CACHE).then(function (c) {
-      return c.addAll(ESSENCIAIS).catch(function () { return null; });
-    }).then(function () { return self.skipWaiting(); })
-  );
+  // novo SW assume o controlo sem esperar
+  self.skipWaiting();
 });
 
 self.addEventListener('activate', function (e) {
   e.waitUntil(
-    caches.keys().then(function (ks) {
-      return Promise.all(ks.map(function (k) {
-        if (k !== CACHE) return caches.delete(k);
+    caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (k) {
+        if (k !== CACHE) { return caches.delete(k); } // limpa caches antigos
       }));
     }).then(function () { return self.clients.claim(); })
   );
 });
 
-var OFFLINE = '<!DOCTYPE html><html lang="pt"><head><meta charset="utf-8">' +
-  '<meta name="viewport" content="width=device-width,initial-scale=1">' +
-  '<title>Sem ligacao — The Crossing Time</title><style>' +
-  'body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;' +
-  'background:#0E1A2B;color:#F4F2ED;font-family:Georgia,serif;text-align:center;padding:2rem}' +
-  'h1{font-size:1.6rem;font-weight:400;margin:0 0 .8rem;color:#C6A15B}' +
-  'p{font-size:.95rem;line-height:1.7;opacity:.8;margin:0}' +
-  '</style></head><body><div><h1>Sem ligacao a internet</h1>' +
-  '<p>Nao foi possivel carregar esta pagina.<br>Verifique a ligacao e tente novamente.<br><br>' +
-  'Pas de connexion — verifiez votre reseau.</p></div></body></html>';
+// permite forçar atualização a partir da página, se preciso
+self.addEventListener('message', function (e) {
+  if (e.data === 'skipWaiting') { self.skipWaiting(); }
+});
 
 self.addEventListener('fetch', function (e) {
-  var r = e.request;
-  if (r.method !== 'GET') return;
-
+  var req = e.request;
+  if (req.method !== 'GET') { return; }            // POST/etc: deixa passar
   var url;
-  try { url = new URL(r.url); } catch (err) { return; }
-  if (url.origin !== self.location.origin) return;   // fontes, CDN: nao mexer
+  try { url = new URL(req.url); } catch (err) { return; }
+  if (url.origin !== self.location.origin) { return; }        // externo: não mexe
+  if (url.pathname.indexOf('/.netlify/') === 0) { return; }   // funções: não mexe
 
-  // Paginas e materias: rede primeiro, sempre.
-  if (r.mode === 'navigate' || (r.headers.get('accept') || '').indexOf('text/html') !== -1) {
+  var isDoc = req.mode === 'navigate'
+           || req.destination === 'document'
+           || url.pathname === '/'
+           || url.pathname.slice(-5) === '.html';
+
+  if (isDoc) {
+    // PÁGINAS: rede primeiro (sempre o mais novo), cache como reserva offline
     e.respondWith(
-      fetch(r).then(function (resp) {
-        var copia = resp.clone();
-        caches.open(CACHE).then(function (c) { c.put(r, copia); });
-        return resp;
+      fetch(req).then(function (res) {
+        if (res && res.status === 200) {
+          var copy = res.clone();
+          caches.open(CACHE).then(function (c) { c.put(req, copy); });
+        }
+        return res;
       }).catch(function () {
-        return caches.match(r).then(function (hit) {
-          return hit || new Response(OFFLINE, {
-            headers: { 'Content-Type': 'text/html; charset=utf-8' }
-          });
+        return caches.match(req).then(function (m) {
+          return m || caches.match('/index.html') || caches.match('index.html');
         });
       })
     );
     return;
   }
 
-  // Icones e manifesto: cache primeiro (nao mudam).
+  // OUTROS ficheiros (ícones, media): usa cache e atualiza em segundo plano
   e.respondWith(
-    caches.match(r).then(function (hit) {
-      return hit || fetch(r).then(function (resp) {
-        if (resp && resp.status === 200) {
-          var copia = resp.clone();
-          caches.open(CACHE).then(function (c) { c.put(r, copia); });
+    caches.match(req).then(function (cached) {
+      var net = fetch(req).then(function (res) {
+        if (res && res.status === 200) {
+          var copy = res.clone();
+          caches.open(CACHE).then(function (c) { c.put(req, copy); });
         }
-        return resp;
-      });
-    }).catch(function () { return fetch(r); })
+        return res;
+      }).catch(function () { return cached; });
+      return cached || net;
+    })
   );
 });

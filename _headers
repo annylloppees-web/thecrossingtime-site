@@ -1,0 +1,15 @@
+# Netlify — controlo de cache
+# HTML e o service worker: revalidar sempre → o visitante recebe a versão nova
+# assim que publicares (nunca mais "fica na versão antiga").
+
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/sw.js
+  Cache-Control: no-cache
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/materias/*
+  Cache-Control: public, max-age=0, must-revalidate
