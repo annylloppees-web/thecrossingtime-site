@@ -1463,7 +1463,7 @@ body[lang-mode="es"] .ng-pt,body[lang-mode="es"] .ng-fr{display:none!important}
 body[lang-mode="es"] .ng-es{display:revert!important}
 </style>
 </head>
-<body data-tct-build="p15-v75 · 8set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v76 · 8set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1513,11 +1513,11 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <ul class="nav-links">
     <li><a onclick="showPage('home')" id="nl-home"><span class="ng-pt">Início</span><span class="ng-fr">Accueil</span><span class="ng-en">Home</span></a></li>
     <li><a onclick="showPage('revista')" id="nl-revista"><span class="ng-pt">Revista</span><span class="ng-fr">Revue</span><span class="ng-en">Magazine</span></a></li>
-    <li><a onclick="showPage('ebooks')" id="nl-ebooks"><span class="ng-pt">E-books</span><span class="ng-fr" style="display:none;">E-books</span><span class="ng-en">E-books</span><span class="ng-en" style="display:none;">E-books</span></a></li><li><a onclick="showPage('livros')" id="nl-livros"><span class="ng-pt">Livros</span><span class="ng-fr" style="display:none;">Livres</span><span class="ng-en">Books</span></a></li>
+    <li><a onclick="showPage('ebooks')" id="nl-ebooks"><span class="ng-pt">E-books</span><span class="ng-fr" style="display:none;">E-books</span><span class="ng-en">E-books</span></a></li><li><a onclick="showPage('livros')" id="nl-livros"><span class="ng-pt">Livros</span><span class="ng-fr" style="display:none;">Livres</span><span class="ng-en">Books</span></a></li>
     <li><a onclick="showPage('materias')" id="nl-materias"><span class="ng-pt">Matérias</span><span class="ng-fr">Articles</span><span class="ng-en">Articles</span></a></li>
     <li><a onclick="showPage('colunas')" id="nl-colunas"><span class="ng-pt">Colunas</span><span class="ng-fr">Chroniques</span><span class="ng-en">Columns</span></a></li><li><a onclick="showPage('blog')" id="nl-blog"><span class="ng-pt">Blog</span><span class="ng-fr">Blog</span><span class="ng-en">Blog</span></a></li><li><a onclick="openMateria('emprego')" id="nl-emprego"><span class="ng-pt">Emprego</span><span class="ng-fr">Emploi</span><span class="ng-en">Jobs</span></a></li><li><a onclick="openMateria('moradia_aluguel_franca')" id="nl-moradia"><span class="ng-pt">Moradia</span><span class="ng-fr">Logement</span><span class="ng-en">Housing</span></a></li><li><a onclick="showPage('sorrisos')" id="nl-sorrisos"><span class="ng-pt">Sorrisos</span><span class="ng-fr">Sourires</span><span class="ng-en">Smiles</span></a></li>
     <li><a onclick="showPage('eventos')" id="nl-eventos"><span class="ng-pt">Eventos</span><span class="ng-fr">Événements</span><span class="ng-en">Events</span></a></li>
-    <li><a onclick="showPage('civique')" id="nl-civique"><span class="ng-pt">Imigração</span><span class="ng-fr" style="display:none;">Immigration</span><span class="ng-en">Immigration</span><span class="ng-en" style="display:none;">Immigration</span></a></li><li><a onclick="showPage('missing')" id="nl-missing">Missing</a></li>
+    <li><a onclick="showPage('civique')" id="nl-civique"><span class="ng-pt">Imigração</span><span class="ng-fr" style="display:none;">Immigration</span><span class="ng-en">Immigration</span></a></li><li><a onclick="showPage('missing')" id="nl-missing">Missing</a></li>
     <li><a onclick="showPage('jogos')" id="nl-jogos">Jogos</a></li>
   </ul>
   <div class="nav-right">
@@ -1529,9 +1529,10 @@ body[lang-mode="es"] .ng-es{display:revert!important}
     <button class="btn-ghost" id="btn-logout" style="display:none;" onclick="vipLogout()"><span class="ng-pt">Sair</span><span class="ng-fr">Déconnexion</span><span class="ng-en">Sign out</span></button>
   </div>
 
-  <div class="nav-lang" style="display:none;align-items:center;gap:4px;margin-left:12px;border-left:0.5px solid rgba(255,255,255,.15);padding-left:12px;">
+  <div class="nav-lang" style="display:inline-flex;align-items:center;gap:4px;margin-left:12px;border-left:0.5px solid rgba(255,255,255,.15);padding-left:12px;">
     <button id="lang-pt" onclick="setLang('pt')" style="padding:3px 9px;border:1.5px solid #C6A15B;background:rgba(198,161,91,.2);border-radius:3px;cursor:pointer;font-size:11px;font-family:var(--sans);letter-spacing:.06em;color:#C6A15B;font-weight:600;">PT</button>
     <button id="lang-fr" onclick="setLang('fr')" style="padding:3px 9px;border:0.5px solid rgba(255,255,255,.25);background:transparent;border-radius:3px;cursor:pointer;font-size:11px;font-family:var(--sans);letter-spacing:.06em;color:rgba(255,255,255,.7);">FR</button>
+    <button id="lang-en" onclick="setLang('en')" style="padding:3px 9px;border:0.5px solid rgba(255,255,255,.25);background:transparent;border-radius:3px;cursor:pointer;font-size:11px;font-family:var(--sans);letter-spacing:.06em;color:rgba(255,255,255,.7);">EN</button>
   </div>
 </nav><!-- RELÓGIO DA REDACÇÃO -->
 <div id="tct-relogio" aria-live="off">
@@ -1638,7 +1639,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v75 · 8set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v76 · 8set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -1767,13 +1768,13 @@ body[lang-mode="es"] .ng-es{display:revert!important}
         <span class="ng-pt"><span class="ng-pt">Biblioteca digital</span><span class="ng-fr">Bibliothèque numérique</span><span class="ng-en"><span class="ng-pt">Digital library</span></span><span class="ng-fr" style="display:none;">Bibliothèque numérique</span><span class="ng-en" style="display:none;">Digital Library</span>
       </span>
       <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:400;line-height:1.1;margin-bottom:1.5rem;">
-        <span class="ng-pt">E-books</span><span class="ng-fr" style="display:none;">E-books</span><span class="ng-en">E-books</span><span class="ng-en" style="display:none;">E-books</span><br>
+        <span class="ng-pt">E-books</span><span class="ng-fr" style="display:none;">E-books</span><span class="ng-en">E-books</span><br>
         <em style="color:#C6A15B;font-size:.65em;">
           <span class="ng-pt"><span class="ng-pt">guias para a sua travessia</span><span class="ng-fr">guides pour votre traversée</span><span class="ng-en"><span class="ng-pt">guides for your crossing</span></span><span class="ng-fr" style="display:none;">guides pour votre traversée</span><span class="ng-en" style="display:none;">guides for your crossing</span>
         </em>
       </h1>
       <p style="font-size:1.05rem;line-height:1.7;color:rgba(244,242,237,.85);max-width:680px;margin:0 auto;font-style:italic;">
-        <span class="ng-pt">Conteúdos exclusivos do The Crossing Time para apoiar a sua vida na França — guias práticos, manuais e materiais de referência elaborados para a comunidade brasileira.</span><span class="ng-fr" style="display:none;">Contenus exclusifs de The Crossing Time pour accompagner votre vie en France — guides pratiques, manuels et documents de référence pensés pour la communauté brésilienne.</span><span class="ng-en">Exclusive content from The Crossing Time to support your life in France — practical guides, handbooks, and reference materials created for the Brazilian community.</span><span class="ng-en" style="display:none;">Exclusive content from The Crossing Time to support your life in France — practical guides, manuals and reference materials designed for the Brazilian community.</span>
+        <span class="ng-pt">Conteúdos exclusivos do The Crossing Time para apoiar a sua vida na França — guias práticos, manuais e materiais de referência elaborados para a comunidade brasileira.</span><span class="ng-fr" style="display:none;">Contenus exclusifs de The Crossing Time pour accompagner votre vie en France — guides pratiques, manuels et documents de référence pensés pour la communauté brésilienne.</span><span class="ng-en">Exclusive content from The Crossing Time to support your life in France — practical guides, handbooks, and reference materials created for the Brazilian community.</span>
       </p>
     </div>
   </div>
@@ -1809,10 +1810,10 @@ body[lang-mode="es"] .ng-es{display:revert!important}
             <span class="ng-pt"><span class="ng-pt">Guia prático</span><span class="ng-fr">Guide pratique</span><span class="ng-en"><span class="ng-pt">Practical guide</span></span><span class="ng-fr" style="display:none;">Guide pratique</span><span class="ng-en" style="display:none;">Practical guide</span>
           </div>
           <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;font-weight:500;line-height:1.25;color:#0E1A2B;margin-bottom:.75rem;">
-            <span class="ng-pt">Examen Civique: Guia Completo para Aprovação</span><span class="ng-fr" style="display:none;">Examen Civique : Guide Complet pour la Réussite</span><span class="ng-en">Examen Civique: Complete Guide to Passing</span><span class="ng-en" style="display:none;">Civic Exam: Complete Approval Guide</span>
+            <span class="ng-pt">Examen Civique: Guia Completo para Aprovação</span><span class="ng-fr" style="display:none;">Examen Civique : Guide Complet pour la Réussite</span><span class="ng-en">Examen Civique: Complete Guide to Passing</span>
           </h3>
           <p style="font-size:.9rem;color:#555;line-height:1.55;margin-bottom:1.25rem;flex:1;">
-            <span class="ng-pt">Guia completo, simulador com questões reais da prova e e-book de apoio. Um pacote pensado para te levar até à aprovação no exame cívico francês.</span><span class="ng-fr" style="display:none;">Guide complet, simulateur avec de vraies questions de l'examen et e-book de soutien. Un pack pensé pour vous mener jusqu'à la réussite.</span><span class="ng-en">Complete guide, a simulator with real exam questions, and a companion e-book. A package designed to take you all the way to passing the French civic exam.</span><span class="ng-en" style="display:none;">Complete guide, simulator with real exam questions and support e-book. A package designed to lead you to approval.</span>
+            <span class="ng-pt">Guia completo, simulador com questões reais da prova e e-book de apoio. Um pacote pensado para te levar até à aprovação no exame cívico francês.</span><span class="ng-fr" style="display:none;">Guide complet, simulateur avec de vraies questions de l'examen et e-book de soutien. Un pack pensé pour vous mener jusqu'à la réussite.</span><span class="ng-en">Complete guide, a simulator with real exam questions, and a companion e-book. A package designed to take you all the way to passing the French civic exam.</span>
           </p>
           <div style="display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;border-top:.5px solid rgba(14,26,43,.08);margin-bottom:1rem;">
             <span style="font-size:10px;letter-spacing:.1em;color:#888;font-family:'Jost',sans-serif;text-transform:uppercase;">PT/FR · PDF</span>
@@ -1836,10 +1837,10 @@ body[lang-mode="es"] .ng-es{display:revert!important}
             <span class="ng-pt"><span class="ng-pt">Manual</span><span class="ng-fr">Manuel</span><span class="ng-en"><span class="ng-pt">Handbook</span></span><span class="ng-fr" style="display:none;">Manuel</span><span class="ng-en" style="display:none;"><span class="ng-pt">Manual</span><span class="ng-fr">Manuel</span><span class="ng-en">Handbook</span></span>
           </div>
           <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;font-weight:500;line-height:1.25;color:#0E1A2B;margin-bottom:.75rem;">
-            <span class="ng-pt">Guia Expert da Fiscalidade Francesa — Vol. II</span><span class="ng-fr" style="display:none;">Guide Expert de la Fiscalité Française — Vol. II</span><span class="ng-en">Expert Guide to French Taxation — Vol. II</span><span class="ng-en" style="display:none;">Expert Guide to French Taxation — Vol. II</span>
+            <span class="ng-pt">Guia Expert da Fiscalidade Francesa — Vol. II</span><span class="ng-fr" style="display:none;">Guide Expert de la Fiscalité Française — Vol. II</span><span class="ng-en">Expert Guide to French Taxation — Vol. II</span>
           </h3>
           <p style="font-size:.9rem;color:#555;line-height:1.55;margin-bottom:1.25rem;flex:1;">
-            <span class="ng-pt">Roteiro estratégico e operacional para o imigrante qualificado e o investidor internacional. 15 capítulos sobre residência fiscal, regime de impatriados e otimização legal.</span><span class="ng-fr" style="display:none;">Feuille de route stratégique et opérationnelle pour l'immigré qualifié et l'investisseur international. 15 chapitres sur la résidence fiscale et l'optimisation légale.</span><span class="ng-en">A strategic and operational roadmap for the skilled immigrant and the international investor. 15 chapters on tax residency, the impatriate regime, and legal optimization.</span><span class="ng-en" style="display:none;">Strategic and operational roadmap for qualified immigrants and international investors. 15 chapters on tax residence and legal optimization.</span>
+            <span class="ng-pt">Roteiro estratégico e operacional para o imigrante qualificado e o investidor internacional. 15 capítulos sobre residência fiscal, regime de impatriados e otimização legal.</span><span class="ng-fr" style="display:none;">Feuille de route stratégique et opérationnelle pour l'immigré qualifié et l'investisseur international. 15 chapitres sur la résidence fiscale et l'optimisation légale.</span><span class="ng-en">A strategic and operational roadmap for the skilled immigrant and the international investor. 15 chapters on tax residency, the impatriate regime, and legal optimization.</span>
           </p>
           <div style="display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;border-top:.5px solid rgba(14,26,43,.08);margin-bottom:1rem;">
             <span style="font-size:10px;letter-spacing:.1em;color:#888;font-family:'Jost',sans-serif;text-transform:uppercase;">PT/FR · PDF</span>
@@ -1863,10 +1864,10 @@ body[lang-mode="es"] .ng-es{display:revert!important}
             <span class="ng-pt"><span class="ng-pt">Guia prático</span><span class="ng-fr">Guide pratique</span><span class="ng-en"><span class="ng-pt">Practical guide</span></span><span class="ng-fr" style="display:none;">Guide pratique</span><span class="ng-en" style="display:none;">Practical guide</span>
           </div>
           <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;font-weight:500;line-height:1.25;color:#0E1A2B;margin-bottom:.75rem;">
-            <span class="ng-pt">Première Déclaration: Declarar Impostos em França</span><span class="ng-fr" style="display:none;">Première Déclaration : Déclarer ses Impôts en France</span><span class="ng-en">Première Déclaration: Filing Taxes in France</span><span class="ng-en" style="display:none;">First Declaration: Filing Taxes in France</span>
+            <span class="ng-pt">Première Déclaration: Declarar Impostos em França</span><span class="ng-fr" style="display:none;">Première Déclaration : Déclarer ses Impôts en France</span><span class="ng-en">Première Déclaration: Filing Taxes in France</span>
           </h3>
           <p style="font-size:.9rem;color:#555;line-height:1.55;margin-bottom:1.25rem;flex:1;">
-            <span class="ng-pt">Guia prático para imigrantes que vão declarar impostos em França pela primeira vez. Cerfa 2042 campo a campo, simulação e o portal impots.gouv.fr tela por tela.</span><span class="ng-fr" style="display:none;">Guide pratique pour les immigrés qui vont déclarer leurs impôts en France pour la première fois. Cerfa 2042 champ par champ et le portail impots.gouv.fr.</span><span class="ng-en">A practical guide for immigrants filing taxes in France for the first time. The Cerfa 2042 form field by field, a simulation, and the impots.gouv.fr portal screen by screen.</span><span class="ng-en" style="display:none;">Practical guide for immigrants filing French taxes for the first time. Cerfa 2042 field by field and the impots.gouv.fr portal.</span>
+            <span class="ng-pt">Guia prático para imigrantes que vão declarar impostos em França pela primeira vez. Cerfa 2042 campo a campo, simulação e o portal impots.gouv.fr tela por tela.</span><span class="ng-fr" style="display:none;">Guide pratique pour les immigrés qui vont déclarer leurs impôts en France pour la première fois. Cerfa 2042 champ par champ et le portail impots.gouv.fr.</span><span class="ng-en">A practical guide for immigrants filing taxes in France for the first time. The Cerfa 2042 form field by field, a simulation, and the impots.gouv.fr portal screen by screen.</span>
           </p>
           <div style="display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;border-top:.5px solid rgba(14,26,43,.08);margin-bottom:1rem;">
             <span style="font-size:10px;letter-spacing:.1em;color:#888;font-family:'Jost',sans-serif;text-transform:uppercase;">PT/FR · PDF</span>
@@ -1881,22 +1882,22 @@ body[lang-mode="es"] .ng-es{display:revert!important}
             <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:3rem;color:#C6A15B;font-style:italic;line-height:1;margin-bottom:.5rem;opacity:.6;">04</div>
             <div style="width:40px;height:1px;background:#C6A15B;margin:.75rem auto;opacity:.5;"></div>
             <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;color:rgba(244,242,237,.7);font-style:italic;line-height:1.3;">
-              <span class="ng-pt">em breve</span><span class="ng-fr" style="display:none;">bientôt</span><span class="ng-en">coming soon</span><span class="ng-en" style="display:none;">coming soon</span>
+              <span class="ng-pt">em breve</span><span class="ng-fr" style="display:none;">bientôt</span><span class="ng-en">coming soon</span>
             </p>
           </div>
           <span style="position:absolute;top:14px;right:14px;background:rgba(198,161,91,.3);color:#C6A15B;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;padding:4px 10px;border-radius:2px;text-transform:uppercase;font-weight:600;border:.5px solid rgba(198,161,91,.4);">
-            <span class="ng-pt">Em construção</span><span class="ng-fr" style="display:none;">En construction</span><span class="ng-en">Under construction</span><span class="ng-en" style="display:none;">In progress</span>
+            <span class="ng-pt">Em construção</span><span class="ng-fr" style="display:none;">En construction</span><span class="ng-en">Under construction</span>
           </span>
         </div>
         <div style="padding:1.75rem;display:flex;flex-direction:column;flex:1;">
           <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(198,161,91,.7);font-family:'Jost',sans-serif;margin-bottom:.6rem;">
-            <span class="ng-pt">Em preparação</span><span class="ng-fr" style="display:none;">En préparation</span><span class="ng-en">In preparation</span><span class="ng-en" style="display:none;">In preparation</span>
+            <span class="ng-pt">Em preparação</span><span class="ng-fr" style="display:none;">En préparation</span><span class="ng-en">In preparation</span>
           </div>
           <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;font-weight:500;line-height:1.25;color:#666;margin-bottom:.75rem;">
-            <span class="ng-pt">E-book 04</span><span class="ng-fr" style="display:none;">E-book 04</span><span class="ng-en">E-book 04</span><span class="ng-en" style="display:none;">E-book 04</span>
+            <span class="ng-pt">E-book 04</span><span class="ng-fr" style="display:none;">E-book 04</span><span class="ng-en">E-book 04</span>
           </h3>
           <p style="font-size:.9rem;color:#888;line-height:1.55;margin-bottom:1.25rem;flex:1;font-style:italic;">
-            <span class="ng-pt">Este e-book está em fase de elaboração. Em breve disponível.</span><span class="ng-fr" style="display:none;">Ce e-book est en cours d'élaboration. Bientôt disponible.</span><span class="ng-en">This e-book is being written. Available soon.</span><span class="ng-en" style="display:none;">This e-book is being prepared. Coming soon.</span>
+            <span class="ng-pt">Este e-book está em fase de elaboração. Em breve disponível.</span><span class="ng-fr" style="display:none;">Ce e-book est en cours d'élaboration. Bientôt disponible.</span><span class="ng-en">This e-book is being written. Available soon.</span>
           </p>
           <div style="display:flex;align-items:center;justify-content:center;padding:.9rem 0;background:rgba(14,26,43,.04);border-radius:3px;border:.5px dashed rgba(14,26,43,.15);">
             <span style="font-size:10px;letter-spacing:.18em;color:#999;font-family:'Jost',sans-serif;text-transform:uppercase;">
@@ -1911,22 +1912,22 @@ body[lang-mode="es"] .ng-es{display:revert!important}
             <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:3rem;color:#C6A15B;font-style:italic;line-height:1;margin-bottom:.5rem;opacity:.6;">05</div>
             <div style="width:40px;height:1px;background:#C6A15B;margin:.75rem auto;opacity:.5;"></div>
             <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;color:rgba(244,242,237,.7);font-style:italic;line-height:1.3;">
-              <span class="ng-pt">em breve</span><span class="ng-fr" style="display:none;">bientôt</span><span class="ng-en">coming soon</span><span class="ng-en" style="display:none;">coming soon</span>
+              <span class="ng-pt">em breve</span><span class="ng-fr" style="display:none;">bientôt</span><span class="ng-en">coming soon</span>
             </p>
           </div>
           <span style="position:absolute;top:14px;right:14px;background:rgba(198,161,91,.3);color:#C6A15B;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;padding:4px 10px;border-radius:2px;text-transform:uppercase;font-weight:600;border:.5px solid rgba(198,161,91,.4);">
-            <span class="ng-pt">Em construção</span><span class="ng-fr" style="display:none;">En construction</span><span class="ng-en">Under construction</span><span class="ng-en" style="display:none;">In progress</span>
+            <span class="ng-pt">Em construção</span><span class="ng-fr" style="display:none;">En construction</span><span class="ng-en">Under construction</span>
           </span>
         </div>
         <div style="padding:1.75rem;display:flex;flex-direction:column;flex:1;">
           <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(198,161,91,.7);font-family:'Jost',sans-serif;margin-bottom:.6rem;">
-            <span class="ng-pt">Em preparação</span><span class="ng-fr" style="display:none;">En préparation</span><span class="ng-en">In preparation</span><span class="ng-en" style="display:none;">In preparation</span>
+            <span class="ng-pt">Em preparação</span><span class="ng-fr" style="display:none;">En préparation</span><span class="ng-en">In preparation</span>
           </div>
           <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;font-weight:500;line-height:1.25;color:#666;margin-bottom:.75rem;">
-            <span class="ng-pt">E-book 05</span><span class="ng-fr" style="display:none;">E-book 05</span><span class="ng-en">E-book 05</span><span class="ng-en" style="display:none;">E-book 05</span>
+            <span class="ng-pt">E-book 05</span><span class="ng-fr" style="display:none;">E-book 05</span><span class="ng-en">E-book 05</span>
           </h3>
           <p style="font-size:.9rem;color:#888;line-height:1.55;margin-bottom:1.25rem;flex:1;font-style:italic;">
-            <span class="ng-pt">Este e-book está em fase de elaboração. Em breve disponível.</span><span class="ng-fr" style="display:none;">Ce e-book est en cours d'élaboration. Bientôt disponible.</span><span class="ng-en">This e-book is being written. Available soon.</span><span class="ng-en" style="display:none;">This e-book is being prepared. Coming soon.</span>
+            <span class="ng-pt">Este e-book está em fase de elaboração. Em breve disponível.</span><span class="ng-fr" style="display:none;">Ce e-book est en cours d'élaboration. Bientôt disponible.</span><span class="ng-en">This e-book is being written. Available soon.</span>
           </p>
           <div style="display:flex;align-items:center;justify-content:center;padding:.9rem 0;background:rgba(14,26,43,.04);border-radius:3px;border:.5px dashed rgba(14,26,43,.15);">
             <span style="font-size:10px;letter-spacing:.18em;color:#999;font-family:'Jost',sans-serif;text-transform:uppercase;">
@@ -1941,22 +1942,22 @@ body[lang-mode="es"] .ng-es{display:revert!important}
             <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:3rem;color:#C6A15B;font-style:italic;line-height:1;margin-bottom:.5rem;opacity:.6;">06</div>
             <div style="width:40px;height:1px;background:#C6A15B;margin:.75rem auto;opacity:.5;"></div>
             <p style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;color:rgba(244,242,237,.7);font-style:italic;line-height:1.3;">
-              <span class="ng-pt">em breve</span><span class="ng-fr" style="display:none;">bientôt</span><span class="ng-en">coming soon</span><span class="ng-en" style="display:none;">coming soon</span>
+              <span class="ng-pt">em breve</span><span class="ng-fr" style="display:none;">bientôt</span><span class="ng-en">coming soon</span>
             </p>
           </div>
           <span style="position:absolute;top:14px;right:14px;background:rgba(198,161,91,.3);color:#C6A15B;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;padding:4px 10px;border-radius:2px;text-transform:uppercase;font-weight:600;border:.5px solid rgba(198,161,91,.4);">
-            <span class="ng-pt">Em construção</span><span class="ng-fr" style="display:none;">En construction</span><span class="ng-en">Under construction</span><span class="ng-en" style="display:none;">In progress</span>
+            <span class="ng-pt">Em construção</span><span class="ng-fr" style="display:none;">En construction</span><span class="ng-en">Under construction</span>
           </span>
         </div>
         <div style="padding:1.75rem;display:flex;flex-direction:column;flex:1;">
           <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(198,161,91,.7);font-family:'Jost',sans-serif;margin-bottom:.6rem;">
-            <span class="ng-pt">Em preparação</span><span class="ng-fr" style="display:none;">En préparation</span><span class="ng-en">In preparation</span><span class="ng-en" style="display:none;">In preparation</span>
+            <span class="ng-pt">Em preparação</span><span class="ng-fr" style="display:none;">En préparation</span><span class="ng-en">In preparation</span>
           </div>
           <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.45rem;font-weight:500;line-height:1.25;color:#666;margin-bottom:.75rem;">
-            <span class="ng-pt">E-book 06</span><span class="ng-fr" style="display:none;">E-book 06</span><span class="ng-en">E-book 06</span><span class="ng-en" style="display:none;">E-book 06</span>
+            <span class="ng-pt">E-book 06</span><span class="ng-fr" style="display:none;">E-book 06</span><span class="ng-en">E-book 06</span>
           </h3>
           <p style="font-size:.9rem;color:#888;line-height:1.55;margin-bottom:1.25rem;flex:1;font-style:italic;">
-            <span class="ng-pt">Este e-book está em fase de elaboração. Em breve disponível.</span><span class="ng-fr" style="display:none;">Ce e-book est en cours d'élaboration. Bientôt disponible.</span><span class="ng-en">This e-book is being written. Available soon.</span><span class="ng-en" style="display:none;">This e-book is being prepared. Coming soon.</span>
+            <span class="ng-pt">Este e-book está em fase de elaboração. Em breve disponível.</span><span class="ng-fr" style="display:none;">Ce e-book est en cours d'élaboration. Bientôt disponible.</span><span class="ng-en">This e-book is being written. Available soon.</span>
           </p>
           <div style="display:flex;align-items:center;justify-content:center;padding:.9rem 0;background:rgba(14,26,43,.04);border-radius:3px;border:.5px dashed rgba(14,26,43,.15);">
             <span style="font-size:10px;letter-spacing:.18em;color:#999;font-family:'Jost',sans-serif;text-transform:uppercase;">
@@ -1968,7 +1969,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
     </div>
     <div style="max-width:780px;margin:4rem auto 0;text-align:center;padding:2rem 1.5rem;border-top:.5px solid rgba(14,26,43,.12);">
       <p style="font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:1.1rem;color:#555;line-height:1.6;">
-        <span class="ng-pt">Para outras informações ou pedidos personalizados, entre em contacto pelo WhatsApp.</span><span class="ng-fr" style="display:none;">Pour toute autre information ou demande personnalisée, contactez-nous via WhatsApp.</span><span class="ng-en">For any other questions or custom requests, get in touch via WhatsApp.</span><span class="ng-en" style="display:none;">For other information or personalized requests, contact us via WhatsApp.</span>
+        <span class="ng-pt">Para outras informações ou pedidos personalizados, entre em contacto pelo WhatsApp.</span><span class="ng-fr" style="display:none;">Pour toute autre information ou demande personnalisée, contactez-nous via WhatsApp.</span><span class="ng-en">For any other questions or custom requests, get in touch via WhatsApp.</span>
       </p>
     </div>
   </div>
@@ -4972,12 +4973,13 @@ function switchGame(game) {
     if(lang==='pt'){activeLang=null;applyLang(null);}
     else if(activeLang===lang){activeLang=null;applyLang(null);}
     else{activeLang=lang;applyLang(lang);}
-    ['pt','fr'].forEach(l=>{
+    ['pt','fr','en'].forEach(l=>{
       const b=document.getElementById('lang-'+l);
       if(!b) return;
       const on=l==='pt'?!activeLang:l===activeLang;
-      b.style.border=on?'1.5px solid #C6A15B':'0.5px solid rgba(14,26,43,.2)';
-      b.style.background=on?'rgba(198,161,91,.15)':'transparent';
+      b.style.border=on?'1.5px solid #C6A15B':'0.5px solid rgba(255,255,255,.25)';
+      b.style.background=on?'rgba(198,161,91,.2)':'transparent';
+      b.style.color=on?'#C6A15B':'rgba(255,255,255,.7)';
       b.style.fontWeight=on?'600':'400';
     });
   };
@@ -7137,7 +7139,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v75 · 8set2026';try{
+(function(){var BUILD='p15-v76 · 8set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
