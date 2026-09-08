@@ -141,7 +141,7 @@ a{text-decoration:none;color:inherit;}
 /* ── NAV ── */
 .nav{
   display:flex;flex-direction:row;align-items:center;justify-content:space-between;
-  padding:0 2.5rem;height:60px;
+  padding:8px 2.5rem;min-height:60px;flex-wrap:wrap;row-gap:6px;
   background:var(--navy);
   border-bottom:none;
   position:sticky;top:0;z-index:200;
@@ -157,7 +157,7 @@ a{text-decoration:none;color:inherit;}
   font-size:8px;letter-spacing:0.22em;text-transform:uppercase;
   color:var(--gold);font-family:var(--sans);font-weight:400;margin-top:3px;
 }
-.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links{display:flex;gap:1.15rem;list-style:none;flex-wrap:wrap;flex:1 1 auto;min-width:0;row-gap:4px;justify-content:center;}
 .nav-links a{
   font-size:11px;letter-spacing:0.15em;text-transform:uppercase;
   color:rgba(255,255,255,.8);cursor:pointer;transition:color .2s;
@@ -1463,7 +1463,7 @@ body[lang-mode="es"] .ng-pt,body[lang-mode="es"] .ng-fr{display:none!important}
 body[lang-mode="es"] .ng-es{display:revert!important}
 </style>
 </head>
-<body data-tct-build="p15-v73 · 8set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v75 · 8set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1498,7 +1498,19 @@ body[lang-mode="es"] .ng-es{display:revert!important}
     <span class="nav-logo-sub">By Porta-Voz do Imigrante</span>
     <span class="nav-logo-tag" style="margin-top:4px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:11.5px;line-height:1.1;color:#C6A15B;letter-spacing:.01em;white-space:nowrap;"><span class="ng-pt">Sua conexão com as oportunidades entre Brasil e França</span><span class="ng-fr" style="display:none;">Votre lien avec les opportunités entre le Brésil et la France</span><span class="ng-en">Your bridge to the opportunities between Brazil and France.</span></span>
   </div>
-  <ul class="nav-links">
+  <style id="nav-dd-css">
+.nav-dd-btn{color:rgba(255,255,255,.85);font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:8px 6px;}
+.nav-dd-btn:hover{color:var(--gold);}
+.nav-right .nav-dd{align-self:center;}
+.nav-dd{position:relative;}
+.nav-dd-btn{display:inline-flex;align-items:center;gap:5px;}
+.nav-dd-menu{position:absolute;top:calc(100% + 8px);left:0;list-style:none;margin:0;padding:7px 0;background:#0E1A2B;border:1px solid rgba(198,161,91,.32);border-radius:6px;min-width:210px;box-shadow:0 14px 34px rgba(0,0,0,.45);display:none;z-index:3000;}
+.nav-dd:hover .nav-dd-menu,.nav-dd.open .nav-dd-menu{display:block;}
+.nav-dd-menu li{display:block;}
+.nav-dd-menu a{display:block;padding:10px 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.82);white-space:nowrap;cursor:pointer;}
+.nav-dd-menu a:hover{color:var(--gold);background:rgba(198,161,91,.08);}
+</style>
+<ul class="nav-links">
     <li><a onclick="showPage('home')" id="nl-home"><span class="ng-pt">Início</span><span class="ng-fr">Accueil</span><span class="ng-en">Home</span></a></li>
     <li><a onclick="showPage('revista')" id="nl-revista"><span class="ng-pt">Revista</span><span class="ng-fr">Revue</span><span class="ng-en">Magazine</span></a></li>
     <li><a onclick="showPage('ebooks')" id="nl-ebooks"><span class="ng-pt">E-books</span><span class="ng-fr" style="display:none;">E-books</span><span class="ng-en">E-books</span><span class="ng-en" style="display:none;">E-books</span></a></li><li><a onclick="showPage('livros')" id="nl-livros"><span class="ng-pt">Livros</span><span class="ng-fr" style="display:none;">Livres</span><span class="ng-en">Books</span></a></li>
@@ -1510,6 +1522,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
   </ul>
   <div class="nav-right">
     <span class="vip-badge" id="vip-badge" style="display:none;">● Assinante VIP</span>
+    <div class="nav-dd"><a onclick="tctNavDD(event)" class="nav-dd-btn" id="nl-contacto"><span class="ng-pt">Contacto</span><span class="ng-fr" style="display:none;">Contact</span><span class="ng-en">Contact</span> <b style="font-size:8px;">&#9660;</b></a><ul class="nav-dd-menu"><li><a onclick="showPage('revista');tctNavDDclose()"><span class="ng-pt">Sobre a revista</span><span class="ng-fr" style="display:none;">À propos de la revue</span><span class="ng-en">About the magazine</span></a></li><li><a onclick="showPage('anne');tctNavDDclose()"><span class="ng-pt">A nossa direção</span><span class="ng-fr" style="display:none;">Notre direction</span><span class="ng-en">Our leadership</span></a></li><li><a onclick="showPage('contato');tctNavDDclose()"><span class="ng-pt">Fale connosco</span><span class="ng-fr" style="display:none;">Écrivez-nous</span><span class="ng-en">Contact us</span></a></li><li><a href="mailto:adm@thecrossingtime.com?subject=Proposta%20de%20mat%C3%A9ria"><span class="ng-pt">Enviar matéria</span><span class="ng-fr" style="display:none;">Proposer un sujet</span><span class="ng-en">Submit an article</span></a></li><li><a onclick="showPage('legal');tctNavDDclose()"><span class="ng-pt">Menções legais</span><span class="ng-fr" style="display:none;">Mentions légales</span><span class="ng-en">Legal notice</span></a></li><li><a href="mailto:adm@thecrossingtime.com?subject=Imprensa"><span class="ng-pt">Imprensa</span><span class="ng-fr" style="display:none;">Presse</span><span class="ng-en">Press</span></a></li></ul></div>
     <button class="btn-ghost" id="btn-login-nav" onclick="showPage('vip')"><span class="ng-pt">Entrar</span><span class="ng-fr">Connexion</span><span class="ng-en">Sign in</span></button>
     <button class="btn-gold" id="btn-assinar-nav" onclick="showPage('vip')" style="letter-spacing:.08em;font-size:11px;">✦ Área VIP</button>
     <span id="vip-nav-name" style="display:none;font:800 12px 'Jost',Arial,sans-serif;letter-spacing:.06em;color:#C6A15B;align-self:center;white-space:nowrap;"></span>
@@ -1625,7 +1638,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v73 · 8set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v75 · 8set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -6305,7 +6318,11 @@ document.addEventListener('keydown', function(e){
   /* registar o service worker (guarda os icones e responde offline) */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js').catch(function () {});
+      navigator.serviceWorker.register('sw.js', {updateViaCache:'none'}).then(function(reg){ try{reg.update();}catch(e){} }).catch(function () {});
+      var __tctReloaded=false;
+      navigator.serviceWorker.addEventListener('controllerchange', function(){
+        if(__tctReloaded) return; __tctReloaded=true; try{location.reload();}catch(e){}
+      });
     });
   }
 })();
@@ -7120,7 +7137,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v73 · 8set2026';try{
+(function(){var BUILD='p15-v75 · 8set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7635,6 +7652,12 @@ window.tctContato=function(e){
     .catch(function(){ if(btn) btn.disabled=false; if(er) er.hidden=false; });
   return false;
 };
+</script>
+
+<script id="nav-dd-js">
+window.tctNavDD=function(e){e.preventDefault();e.stopPropagation();var li=e.target.closest(".nav-dd");if(li)li.classList.toggle("open");};
+window.tctNavDDclose=function(){var l=document.querySelector(".nav-dd.open");if(l)l.classList.remove("open");};
+document.addEventListener("click",function(e){var o=document.querySelector(".nav-dd.open");if(o && !o.contains(e.target))o.classList.remove("open");});
 </script>
 </body>
 </html>
