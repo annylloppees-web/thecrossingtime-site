@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrevistas — The Crossing Time</title>
+<meta name="description" content="Entrevistas em vídeo do The Crossing Time — histórias, especialistas e vozes que atravessam fronteiras.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lora:ital@0;1&family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#0E1A2B;--gold:#C6A15B;--cream:#F4F2ED;--ink:#2b2b2b;--gray:#6b6b6b;--line:rgba(14,26,43,.12)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Lora',Georgia,serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  /* idiomas */
+  .fr,.en{display:none}
+  body[data-lang="fr"] .fr{display:revert}
+  body[data-lang="fr"] .pt,body[data-lang="fr"] .en{display:none}
+  body[data-lang="en"] .en{display:revert}
+  body[data-lang="en"] .pt,body[data-lang="en"] .fr{display:none}
+  /* topo */
+  header.hd{background:var(--navy);color:var(--cream);padding:1.6rem 1.25rem 2rem}
+  .hd-in{max-width:1120px;margin:0 auto}
+  .hd-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+  .brand{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);text-decoration:none}
+  .brand b{color:var(--gold);font-weight:600}
+  .langs{display:flex;gap:6px}
+  .langs button{font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.06em;padding:4px 10px;border-radius:3px;cursor:pointer;background:transparent;border:.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75)}
+  .langs button.on{border:1.5px solid var(--gold);background:rgba(198,161,91,.2);color:var(--gold);font-weight:600}
+  .kicker{font:600 10px 'Jost',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:1.8rem 0 .5rem}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;font-size:2.6rem;line-height:1.05;margin:0 0 .5rem}
+  .lead{max-width:60ch;color:rgba(244,242,237,.82);font-size:1.02rem;line-height:1.7;margin:0}
+  .back{display:inline-block;margin-top:1.3rem;font:600 11px 'Jost',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,242,237,.7);text-decoration:none}
+  /* grelha */
+  main{max-width:1120px;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr);gap:1.2rem}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}}
+  .card{cursor:pointer;background:#fff;border:.5px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+  .card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(14,26,43,.16)}
+  .thumb{position:relative;aspect-ratio:16/9;background:var(--navy);overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .play span{width:54px;height:54px;border-radius:50%;background:rgba(14,26,43,.72);display:flex;align-items:center;justify-content:center;transition:background .18s}
+  .card:hover .play span{background:var(--gold)}
+  .play span::after{content:"";border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff;margin-left:3px}
+  .c-body{padding:.9rem 1rem 1.1rem}
+  .c-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.22rem;line-height:1.25;color:var(--navy);margin:0 0 .3rem}
+  .c-date{font:600 10px 'Jost',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 .5rem}
+  .c-desc{font-size:.9rem;line-height:1.5;color:var(--gray);margin:0}
+  .state{grid-column:1/-1;text-align:center;color:var(--gray);padding:3rem 1rem;font-size:.95rem}
+  /* modal */
+  .modal{position:fixed;inset:0;background:rgba(6,12,22,.9);display:none;align-items:center;justify-content:center;padding:1rem;z-index:50}
+  .modal.open{display:flex}
+  .modal-box{width:min(960px,100%)}
+  .modal-video{position:relative;aspect-ratio:16/9;background:#000;border-radius:10px;overflow:hidden}
+  .modal-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .modal-close{display:block;margin:0 0 .6rem auto;background:transparent;border:0;color:#fff;font:600 13px 'Jost',sans-serif;letter-spacing:.08em;cursor:pointer}
+  footer{background:var(--navy);color:rgba(244,242,237,.6);text-align:center;font-size:12px;padding:1.5rem 1rem}
+  footer a{color:var(--gold);text-decoration:none}
+</style>
+</head>
+<body data-lang="pt">
+<header class="hd">
+  <div class="hd-in">
+    <div class="hd-top">
+      <a class="brand" href="/">THE <b>CROSSING</b> TIME</a>
+      <div class="langs">
+        <button id="l-pt" class="on" onclick="setL('pt')">PT</button>
+        <button id="l-fr" onclick="setL('fr')">FR</button>
+        <button id="l-en" onclick="setL('en')">EN</button>
+      </div>
+    </div>
+    <p class="kicker"><span class="pt">Vídeo</span><span class="fr">Vidéo</span><span class="en">Video</span></p>
+    <h1><span class="pt">Entrevistas</span><span class="fr">Entretiens</span><span class="en">Interviews</span></h1>
+    <p class="lead">
+      <span class="pt">Conversas em vídeo do The Crossing Time — histórias, especialistas e vozes que atravessam fronteiras.</span>
+      <span class="fr">Entretiens vidéo de The Crossing Time — des histoires, des spécialistes et des voix qui traversent les frontières.</span>
+      <span class="en">Video conversations from The Crossing Time — stories, experts and voices that cross borders.</span>
+    </p>
+    <a class="back" href="/"><span class="pt">&larr; Voltar ao início</span><span class="fr">&larr; Retour à l'accueil</span><span class="en">&larr; Back to home</span></a>
+  </div>
+</header>
+
+<main>
+  <div class="grid" id="grid">
+    <div class="state" id="state">
+      <span class="pt">A carregar as entrevistas…</span><span class="fr">Chargement des entretiens…</span><span class="en">Loading interviews…</span>
+    </div>
+  </div>
+</main>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="mclose">✕ <span class="pt">Fechar</span><span class="fr">Fermer</span><span class="en">Close</span></button>
+    <div class="modal-video" id="mvideo"></div>
+  </div>
+</div>
+
+<footer>
+  <span class="pt">The Crossing Time — informação que atravessa fronteiras.</span>
+  <span class="fr">The Crossing Time — l'information qui traverse les frontières.</span>
+  <span class="en">The Crossing Time — information that crosses borders.</span>
+  &nbsp;·&nbsp; <a href="/">thecrossingtime.com</a>
+</footer>
+
+<script>
+  // idioma
+  function setL(l){
+    document.body.setAttribute('data-lang',l);
+    ['pt','fr','en'].forEach(function(x){var b=document.getElementById('l-'+x);if(b)b.classList.toggle('on',x===l);});
+    try{localStorage.setItem('tct-lang',l);}catch(e){}
+    renderDates();
+  }
+  (function(){
+    var l='pt';
+    try{var s=localStorage.getItem('tct-lang');if(s)l=s;}catch(e){}
+    if(l==='pt'){var n=(navigator.language||'').toLowerCase();if(n.indexOf('fr')===0)l='fr';else if(n.indexOf('en')===0)l='en';}
+    setL(l);
+  })();
+
+  var LOCALE={pt:'pt-PT',fr:'fr-FR',en:'en-GB'};
+  var VIDEOS=[];
+  function fmtDate(iso){
+    try{var d=new Date(iso);var l=document.body.getAttribute('data-lang')||'pt';
+      return d.toLocaleDateString(LOCALE[l]||'pt-PT',{day:'numeric',month:'long',year:'numeric'});}catch(e){return '';}
+  }
+  function renderDates(){
+    document.querySelectorAll('.c-date[data-iso]').forEach(function(el){el.textContent=fmtDate(el.getAttribute('data-iso'));});
+  }
+  function esc(s){var d=document.createElement('div');d.textContent=s||'';return d.innerHTML;}
+
+  function render(){
+    var grid=document.getElementById('grid');
+    if(!VIDEOS.length){
+      grid.innerHTML='<div class="state"><span class="pt">Ainda não há entrevistas publicadas.</span><span class="fr">Aucun entretien publié pour le moment.</span><span class="en">No interviews published yet.</span></div>';
+      return;
+    }
+    grid.innerHTML=VIDEOS.map(function(v){
+      return '<article class="card" data-id="'+v.id+'">'
+        +'<div class="thumb"><img loading="lazy" src="'+v.thumb+'" alt="'+esc(v.title)+'"><div class="play"><span></span></div></div>'
+        +'<div class="c-body">'
+        +'<p class="c-date" data-iso="'+esc(v.published)+'"></p>'
+        +'<h2 class="c-title">'+esc(v.title)+'</h2>'
+        +(v.desc?'<p class="c-desc">'+esc(v.desc)+'</p>':'')
+        +'</div></article>';
+    }).join('');
+    renderDates();
+    grid.querySelectorAll('.card').forEach(function(c){
+      c.addEventListener('click',function(){openV(c.getAttribute('data-id'));});
+    });
+  }
+
+  // modal
+  var modal=document.getElementById('modal'), mvideo=document.getElementById('mvideo');
+  function openV(id){
+    mvideo.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="The Crossing Time" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    modal.classList.add('open');
+  }
+  function closeV(){modal.classList.remove('open');mvideo.innerHTML='';}
+  document.getElementById('mclose').addEventListener('click',closeV);
+  modal.addEventListener('click',function(e){if(e.target===modal)closeV();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeV();});
+
+  // dados
+  fetch('/.netlify/functions/entrevistas').then(function(r){return r.json();}).then(function(j){
+    VIDEOS=(j&&j.items)||[];render();
+  }).catch(function(){
+    document.getElementById('grid').innerHTML='<div class="state"><span class="pt">Não foi possível carregar agora. Tenta mais tarde.</span><span class="fr">Impossible de charger pour le moment.</span><span class="en">Could not load right now.</span></div>';
+  });
+</script>
+</body>
+</html>
