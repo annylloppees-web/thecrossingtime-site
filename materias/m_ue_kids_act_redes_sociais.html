@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<!-- THE CROSSING TIME, Modelo Matéria 1.2 · EU Kids Act (redes sociais <13) -->
+<head>
+<!-- FONTE LEVE: hero tipográfico (sessão automática, sem fotos; pauta com menores SEM imagens identificáveis). -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EU Kids Act: a UE quer barrar redes sociais para menores de 13, The Crossing Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#071a3d;--navy2:#0c2452;--gold:#B8924A;--gold2:#c7a45a;--off:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a;--red:#b3261e;--green:#2e7d32}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--off);color:var(--ink);font-family:'Lora',serif;line-height:1.78;font-size:18px}
+  .topbar{background:var(--navy);color:var(--off);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:9600}
+  .topbar .brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:3px;font-size:15px}
+  .topbar .brand span{color:var(--gold2)}
+  .topbar .ed{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gold2);text-transform:uppercase}
+  .tct-back{background:none;border:0;color:#F4F2ED;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:.4rem .2rem}
+  .thero{background:linear-gradient(160deg,#0a1226 0%,var(--navy) 60%,#0c2452 100%);color:#fff;padding:64px 24px 54px;position:relative;overflow:hidden;min-height:340px;display:flex;align-items:center}
+  .thero::before{content:attr(data-w);position:absolute;right:12px;top:-30px;font-family:'Poppins',sans-serif;font-weight:800;font-size:150px;color:rgba(199,164,90,.07);letter-spacing:-4px;z-index:0}
+  .thero .inner{max-width:900px;margin:0 auto;position:relative;z-index:2;width:100%}
+  .badge{display:inline-block;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;padding:6px 13px;border-radius:2px;background:var(--wine);color:#fff;margin-bottom:16px}
+  .kicker{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:14px}
+  .thero h1{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:clamp(27px,4vw,44px);line-height:1.18;margin-bottom:16px}
+  .thero .sub{color:#dcd6c6;font-size:clamp(16px,2vw,20px);font-style:italic;line-height:1.5;max-width:820px}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  .byline{display:flex;align-items:center;gap:14px;padding:30px 0 12px;border-bottom:1px solid rgba(7,26,61,.15)}
+  .byline .mono{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;flex-shrink:0}
+  .byline .who b{display:block;font-size:15px;font-weight:600;color:var(--navy);font-family:'Poppins',sans-serif}
+  .byline .who span{font-size:12.5px;color:#5a5a5a;letter-spacing:.4px;font-family:'Poppins',sans-serif}
+  .meta{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:1.4px;text-transform:uppercase;padding:14px 0 8px;display:flex;flex-wrap:wrap;gap:8px 18px}
+  .meta b{color:var(--wine);font-weight:600}
+  article{padding:20px 0 10px}
+  article p{margin-bottom:22px}
+  .lead{font-size:20.5px;line-height:1.72}
+  .lead::first-letter{font-family:'Lora',serif;font-weight:700;font-size:74px;line-height:.8;float:left;padding:8px 12px 0 0;color:var(--gold)}
+  .sec{margin:46px 0 20px}
+  .sec .num{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+  .sec h2{font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:clamp(23px,3vw,31px);line-height:1.25}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:32px 0}
+  .card{background:#fff;border-top:4px solid var(--gold);border-radius:3px;padding:20px 18px}
+  .card .big{font-family:'Poppins',sans-serif;font-weight:700;font-size:23px;color:var(--navy);line-height:1.15}
+  .card .lbl{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:.6px;text-transform:uppercase;margin-top:8px;line-height:1.45}
+  .quote{background:var(--navy);color:var(--off);border-left:5px solid var(--gold);padding:26px 30px;margin:34px 0;border-radius:3px}
+  .quote p{font-size:20px;font-style:italic;line-height:1.55;margin:0}
+  .quote .attr{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold2);margin-top:14px}
+  .servbox{background:#fff;border:1px solid rgba(184,146,74,.45);border-left:5px solid var(--wine);border-radius:3px;padding:24px 28px;margin:34px 0}
+  .servbox h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--wine);text-transform:uppercase;margin-bottom:14px}
+  .lista{margin:0;padding-left:0;list-style:none}
+  .lista li{position:relative;padding-left:26px;margin-bottom:11px;font-size:16.5px;line-height:1.6}
+  .lista li::before{content:'\25C6';position:absolute;left:0;top:0;color:var(--gold);font-size:12px}
+  .ednote{background:rgba(7,26,61,.05);border-left:4px solid var(--navy);padding:22px 26px;margin:26px 0 28px;border-radius:3px}
+  .ednote h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:12px}
+  .ednote p{font-size:14.5px;line-height:1.7;color:#3a3a3a;margin-bottom:0}
+  .transp{background:#fff;border:1px solid rgba(184,146,74,.45);border-left:5px solid var(--gold);border-radius:3px;padding:20px 24px;margin:30px 0}
+  .transp b{display:block;color:var(--navy);letter-spacing:1.2px;text-transform:uppercase;font-size:12px;font-family:'Poppins',sans-serif;margin-bottom:8px}
+  .transp span{font-size:14px;line-height:1.65;color:#3a3a3a}
+  .pilares{background:var(--navy);color:var(--gold2);text-align:center;padding:24px 20px;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:4px;font-size:14px}
+  .sitefoot{background:var(--navy2);color:#cfc8b8;text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-size:12.5px;line-height:2}
+  .sitefoot b{color:#fff;letter-spacing:2px}.sitefoot span{color:var(--gold2)}
+  .ng-fr{display:none!important}
+  body[data-lang="fr"] .ng-pt{display:none!important}
+  body[data-lang="fr"] .ng-fr{display:revert!important}
+  .lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.1);border-radius:999px;padding:3px}
+  .lang-bar button{background:none;border:0;color:rgba(244,242,237,.65);font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.12em;padding:.3rem .65rem;border-radius:999px;cursor:pointer}
+  .lang-bar button.on{background:var(--gold2);color:#0E1A2B;font-weight:600}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://thecrossingtime.com/materias/m_ue_kids_act_redes_sociais.html"
+  },
+  "headline": "EU Kids Act: a UE quer barrar redes sociais para menores de 13 anos",
+  "description": "A Comissão Europeia adotou o \"EU Kids Act\", que propõe proibir redes sociais abaixo dos 13 anos, idade mínima de 15 para conta própria e inversão do ônus da prova sobre as plataformas.",
+  "datePublished": "2026-09-19T09:00:00+02:00",
+  "dateModified": "2026-09-19T09:00:00+02:00",
+  "inLanguage": "pt-BR",
+  "author": {
+    "@type": "Organization",
+    "name": "The Crossing Time",
+    "url": "https://thecrossingtime.com"
+  },
+  "publisher": {
+    "@type": "NewsMediaOrganization",
+    "name": "The Crossing Time",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thecrossingtime.com/logo.png",
+      "width": 1024,
+      "height": 1024
+    }
+  }
+}
+</script>
+</head>
+<body data-lang="pt">
+<div class="topbar">
+  <button class="tct-back" onclick="goBack()">&lsaquo; <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span></button>
+  <div class="brand">THE CROSSING <span>TIME</span></div>
+  <div class="ed"><span class="ng-pt">Edição nº 110 · 19 de setembro de 2026 · Transformation</span><span class="ng-fr">Édition nº 110 · 19 septembre 2026 · Transformation</span></div>
+  <div class="lang-bar"><button id="b-pt" class="on" onclick="setLang('pt')">PT</button><button id="b-fr" onclick="setLang('fr')">FR</button></div>
+</div>
+
+<div class="thero" data-w="13+">
+  <div class="inner">
+    <div class="badge"><span class="ng-pt">Sociedade · Europa</span><span class="ng-fr">Société · Europe</span></div>
+    <div class="kicker"><span class="ng-pt">Infância &amp; telas</span><span class="ng-fr">Enfance &amp; écrans</span></div>
+    <h1><span class="ng-pt">A UE quer barrar as redes sociais para menores de 13 anos</span><span class="ng-fr">L'UE veut interdire les réseaux sociaux aux moins de 13 ans</span></h1>
+    <div class="sub"><span class="ng-pt">A Comissão Europeia apresentou o "EU Kids Act": proibição de redes sociais abaixo dos 13, idade mínima de 15 para conta própria e inversão do ônus da prova, as plataformas é que terão de mostrar que são seguras. É uma proposta, ainda não uma lei, e mexe com a rotina de milhões de famílias, incluindo as imigrantes.</span><span class="ng-fr">La Commission européenne a présenté l'« EU Kids Act » : interdiction des réseaux sociaux en dessous de 13 ans, âge minimum de 15 ans pour un compte propre et inversion de la charge de la preuve, ce sont les plateformes qui devront montrer qu'elles sont sûres. C'est un projet, pas encore une loi, et il touche le quotidien de millions de familles, y compris immigrées.</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="byline">
+    <div class="mono">TCT</div>
+    <div class="who"><b><span class="ng-pt">Redação, THE CROSSING TIME</span><span class="ng-fr">La rédaction, THE CROSSING TIME</span></b><span><span class="ng-pt">Bruxelas · Paris</span><span class="ng-fr">Bruxelles · Paris</span></span></div>
+  </div>
+  <div class="meta">
+    <span><span class="ng-pt">Sábado, <b>19 de setembro de 2026</b></span><span class="ng-fr">Samedi, <b>19 septembre 2026</b></span></span>
+    <span><span class="ng-pt">UE · Menores · Tecnologia</span><span class="ng-fr">UE · Mineurs · Technologie</span></span>
+    <span><span class="ng-pt">Tempo de leitura: 6 min</span><span class="ng-fr">Temps de lecture : 6 min</span></span>
+  </div>
+
+  <article>
+    <p class="lead"><span class="ng-pt">A pergunta "com que idade meu filho pode ter rede social?" pode deixar de ser só uma decisão de casa e virar regra europeia. Em <strong>17 de setembro</strong>, a Comissão Europeia adotou a proposta apelidada de <strong>"EU Kids Act"</strong>, um projeto que quer <strong>proibir o acesso a redes sociais para menores de 13 anos</strong> e fixar em <strong>15 anos</strong> a idade mínima para abrir uma conta própria em toda a União Europeia. A lógica muda de lado: em vez de a família provar que o filho não pode estar ali, são as plataformas que terão de demonstrar que seus serviços são <em>"seguros por concepção"</em> ("safe by design").</span><span class="ng-fr">La question « à quel âge mon enfant peut-il avoir un réseau social ? » pourrait cesser d'être une simple décision de la maison pour devenir une règle européenne. Le <strong>17 septembre</strong>, la Commission européenne a adopté la proposition surnommée <strong>« EU Kids Act »</strong>, un projet qui veut <strong>interdire l'accès aux réseaux sociaux aux moins de 13 ans</strong> et fixer à <strong>15 ans</strong> l'âge minimum pour ouvrir un compte propre dans toute l'Union européenne. La logique change de camp : au lieu que la famille prouve que l'enfant ne peut pas être là, ce sont les plateformes qui devront démontrer que leurs services sont <em>« sûrs par conception »</em> (« safe by design »).</span></p>
+
+    <p><span class="ng-pt">A proposta se apoia na preocupação com a saúde mental de crianças e adolescentes e com recursos digitais pensados para prender a atenção. Não parte do zero: soma-se ao <strong>Digital Services Act (DSA)</strong>, já em vigor (matéria nº 45), e ao debate mais amplo sobre o papel das telas, tema levantado inclusive pelo relatório PISA 2025 (matéria nº 89). A presidente da Comissão, <strong>Ursula von der Leyen</strong>, resumiu a virada de responsabilidade em uma frase: cabe às plataformas mostrar que são seguras, e não às famílias correr atrás.</span><span class="ng-fr">La proposition s'appuie sur l'inquiétude autour de la santé mentale des enfants et des adolescents et sur des fonctionnalités numériques conçues pour capter l'attention. Elle ne part pas de zéro : elle s'ajoute au <strong>Digital Services Act (DSA)</strong>, déjà en vigueur (article nº 45), et au débat plus large sur le rôle des écrans, soulevé notamment par le rapport PISA 2025 (article nº 89). La présidente de la Commission, <strong>Ursula von der Leyen</strong>, a résumé le renversement de responsabilité en une phrase : c'est aux plateformes de montrer qu'elles sont sûres, et non aux familles de courir après.</span></p>
+
+    <div class="grid">
+      <div class="card"><div class="big">&lt; 13</div><div class="lbl"><span class="ng-pt">Idade abaixo da qual as redes seriam proibidas</span><span class="ng-fr">Âge en dessous duquel les réseaux seraient interdits</span></div></div>
+      <div class="card"><div class="big">15</div><div class="lbl"><span class="ng-pt">Idade mínima proposta para conta própria na UE</span><span class="ng-fr">Âge minimum proposé pour un compte propre dans l'UE</span></div></div>
+      <div class="card"><div class="big">17/9</div><div class="lbl"><span class="ng-pt">Data em que a Comissão adotou a proposta</span><span class="ng-fr">Date d'adoption de la proposition par la Commission</span></div></div>
+      <div class="card"><div class="big">27</div><div class="lbl"><span class="ng-pt">Países da UE que a regra abrangeria</span><span class="ng-fr">Pays de l'UE que la règle couvrirait</span></div></div>
+    </div>
+
+    <div class="sec"><div class="num"><span class="ng-pt">1 · O que muda, na prática</span><span class="ng-fr">1 · Ce qui change, concrètement</span></div><h2><span class="ng-pt">Uma idade mínima e o ônus nas plataformas</span><span class="ng-fr">Un âge minimum et la charge sur les plateformes</span></h2></div>
+    <p><span class="ng-pt">O texto cria dois marcos: abaixo de <strong>13 anos</strong>, o acesso a redes sociais ficaria vedado; para abrir uma <strong>conta própria</strong>, a idade mínima seria de <strong>15 anos</strong>. A grande novidade, porém, é o método. Em vez de depender da declaração de idade do usuário (que qualquer criança contorna), a proposta <strong>inverte o ônus da prova</strong>: os serviços terão de mostrar que são adequados à idade e "seguros por concepção". Como isso será verificado na prática, e que ferramentas de checagem de idade serão aceitas, é justamente o ponto que a tramitação vai ter de detalhar. Segundo a cobertura da imprensa europeia, o alcance da discussão vai além das redes clássicas e toca também <strong>chatbots de inteligência artificial</strong>.</span><span class="ng-fr">Le texte crée deux seuils : en dessous de <strong>13 ans</strong>, l'accès aux réseaux sociaux serait interdit ; pour ouvrir un <strong>compte propre</strong>, l'âge minimum serait de <strong>15 ans</strong>. La grande nouveauté, cependant, c'est la méthode. Au lieu de dépendre de la déclaration d'âge de l'utilisateur (que tout enfant contourne), la proposition <strong>inverse la charge de la preuve</strong> : les services devront montrer qu'ils sont adaptés à l'âge et « sûrs par conception ». Comment cela sera vérifié concrètement, et quels outils de vérification d'âge seront acceptés, c'est précisément ce que la procédure devra préciser. Selon la couverture de la presse européenne, la portée du débat dépasse les réseaux classiques et touche aussi les <strong>chatbots d'intelligence artificielle</strong>.</span></p>
+
+    <div class="quote"><p><span class="ng-pt">"Nosso Kids Act inverte o ônus da prova, cabe às plataformas mostrar que são seguras por concepção."</span><span class="ng-fr">« Notre Kids Act inverse la charge de la preuve : c'est aux plateformes de montrer qu'elles sont sûres par conception. »</span></p><div class="attr"><span class="ng-pt">Ursula von der Leyen, presidente da Comissão Europeia (17/9/2026)</span><span class="ng-fr">Ursula von der Leyen, présidente de la Commission européenne (17/9/2026)</span></div></div>
+
+    <div class="sec"><div class="num"><span class="ng-pt">2 · Por que interessa às famílias imigrantes</span><span class="ng-fr">2 · Pourquoi cela concerne les familles immigrées</span></div><h2><span class="ng-pt">Filhos entre duas culturas, e duas telas</span><span class="ng-fr">Des enfants entre deux cultures, et deux écrans</span></h2></div>
+    <p><span class="ng-pt">Para muitas famílias brasileiras e de outras origens que vivem na Europa, a rede social não é só entretenimento: é o fio que liga os filhos aos avós no Brasil, à língua de casa e aos amigos deixados para trás. Uma regra europeia sobre idade mínima mexe com esse cotidiano e pode gerar dúvidas, como a criança fala com a família no exterior se certos aplicativos ficarem restritos? A proposta trata de <strong>redes sociais</strong>, e o desenho final dirá o que exatamente entra na conta. Vale acompanhar sem alarme: é um projeto, e o debate público apenas começou. Para os pais, o valor prático é ter, desde já, uma conversa em casa sobre tempo de tela e sobre o que os filhos fazem online, independentemente do que a lei venha a definir.</span><span class="ng-fr">Pour beaucoup de familles brésiliennes et d'autres origines vivant en Europe, le réseau social n'est pas qu'un divertissement : c'est le fil qui relie les enfants aux grands-parents au Brésil, à la langue de la maison et aux amis restés là-bas. Une règle européenne sur l'âge minimum touche ce quotidien et peut susciter des questions : comment l'enfant parle-t-il à sa famille à l'étranger si certaines applications sont restreintes ? La proposition porte sur les <strong>réseaux sociaux</strong>, et le texte final dira ce qui entre exactement dans le champ. Il vaut mieux suivre cela sans s'alarmer : c'est un projet, et le débat public ne fait que commencer. Pour les parents, l'utilité pratique est d'avoir, dès maintenant, une conversation à la maison sur le temps d'écran et sur ce que les enfants font en ligne, quelle que soit la définition que la loi finira par retenir.</span></p>
+
+    <div class="servbox"><h3><span class="ng-pt">O que já se sabe, o que falta</span><span class="ng-fr">Ce que l'on sait déjà, ce qui manque</span></h3>
+      <ul class="lista">
+        <li><span class="ng-pt"><strong>É proposta, não lei:</strong> a Comissão adotou o texto em 17/9; ele ainda terá de passar pelo Parlamento Europeu e pelos Estados-membros. Nada muda de imediato.</span><span class="ng-fr"><strong>C'est un projet, pas une loi :</strong> la Commission a adopté le texte le 17/9 ; il devra encore passer par le Parlement européen et les États membres. Rien ne change dans l'immédiat.</span></li>
+        <li><span class="ng-pt"><strong>Idades:</strong> proibição abaixo de 13 anos e conta própria a partir de 15, em toda a UE.</span><span class="ng-fr"><strong>Âges :</strong> interdiction en dessous de 13 ans et compte propre à partir de 15 ans, dans toute l'UE.</span></li>
+        <li><span class="ng-pt"><strong>Ponto em aberto:</strong> como será feita a verificação de idade sem invadir a privacidade das famílias, e quais serviços exatamente serão abrangidos.</span><span class="ng-fr"><strong>Point ouvert :</strong> comment sera faite la vérification d'âge sans porter atteinte à la vie privée des familles, et quels services exactement seront couverts.</span></li>
+        <li><span class="ng-pt"><strong>Contexto:</strong> soma-se ao DSA (nº 45) e ao debate sobre telas e aprendizado do PISA 2025 (nº 89). Não é aconselhamento parental nem jurídico.</span><span class="ng-fr"><strong>Contexte :</strong> s'ajoute au DSA (nº 45) et au débat sur les écrans et l'apprentissage du PISA 2025 (nº 89). Ce n'est ni un conseil parental ni juridique.</span></li>
+      </ul>
+    </div>
+
+    <div class="transp"><b><span class="ng-pt">Nota de transparência</span><span class="ng-fr">Note de transparence</span></b><span class="ng-pt">Parte da cobertura desta proposta menciona os <strong>chatbots de inteligência artificial</strong> entre os serviços em discussão, citando nominalmente assistentes como ChatGPT, Gemini e <strong>Claude</strong>. O Claude é desenvolvido pela <strong>Anthropic</strong> e é a ferramenta de IA que apoia a redação da The Crossing Time. Declaramos esse vínculo por dever de transparência: a revista não tem interesse comercial na tramitação da lei e cobre o tema com o mesmo distanciamento que aplica a qualquer outro.</span><span class="ng-fr">Une partie de la couverture de cette proposition mentionne les <strong>chatbots d'intelligence artificielle</strong> parmi les services en discussion, en citant nommément des assistants comme ChatGPT, Gemini et <strong>Claude</strong>. Claude est développé par <strong>Anthropic</strong> et c'est l'outil d'IA qui appuie la rédaction de The Crossing Time. Nous déclarons ce lien par devoir de transparence : le magazine n'a aucun intérêt commercial dans l'adoption de la loi et couvre le sujet avec la même distance qu'il applique à tout autre.</span></div>
+
+    <div class="ednote"><h3><span class="ng-pt">Nota Editorial · Verificação</span><span class="ng-fr">Note éditoriale · Vérification</span></h3><p><span class="ng-pt"><strong>CONFIRMADO:</strong> a adoção da proposta "EU KIDS Act" pela <strong>Comissão Europeia em 17/9/2026</strong>, a proibição de redes sociais abaixo dos <strong>13 anos</strong>, a idade mínima de <strong>15 anos</strong> para conta própria, a inversão do ônus da prova ("safe by design") e a citação de <strong>von der Leyen</strong> constam do comunicado oficial da Comissão (digital-strategy.ec.europa.eu, ref. IP_26_1890) e foram reportados por <strong>CNN</strong>, <strong>US News</strong>, <strong>Health Policy Watch</strong> e <strong>IAPP</strong> (16–17/9). <strong>ATRIBUÍDO:</strong> a extensão do debate a <strong>chatbots de IA</strong> aparece na cobertura da imprensa europeia (Euronews Next); o texto oficial fala em serviços digitais e sistemas de IA de risco. <strong>PROPOSTA, NÃO LEI:</strong> depende de tramitação no Parlamento Europeu e nos Estados-membros. <strong>NÃO é aconselhamento parental nem jurídico.</strong> Liga a #45 (DSA) e #89 (PISA). Ver a nota de transparência acima sobre o Claude/Anthropic. Sem apuração própria; organização de fontes tier-1. Sem foto (hero tipográfico; pauta com menores, sem imagens identificáveis).</span><span class="ng-fr"><strong>CONFIRMÉ :</strong> l'adoption de la proposition « EU KIDS Act » par la <strong>Commission européenne le 17/9/2026</strong>, l'interdiction des réseaux sociaux en dessous de <strong>13 ans</strong>, l'âge minimum de <strong>15 ans</strong> pour un compte propre, l'inversion de la charge de la preuve (« safe by design ») et la citation de <strong>von der Leyen</strong> figurent dans le communiqué officiel de la Commission (digital-strategy.ec.europa.eu, réf. IP_26_1890) et ont été rapportés par <strong>CNN</strong>, <strong>US News</strong>, <strong>Health Policy Watch</strong> et <strong>IAPP</strong> (16–17/9). <strong>ATTRIBUÉ :</strong> l'extension du débat aux <strong>chatbots d'IA</strong> figure dans la couverture de la presse européenne (Euronews Next) ; le texte officiel parle de services numériques et de systèmes d'IA à risque. <strong>PROJET, PAS LOI :</strong> dépend de la procédure au Parlement européen et dans les États membres. <strong>Ce n'est ni un conseil parental ni juridique.</strong> Renvoie à #45 (DSA) et #89 (PISA). Voir la note de transparence ci-dessus sur Claude/Anthropic. Sans enquête propre ; organisation de sources tier-1. Sans photo (hero typographique ; sujet impliquant des mineurs, sans images identifiables).</span></p></div>
+  </article>
+</div>
+
+<div class="pilares">POUVOIR&nbsp;&nbsp;&#9670;&nbsp;&nbsp;MOBILIDADE&nbsp;&nbsp;&#9670;&nbsp;&nbsp;TRANSFORMATION</div>
+<div class="sitefoot">
+  <b>THE CROSSING TIME</b> · by Porta Voz do Imigrante<br>
+  Geopolítica · Direito · Economia · Sociedade · Mobilidade Global<br>
+  <span>thecrossingtime.com</span> · WhatsApp +33 6 69 99 72 96 · Genebra · Paris · São Paulo
+</div>
+<script>
+function goBack(){ if(window.parent&&window.parent!==window){try{window.parent.closeMateria();return;}catch(e){}} window.location.href='../index.html#materias'; }
+function setLang(l){document.body.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);var p=document.getElementById('b-pt'),f=document.getElementById('b-fr');if(p)p.className=(l==='pt')?'on':'';if(f)f.className=(l==='fr')?'on':'';try{localStorage.setItem('tct-lang',l);}catch(e){}}
+(function(){var s='pt';try{s=localStorage.getItem('tct-lang')||'pt';}catch(e){}if(s==='fr')setLang('fr');})();
+</script>
+</body>
+</html>
