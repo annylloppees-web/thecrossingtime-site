@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thecrossingtime.com/</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -859,6 +859,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_franca_delai_carence_estrangeiros_FOTOS.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_franca_greve_29setembro_FOTOS.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -867,6 +873,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_franca_orcamento_2027_lecornu_FOTO.html</loc>
     <lastmod>2026-09-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_franca_senatoriales_francais_etranger_FOTOS.html</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -891,6 +903,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_reino_unido_caos_aereo_nats_FOTOS.html</loc>
     <lastmod>2026-09-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_russia_duma_resultado_2026_FOTOS.html</loc>
+    <lastmod>2026-09-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
