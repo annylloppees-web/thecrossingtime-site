@@ -90,8 +90,8 @@ body[data-lang="en"] .ng-en{display:revert!important}
 <div class="topbar">
   <button class="tct-back" onclick="goBack()">&lsaquo; <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span><span class="ng-en">Back</span></button>
   <div class="brand">THE CROSSING <span>TIME</span></div>
-  <div class="ed"><span class="ng-pt">Edição nº XX · 3 de setembro de 2026 · Transformation</span><span class="ng-fr">Édition nº XX · 3 septembre 2026 · Transformation</span><span class="ng-en">Issue no. XX · 3 September 2026 · Transformation</span></div>
-  <div class="lang-bar"><button id="b-pt" class="on" onclick="setLang('pt')">PT</button><button id="b-fr" onclick="setLang('fr')">FR</button></div>
+  <div class="ed"><span class="ng-pt">3 de setembro de 2026 · Transformation</span><span class="ng-fr">3 septembre 2026 · Transformation</span><span class="ng-en">3 September 2026 · Transformation</span></div>
+  <div class="lang-bar"><button id="b-pt" class="on" onclick="setLang('pt')">PT</button><button id="b-fr" onclick="setLang('fr')">FR</button><button id="b-en" onclick="setLang('en')">EN</button></div>
 </div>
 
 <div class="thero" data-w="WIMP">
@@ -157,8 +157,8 @@ body[data-lang="en"] .ng-en{display:revert!important}
 </div>
 <script>
 function goBack(){ if(window.parent&&window.parent!==window){try{window.parent.closeMateria();return;}catch(e){}} window.location.href='../index.html#materias'; }
-function setLang(l){document.body.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);var p=document.getElementById('b-pt'),f=document.getElementById('b-fr');if(p)p.className=(l==='pt')?'on':'';if(f)f.className=(l==='fr')?'on':'';try{localStorage.setItem('tct-lang',l);}catch(e){}}
-(function(){var s='pt';try{s=localStorage.getItem('tct-lang')||'pt';}catch(e){}if(s==='fr')setLang('fr');})();
+function setLang(l){document.body.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);var p=document.getElementById('b-pt'),f=document.getElementById('b-fr'),e=document.getElementById('b-en');if(p)p.className=(l==='pt')?'on':'';if(f)f.className=(l==='fr')?'on':'';if(e)e.className=(l==='en')?'on':'';try{localStorage.setItem('tct-lang',l);}catch(e){}}
+(function(){var s='pt';try{s=localStorage.getItem('tct-lang')||'pt';}catch(e){}if(s==='fr'||s==='en')setLang(s);})();
 </script>
 </body>
 </html>

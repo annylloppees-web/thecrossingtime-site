@@ -111,8 +111,8 @@ body[data-lang="fr"] .ng-fr{display:revert!important;}
 <div class="topbar">
   <button class="tct-back" onclick="goBack()">&lsaquo; <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span><span class="ng-en">Back to the site</span></button>
   <div class="brand">THE CROSSING <span>TIME</span></div>
-  <div class="ed"><span class="ng-pt">Edição nº XX · 12 de agosto de 2026 · Transformation</span><span class="ng-fr">Édition nº XX · 12 août 2026 · Transformation</span><span class="ng-en">Issue no. XX · 12 August 2026 · Transformation</span></div>
-  <div class="lang-bar"><button id="b-pt" class="on" onclick="setLang('pt')">PT</button><button id="b-fr" onclick="setLang('fr')">FR</button></div>
+  <div class="ed"><span class="ng-pt">12 de agosto de 2026 · Transformation</span><span class="ng-fr">12 août 2026 · Transformation</span><span class="ng-en">12 August 2026 · Transformation</span></div>
+  <div class="lang-bar"><button id="b-pt" class="on" onclick="setLang('pt')">PT</button><button id="b-fr" onclick="setLang('fr')">FR</button><button id="b-en" onclick="setLang('en')">EN</button></div>
 </div>
 
 <div class="hero" style="max-height:64vh">
@@ -265,10 +265,10 @@ function setLang(l){
   document.documentElement.setAttribute('lang', l);
   var bp=document.getElementById('b-pt'), bf=document.getElementById('b-fr');
   if(bp) bp.className=(l==='pt')?'on':'';
-  if(bf) bf.className=(l==='fr')?'on':'';
+  if(bf) bf.className=(l==='fr')?'on':'';var eb_=document.getElementById('b-en'); if(eb_) eb_.className=(l==='en')?'on':'';
   try{ localStorage.setItem('tct-lang', l); }catch(e){}
 }
-(function(){ var s='pt'; try{ s=localStorage.getItem('tct-lang')||'pt'; }catch(e){} if(s==='fr') setLang('fr'); })();
+(function(){ var s='pt'; try{ s=localStorage.getItem('tct-lang')||'pt'; }catch(e){} if(s==='fr'||s==='en') setLang(s); })();
 function shareWa(){ window.open('https://wa.me/?text='+encodeURIComponent(document.title+' — '+window.location.href),'_blank'); }
 function copyLink(){ var u=window.location.href; if(navigator.clipboard){ navigator.clipboard.writeText(u).then(function(){ alert('Link copiado / Lien copie'); }); } else { alert(u); } }
 </script>

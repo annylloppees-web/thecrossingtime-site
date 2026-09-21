@@ -96,12 +96,12 @@ body[data-lang="en"] .ng-en{display:revert!important}
   <button class="tct-back" onclick="goBack()"><span class="ng-pt">‹ Voltar</span><span class="ng-fr">‹ Retour</span><span class="ng-en">‹ Back</span></button>
   <div class="brand">THE CROSSING <span>TIME</span></div>
   <div class="ed">
-    <span class="ng-pt">Edição nº XX · 21 ago 2026 · Cultura</span>
-    <span class="ng-fr">Édition n° XX · 21 août 2026 · Culture</span><span class="ng-en">Issue no. XX · 21 Aug 2026 · Culture</span>
+    <span class="ng-pt">21 ago 2026 · Cultura</span>
+    <span class="ng-fr">21 août 2026 · Culture</span><span class="ng-en">21 Aug 2026 · Culture</span>
   </div>
   <div class="lang-bar">
     <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
-    <button id="b-fr" onclick="setLang('fr')">FR</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button><button id="b-en" onclick="setLang('en')">EN</button>
   </div>
 </div>
 
@@ -201,7 +201,7 @@ body[data-lang="en"] .ng-en{display:revert!important}
 
 <script>
 function goBack(){try{if(window.parent&&window.parent!==window&&typeof window.parent.closeMateria==="function"){window.parent.closeMateria();return;}}catch(e){}window.location.href="../index.html#materias";}
-function setLang(l){document.body.setAttribute("data-lang",l);document.getElementById("b-pt").classList.toggle("on",l==="pt");document.getElementById("b-fr").classList.toggle("on",l==="fr");try{localStorage.setItem("tct-lang",l);}catch(e){}}
+function setLang(l){document.body.setAttribute("data-lang",l);document.getElementById("b-pt").classList.toggle("on",l==="pt");document.getElementById("b-fr").classList.toggle("on",l==="fr");var eb_=document.getElementById("b-en");if(eb_)eb_.classList.toggle("on",l==="en");try{localStorage.setItem("tct-lang",l);}catch(e){}}
 (function(){try{var s=localStorage.getItem("tct-lang");if(s){setLang(s);}}catch(e){}})();
 function shareWa(){var u=encodeURIComponent(window.location.href);var t=encodeURIComponent(document.title);window.open("https://wa.me/?text="+t+"%20"+u,"_blank");}
 function copyLink(){var done=function(){alert(document.body.getAttribute("data-lang")==="fr"?"Lien copié !":"Link copiado!");};if(navigator.clipboard){navigator.clipboard.writeText(window.location.href).then(done,done);}else{done();}}

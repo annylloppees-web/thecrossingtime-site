@@ -109,7 +109,7 @@ body[data-lang="en"] .ng-en{display:revert!important}
   <div class="brand">THE CROSSING <span>TIME</span></div>
   <div class="lang-bar">
     <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
-    <button id="b-fr" onclick="setLang('fr')">FR</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button><button id="b-en" onclick="setLang('en')">EN</button>
   </div>
   <div class="ed">
     <span class="ng-pt">Edição nº — · 25 ago 2026 · Ciência &amp; Tecnologia</span>
@@ -244,7 +244,7 @@ function goBack(){
 function setLang(l){
   document.body.setAttribute('data-lang',l);
   document.getElementById('b-pt').classList.toggle('on',l==='pt');
-  document.getElementById('b-fr').classList.toggle('on',l==='fr');
+  document.getElementById('b-fr').classList.toggle('on',l==='fr');var eb_=document.getElementById("b-en");if(eb_)eb_.classList.toggle("on",l==="en");
   try{ localStorage.setItem('tct-lang',l); }catch(e){}
 }
 (function(){ try{ var s=localStorage.getItem('tct-lang'); if(s){ setLang(s); } }catch(e){} })();

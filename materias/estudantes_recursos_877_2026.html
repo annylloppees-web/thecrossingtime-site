@@ -123,12 +123,12 @@ body[data-lang="en"] .ng-en{display:revert!important}
   <button class="tct-back" onclick="goBack()"><span class="ng-pt">‹ Voltar</span><span class="ng-fr">‹ Retour</span><span class="ng-en">‹ Back to the site</span></button>
   <div class="brand">THE CROSSING <span>TIME</span></div>
   <div class="ed">
-    <span class="ng-pt">Edição nº XX · 21 ago 2026 · Estudantes &amp; Direitos</span>
-    <span class="ng-fr">Édition n° XX · 21 août 2026 · Étudiants &amp; Droits</span><span class="ng-en">Issue no. XX · 21 Aug 2026 · Students &amp; Rights</span>
+    <span class="ng-pt">21 ago 2026 · Estudantes &amp; Direitos</span>
+    <span class="ng-fr">21 août 2026 · Étudiants &amp; Droits</span><span class="ng-en">21 Aug 2026 · Students &amp; Rights</span>
   </div>
   <div class="lang-bar">
     <button id="b-pt" class="on" onclick="setLang('pt')">PT</button>
-    <button id="b-fr" onclick="setLang('fr')">FR</button>
+    <button id="b-fr" onclick="setLang('fr')">FR</button><button id="b-en" onclick="setLang('en')">EN</button>
   </div>
 </div>
 
@@ -265,7 +265,7 @@ function goBack(){
 function setLang(l){
   document.body.setAttribute("data-lang",l);
   document.getElementById("b-pt").classList.toggle("on",l==="pt");
-  document.getElementById("b-fr").classList.toggle("on",l==="fr");
+  document.getElementById("b-fr").classList.toggle("on",l==="fr");var eb_=document.getElementById("b-en");if(eb_)eb_.classList.toggle("on",l==="en");
   try{localStorage.setItem("tct-lang",l);}catch(e){}
 }
 (function(){
