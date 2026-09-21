@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 de Julho, a data que ainda decide a França · The Crossing Time</title>
+<meta name="description" content="Em 14 de julho de 2026, a França celebra 237 anos da queda da Bastilha. Da fundação simbólica da República ao direito do trabalho que rege quem trabalha no feriado, a data continua decidindo o que é a França. Análise editorial de The Crossing Time.">
+<meta name="author" content="The Crossing Time, by Porta Voz do Imigrante">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-1: #071a3d; --navy-2: #020814;
+    --offwhite: #F5F1E8; --ouro: #B8924A; --ouro-claro: #c7a45a;
+    --texto: #1a1a1a; --texto-suave: #4a4a4a;
+    --linha: rgba(184, 146, 74, 0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--offwhite); color: var(--texto); line-height: 1.7; font-size: 18px; -webkit-font-smoothing: antialiased; }
+
+  [lang-mode="pt"] .ng-fr { display: none !important; }
+  [lang-mode="fr"] .ng-pt { display: none !important; }
+
+  .art-back { position: fixed; top: 1rem; left: 1rem; z-index: 100; background: rgba(7,26,61,.92); backdrop-filter: blur(8px); color: #F4F2ED; border: none; border-radius: 999px; padding: 8px 16px 8px 12px; font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: .1em; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 2px 12px rgba(0,0,0,.3); transition: all .2s; font-weight: 600; text-transform: uppercase; text-decoration: none; }
+  .art-back svg { width: 14px; height: 14px; stroke: #c7a45a; stroke-width: 2.5; fill: none; }
+  .art-back:hover { background: var(--navy-1); transform: translateX(-2px); }
+
+  .lang-bar { position: fixed; top: 1rem; right: 1rem; z-index: 100; display: flex; gap: 6px; background: rgba(7,26,61,.92); padding: 6px 8px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.3); backdrop-filter: blur(8px); }
+  .lang-btn { background: transparent; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.75); padding: 5px 11px; font-size: 10px; letter-spacing: .1em; font-family: 'Poppins', sans-serif; cursor: pointer; border-radius: 3px; transition: all .2s; font-weight: 500; }
+  .lang-btn:hover { color: #fff; }
+  .lang-btn.active { background: rgba(199,164,90,.2); border-color: var(--ouro); color: var(--ouro-claro); font-weight: 600; }
+
+  .top-bar { background: var(--navy-1); color: var(--offwhite); padding: 14px 0; border-bottom: 2px solid var(--ouro); }
+  .top-bar-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; display: flex; justify-content: space-between; align-items: center; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; }
+  .top-bar .marca { font-weight: 700; color: var(--ouro-claro); }
+  .top-bar .pilares { color: rgba(245, 241, 232, 0.7); font-weight: 300; }
+
+  .hero { position: relative; width: 100%; height: 75vh; min-height: 600px; max-height: 800px; background: var(--navy-1); overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; filter: brightness(0.45) contrast(1.05) saturate(0.6); }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(7,26,61,0.55) 0%, rgba(7,26,61,0.70) 50%, rgba(2,8,20,0.94) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 0 32px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 80px; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 14px; font-family: 'Poppins', sans-serif; font-weight: 700; color: var(--ouro-claro); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
+  .hero-tag .bandeira-fr { width: 36px; height: 24px; background: linear-gradient(to right, #0055A4 33%, #fff 33%, #fff 66%, #EF4135 66%); display: inline-block; }
+  .hero-tag .bandeira-ue { width: 36px; height: 24px; background: #003399; position: relative; display: inline-flex; align-items: center; justify-content: center; color: #FFCC00; font-size: 14px; line-height: 1; }
+  .hero-tag .bandeira-ue::after { content: "★ ★"; letter-spacing: -2px; }
+  .hero-tag .linha-dourada { width: 50px; height: 2px; background: var(--ouro); }
+  .hero h1 { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(40px, 6vw, 78px); line-height: 1.05; color: var(--offwhite); max-width: 900px; letter-spacing: -0.02em; }
+  .hero h1 .destaque { color: var(--ouro-claro); display: block; }
+  .hero-subtitle { font-family: 'Lora', serif; font-style: italic; font-weight: 400; font-size: clamp(20px, 2vw, 26px); color: rgba(245, 241, 232, 0.9); margin-top: 28px; max-width: 720px; line-height: 1.4; }
+  .hero-meta { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(199, 164, 90, 0.4); max-width: 720px; font-family: 'Poppins', sans-serif; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245, 241, 232, 0.7); }
+  .hero-meta strong { color: var(--ouro-claro); font-weight: 700; }
+
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  article { padding: 80px 0 60px; }
+  .lead { font-family: 'Lora', serif; font-size: 24px; line-height: 1.5; color: var(--texto); margin-bottom: 48px; font-weight: 500; }
+  .lead::first-letter { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 80px; float: left; line-height: 0.85; padding: 8px 12px 0 0; color: var(--ouro); }
+  h2.secao { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(28px, 3vw, 36px); line-height: 1.2; color: var(--navy-1); margin: 64px 0 32px; }
+  .secao-numero { display: block; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ouro); margin-bottom: 12px; font-weight: 600; }
+  article p { margin-bottom: 24px; color: var(--texto); font-family: 'Lora', serif; }
+  article p strong { color: var(--navy-1); font-weight: 700; }
+
+  .quote-block { margin: 56px 0; padding: 40px; background: var(--navy-1); color: var(--offwhite); border-left: 6px solid var(--ouro); position: relative; }
+  .quote-block .quote-text { font-family: 'Lora', serif; font-style: italic; font-size: 26px; line-height: 1.4; color: var(--offwhite); margin-bottom: 16px; }
+  .quote-block .quote-author { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); font-weight: 600; }
+
+  .dados-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 48px 0; }
+  .dado-card { background: #fff; padding: 28px 20px; border-top: 4px solid var(--ouro); box-shadow: 0 2px 12px rgba(7,26,61,.08); border-radius: 4px; }
+  .dado-label { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 12px; }
+  .dado-numero { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: clamp(36px, 4vw, 48px); line-height: 1; color: var(--navy-1); margin-bottom: 12px; }
+  .dado-desc { font-family: 'Lora', serif; font-size: 14px; line-height: 1.45; color: var(--texto-suave); }
+
+  .timeline { margin: 48px 0; padding-left: 40px; position: relative; }
+  .timeline::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 2px; background: var(--linha); }
+  .timeline-item { margin-bottom: 32px; position: relative; }
+  .timeline-item::before { content: ''; position: absolute; left: -48px; top: 6px; width: 14px; height: 14px; background: var(--ouro); border-radius: 50%; box-shadow: 0 0 0 4px var(--offwhite), 0 0 0 5px var(--ouro); }
+  .timeline-data { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .timeline-texto { font-family: 'Lora', serif; font-size: 17px; line-height: 1.55; color: var(--texto); }
+  .timeline-texto strong { color: var(--navy-1); }
+
+  .img-inline { margin: 48px 0; }
+  .img-inline img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 4px 24px rgba(7,26,61,.15); }
+  .img-inline .legenda { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--texto-suave); margin-top: 12px; text-align: center; font-weight: 500; }
+
+  .article-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--linha); text-align: center; }
+  .article-footer .marca { font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--ouro); font-weight: 700; margin-bottom: 8px; }
+  .article-footer .sub { font-family: 'Lora', serif; font-style: italic; color: var(--texto-suave); margin-bottom: 16px; font-size: 15px; }
+  .article-footer .pilares { font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ouro-claro); }
+
+  @media (max-width: 768px) {
+    body { font-size: 17px; }
+    .hero { height: 70vh; min-height: 500px; }
+    .hero-content { padding-bottom: 50px; }
+    article { padding: 50px 0 40px; }
+    .lead { font-size: 20px; }
+    .lead::first-letter { font-size: 64px; }
+    h2.secao { font-size: 26px; }
+    .quote-block { padding: 28px 24px; }
+    .quote-block .quote-text { font-size: 21px; }
+    .top-bar-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .timeline { padding-left: 24px; }
+    .timeline-item::before { left: -32px; }
+  }
+</style>
+<script>
+(function(){
+  if(document.body){
+    if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+  } else {
+    document.addEventListener('DOMContentLoaded', function(){
+      if(!document.body.getAttribute('lang-mode')) document.body.setAttribute('lang-mode','pt');
+    });
+  }
+})();
+</script>
+</head>
+<body lang-mode="pt">
+
+<button class="art-back" onclick="goBack()">
+  <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+  <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span>
+</button>
+
+<div class="lang-bar">
+  <button class="lang-btn active" id="lng-pt" onclick="setLang('pt')">PT</button>
+  <button class="lang-btn" id="lng-fr" onclick="setLang('fr')">FR</button>
+</div>
+
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="marca">THE CROSSING TIME</div>
+    <div class="pilares">
+      <span class="ng-pt">Geopolítica • História • Direito do Trabalho</span>
+      <span class="ng-fr">Géopolitique • Histoire • Droit du Travail</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <img src="https://images.unsplash.com/photo-1516260459095-c7f1e6f85419?fm=jpg&q=80&w=2400&auto=format&fit=crop" alt="Arc de Triomphe com bandeira francesa — 14 de Julho, fundação simbólica da República" class="hero-img" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">
+      <span class="bandeira-fr"></span>
+      <span class="ng-pt">França • Fête Nationale</span>
+      <span class="ng-fr">France • Fête Nationale</span>
+      <span class="linha-dourada"></span>
+    </div>
+    <h1>
+      <span class="ng-pt">14 de Julho, 237 anos depois.<span class="destaque">A data que ainda decide a França.</span></span>
+      <span class="ng-fr">14 Juillet, 237 ans plus tard.<span class="destaque">La date qui décide encore la France.</span></span>
+    </h1>
+    <p class="hero-subtitle">
+      <span class="ng-pt">Da queda da Bastilha à arquitetura republicana, da Patrouille de France à convenção coletiva de quem trabalha no feriado: a fundação simbólica continua produzindo efeitos jurídicos concretos.</span>
+      <span class="ng-fr">De la chute de la Bastille à l'architecture républicaine, de la Patrouille de France à la convention collective de ceux qui travaillent le jour férié : la fondation symbolique continue de produire des effets juridiques concrets.</span>
+    </p>
+    <div class="hero-meta">
+      <strong><span class="ng-pt">Análise editorial</span><span class="ng-fr">Analyse éditoriale</span></strong> • 
+      <span class="ng-pt">Geopolítica & Sociedade</span><span class="ng-fr">Géopolitique & Société</span> • 
+      <span class="ng-pt">14 de maio de 2026</span><span class="ng-fr">14 mai 2026</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <p class="lead">
+      <span class="ng-pt">Em 14 de julho de 2026, uma terça-feira, a França marca 237 anos da queda da Bastilha. Bandeiras tricolores na Champs-Élysées. Tropas em formação sob o Arco do Triunfo. Fogos sobre a Torre Eiffel. E, nos bastidores que a cerimônia oficial não enquadra, milhões de trabalhadores em hotéis, restaurantes, hospitais, serviços de limpeza e transporte cumprindo expediente regular. A festa nacional francesa não é apenas memória. É instituição em funcionamento, com regras jurídicas precisas sobre quem trabalha, quem descansa, quem é pago a mais, e quem nem sabe que deveria ser.</span>
+      <span class="ng-fr">Le 14 juillet 2026, un mardi, la France marque 237 ans de la chute de la Bastille. Drapeaux tricolores sur les Champs-Élysées. Troupes en formation sous l'Arc de Triomphe. Feux d'artifice sur la Tour Eiffel. Et, dans les coulisses que la cérémonie officielle ne cadre pas, des millions de travailleurs dans des hôtels, restaurants, hôpitaux, services de propreté et de transport remplissant leur journée habituelle. La fête nationale française n'est pas seulement mémoire. C'est une institution en fonctionnement, avec des règles juridiques précises sur qui travaille, qui se repose, qui est payé en plus, et qui ne sait même pas qu'il devrait l'être.</span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">I. A data fundadora</span><span class="ng-fr">I. La date fondatrice</span></span>
+      <span class="ng-pt">Por que 14 de julho, e não outra data, define a República Francesa</span>
+      <span class="ng-fr">Pourquoi le 14 juillet, et pas une autre date, définit la République française</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A escolha do 14 de julho como festa nacional não foi automática. Ela foi decidida por lei em <strong>6 de julho de 1880</strong>, sob a Terceira República, após debate parlamentar que durou meses. A questão central no debate não era se a data deveria ser comemorada. Era qual <strong>14 de julho</strong>: o de 1789, marcado pela queda da Bastilha e por uma centena de mortos entre os atacantes, ou o de 1790, da Festa da Federação, em que delegados de toda a França reunidos no Campo de Marte juraram fidelidade à nação, à lei e ao rei. A lei Raspail tomou uma decisão deliberadamente ambígua: aprovou o 14 de julho sem especificar o ano.</span>
+      <span class="ng-fr">Le choix du 14 juillet comme fête nationale n'a pas été automatique. Il a été décidé par la loi du <strong>6 juillet 1880</strong>, sous la Troisième République, après un débat parlementaire qui a duré des mois. La question centrale dans le débat n'était pas si la date devait être commémorée. C'était quel <strong>14 juillet</strong> : celui de 1789, marqué par la chute de la Bastille et une centaine de morts parmi les assaillants, ou celui de 1790, de la Fête de la Fédération, lors de laquelle des délégués de toute la France réunis au Champ-de-Mars ont prêté serment à la nation, à la loi et au roi. La loi Raspail a pris une décision délibérément ambiguë : elle a approuvé le 14 juillet sans préciser l'année.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A ambiguidade era política. A Terceira República, instalada em 1870 e ainda fragilizada por dois golpes monarquistas frustrados, precisava de uma data fundadora que pudesse unir os herdeiros da revolução insurrecional com os herdeiros da revolução constitucional. O 14 de julho de 1789 falava aos primeiros: era a tomada popular da fortaleza, o despotismo derrubado pela rua. O 14 de julho de 1790 falava aos segundos: era o juramento institucional, a nação reconciliada, a ordem republicana posta de pé. Ao não escolher um dos dois, o Estado escolheu os dois. E criou uma festa nacional que comporta ao mesmo tempo o desfile militar e a memória da insurreição. Não há contradição. Há síntese política calculada.</span>
+      <span class="ng-fr">L'ambiguïté était politique. La Troisième République, installée en 1870 et encore fragilisée par deux coups monarchistes ratés, avait besoin d'une date fondatrice qui puisse unir les héritiers de la révolution insurrectionnelle aux héritiers de la révolution constitutionnelle. Le 14 juillet 1789 parlait aux premiers : c'était la prise populaire de la forteresse, le despotisme renversé par la rue. Le 14 juillet 1790 parlait aux seconds : c'était le serment institutionnel, la nation réconciliée, l'ordre républicain debout. En ne choisissant pas l'un des deux, l'État a choisi les deux. Et il a créé une fête nationale qui contient à la fois le défilé militaire et la mémoire de l'insurrection. Il n'y a pas de contradiction. Il y a une synthèse politique calculée.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"O 14 de julho é a única festa nacional do mundo que comemora simultaneamente uma insurreição armada e a estabilidade institucional que se construiu sobre ela. Essa dualidade não é defeito do calendário. É a fórmula política da própria República."</span>
+        <span class="ng-fr">« Le 14 juillet est la seule fête nationale au monde qui commémore simultanément une insurrection armée et la stabilité institutionnelle qui s'est construite sur elle. Cette dualité n'est pas un défaut du calendrier. C'est la formule politique de la République elle-même. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">II. A jornada de 14 de julho de 1789</span><span class="ng-fr">II. La journée du 14 juillet 1789</span></span>
+      <span class="ng-pt">Sete prisioneiros, uma centena de mortos, um símbolo</span>
+      <span class="ng-fr">Sept prisonniers, une centaine de morts, un symbole</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A Bastilha que caiu em 14 de julho de 1789 não era a prisão sombria do imaginário popular. Era uma fortaleza medieval do século XIV, transformada em prisão de Estado a partir do século XVII, e que naquela data abrigava apenas <strong>sete detentos</strong>: quatro falsários, dois homens considerados mentalmente alienados e um nobre encarcerado a pedido da própria família por <em>lettre de cachet</em>. A guarnição era reduzida, cerca de oitenta inválidos do exército real reforçados por trinta soldados suíços. Militarmente, a Bastilha era pouco. Simbolicamente, era tudo: representava o arbítrio régio, a prisão sem processo, o poder absoluto materializado em pedra.</span>
+      <span class="ng-fr">La Bastille qui est tombée le 14 juillet 1789 n'était pas la prison sombre de l'imaginaire populaire. C'était une forteresse médiévale du XIVe siècle, transformée en prison d'État à partir du XVIIe siècle, et qui à cette date n'hébergeait que <strong>sept détenus</strong> : quatre faussaires, deux hommes considérés comme aliénés mentaux et un noble emprisonné à la demande de sa propre famille par <em>lettre de cachet</em>. La garnison était réduite, environ quatre-vingts invalides de l'armée royale renforcés par trente soldats suisses. Militairement, la Bastille était peu. Symboliquement, c'était tout : elle représentait l'arbitraire royal, la prison sans procès, le pouvoir absolu matérialisé en pierre.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">O ataque foi consequência direta da crise política dos dias anteriores. Em <strong>11 de julho</strong>, Louis XVI demitiu Jacques Necker, ministro das finanças popular junto ao Terceiro Estado, e reorganizou seu gabinete com nobres conservadores. Tropas mercenárias estrangeiras foram concentradas em torno de Paris. A rumor de um golpe militar contra a Assembleia Nacional Constituinte espalhou-se pela cidade. Em <strong>13 de julho</strong>, parisienses ergueram barricadas, ferreiros começaram a fabricar piques, e os Guardas Franceses, regimento de elite que deveria defender o rei, recusou-se a obedecer. Na manhã do dia <strong>14</strong>, a multidão atacou primeiro os Inválidos, de onde retirou cerca de <strong>32 mil fusis</strong> e doze canhões. Faltava pólvora. E a pólvora estava na Bastilha.</span>
+      <span class="ng-fr">L'attaque a été la conséquence directe de la crise politique des jours précédents. Le <strong>11 juillet</strong>, Louis XVI a renvoyé Jacques Necker, ministre des finances populaire auprès du Tiers État, et a réorganisé son cabinet avec des nobles conservateurs. Des troupes mercenaires étrangères ont été concentrées autour de Paris. La rumeur d'un coup militaire contre l'Assemblée Nationale Constituante s'est répandue dans la ville. Le <strong>13 juillet</strong>, les Parisiens ont érigé des barricades, les forgerons ont commencé à fabriquer des piques, et les Gardes Françaises, régiment d'élite censé défendre le roi, ont refusé d'obéir. Au matin du <strong>14</strong>, la foule a d'abord attaqué les Invalides, d'où elle a retiré environ <strong>32 000 fusils</strong> et douze canons. Il manquait de la poudre. Et la poudre était à la Bastille.</span>
+    </p>
+
+    
+
+    <p>
+      <span class="ng-pt">O cerco começou no início da tarde e durou cerca de quatro horas. Os atacantes, estimados entre 600 e 1.000 pessoas, eram majoritariamente artesãos, operários e pequenos comerciantes do bairro de Saint-Antoine. Não havia plano militar definido. A confusão era completa. Os canhões trazidos dos Inválidos foram posicionados, e o fogo cruzado entre defensores e atacantes deixou cerca de <strong>cem mortos</strong> entre os parisienses, contra menos de dez entre os defensores. Por razões que historiadores ainda discutem, a ponte levadiça acabou sendo abaixada, e a multidão invadiu a fortaleza. O governador Bernard-René de Launay foi capturado, levado para o Hôtel de Ville, e linchado no caminho. Sua cabeça foi exibida em uma pique pelas ruas de Paris.</span>
+      <span class="ng-fr">Le siège a commencé en début d'après-midi et a duré environ quatre heures. Les assaillants, estimés entre 600 et 1 000 personnes, étaient majoritairement des artisans, ouvriers et petits commerçants du quartier Saint-Antoine. Il n'y avait pas de plan militaire défini. La confusion était totale. Les canons amenés des Invalides ont été positionnés, et le feu croisé entre défenseurs et assaillants a fait environ <strong>cent morts</strong> parmi les Parisiens, contre moins de dix parmi les défenseurs. Pour des raisons que les historiens discutent encore, le pont-levis a fini par être abaissé, et la foule a envahi la forteresse. Le gouverneur Bernard-René de Launay a été capturé, conduit à l'Hôtel de Ville, et lynché en chemin. Sa tête a été promenée au bout d'une pique dans les rues de Paris.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Em Versalhes, Louis XVI registrou em seu diário pessoal, naquele 14 de julho, uma única palavra: <em>Rien</em>. Nada. Anotação que se referia, na verdade, ao resultado de sua caçada do dia, mas que entrou para a história como ilustração inadvertida do abismo entre o rei e a capital. Quando o duque de La Rochefoucauld-Liancourt foi informá-lo da queda da Bastilha na manhã seguinte, o rei perguntou se era uma revolta. A resposta foi a fórmula que atravessaria os séculos: <strong>"Não, sire. É uma revolução."</strong></span>
+      <span class="ng-fr">À Versailles, Louis XVI a inscrit dans son journal personnel, ce 14 juillet, un seul mot : <em>Rien</em>. Notation qui se référait en réalité au résultat de sa chasse du jour, mais qui est entrée dans l'histoire comme illustration involontaire de l'abîme entre le roi et la capitale. Quand le duc de La Rochefoucauld-Liancourt est venu l'informer de la chute de la Bastille le lendemain matin, le roi a demandé si c'était une révolte. La réponse a été la formule qui traverserait les siècles : <strong>« Non, sire. C'est une révolution. »</strong></span>
+    </p>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">III. A cronologia</span><span class="ng-fr">III. La chronologie</span></span>
+      <span class="ng-pt">Da fortaleza ao feriado: 91 anos para se tornar lei</span>
+      <span class="ng-fr">De la forteresse au jour férié : 91 ans pour devenir loi</span>
+    </h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">14 Jul / 1789</span><span class="ng-fr">14 Juil / 1789</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt"><strong>Queda da Bastilha.</strong> A fortaleza-prisão é tomada após cerca de quatro horas de cerco. Cem mortos entre os atacantes. Sete prisioneiros libertados. O símbolo do absolutismo cai.</span>
+          <span class="ng-fr"><strong>Chute de la Bastille.</strong> La forteresse-prison est prise après environ quatre heures de siège. Cent morts parmi les assaillants. Sept prisonniers libérés. Le symbole de l'absolutisme tombe.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">26 Ago / 1789</span><span class="ng-fr">26 Août / 1789</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt">Adoção da <strong>Declaração dos Direitos do Homem e do Cidadão</strong>. A soberania popular substitui a soberania real. Os direitos naturais são proclamados como universais.</span>
+          <span class="ng-fr">Adoption de la <strong>Déclaration des droits de l'homme et du citoyen</strong>. La souveraineté populaire remplace la souveraineté royale. Les droits naturels sont proclamés universels.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">14 Jul / 1790</span><span class="ng-fr">14 Juil / 1790</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt"><strong>Festa da Federação</strong> no Campo de Marte. Delegados de toda a França prestam juramento à nação, à lei e ao rei. Modelo de reconciliação republicana, contraponto pacífico à insurreição do ano anterior.</span>
+          <span class="ng-fr"><strong>Fête de la Fédération</strong> au Champ-de-Mars. Des délégués de toute la France prêtent serment à la nation, à la loi et au roi. Modèle de réconciliation républicaine, contrepoint pacifique à l'insurrection de l'année précédente.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">1880</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">A <strong>lei Raspail de 6 de julho</strong> instaura o 14 de julho como festa nacional francesa, sem especificar se comemora 1789 ou 1790. A ambiguidade é deliberada e politicamente calculada.</span>
+          <span class="ng-fr">La <strong>loi Raspail du 6 juillet</strong> instaure le 14 juillet comme fête nationale française, sans préciser s'il commémore 1789 ou 1790. L'ambiguïté est délibérée et politiquement calculée.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">1936</div>
+        <div class="timeline-texto">
+          <span class="ng-pt">A <strong>Frente Popular</strong> celebra o 14 de julho como festa também das conquistas sociais: férias pagas, semana de 40 horas, convenções coletivas. A data se torna eixo simbólico do direito do trabalho francês.</span>
+          <span class="ng-fr">Le <strong>Front populaire</strong> célèbre le 14 juillet comme fête aussi des conquêtes sociales : congés payés, semaine de 40 heures, conventions collectives. La date devient l'axe symbolique du droit du travail français.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data">1880-2026</div>
+        <div class="timeline-texto">
+          <span class="ng-pt"><strong>146 anos como feriado nacional ininterrupto.</strong> O desfile militar na Champs-Élysées torna-se cerimônia oficial. Fogos de artifício na Torre Eiffel atraem milhões. A festa se internacionaliza.</span>
+          <span class="ng-fr"><strong>146 ans comme jour férié national ininterrompu.</strong> Le défilé militaire sur les Champs-Élysées devient cérémonie officielle. Les feux d'artifice à la Tour Eiffel attirent des millions. La fête s'internationalise.</span>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-data"><span class="ng-pt">14 Jul / 2026</span><span class="ng-fr">14 Juil / 2026</span></div>
+        <div class="timeline-texto">
+          <span class="ng-pt"><strong>237 anos depois.</strong> Em uma terça-feira, a França celebra a queda da Bastilha enquanto milhões de trabalhadores em hotelaria, restauração, propreté e saúde cumprem expediente. A data fundadora encontra o Código do Trabalho.</span>
+          <span class="ng-fr"><strong>237 ans plus tard.</strong> Un mardi, la France célèbre la chute de la Bastille pendant que des millions de travailleurs en hôtellerie, restauration, propreté et santé remplissent leur journée. La date fondatrice rencontre le Code du travail.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">IV. Os números</span><span class="ng-fr">IV. Les chiffres</span></span>
+      <span class="ng-pt">A escala real da fundação e do feriado</span>
+      <span class="ng-fr">L'échelle réelle de la fondation et du jour férié</span>
+    </h2>
+
+    <div class="dados-grid">
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Prisioneiros</span><span class="ng-fr">Prisonniers</span></div>
+        <div class="dado-numero">7</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Detidos na Bastilha em 14 de julho de 1789: quatro falsários, dois alienados, um nobre. A fortaleza-símbolo era quase vazia.</span>
+          <span class="ng-fr">Détenus à la Bastille le 14 juillet 1789 : quatre faussaires, deux aliénés, un noble. La forteresse-symbole était presque vide.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Mortos</span><span class="ng-fr">Morts</span></div>
+        <div class="dado-numero">~100</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Entre os atacantes parisienses. Menos de dez entre os defensores. Desequilíbrio que alimentou a fúria popular após a tomada.</span>
+          <span class="ng-fr">Parmi les assaillants parisiens. Moins de dix parmi les défenseurs. Déséquilibre qui a alimenté la fureur populaire après la prise.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Feriados legais</span><span class="ng-fr">Jours fériés légaux</span></div>
+        <div class="dado-numero">11</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Na França. Apenas <strong>1º de maio</strong> é obrigatoriamente não trabalhado. Os outros, incluindo o 14 de julho, podem ser trabalhados.</span>
+          <span class="ng-fr">En France. Seul le <strong>1er mai</strong> est obligatoirement chômé. Les autres, y compris le 14 juillet, peuvent être travaillés.</span>
+        </div>
+      </div>
+      <div class="dado-card">
+        <div class="dado-label"><span class="ng-pt">Majoração propreté</span><span class="ng-fr">Majoration propreté</span></div>
+        <div class="dado-numero">+100%</div>
+        <div class="dado-desc">
+          <span class="ng-pt">Pago a quem trabalha em feriado <strong>não previsto na escala</strong>, segundo a convenção coletiva do setor de limpeza. +50% se previsto.</span>
+          <span class="ng-fr">Payé à qui travaille un jour férié <strong>non prévu au planning</strong>, selon la convention collective de la propreté. +50 % si prévu.</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">V. O feriado como instituição trabalhista</span><span class="ng-fr">V. Le jour férié comme institution du travail</span></span>
+      <span class="ng-pt">O que o Código do Trabalho diz, e o que ele não diz</span>
+      <span class="ng-fr">Ce que dit le Code du travail, et ce qu'il ne dit pas</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">A regra geral francesa é, sob este aspecto, contraintuitiva. Os 11 feriados legais previstos pelo Código do Trabalho, dos quais o 14 de julho é um, <strong>não são obrigatoriamente não trabalhados</strong>. A única exceção é o 1º de maio, festa do trabalho, regulada pelo artigo L.3133-4 do Código, que prevê pagamento dobrado obrigatório para quem trabalha. Para todos os outros feriados ordinários, o regime depende inteiramente da convenção coletiva aplicável ao setor, do acordo de empresa, ou, na ausência destes, da decisão do empregador.</span>
+      <span class="ng-fr">La règle générale française est, sous cet aspect, contre-intuitive. Les 11 jours fériés légaux prévus par le Code du travail, dont le 14 juillet fait partie, <strong>ne sont pas obligatoirement chômés</strong>. La seule exception est le 1er mai, fête du travail, régulée par l'article L.3133-4 du Code, qui prévoit un paiement doublé obligatoire pour qui travaille. Pour tous les autres jours fériés ordinaires, le régime dépend entièrement de la convention collective applicable au secteur, de l'accord d'entreprise, ou, à défaut, de la décision de l'employeur.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A diferença prática é considerável. Um assalariado com pelo menos <strong>três meses de antiguidade</strong> que tem o 14 de julho como feriado não trabalhado recebe sua remuneração habitual, sem desconto. Se trabalha esse mesmo 14 de julho, e a convenção coletiva da empresa não prevê majoração específica, o Código do Trabalho exige apenas que ele seja pago pelo trabalho efetivamente realizado, sem qualquer bônus. Ou seja: trabalhar no feriado, à luz da lei nacional pura, pode render o mesmo que trabalhar em qualquer outro dia da semana. É a convenção coletiva que faz a diferença.</span>
+      <span class="ng-fr">La différence pratique est considérable. Un salarié avec au moins <strong>trois mois d'ancienneté</strong> qui a le 14 juillet comme jour férié chômé reçoit sa rémunération habituelle, sans réduction. S'il travaille ce même 14 juillet, et que la convention collective de l'entreprise ne prévoit pas de majoration spécifique, le Code du travail exige seulement qu'il soit payé pour le travail effectivement réalisé, sans aucun bonus. C'est-à-dire : travailler un jour férié, à la lumière de la loi nationale pure, peut rapporter la même chose que travailler n'importe quel autre jour de la semaine. C'est la convention collective qui fait la différence.</span>
+    </p>
+
+    
+
+    <p>
+      <span class="ng-pt">As convenções coletivas mais relevantes para trabalhadores imigrantes na França apresentam regimes diversos. A convenção da <strong>propreté</strong>, setor onde a presença migrante é majoritária e que cobre limpeza industrial, predial e hospitalar, prevê majoração de <strong>50% para horas trabalhadas em feriado se previstas no planejamento</strong> e <strong>100% se não previstas</strong>. A convenção da <strong>hotelaria-restauração</strong> (HCR), setor que emprega massivamente brasileiros, portugueses, magrebinos e africanos subsaarianos, tem regime próprio definido pelo aditivo de fevereiro de 2007, com repouso compensatório ou indenização específica. A convenção do <strong>serviço à pessoa</strong>, que cobre cuidadores domiciliares e auxiliares de vida, também tem cláusula própria. E, no caso de empregador particular (trabalhador doméstico), a Urssaf prevê majoração de <strong>10%</strong> para feriado trabalhado.</span>
+      <span class="ng-fr">Les conventions collectives les plus pertinentes pour les travailleurs immigrés en France présentent des régimes divers. La convention de la <strong>propreté</strong>, secteur où la présence migrante est majoritaire et qui couvre nettoyage industriel, immobilier et hospitalier, prévoit une majoration de <strong>50 % pour les heures travaillées un jour férié si elles sont prévues au planning</strong> et de <strong>100 % si elles ne le sont pas</strong>. La convention de l'<strong>hôtellerie-restauration</strong> (HCR), secteur qui emploie massivement Brésiliens, Portugais, Maghrébins et Subsahariens, a un régime propre défini par l'avenant de février 2007, avec repos compensateur ou indemnité spécifique. La convention des <strong>services à la personne</strong>, qui couvre auxiliaires de vie et aides à domicile, a aussi sa clause propre. Et, dans le cas de l'employeur particulier (travailleur domestique), l'Urssaf prévoit une majoration de <strong>10 %</strong> pour jour férié travaillé.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">A consequência institucional desse desenho é que <strong>conhecer a convenção coletiva aplicável ao próprio contrato é, em França, condição operacional para o exercício de direitos</strong>. Trabalhadores que desconhecem o setor de aplicação de sua convenção, ou que assinam contratos sob a categoria errada, perdem majoração sem que isso configure ilegalidade do empregador, porque a norma prevê regimes setoriais distintos. Para imigrantes recém-chegados, frequentemente alocados em setores essenciais com alta rotatividade e baixa cobertura sindical, esse desconhecimento se traduz em perda real de remuneração. O 14 de julho, festa da liberdade, é também o dia em que essa assimetria de informação ganha visibilidade.</span>
+      <span class="ng-fr">La conséquence institutionnelle de ce dispositif est que <strong>connaître la convention collective applicable à son propre contrat est, en France, condition opérationnelle de l'exercice des droits</strong>. Des travailleurs qui ignorent le secteur d'application de leur convention, ou qui signent des contrats sous la catégorie erronée, perdent leur majoration sans que cela ne constitue une illégalité de l'employeur, parce que la norme prévoit des régimes sectoriels distincts. Pour les immigrés récemment arrivés, fréquemment alloués à des secteurs essentiels à forte rotation et faible couverture syndicale, cette méconnaissance se traduit par une perte réelle de rémunération. Le 14 juillet, fête de la liberté, est aussi le jour où cette asymétrie d'information gagne en visibilité.</span>
+    </p>
+
+    <div class="quote-block">
+      <div class="quote-text">
+        <span class="ng-pt">"A liberdade abstrata proclamada em 1789 produziu, dois séculos depois, um sistema concreto de direitos sociais. Mas o acesso a esses direitos depende da informação que cada trabalhador detém sobre sua própria convenção coletiva. A República assegura a norma. Ela não assegura o conhecimento dela."</span>
+        <span class="ng-fr">« La liberté abstraite proclamée en 1789 a produit, deux siècles plus tard, un système concret de droits sociaux. Mais l'accès à ces droits dépend de l'information que chaque travailleur détient sur sa propre convention collective. La République garantit la norme. Elle ne garantit pas la connaissance de celle-ci. »</span>
+      </div>
+      <div class="quote-author">
+        <span class="ng-pt">Análise editorial • The Crossing Time</span>
+        <span class="ng-fr">Analyse éditoriale • The Crossing Time</span>
+      </div>
+    </div>
+
+    <h2 class="secao">
+      <span class="secao-numero"><span class="ng-pt">VI. O posicionamento</span><span class="ng-fr">VI. Le positionnement</span></span>
+      <span class="ng-pt">Por que essa data importa para quem migra, trabalha ou observa</span>
+      <span class="ng-fr">Pourquoi cette date importe à ceux qui migrent, travaillent ou observent</span>
+    </h2>
+
+    <p>
+      <span class="ng-pt">O 14 de julho é, antes de qualquer outra leitura, uma operação de coesão. Em 2026, a França atravessa um momento de fratura interna explícita: o Rassemblement National lidera as pesquisas para 2027, o debate sobre imigração polariza o Parlamento, e a confiança em instituições de mediação política está em queda histórica. Nesse contexto, o desfile militar na Champs-Élysées, o sobrevoo da Patrouille de France e os fogos da Torre Eiffel cumprem função política precisa: reinscrever, por imagem e por ritual, a continuidade do Estado republicano em um país que duvida dela. A coreografia é a mesma há décadas. O significado se atualiza.</span>
+      <span class="ng-fr">Le 14 juillet est, avant toute autre lecture, une opération de cohésion. En 2026, la France traverse un moment de fracture interne explicite : le Rassemblement National est en tête des sondages pour 2027, le débat sur l'immigration polarise le Parlement, et la confiance dans les institutions de médiation politique est en chute historique. Dans ce contexte, le défilé militaire sur les Champs-Élysées, le survol de la Patrouille de France et les feux de la Tour Eiffel remplissent une fonction politique précise : réinscrire, par image et par rituel, la continuité de l'État républicain dans un pays qui en doute. La chorégraphie est la même depuis des décennies. La signification se renouvelle.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Para o leitor que esta plataforma reconhece, há leituras concretas. Imigrantes que trabalham em setores essenciais e cumprem expediente no 14 de julho não estão fora da República que se comemora. Estão exatamente dentro dela: são os atores invisíveis de uma economia urbana que não para nem na festa nacional. Conhecer a própria convenção coletiva, exigir o pagamento correto, recusar a categoria contratual errada, são gestos práticos de cidadania efetiva, ainda que o estatuto migratório seja precário. A República francesa separa nacionalidade de direito trabalhista. Quem trabalha legalmente em território francês, independentemente de origem, é amparado pela mesma norma. Saber disso é parte do que torna a integração possível.</span>
+      <span class="ng-fr">Pour le lecteur que cette plateforme reconnaît, il y a des lectures concrètes. Les immigrés qui travaillent dans des secteurs essentiels et remplissent leur journée le 14 juillet ne sont pas en dehors de la République que l'on commémore. Ils sont exactement à l'intérieur d'elle : ils sont les acteurs invisibles d'une économie urbaine qui ne s'arrête pas même lors de la fête nationale. Connaître sa propre convention collective, exiger le paiement correct, refuser la catégorie contractuelle erronée, ce sont des gestes pratiques de citoyenneté effective, même si le statut migratoire est précaire. La République française sépare la nationalité du droit du travail. Qui travaille légalement en territoire français, indépendamment de son origine, est protégé par la même norme. Le savoir est une partie de ce qui rend l'intégration possible.</span>
+    </p>
+
+    
+
+    <p>
+      <span class="ng-pt">Há também a leitura geopolítica. A França é o único país do mundo cuja festa nacional comemora simultaneamente uma insurreição popular e a ordem institucional construída sobre ela. Essa dualidade não é apenas histórica. Ela continua produzindo efeitos sobre o modo como a República francesa se posiciona internacionalmente, sobre a Europa, sobre o Mediterrâneo, sobre a África subsaariana, sobre os fluxos migratórios que atravessam suas fronteiras. O 14 de julho não é uma festa do passado. É a reafirmação anual de uma fórmula política específica: a tensão produtiva entre o povo soberano e o Estado de direito. Essa tensão moldou a Europa moderna. E continua moldando o lugar da França no século XXI.</span>
+      <span class="ng-fr">Il y a aussi la lecture géopolitique. La France est le seul pays au monde dont la fête nationale commémore simultanément une insurrection populaire et l'ordre institutionnel construit sur elle. Cette dualité n'est pas seulement historique. Elle continue de produire des effets sur la manière dont la République française se positionne internationalement, sur l'Europe, sur la Méditerranée, sur l'Afrique subsaharienne, sur les flux migratoires qui traversent ses frontières. Le 14 juillet n'est pas une fête du passé. C'est la réaffirmation annuelle d'une formule politique spécifique : la tension productive entre le peuple souverain et l'État de droit. Cette tension a façonné l'Europe moderne. Et elle continue de façonner la place de la France au XXIe siècle.</span>
+    </p>
+
+    <p>
+      <span class="ng-pt">Em 14 de julho de 2026, 237 anos depois daquela tarde de cerco e fumaça em torno de uma fortaleza medieval, a fórmula segue funcionando. As bandeiras estão nos postes. As tropas estão em formação. Os fogos estão prontos. E, em paralelo, hotéis recebem hóspedes, restaurantes servem mesas, hospitais operam plantões, empresas de limpeza cumprem turnos. A República francesa é tudo isso ao mesmo tempo. A travessia, como em toda data fundadora, continua entre o que se comemora e o que se vive. E quem atravessa, com ou sem direito à majoração que a convenção coletiva promete, faz parte da história que o desfile encena.</span>
+      <span class="ng-fr">Le 14 juillet 2026, 237 ans après cet après-midi de siège et de fumée autour d'une forteresse médiévale, la formule continue de fonctionner. Les drapeaux sont aux poteaux. Les troupes sont en formation. Les feux sont prêts. Et, en parallèle, des hôtels reçoivent des clients, des restaurants servent des tables, des hôpitaux opèrent des gardes, des entreprises de propreté remplissent des tours. La République française est tout cela en même temps. La traversée, comme dans toute date fondatrice, continue entre ce que l'on commémore et ce que l'on vit. Et qui traverse, avec ou sans droit à la majoration que la convention collective promet, fait partie de l'histoire que le défilé met en scène.</span>
+    </p>
+
+    <div class="article-footer">
+      <div class="marca">THE CROSSING TIME</div>
+      <div class="sub">
+        <span class="ng-pt">Plataforma editorial internacional</span>
+        <span class="ng-fr">Plateforme éditoriale internationale</span>
+      </div>
+      <div class="pilares">
+        <span class="ng-pt">MOBILIDADE • PODER • TRANSFORMAÇÃO</span>
+        <span class="ng-fr">MOBILITÉ • POUVOIR • TRANSFORMATION</span>
+      </div>
+    </div>
+  </div>
+</article>
+
+<script>
+function setLang(l){document.body.setAttribute('lang-mode',l);['pt','fr'].forEach(function(x){var b=document.getElementById('lng-'+x);if(b)b.classList.toggle('active',x===l);});}
+function goBack(){
+  // Iframe-aware: se estiver dentro de iframe (openMateria), chama closeMateria do parent
+  try {
+    if (window.parent && window.parent !== window && typeof window.parent.closeMateria === 'function') {
+      window.parent.closeMateria();
+      return;
+    }
+  } catch(e) {}
+  // Standalone fallback
+  try {
+    if (window.opener && !window.opener.closed) {
+      window.close();
+    } else if (document.referrer && document.referrer.indexOf('index.html') !== -1) {
+      window.history.back();
+    } else {
+      window.location.href = '../index.html#materias';
+    }
+  } catch(e) {
+    window.location.href = '../index.html#materias';
+  }
+}
+</script>
+</body>
+</html>
