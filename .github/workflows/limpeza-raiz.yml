@@ -1,0 +1,114 @@
+name: Limpeza da raiz (uma vez)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/limpeza-raiz.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  limpar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apagar duplicadas da raiz (identicas a materias/)
+        run: |
+          cat > /tmp/lista.txt << 'FIM'
+ees_etias_em_vigor_2026.html
+eiffela_broken_dream_2026.html
+eleicoes_brasil_2026.html
+eleicoes_consulares_2026.html
+eleicoes_eua_2026.html
+eleicoes_franca_2027.html
+especial_bonnie_tyler.html
+especial_laura_gloria.html
+estudantes_recursos_877_2026.html
+eu_talent_pool_2026.html
+eua_ira_petroleo_2026.html
+europa_calor_extremo.html
+europa_embalagens.html
+europa_energia.html
+farmacias_francesas_compras.html
+franca_ataque_fisco.html
+franca_fim_adsl.html
+franca_muda_setembro_2026.html
+franca_sabotagem_fibra.html
+gaza_onu_wfp_2026.html
+goethe_russia_retaliacao_2026.html
+guiana_francesa_brasileiros_sem_visto_2026.html
+igrejas_africanas_evangelizacao_inversa.html
+inflacao_zona_euro_33_2026.html
+islandia_referendo_ue_2026.html
+kuhne_fundacao_2026.html
+lingua_portuguesa.html
+m_apple_evento_9set_fotos.html
+m_franca_delai_carence_estrangeiros_FOTOS.html
+m_franca_senatoriales_francais_etranger_FOTOS.html
+m_ifa_2026_berlim_fotos.html
+m_tse_acao_lula_alckmin_carnaval.html
+m_visto_americano_brasileiros_recusa.html
+materia_escura_lz_2026.html
+mayotte_militarizacao_2026.html
+mercados_guerra_petroleo_2026.html
+messi_selecao_adeus_2026.html
+nepal_inundacoes_2026.html
+niveis_frances_exame_civico_2026.html
+notting_hill_carnival_2026.html
+peter_cullen_memoria_2026.html
+philippe_bouvard.html
+prefet_hauts_de_seine_titres_2026.html
+quatorze_juillet.html
+ratp_sncf_rentree_2026.html
+reforma_imigracao_2026.html
+regularizacao_trabalho_metiers_tension_2026.html
+renovacao_automatica_titulos_longa_duracao_2026.html
+rentree_2026_escolas.html
+rentree_literaria_2026.html
+russia_frota_sombra.html
+schengen_controles_italia_espanha.html
+servico_militar_voluntario_2026.html
+tapecaria_bayeux_2026.html
+taxas_titulos_residencia_2026.html
+tendencias_michelin_2026.html
+terremoto_kumamoto_japao.html
+tony_gatlif_memoria_2026.html
+trafico_el_dorado_2026.html
+transistor_042nm_2026.html
+travessia_expulsoes_2026.html
+ucrania_plano_paz_2026.html
+ue_preparedness_union_2026.html
+ue_veto_carne_brasil_2026.html
+veneza_brasil_2026.html
+visa_salarie_france_2026.html
+wellington_desaparecido_franca.html
+xi_egito_2026.html
+zelensky_espaco_aereo_2026.html
+FIM
+          apagadas=0
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            if [ -f "$f" ] && [ -f "materias/$f" ] && cmp -s "$f" "materias/$f"; then
+              git rm -q "$f"
+              apagadas=$((apagadas+1))
+            else
+              echo "PULADA (nao identica ou ausente): $f"
+            fi
+          done < /tmp/lista.txt
+          echo "Apagadas: $apagadas"
+          # o workflow se remove depois de cumprir a tarefa
+          git rm -q .github/workflows/limpeza-raiz.yml
+          git config user.name  "limpeza-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "chore: remover copias duplicadas de materias na raiz ($apagadas arquivos)
+
+As copias eram identicas (byte a byte) aos arquivos em materias/.
+O site so usa materias/, entao nada muda no ar.
+
+Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01XKAg97TWMy69UVbqhqefjk"
+          git push
