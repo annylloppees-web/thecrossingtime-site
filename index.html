@@ -1351,7 +1351,7 @@ h3.mat-cover-title {
  background:#FBFAF7;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.5);overflow:hidden;
  border-top:5px solid #C6A15B;animation:tnpop .32s cubic-bezier(.2,.8,.2,1)}
 @keyframes tnpop{from{opacity:0;transform:translate(-50%,-46%) scale(.96)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
-#tct-news .tn-x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:26px;line-height:1;color:#8a94a2;cursor:pointer}
+#tct-news .tn-x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:26px;line-height:1;color:#5b6470;cursor:pointer}
 #tct-news .tn-x:hover{color:#0E1A2B}
 #tct-news .tn-body{padding:30px 30px 26px 30px}
 #tct-news .tn-badge{display:inline-block;background:#C6A15B;color:#fff;font-weight:800;font-size:11px;letter-spacing:.16em;padding:5px 11px;border-radius:4px;margin-bottom:14px}
@@ -1363,7 +1363,7 @@ h3.mat-cover-title {
 #tct-news .tn-consent input{margin-top:2px;width:17px;height:17px;flex:0 0 auto;accent-color:#0E1A2B}
 #tct-news .tn-btn{width:100%;padding:15px;font-size:15px;font-weight:800;letter-spacing:.02em;color:#fff;background:#0E1A2B;border:0;border-radius:8px;cursor:pointer;transition:background .15s}
 #tct-news .tn-btn:hover{background:#16283f}
-#tct-news .tn-note{font-size:11.5px;color:#8a94a2;text-align:center;margin:12px 0 0 0}
+#tct-news .tn-note{font-size:11.5px;color:#5b6470;text-align:center;margin:12px 0 0 0}
 #tct-news .tn-hp{position:absolute;left:-9999px;opacity:0}
 #tct-news .tn-thanks{padding:40px 30px;text-align:center}
 #tct-news .tn-check{width:64px;height:64px;line-height:64px;border-radius:50%;background:#C6A15B;color:#fff;font-size:34px;margin:0 auto 16px auto}
@@ -1387,7 +1387,7 @@ h3.mat-cover-title {
 .vip-form input,.vip-form textarea{width:100%;box-sizing:border-box;padding:13px 14px;font-size:15px;border:1.5px solid #d6d2c6;border-radius:8px;outline:none;background:#fff;margin:0 0 14px;font-family:inherit}
 .vip-form input:focus,.vip-form textarea:focus{border-color:#C6A15B}
 .vip-form textarea{min-height:74px;resize:vertical}
-.vip-hint{font-size:11.5px;color:#8a94a2;margin:-10px 0 14px}
+.vip-hint{font-size:11.5px;color:#5b6470;margin:-10px 0 14px}
 .vip-consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.45;color:#5b6470;margin:2px 0 18px;cursor:pointer}
 .vip-consent input{margin-top:2px;width:17px;height:17px;flex:0 0 auto;accent-color:#0E1A2B}
 .vip-consent a{color:#0E1A2B;text-decoration:underline}
@@ -1401,7 +1401,7 @@ h3.mat-cover-title {
 .vip-msg.ok{background:#eaf5ee;color:#1e5b37;border:1px solid #bfe0cb}
 .vip-msg.err{background:#fdecea;color:#a5342a;border:1px solid #f2c4bf}
 .vip-msg.info{background:#f3f0e7;color:#5b5334;border:1px solid #e2dcc7}
-.vip-note{font-size:11.5px;color:#8a94a2;text-align:center;margin:14px 0 0}
+.vip-note{font-size:11.5px;color:#5b6470;text-align:center;margin:14px 0 0}
 /* App logado */
 .vip-appbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 6px}
 .vip-logout{background:none;border:1.5px solid #d6d2c6;color:#5b6470;border-radius:7px;padding:8px 14px;font:700 12.5px Arial,Helvetica,sans-serif;cursor:pointer}
@@ -1415,7 +1415,7 @@ h3.mat-cover-title {
 .vip-card .vc-teaser{font-size:14.5px;line-height:1.6;color:#4a5361;margin:0}
 .vip-card .vc-corpo{font-size:15px;line-height:1.7;color:#2a2f38;margin:12px 0 0;white-space:pre-wrap}
 .vip-card .vc-more{background:none;border:0;color:#C6A15B;font-weight:800;cursor:pointer;padding:10px 0 0;font-size:13.5px}
-.vip-empty{color:#8a94a2;font-size:14px;text-align:center;padding:30px 0}
+.vip-empty{color:#5b6470;font-size:14px;text-align:center;padding:30px 0}
 /* Bloqueio (teaser público em cards VIP) */
 .vip-lock{border:1px dashed #C6A15B;background:#fbf7ee;border-radius:10px;padding:18px 20px;margin-top:14px;text-align:center}
 .vip-lock p{margin:0 0 12px;font-size:14px;color:#5b5334;line-height:1.5}
@@ -1494,8 +1494,23 @@ body[lang-mode="es"] .ng-es{display:revert!important}
   ]
 }
 </script>
+<style id="tct-a11y-focus">a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:2px solid #C6A15B!important;outline-offset:3px!important;border-radius:2px}</style>
+<link rel="canonical" href="https://thecrossingtime.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Crossing Time">
+<meta property="og:title" content="The Crossing Time">
+<meta property="og:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
+<meta property="og:url" content="https://thecrossingtime.com/">
+<meta property="og:image" content="https://thecrossingtime.com/logo.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Crossing Time">
+<meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
+<meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v112 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v113 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1761,7 +1776,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v112 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v113 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3708,19 +3723,19 @@ function openColunista(k){
         <div style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#C6A15B;font-weight:600;margin-bottom:1.2rem;"><span class="ng-pt">Envie o que te faz sorrir</span><span class="ng-fr" style="display:none;">Envoyez ce qui vous fait sourire</span><span class="ng-en">Send us what makes you smile</span></div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
           <div>
-            <label style="display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:.4rem;"><span class="ng-pt">Nome (ou deixe vazio)</span><span class="ng-fr" style="display:none;">Prénom (ou laissez vide)</span><span class="ng-en">Name (or leave blank)</span></label>
+            <label for="sf-nome" style="display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:.4rem;"><span class="ng-pt">Nome (ou deixe vazio)</span><span class="ng-fr" style="display:none;">Prénom (ou laissez vide)</span><span class="ng-en">Name (or leave blank)</span></label>
             <input id="sf-nome" type="text" maxlength="40" placeholder="Anónimo / Anonyme" style="width:100%;padding:.75rem .9rem;border:1px solid rgba(14,26,43,.18);font-family:'Lora',Georgia,serif;font-size:.95rem;background:#FBFAF7;">
           </div>
           <div>
-            <label style="display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:.4rem;"><span class="ng-pt">Onde vive (opcional)</span><span class="ng-fr" style="display:none;">Où vivez-vous (facultatif)</span><span class="ng-en">Where you live (optional)</span></label>
+            <label for="sf-cidade" style="display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:.4rem;"><span class="ng-pt">Onde vive (opcional)</span><span class="ng-fr" style="display:none;">Où vivez-vous (facultatif)</span><span class="ng-en">Where you live (optional)</span></label>
             <input id="sf-cidade" type="text" maxlength="40" placeholder="Paris, Lyon, Lisboa…" style="width:100%;padding:.75rem .9rem;border:1px solid rgba(14,26,43,.18);font-family:'Lora',Georgia,serif;font-size:.95rem;background:#FBFAF7;">
           </div>
         </div>
         <label style="display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#777;margin-bottom:.4rem;"><span class="ng-pt">A sua piada ou o seu sorriso</span><span class="ng-fr" style="display:none;">Votre blague ou votre sourire</span><span class="ng-en">Your joke or your smile</span></label>
         <textarea id="sf-texto" rows="4" maxlength="420" placeholder="…" style="width:100%;padding:.85rem .9rem;border:1px solid rgba(14,26,43,.18);font-family:'Lora',Georgia,serif;font-size:.98rem;line-height:1.6;background:#FBFAF7;resize:vertical;"></textarea>
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-top:.5rem;">
-          <span id="sf-conta" style="font-family:'Jost',sans-serif;font-size:10px;color:#9aa2ad;">0 / 420</span>
-          <span style="font-family:'Jost',sans-serif;font-size:10px;color:#9aa2ad;"><span class="ng-pt">Ao enviar, autoriza a publicação no mural.</span><span class="ng-fr" style="display:none;">En envoyant, vous autorisez la publication sur le mur.</span><span class="ng-en">By submitting, you authorize publication on the wall.</span></span>
+          <span id="sf-conta" style="font-family:'Jost',sans-serif;font-size:10px;color:#5b6470;">0 / 420</span>
+          <span style="font-family:'Jost',sans-serif;font-size:10px;color:#5b6470;"><span class="ng-pt">Ao enviar, autoriza a publicação no mural.</span><span class="ng-fr" style="display:none;">En envoyant, vous autorisez la publication sur le mur.</span><span class="ng-en">By submitting, you authorize publication on the wall.</span></span>
         </div>
         <input id="sf-mel" type="text" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
         <div style="margin-top:1.3rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
@@ -3742,7 +3757,7 @@ function openColunista(k){
 
       <!-- ───── área da redacção ───── -->
       <div style="text-align:center;margin-top:2.5rem;">
-        <a onclick="sfAbrirPainel()" style="cursor:pointer;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#9aa2ad;text-decoration:none;border-bottom:1px solid rgba(14,26,43,.12);">
+        <a onclick="sfAbrirPainel()" style="cursor:pointer;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#5b6470;text-decoration:none;border-bottom:1px solid rgba(14,26,43,.12);">
           <span class="ng-pt">Área da redacção</span><span class="ng-fr" style="display:none;">Espace rédaction</span><span class="ng-en">Editorial team area</span>
         </a>
       </div>
@@ -3796,7 +3811,7 @@ function sfCartao(item){
   return '<div style="background:#fff;border:1px solid rgba(14,26,43,.09);border-top:3px solid #C6A15B;padding:1.4rem 1.3rem;display:flex;flex-direction:column;">'
    + '<div style="font-family:\'Cormorant Garamond\',Georgia,serif;font-size:2.2rem;color:#C6A15B;line-height:.6;margin-bottom:.6rem;">&ldquo;</div>'
    + '<p style="font-family:\'Lora\',Georgia,serif;font-size:.97rem;line-height:1.7;color:#2a2a2a;margin:0 0 1rem;flex:1;">'+sfEsc(item.texto)+'</p>'
-   + '<div style="font-family:\'Jost\',sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9aa2ad;border-top:1px solid rgba(14,26,43,.07);padding-top:.7rem;">'+nome+cidade+'</div>'
+   + '<div style="font-family:\'Jost\',sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#5b6470;border-top:1px solid rgba(14,26,43,.07);padding-top:.7rem;">'+nome+cidade+'</div>'
    + '</div>';
 }
 
@@ -3970,7 +3985,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
    <div id="vip-cta-guest" class="vip-cta">
     <p style="font-weight:700"><span class="ng-pt">✨ Escolha o seu plano</span><span class="ng-fr" style="display:none;">✨ Choisissez votre formule</span><span class="ng-en">✨ Choose your plan</span></p>
-    <p style="font-size:14px;color:#8a94a2;margin:6px 0 0"><span class="ng-pt">Crie a sua conta gratuita e assine para desbloquear e-books, guias e as revistas. Sem fidelidade — cancele quando quiser.</span><span class="ng-fr" style="display:none;">Créez votre compte gratuit et abonnez-vous pour débloquer e-books, guides et les magazines. Sans engagement — annulez à tout moment.</span><span class="ng-en">Create your free account and subscribe to unlock e-books, guides and the magazines. No commitment — cancel anytime.</span></p>
+    <p style="font-size:14px;color:#5b6470;margin:6px 0 0"><span class="ng-pt">Crie a sua conta gratuita e assine para desbloquear e-books, guias e as revistas. Sem fidelidade — cancele quando quiser.</span><span class="ng-fr" style="display:none;">Créez votre compte gratuit et abonnez-vous pour débloquer e-books, guides et les magazines. Sans engagement — annulez à tout moment.</span><span class="ng-en">Create your free account and subscribe to unlock e-books, guides and the magazines. No commitment — cancel anytime.</span></p>
     <div class="vip-cta-btns" style="margin-top:12px">
      <button class="vip-link" type="button" onclick="vipShowAuth('log')"><span class="ng-pt">Já sou membro · Entrar</span><span class="ng-fr" style="display:none;">Déjà membre · Se connecter</span><span class="ng-en">Already a member · Sign in</span></button>
     </div>
@@ -4003,7 +4018,7 @@ document.addEventListener('DOMContentLoaded', function(){
 .vip-plan-feat li i{flex:0 0 14px;font-style:normal;font-weight:800;color:#2e7d32;margin-top:1px;}
 .vip-plan-feat li.off i{color:#d3d7dd;}
 .vip-plan-cta{width:100%;color:#fff;border:0;border-radius:8px;padding:11px 0;font:700 14px -apple-system,Segoe UI,Arial,sans-serif;cursor:pointer;}
-.vip-plan-secure{font-size:12px;color:#8a94a2;text-align:center;margin:16px 0 0;}
+.vip-plan-secure{font-size:12px;color:#5b6470;text-align:center;margin:16px 0 0;}
 </style>
   <div id="vip-paywall" class="vip-cta vip-paywall-grid" style="display:none;"><div class="vip-int-wrap"><div id="vip-int-toggle"><button type="button" class="vip-int on" data-int="month" onclick="vipInterval('month')"><span class="ng-pt">Mensal</span><span class="ng-fr" style="display:none;">Mensuel</span><span class="ng-en">Monthly</span></button><button type="button" class="vip-int" data-int="year" onclick="vipInterval('year')"><span class="ng-pt">Anual</span><span class="ng-fr" style="display:none;">Annuel</span><span class="ng-en">Annual</span> <em><span class="ng-pt">~2 meses grátis</span><span class="ng-fr" style="display:none;">~2 mois offerts</span><span class="ng-en">~2 months free</span></em></button></div></div><div class="vip-plans"><div class="vip-plan" data-tier="bronze"><div class="vip-plan-bar" style="background:#B87333"></div><div class="vip-plan-metal" style="color:#B87333">Bronze</div><div class="vip-plan-name"><span class="ng-pt">O essencial</span><span class="ng-fr" style="display:none;">L'essentiel</span><span class="ng-en">The essentials</span></div><div class="vip-plan-price"><span class="pm">€2,99</span><span class="py" hidden>€29</span><small class="pmu">/mês</small><small class="pyu" hidden>/ano</small></div><ul class="vip-plan-feat"><li><i>&#10003;</i><span class="ng-pt">Notícias do dia</span><span class="ng-fr" style="display:none;">Actus du jour</span><span class="ng-en">Daily news</span></li><li><i>&#10003;</i><span class="ng-pt">Guias práticos (emprego, moradia, imigração)</span><span class="ng-fr" style="display:none;">Guides pratiques (emploi, logement, immigration)</span><span class="ng-en">Practical guides (jobs, housing, immigration)</span></li><li class="off"><i>&#8226;</i><span class="ng-pt">E-books exclusivos</span><span class="ng-fr" style="display:none;">E-books exclusifs</span><span class="ng-en">Exclusive e-books</span></li><li class="off"><i>&#8226;</i><span class="ng-pt">Todas as revistas</span><span class="ng-fr" style="display:none;">Tous les magazines</span><span class="ng-en">All the magazines</span></li><li class="off"><i>&#8226;</i><span class="ng-pt">Bónus nos eventos</span><span class="ng-fr" style="display:none;">Bonus aux événements</span><span class="ng-en">Event perks</span></li></ul><button class="vip-btn vip-plan-cta" type="button" onclick="vipCheckout('bronze')" style="background:#B87333"><span class="ng-pt">Assinar</span><span class="ng-fr" style="display:none;">S'abonner</span><span class="ng-en">Subscribe</span></button></div><div class="vip-plan" data-tier="prata"><div class="vip-plan-bar" style="background:#9AA3AD"></div><div class="vip-plan-metal" style="color:#7d858e">Prata</div><div class="vip-plan-name"><span class="ng-pt">+ E-books</span><span class="ng-fr" style="display:none;">+ E-books</span><span class="ng-en">+ E-books</span></div><div class="vip-plan-price"><span class="pm">€4,99</span><span class="py" hidden>€49</span><small class="pmu">/mês</small><small class="pyu" hidden>/ano</small></div><ul class="vip-plan-feat"><li><i>&#10003;</i><span class="ng-pt">Notícias do dia</span><span class="ng-fr" style="display:none;">Actus du jour</span><span class="ng-en">Daily news</span></li><li><i>&#10003;</i><span class="ng-pt">Guias práticos (emprego, moradia, imigração)</span><span class="ng-fr" style="display:none;">Guides pratiques (emploi, logement, immigration)</span><span class="ng-en">Practical guides (jobs, housing, immigration)</span></li><li><i>&#10003;</i><span class="ng-pt">E-books exclusivos</span><span class="ng-fr" style="display:none;">E-books exclusifs</span><span class="ng-en">Exclusive e-books</span></li><li class="off"><i>&#8226;</i><span class="ng-pt">Todas as revistas</span><span class="ng-fr" style="display:none;">Tous les magazines</span><span class="ng-en">All the magazines</span></li><li class="off"><i>&#8226;</i><span class="ng-pt">Bónus nos eventos</span><span class="ng-fr" style="display:none;">Bonus aux événements</span><span class="ng-en">Event perks</span></li></ul><button class="vip-btn vip-plan-cta" type="button" onclick="vipCheckout('prata')" style="background:#7d858e"><span class="ng-pt">Assinar</span><span class="ng-fr" style="display:none;">S'abonner</span><span class="ng-en">Subscribe</span></button></div><div class="vip-plan reco" data-tier="ouro"><span class="vip-plan-tag"><span class="ng-pt">Mais popular</span><span class="ng-fr" style="display:none;">Le + populaire</span><span class="ng-en">Most popular</span></span><div class="vip-plan-bar" style="background:#C6A15B"></div><div class="vip-plan-metal" style="color:#a8842f">Ouro</div><div class="vip-plan-name"><span class="ng-pt">+ Todas as revistas</span><span class="ng-fr" style="display:none;">+ Tous les magazines</span><span class="ng-en">+ All magazines</span></div><div class="vip-plan-price"><span class="pm">€7,99</span><span class="py" hidden>€79</span><small class="pmu">/mês</small><small class="pyu" hidden>/ano</small></div><ul class="vip-plan-feat"><li><i>&#10003;</i><span class="ng-pt">Notícias do dia</span><span class="ng-fr" style="display:none;">Actus du jour</span><span class="ng-en">Daily news</span></li><li><i>&#10003;</i><span class="ng-pt">Guias práticos (emprego, moradia, imigração)</span><span class="ng-fr" style="display:none;">Guides pratiques (emploi, logement, immigration)</span><span class="ng-en">Practical guides (jobs, housing, immigration)</span></li><li><i>&#10003;</i><span class="ng-pt">E-books exclusivos</span><span class="ng-fr" style="display:none;">E-books exclusifs</span><span class="ng-en">Exclusive e-books</span></li><li><i>&#10003;</i><span class="ng-pt">Todas as revistas</span><span class="ng-fr" style="display:none;">Tous les magazines</span><span class="ng-en">All the magazines</span></li><li class="off"><i>&#8226;</i><span class="ng-pt">Bónus nos eventos</span><span class="ng-fr" style="display:none;">Bonus aux événements</span><span class="ng-en">Event perks</span></li></ul><button class="vip-btn vip-plan-cta" type="button" onclick="vipCheckout('ouro')" style="background:#a8842f"><span class="ng-pt">Assinar</span><span class="ng-fr" style="display:none;">S'abonner</span><span class="ng-en">Subscribe</span></button></div></div><p class="vip-plan-secure"><span class="ng-pt">Pagamento seguro via Stripe. Sem fidelidade — cancele quando quiser.</span><span class="ng-fr" style="display:none;">Paiement sécurisé via Stripe. Sans engagement — annulez à tout moment.</span><span class="ng-en">Secure payment via Stripe. No commitment — cancel anytime.</span></p></div>
 
@@ -5440,7 +5455,7 @@ function switchGame(game) {
           <span style="display:inline-block;background:#1E7A4C;color:#fff;font-family:'Jost',sans-serif;font-size:8.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:600;padding:.32rem .7rem;border-radius:999px;"><span class="ng-pt">Encontrado com vida</span><span class="ng-fr" style="display:none;">Retrouvé vivant</span><span class="ng-en">Found alive</span></span>
         </div>
       </div>
-      <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.1em;color:#9aa2ad;margin-top:1.2rem;text-transform:uppercase;"><span class="ng-pt">Fotografias cedidas ou divulgadas pelas famílias para fins de busca</span><span class="ng-fr" style="display:none;">Photographies transmises ou diffusées par les familles aux fins des recherches</span><span class="ng-en">Photographs provided or released by the families for search purposes</span></p>
+      <p style="font-family:'Jost',sans-serif;font-size:10px;letter-spacing:.1em;color:#5b6470;margin-top:1.2rem;text-transform:uppercase;"><span class="ng-pt">Fotografias cedidas ou divulgadas pelas famílias para fins de busca</span><span class="ng-fr" style="display:none;">Photographies transmises ou diffusées par les familles aux fins des recherches</span><span class="ng-en">Photographs provided or released by the families for search purposes</span></p>
     </div>
   </div>
   <!-- ═══════════════════════════════════════════════════════════════
@@ -5645,7 +5660,7 @@ function switchGame(game) {
     .ds-card.on:hover{transform:translateY(-3px);box-shadow:0 8px 26px rgba(14,26,43,.13);}
     .ds-card.soon{border-top-color:rgba(14,26,43,.18);background:rgba(255,255,255,.55);}
     .ds-chapeu{font-family:'Jost',sans-serif;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:#C6A15B;font-weight:600;margin-bottom:.7rem;}
-    .ds-card.soon .ds-chapeu{color:#9aa2ad;}
+    .ds-card.soon .ds-chapeu{color:#5b6470;}
     .ds-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.42rem;font-weight:500;line-height:1.24;color:#0E1A2B;margin-bottom:.7rem;}
     .ds-card.soon .ds-title{color:#5a6472;}
     .ds-desc{font-size:.9rem;line-height:1.62;color:#555;margin-bottom:1.1rem;flex:1;font-family:'Lora',Georgia,serif;}
@@ -7356,7 +7371,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v112 · 10set2026';try{
+(function(){var BUILD='p15-v113 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
