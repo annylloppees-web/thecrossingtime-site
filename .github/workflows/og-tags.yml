@@ -1,0 +1,38 @@
+name: Open Graph automatico
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'materias/**'
+      - 'colunas/**'
+      - '.github/workflows/og-tags*.yml'
+      - 'scripts/og_inject.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  og:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Injetar OG/Twitter/canonical onde faltar
+        run: |
+          pip install --quiet pillow
+          python3 scripts/og_inject.py
+          git add -A materias colunas og
+          if git diff --cached --quiet; then
+            echo "Nada a mudar: todas as paginas ja tem OG."
+            exit 0
+          fi
+          git config user.name  "og-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "seo: Open Graph, Twitter Card e canonical nas materias e colunas" -m "Injecao automatica (idempotente): og:title/description/image, twitter:card, canonical e meta description onde faltavam; imagens de compartilhamento em og/. Corrige o P1-2 da auditoria." -m "Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01XKAg97TWMy69UVbqhqefjk"
+          git push
