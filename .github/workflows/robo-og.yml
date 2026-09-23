@@ -1,0 +1,74 @@
+name: Robo do site (nomes, OG e sitemap)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'materias/**'
+      - 'colunas/**'
+      - 'scripts/og_inject.py'
+      - '.github/workflows/robo-og*.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  robo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Normalizar nomes, injetar OG e regenerar sitemap
+        run: |
+          # 1) renomear arquivos que chegaram com sufixo " (1)" etc.
+          find materias colunas -maxdepth 1 -name '* ([0-9]).html' -print0 | while IFS= read -r -d '' f; do
+            alvo=$(echo "$f" | sed -E 's/ \([0-9]\)\.html$/.html/')
+            if [ ! -e "$alvo" ]; then
+              git mv "$f" "$alvo"
+              echo "Renomeado: $f -> $alvo"
+            else
+              echo "AVISO: $f nao renomeado, $alvo ja existe (possivel duplicata)"
+            fi
+          done
+          # 2) OG/Twitter/canonical + foco de teclado onde faltar
+          pip install --quiet pillow
+          python3 scripts/og_inject.py
+          # 3) sitemap com os nomes atuais
+          node scripts/gen-sitemap.mjs
+          git add -A materias colunas og sitemap.xml
+          # 4) aposentar o robo antigo; se este arquivo chegou como "robo-og (1).yml", renomear para o nome canonico
+          git rm -q --ignore-unmatch ".github/workflows/og-tags.yml"
+          for w in ".github/workflows/robo-og (1).yml" ".github/workflows/robo-og (2).yml"; do
+            if [ -e "$w" ]; then
+              if [ -e ".github/workflows/robo-og.yml" ]; then
+                git rm -q "$w"
+              else
+                git mv "$w" ".github/workflows/robo-og.yml"
+              fi
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "Nada a mudar."
+            exit 0
+          fi
+          git config user.name  "og-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "site: normalizar nomes, injetar Open Graph e atualizar sitemap" -m "Robo automatico: renomeia arquivos com sufixo (1), injeta OG/Twitter/canonical e foco de teclado onde faltar, e regenera o sitemap. Push com nova tentativa em caso de corrida com outro robo." -m "Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01XKAg97TWMy69UVbqhqefjk"
+          # 5) push com ate 3 tentativas (rebase se outro robo empurrou antes)
+          for i in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push falhou (tentativa $i), rebase e nova tentativa..."
+            git pull --rebase origin main
+          done
+          git push
