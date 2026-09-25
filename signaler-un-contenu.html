@@ -24,25 +24,36 @@
   .foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
   .foot a{color:var(--navy);}
   [data-lang="pt"] .fr,[data-lang="pt"] .en,[data-lang="fr"] .pt,[data-lang="fr"] .en,[data-lang="en"] .pt,[data-lang="en"] .fr{display:none;}
+
+  .sigform{background:#fff;border:.5px solid var(--line);border-left:3px solid var(--gold);border-radius:6px;padding:22px 22px 18px;margin:26px 0 8px;}
+  .sigform h2{font-family:Georgia,serif;font-size:19px;color:var(--navy);margin:0 0 4px;}
+  .sigform .hint{font-size:12.5px;color:var(--muted);margin:0 0 14px;}
+  .sigform label{display:block;font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);margin:12px 0 5px;}
+  .sigform input,.sigform select,.sigform textarea{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid var(--line);border-radius:4px;font:14px/1.5 Arial,sans-serif;background:var(--paper);color:var(--ink);}
+  .sigform textarea{min-height:110px;resize:vertical;}
+  .sigform button[type=submit]{margin-top:16px;background:var(--navy);color:#fff;border:0;border-radius:4px;padding:12px 22px;font:700 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;}
+  .sigform button[type=submit]:hover{background:var(--gold);color:var(--navy);}
+  .sig-ok{display:none;background:#eef7f0;border:1px solid #c9e6d3;border-radius:6px;padding:14px 16px;margin:22px 0 8px;font-size:14px;color:#1e6b41;}
+  .bot-field{display:none;}
 </style>
 </head>
 <body data-lang="fr">
 <div class="wrap">
   <div class="top">
-    <a class="brand" href="index.html" style="text-decoration:none;">The Crossing Time<small>By Porta-Voz do Imigrante</small></a>
+    <a class='brand' href='/' style='text-decoration:none;'>The Crossing Time<small>By Porta-Voz do Imigrante</small></a>
     <div class="langbar">
       <button type="button" id="l-pt" onclick="setL('pt')">PT</button>
       <button type="button" id="l-fr" class="on" onclick="setL('fr')">FR</button>
       <button type="button" id="l-en" onclick="setL('en')">EN</button>
     </div>
   </div>
-  <p style="margin:16px 0 0;"><a href="index.html" style="color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;"><span class="pt">&larr; Voltar ao site</span><span class="fr">&larr; Retour au site</span><span class="en">&larr; Back to the site</span></a></p>
+  <p style="margin:16px 0 0;"><a href='/' style='color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;'><span class="pt">&larr; Voltar ao site</span><span class="fr">&larr; Retour au site</span><span class="en">&larr; Back to the site</span></a></p>
 
   <!-- ============ FR ============ -->
   <div class="fr">
     <p class="eyebrow">Mentions légales · LCEN</p>
     <h1>Signaler un contenu</h1>
-    <p class="upd">Dernière mise à jour : 12 août 2026</p>
+    <p class="upd">Dernière mise à jour : 25 septembre 2026</p>
     <p>Pour signaler un contenu, écrivez à <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a> en précisant : l'adresse (URL) de la page concernée, la description du contenu signalé et le motif du signalement. L'éditeur s'engage à examiner chaque signalement et à retirer promptement, ou à rendre inaccessible, tout contenu reconnu comme illicite.</p>
   </div>
 
@@ -50,7 +61,7 @@
   <div class="pt">
     <p class="eyebrow">Avisos legais · LCEN</p>
     <h1>Sinalizar um conteúdo</h1>
-    <p class="upd">Última atualização: 12 de agosto de 2026</p>
+    <p class="upd">Última atualização: 25 de setembro de 2026</p>
     <p>Para sinalizar, escreva para <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a> informando: o endereço (URL) da página, a descrição do conteúdo e o motivo. O editor se compromete a analisar cada sinalização e a remover prontamente qualquer conteúdo reconhecido como ilícito.</p>
   </div>
 
@@ -58,14 +69,58 @@
   <div class="en">
     <p class="eyebrow">Legal notice · LCEN</p>
     <h1>Report content</h1>
-    <p class="upd">Last updated: 12 August 2026</p>
+    <p class="upd">Last updated: 25 September 2026</p>
     <p>To report content, write to <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a>, specifying: the address (URL) of the page concerned, a description of the reported content and the reason for the report. The publisher undertakes to review each report and to promptly remove, or block access to, any content recognized as unlawful.</p>
   </div>
 
+  
+  <div class="sig-ok" id="sig-ok">
+    <span class="pt">Sinaliza&ccedil;&atilde;o enviada. A reda&ccedil;&atilde;o analisar&aacute; o conte&uacute;do indicado e agir&aacute; prontamente se ele for reconhecido como il&iacute;cito.</span><span class="fr">Signalement envoy&eacute;. La r&eacute;daction examinera le contenu indiqu&eacute; et agira promptement s'il est reconnu comme illicite.</span><span class="en">Report sent. The editorial team will review the reported content and act promptly if it is found to be unlawful.</span>
+  </div>
+
+  <div class="sigform" id="sig-form">
+    <h2><span class="pt">Formul&aacute;rio de sinaliza&ccedil;&atilde;o</span><span class="fr">Formulaire de signalement</span><span class="en">Report form</span></h2>
+    <p class="hint"><span class="pt">Use este formul&aacute;rio ou, se preferir, o e-mail acima. Os campos com * s&atilde;o obrigat&oacute;rios.</span><span class="fr">Utilisez ce formulaire ou, si vous pr&eacute;f&eacute;rez, l'e-mail ci-dessus. Les champs marqu&eacute;s * sont obligatoires.</span><span class="en">Use this form or, if you prefer, the e-mail above. Fields marked * are required.</span></p>
+    <form name="signalement-contenu" method="POST" action="/signaler-un-contenu.html?envoye=1" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="signalement-contenu">
+      <p class="bot-field"><label>Ne pas remplir : <input name="bot-field"></label></p>
+      <label for="sig-url"><span class="pt">Endere&ccedil;o (URL) da p&aacute;gina *</span><span class="fr">Adresse (URL) de la page *</span><span class="en">Address (URL) of the page *</span></label>
+      <input id="sig-url" name="url" type="url" required placeholder="https://thecrossingtime.com/...">
+      <label for="sig-motif"><span class="pt">Motivo *</span><span class="fr">Motif *</span><span class="en">Reason *</span></label>
+      <select id="sig-motif" name="motif" required>
+        <option value="">--</option>
+        <option value="contenu illicite / conteudo ilicito">Contenu illicite / Conte&uacute;do il&iacute;cito</option>
+        <option value="haine ou violence / odio ou violencia">Haine ou violence / &Oacute;dio ou viol&ecirc;ncia</option>
+        <option value="atteinte aux mineurs / dano a menores">Atteinte aux mineurs / Dano a menores</option>
+        <option value="diffamation / difamacao">Diffamation / Difama&ccedil;&atilde;o</option>
+        <option value="atteinte a la vie privee / violacao de privacidade">Atteinte &agrave; la vie priv&eacute;e / Viola&ccedil;&atilde;o de privacidade</option>
+        <option value="droits d'auteur / direitos autorais">Droits d'auteur / Direitos autorais</option>
+        <option value="erreur factuelle / erro factual">Erreur factuelle / Erro factual</option>
+        <option value="autre / outro">Autre / Outro</option>
+      </select>
+      <label for="sig-desc"><span class="pt">Descri&ccedil;&atilde;o do conte&uacute;do sinalizado *</span><span class="fr">Description du contenu signal&eacute; *</span><span class="en">Description of the reported content *</span></label>
+      <textarea id="sig-desc" name="description" required></textarea>
+      <label for="sig-email"><span class="pt">Seu e-mail (opcional, para retorno)</span><span class="fr">Votre e-mail (facultatif, pour le suivi)</span><span class="en">Your e-mail (optional, for follow-up)</span></label>
+      <input id="sig-email" name="email" type="email">
+      <button type="submit"><span class="pt">Enviar sinaliza&ccedil;&atilde;o</span><span class="fr">Envoyer le signalement</span><span class="en">Send the report</span></button>
+    </form>
+  </div>
+
+  <script>
+  (function(){
+    try{
+      if(/[?&]envoye=1/.test(location.search)){
+        var ok=document.getElementById('sig-ok'); if(ok) ok.style.display='block';
+        var f=document.getElementById('sig-form'); if(f) f.style.display='none';
+      }
+    }catch(e){}
+  })();
+  </script>
+
   <div class="foot">
-    <span class="fr">© 2026 The Crossing Time · <a href="index.html">Retour au site</a></span>
-    <span class="pt">© 2026 The Crossing Time · <a href="index.html">Voltar ao site</a></span>
-    <span class="en">© 2026 The Crossing Time · <a href="index.html">Back to the site</a></span>
+    <span class="fr">© 2026 The Crossing Time · <a href='/'>Retour au site</a></span>
+    <span class="pt">© 2026 The Crossing Time · <a href='/'>Voltar ao site</a></span>
+    <span class="en">© 2026 The Crossing Time · <a href='/'>Back to the site</a></span>
   </div>
 </div>
 
@@ -90,5 +145,66 @@
     // default FR (público principal em França)
   })();
 </script>
-</body>
+
+<script async id="netlify-rum-container" src="/.netlify/scripts/rum" data-netlify-rum-site-id="9cf3afdf-7ce8-4262-9a61-8ec9b07c2d14" data-netlify-deploy-branch="main" data-netlify-deploy-context="production" data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiOWNmM2FmZGYtN2NlOC00MjYyLTlhNjEtOGVjOWIwN2MyZDE0IiwiYWNjb3VudF9pZCI6IjY5YzVjMDE5ZDU1MDAzM2EzNmU1NTNjYSIsImRlcGxveV9pZCI6IjZhYjQwZGFiODYwZWM3MDAwOGE3Nzg2ZiIsImlzc3VlciI6Im5mc2VydmVyIn0.R0VRx18Tlb_exPVFUTLgYDVGh6RsdzTdhPv2qdIOiho"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976187748989907"
+     crossorigin="anonymous"></script><!-- The Crossing Time — Selo Vigilance Météo-France -->
+<script>
+(function(){
+  var COLORS={vert:'#3aaa35',jaune:'#e8c400',orange:'#ff8a00',rouge:'#e2001a'};
+  var WORD={
+    vert:{pt:'verde',fr:'vert',en:'green'},
+    jaune:{pt:'amarelo',fr:'jaune',en:'yellow'},
+    orange:{pt:'laranja',fr:'orange',en:'orange'},
+    rouge:{pt:'vermelho',fr:'rouge',en:'red'}
+  };
+  var PREFIX={pt:'Vigilância França',fr:'Vigilance France',en:'France alert'};
+  var data=null, el=null;
+  function lang(){var m=document.body.getAttribute('lang-mode');return (m==='fr'||m==='en')?m:'pt';}
+  function render(){
+    if(!data||!el) return;
+    var L=lang(), c=data.color||'vert';
+    var dot=el.querySelector('.tctv-dot'), txt=el.querySelector('.tctv-txt');
+    if(dot) dot.style.background=COLORS[c]||COLORS.vert;
+    if(txt) txt.textContent=PREFIX[L]+' · '+((WORD[c]&&WORD[c][L])||c);
+    el.style.display='inline-flex';
+    var strip=document.getElementById('tct-weather'); if(strip) strip.style.display='block';
+  }
+  function mount(){
+    var strip=document.getElementById('tct-weather'); if(!strip) return false;
+    var inx=strip.querySelector('.tw-in'); if(!inx) return false;
+    if(document.getElementById('tctv')){ el=document.getElementById('tctv'); return true; }
+    var sep=document.createElement('span'); sep.textContent='·';
+    sep.style.cssText='color:rgba(198,161,91,.45)';
+    var a=document.createElement('a'); a.id='tctv';
+    a.href='https://vigilance.meteofrance.fr/'; a.target='_blank'; a.rel='noopener';
+    a.title='Vigilance Météo-France';
+    a.style.cssText='display:none;align-items:center;gap:6px;text-decoration:none;color:inherit;';
+    a.innerHTML='<span class="tctv-dot" style="width:9px;height:9px;border-radius:50%;display:inline-block;background:#3aaa35;box-shadow:0 0 0 1px rgba(255,255,255,.25)"></span><span class="tctv-txt" style="color:rgba(244,242,237,.85)"></span>';
+    inx.appendChild(sep); inx.appendChild(a); el=a; return true;
+  }
+  function load(){
+    try{var raw=localStorage.getItem('tct-vigilance');if(raw){var o=JSON.parse(raw);if(Date.now()-o.t<1800000){data=o.d;render();return;}}}catch(e){}
+    fetch('/.netlify/functions/vigilance').then(function(r){return r.json();}).then(function(j){
+      if(!j||!j.color) return;
+      data={color:j.color,level:j.level};
+      try{localStorage.setItem('tct-vigilance',JSON.stringify({t:Date.now(),d:data}));}catch(e){}
+      render();
+    }).catch(function(){});
+  }
+  function hook(){
+    if(typeof window.setLang==='function'){var o=window.setLang;window.setLang=function(){var r=o.apply(this,arguments);try{render();}catch(e){}return r;};}
+  }
+  function init(){
+    var tries=0;
+    var iv=setInterval(function(){
+      tries++;
+      if(mount()){ clearInterval(iv); load(); hook(); }
+      else if(tries>40){ clearInterval(iv); }
+    },500);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
+  else init();
+})();
+</script></body>
 </html>
