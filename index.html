@@ -1510,7 +1510,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v123 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v124 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1776,7 +1776,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v123 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v124 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -7293,7 +7293,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v123 · 10set2026';try{
+(function(){var BUILD='p15-v124 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7388,12 +7388,12 @@ function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(e
     return v;
   }
 
-  function vipNav(on,nome){
+  function vipNav(on,nome,sub){
     var fn=(nome||'').trim().split(/\s+/)[0]||'';
     var chip=$('vip-nav-name'), bl=$('btn-login-nav'), ba=$('btn-assinar-nav'), lo=$('btn-logout');
-    if(chip){ chip.textContent=on?(fn?fn+' · VIP':'VIP'):''; chip.style.display=on?'inline-block':'none'; }
+    if(chip){ chip.textContent=on?(sub?(fn?fn+' \u00b7 VIP':'VIP'):(fn||'')):''; chip.style.display=(on&&(sub||fn))?'inline-block':'none'; }
     if(bl) bl.style.display=on?'none':'';
-    if(ba) ba.style.display=on?'none':'';
+    if(ba) ba.style.display=(on&&sub)?'none':'';
     if(lo) lo.style.display=on?'inline-block':'none';
   }
   var VIPLOGGED=false, VIPSUB=false;
@@ -7436,7 +7436,7 @@ function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(e
     VIPLOGGED=true; VIPSUB=(profile&&profile.is_subscriber===true);
     VIP_TIER=(profile&&profile.tier)||null;
     VIP_LEVEL=(profile&&typeof profile.tier_level==='number')?profile.tier_level:(VIPSUB?1:0);
-    vipNav(true,nome);
+    vipNav(true,nome,VIPSUB);
     loadVip(VIPSUB);
     if(window.vipPlanBadge)vipPlanBadge(profile||{});
     setVipCTAs(VIPSUB?'sub':'nonsub');
