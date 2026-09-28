@@ -1510,7 +1510,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v125 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v126 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1776,7 +1776,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v125 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v126 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3905,7 +3905,17 @@ document.addEventListener('DOMContentLoaded', function(){
    <h1 class="vip-title"><span class="ng-pt">O melhor da The Crossing Time</span><span class="ng-fr" style="display:none;">Le meilleur de The Crossing Time</span><span class="ng-en">The best of The Crossing Time</span></h1>
    <p class="vip-sub"><span class="ng-pt">Colunas, e-books, guias de imigração e de emprego na França, e a revista completa. Uma parte é aberta a todos; o conteúdo completo é exclusivo dos membros.</span><span class="ng-fr" style="display:none;">Chroniques, e-books, guides d'immigration et d'emploi en France, et le magazine complet. Une partie est ouverte à tous ; le contenu complet est réservé aux membres.</span><span class="ng-en">Columns, e-books, immigration and job guides for France, and the full magazine. Part of it is open to everyone; the full content is exclusive to members.</span></p>
 
-   <div id="vip-cta-guest" class="vip-cta">
+   <div id="vip-welcome" style="display:none;background:#0E1A2B;border:1px solid #C6A15B;border-radius:14px;padding:22px 26px;margin:0 0 18px;color:#F4F2ED;text-align:left;">
+  <p style="margin:0;font:700 21px Georgia,serif;color:#C6A15B;"><span class="ng-pt">Bem-vindo(a)</span><span class="ng-fr" style="display:none;">Bienvenue</span><span class="ng-en">Welcome</span><b id="vw-nome"></b></p>
+  <p style="margin:8px 0 0;font:400 15px Georgia,serif;"><span class="ng-pt">A sua assinatura está ativa. Obrigado por apoiar o jornalismo da The Crossing Time.</span><span class="ng-fr" style="display:none;">Votre abonnement est actif. Merci de soutenir le journalisme de The Crossing Time.</span><span class="ng-en">Your subscription is active. Thank you for supporting The Crossing Time's journalism.</span></p>
+  <p style="margin:12px 0 0;font:400 14px Arial,sans-serif;color:#cfd6e0;">
+    <span class="ng-pt">Plano:</span><span class="ng-fr" style="display:none;">Formule :</span><span class="ng-en">Plan:</span>
+    <b id="vw-plan" style="color:#F4F2ED;"></b> · <b id="vw-amount" style="color:#F4F2ED;"></b><span id="vw-per-month"><span class="ng-pt">/mês</span><span class="ng-fr" style="display:none;">/mois</span><span class="ng-en">/month</span></span><span id="vw-per-year" style="display:none;"><span class="ng-pt">/ano</span><span class="ng-fr" style="display:none;">/an</span><span class="ng-en">/year</span></span>
+    <span id="vw-renew-row" style="display:none;"> · <span class="ng-pt">Próxima renovação:</span><span class="ng-fr" style="display:none;">Prochain renouvellement :</span><span class="ng-en">Next renewal:</span> <b id="vw-renew" style="color:#F4F2ED;"></b></span>
+  </p>
+  <p style="margin:14px 0 0;"><button class="vip-link" type="button" onclick="vipPortal()"><span class="ng-pt">Gerir assinatura</span><span class="ng-fr" style="display:none;">Gérer l'abonnement</span><span class="ng-en">Manage subscription</span></button></p>
+</div>
+<div id="vip-cta-guest" class="vip-cta">
     <p style="font-weight:700"><span class="ng-pt">✨ Escolha o seu plano</span><span class="ng-fr" style="display:none;">✨ Choisissez votre formule</span><span class="ng-en">✨ Choose your plan</span></p>
     <p style="font-size:14px;color:#5b6470;margin:6px 0 0"><span class="ng-pt">Escolha o plano e pague em 1 minuto, com pagamento seguro via Stripe. O acesso chega no seu e-mail. Sem fidelidade: cancele quando quiser.</span><span class="ng-fr" style="display:none;">Choisissez votre formule et payez en 1 minute, paiement sécurisé via Stripe. L'accès arrive par e-mail. Sans engagement : annulez à tout moment.</span><span class="ng-en">Choose your plan and pay in 1 minute, secure payment via Stripe. Access arrives by e-mail. No commitment: cancel anytime.</span></p>
     <div class="vip-cta-btns" style="margin-top:12px">
@@ -7293,7 +7303,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v125 · 10set2026';try{
+(function(){var BUILD='p15-v126 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7440,6 +7450,23 @@ function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(e
     loadVip(VIPSUB);
     if(window.vipPlanBadge)vipPlanBadge(profile||{});
     setVipCTAs(VIPSUB?'sub':'nonsub');
+    var w=$('vip-welcome');
+    if(w){ if(VIPSUB){ w.style.display='';
+      var names={bronze:'Bronze',prata:'Prata',ouro:'Ouro',platina:'Platina'};
+      var prices={bronze:['2,99 \u20ac','29 \u20ac'],prata:['4,99 \u20ac','49 \u20ac'],ouro:['7,99 \u20ac','79 \u20ac'],platina:['9,99 \u20ac','99 \u20ac']};
+      var yr=((profile&&profile.plano)||'').indexOf('anual')>-1;
+      var fn=(nome||'').trim().split(/\s+/)[0]||'';
+      var e;
+      e=$('vw-nome'); if(e)e.textContent=fn?(', '+fn):'';
+      e=$('vw-plan'); if(e)e.textContent=names[VIP_TIER]||'';
+      e=$('vw-amount'); if(e)e.textContent=(prices[VIP_TIER]||['',''])[yr?1:0];
+      e=$('vw-per-month'); if(e)e.style.display=yr?'none':'';
+      e=$('vw-per-year'); if(e)e.style.display=yr?'':'none';
+      var d=(profile&&profile.current_period_end)?new Date(profile.current_period_end):null;
+      var rr=$('vw-renew-row'), rv=$('vw-renew');
+      if(d&&!isNaN(d.getTime())&&rv){ rv.textContent=('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear(); if(rr)rr.style.display=''; }
+      else if(rr){ rr.style.display='none'; }
+    } else { w.style.display='none'; } }
   }
   window.vipUnlockClick=function(){ var p=$('vip-paywall'); if(p&&p.scrollIntoView){try{p.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}} };
   function vipCall(path,payload){
@@ -7483,7 +7510,7 @@ function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(e
   }
 
   function fetchProfileAndShow(uid){
-    sb.from('vip_members').select('nome,idioma,is_subscriber,tier,tier_level,plano').eq('user_id',uid).maybeSingle()
+    sb.from('vip_members').select('nome,idioma,is_subscriber,tier,tier_level,plano,current_period_end').eq('user_id',uid).maybeSingle()
       .then(function(r){ showApp(r.data||{}); })
       .catch(function(){ showApp({}); });
   }
