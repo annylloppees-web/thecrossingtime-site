@@ -33,3 +33,39 @@
   for = "/index.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# ---- Rotas de conta/VIP: sem área de login própria ainda ----
+# Utilizadores que tentam /login etc. são levados ao espaço VIP da home.
+# 301 = redirecionamento definitivo (bom para o Google limpar os 404).
+[[redirects]]
+  from = "/signin"
+  to = "/#vip"
+  status = 301
+[[redirects]]
+  from = "/login"
+  to = "/#vip"
+  status = 301
+[[redirects]]
+  from = "/register"
+  to = "/#vip"
+  status = 301
+[[redirects]]
+  from = "/account"
+  to = "/#vip"
+  status = 301
+[[redirects]]
+  from = "/dashboard"
+  to = "/#vip"
+  status = 301
+[[redirects]]
+  from = "/signup"
+  to = "/#vip"
+  status = 301
+[[redirects]]
+  from = "/minha-conta"
+  to = "/#vip"
+  status = 301
+[[redirects]]
+  from = "/mon-compte"
+  to = "/#vip"
+  status = 301
