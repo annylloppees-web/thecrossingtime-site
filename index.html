@@ -1510,7 +1510,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v126 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v127 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1776,7 +1776,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v126 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v127 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3985,7 +3985,17 @@ document.addEventListener('DOMContentLoaded', function(){
   </div>
   </div>
 
-  <div id="vip-auth" hidden>
+  <div id="vip-setpass" hidden style="background:#fff;border:1px solid #C6A15B;border-radius:14px;padding:24px 26px;margin:0 0 18px;max-width:520px;margin-left:auto;margin-right:auto;text-align:left;">
+  <h3 style="margin:0;font:700 20px Georgia,serif;color:#0E1A2B;"><span class="ng-pt">Crie a sua senha de acesso</span><span class="ng-fr" style="display:none;">Créez votre mot de passe</span><span class="ng-en">Create your password</span></h3>
+  <p style="margin:8px 0 14px;font:400 14px Arial,sans-serif;color:#5b6470;"><span class="ng-pt">Você está conectado(a) pelo link do e-mail. Defina agora a senha que vai usar nas próximas visitas.</span><span class="ng-fr" style="display:none;">Vous êtes connecté(e) via le lien reçu par e-mail. Définissez maintenant le mot de passe de vos prochaines visites.</span><span class="ng-en">You are signed in via the e-mail link. Set the password you will use on your next visits.</span></p>
+  <label style="display:block;font:700 13px Arial,sans-serif;color:#0E1A2B;margin:0 0 4px;"><span class="ng-pt">Nova senha (mínimo 8 caracteres)</span><span class="ng-fr" style="display:none;">Nouveau mot de passe (8 caractères minimum)</span><span class="ng-en">New password (minimum 8 characters)</span></label>
+  <input type="password" id="sp-pass" autocomplete="new-password" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #d5d9e0;border-radius:8px;font:400 15px Arial,sans-serif;margin:0 0 12px;">
+  <label style="display:block;font:700 13px Arial,sans-serif;color:#0E1A2B;margin:0 0 4px;"><span class="ng-pt">Repita a senha</span><span class="ng-fr" style="display:none;">Répétez le mot de passe</span><span class="ng-en">Repeat the password</span></label>
+  <input type="password" id="sp-pass2" autocomplete="new-password" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #d5d9e0;border-radius:8px;font:400 15px Arial,sans-serif;margin:0 0 14px;">
+  <p id="sp-msg" hidden style="font:400 13px Arial,sans-serif;color:#a33;background:#fdecec;border-radius:8px;padding:8px 12px;margin:0 0 12px;"></p>
+  <button type="button" onclick="vipSavePass()" style="background:#C6A15B;color:#0E1A2B;border:0;border-radius:8px;padding:12px 22px;font:700 15px Arial,sans-serif;cursor:pointer;"><span class="ng-pt">Salvar senha e entrar</span><span class="ng-fr" style="display:none;">Enregistrer et entrer</span><span class="ng-en">Save password and enter</span></button>
+</div>
+<div id="vip-auth" hidden>
    <button type="button" class="vip-link" onclick="vipHideAuth()" style="margin-bottom:14px">&larr; <span class="ng-pt">Voltar</span><span class="ng-fr" style="display:none;">Retour</span><span class="ng-en">Back</span></button>
    <p class="vip-eyebrow"><span class="ng-pt">ÁREA VIP · CRIAR CONTA</span><span class="ng-fr" style="display:none;">ESPACE VIP · CRÉER UN COMPTE</span><span class="ng-en">VIP AREA · CREATE ACCOUNT</span></p>
    <h1 class="vip-title" style="font-size:26px"><span class="ng-pt">Crie a sua conta</span><span class="ng-fr" style="display:none;">Créez votre compte</span><span class="ng-en">Create your account</span></h1>
@@ -7303,7 +7313,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v126 · 10set2026';try{
+(function(){var BUILD='p15-v127 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7641,7 +7651,22 @@ function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(e
 
   window.vipOpen=function(){ if(window.showPage)showPage('vip'); vipRefresh(); };
 
-  if(READY){ sb.auth.onAuthStateChange(function(ev,sess){ if(ev==='SIGNED_IN'||ev==='SIGNED_OUT')vipRefresh(); }); }
+  if(READY){ sb.auth.onAuthStateChange(function(ev,sess){ if(ev==='PASSWORD_RECOVERY'){ if(window.vipShowSetPass)vipShowSetPass(); return; } if(ev==='SIGNED_IN'||ev==='SIGNED_OUT'){ var sp=$('vip-setpass'); if(sp&&!sp.hidden&&ev==='SIGNED_IN')return; vipRefresh(); } });
+  window.vipShowSetPass=function(){ try{showPage('vip');}catch(e){} var a=$('vip-auth'); if(a)a.hidden=true; var w=$('vip-welcome'); if(w)w.style.display='none'; var p=$('vip-setpass'); if(p){ p.hidden=false; if(p.scrollIntoView){try{p.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}} } };
+  window.vipSavePass=function(){ var m=$('sp-msg');
+    function say(pt,fr,en){ if(m){ m.hidden=false; var l=curLang(); m.textContent=(l==='fr')?fr:(l==='en')?en:pt; } }
+    var p1=($('sp-pass')&&$('sp-pass').value)||'', p2=($('sp-pass2')&&$('sp-pass2').value)||'';
+    if(p1.length<8){ say('A senha precisa de pelo menos 8 caracteres.','Le mot de passe doit contenir au moins 8 caract\u00e8res.','The password needs at least 8 characters.'); return; }
+    if(p1!==p2){ say('As senhas n\u00e3o coincidem.','Les mots de passe ne correspondent pas.','The passwords do not match.'); return; }
+    if(!READY||!sb){ say('Servi\u00e7o indispon\u00edvel. Tente de novo.','Service indisponible. R\u00e9essayez.','Service unavailable. Try again.'); return; }
+    sb.auth.updateUser({password:p1}).then(function(r){
+      if(r.error){ say('N\u00e3o foi poss\u00edvel salvar: '+(r.error.message||''),'Impossible d\u2019enregistrer : '+(r.error.message||''),'Could not save: '+(r.error.message||'')); return; }
+      var p=$('vip-setpass'); if(p)p.hidden=true;
+      msg('info','Senha criada. Voc\u00ea j\u00e1 est\u00e1 conectado(a).','Mot de passe cr\u00e9\u00e9. Vous \u00eates connect\u00e9(e).');
+      vipRefresh();
+    });
+  };
+  if((location.hash||'').indexOf('type=recovery')>-1){ setTimeout(function(){ if(window.vipShowSetPass)vipShowSetPass(); }, 900); } }
   if(typeof window.setLang==='function'){ var _vsl=window.setLang; window.setLang=function(){ var r=_vsl.apply(this,arguments); try{ if(document.getElementById('vip-vitrine')) loadVip(VIPLOGGED); }catch(e){} return r; }; }
   function init(){ vipRefresh(); }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init); else init();
