@@ -8,14 +8,16 @@
   node_bundler = "esbuild"
 
 # ---- Cache: ficheiros pesados que raramente mudam ----
+# Edições: o navegador revalida sempre (304 quando não mudou,
+# baixa de novo só quando houver versão nova)
 [[headers]]
   for = "/flipbook-1-edicao.html"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=0, must-revalidate"
 [[headers]]
   for = "/flipbook-2-edicao.html"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=0, must-revalidate"
 [[headers]]
   for = "/materias/*"
   [headers.values]
