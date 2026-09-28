@@ -42,6 +42,10 @@ for(const s of SECTIONS){
   } else {
     for(const name of listHtml(s.dir)){
       const file = `${s.dir}/${name}`;
+      try{ // páginas marcadas noindex ficam fora do sitemap
+        const head = readFileSync(file,'utf8').slice(0, 4000);
+        if(/name=["']robots["'][^>]*noindex/i.test(head)) continue;
+      }catch(e){}
       urls.push({ loc: BASE + s.base + name, file, priority: s.priority, changefreq: s.changefreq });
     }
   }
