@@ -1510,7 +1510,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v124 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v125 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1776,7 +1776,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v124 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v125 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -3907,7 +3907,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
    <div id="vip-cta-guest" class="vip-cta">
     <p style="font-weight:700"><span class="ng-pt">✨ Escolha o seu plano</span><span class="ng-fr" style="display:none;">✨ Choisissez votre formule</span><span class="ng-en">✨ Choose your plan</span></p>
-    <p style="font-size:14px;color:#5b6470;margin:6px 0 0"><span class="ng-pt">Crie a sua conta gratuita e assine para desbloquear e-books, guias e as revistas. Sem fidelidade — cancele quando quiser.</span><span class="ng-fr" style="display:none;">Créez votre compte gratuit et abonnez-vous pour débloquer e-books, guides et les magazines. Sans engagement — annulez à tout moment.</span><span class="ng-en">Create your free account and subscribe to unlock e-books, guides and the magazines. No commitment — cancel anytime.</span></p>
+    <p style="font-size:14px;color:#5b6470;margin:6px 0 0"><span class="ng-pt">Escolha o plano e pague em 1 minuto, com pagamento seguro via Stripe. O acesso chega no seu e-mail. Sem fidelidade: cancele quando quiser.</span><span class="ng-fr" style="display:none;">Choisissez votre formule et payez en 1 minute, paiement sécurisé via Stripe. L'accès arrive par e-mail. Sans engagement : annulez à tout moment.</span><span class="ng-en">Choose your plan and pay in 1 minute, secure payment via Stripe. Access arrives by e-mail. No commitment: cancel anytime.</span></p>
     <div class="vip-cta-btns" style="margin-top:12px">
      <button class="vip-link" type="button" onclick="vipShowAuth('log')"><span class="ng-pt">Já sou membro · Entrar</span><span class="ng-fr" style="display:none;">Déjà membre · Se connecter</span><span class="ng-en">Already a member · Sign in</span></button>
     </div>
@@ -7293,7 +7293,7 @@ function ouvirToggle(){
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v124 · 10set2026';try{
+(function(){var BUILD='p15-v125 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -7369,7 +7369,7 @@ function ouvirToggle(){
 
   function $(id){return document.getElementById(id);}
   function curLang(){var m=document.body.getAttribute('lang-mode');return (m==='fr'||m==='en')?m:'pt';}
-  window.T_EN = {"Não foi possível abrir o pagamento. Tente de novo.": "Could not open the payment. Please try again.", "Erro de conexão. Tente novamente.": "Connection error. Please try again.", "As assinaturas abrem em pouquíssimos dias. Você já está cadastrado(a) e vai poder assinar assim que liberarmos.": "Subscriptions open in just a few days. You are already registered and will be able to subscribe as soon as we open them.", "AMOSTRA": "SAMPLE", "Abrir ↗": "Open ↗", "Ler na íntegra ↓": "Read in full ↓", "🔒 O conteúdo completo é exclusivo dos membros.": "🔒 The full content is exclusive to members.", "Entre para ler tudo": "Sign in to read everything", "Primeiros conteúdos em breve.": "First content coming soon.", "Recolher ↑": "Collapse ↑"};
+  window.T_EN = {"Não foi possível abrir o pagamento. Tente de novo.": "Could not open the payment. Please try again.", "Pagamento confirmado. Enviamos um e-mail para você criar a sua senha de acesso. Confira a caixa de entrada (e o spam).": "Payment confirmed. We sent you an e-mail to create your access password. Check your inbox (and spam).", "Erro de conexão. Tente novamente.": "Connection error. Please try again.", "As assinaturas abrem em pouquíssimos dias. Você já está cadastrado(a) e vai poder assinar assim que liberarmos.": "Subscriptions open in just a few days. You are already registered and will be able to subscribe as soon as we open them.", "AMOSTRA": "SAMPLE", "Abrir ↗": "Open ↗", "Ler na íntegra ↓": "Read in full ↓", "🔒 O conteúdo completo é exclusivo dos membros.": "🔒 The full content is exclusive to members.", "Entre para ler tudo": "Sign in to read everything", "Primeiros conteúdos em breve.": "First content coming soon.", "Recolher ↑": "Collapse ↑"};
 function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(en!==undefined)return en; var k=(pt&&pt.replace)?pt:pt; return (window.T_EN&&window.T_EN[k]!==undefined)?window.T_EN[k]:pt; } return pt; }
   function msg(kind,pt,fr){var m=$('vip-msg'); if(!m)return; m.className='vip-msg '+kind; m.textContent=T(pt,fr); m.hidden=false;}
   function clearMsg(){var m=$('vip-msg'); if(m)m.hidden=true;}
@@ -7441,7 +7441,7 @@ function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(e
     if(window.vipPlanBadge)vipPlanBadge(profile||{});
     setVipCTAs(VIPSUB?'sub':'nonsub');
   }
-  window.vipUnlockClick=function(){ if(VIPLOGGED){ var p=$('vip-paywall'); if(p&&p.scrollIntoView){try{p.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}} } else { if(window.vipShowAuth)vipShowAuth('cad'); } };
+  window.vipUnlockClick=function(){ var p=$('vip-paywall'); if(p&&p.scrollIntoView){try{p.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){}} };
   function vipCall(path,payload){
     if(!READY)return;
     sb.auth.getSession().then(function(r){
@@ -7453,11 +7453,26 @@ function T(pt,fr,en){ var l=curLang(); if(l==='fr')return fr; if(l==='en'){ if(e
         .catch(function(){ alert(T('Erro de conexão. Tente novamente.','Erreur de connexion. Réessayez.')); });
     });
   }
-  window.vipCheckout=function(tier){ if(VIP_SOON || tier==='platina'){ alert(T('Este plano abre em pouquíssimos dias. Você já está cadastrado(a) e vai poder assinar assim que liberarmos.','Ce plan ouvre dans quelques jours. Vous êtes déjà inscrit(e) et pourrez vous abonner dès l\'ouverture.','This plan opens in just a few days. You are already registered and will be able to subscribe as soon as we open it.')); return; } vipCall('/checkout',{tier:tier,interval:VIP_INTERVAL}); };
+  window.vipCheckout=function(tier){ if(VIP_SOON || tier==='platina'){ alert(T('Este plano abre em pouquíssimos dias. Você já está cadastrado(a) e vai poder assinar assim que liberarmos.','Ce plan ouvre dans quelques jours. Vous êtes déjà inscrit(e) et pourrez vous abonner dès l\'ouverture.','This plan opens in just a few days. You are already registered and will be able to subscribe as soon as we open it.')); return; } (function(){
+      var go=function(tok){
+        var h={'Content-Type':'application/json'}; if(tok)h['Authorization']='Bearer '+tok;
+        fetch(VIP_FN+'/checkout',{method:'POST',headers:h,body:JSON.stringify({tier:tier,interval:VIP_INTERVAL})})
+          .then(function(x){return x.json();})
+          .then(function(d){ if(d&&d.url){ location.href=d.url; } else { alert(T('N\u00e3o foi poss\u00edvel abrir o pagamento. Tente de novo.','Impossible d\'ouvrir le paiement. R\u00e9essayez.')); } })
+          .catch(function(){ alert(T('Erro de conex\u00e3o. Tente novamente.','Erreur de connexion. R\u00e9essayez.')); });
+      };
+      if(READY&&sb){ sb.auth.getSession().then(function(r){ var t=r.data&&r.data.session&&r.data.session.access_token; go(t||null); }).catch(function(){ go(null); }); } else { go(null); }
+    })(); };
   window.vipPortal=function(){ vipCall('/portal',{}); };
   window.vipShowAuth=function(which){ var a=$('vip-auth'); if(a){a.hidden=false;} if(window.vipTab)vipTab(which||'cad'); if(a&&a.scrollIntoView){try{a.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){}} };
   window.vipHideAuth=function(){ var a=$('vip-auth'); if(a)a.hidden=true; clearMsg(); };
 
+  if((location.hash||'').indexOf('vip-obrigado')>-1){
+    setTimeout(function(){ try{
+      if(window.vipShowAuth)vipShowAuth('log');
+      msg('info','Pagamento confirmado. Enviamos um e-mail para voc\u00ea criar a sua senha de acesso. Confira a caixa de entrada (e o spam).','Paiement confirm\u00e9. Nous vous avons envoy\u00e9 un e-mail pour cr\u00e9er votre mot de passe. V\u00e9rifiez votre bo\u00eete de r\u00e9ception (et les spams).');
+    }catch(e){} }, 900);
+  }
   function vipRefresh(){
     if(!READY){ showAuth(); msg('info','A Área VIP está a ser configurada. Volte em breve.','L\'Espace VIP est en cours de configuration. Revenez bientôt.'); return; }
     sb.auth.getSession().then(function(r){
@@ -7903,7 +7918,7 @@ document.addEventListener("click",function(e){var o=document.querySelector(".nav
   function go(){
     var h=(location.hash||'').replace('#','');
     var q=null; try{q=new URLSearchParams(location.search).get('page');}catch(e){}
-    if((q||h)==='vip'){ try{ showPage('vip'); }catch(e){} }
+    if((q||h)==='vip'||h==='vip-obrigado'){ try{ showPage('vip'); }catch(e){} }
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',go);}else{go();}
   window.addEventListener('hashchange',go);
