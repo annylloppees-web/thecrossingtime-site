@@ -30,6 +30,11 @@
   for = "/tct-hero.mp4"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+# fotos da home: nome = impressão digital do conteúdo, nunca muda
+[[headers]]
+  for = "/img/home/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
 # o index muda com frequência → revalidar sempre
 [[headers]]
   for = "/index.html"
