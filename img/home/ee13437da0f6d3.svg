@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1422"/>
+      <stop offset="1" stop-color="#0E1A2B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg2)"/>
+  
+  <!-- 3 cartes empilhadas (CSP, CR, NAT) -->
+  <g transform="translate(380,180)">
+    <!-- Card NAT (rear) -->
+    <g transform="rotate(-8) translate(0,30)">
+      <rect width="280" height="170" rx="8" fill="#C6A15B" opacity=".25"/>
+      <rect width="280" height="170" rx="8" fill="none" stroke="#C6A15B" stroke-width="1"/>
+      <text x="20" y="40" font-family="sans-serif" font-size="11" fill="#C6A15B" letter-spacing="2">NATURALISATION</text>
+      <rect x="20" y="70" width="60" height="60" fill="#0E1A2B" opacity=".4"/>
+      <rect x="100" y="80" width="160" height="6" fill="#F4F2ED" opacity=".3"/>
+      <rect x="100" y="95" width="120" height="4" fill="#F4F2ED" opacity=".2"/>
+      <rect x="100" y="108" width="140" height="4" fill="#F4F2ED" opacity=".2"/>
+    </g>
+    
+    <!-- Card CR (middle) -->
+    <g transform="rotate(-3) translate(40,15)">
+      <rect width="280" height="170" rx="8" fill="#C6A15B" opacity=".4"/>
+      <rect width="280" height="170" rx="8" fill="none" stroke="#C6A15B" stroke-width="1"/>
+      <text x="20" y="40" font-family="sans-serif" font-size="11" fill="#0E1A2B" letter-spacing="2">CARTE DE RÉSIDENT</text>
+      <rect x="20" y="70" width="60" height="60" fill="#0E1A2B" opacity=".5"/>
+      <rect x="100" y="80" width="160" height="6" fill="#0E1A2B" opacity=".4"/>
+      <rect x="100" y="95" width="120" height="4" fill="#0E1A2B" opacity=".3"/>
+      <rect x="100" y="108" width="140" height="4" fill="#0E1A2B" opacity=".3"/>
+    </g>
+    
+    <!-- Card CSP (front) -->
+    <g transform="rotate(2) translate(80,0)">
+      <rect width="280" height="170" rx="8" fill="#d4b774"/>
+      <rect width="280" height="170" rx="8" fill="none" stroke="#0E1A2B" stroke-width="1.5"/>
+      <text x="20" y="40" font-family="sans-serif" font-size="11" fill="#0E1A2B" letter-spacing="2">CARTE DE SÉJOUR</text>
+      <text x="20" y="55" font-family="sans-serif" font-size="9" fill="#0E1A2B" letter-spacing="2">PLURIANNUELLE</text>
+      <rect x="20" y="75" width="60" height="60" fill="#0E1A2B"/>
+      <rect x="100" y="85" width="160" height="6" fill="#0E1A2B" opacity=".7"/>
+      <rect x="100" y="100" width="120" height="4" fill="#0E1A2B" opacity=".5"/>
+      <rect x="100" y="113" width="140" height="4" fill="#0E1A2B" opacity=".5"/>
+    </g>
+  </g>
+  
+  <!-- Décor: lignes dorées -->
+  <line x1="60" y1="500" x2="160" y2="500" stroke="#C6A15B" stroke-width="1.5"/>
+  <line x1="1040" y1="100" x2="1140" y2="100" stroke="#C6A15B" stroke-width="1.5"/>
+</svg>
