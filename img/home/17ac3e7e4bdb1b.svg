@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a1422"/>
+      <stop offset="1" stop-color="#0E1A2B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg3)"/>
+  
+  <!-- Balance de la justice - centre -->
+  <g transform="translate(600,260)" opacity=".85">
+    <!-- Pied -->
+    <rect x="-3" y="100" width="6" height="80" fill="#C6A15B"/>
+    <rect x="-40" y="178" width="80" height="6" fill="#C6A15B"/>
+    <!-- Barre horizontale -->
+    <rect x="-110" y="-3" width="220" height="6" fill="#C6A15B"/>
+    <!-- Plateaux -->
+    <line x1="-100" y1="0" x2="-100" y2="40" stroke="#C6A15B" stroke-width="1.5"/>
+    <line x1="100" y1="0" x2="100" y2="40" stroke="#C6A15B" stroke-width="1.5"/>
+    <ellipse cx="-100" cy="45" rx="50" ry="8" fill="#C6A15B" opacity=".7"/>
+    <ellipse cx="100" cy="45" rx="50" ry="8" fill="#C6A15B" opacity=".7"/>
+    <!-- Pinacle -->
+    <circle r="8" fill="#C6A15B"/>
+  </g>
+  
+  <!-- Texte décoratif -->
+  <text x="600" y="490" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="28" fill="#C6A15B" opacity=".7">« Dispense, équité »</text>
+  
+  <!-- Lignes décoratives -->
+  <line x1="200" y1="120" x2="350" y2="120" stroke="#C6A15B" stroke-width=".5" opacity=".4"/>
+  <line x1="850" y1="120" x2="1000" y2="120" stroke="#C6A15B" stroke-width=".5" opacity=".4"/>
+</svg>
