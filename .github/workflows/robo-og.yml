@@ -7,6 +7,7 @@ on:
       - 'materias/**'
       - 'colunas/**'
       - 'scripts/og_inject.py'
+      - 'scripts/gen-sitemap.mjs'
       - '.github/workflows/robo-og*.yml'
   workflow_dispatch:
 
@@ -34,12 +35,14 @@ jobs:
           # 1) renomear arquivos que chegaram com sufixo " (1)" etc.
           find materias colunas -maxdepth 1 -name '* ([0-9]).html' -print0 | while IFS= read -r -d '' f; do
             alvo=$(echo "$f" | sed -E 's/ \([0-9]\)\.html$/.html/')
-            if [ ! -e "$alvo" ]; then
-              git mv "$f" "$alvo"
-              echo "Renomeado: $f -> $alvo"
-            else
-              echo "AVISO: $f nao renomeado, $alvo ja existe (possivel duplicata)"
+            # a copia "(1)" e sempre a versao mais nova (re-download do arquivo
+            # corrigido): ela SUBSTITUI o original
+            if [ -e "$alvo" ]; then
+              git rm -q "$alvo"
+              echo "Substituido: $alvo pela versao nova $f"
             fi
+            git mv "$f" "$alvo"
+            echo "Renomeado: $f -> $alvo"
           done
           # 2) OG/Twitter/canonical + foco de teclado onde faltar
           pip install --quiet pillow
