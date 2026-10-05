@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thecrossingtime.com/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -865,12 +865,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thecrossingtime.com/materias/m_contrat_location_1outubro_2026.html</loc>
-    <lastmod>2026-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://thecrossingtime.com/materias/m_delai_carence_prestations_etrangers_plf2027.html</loc>
     <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -1239,12 +1233,6 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_taxe_fonciere_2026_outubro.html</loc>
     <lastmod>2026-10-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://thecrossingtime.com/materias/m_taxe_fonciere_2026_prazos.html</loc>
-    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
