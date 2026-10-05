@@ -67,7 +67,7 @@ jobs:
           fi
           git config user.name  "og-bot"
           git config user.email "actions@users.noreply.github.com"
-          git commit -m "site: normalizar nomes, injetar Open Graph e atualizar sitemap" -m "Robo automatico: renomeia arquivos com sufixo (1), injeta OG/Twitter/canonical e foco de teclado onde faltar, e regenera o sitemap. Push com nova tentativa em caso de corrida com outro robo." -m "Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01XKAg97TWMy69UVbqhqefjk"
+          git commit -m "site: normalizar nomes, injetar Open Graph e atualizar sitemap [skip netlify]" -m "Robo automatico: renomeia arquivos com sufixo (1), injeta OG/Twitter/canonical e foco de teclado onde faltar, e regenera o sitemap. Push com nova tentativa em caso de corrida com outro robo." -m "Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01XKAg97TWMy69UVbqhqefjk"
           # 5) push com ate 3 tentativas (rebase se outro robo empurrou antes)
           for i in 1 2 3; do
             if git push; then exit 0; fi
