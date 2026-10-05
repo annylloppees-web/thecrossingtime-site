@@ -76,3 +76,25 @@
   from = "/mon-compte"
   to = "/#vip"
   status = 301
+
+# ---- Materias substituidas por versao mais nova (5/10/2026) ----
+[[redirects]]
+  from = "/materias/m_contrat_location_1outubro_2026.html"
+  to = "/materias/m_nouveau_bail_octobre_2026.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/materias/m_contrat_location_1outubro_2026"
+  to = "/materias/m_nouveau_bail_octobre_2026.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/materias/m_taxe_fonciere_2026_prazos.html"
+  to = "/materias/m_taxe_fonciere_2026_outubro.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/materias/m_taxe_fonciere_2026_prazos"
+  to = "/materias/m_taxe_fonciere_2026_outubro.html"
+  status = 301
+  force = true
