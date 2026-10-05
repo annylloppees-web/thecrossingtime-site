@@ -63,7 +63,7 @@ def get_image(s, stem):
         im = Image.open(io.BytesIO(raw)).convert('RGB')
         if im.width > 1200:
             im = im.resize((1200, round(im.height * 1200 / im.width)), Image.LANCZOS)
-        path = 'og/%s.jpg' % stem
+        path = 'og/%s.jpg' % stem.lower()
         im.save(path, 'JPEG', quality=80, optimize=True)
         return path, im.width, im.height
     except Exception as e:
@@ -91,6 +91,37 @@ for folder in ['materias', 'colunas']:
         if 'tct-a11y-focus' not in s:
             s = s.replace('</head>', FOCUS + '\n</head>', 1)
             dirty = True
+        # --- normalizacao (roda em TODAS as paginas, inclusive as que ja tem og) ---
+        # O Netlify serve tudo em minusculas e redireciona (301) enderecos com
+        # maiusculas. Canonical, og:url, og:image e JSON-LD tem de apontar para a
+        # URL final em minusculas, senao o Google ve "canonical para redirect".
+        good = '%s/%s/%s' % (BASE, folder, fn.lower())
+        def _fix(m):
+            return m.group(1) + good + m.group(2)
+        s2 = re.sub(r'(<link rel="canonical" href=")[^"]*(")', _fix, s)
+        s2 = re.sub(r'(<meta property="og:url" content=")[^"]*(")', _fix, s2)
+        s2 = re.sub(r'("mainEntityOfPage"\s*:\s*")https://thecrossingtime\.com/%s/[^"]*(")' % folder, _fix, s2)
+        s2 = re.sub(r'((?:og:image|twitter:image)" content="https://thecrossingtime\.com/og/)([^"]+)(")',
+                    lambda m: m.group(1) + m.group(2).lower().replace('%20(1)', '').replace('%20(2)', '') + m.group(3), s2)
+        # og:image relativo ("../og/x.jpg", em qualquer ordem de atributos) nao e
+        # lido por Facebook/WhatsApp: vira endereco absoluto em minusculas
+        def _abs(m):
+            return m.group(0).replace(m.group(1), BASE + '/og/' + m.group(2).lower())
+        s2 = re.sub(r'<meta[^>]*(?:og:image|twitter:image)[^>]*>',
+                    lambda t: re.sub(r'(\.\./og/([^"]+))', lambda m: _abs(m), t.group(0)), s2)
+        # og:image apontando para og/<nome>.jpg que nao existe: gerar a imagem
+        mi = re.search(r'og:image" content="https://thecrossingtime\.com/og/([^"]+)\.jpg"', s2) or \
+             re.search(r'content="https://thecrossingtime\.com/og/([^"]+)\.jpg" property="og:image"', s2)
+        if mi and not os.path.exists('og/%s.jpg' % mi.group(1)):
+            get_image(s2, mi.group(1))
+        if 'rel="canonical"' not in s2:
+            s2 = s2.replace('</head>', '<link rel="canonical" href="%s">\n</head>' % good, 1)
+        if '<meta name="description"' not in s2:
+            d0 = clip(get_desc(s2))
+            if d0:
+                s2 = s2.replace('</head>', '<meta name="description" content="%s">\n</head>' % esc(d0), 1)
+        if s2 != s:
+            s = s2; dirty = True
         if 'og:title' in s:
             if dirty:
                 open(p, 'w', encoding='utf-8').write(s)
@@ -99,7 +130,7 @@ for folder in ['materias', 'colunas']:
                 skipped += 1
             continue
         stem = fn[:-5]
-        url = '%s/%s/%s' % (BASE, folder, fn.replace(' ', '%20'))
+        url = '%s/%s/%s' % (BASE, folder, fn.lower())
         mt = re.search(r'<title>(.*?)</title>', s, re.S)
         title = text_of(mt.group(1)) if mt else stem
         title = re.sub(r'\s*[—–-]\s*The Crossing Time\s*$', '', title).strip() or stem
