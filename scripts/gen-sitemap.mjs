@@ -10,6 +10,13 @@ const TODAY = new Date().toISOString().slice(0, 10);
 // por isso matérias NOVAS entram sozinhas no sitemap.
 const SECTIONS = [
   { file: 'index.html', loc: '/',            priority: '1.0', changefreq: 'daily'  },
+  { file: 'todas-as-materias.html', loc: '/todas-as-materias.html', priority: '0.9', changefreq: 'daily' },
+  { file: 'a-propos.html',             loc: '/a-propos.html',             priority: '0.5', changefreq: 'monthly' },
+  { file: 'charte-editoriale.html',    loc: '/charte-editoriale.html',    priority: '0.4', changefreq: 'monthly' },
+  { file: 'corrections.html',          loc: '/corrections.html',          priority: '0.4', changefreq: 'monthly' },
+  { file: 'conseil-juridique.html',    loc: '/conseil-juridique.html',    priority: '0.3', changefreq: 'yearly'  },
+  { file: 'mentions-legales.html',     loc: '/mentions-legales.html',     priority: '0.3', changefreq: 'yearly'  },
+  { file: 'politique-confidentialite.html', loc: '/politique-confidentialite.html', priority: '0.3', changefreq: 'yearly' },
   { dir:  'materias',   base: '/materias/',  priority: '0.8', changefreq: 'weekly' },
   { dir:  'colunas',    base: '/colunas/',   priority: '0.6', changefreq: 'monthly'},
 ];
