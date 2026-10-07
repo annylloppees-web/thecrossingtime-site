@@ -8,6 +8,7 @@ on:
       - 'colunas/**'
       - 'scripts/og_inject.py'
       - 'scripts/gen-sitemap.mjs'
+      - 'scripts/gen_materias_index.py'
       - '.github/workflows/robo-og*.yml'
   workflow_dispatch:
 
@@ -47,10 +48,12 @@ jobs:
           # 2) OG/Twitter/canonical + foco de teclado onde faltar
           pip install --quiet pillow
           python3 scripts/og_inject.py
-          # 3) sitemap com os nomes atuais
+          # 3) pagina "Todas as materias" + links de navegacao no fim de cada materia
+          python3 scripts/gen_materias_index.py
+          # 4) sitemap com os nomes atuais
           node scripts/gen-sitemap.mjs
-          git add -A materias colunas og sitemap.xml
-          # 4) aposentar o robo antigo; se este arquivo chegou como "robo-og (1).yml", renomear para o nome canonico
+          git add -A materias colunas og sitemap.xml todas-as-materias.html
+          # 5) aposentar o robo antigo; se este arquivo chegou como "robo-og (1).yml", renomear para o nome canonico
           git rm -q --ignore-unmatch ".github/workflows/og-tags.yml"
           for w in ".github/workflows/robo-og (1).yml" ".github/workflows/robo-og (2).yml"; do
             if [ -e "$w" ]; then
@@ -67,8 +70,8 @@ jobs:
           fi
           git config user.name  "og-bot"
           git config user.email "actions@users.noreply.github.com"
-          git commit -m "site: normalizar nomes, injetar Open Graph e atualizar sitemap [skip netlify]" -m "Robo automatico: renomeia arquivos com sufixo (1), injeta OG/Twitter/canonical e foco de teclado onde faltar, e regenera o sitemap. Push com nova tentativa em caso de corrida com outro robo." -m "Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01XKAg97TWMy69UVbqhqefjk"
-          # 5) push com ate 3 tentativas (rebase se outro robo empurrou antes)
+          git commit -m "site: normalizar nomes, injetar Open Graph e atualizar sitemap [skip netlify]" -m "Robo automatico: renomeia arquivos com sufixo (1), injeta OG/Twitter/canonical e foco de teclado onde faltar, gera a pagina Todas as materias com os links de navegacao e regenera o sitemap. Push com nova tentativa em caso de corrida com outro robo." -m "Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>" -m "Claude-Session: https://claude.ai/code/session_01XKAg97TWMy69UVbqhqefjk"
+          # 6) push com ate 3 tentativas (rebase se outro robo empurrou antes)
           for i in 1 2 3; do
             if git push; then exit 0; fi
             echo "Push falhou (tentativa $i), rebase e nova tentativa..."
