@@ -4,6 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
+      - 'm_*.html'
       - 'materias/**'
       - 'colunas/**'
       - 'scripts/og_inject.py'
@@ -33,6 +34,18 @@ jobs:
 
       - name: Normalizar nomes, injetar OG e regenerar sitemap
         run: |
+          # 0) limpar materias que cairam na RAIZ do repositorio por engano:
+          #    se ja existe em materias/, apaga a copia da raiz; senao, move para materias/
+          for f in m_*.html; do
+            [ -e "$f" ] || continue
+            if [ -e "materias/$f" ]; then
+              git rm -q "$f"
+              echo "Removido da raiz (ja existe em materias/): $f"
+            else
+              git mv "$f" "materias/$f"
+              echo "Movido da raiz para materias/: $f"
+            fi
+          done
           # 1) renomear arquivos que chegaram com sufixo " (1)" etc.
           find materias colunas -maxdepth 1 -name '* ([0-9]).html' -print0 | while IFS= read -r -d '' f; do
             alvo=$(echo "$f" | sed -E 's/ \([0-9]\)\.html$/.html/')
