@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://thecrossingtime.com/todas-as-materias.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -823,6 +823,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_2turno_25_outubro_exterior_franca_2026.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_abus_administratif_femmes_etrangeres_2026.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -831,6 +837,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_agenda_festivais_outubro_2026.html</loc>
     <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_aidants_ava_aposentadoria_2026.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1005,6 +1017,18 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_delai_carence_prestations_etrangers_plf2027.html</loc>
     <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_demarchage_telefonico_consentimento_2026.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_diesel_golfo_baixa_1_novembro_2026.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1232,7 +1256,7 @@
   </url>
   <url>
     <loc>https://thecrossingtime.com/materias/m_greve_5_novembro_intersindical_sncf_2026.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1347,6 +1371,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_loi_integrale_vss_adoptee_assemblee_2026.html</loc>
     <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_loi_montagne_pneus_inverno_2026.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1532,7 +1562,7 @@
   </url>
   <url>
     <loc>https://thecrossingtime.com/materias/m_portugal_acampadas_habitacao_lisboa_porto_2026.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1557,6 +1587,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_ptz_parentalite_plf2027.html</loc>
     <lastmod>2026-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_queimadas_amazonas_outubro_2026.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1706,7 +1742,7 @@
   </url>
   <url>
     <loc>https://thecrossingtime.com/materias/m_vazamentos_dados_17_outubro_icad_golpes_2026.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
