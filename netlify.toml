@@ -77,6 +77,33 @@
   to = "/#vip"
   status = 301
 
+# ---- Paginas de autor que nunca existiram (links antigos da pagina A propos, 21/10/2026) ----
+[[redirects]]
+  from = "/auteur/gabriela-barreto.html"
+  to = "/colunas/gabriela_barreto.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/auteur/vanessa-alvarez.html"
+  to = "/colunas/vanessa_alvarez.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/auteur/andre-alves-fernandes.html"
+  to = "/colunas/andre_fernandes.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/auteur/antonio-carlos-de-almeida-castro-kakay.html"
+  to = "/colunas/kakay.html"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/auteur/*"
+  to = "/a-propos.html"
+  status = 301
+  force = true
+
 # ---- Materias substituidas por versao mais nova (5/10/2026) ----
 [[redirects]]
   from = "/materias/m_contrat_location_1outubro_2026.html"
