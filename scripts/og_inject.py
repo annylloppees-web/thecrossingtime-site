@@ -31,6 +31,18 @@ def get_desc(s):
     m = re.search(r'<meta name="description" content="([^"]{20,})"', s)
     if m:
         return html.unescape(m.group(1)).strip()
+    body = re.sub(r'<div class="topbar".*?</div>\s*</div>', '', s, flags=re.S)
+    for pat in (r'<div class="sub">(.*?)</div>', r'<p[^>]*class="[^"]*lead[^"]*"[^>]*>(.*?)</p>'):
+        for m in re.finditer(pat, body, re.S):
+            blk = m.group(1)
+            mm = re.search(r'class="(?:ng-pt|lang-pt)"[^>]*>(.*?)</span>', blk, re.S)
+            t = text_of(mm.group(1) if mm else blk)
+            if len(t) > 40 and not t.startswith('Voltar'):
+                return t
+    for m in re.finditer(r'class="(?:ng-pt|lang-pt)"[^>]*>(.*?)</span>', body, re.S):
+        t = text_of(m.group(1))
+        if len(t) > 60 and not t.startswith('Voltar'):
+            return t
     for m in re.finditer(r'<p[^>]*class="[^"]*lead[^"]*"[^>]*>(.*?)</p>', s, re.S):
         t = text_of(m.group(1))
         if len(t) > 40:
@@ -120,6 +132,9 @@ for folder in ['materias', 'colunas']:
             d0 = clip(get_desc(s2))
             if d0:
                 s2 = s2.replace('</head>', '<meta name="description" content="%s">\n</head>' % esc(d0), 1)
+        # titulos antigos com travessao: ' — The Crossing Time' vira ' · The Crossing Time'
+        s2 = re.sub(r'(<title>[^<]*?)\s*[—–]\s*The Crossing Time', r'\1 · The Crossing Time', s2)
+        s2 = re.sub(r'(<meta property="og:title" content="[^"]*?)\s*[—–]\s*The Crossing Time', r'\1 · The Crossing Time', s2)
         if s2 != s:
             s = s2; dirty = True
         if 'og:title' in s:
