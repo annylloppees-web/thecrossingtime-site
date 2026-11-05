@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://thecrossingtime.com/a-propos.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2887,6 +2887,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/colunas/col_andre_mobilidade_competitividade.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/colunas/col_andre_pais_decide_quem_herda.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -2900,7 +2906,7 @@
   </url>
   <url>
     <loc>https://thecrossingtime.com/colunas/col_gabriela_erros_expansao.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2911,14 +2917,32 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/colunas/col_karen_conversa_significados.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/colunas/col_karen_visto_consulado.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/colunas/col_vanessa_familia_global.html</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://thecrossingtime.com/colunas/gabriela_barreto.html</loc>
     <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/colunas/karen_couto.html</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
