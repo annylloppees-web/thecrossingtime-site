@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobilização de 31 de outubro: 320 mil manifestantes segundo o ministério do Interior, quase meio milhão segundo os sindicatos, e em queda em relação a 24 de outubro · The Crossing Time</title>
+<meta name="author" content="Silvania Batista">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071a3d;--navy2:#0c2452;--gold:#B8924A;--gold2:#c7a45a;--off:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a;--red:#b3261e;--green:#2e7d32}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--off);color:var(--ink);font-family:'Lora',serif;line-height:1.78;font-size:18px}
+.topbar{background:var(--navy);color:var(--off);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:9600}
+.topbar .brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:3px;font-size:15px}
+.topbar .brand span{color:var(--gold2)}
+.topbar .ed{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gold2);text-transform:uppercase}
+.tct-back{background:none;border:0;color:#F4F2ED;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:.4rem .2rem}
+.thero{background:linear-gradient(160deg,#0a1226 0%,var(--navy) 60%,#0c2452 100%);color:#fff;padding:64px 24px 54px;position:relative;overflow:hidden;min-height:340px;display:flex;align-items:center}
+.thero::before{content:attr(data-w);position:absolute;right:12px;top:-30px;font-family:'Poppins',sans-serif;font-weight:800;font-size:150px;color:rgba(199,164,90,.07);letter-spacing:-4px;z-index:0}
+.thero .inner{max-width:900px;margin:0 auto;position:relative;z-index:2}
+.badge{display:inline-block;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;padding:6px 13px;border-radius:2px;background:var(--wine);color:#fff;margin-bottom:16px}
+.kicker{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:14px}
+.thero h1{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:clamp(27px,4vw,44px);line-height:1.18;margin-bottom:16px}
+.thero .sub{color:#dcd6c6;font-size:clamp(16px,2vw,20px);font-style:italic;line-height:1.5;max-width:820px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.byline{display:flex;align-items:center;gap:14px;padding:30px 0 12px;border-bottom:1px solid rgba(7,26,61,.15)}
+.byline .mono{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;flex-shrink:0}
+.byline .who b{display:block;font-size:15px;font-weight:600;color:var(--navy);font-family:'Poppins',sans-serif}
+.byline .who span{font-size:12.5px;color:#5a5a5a;letter-spacing:.4px;font-family:'Poppins',sans-serif}
+.meta{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:1.4px;text-transform:uppercase;padding:14px 0 8px;display:flex;flex-wrap:wrap;gap:8px 18px}
+.meta b{color:var(--wine);font-weight:600}
+article{padding:20px 0 10px}
+article p{margin-bottom:22px}
+.lead{font-size:20.5px;line-height:1.72}
+.lead::first-letter{font-family:'Lora',serif;font-weight:700;font-size:74px;line-height:.8;float:left;padding:8px 12px 0 0;color:var(--gold)}
+.sec{margin:46px 0 20px}
+.sec .num{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.sec h2{font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:clamp(23px,3vw,31px);line-height:1.25}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:32px 0}
+.card{background:#fff;border-top:4px solid var(--gold);border-radius:3px;padding:20px 18px}
+.card .big{font-family:'Poppins',sans-serif;font-weight:700;font-size:23px;color:var(--navy);line-height:1.15}
+.card .lbl{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:.6px;text-transform:uppercase;margin-top:8px;line-height:1.45}
+.quote{background:var(--navy);color:var(--off);border-left:5px solid var(--gold);padding:26px 30px;margin:34px 0;border-radius:3px}
+.quote p{font-size:20px;font-style:italic;line-height:1.55;margin:0}
+.quote .attr{font-family:'Poppins',sans-serif;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:var(--gold2);margin-top:14px}
+.servbox{background:#fff;border:1px solid rgba(184,146,74,.45);border-left:5px solid var(--wine);border-radius:3px;padding:24px 28px;margin:34px 0}
+.servbox h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--wine);text-transform:uppercase;margin-bottom:14px}
+.lista{margin:0;padding-left:0;list-style:none}
+.lista li{position:relative;padding-left:26px;margin-bottom:11px;font-size:16.5px;line-height:1.6}
+.lista li::before{content:'\25C6';position:absolute;left:0;top:0;color:var(--gold);font-size:12px}
+.sigfim{font-family:'Poppins',sans-serif;font-size:13px;letter-spacing:.6px;color:var(--navy);border-top:1px solid rgba(7,26,61,.15);padding-top:16px;margin:30px 0 8px;font-weight:600}
+.ednote{background:rgba(7,26,61,.05);border-left:4px solid var(--navy);padding:22px 26px;margin:26px 0 28px;border-radius:3px}
+.ednote h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:12px}
+.ednote p{font-size:14.5px;line-height:1.7;color:#3a3a3a;margin-bottom:0}
+.pilares{background:var(--navy);color:var(--gold2);text-align:center;padding:24px 20px;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:4px;font-size:14px}
+.sitefoot{background:var(--navy2);color:#cfc8b8;text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-size:12.5px;line-height:2}
+.sitefoot b{color:#fff;letter-spacing:2px}.sitefoot span{color:var(--gold2)}
+.ng-fr{display:none!important}
+.ng-en{display:none!important}
+body[data-lang="fr"] .ng-pt{display:none!important}
+body[data-lang="fr"] .ng-fr{display:revert!important}
+body[data-lang="en"] .ng-pt,body[data-lang="en"] .ng-fr{display:none!important}
+body[data-lang="en"] .ng-en{display:revert!important}
+.lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.1);border-radius:999px;padding:3px}
+.lang-bar button{background:none;border:0;color:rgba(244,242,237,.65);font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.12em;padding:.3rem .65rem;border-radius:999px;cursor:pointer}
+.lang-bar button.on{background:var(--gold2);color:#0E1A2B;font-weight:600}html,body{overflow-x:hidden}.card .big{overflow-wrap:anywhere}.topbar .ed{max-width:100%}
+
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "NewsArticle",
+ "headline": "Mobilização de 31 de outubro: 320 mil manifestantes segundo o ministério do Interior, quase meio milhão segundo os sindicatos, e em queda em relação a 24 de outubro",
+ "description": "Com 70 mil policiais e gendarmes nas ruas, toque de recolher em dois bairros centrais de Paris e mais de 40 estações de metrô fechadas, o terceiro dia nacional de protesto reuniu menos gente do que o anterior.",
+ "datePublished": "2026-10-31T08:00:00+02:00",
+ "dateModified": "2026-10-31T08:00:00+02:00",
+ "inLanguage": [
+  "pt-BR",
+  "fr-FR",
+  "en"
+ ],
+ "author": {
+  "@type": "Person",
+  "name": "Silvania Batista"
+ },
+ "publisher": {
+  "@type": "NewsMediaOrganization",
+  "name": "The Crossing Time",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://thecrossingtime.com/logo.png"
+  }
+ },
+ "mainEntityOfPage": "https://thecrossingtime.com/materias/m_mobilizacao_31_outubro_balanco_2026.html"
+}
+</script>
+</head>
+<body data-lang="pt">
+<div class="topbar">
+  <button class="tct-back" onclick="goBack()">&lsaquo; <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span><span class="ng-en">Back</span></button>
+  <div class="brand">THE CROSSING <span>TIME</span></div>
+  <div class="ed"><span class="ng-pt">Edição nº 356 · 31 de outubro de 2026 · Pouvoir</span><span class="ng-fr">Édition nº 356 · 31 octobre 2026 · Pouvoir</span><span class="ng-en">Issue no. 356 · 31 October 2026 · Pouvoir</span></div>
+  <div class="lang-bar"><button id="b-pt" class="on" onclick="setLang('pt')">PT</button><button id="b-fr" onclick="setLang('fr')">FR</button><button id="b-en" onclick="setLang('en')">EN</button></div>
+</div>
+<div class="thero" data-w="31 oct.">
+  <div class="inner">
+    <div class="badge"><span class="ng-pt">França · Sociedade · Atualização</span><span class="ng-fr">France · Société · Mise à jour</span><span class="ng-en">France · Society · Update</span></div>
+    <div class="kicker"><span class="ng-pt">Terceiro sábado de mobilização</span><span class="ng-fr">Troisième samedi de mobilisation</span><span class="ng-en">Third Saturday of mobilisation</span></div>
+    <h1><span class="ng-pt">Mobilização de 31 de outubro: 320 mil manifestantes segundo o ministério do Interior, quase meio milhão segundo os sindicatos, e em queda em relação a 24 de outubro</span><span class="ng-fr">Mobilisation du 31 octobre : 320 000 manifestants selon le ministère de l'Intérieur, près d'un demi-million selon les syndicats, en baisse par rapport au 24 octobre</span><span class="ng-en">31 October mobilisation: 320,000 protesters according to the interior ministry, nearly half a million according to the unions, and down on 24 October</span></h1>
+    <div class="sub"><span class="ng-pt">Com 70 mil policiais e gendarmes nas ruas, toque de recolher em dois bairros centrais de Paris e mais de 40 estações de metrô fechadas, o terceiro dia nacional de protesto reuniu menos gente do que o anterior. Houve confrontos no fim dos cortejos em Paris, Marselha e Lyon.</span><span class="ng-fr">Avec 70 000 policiers et gendarmes mobilisés, un couvre-feu dans deux quartiers centraux de Paris et plus de 40 stations de métro fermées, la troisième journée nationale de mobilisation a rassemblé moins de monde que la précédente. Des échauffourées ont éclaté en fin de cortège à Paris, Marseille et Lyon.</span><span class="ng-en">With 70,000 police officers and gendarmes deployed, a curfew in two central Paris districts and more than 40 metro stations closed, the third national day of protest drew fewer people than the previous one. Clashes broke out at the end of the marches in Paris, Marseille and Lyon.</span></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="byline">
+    <div class="mono">SB</div>
+    <div class="who"><b><span class="ng-pt">Silvania Batista · Jornalista · THE CROSSING TIME</span><span class="ng-fr">Silvania Batista · Journaliste · THE CROSSING TIME</span><span class="ng-en">Silvania Batista · Journalist · THE CROSSING TIME</span></b><span><span class="ng-pt">Paris</span><span class="ng-fr">Paris</span><span class="ng-en">Paris</span></span></div>
+  </div>
+  <div class="meta"><span><span class="ng-pt">Sábado, <b>31 de outubro de 2026</b></span><span class="ng-fr">Samedi, <b>31 octobre 2026</b></span><span class="ng-en">Saturday, <b>31 October 2026</b></span></span><span><span class="ng-pt">França · Sociedade · Atualização</span><span class="ng-fr">France · Société · Mise à jour</span><span class="ng-en">France · Society · Update</span></span><span><span class="ng-pt">Leitura: 4 min</span><span class="ng-fr">Lecture : 4 min</span><span class="ng-en">Reading: 4 min</span></span></div>
+  <article>
+    <p class="lead"><span class="ng-pt">O terceiro sábado de mobilização nacional na França terminou com números menores do que os do sábado anterior. Segundo o ministério do Interior, 320 mil pessoas foram às ruas em todo o país neste 31 de outubro de 2026; a intersindical contou quase meio milhão, segundo a franceinfo e a France 24. Em 24 de outubro, o governo havia contado 410 mil manifestantes. O dia foi marcado por um dispositivo de segurança excepcional, anunciado pelo ministro do Interior, Laurent Nuñez, que falava em risco de desordem "muito elevado", e por confrontos no fim dos cortejos em Paris, Marselha e Lyon. Para quem mora na França, o efeito prático foi direto: estações de metrô fechadas, bondes interrompidos, comércio com vitrines protegidas e toque de recolher noturno em dois bairros centrais de Paris.</span><span class="ng-fr">Le troisième samedi de mobilisation nationale en France s'est achevé sur des chiffres inférieurs à ceux du samedi précédent. Selon le ministère de l'Intérieur, 320 000 personnes ont manifesté dans tout le pays ce 31 octobre 2026 ; l'intersyndicale en a recensé près d'un demi-million, selon franceinfo et France 24. Le 24 octobre, le gouvernement avait compté 410 000 manifestants. La journée a été marquée par un dispositif de sécurité exceptionnel, annoncé par le ministre de l'Intérieur, Laurent Nuñez, qui évoquait un risque de troubles « très élevé », et par des échauffourées en fin de cortège à Paris, Marseille et Lyon. Pour ceux qui vivent en France, l'effet pratique a été direct : stations de métro fermées, tramways perturbés, commerces barricadés et couvre-feu nocturne dans deux quartiers centraux de Paris.</span><span class="ng-en">France's third Saturday of national mobilisation ended with lower numbers than the previous Saturday. According to the interior ministry, 320,000 people marched across the country on 31 October 2026; the union coalition (intersyndicale) counted nearly half a million, according to franceinfo and France 24. On 24 October, the government had counted 410,000 protesters. The day was marked by an exceptional security operation announced by interior minister Laurent Nuñez, who spoke of a "very high" risk of disorder, and by clashes at the end of the marches in Paris, Marseille and Lyon. For people living in France, the practical effect was immediate: metro stations closed, trams disrupted, shops boarded up and a night-time curfew in two central Paris districts.</span></p>
+    <div class="grid">
+      <div class="card"><div class="big">320 mil / 320 000</div><div class="lbl"><span class="ng-pt">Manifestantes em toda a França, segundo o ministério do Interior</span><span class="ng-fr">Manifestants dans toute la France, selon le ministère de l'Intérieur</span><span class="ng-en">Protesters across France, according to the interior ministry</span></div></div>
+      <div class="card"><div class="big">~500 mil / ~500 000</div><div class="lbl"><span class="ng-pt">Contagem da intersindical (quase meio milhão)</span><span class="ng-fr">Décompte de l'intersyndicale (près d'un demi-million)</span><span class="ng-en">Union coalition count (nearly half a million)</span></div></div>
+      <div class="card"><div class="big">410 mil / 410 000</div><div class="lbl"><span class="ng-pt">Contagem do governo em 24 de outubro</span><span class="ng-fr">Décompte du gouvernement le 24 octobre</span><span class="ng-en">Government count on 24 October</span></div></div>
+      <div class="card"><div class="big">70 000</div><div class="lbl"><span class="ng-pt">Policiais e gendarmes mobilizados no sábado</span><span class="ng-fr">Policiers et gendarmes mobilisés samedi</span><span class="ng-en">Police officers and gendarmes deployed on Saturday</span></div></div>
+    </div>
+    <div class="sec"><div class="num"><span class="ng-pt">1 · O que se sabe</span><span class="ng-fr">1 · Ce que l'on sait</span><span class="ng-en">1 · What we know</span></div><h2><span class="ng-pt">Menos gente nas ruas, mas o mesmo dispositivo de segurança</span><span class="ng-fr">Moins de monde dans la rue, mais le même dispositif de sécurité</span><span class="ng-en">Fewer people on the streets, but the same security operation</span></h2></div>
+    <p><span class="ng-pt">Os números oficiais e sindicais divergem, como em toda mobilização na França, mas apontam na mesma direção: o terceiro dia nacional reuniu menos manifestantes do que o de 24 de outubro. O governo manteve o mesmo efetivo da semana anterior, cerca de 70 mil policiais e gendarmes, segundo o site The Local. As manifestações foram autorizadas, mas não nos centros das cidades; em Paris, a Justiça derrubou a proibição de uma marcha entre Bastille e Nation. O uso de máscaras que escondem o rosto foi proibido nos atos. No fim da tarde, segundo a cobertura ao vivo da franceinfo, houve confrontos no fim dos cortejos nas grandes cidades, entre elas Paris, Marselha e Lyon. O balanço oficial de detenções e feridos ainda não havia sido divulgado no fechamento desta matéria.</span><span class="ng-fr">Les chiffres officiels et syndicaux divergent, comme lors de toute mobilisation en France, mais vont dans le même sens : la troisième journée nationale a réuni moins de manifestants que celle du 24 octobre. Le gouvernement a maintenu les mêmes effectifs que la semaine précédente, environ 70 000 policiers et gendarmes, selon le site The Local. Les manifestations étaient autorisées, mais pas dans les centres-villes ; à Paris, la justice a annulé l'interdiction d'une marche entre Bastille et Nation. Le port de masques dissimulant le visage était interdit. En fin d'après-midi, selon le direct de franceinfo, des échauffourées ont éclaté en fin de cortège dans les grandes villes, dont Paris, Marseille et Lyon. Le bilan officiel des interpellations et des blessés n'avait pas encore été publié au moment de la publication de cet article.</span><span class="ng-en">Official and union figures differ, as with every mobilisation in France, but they point the same way: the third national day drew fewer protesters than the one on 24 October. The government kept the same deployment as the week before, around 70,000 police officers and gendarmes, according to The Local. Demonstrations were allowed, but not in city centres; in Paris, a court overturned a ban on a march between Bastille and Nation. Face-concealing masks were banned at the protests. In the late afternoon, according to franceinfo's live coverage, clashes broke out at the end of the marches in the big cities, including Paris, Marseille and Lyon. The official tally of arrests and injuries had not yet been released when this article was written.</span></p>
+    <div class="sec"><div class="num"><span class="ng-pt">2 · Por que as pessoas protestam</span><span class="ng-fr">2 · Pourquoi les gens manifestent</span><span class="ng-en">2 · Why people are protesting</span></div><h2><span class="ng-pt">Custo de vida, desigualdade e, agora, o direito de manifestar</span><span class="ng-fr">Coût de la vie, inégalités et, désormais, le droit de manifester</span><span class="ng-en">Cost of living, inequality and now the right to protest</span></h2></div>
+    <p><span class="ng-pt">O movimento começou pelo aumento do custo de vida, pela desigualdade e pelas condições de ensino, com semanas de protestos de estudantes do ensino médio. Depois da repressão e de feridos graves entre manifestantes, as reivindicações passaram a incluir as liberdades civis e o direito de manifestar, segundo The Local. Sindicatos, coletes amarelos e estudantes secundaristas e universitários dividem as ruas. O contexto político pesa: a eleição presidencial acontece em cerca de seis meses, e o presidente Emmanuel Macron disse que não é "normal" a França viver tamanha agitação tão perto da votação. As autoridades reconheceram falhas de segurança e de inteligência nos confrontos e saques de 17 de outubro.</span><span class="ng-fr">Le mouvement est parti de la hausse du coût de la vie, des inégalités et des conditions d'enseignement, avec des semaines de mobilisation lycéenne. Après la répression et des blessures graves parmi les manifestants, les revendications se sont élargies aux libertés publiques et au droit de manifester, selon The Local. Syndicats, gilets jaunes, lycéens et étudiants partagent la rue. Le contexte politique pèse : l'élection présidentielle a lieu dans environ six mois, et le président Emmanuel Macron a jugé qu'il n'était « pas normal » que la France connaisse une telle agitation si près du scrutin. Les autorités ont reconnu des défaillances de sécurité et de renseignement lors des affrontements et pillages du 17 octobre.</span><span class="ng-en">The movement began over the rising cost of living, inequality and learning conditions, after weeks of protests by high school students. After the crackdown and serious injuries among protesters, demands widened to civil liberties and the right to protest, according to The Local. Unions, yellow vest activists and high school and university students share the streets. The political context weighs heavily: the presidential election is about six months away, and President Emmanuel Macron said it was "not normal" for France to be in such turmoil so close to the vote. The authorities acknowledged security and intelligence failures during the clashes and looting of 17 October.</span></p>
+    <div class="quote"><p><span class="ng-pt">320 mil segundo o ministério, quase meio milhão segundo a intersindical: o terceiro sábado reuniu menos gente do que o de 24 de outubro.</span><span class="ng-fr">320 000 selon le ministère, près d'un demi-million selon l'intersyndicale : le troisième samedi a réuni moins de monde que le 24 octobre.</span><span class="ng-en">320,000 according to the ministry, nearly half a million according to the unions: the third Saturday drew fewer people than 24 October.</span></p><div class="attr"><span class="ng-pt">Números do ministério do Interior e da intersindical, via franceinfo e France 24</span><span class="ng-fr">Chiffres du ministère de l'Intérieur et de l'intersyndicale, via franceinfo et France 24</span><span class="ng-en">Interior ministry and union figures, via franceinfo and France 24</span></div></div>
+    <div class="servbox">
+      <h3><span class="ng-pt">Serviço: o que vale neste fim de semana em Paris</span><span class="ng-fr">Service : ce qui s'applique ce week-end à Paris</span><span class="ng-en">Service: what applies this weekend in Paris</span></h3>
+      <ul class="lista">
+        <li><span class="ng-pt">Toque de recolher das 23h às 6h no sábado e no domingo nas áreas de République e Châtelet-Les Halles (The Local).</span><span class="ng-fr">Couvre-feu de 23h à 6h samedi et dimanche dans les secteurs de République et Châtelet-Les Halles (The Local).</span><span class="ng-en">Curfew from 11pm to 6am on Saturday and Sunday in the République and Châtelet-Les Halles areas (The Local).</span></li>
+        <li><span class="ng-pt">Mais de 40 estações de metrô fechadas e bondes perturbados no sábado: confira o aplicativo e o site da RATP antes de sair.</span><span class="ng-fr">Plus de 40 stations de métro fermées et tramways perturbés samedi : vérifiez l'application et le site de la RATP avant de partir.</span><span class="ng-en">More than 40 metro stations closed and trams disrupted on Saturday: check the RATP app and website before you travel.</span></li>
+        <li><span class="ng-pt">Quem tem título de residência deve andar com ele ou com o recibo de pedido (récépissé) e evitar as áreas de confronto.</span><span class="ng-fr">Les titulaires d'un titre de séjour doivent le garder sur eux, ou leur récépissé, et éviter les zones d'affrontement.</span><span class="ng-en">Residence permit holders should carry it, or their application receipt (récépissé), and avoid areas where clashes occur.</span></li>
+        <li><span class="ng-pt">Toque de recolher e restrições também valem em outras cidades: consulte o site da préfecture do seu departamento.</span><span class="ng-fr">Des couvre-feux et restrictions s'appliquent aussi dans d'autres villes : consultez le site de la préfecture de votre département.</span><span class="ng-en">Curfews and restrictions also apply in other cities: check your département's préfecture website (local state office).</span></li>
+      </ul>
+    </div>
+    <div class="sigfim"><span class="ng-pt">Por Silvania Batista · Jornalista · THE CROSSING TIME · Paris</span><span class="ng-fr">Par Silvania Batista · Journaliste · THE CROSSING TIME · Paris</span><span class="ng-en">By Silvania Batista · Journalist · THE CROSSING TIME · Paris</span></div>
+    <div class="ednote"><h3><span class="ng-pt">Nota Editorial · Verificação</span><span class="ng-fr">Note éditoriale · Vérification</span><span class="ng-en">Editorial note · Verification</span></h3><p><span class="ng-pt"><strong>Fontes:</strong> franceinfo, "Mobilisation du 31 octobre : l'intersyndicale recense près d'un demi-million de manifestants, le ministère de l'Intérieur 320 000, en baisse par rapport au 24 octobre" e cobertura ao vivo do dia (31/10/2026); France 24, "Acte III en direct : 320 000 manifestants en France selon le ministère de l'Intérieur, des heurts à Paris" (31/10/2026); The Local, "Fears of violence as France braces for Halloween protests" (31/10/2026); para 24 de outubro, matéria da TCT de 25/10/2026. <strong>Confirmado:</strong> 320 mil manifestantes segundo o ministério do Interior (franceinfo e France 24); queda em relação a 24 de outubro. <strong>Atribuído:</strong> quase meio milhão (intersindical); 70 mil agentes, toque de recolher, estações fechadas e proibições (The Local); confrontos em Paris, Marselha e Lyon (franceinfo); fala de Laurent Nuñez e de Emmanuel Macron. <strong>Não verificado:</strong> balanço de detenções e feridos, não divulgado no fechamento. Matéria informativa.</span><span class="ng-fr"><strong>Sources :</strong> franceinfo, « Mobilisation du 31 octobre : l'intersyndicale recense près d'un demi-million de manifestants, le ministère de l'Intérieur 320 000, en baisse par rapport au 24 octobre » et direct de la journée (31/10/2026) ; France 24, « Acte III en direct : 320 000 manifestants en France selon le ministère de l'Intérieur, des heurts à Paris » (31/10/2026) ; The Local, « Fears of violence as France braces for Halloween protests » (31/10/2026) ; pour le 24 octobre, article de TCT du 25/10/2026. <strong>Confirmé :</strong> 320 000 manifestants selon le ministère de l'Intérieur (franceinfo et France 24) ; baisse par rapport au 24 octobre. <strong>Attribué :</strong> près d'un demi-million (intersyndicale) ; 70 000 agents, couvre-feu, stations fermées et interdictions (The Local) ; échauffourées à Paris, Marseille et Lyon (franceinfo) ; propos de Laurent Nuñez et d'Emmanuel Macron. <strong>Non vérifié :</strong> bilan des interpellations et des blessés, non communiqué à l'heure de la publication. Article d'information.</span><span class="ng-en"><strong>Sources:</strong> franceinfo, "Mobilisation du 31 octobre : l'intersyndicale recense près d'un demi-million de manifestants, le ministère de l'Intérieur 320 000, en baisse par rapport au 24 octobre" and live coverage of the day (31/10/2026); France 24, "Acte III en direct : 320 000 manifestants en France selon le ministère de l'Intérieur, des heurts à Paris" (31/10/2026); The Local, "Fears of violence as France braces for Halloween protests" (31/10/2026); for 24 October, TCT article of 25/10/2026. <strong>Confirmed:</strong> 320,000 protesters according to the interior ministry (franceinfo and France 24); a fall compared with 24 October. <strong>Attributed:</strong> nearly half a million (unions); 70,000 officers, curfew, closed stations and bans (The Local); clashes in Paris, Marseille and Lyon (franceinfo); remarks by Laurent Nuñez and Emmanuel Macron. <strong>Unverified:</strong> tally of arrests and injuries, not released at the time of writing. Informational article.</span></p></div>
+    <div class="ednote"><h3><span class="ng-pt">Sobre as imagens</span><span class="ng-fr">À propos des images</span><span class="ng-en">About the images</span></h3><p><span class="ng-pt">Hero tipográfico. Nenhuma imagem de terceiros foi usada.</span><span class="ng-fr">Hero typographique. Aucune image de tiers n'a été utilisée.</span><span class="ng-en">Typographic hero. No third-party image was used.</span></p></div>
+  </article>
+</div>
+<div class="pilares">POUVOIR&nbsp;&nbsp;&#9670;&nbsp;&nbsp;MOBILIDADE&nbsp;&nbsp;&#9670;&nbsp;&nbsp;TRANSFORMATION</div>
+<div class="sitefoot">
+  <b>THE CROSSING TIME</b> · by Porta Voz do Imigrante<br>
+  Geopolítica · Direito · Economia · Sociedade · Mobilidade Global<br>
+  <span>thecrossingtime.com</span> · WhatsApp +33 6 69 99 72 96 · Genebra · Paris · São Paulo
+</div>
+<script>
+function goBack(){ if(window.parent&&window.parent!==window){try{window.parent.closeMateria();return;}catch(e){}} window.location.href='../index.html#materias'; }
+function setLang(l){document.body.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);['pt','fr','en'].forEach(function(x){var b=document.getElementById('b-'+x);if(b)b.className=(x===l)?'on':'';});try{localStorage.setItem('tct-lang',l);}catch(e){}}
+(function(){var s='pt';try{s=localStorage.getItem('tct-lang')||'pt';}catch(e){}if(s!=='pt')setLang(s);})();
+</script>
+</body>
+</html>

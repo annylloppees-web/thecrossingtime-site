@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Título de residência: prefeitura tem agora 90 dias para responder · The Crossing Time</title>
+<meta name="author" content="Silvania Batista">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#071a3d;--navy2:#0c2452;--gold:#B8924A;--gold2:#c7a45a;--off:#F5F1E8;--wine:#8B2635;--ink:#1a1a1a}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--off);color:var(--ink);font-family:'Lora',serif;line-height:1.78;font-size:18px}
+.topbar{background:var(--navy);color:var(--off);padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;position:sticky;top:0;z-index:9600}
+.topbar .brand{font-family:'Poppins',sans-serif;font-weight:700;letter-spacing:3px;font-size:15px}
+.topbar .brand span{color:var(--gold2)}
+.topbar .ed{font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gold2);text-transform:uppercase}
+.tct-back{background:none;border:0;color:#F4F2ED;font-family:'Poppins',sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;padding:.4rem .2rem}
+.thero{background:linear-gradient(160deg,#0a1226 0%,var(--navy) 60%,#0c2452 100%);color:#fff;padding:64px 24px 54px;position:relative;overflow:hidden;min-height:340px;display:flex;align-items:center}
+.thero::before{content:attr(data-w);position:absolute;right:12px;top:-30px;font-family:'Poppins',sans-serif;font-weight:800;font-size:150px;color:rgba(199,164,90,.07);letter-spacing:-4px;z-index:1}
+.thero .inner{max-width:900px;margin:0 auto;position:relative;z-index:2}
+.badge{display:inline-block;font-family:'Poppins',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;padding:6px 13px;border-radius:2px;background:var(--wine);color:#fff;margin-bottom:16px}
+.kicker{font-family:'Poppins',sans-serif;font-size:12px;font-weight:600;letter-spacing:3px;color:var(--gold2);text-transform:uppercase;margin-bottom:14px}
+.thero h1{font-family:'Lora',serif;font-weight:700;color:#fff;font-size:clamp(27px,4vw,44px);line-height:1.18;margin-bottom:16px}
+.thero .sub{color:#dcd6c6;font-size:clamp(16px,2vw,20px);font-style:italic;line-height:1.5;max-width:820px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.byline{display:flex;align-items:center;gap:14px;padding:30px 0 12px;border-bottom:1px solid rgba(7,26,61,.15)}
+.byline .mono{width:52px;height:52px;border-radius:50%;background:var(--navy);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:15px;flex-shrink:0}
+.byline .who b{display:block;font-size:15px;font-weight:600;color:var(--navy);font-family:'Poppins',sans-serif}
+.byline .who span{font-size:12.5px;color:#5a5a5a;letter-spacing:.4px;font-family:'Poppins',sans-serif}
+.meta{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:1.4px;text-transform:uppercase;padding:14px 0 8px;display:flex;flex-wrap:wrap;gap:8px 18px}
+.meta b{color:var(--wine);font-weight:600}
+article{padding:20px 0 10px}
+article p{margin-bottom:22px}
+.lead{font-size:20.5px;line-height:1.72}
+.sec{margin:46px 0 20px}
+.sec .num{font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.sec h2{font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:clamp(23px,3vw,31px);line-height:1.25}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:32px 0}
+.card{background:#fff;border-top:4px solid var(--gold);border-radius:3px;padding:20px 18px}
+.card .big{font-family:'Poppins',sans-serif;font-weight:700;font-size:23px;color:var(--navy);line-height:1.15}
+.card .lbl{font-family:'Poppins',sans-serif;font-size:12px;color:#6a6a6a;letter-spacing:.6px;text-transform:uppercase;margin-top:8px;line-height:1.45}
+.servbox{background:#fff;border:1px solid rgba(184,146,74,.45);border-left:5px solid var(--wine);border-radius:3px;padding:24px 28px;margin:34px 0}
+.servbox h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--wine);text-transform:uppercase;margin-bottom:14px}
+.lista{margin:0;padding-left:0;list-style:none}
+.lista li{position:relative;padding-left:26px;margin-bottom:11px;font-size:16.5px;line-height:1.6}
+.lista li::before{content:'\25C6';position:absolute;left:0;top:0;color:var(--gold);font-size:12px}
+.ednote{background:rgba(7,26,61,.05);border-left:4px solid var(--navy);padding:22px 26px;margin:26px 0 28px;border-radius:3px}
+.ednote h3{font-family:'Poppins',sans-serif;font-size:13px;font-weight:700;letter-spacing:2.4px;color:var(--navy);text-transform:uppercase;margin-bottom:12px}
+.ednote p{font-size:14.5px;line-height:1.7;color:#3a3a3a;margin-bottom:0}
+.sigfim{font-family:'Poppins',sans-serif;font-size:13px;letter-spacing:.6px;color:var(--navy);border-top:1px solid rgba(7,26,61,.15);padding:16px 0 4px;margin-top:30px;font-weight:600}
+.pilares{background:var(--navy);color:var(--gold2);text-align:center;padding:24px 20px;font-family:'Poppins',sans-serif;font-weight:600;letter-spacing:4px;font-size:14px}
+.sitefoot{background:var(--navy2);color:#cfc8b8;text-align:center;padding:26px 20px;font-family:'Poppins',sans-serif;font-size:12.5px;line-height:2}
+.sitefoot b{color:#fff;letter-spacing:2px}.sitefoot span{color:var(--gold2)}
+.imgnote{background:rgba(7,26,61,.05);border-left:4px solid var(--gold);padding:16px 20px;margin:26px 0;border-radius:3px;font-family:'Poppins',sans-serif;font-size:12.5px;line-height:1.6;color:#4a4a4a}
+.imgnote b{color:var(--navy);letter-spacing:1px;text-transform:uppercase;font-size:11px;display:block;margin-bottom:6px}
+.ng-fr{display:none!important}
+.ng-en{display:none!important}
+body[data-lang="fr"] .ng-pt{display:none!important}
+body[data-lang="fr"] .ng-fr{display:revert!important}
+body[data-lang="en"] .ng-pt,body[data-lang="en"] .ng-fr{display:none!important}
+body[data-lang="en"] .ng-en{display:revert!important}
+.lang-bar{display:flex;gap:2px;background:rgba(244,242,237,.1);border-radius:999px;padding:3px}
+.lang-bar button{background:none;border:0;color:rgba(244,242,237,.65);font-family:'Poppins',sans-serif;font-size:10px;letter-spacing:.12em;padding:.3rem .65rem;border-radius:999px;cursor:pointer}
+.lang-bar button.on{background:var(--gold2);color:#0E1A2B;font-weight:600}
+@media (max-width:480px){.thero::before{font-size:90px}.pilares{letter-spacing:1.5px;font-size:11px;padding:20px 10px}}
+.card .big,.lista li,article p,.ednote p{overflow-wrap:anywhere}
+
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "NewsArticle",
+ "headline": "Título de residência: a prefeitura passa a ter 90 dias para responder, e quem trabalha ganha novas proteções",
+ "description": "O prazo geral cai de quatro meses para 90 dias, o silêncio continua valendo recusa, e trocar de empregador fica mais fácil depois de seis meses.",
+ "datePublished": "2026-11-02T08:00:00+02:00",
+ "dateModified": "2026-11-02T08:00:00+02:00",
+ "inLanguage": [
+  "pt-BR",
+  "fr-FR",
+  "en"
+ ],
+ "author": {
+  "@type": "Person",
+  "name": "Silvania Batista"
+ },
+ "publisher": {
+  "@type": "NewsMediaOrganization",
+  "name": "The Crossing Time",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://thecrossingtime.com/logo.png"
+  }
+ },
+ "mainEntityOfPage": "https://thecrossingtime.com/materias/m_decreto_2026_1001_titres_sejour_90_dias_2026.html"
+}
+</script>
+</head>
+<body data-lang="pt">
+<div class="topbar">
+  <button class="tct-back" onclick="goBack()">&lsaquo; <span class="ng-pt">Voltar</span><span class="ng-fr">Retour</span><span class="ng-en">Back</span></button>
+  <div class="brand">THE CROSSING <span>TIME</span></div>
+  <div class="ed"><span class="ng-pt">Edição nº 367 · 2 de novembro de 2026 · Mobilidade</span><span class="ng-fr">Édition nº 367 · 2 novembre 2026 · Mobilidade</span><span class="ng-en">Issue no. 367 · 2 November 2026 · Mobilidade</span></div>
+  <div class="lang-bar"><button id="b-pt" class="on" onclick="setLang('pt')">PT</button><button id="b-fr" onclick="setLang('fr')">FR</button><button id="b-en" onclick="setLang('en')">EN</button></div>
+</div>
+<div class="thero" data-w="90">
+  <div class="inner">
+    <div class="badge"><span class="ng-pt">Imigração · Trabalho · Serviço</span><span class="ng-fr">Immigration · Travail · Pratique</span><span class="ng-en">Immigration · Work · Practical</span></div>
+    <div class="kicker"><span class="ng-pt">Decreto nº 2026-1001 · em vigor desde 30 de outubro</span><span class="ng-fr">Décret n° 2026-1001 · en vigueur depuis le 30 octobre</span><span class="ng-en">Decree no. 2026-1001 · in force since 30 October</span></div>
+    <h1><span class="ng-pt">Título de residência: a prefeitura passa a ter 90 dias para responder, e quem trabalha ganha novas proteções</span><span class="ng-fr">Titre de séjour : la préfecture a désormais 90 jours pour répondre, et les salariés étrangers gagnent de nouvelles protections</span><span class="ng-en">Residence permits: French prefectures now have 90 days to answer, and foreign workers gain new protections</span></h1>
+    <div class="sub"><span class="ng-pt">O prazo geral cai de quatro meses para 90 dias, o silêncio continua valendo recusa, e trocar de empregador fica mais fácil depois de seis meses.</span><span class="ng-fr">Le délai général passe de quatre mois à 90 jours, le silence vaut toujours refus, et changer d'employeur devient possible plus tôt, après six mois.</span><span class="ng-en">The general deadline drops from four months to 90 days, silence still counts as refusal, and changing employer becomes easier after six months.</span></div>
+  </div>
+</div>
+<div class="wrap">
+  <div class="byline">
+    <div class="mono">SB</div>
+    <div class="who"><b><span class="ng-pt">Silvania Batista · Jornalista · THE CROSSING TIME</span><span class="ng-fr">Silvania Batista · Journaliste · THE CROSSING TIME</span><span class="ng-en">Silvania Batista · Journalist · THE CROSSING TIME</span></b><span><span class="ng-pt">Paris</span><span class="ng-fr">Paris</span><span class="ng-en">Paris</span></span></div>
+  </div>
+  <div class="meta">
+    <span><span class="ng-pt">Segunda-feira, <b>2 de novembro de 2026</b></span><span class="ng-fr">Lundi <b>2 novembre 2026</b></span><span class="ng-en">Monday, <b>2 November 2026</b></span></span>
+    <span><span class="ng-pt">Imigração · Trabalho</span><span class="ng-fr">Immigration · Travail</span><span class="ng-en">Immigration · Work</span></span>
+    <span><span class="ng-pt">Leitura: 5 min</span><span class="ng-fr">Lecture : 5 min</span><span class="ng-en">Reading: 5 min</span></span>
+  </div>
+  <article>
+    <p class="lead"><span class="ng-pt">Desde 30 de outubro de 2026, a administração francesa tem 90 dias, contados a partir do depósito de um pedido completo, para decidir sobre a maioria dos pedidos de carte de séjour (título de residência). Antes, eram quatro meses. A mudança vem do decreto nº 2026-1001, de 26 de outubro, publicado no Journal officiel de 29 de outubro, que também mexe nas regras de quem vive na França com um título ligado ao trabalho: o prazo durante o qual a troca de empregador pode pesar contra o estrangeiro cai de doze para seis meses, e quem perde o emprego sem querer ganha uma margem de proteção.</span><span class="ng-fr">Depuis le 30 octobre 2026, l'administration dispose de 90 jours, à compter du dépôt d'une demande complète, pour statuer sur la plupart des demandes de carte de séjour. Auparavant, le délai était de quatre mois. Le changement vient du décret n° 2026-1001 du 26 octobre, publié au Journal officiel du 29 octobre, qui modifie aussi les règles applicables aux étrangers titulaires d'un titre lié au travail : la période pendant laquelle un changement d'employeur peut leur être opposé passe de douze à six mois, et la perte involontaire d'emploi est mieux encadrée.</span><span class="ng-en">Since 30 October 2026, the French administration has 90 days from the filing of a complete application to decide on most carte de séjour (residence permit) applications. The previous limit was four months. The change comes from decree no. 2026-1001 of 26 October, published in the Journal officiel (France's official gazette) on 29 October. It also changes the rules for foreigners whose permit is tied to work: the period during which a change of employer can count against them falls from twelve to six months, and people who lose their job involuntarily get a protective margin.</span></p>
+    <div class="grid">
+      <div class="card"><div class="big">90 dias</div><div class="lbl"><span class="ng-pt">Prazo geral de decisão (antes: 4 meses)</span><span class="ng-fr">Délai général de décision (avant : 4 mois)</span><span class="ng-en">General decision deadline (was 4 months)</span></div></div>
+      <div class="card"><div class="big">+30 dias</div><div class="lbl"><span class="ng-pt">Prorrogação possível em casos complexos</span><span class="ng-fr">Prolongation possible pour les dossiers complexes</span><span class="ng-en">Possible extension for complex files</span></div></div>
+      <div class="card"><div class="big">6 meses</div><div class="lbl"><span class="ng-pt">Restrição à troca de empregador (antes: 12)</span><span class="ng-fr">Restriction au changement d'employeur (avant : 12)</span><span class="ng-en">Limit on changing employer (was 12)</span></div></div>
+      <div class="card"><div class="big">3 meses</div><div class="lbl"><span class="ng-pt">Perda involuntária de emprego sem retirada do título temporário</span><span class="ng-fr">Perte involontaire d'emploi sans retrait du titre temporaire</span><span class="ng-en">Involuntary job loss without withdrawal of temporary permit</span></div></div>
+    </div>
+    <div class="sec"><div class="num"><span class="ng-pt">1 · O prazo</span><span class="ng-fr">1 · Le délai</span><span class="ng-en">1 · The deadline</span></div><h2><span class="ng-pt">Noventa dias, mas o silêncio ainda é um não</span><span class="ng-fr">Quatre-vingt-dix jours, mais le silence reste un refus</span><span class="ng-en">Ninety days, but silence is still a no</span></h2></div>
+    <p><span class="ng-pt">O novo artigo R. 432-2 do CESEDA (código que regula a entrada e a permanência de estrangeiros) fixa o prazo de 90 dias a partir do depósito de um dossiê completo, e não da data do agendamento. Se o caso for complexo, a administração pode acrescentar 30 dias, desde que avise o requerente. Algumas categorias têm prazos próprios: para a carte "talent, chercheur", por exemplo, o prazo é de 60 dias.</span><span class="ng-fr">Le nouvel article R. 432-2 du CESEDA fixe le délai de 90 jours à compter du dépôt d'un dossier complet, et non de la prise de rendez-vous. Pour un dossier complexe, l'administration peut ajouter 30 jours, à condition d'en informer le demandeur. Certaines catégories ont des délais propres : 60 jours, par exemple, pour la carte « talent, chercheur ».</span><span class="ng-en">The new article R. 432-2 of the CESEDA (the code governing foreigners' entry and stay) sets the 90-day limit from the filing of a complete file, not from the appointment date. For complex files the administration can add 30 days, provided it informs the applicant. Some categories have their own limits: 60 days, for instance, for the "talent, researcher" card.</span></p>
+    <p><span class="ng-pt">O ponto que não mudou é decisivo: na regra geral, se a préfecture não responder no prazo, o silêncio vale decisão implícita de recusa. Ou seja, a falta de resposta não significa que o título foi concedido. Segundo análises jurídicas publicadas desde 30 de outubro, a recusa implícita não gera por si só uma ordem de saída do território (OQTF), e o decreto não traz uma regra de transição expressa para os pedidos já depositados antes dessa data.</span><span class="ng-fr">Le point qui ne change pas est décisif : pour la règle générale, le silence de la préfecture à l'expiration du délai vaut décision implicite de rejet. L'absence de réponse ne signifie donc pas que le titre est accordé. Selon des analyses juridiques publiées depuis le 30 octobre, le refus implicite n'entraîne pas à lui seul une OQTF, et le décret ne prévoit pas de règle transitoire expresse pour les demandes déposées avant cette date.</span><span class="ng-en">One thing has not changed, and it matters: under the general rule, if the prefecture does not answer in time, silence counts as an implicit refusal. No answer does not mean the permit was granted. According to legal analyses published since 30 October, an implicit refusal does not by itself trigger an order to leave France (OQTF), and the decree contains no explicit transition rule for applications filed before that date.</span></p>
+    <div class="sec"><div class="num"><span class="ng-pt">2 · Quem trabalha</span><span class="ng-fr">2 · Les salariés</span><span class="ng-en">2 · Workers</span></div><h2><span class="ng-pt">Trocar de empregador e perder o emprego: o que muda</span><span class="ng-fr">Changer d'employeur ou perdre son emploi : ce qui change</span><span class="ng-en">Changing employer or losing a job: what changes</span></h2></div>
+    <p><span class="ng-pt">O artigo 14 do decreto altera o artigo R. 5221-36 do Código do Trabalho: o período, depois de uma primeira autorização de trabalho, em que a ruptura do contrato pode justificar a recusa da primeira renovação cai de doze para seis meses. Já havia exceção para a perda involuntária do emprego; agora há também uma exceção quando o empregador comete violação grave das condições de trabalho. A mudança não dispensa a autorização de trabalho para um novo emprego, quando ela for exigida.</span><span class="ng-fr">L'article 14 du décret modifie l'article R. 5221-36 du code du travail : la période suivant une première autorisation de travail pendant laquelle la rupture du contrat peut justifier un refus du premier renouvellement passe de douze à six mois. L'exception pour privation involontaire d'emploi existait déjà ; s'y ajoute une exception en cas de violation grave des conditions de travail par l'employeur. Cela ne dispense pas de l'autorisation de travail pour un nouvel emploi, lorsqu'elle est requise.</span><span class="ng-en">Article 14 of the decree amends article R. 5221-36 of the Labour Code: the period after a first work authorisation during which ending the contract can justify refusing the first renewal falls from twelve to six months. There was already an exception for involuntary job loss; there is now also one for serious breaches of working conditions by the employer. A new job may still require a work authorisation.</span></p>
+    <p><span class="ng-pt">Para quem tem a carte "travailleur temporaire", a préfecture não pode retirar o título apenas porque a pessoa perdeu o emprego sem querer, dentro de um limite de três meses somados durante a validade do cartão. Esse prazo pode ser prolongado por mais três meses em certas situações graves de exploração previstas no Código Penal. A proteção não prolonga um título já vencido.</span><span class="ng-fr">Pour les titulaires d'une carte « travailleur temporaire », la préfecture ne peut pas retirer le titre au seul motif d'une perte involontaire d'emploi, dans la limite de trois mois cumulés sur la durée de validité. Une prolongation de trois mois est prévue dans certaines situations d'exploitation grave visées par le code pénal. Cette protection ne prolonge pas un titre expiré.</span><span class="ng-en">For holders of a "temporary worker" card, the prefecture cannot withdraw the permit solely because the person lost their job involuntarily, up to three months in total during the card's validity. This can be extended by three more months in certain serious exploitation situations defined in the Penal Code. The protection does not extend an expired permit.</span></p>
+    <div class="sec"><div class="num"><span class="ng-pt">3 · Talentos</span><span class="ng-fr">3 · Talents</span><span class="ng-en">3 · Skilled workers</span></div><h2><span class="ng-pt">Carte bleue européenne mais longa e mobilidade mais rápida</span><span class="ng-fr">Carte bleue européenne plus longue et mobilité plus rapide</span><span class="ng-en">Longer EU Blue Card and faster mobility</span></h2></div>
+    <p><span class="ng-pt">A carte bleue européenne (título europeu para trabalhadores qualificados) passa a acompanhar a duração do contrato quando ele é de pelo menos dois anos, com limite de quatro anos; para contratos mais curtos, cobre o contrato mais três meses, até dois anos. Quem tem esse título em outro país da UE pode vir trabalhar na França depois de 12 meses (antes eram 18), e depois de seis meses nas mobilidades seguintes. Em caso de recusa de renovação ou retirada por falha do empregador, o préfet deve conceder um prazo de seis meses para procurar emprego.</span><span class="ng-fr">La carte bleue européenne suit désormais la durée du contrat lorsqu'il est d'au moins deux ans, dans la limite de quatre ans ; pour un contrat plus court, elle couvre le contrat plus trois mois, dans la limite de deux ans. Le titulaire d'une carte délivrée par un autre État membre peut venir travailler en France après 12 mois (contre 18), puis après six mois pour les mobilités suivantes. En cas de refus de renouvellement ou de retrait lié à un manquement de l'employeur, le préfet doit accorder un délai de six mois de recherche d'emploi.</span><span class="ng-en">The EU Blue Card (the European permit for skilled workers) now matches the contract length when it is at least two years, up to four years; for shorter contracts it covers the contract plus three months, up to two years. Holders of a Blue Card from another EU country can move to work in France after 12 months (previously 18), then after six months for later moves. If renewal is refused or the card withdrawn because of an employer's failure, the prefect must grant six months to look for a job.</span></p>
+    <p><span class="ng-pt">O decreto ainda cria uma condição de salário mínimo para alguns títulos de mobilidade intragrupo (ICT), fixada por arrêté, e uma dispensa de autorização de trabalho para certas prestações de empregadores britânicos, em setores definidos por arrêté. Esses detalhes dependem de textos complementares.</span><span class="ng-fr">Le décret introduit aussi une condition de rémunération minimale pour certains titres de mobilité intragroupe (ICT), fixée par arrêté, et une dispense d'autorisation de travail pour certaines prestations d'employeurs britanniques, dans des secteurs définis par arrêté. Ces détails dépendent de textes complémentaires.</span><span class="ng-en">The decree also introduces a minimum salary condition for some intra-corporate transfer (ICT) permits, set by ministerial order, and a work authorisation exemption for certain services by British employers, in sectors defined by order. These details depend on further texts.</span></p>
+    <div class="servbox"><h3><span class="ng-pt">Serviço</span><span class="ng-fr">Pratique</span><span class="ng-en">Practical</span></h3><ul class="lista">
+      <li><span class="ng-pt">Anote a data em que o seu dossiê foi registrado como completo no ANEF (administration-etrangers-en-france.interieur.gouv.fr): é dela que contam os 90 dias.</span><span class="ng-fr">Notez la date à laquelle votre dossier a été enregistré comme complet sur l'ANEF (administration-etrangers-en-france.interieur.gouv.fr) : c'est elle qui fait courir les 90 jours.</span><span class="ng-en">Note the date your file was recorded as complete on ANEF (administration-etrangers-en-france.interieur.gouv.fr): the 90 days run from that date.</span></li>
+      <li><span class="ng-pt">Guarde o récépissé ou a attestation de prolongation de instruction: eles provam a sua situação regular enquanto o pedido é analisado.</span><span class="ng-fr">Conservez le récépissé ou l'attestation de prolongation d'instruction : ils prouvent votre situation régulière pendant l'instruction.</span><span class="ng-en">Keep your récépissé or attestation de prolongation d'instruction: they prove your legal status while the application is processed.</span></li>
+      <li><span class="ng-pt">Uma recusa, inclusive implícita, pode ser contestada no tribunal administratif, com prazos próprios. Para saber se é o seu caso, procure gratuitamente um point-justice (justice.fr) ou uma associação de apoio a estrangeiros.</span><span class="ng-fr">Un refus, même implicite, peut être contesté devant le tribunal administratif, dans des délais propres. Pour savoir si c'est votre cas, adressez-vous gratuitement à un point-justice (justice.fr) ou à une association d'aide aux étrangers.</span><span class="ng-en">A refusal, even an implicit one, can be challenged before the administrative court within set time limits. To find out whether this applies to you, contact a free point-justice (justice.fr) or a migrant support association.</span></li>
+      <li><span class="ng-pt">Texto oficial: decreto nº 2026-1001 de 26 de outubro de 2026, no Légifrance (legifrance.gouv.fr).</span><span class="ng-fr">Texte officiel : décret n° 2026-1001 du 26 octobre 2026, sur Légifrance (legifrance.gouv.fr).</span><span class="ng-en">Official text: decree no. 2026-1001 of 26 October 2026, on Légifrance (legifrance.gouv.fr).</span></li>
+    </ul></div>
+    <div class="imgnote"><b><span class="ng-pt">Sobre as imagens</span><span class="ng-fr">À propos des images</span><span class="ng-en">About the images</span></b><span class="ng-pt">Abertura tipográfica, sem fotografia.</span><span class="ng-fr">Ouverture typographique, sans photographie.</span><span class="ng-en">Typographic opening, no photograph.</span></div>
+    <div class="sigfim"><span class="ng-pt">Por Silvania Batista · Jornalista · THE CROSSING TIME · Paris</span><span class="ng-fr">Par Silvania Batista · Journaliste · THE CROSSING TIME · Paris</span><span class="ng-en">By Silvania Batista · Journalist · THE CROSSING TIME · Paris</span></div>
+    <div class="ednote"><h3><span class="ng-pt">Nota Editorial · Verificação</span><span class="ng-fr">Note éditoriale · Vérification</span><span class="ng-en">Editorial note · Verification</span></h3><p><span class="ng-pt"><strong>Fontes:</strong> decreto nº 2026-1001 de 26/10/2026 (JORF de 29/10/2026, Légifrance JORFTEXT000055023061), nas análises de Juriguide (30/10/2026), do escritório Kayembe Avocats e do portal Observ'Algérie (30/10/2026). <strong>Confirmado:</strong> número, datas de publicação e de vigência, prazo de 90 dias e prorrogação de 30 dias, silêncio valendo recusa, troca de empregador de 12 para 6 meses, proteção de 3 meses do travailleur temporaire e regras da carte bleue européenne, concordantes em três fontes independentes. <strong>Atribuído:</strong> a ausência de OQTF automática e a falta de regra de transição (análises jurídicas). Esta matéria explica a regra e não substitui orientação jurídica individual.</span><span class="ng-fr"><strong>Sources :</strong> décret n° 2026-1001 du 26/10/2026 (JORF du 29/10/2026, Légifrance JORFTEXT000055023061), dans les analyses de Juriguide (30/10/2026), du cabinet Kayembe Avocats et du site Observ'Algérie (30/10/2026). <strong>Confirmé :</strong> numéro, dates de publication et d'entrée en vigueur, délai de 90 jours et prolongation de 30 jours, silence valant rejet, changement d'employeur de 12 à 6 mois, protection de 3 mois du travailleur temporaire et règles de la carte bleue européenne, concordants dans trois sources indépendantes. <strong>Attribué :</strong> l'absence d'OQTF automatique et l'absence de règle transitoire (analyses juridiques). Cet article explique la règle et ne remplace pas un conseil juridique individuel.</span><span class="ng-en"><strong>Sources:</strong> decree no. 2026-1001 of 26/10/2026 (JORF of 29/10/2026, Légifrance JORFTEXT000055023061), as analysed by Juriguide (30/10/2026), the law firm Kayembe Avocats and Observ'Algérie (30/10/2026). <strong>Confirmed:</strong> number, publication and entry-into-force dates, 90-day limit and 30-day extension, silence as refusal, employer change from 12 to 6 months, 3-month protection for temporary workers and EU Blue Card rules, consistent across three independent sources. <strong>Attributed:</strong> no automatic OQTF and no transition rule (legal analyses). This article explains the rule and does not replace individual legal advice.</span></p></div>
+  </article>
+</div>
+<div class="pilares">POUVOIR&nbsp;&nbsp;&#9670;&nbsp;&nbsp;MOBILIDADE&nbsp;&nbsp;&#9670;&nbsp;&nbsp;TRANSFORMATION</div>
+<div class="sitefoot">
+  <b>THE CROSSING TIME</b> · by Porta Voz do Imigrante<br>
+  Geopolítica · Direito · Economia · Sociedade · Mobilidade Global<br>
+  <span>thecrossingtime.com</span> · WhatsApp +33 6 69 99 72 96 · Genebra · Paris · São Paulo
+</div>
+<script>
+function goBack(){ if(window.parent&&window.parent!==window){try{window.parent.closeMateria();return;}catch(e){}} window.location.href='../index.html#materias'; }
+function setLang(l){document.body.setAttribute('data-lang',l);document.documentElement.setAttribute('lang',l);['pt','fr','en'].forEach(function(x){var b=document.getElementById('b-'+x);if(b)b.className=(x===l)?'on':'';});try{localStorage.setItem('tct-lang',l);}catch(e){}}
+(function(){var s='pt';try{s=localStorage.getItem('tct-lang')||'pt';}catch(e){}if(s!=='pt')setLang(s);})();
+</script>
+</body>
+</html>
