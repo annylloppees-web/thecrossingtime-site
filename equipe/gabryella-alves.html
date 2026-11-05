@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabryella Alves · The Crossing Time</title>
+<meta name="description" content="Gabryella Alves, The Crossing Time.">
+<style>
+  :root{--navy:#0E1A2B;--gold:#C6A15B;--paper:#FBFAF7;--ink:#2a2f38;--muted:#5b6470;--line:#e6e2d8;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 -apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 22px 90px;}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:8px;flex-wrap:wrap;}
+  .brand{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--navy);font-size:19px;letter-spacing:.01em;text-decoration:none;}
+  .brand small{display:block;font:800 10px Arial,sans-serif;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-top:4px;}
+  .langbar{display:flex;gap:4px;background:#eee9df;padding:4px;border-radius:8px;}
+  .langbar button{border:0;background:none;padding:7px 13px;border-radius:6px;font:700 13px Arial,sans-serif;color:var(--muted);cursor:pointer;}
+  .langbar button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.12);}
+  .back{margin:16px 0 0;}
+  .back a{color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;}
+  .eyebrow{font:800 12px Arial,sans-serif;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin:26px 0 8px;}
+  h1{font-family:Georgia,serif;font-size:31px;line-height:1.2;color:var(--navy);margin:0 0 6px;font-weight:700;}
+  h2{font-family:Georgia,serif;font-size:21px;color:var(--navy);margin:34px 0 14px;font-weight:700;padding-bottom:8px;border-bottom:1px solid var(--line);}
+  .intro{font-size:17px;color:#3a4049;max-width:760px;}
+  p{margin:0 0 14px;}
+  a{color:var(--navy);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px;margin:6px 0 10px;}
+  .card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;padding:22px 16px 18px;text-align:center;text-decoration:none;color:var(--ink);display:block;transition:transform .15s,box-shadow .15s;}
+  a.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(14,26,43,.10);}
+  .card.soon{border-top-color:#cfd3da;opacity:.8;}
+  .ph{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 14px;border:3px solid #f1ecdf;background:#e9e4d8;}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block;}
+  .ph .ini{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font:700 34px Georgia,serif;color:var(--navy);}
+  .nm{font-family:Georgia,serif;font-weight:700;font-size:17px;color:var(--navy);line-height:1.25;}
+  .role{font:600 11.5px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:6px;line-height:1.5;}
+  .more{display:inline-block;margin-top:12px;font:700 11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);}
+  .foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  /* perfil */
+  .hero{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:start;margin-top:10px;}
+  .hero .photo{width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#e9e4d8;}
+  .hero .photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+  .hero h1{margin-top:4px;}
+  .tag{font:600 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .bio p{font-size:16.5px;}
+  .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:8px 0 18px;}
+  .gal figure{margin:0;}
+  .gal img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line);display:block;}
+  .gal figure.wide{grid-column:1/-1;}
+  .gal figure.wide img{aspect-ratio:16/9;object-position:center;}
+  .gal figcaption{font-size:12px;color:var(--muted);margin-top:5px;}
+  .btn{display:inline-block;margin:2px 10px 6px 0;background:var(--navy);color:#fff !important;text-decoration:none;font:700 13px Arial,sans-serif;letter-spacing:.02em;padding:11px 18px;border-radius:8px;}
+  .btn:hover{background:#0a1226;}
+  .btn.alt{background:#fff;color:var(--navy) !important;border:1px solid var(--navy);}
+  @media(max-width:720px){.hero{grid-template-columns:1fr;}.hero .photo{max-width:320px;}}
+  [data-lang="pt"] .fr,[data-lang="pt"] .en,[data-lang="fr"] .pt,[data-lang="fr"] .en,[data-lang="en"] .pt,[data-lang="en"] .fr{display:none;}
+</style>
+</head>
+<body data-lang="pt">
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="../index.html">The Crossing Time<small>By Porta-Voz do Imigrante</small></a>
+    <div class="langbar">
+      <button type="button" id="l-pt" class="on" onclick="setL('pt')">PT</button>
+      <button type="button" id="l-fr" onclick="setL('fr')">FR</button>
+      <button type="button" id="l-en" onclick="setL('en')">EN</button>
+    </div>
+  </div>
+
+  <p class="back"><a href="../equipe.html"><span class="pt">&larr; A nossa equipa</span><span class="fr">&larr; Notre équipe</span><span class="en">&larr; Our team</span></a></p>
+  <div class="hero">
+    <div class="photo"><img src="../img/equipe/gabryella-alves-1.jpg" alt="Gabryella Alves"></div>
+    <div>
+      <p class="eyebrow"><span class="pt">Redação</span><span class="fr">Rédaction</span><span class="en">Newsroom</span></p>
+      <h1>Gabryella Alves</h1>
+      <div class="tag"><span class="pt">Secretária e assistente da redação</span><span class="fr">Secrétaire et assistante de rédaction</span><span class="en">Secretary and newsroom assistant</span></div>
+      <div class="bio"><p class="pt">Gabryella Alves é secretária e assistente da The Crossing Time. É ela quem organiza o dia a dia da redação: acompanha a caixa de e-mail, prepara as imagens das matérias, monta os cards e os textos dos posts e ajuda na newsletter da revista no LinkedIn.</p><p class="fr">Gabryella Alves est secrétaire et assistante de The Crossing Time. C’est elle qui organise le quotidien de la rédaction : elle suit la boîte mail, prépare les images des articles, monte les visuels et les textes des publications et participe à la newsletter de la revue sur LinkedIn.</p><p class="en">Gabryella Alves is The Crossing Time’s secretary and assistant. She organises the newsroom’s daily routine: following the mailbox, preparing the images for the articles, building the post visuals and texts and helping with the magazine’s LinkedIn newsletter.</p><p class="pt">Estudante e apaixonada por comunicação, cresce com a revista e aprende, na prática, o trabalho de uma redação bilíngue.</p><p class="fr">Étudiante et passionnée de communication, elle grandit avec la revue et apprend, sur le terrain, le travail d’une rédaction bilingue.</p><p class="en">A student with a passion for communication, she is growing with the magazine and learning, hands on, how a bilingual newsroom works.</p></div>
+      <p></p>
+    </div>
+  </div>
+  <h2><span class="pt">Galeria</span><span class="fr">Galerie</span><span class="en">Gallery</span></h2><div class="gal"><figure><img src="../img/equipe/gabryella-alves-2.jpg" alt="Gabryella Alves, secretária e assistente da The Crossing Time." loading="lazy"><figcaption><span class="pt">Gabryella Alves, secretária e assistente da The Crossing Time.</span><span class="fr">Gabryella Alves, secrétaire et assistante de The Crossing Time.</span><span class="en">Gabryella Alves, The Crossing Time secretary and assistant.</span></figcaption></figure><figure><img src="../img/equipe/gabryella-alves-3.jpg" alt="Gabryella Alves." loading="lazy"><figcaption><span class="pt">Gabryella Alves.</span><span class="fr">Gabryella Alves.</span><span class="en">Gabryella Alves.</span></figcaption></figure></div>
+
+  <div class="foot">
+    <span class="pt">© 2026 The Crossing Time · <a href="../index.html">Voltar ao site</a> · <a href="../equipe.html">A nossa equipa</a> · <a href="../a-propos.html">Sobre</a> · <a href="../charte-editoriale.html">Carta editorial</a></span>
+    <span class="fr">© 2026 The Crossing Time · <a href="../index.html">Retour au site</a> · <a href="../equipe.html">Notre équipe</a> · <a href="../a-propos.html">À propos</a> · <a href="../charte-editoriale.html">Charte éditoriale</a></span>
+    <span class="en">© 2026 The Crossing Time · <a href="../index.html">Back to the site</a> · <a href="../equipe.html">Our team</a> · <a href="../a-propos.html">About</a> · <a href="../charte-editoriale.html">Editorial charter</a></span>
+  </div>
+</div>
+
+<script>
+  function setL(l){
+    document.body.setAttribute('data-lang',l);
+    document.documentElement.lang=l;
+    ['pt','fr','en'].forEach(function(x){var b=document.getElementById('l-'+x);if(b)b.className=(x===l)?'on':'';});
+    try{localStorage.setItem('tct-lang',l);}catch(e){}
+  }
+  (function(){
+    var q=(location.search.match(/[?&]lang=(pt|fr|en)/)||[])[1];
+    if(q){ setL(q); return; }
+    var s=null; try{s=localStorage.getItem('tct-lang');}catch(e){}
+    if(s==='pt'||s==='fr'||s==='en'){ setL(s); return; }
+    var nav=(navigator.language||'').toLowerCase();
+    if(nav.indexOf('pt')===0){ setL('pt'); return; }
+    if(nav.indexOf('en')===0){ setL('en'); return; }
+  })();
+</script>
+
+</body>
+</html>

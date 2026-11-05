@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A nossa equipa · The Crossing Time</title>
+<meta name="description" content="A equipa da The Crossing Time: redação em Paris e no Brasil e colunistas especialistas.">
+<style>
+  :root{--navy:#0E1A2B;--gold:#C6A15B;--paper:#FBFAF7;--ink:#2a2f38;--muted:#5b6470;--line:#e6e2d8;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 -apple-system,Segoe UI,Roboto,Arial,sans-serif;}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 22px 90px;}
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:8px;flex-wrap:wrap;}
+  .brand{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--navy);font-size:19px;letter-spacing:.01em;text-decoration:none;}
+  .brand small{display:block;font:800 10px Arial,sans-serif;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-top:4px;}
+  .langbar{display:flex;gap:4px;background:#eee9df;padding:4px;border-radius:8px;}
+  .langbar button{border:0;background:none;padding:7px 13px;border-radius:6px;font:700 13px Arial,sans-serif;color:var(--muted);cursor:pointer;}
+  .langbar button.on{background:#fff;color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,.12);}
+  .back{margin:16px 0 0;}
+  .back a{color:var(--gold);text-decoration:none;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;}
+  .eyebrow{font:800 12px Arial,sans-serif;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin:26px 0 8px;}
+  h1{font-family:Georgia,serif;font-size:31px;line-height:1.2;color:var(--navy);margin:0 0 6px;font-weight:700;}
+  h2{font-family:Georgia,serif;font-size:21px;color:var(--navy);margin:34px 0 14px;font-weight:700;padding-bottom:8px;border-bottom:1px solid var(--line);}
+  .intro{font-size:17px;color:#3a4049;max-width:760px;}
+  p{margin:0 0 14px;}
+  a{color:var(--navy);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px;margin:6px 0 10px;}
+  .card{background:#fff;border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:10px;padding:22px 16px 18px;text-align:center;text-decoration:none;color:var(--ink);display:block;transition:transform .15s,box-shadow .15s;}
+  a.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(14,26,43,.10);}
+  .card.soon{border-top-color:#cfd3da;opacity:.8;}
+  .ph{width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 14px;border:3px solid #f1ecdf;background:#e9e4d8;}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block;}
+  .ph .ini{display:flex;align-items:center;justify-content:center;width:100%;height:100%;font:700 34px Georgia,serif;color:var(--navy);}
+  .nm{font-family:Georgia,serif;font-weight:700;font-size:17px;color:var(--navy);line-height:1.25;}
+  .role{font:600 11.5px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-top:6px;line-height:1.5;}
+  .more{display:inline-block;margin-top:12px;font:700 11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);}
+  .foot{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  /* perfil */
+  .hero{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:start;margin-top:10px;}
+  .hero .photo{width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#e9e4d8;}
+  .hero .photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+  .hero h1{margin-top:4px;}
+  .tag{font:600 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .bio p{font-size:16.5px;}
+  .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:8px 0 18px;}
+  .gal figure{margin:0;}
+  .gal img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line);display:block;}
+  .gal figure.wide{grid-column:1/-1;}
+  .gal figure.wide img{aspect-ratio:16/9;object-position:center;}
+  .gal figcaption{font-size:12px;color:var(--muted);margin-top:5px;}
+  .btn{display:inline-block;margin:2px 10px 6px 0;background:var(--navy);color:#fff !important;text-decoration:none;font:700 13px Arial,sans-serif;letter-spacing:.02em;padding:11px 18px;border-radius:8px;}
+  .btn:hover{background:#0a1226;}
+  .btn.alt{background:#fff;color:var(--navy) !important;border:1px solid var(--navy);}
+  @media(max-width:720px){.hero{grid-template-columns:1fr;}.hero .photo{max-width:320px;}}
+  [data-lang="pt"] .fr,[data-lang="pt"] .en,[data-lang="fr"] .pt,[data-lang="fr"] .en,[data-lang="en"] .pt,[data-lang="en"] .fr{display:none;}
+</style>
+</head>
+<body data-lang="pt">
+<div class="wrap">
+  <div class="top">
+    <a class="brand" href="index.html">The Crossing Time<small>By Porta-Voz do Imigrante</small></a>
+    <div class="langbar">
+      <button type="button" id="l-pt" class="on" onclick="setL('pt')">PT</button>
+      <button type="button" id="l-fr" onclick="setL('fr')">FR</button>
+      <button type="button" id="l-en" onclick="setL('en')">EN</button>
+    </div>
+  </div>
+
+  <p class="back"><a href="index.html"><span class="pt">&larr; Voltar ao site</span><span class="fr">&larr; Retour au site</span><span class="en">&larr; Back to the site</span></a></p>
+  <p class="eyebrow"><span class="pt">The Crossing Time</span><span class="fr">The Crossing Time</span><span class="en">The Crossing Time</span></p>
+  <h1><span class="pt">A nossa equipa</span><span class="fr">Notre équipe</span><span class="en">Our team</span></h1>
+  <p class="intro"><span class="pt">As pessoas que fazem a The Crossing Time todos os dias, em Paris e no Brasil: a redação, que apura e escreve as matérias, grava os vídeos e cuida das imagens e das redes, e os colunistas, especialistas que assinam as colunas. A direção da revista é apresentada em <a href="index.html#anne">A nossa direção</a>.</span><span class="fr">Les personnes qui font The Crossing Time chaque jour, à Paris et au Brésil : la rédaction, qui vérifie et écrit les articles, enregistre les vidéos et s’occupe des images et des réseaux, et les chroniqueurs, des spécialistes qui signent les chroniques. La direction de la revue est présentée dans <a href="index.html#anne">Notre direction</a>.</span><span class="en">The people who make The Crossing Time every day, in Paris and in Brazil: the newsroom, which researches and writes the articles, records the videos and looks after visuals and social media, and the columnists, specialists who sign the columns. The magazine’s leadership is presented in <a href="index.html#anne">Our leadership</a>.</span></p>
+
+  <h2><span class="pt">Redação</span><span class="fr">Rédaction</span><span class="en">Newsroom</span></h2>
+  <div class="grid"><a class="card" href="equipe/silvania-batista.html"><div class="ph"><img src="img/equipe/silvania-batista-1.jpg" alt="Silvania Batista" loading="lazy"></div><div class="nm">Silvania Batista</div><div class="role"><span class="pt">Jornalista âncora · Paris</span><span class="fr">Journaliste et présentatrice · Paris</span><span class="en">Anchor journalist · Paris</span></div><span class="more"><span class="pt">Ver perfil &rarr;</span><span class="fr">Voir le profil &rarr;</span><span class="en">View profile &rarr;</span></span></a><a class="card" href="equipe/bella-batista.html"><div class="ph"><img src="img/equipe/bella-batista-1.jpg" alt="Bella Batista" loading="lazy"></div><div class="nm">Bella Batista</div><div class="role"><span class="pt">Apresentadora do Mundo da Bella</span><span class="fr">Présentatrice du Mundo da Bella</span><span class="en">Presenter of Mundo da Bella</span></div><span class="more"><span class="pt">Ver perfil &rarr;</span><span class="fr">Voir le profil &rarr;</span><span class="en">View profile &rarr;</span></span></a><a class="card" href="equipe/robson-alves.html"><div class="ph"><span class="ini">RA</span></div><div class="nm">Robson Alves</div><div class="role"><span class="pt">Jornalista e correspondente · Brasil</span><span class="fr">Journaliste et correspondant · Brésil</span><span class="en">Journalist and correspondent · Brazil</span></div><span class="more"><span class="pt">Ver perfil &rarr;</span><span class="fr">Voir le profil &rarr;</span><span class="en">View profile &rarr;</span></span></a><a class="card" href="equipe/gabryella-alves.html"><div class="ph"><img src="img/equipe/gabryella-alves-1.jpg" alt="Gabryella Alves" loading="lazy"></div><div class="nm">Gabryella Alves</div><div class="role"><span class="pt">Secretária e assistente da redação</span><span class="fr">Secrétaire et assistante de rédaction</span><span class="en">Secretary and newsroom assistant</span></div><span class="more"><span class="pt">Ver perfil &rarr;</span><span class="fr">Voir le profil &rarr;</span><span class="en">View profile &rarr;</span></span></a><div class="card soon"><div class="ph"><span class="ini">LA</span></div><div class="nm">Lorenzo Alves</div><div class="role"><span class="pt">Redação</span><span class="fr">Rédaction</span><span class="en">Newsroom</span></div><span class="more"><span class="pt">Perfil em breve</span><span class="fr">Profil à venir</span><span class="en">Profile coming soon</span></span></div></div>
+
+  <h2><span class="pt">Colunistas</span><span class="fr">Chroniqueurs</span><span class="en">Columnists</span></h2>
+  <div class="grid"><a class="card" href="colunas/gabriela_barreto.html"><div class="ph"><img src="img/home/c8f8d44698f641.jpg" alt="Dra. Gabriela Barreto" loading="lazy"></div><div class="nm">Dra. Gabriela Barreto</div><div class="role"><span class="pt">Direito Internacional e Negócios</span><span class="fr">Droit international et affaires</span><span class="en">International Law and Business</span></div><span class="more"><span class="pt">Ver coluna &rarr;</span><span class="fr">Voir la chronique &rarr;</span><span class="en">View column &rarr;</span></span></a><a class="card" href="colunas/andre_fernandes.html"><div class="ph"><img src="img/home/15e8569d45a2f8.jpg" alt="Maître André Fernandes" loading="lazy"></div><div class="nm">Maître André Fernandes</div><div class="role"><span class="pt">Direito Internacional e Mobilidade Global</span><span class="fr">Droit international et mobilité globale</span><span class="en">International Law and Global Mobility</span></div><span class="more"><span class="pt">Ver coluna &rarr;</span><span class="fr">Voir la chronique &rarr;</span><span class="en">View column &rarr;</span></span></a><a class="card" href="colunas/vanessa_alvarez.html"><div class="ph"><img src="img/home/4dd6f55d2608a2.jpg" alt="Maître Vanessa Alvarez" loading="lazy"></div><div class="nm">Maître Vanessa Alvarez</div><div class="role"><span class="pt">Cooperação Jurídica França-Brasil</span><span class="fr">Coopération juridique France-Brésil</span><span class="en">France-Brazil Legal Cooperation</span></div><span class="more"><span class="pt">Ver coluna &rarr;</span><span class="fr">Voir la chronique &rarr;</span><span class="en">View column &rarr;</span></span></a><a class="card" href="colunas/kakay.html"><div class="ph"><img src="img/home/1254a0b3428cad.jpg" alt="Dr. Kakay" loading="lazy"></div><div class="nm">Dr. Kakay</div><div class="role"><span class="pt">Direito Penal · Colunista</span><span class="fr">Droit pénal · Chroniqueur</span><span class="en">Criminal Law · Columnist</span></div><span class="more"><span class="pt">Ver coluna &rarr;</span><span class="fr">Voir la chronique &rarr;</span><span class="en">View column &rarr;</span></span></a><a class="card" href="colunas/barbara_oliveira.html"><div class="ph"><img src="img/home/8b42a903cdb273.jpg" alt="Bárbara Oliveira" loading="lazy"></div><div class="nm">Bárbara Oliveira</div><div class="role"><span class="pt">Fisioterapeuta · Beleza e bem-estar</span><span class="fr">Physiothérapeute · Beauté et bien-être</span><span class="en">Physiotherapist · Beauty and well-being</span></div><span class="more"><span class="pt">Ver coluna &rarr;</span><span class="fr">Voir la chronique &rarr;</span><span class="en">View column &rarr;</span></span></a><a class="card" href="colunas/karen_couto.html"><div class="ph"><img src="img/home/karen_couto.jpg" alt="Karen Couto" loading="lazy"></div><div class="nm">Karen Couto</div><div class="role"><span class="pt">Língua em Trânsito · Língua portuguesa</span><span class="fr">Língua em Trânsito · Langue portugaise</span><span class="en">Língua em Trânsito · Portuguese language</span></div><span class="more"><span class="pt">Ver coluna &rarr;</span><span class="fr">Voir la chronique &rarr;</span><span class="en">View column &rarr;</span></span></a></div>
+
+  <h2><span class="pt">Quer colaborar?</span><span class="fr">Envie de collaborer ?</span><span class="en">Want to contribute?</span></h2>
+  <p><span class="pt">A The Crossing Time analisa todas as propostas de matéria e de colaboração antes de publicar. Escreva para <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a>.</span><span class="fr">The Crossing Time examine toutes les propositions d’article et de collaboration avant publication. Écrivez à <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a>.</span><span class="en">The Crossing Time reviews every article and collaboration proposal before publishing. Write to <a href="mailto:redaction@thecrossingtime.com">redaction@thecrossingtime.com</a>.</span></p>
+
+  <div class="foot">
+    <span class="pt">© 2026 The Crossing Time · <a href="index.html">Voltar ao site</a> · <a href="equipe.html">A nossa equipa</a> · <a href="a-propos.html">Sobre</a> · <a href="charte-editoriale.html">Carta editorial</a></span>
+    <span class="fr">© 2026 The Crossing Time · <a href="index.html">Retour au site</a> · <a href="equipe.html">Notre équipe</a> · <a href="a-propos.html">À propos</a> · <a href="charte-editoriale.html">Charte éditoriale</a></span>
+    <span class="en">© 2026 The Crossing Time · <a href="index.html">Back to the site</a> · <a href="equipe.html">Our team</a> · <a href="a-propos.html">About</a> · <a href="charte-editoriale.html">Editorial charter</a></span>
+  </div>
+</div>
+
+<script>
+  function setL(l){
+    document.body.setAttribute('data-lang',l);
+    document.documentElement.lang=l;
+    ['pt','fr','en'].forEach(function(x){var b=document.getElementById('l-'+x);if(b)b.className=(x===l)?'on':'';});
+    try{localStorage.setItem('tct-lang',l);}catch(e){}
+  }
+  (function(){
+    var q=(location.search.match(/[?&]lang=(pt|fr|en)/)||[])[1];
+    if(q){ setL(q); return; }
+    var s=null; try{s=localStorage.getItem('tct-lang');}catch(e){}
+    if(s==='pt'||s==='fr'||s==='en'){ setL(s); return; }
+    var nav=(navigator.language||'').toLowerCase();
+    if(nav.indexOf('pt')===0){ setL('pt'); return; }
+    if(nav.indexOf('en')===0){ setL('en'); return; }
+  })();
+</script>
+
+</body>
+</html>
