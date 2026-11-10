@@ -1511,7 +1511,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v190 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v191 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1763,7 +1763,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
   <img class="cine-slide on" data-i="0" src="img/home/abertura-brasil-franca.jpg" alt="Brasil e França" loading="eager">
   <img class="cine-slide" data-i="1" src="img/home/abertura-andre.jpg" alt="Alves Fernandes Avocats" loading="lazy" style="object-position:left top">
   <img class="cine-slide" data-i="2" src="img/home/abertura-silvania.jpg" alt="Silvania Batista" loading="lazy" style="object-position:right top">
-  <img class="cine-slide" data-i="3" src="img/home/abertura-robson.jpg" alt="Robson Alves, correspondente no Brasil" loading="lazy">
+  <img class="cine-slide" data-i="3" src="img/home/abertura-robson.jpg" alt="Robson Alves, correspondente no Brasil" loading="lazy" style="object-position:right top">
   <img class="cine-slide" data-i="4" src="img/home/abertura-mundo-da-bella.jpg" alt="O Mundo da Bella" loading="lazy" style="object-position:left top">
   <img class="cine-slide" data-i="5" id="cine-ultima-img" src="img/home/e778ea643b8b22.jpg" alt="Última matéria" loading="lazy" style="object-position:center 30%">
   <img class="cine-slide" data-i="6" src="img/home/abertura-karen.jpg" alt="Colunas" loading="lazy" style="object-position:right top">
@@ -1795,7 +1795,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v190 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v191 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -7178,6 +7178,9 @@ document.addEventListener('keydown', function(e){
   .cine-sub{display:none;}.cine-cta{margin-top:16px;padding:9px 16px;}.cine-dots{margin-top:22px;}
   /* cenas só de arte (Mundo da Bella, Podcast): no celular a arte aparece inteira, sem corte */
   .tct-cine.notext .cine-slide{object-fit:contain;object-position:center!important;transform:none;}
+  /* cena do Robson: rosto no alto da arte, texto vai para baixo */
+  .tct-cine.mob-bottom .cine-in{justify-content:flex-end;padding-bottom:24px;}
+  .tct-cine.mob-bottom .cine-veu,.tct-cine.mob-bottom.veil-left .cine-veu{display:block;background:linear-gradient(180deg,rgba(14,26,43,0) 30%,rgba(14,26,43,.55) 60%,rgba(14,26,43,.92) 100%);}
 }
 }
 /* ===== LEITOR DE ÁUDIO DAS MATÉRIAS ===== */
@@ -7261,7 +7264,7 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
       t: ["O Brasil que importa para quem vive fora", "Le Brésil qui compte pour ceux qui vivent à l'étranger", "The Brazil that matters to those living abroad"],
       sub: ["Política, economia e serviço público: as notícias do Brasil apuradas no Brasil, pelo jornalista Robson Alves.", "Politique, économie et services publics : l'actualité du Brésil, vérifiée sur place par le journaliste Robson Alves.", "Politics, economy and public services: news from Brazil, reported in Brazil by journalist Robson Alves."],
       cta: ["Ver as matérias do Brasil", "Voir les articles Brésil", "See the Brazil articles"],
-      veil: "left",
+      veil: "left", mobBottom: true,
       go: function(){ showPage('materias'); try { filterMat('brasil', document.querySelector(".filter-btn[onclick*=\"'brasil'\"]") || document.createElement('button')); } catch(e){} } },
     { eb: ["O Mundo da Bella", "Le Monde de Bella", "Bella's World"],
       t: ["O especial infantil da The Crossing Time", "Le programme jeunesse de The Crossing Time", "The Crossing Time's children's special"],
@@ -7305,7 +7308,7 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
     i = ((n % N) + N) % N; var sl = SLIDES[i];
     for (var sI = 0; sI < slides.length; sI++) { slides[sI].classList.toggle("on", sI === i); }
     el.classList.remove("on"); sub.classList.remove("on"); cta.classList.remove("on");
-    if (sec0) { sec0.classList.toggle('has-port', !!sl.port); sec0.classList.toggle('veil-left', sl.veil === 'left'); sec0.classList.toggle('veil-none', sl.veil === 'none'); sec0.classList.toggle('veil-right', sl.veil === 'right'); sec0.classList.toggle('notext', !!sl.notext); }
+    if (sec0) { sec0.classList.toggle('has-port', !!sl.port); sec0.classList.toggle('veil-left', sl.veil === 'left'); sec0.classList.toggle('veil-none', sl.veil === 'none'); sec0.classList.toggle('veil-right', sl.veil === 'right'); sec0.classList.toggle('notext', !!sl.notext); sec0.classList.toggle('mob-bottom', !!sl.mobBottom); }
     if (port) { if (sl.port) { port.src = sl.port; port.style.display = ''; port.classList.toggle('wide', !!sl.wide); port.classList.add('on'); } else { port.classList.remove('on'); port.style.display = 'none'; } }
     if (eyeb) { eyeb.innerHTML = T(sl.eb); }
     setTimeout(function(){
@@ -7325,7 +7328,7 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v190 · 10set2026';try{
+(function(){var BUILD='p15-v191 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
