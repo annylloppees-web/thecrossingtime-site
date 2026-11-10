@@ -1511,7 +1511,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v189 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v190 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1795,7 +1795,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v189 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v190 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -7172,20 +7172,13 @@ document.addEventListener('keydown', function(e){
 
 .tct-cine .cine-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0;transform:scale(1.06);transition:opacity 1.2s ease, transform 7.5s ease;}.tct-cine .cine-slide.on{opacity:1;transform:scale(1);z-index:1;}
 @media(max-width:820px){
-  /* celular: a arte inteira aparece (16:9) e o texto fica embaixo, dentro do bloco navy */
-  .tct-cine{height:auto;max-height:none;display:block;background:#0E1A2B;}
-  .tct-cine::before{content:'';display:block;width:100%;aspect-ratio:1680/944;}
-  .tct-cine .cine-slide{top:0;left:0;right:0;bottom:auto;height:auto;aspect-ratio:1680/944;object-fit:cover;object-position:center!important;transform:none;transition:opacity 1.2s ease;}
-  .tct-cine .cine-slide.on{transform:none;}
-  .tct-cine .cine-veu,.tct-cine.veil-left .cine-veu,.tct-cine.veil-right .cine-veu{display:none;}
-  .tct-cine .cine-port{display:none!important;}
-  .cine-in{position:relative;height:auto;min-height:0;padding:18px 22px 22px;justify-content:flex-start;align-items:flex-start;text-align:left;}
-  .tct-cine.veil-right .cine-in{align-items:flex-start;text-align:left;}
-  .tct-cine.veil-right .cine-eyebrow{flex-direction:row;}
-  .cine-frase{max-width:100%;font-size:clamp(22px,6vw,30px);}
-  .cine-sub{display:block;font-size:14px;margin-top:8px;}
-  .tct-cine.notext .cine-in{padding:14px 22px 18px;}
-  .cine-dots{margin-top:18px;}
+  .tct-cine{height:clamp(360px,58vh,470px);}
+  .cine-in{padding:64px 22px 0;justify-content:flex-start;}
+  .cine-frase{max-width:100%;}
+  .cine-sub{display:none;}.cine-cta{margin-top:16px;padding:9px 16px;}.cine-dots{margin-top:22px;}
+  /* cenas só de arte (Mundo da Bella, Podcast): no celular a arte aparece inteira, sem corte */
+  .tct-cine.notext .cine-slide{object-fit:contain;object-position:center!important;transform:none;}
+}
 }
 /* ===== LEITOR DE ÁUDIO DAS MATÉRIAS ===== */
 #tct-ouvir{position:fixed;left:22px;bottom:22px;z-index:9450;display:flex;align-items:center;gap:12px;
@@ -7332,7 +7325,7 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v189 · 10set2026';try{
+(function(){var BUILD='p15-v190 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
