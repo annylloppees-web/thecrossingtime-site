@@ -1511,7 +1511,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v201 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v202 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1761,7 +1761,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
      Cena 8: TCT Podcast (link em PODCAST_HREF). Artes de fundo das cenas 2, 3, 5, 7 e 8 enviadas pela Anne em 06/11/2026 -->
 <section class="tct-cine" id="tct-cine">
   <img class="cine-slide on" data-i="0" src="img/home/abertura-brasil-franca.jpg" alt="Brasil e França" loading="eager">
-  <img class="cine-slide" data-i="1" src="img/home/abertura-andre.jpg" alt="Alves Fernandes Avocats" loading="lazy" style="object-position:left top">
+  <img class="cine-slide" data-i="1" src="img/home/abertura-andre.jpg" alt="Alves Fernandes Avocats" style="object-position:left top">
   <img class="cine-slide" data-i="2" src="img/home/abertura-silvania.jpg" alt="Silvania Batista" loading="lazy" style="object-position:right top">
   <img class="cine-slide" data-i="3" src="img/home/abertura-robson.jpg" alt="Robson Alves, correspondente no Brasil" loading="lazy" style="object-position:right top">
   <img class="cine-slide" data-i="4" src="img/home/abertura-mundo-da-bella.jpg" alt="O Mundo da Bella" loading="lazy" style="object-position:left top">
@@ -1795,7 +1795,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v201 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v202 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -4402,15 +4402,18 @@ function filterMat(cat,btn){
 
 
 <div id="fb-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:#0E1A2B;flex-direction:column;">
-  <iframe id="fb-frame" style="width:100%;height:100%;flex:1;border:0;display:block;" src="flipbook-1-edicao.html"></iframe>
+  <iframe id="fb-frame" title="Flipbook 1ª Edição" style="width:100%;height:100%;flex:1;border:0;display:block;" data-src="flipbook-1-edicao.html"></iframe>
 </div>
 <!-- FLIPBOOK 2ª EDIÇÃO -->
 <div id="fb-overlay-2" style="display:none;position:fixed;inset:0;z-index:9999;background:#0E1A2B;flex-direction:column;">
-  <iframe id="fb-frame-2" style="width:100%;height:100%;flex:1;border:0;display:block;" src="flipbook-2-edicao.html" style="flex:1;border:none;width:100%;height:100%;"></iframe>
+  <iframe id="fb-frame-2" title="Flipbook 2ª Edição" style="width:100%;height:100%;flex:1;border:0;display:block;" data-src="flipbook-2-edicao.html" style="flex:1;border:none;width:100%;height:100%;"></iframe>
 </div>
 <script>
+/* flipbooks (28 MB) só carregam quando abertos: antes baixavam em toda visita à home */
+function tctFb(id){var f=document.getElementById(id);if(f&&!f.getAttribute("src"))f.setAttribute("src",f.getAttribute("data-src"));}
 function openFlipbook(){
   if(window._tctEmailOK){
+    tctFb('fb-frame');
     document.getElementById('fb-overlay').style.display = 'flex';
     document.body.style.overflow = 'hidden';
   } else {
@@ -4428,6 +4431,7 @@ document.addEventListener('keydown', function(e){
 
 function openFlipbook2(){
   if(window._tctEmailOK){
+    tctFb('fb-frame-2');
     document.getElementById('fb-overlay-2').style.display = 'flex';
     document.body.style.overflow = 'hidden';
   } else {
@@ -4487,8 +4491,10 @@ function submitEmailGate(){
     return;
   }
   if(window._pendingFlipbook === 2){
+    tctFb('fb-frame-2');
     document.getElementById('fb-overlay-2').style.display = 'flex';
   } else {
+    tctFb('fb-frame');
     document.getElementById('fb-overlay').style.display = 'flex';
   }
   document.body.style.overflow = 'hidden';
@@ -7337,7 +7343,7 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v201 · 10set2026';try{
+(function(){var BUILD='p15-v202 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
