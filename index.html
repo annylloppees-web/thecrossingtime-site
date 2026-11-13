@@ -520,7 +520,7 @@ a{text-decoration:none;color:inherit;}
 .ft-links a{font-size:13px;color:rgba(255,255,255,.68);cursor:pointer;font-weight:300;}
 .ft-links a:hover{color:white;}
 .ft-bottom{border-top:.5px solid rgba(255,255,255,.06);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;}
-.ft-copy{font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,.2);}
+.ft-copy{font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,.6);}
 .ft-paris{font-size:10px;letter-spacing:.1em;color:var(--gold);}
 
 /* ── MODALS ── */
@@ -1512,7 +1512,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v205 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v206 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1796,7 +1796,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v205 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v206 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -1847,7 +1847,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
       <div class="ft-bottom">
         <span class="ft-copy">© 2026 The Crossing Time · By Porta-Voz do Imigrante · Todos os direitos reservados</span>
         <span class="ft-paris"><span class="ng-pt">Feita com amor em Paris</span><span class="ng-fr">Fait avec amour à Paris</span><span class="ng-en">Made with love in Paris</span></span>
-      <span style="font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,.2);">
+      <span style="font-size:10px;letter-spacing:.06em;color:rgba(255,255,255,.6);">
         Criação digital: <a href="https://www.instagram.com/nexus_mk_digital/" target="_blank" style="color:var(--gold);text-decoration:none;" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">@nexus_mk_digital</a>
       </span>
       </div>
@@ -5945,8 +5945,8 @@ document.addEventListener('keydown', function(e){
   background:rgba(14,26,43,.94);border:1px solid rgba(198,161,91,.4);padding:9px 16px 9px 9px;
   box-shadow:0 6px 26px rgba(14,26,43,.3);max-width:min(360px,calc(100vw - 44px));}
 #tct-ouvir.escondido{display:none!important;}
-.ouv-btn{flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:1px solid #C6A15B;background:none;
-  color:#C6A15B;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;
+.ouv-btn{flex:0 0 auto;width:38px;height:38px;border-radius:50%;border:1px solid #866428;background:none;
+  color:#866428;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;
   transition:background .25s,color .25s;}
 .ouv-btn:hover{background:#C6A15B;color:#0E1A2B;}
 .ouv-txt{min-width:0;flex:1;}
@@ -6082,12 +6082,15 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
   mostrar(0);
   /* a rotacao automatica so comeca depois de a pagina carregar por completo (LCP e celulares lentos) */
   function ligarTimer(){ if (timer) return; timer = setInterval(function(){ mostrar(i + 1); }, DUR); }
-  if (document.readyState === 'complete') { setTimeout(ligarTimer, DUR); } else { window.addEventListener('load', function(){ setTimeout(ligarTimer, DUR); }); }
+  /* comeca a girar ao primeiro gesto do leitor (toque, rolagem, tecla) ou, sem gesto, 20 s depois de a pagina carregar */
+  var armar = function(){ ['pointerdown','touchstart','scroll','keydown','wheel'].forEach(function(ev){ window.removeEventListener(ev, armar); }); setTimeout(ligarTimer, 1500); };
+  ['pointerdown','touchstart','scroll','keydown','wheel'].forEach(function(ev){ window.addEventListener(ev, armar, {passive:true}); });
+  if (document.readyState === 'complete') { setTimeout(ligarTimer, 20000); } else { window.addEventListener('load', function(){ setTimeout(ligarTimer, 20000); }); }
   var sec = document.getElementById('tct-cine');
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v205 · 10set2026';try{
+(function(){var BUILD='p15-v206 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
