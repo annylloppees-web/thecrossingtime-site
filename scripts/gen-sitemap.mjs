@@ -17,6 +17,8 @@ const SECTIONS = [
   { file: 'conseil-juridique.html',    loc: '/conseil-juridique.html',    priority: '0.3', changefreq: 'yearly'  },
   { file: 'mentions-legales.html',     loc: '/mentions-legales.html',     priority: '0.3', changefreq: 'yearly'  },
   { file: 'politique-confidentialite.html', loc: '/politique-confidentialite.html', priority: '0.3', changefreq: 'yearly' },
+  { file: 'lignes-directrices.html',   loc: '/lignes-directrices.html',   priority: '0.4', changefreq: 'monthly' },
+  { file: 'equipe.html',               loc: '/equipe.html',               priority: '0.5', changefreq: 'monthly' },
   { dir:  'materias',   base: '/materias/',  priority: '0.8', changefreq: 'weekly' },
   { dir:  'colunas',    base: '/colunas/',   priority: '0.6', changefreq: 'monthly'},
 ];
@@ -55,7 +57,11 @@ for(const s of SECTIONS){
         if(/name=["']robots["'][^>]*noindex/i.test(head)) continue;
       }catch(e){}
       // Netlify serve em minusculas: o loc sai sempre em minusculas
-      urls.push({ loc: BASE + s.base + name.toLowerCase(), file, priority: s.priority, changefreq: s.changefreq });
+      const loc = BASE + s.base + name.toLowerCase();
+      // se existem duas versoes do mesmo nome (MAIUSCULAS e minusculas), fica so uma no sitemap
+      const dup = urls.findIndex(u => u.loc === loc);
+      if(dup !== -1){ if(name === name.toLowerCase()) urls[dup].file = file; continue; }
+      urls.push({ loc, file, priority: s.priority, changefreq: s.changefreq });
     }
   }
 }
