@@ -103,6 +103,12 @@ for folder in ['materias', 'colunas']:
         if 'tct-a11y-focus' not in s:
             s = s.replace('</head>', FOCUS + '\n</head>', 1)
             dirty = True
+        # contraste (WCAG AA): o numero dourado das secoes e rotulos claros sobre fundo claro
+        CONTRAST = ('<style id="tct-a11y-contrast">.sec .num,.section-num,.sec-num'
+                    '{color:#866428!important}</style>')
+        if 'tct-a11y-contrast' not in s:
+            s = s.replace('</head>', CONTRAST + '\n</head>', 1)
+            dirty = True
         # --- normalizacao (roda em TODAS as paginas, inclusive as que ja tem og) ---
         # O Netlify serve tudo em minusculas e redireciona (301) enderecos com
         # maiusculas. Canonical, og:url, og:image e JSON-LD tem de apontar para a
