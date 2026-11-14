@@ -2,20 +2,14 @@
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>
-  (function(){
-    try { if (typeof emailjs !== 'undefined') emailjs.init({ publicKey: "cqoSiGQbBvxnjXjZ_" }); }
-    catch(e) { /* emailjs indisponível */ }
-  })();
-</script>
+<script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" onload="try{emailjs.init({ publicKey: 'cqoSiGQbBvxnjXjZ_' })}catch(e){}"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE CROSSING TIME — By Porta-Voz do Imigrante</title>
 <meta name="description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 /* ════════════════════════════════
    IDENTIDADE VISUAL OFICIAL TCT
@@ -1512,7 +1506,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v207 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v208 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1796,7 +1790,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v207 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v208 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -6092,7 +6086,7 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v207 · 10set2026';try{
+(function(){var BUILD='p15-v208 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
