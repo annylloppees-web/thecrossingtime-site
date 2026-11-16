@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thecrossingtime.com/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://thecrossingtime.com/todas-as-materias.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -494,7 +494,7 @@
   </url>
   <url>
     <loc>https://thecrossingtime.com/materias/emprego.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1087,6 +1087,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_brasil_euro_6_23_reais_ptax_alta_novembro_2026_remessas.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_brasil_fim_escala_6x1_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1129,14 +1135,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_brasil_lula_filipinas_acordos_cupula_asean_parceiro_dialogo_2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_brasil_mercosul_ue_seis_meses_exportacoes_agro_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_brasil_meta_turistas_estrangeiros_2026_7_59_milhoes_outubro.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_brasil_mpox_mil_casos_2026_alta_outubro_novembro.html</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_brasil_mpox_primeira_morte_2026_rio_1050_casos.html</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1215,6 +1239,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_budget_2027_pensions_impostos_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_cabo_verde_presidenciais_neves_reeleito_primeiro_turno_2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1311,6 +1341,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_commission_aides_sociales_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_comte_24_meses_jura_melhor_queijo_do_mundo_2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1579,6 +1615,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_fioul_domestico_entregas_atrasadas_fioulmarket_desconto_2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_flavio_bolsonaro_suposta_fuga_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1747,6 +1789,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_greve_17_novembro_2026_trens_escolas_guiches_voos_o_que_para.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_greve_29_setembro_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1801,6 +1849,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_gta_vi_lancamento_19_novembro_2026_meia_noite_ps5_xbox.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_harald_v_memoria_fotos.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1839,6 +1893,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_ifa_2026_berlim_fotos.html</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_igualdade_salarial_19_novembro_10h51_transparencia_salarios_2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2365,6 +2425,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_prime_de_noel_2026_pagamento_15_dezembro_valores_caf.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_prime_transport_teto_1000_euros_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -2373,6 +2439,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_protections_periodiques_remboursees.html</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_protestos_14_novembro_balanco_106_mil_franca_24_mil_paris.html</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2511,6 +2583,12 @@
   <url>
     <loc>https://thecrossingtime.com/materias/m_ronaldinho_ravenna_volta_2026.html</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thecrossingtime.com/materias/m_ruanda_genocidio_julgamento_madjaliwa_safari_paris_17_novembro_2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2767,8 +2845,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://thecrossingtime.com/materias/m_zelensky_eua_donbas_otan_pergunta_negociacoes_novembro_2026.html</loc>
+    <lastmod>2026-11-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thecrossingtime.com/materias/m_zemmour_candidatura_presidencial_2027_imigracao.html</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
