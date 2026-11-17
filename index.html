@@ -1753,8 +1753,9 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
      Cena 4: Robson Alves, correspondente no Brasil (matérias do Brasil)
      Cena 5: O Mundo da Bella
      Cena 6: ÚLTIMA MATÉRIA (preenchida sozinha com o primeiro card da grade a cada atualização)
-     Cena 7: COLUNAS (atualizar COLUNA_ATUAL no script tct-cine-js quando sair coluna nova: nome, título e link; a arte de fundo é img/home/abertura-karen.jpg)
-     Cena 8: TCT Podcast (link em PODCAST_HREF). Artes de fundo das cenas 2, 3, 5, 7 e 8 enviadas pela Anne em 06/11/2026 -->
+     Cena 7: COLUNAS · coluna do mês (COLUNA_ATUAL no script tct-cine-js; arte img/home/abertura-jamille.jpg)
+     Cena 8: COLUNAS · Karen Couto (COLUNA_KAREN; arte img/home/abertura-karen.jpg?v=2)
+     Cena 9: TCT Podcast (link em PODCAST_HREF). Artes de fundo das cenas 2, 3, 5, 7 e 8 enviadas pela Anne em 06/11/2026 -->
 <section class="tct-cine" id="tct-cine">
   <img class="cine-slide on boot" data-i="0" src="img/home/abertura-brasil-franca.jpg" alt="Brasil e França" loading="eager">
   <img class="cine-slide" data-i="1" data-src="img/home/abertura-andre.jpg" alt="Alves Fernandes Avocats" style="object-position:left top">
@@ -1762,8 +1763,9 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
   <img class="cine-slide" data-i="3" data-src="img/home/abertura-robson.jpg" alt="Robson Alves, correspondente no Brasil" loading="lazy" style="object-position:right top">
   <img class="cine-slide" data-i="4" data-src="img/home/abertura-mundo-da-bella.jpg" alt="O Mundo da Bella" loading="lazy" style="object-position:left top">
   <img class="cine-slide" data-i="5" id="cine-ultima-img" data-src="img/home/e778ea643b8b22.jpg" alt="Última matéria" loading="lazy" style="object-position:center 30%">
-  <img class="cine-slide" data-i="6" data-src="img/home/abertura-karen.jpg" alt="Colunas" loading="lazy" style="object-position:right top">
-  <img class="cine-slide" data-i="7" data-src="img/home/abertura-podcast.jpg" alt="TCT Podcast" loading="lazy" style="object-position:center">
+  <img class="cine-slide" data-i="6" data-src="img/home/abertura-jamille.jpg" alt="Colunas · Jamille Morais" loading="lazy" style="object-position:right top">
+  <img class="cine-slide" data-i="7" data-src="img/home/abertura-karen.jpg?v=2" alt="Colunas · Karen Couto" loading="lazy" style="object-position:right top">
+  <img class="cine-slide" data-i="8" data-src="img/home/abertura-podcast.jpg" alt="TCT Podcast" loading="lazy" style="object-position:center">
   <div class="cine-veu"></div>
   <img class="cine-port" id="cine-port" src="" alt="" style="display:none">
   <div class="cine-in">
@@ -2280,7 +2282,7 @@ function tctGridRest(){
     <div class="col-sector">
       <div class="col-sector-head"><span class="t"><span class="ng-pt">Língua em Trânsito</span><span class="ng-fr" style="display:none;">Língua em Trânsito</span><span class="ng-en">Língua em Trânsito</span></span></div>
       <div class="col-people">
-      <div class="col-person" onclick="openColunista('karen_couto')"><div class="ph"><img src="img/home/karen_couto.jpg" alt="Karen Couto" loading="lazy"></div><div class="meta"><div class="nm">Karen Couto</div><div class="rl"><span class="ng-pt">Língua portuguesa · Interculturalidade</span><span class="ng-fr" style="display:none;">Langue portugaise · Interculturalité</span><span class="ng-en">Portuguese language · Interculturality</span></div><div class="arrow"><span class="ng-pt">Ver coluna →</span><span class="ng-fr" style="display:none;">Voir la chronique →</span><span class="ng-en">View column →</span></div></div></div>
+      <div class="col-person" onclick="openColunista('karen_couto')"><div class="ph"><img src="img/home/karen_couto.jpg?v=2" alt="Karen Couto" loading="lazy"></div><div class="meta"><div class="nm">Karen Couto</div><div class="rl"><span class="ng-pt">Língua portuguesa · Interculturalidade</span><span class="ng-fr" style="display:none;">Langue portugaise · Interculturalité</span><span class="ng-en">Portuguese language · Interculturality</span></div><div class="arrow"><span class="ng-pt">Ver coluna →</span><span class="ng-fr" style="display:none;">Voir la chronique →</span><span class="ng-en">View column →</span></div></div></div>
       </div>
     </div>
     <div class="col-sector">
@@ -6007,6 +6009,14 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
     href: "colunas/col_jamille_frances_exigido.html",
     foto: ""
   };
+  var COLUNA_KAREN = {
+    autor: "Karen Couto",
+    titulo: ["Brasil x França: quando a mesma conversa tem significados diferentes",
+             "Brésil x France : quand la même conversation a des sens différents",
+             "Brazil x France: when the same conversation has different meanings"],
+    quando: ["Língua em Trânsito · coluna de outubro de 2026", "Língua em Trânsito · chronique d'octobre 2026", "Língua em Trânsito · October 2026 column"],
+    href: "colunas/col_karen_conversa_significados.html"
+  };
   // ===== PUBLICIDADE: Alves Fernandes Avocats (cena 2) =====
   var ANUNCIO_ANDRE = { href: "https://alvesfernandesavocats.com/" };
   var PODCAST_HREF = "https://www.youtube.com/@thecrossingtime";
@@ -6043,6 +6053,9 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
     { eb: ["Colunas · " + COLUNA_ATUAL.autor, "Chroniques · " + COLUNA_ATUAL.autor, "Columns · " + COLUNA_ATUAL.autor],
       t: COLUNA_ATUAL.titulo, sub: COLUNA_ATUAL.quando, cta: ["Ler a coluna", "Lire la chronique", "Read the column"],
       href: COLUNA_ATUAL.href, veil: "left" },
+    { eb: ["Colunas · " + COLUNA_KAREN.autor, "Chroniques · " + COLUNA_KAREN.autor, "Columns · " + COLUNA_KAREN.autor],
+      t: COLUNA_KAREN.titulo, sub: COLUNA_KAREN.quando, cta: ["Ler a coluna", "Lire la chronique", "Read the column"],
+      href: COLUNA_KAREN.href, veil: "left" },
     { eb: ["TCT Podcast", "TCT Podcast", "TCT Podcast"],
       t: ["A voz da diáspora", "La voix de la diaspora", "The voice of the diaspora"],
       sub: ["Conversas com os colunistas e convidados da The Crossing Time sobre imigração, direito, negócios e vida entre dois países.", "Des conversations avec les chroniqueurs et invités de The Crossing Time sur l'immigration, le droit, les affaires et la vie entre deux pays.", "Conversations with The Crossing Time's columnists and guests on immigration, law, business and life between two countries."],
