@@ -1507,7 +1507,7 @@ body[lang-mode="es"] .ng-es{display:revert!important}
 <meta name="twitter:description" content="The Crossing Time — revista digital bilingue PT/FR para a comunidade brasileira e lusófona em França. Jornalismo verificado sobre imigração, direitos, saúde, trabalho e cultura, com dossiês práticos a partir de fontes oficiais.">
 <meta name="twitter:image" content="https://thecrossingtime.com/logo.png">
 </head>
-<body data-tct-build="p15-v226 · 10set2026" lang-mode="pt"><script>
+<body data-tct-build="p15-v227 · 10set2026" lang-mode="pt"><script>
 // Hide all non-active pages immediately on parse
 (function(){
   var style = document.createElement('style');
@@ -1794,7 +1794,7 @@ window.tctGoImi=function(id){showPage('civique');if(!id)return;setTimeout(functi
 
   </div>
   <footer class="footer">
-<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v226 · 10set2026</div>
+<div id="tct-build" style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.4;text-align:center;padding:6px 0;">versão p15-v227 · 10set2026</div>
     <div class="wrap">
       <div class="ft">
         <div>
@@ -6129,7 +6129,7 @@ body.materia-aberta .btn-edicao-flutuante{display:none!important;}
 })();
 </script>
 <script id="tct-cache-bust">
-(function(){var BUILD='p15-v226 · 10set2026';try{
+(function(){var BUILD='p15-v227 · 10set2026';try{
  if(localStorage.getItem('tct-build')!==BUILD){localStorage.setItem('tct-build',BUILD);
   if(window.caches&&caches.keys){caches.keys().then(function(ns){ns.forEach(function(n){caches.delete(n);});});}
   if(navigator.serviceWorker&&navigator.serviceWorker.getRegistrations){
@@ -6800,6 +6800,7 @@ document.addEventListener("click",function(e){var o=document.querySelector(".nav
     var h=(location.hash||'').replace('#','');
     var q=null; try{q=new URLSearchParams(location.search).get('page');}catch(e){}
     var p=(q||h); if(p==='vip'||h==='vip-obrigado'){ try{ showPage('vip'); }catch(e){} }
+    else if(/^imi-/.test(p)){ try{ tctGoImi(p); }catch(e){} }
     else if(['anne','colunas','sobre-revista','contato','missing','revista','eventos','blog','livros','ebooks','sorrisos','materias','civique'].indexOf(p)>-1){ try{ showPage(p); }catch(e){} }
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',go);}else{go();}
